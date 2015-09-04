@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <!-- Hubs -->
     <include name="Window_Hub">
         <!-- Background -->
         <include>Furniture_Background</include>
@@ -281,6 +282,100 @@
                         <textcolor>Selected</textcolor>
                     </control>
                 </focusedlayout>
+            </control>
+        </control>
+    </include>
+
+
+    <!-- OSD Controls -->
+    <include name="Window_OSD">
+        <control type="group">
+            <animation type="WindowOpen">
+                <effect type="slide" start="0,80" end="0" time="200" />
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <control type="grouplist" id="101">
+                <bottom>16</bottom>
+                <width>100%</width>
+                <height>48</height>
+                <itemgap>16</itemgap>
+                <orientation>horizontal</orientation>
+                <align>center</align>
+                <onleft>3</onleft>
+                <onright>4</onright>
+                <onup>noop</onup>
+                <ondown>noop</ondown>
+
+                <control type="button" id="12">
+                    <description>Skip Back</description>
+                    <width>48</width>
+                    <height>48</height>
+                    <label></label>
+                    <font>noop</font>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
+                    <texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
+                    <onclick>PlayerControl(Previous)</onclick>
+                </control>
+
+                <control type="button" id="13">
+                    <description>Rewind</description>
+                    <width>48</width>
+                    <height>48</height>
+                    <label></label>
+                    <font>noop</font>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
+                    <texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
+                    <onclick>PlayerControl(Rewind)</onclick>
+                </control>
+
+                <control type="togglebutton" id="14">
+                    <description>Play/Pause</description>
+                    <width>48</width>
+                    <height>48</height>
+                    <label></label>
+                    <altlabel></altlabel>
+                    <font>noop</font>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
+                    <texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
+                    <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+                    <alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
+                    <alttexturenofocus colordiffuse="LineLabel">osd/play.png</alttexturenofocus>
+                    <onclick>PlayerControl(Play)</onclick>
+                </control>
+
+                <control type="button" id="15">
+                    <description>Stop</description>
+                    <width>48</width>
+                    <height>48</height>
+                    <label></label>
+                    <font>noop</font>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
+                    <texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
+                    <onclick>PlayerControl(Stop)</onclick>
+                </control>
+
+                <control type="button" id="16">
+                    <description>Fast Forward</description>
+                    <width>48</width>
+                    <height>48</height>
+                    <label></label>
+                    <font>noop</font>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
+                    <texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
+                    <onclick>PlayerControl(Forward)</onclick>
+                </control>
+
+                <control type="button" id="17">
+                    <description>Next</description>
+                    <width>48</width>
+                    <height>48</height>
+                    <label></label>
+                    <font>noop</font>
+                    <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
+                    <texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
+                    <onclick>PlayerControl(Next)</onclick>
+                </control>
+            
             </control>
         </control>
     </include>
