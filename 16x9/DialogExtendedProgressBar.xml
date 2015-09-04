@@ -1,90 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <zorder>0</zorder>
-	<controls>
-		<control type="group">
+    <controls>
+        <control type="group">
 
-			<control type="group">
-	            <visible>!Window.IsVisible(home)</visible>
-	            <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
-	            <animation effect="slide" start="0,64" end="0" time="125">WindowOpen</animation>
-	            <animation effect="slide" end="0,64" start="0" time="125">WindowClose</animation>
-	            <control type="image">
-	                <left>0</left>
-	                <posy>64r</posy>
-	                <width>100%</width>
-	                <height>64</height>  
-	                <aspectratio>scale</aspectratio>
-	                <texture colordiffuse="HomeBarBG">common/white.png</texture>
-	                <visible>Window.IsVisible(fullscreenvideo)</visible>
-	            </control>
-	            <control type="image">
-	                <posx>16</posx>
-	                <posy>48r</posy>
-	                <width>32</width>
-	                <height>32</height>
-	                <texture colordiffuse="LineLabel">common/info.png</texture>
-	            </control>
-	            <control type="label">
-	                <bottom>16</bottom>
-	                <left>48</left>
-	                <right>side</right>
-	                <height>32</height>
-	                <font>Font-ListInfo-Small-Bold</font>
-	                <textcolor>LineLabel</textcolor>
-	                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(30),   ,]$INFO[Control.GetLabel(32),   ,%][/COLOR]$INFO[Control.GetLabel(31),   ,]</label>
-	            </control>
-	        </control>
-	        <control type="group">
-	            <visible>Window.IsVisible(home)</visible>
-	            <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
-	            <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
-	            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
-	            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-	            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
-            	<animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
-	            <control type="image">
-	                <left>0</left>
-	                <posy>64r</posy>
-	                <width>900</width>
-	                <height>64</height>  
-	                <aspectratio>scale</aspectratio>
-	                <texture colordiffuse="HomeBarBG">common/white.png</texture>
-	            </control>
-	            <control type="image">
-	                <left>800</left>
-	                <posy>64r</posy>
-	                <width>300</width>
-	                <height>64</height>  
-	                <aspectratio>scale</aspectratio>
-	                <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
-	            </control>
-	            <control type="image">
-	                <left>16</left>
-	                <posy>48r</posy>
-	                <width>32</width>
-	                <height>32</height>
-	                <texture colordiffuse="LineLabel">common/info.png</texture>
-	            </control>
-	            <control type="label">
-	                <bottom>16</bottom>
-	                <left>48</left>
-	                <width>1020</width>
-	                <height>32</height>
-	                <font>Font-ListInfo-Small-Bold</font>
-	                <textcolor>LineLabel</textcolor>
-	                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(30),   ,]$INFO[Control.GetLabel(32),   ,%][/COLOR]$INFO[Control.GetLabel(31),   ,]</label>
-	            </control>
-	        </control>
-	    </control>
-		<control type="label" id="30"><visible>false</visible></control>
-		<control type="label" id="31"><visible>false</visible></control>
-		<control type="progress" id="32">
+            <control type="group">
+                <visible>!Window.IsVisible(home)</visible>
+                <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
+                <animation effect="slide" start="0,64" end="0" time="125">WindowOpen</animation>
+                <animation effect="slide" end="0,64" start="0" time="125">WindowClose</animation>
+                <control type="image">
+                    <left>0</left>
+                    <posy>64r</posy>
+                    <width>100%</width>
+                    <height>64</height>  
+                    <aspectratio>scale</aspectratio>
+                    <texture colordiffuse="HomeBarBG">common/white.png</texture>
+                    <visible>Window.IsVisible(fullscreenvideo)</visible>
+                </control>
+                <control type="image">
+                    <posx>16</posx>
+                    <posy>48r</posy>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="LineLabel">common/info.png</texture>
+                </control>
+                <control type="label">
+                    <bottom>16</bottom>
+                    <left>48</left>
+                    <right>side</right>
+                    <height>32</height>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>LineLabel</textcolor>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(30),   ,]$INFO[Control.GetLabel(32),   ,%][/COLOR]$INFO[Control.GetLabel(31),   ,]</label>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Window.IsVisible(home)</visible>
+                <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
+                <bottom>266</bottom>
+                <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation>
+                <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+                <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+                <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
+                <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
+                <control type="image">
+                    <left>0</left>
+                    <bottom>0</bottom>
+                    <width>900</width>
+                    <height>64</height>  
+                    <aspectratio>scale</aspectratio>
+                    <texture colordiffuse="HomeBarBG">common/white.png</texture>                
+                </control>
+                <control type="image">
+                    <left>800</left>
+                    <bottom>0</bottom>
+                    <width>300</width>
+                    <height>64</height>  
+                    <aspectratio>scale</aspectratio>
+                    <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
+                </control>
+                <control type="image">
+                    <left>16</left>
+                    <bottom>16</bottom>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="LineLabel">common/info.png</texture>
+                </control>
+                <control type="label">
+                    <bottom>16</bottom>
+                    <left>48</left>
+                    <width>1020</width>
+                    <height>32</height>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>LineLabel</textcolor>
+                    <scroll>true</scroll>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(30),   ,]$INFO[Control.GetLabel(32),   ,%][/COLOR]$INFO[Control.GetLabel(31),   ,]</label>
+                </control>
+            </control>
+        </control>
+        <control type="label" id="30"><visible>false</visible></control>
+        <control type="label" id="31"><visible>false</visible></control>
+        <control type="progress" id="32">
             <visible>false</visible>
             <left>-1000</left>
             <width>1</width>
             <height>1</height>
         </control>
-	</controls>
+    </controls>
 
 </window>
