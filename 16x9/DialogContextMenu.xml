@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- contextmenu -->
+    <defaultcontrol always="true">996</defaultcontrol>
+    <coordinates>
+        <origin x="0" y="0"/>
+    </coordinates>
+
+    <controls>
+
+        <control type="group">
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31069]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="996" />
+            </include>
+            
+            <control type="image" id="999" />
+
+            <!-- Default GroupList -->
+            <control type="grouplist" id="996">
+                <onup>Close</onup>
+                <ondown>Close</ondown>
+                <include>Dialog_Top_GroupList</include>
+            </control>
+
+            <!-- Default Button -->
+            <control type="button" id="1000">
+                <include>Defs_OptionButton</include>
+            </control>
+        </control>
+
+    </controls>
+
+</window>

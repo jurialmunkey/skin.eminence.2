@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- filemanager -->
+    <backgroundcolor>Background</backgroundcolor>
+    <defaultcontrol always="true">20</defaultcontrol>
+
+    <controls>
+
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_RSS</include>
+
+        <!-- Main group -->
+        <control type="group">
+
+            <!-- Left group -->
+            <control type="group">
+                <left>side</left>
+                <width>930</width>
+                <top>top</top>
+                <include>Animation_Hub</include>
+
+                <include name="Window_FileManager_List">
+                    <param name="width" value="930" />
+                    <param name="labelwidth" value="825" />
+                    <param name="id" value="20" />
+                    <param name="moveid" value="21" />
+                    <param name="pathid" value="101" />
+                </include>
+
+            </control>
+
+            <!-- Right group -->
+            <control type="group">
+                <right>side</right>
+                <width>930</width>
+                <top>top</top>
+                <include>Animation_Common</include>
+
+                <include name="Window_FileManager_List">
+                    <param name="width" value="930" />
+                    <param name="labelwidth" value="825" />
+                    <param name="id" value="21" />
+                    <param name="moveid" value="20" />
+                    <param name="pathid" value="102" />
+                </include>
+            </control>
+
+        </control>
+
+    </controls>
+
+</window>

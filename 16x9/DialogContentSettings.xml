@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">20</defaultcontrol>
+    <controls>
+
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <left>0</left>
+            <right>0</right>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <height>height</height>
+                <control type="group">
+                    <height>69</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1880" />
+                        <param name="label" value="$LOCALIZE[20333]" />
+                    </include>
+                    <control type="spincontrolex" id="20">
+                        <align>left</align>
+                        <textoffsetx>30</textoffsetx>
+                        <width>100%</width>
+                        <onup>8000</onup>
+                        <ondown>21</ondown>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                </control> 
+                <control type="group">
+                    <top>138</top>
+                    <height>207</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1880" />
+                        <param name="label" value="$LOCALIZE[21412]" />
+                    </include>
+                    <include name="Dialog_BasicList">
+                        <param name="width" value="1880" />
+                        <param name="height" value="207" />
+                        <param name="id" value="21" />
+                        <param name="onright" value="" />
+                        <param name="ondown" value="5" />
+                        <param name="onleft" value="" />
+                        <param name="onup" value="20" />
+                    </include>
+                </control>
+                
+                <control type="group">
+                    <top>414</top>
+                    <width>1880</width>
+                    <height>207</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1880" />
+                        <param name="label" value="$LOCALIZE[20407]" />
+                    </include>
+                    <control type="grouplist" id="5">
+                        <onright>20</onright>
+                        <width>100%</width>
+                        <height>100%</height>
+                        <itemgap>0</itemgap>
+                        <onup>21</onup>
+                        <ondown>8000</ondown>
+                        <orientation>vertical</orientation>
+                    </control>
+                </control>
+                <control type="button" id="7">
+                    <width>100%</width>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="radiobutton" id="8">
+                    <width>100%</width>
+                    <radioposx>1830</radioposx>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+            <control type="grouplist" id="8000">
+                <centerleft>50%</centerleft>
+                <width>1240</width>
+                <bottom>side</bottom>
+                <height>69</height>
+                <align>center</align>
+                <itemgap>20</itemgap>
+                <onup>5</onup>
+                <ondown>20</ondown>
+                <orientation>horizontal</orientation>
+                <control type="button" id="22">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>5</label>
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(22)</visible>
+                </control>
+                <control type="button" id="28">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>186</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="29">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>222</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+        </control>
+
+        <!-- Hidden Controls -->
+        <control type="label" id="2"><visible>false</visible></control>
+
+    </controls>
+
+</window>

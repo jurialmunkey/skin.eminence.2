@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- virtualkeyboard -->
+    <defaultcontrol always="true">300</defaultcontrol>
+    <include>DialogZoomAnimation</include>
+
+    <controls>
+
+        <control type="group">
+            <height>580</height>
+            <include>Dialog_Bottom</include>
+            <!-- Heading -->
+            <control type="label" id="311">
+                <left>-1000</left>
+                <visible>false</visible>
+                <label>13406</label>
+            </control>
+
+            <!-- Left grouplist -->
+            <control type="grouplist" id="9000">
+                <left>side</left>
+                <top>170</top>
+                <width>320</width>
+                <height>660</height>
+                <itemgap>pad</itemgap>
+                <onup>noop</onup>
+                <ondown>312</ondown>
+                <orientation>vertical</orientation>
+                <scrolltime tween="sine" easing="out">240</scrolltime>
+
+                <!-- Layout -->
+                <control type="button" id="309">
+                    <width>100%</width>
+                    <height>70</height>
+                    <onleft>111</onleft>
+                    <onright>100</onright>
+                    <include>Defs_KeyboardButton</include>
+                    <label>20177</label>
+                </control>
+
+                <!-- Shift -->
+                <control type="radiobutton" id="302">
+                    <width>100%</width>
+                    <height>70</height>
+                    <onleft>131</onleft>
+                    <onright>120</onright>
+                    <include>Defs_KeyboardButton</include>
+                    <label>20178</label>
+                </control>
+
+                <!-- Caps lock -->
+                <control type="radiobutton" id="303">
+                    <width>100%</width>
+                    <height>70</height>
+                    <onleft>151</onleft>
+                    <onright>140</onright>
+                    <include>Defs_KeyboardButton</include>
+                    <label>20179</label>
+                </control>
+
+                <!-- Symbols -->
+                <control type="radiobutton" id="304">
+                    <width>100%</width>
+                    <height>70</height>
+                    <onleft>171</onleft>
+                    <onright>160</onright>
+                    <include>Defs_KeyboardButton</include>
+                    <label>20180</label>
+                </control>
+
+                <!-- IP address -->
+                <control type="button" id="307">
+                    <width>100%</width>
+                    <height>70</height>
+                    <onleft>306</onleft>
+                    <onright>32</onright>
+                    <include>Defs_KeyboardButton</include>
+                    <label>1006</label>
+                </control>
+
+            </control>
+
+            <!-- Keys -->
+            <!-- Edit -->
+            <control type="group">
+                <left>side</left>
+                <right>280</right>
+                <top>70</top>
+                <height>70</height>
+                <include name="Object_Line">
+                    <param name="width" value="1880" />
+                    <param name="label" value="$INFO[Control.GetLabel(311)]" />
+                </include>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="edit" id="312">
+
+                    <top>0</top>
+                    <width>100%</width>
+                    <height>100%</height>
+                    <onup>32</onup>
+                    <ondown>9001</ondown>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <scroll>true</scroll>
+                    <include>Defs_KeyboardButton</include>
+                </control>
+            </control>
+
+            <control type="group">
+                <right>side</right>
+                <top>170</top>
+                <width>1550</width>
+
+                <!-- First row -->
+                <control type="grouplist" id="1000">
+                    <right>0</right>
+                    <top>0</top>
+                    <width>100%</width>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onleft>309</onleft>
+                    <onright>309</onright>
+                    <onup>9001</onup>
+                    <orientation>horizontal</orientation>
+
+                    <control type="button" id="100">
+                        <!-- (0,0) key button -->
+                        <ondown>120</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="101">
+                        <!-- (0,1) key button -->
+                        <ondown>121</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="102">
+                        <!-- (0,2) key button -->
+                        <ondown>122</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="103">
+                        <!-- (0,3) key button -->
+                        <ondown>123</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="104">
+                        <!-- (0,4) key button -->
+                        <ondown>124</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="105">
+                        <!-- (0,5) key button -->
+                        <ondown>125</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="106">
+                        <!-- (0,6) key button -->
+                        <ondown>126</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="107">
+                        <!-- (0,7) key button -->
+                        <ondown>127</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="108">
+                        <!-- (0,8) key button -->
+                        <ondown>128</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="109">
+                        <!-- (0,9) key button -->
+                        <ondown>129</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="110">
+                        <!-- (0,10) key button -->
+                        <ondown>130</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="111">
+                        <!-- (0,11) key button -->
+                        <ondown>131</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+
+                </control>
+
+                <!-- Second row -->
+                <control type="grouplist" id="2000">
+                    <right>0</right>
+                    <top>80</top>
+                    <width>100%</width>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onleft>302</onleft>
+                    <onright>302</onright>
+                    <orientation>horizontal</orientation>
+
+                    <control type="button" id="120">
+                        <!-- (1,0) key button -->
+                        <onup>100</onup>
+                        <ondown>140</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="121">
+                        <!-- (1,1) key button -->
+                        <onup>101</onup>
+                        <ondown>141</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="122">
+                        <!-- (1,2) key button -->
+                        <onup>102</onup>
+                        <ondown>142</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="123">
+                        <!-- (1,3) key button -->
+                        <onup>103</onup>
+                        <ondown>143</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="124">
+                        <!-- (1,4) key button -->
+                        <onup>104</onup>
+                        <ondown>144</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="125">
+                        <!-- (1,5) key button -->
+                        <onup>105</onup>
+                        <ondown>145</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="126">
+                        <!-- (1,6) key button -->
+                        <onup>106</onup>
+                        <ondown>146</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="127">
+                        <!-- (1,7) key button -->
+                        <onup>107</onup>
+                        <ondown>147</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="128">
+                        <!-- (1,8) key button -->
+                        <onup>108</onup>
+                        <ondown>148</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="129">
+                        <!-- (1,9) key button -->
+                        <onup>109</onup>
+                        <ondown>149</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="130">
+                        <!-- (1,10) key button -->
+                        <onup>110</onup>
+                        <ondown>150</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="131">
+                        <!-- (1,11) key button -->
+                        <onup>111</onup>
+                        <ondown>151</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+
+                </control>
+
+                <!-- Third row -->
+                <control type="grouplist" id="3000">
+                    <right>0</right>
+                    <top>160</top>
+                    <width>100%</width>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onleft>303</onleft>
+                    <onright>303</onright>
+                    <orientation>horizontal</orientation>
+
+                    <control type="button" id="140">
+                        <!-- (2,0) key button -->
+                        <onup>120</onup>
+                        <ondown>160</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="141">
+                        <!-- (2,1) key button -->
+                        <onup>121</onup>
+                        <ondown>161</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="142">
+                        <!-- (2,2) key button -->
+                        <onup>122</onup>
+                        <ondown>162</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="143">
+                        <!-- (2,3) key button -->
+                        <onup>123</onup>
+                        <ondown>163</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="144">
+                        <!-- (2,4) key button -->
+                        <onup>124</onup>
+                        <ondown>164</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="145">
+                        <!-- (2,5) key button -->
+                        <onup>125</onup>
+                        <ondown>165</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="146">
+                        <!-- (2,6) key button -->
+                        <onup>126</onup>
+                        <ondown>166</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="147">
+                        <!-- (2,7) key button -->
+                        <onup>127</onup>
+                        <ondown>167</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="148">
+                        <!-- (2,8) key button -->
+                        <onup>128</onup>
+                        <ondown>168</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="149">
+                        <!-- (2,9) key button -->
+                        <onup>129</onup>
+                        <ondown>169</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="150">
+                        <!-- (2,10) key button -->
+                        <onup>130</onup>
+                        <ondown>170</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="151">
+                        <!-- (2,11) key button -->
+                        <onup>131</onup>
+                        <ondown>171</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+
+                </control>
+
+                <!-- Forth row -->
+                <control type="grouplist" id="4000">
+                    <right>0</right>
+                    <top>240</top>
+                    <width>100%</width>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onleft>304</onleft>
+                    <onright>304</onright>
+                    <orientation>horizontal</orientation>
+
+                    <control type="button" id="160">
+                        <!-- (3,0) key button -->
+                        <onup>140</onup>
+                        <ondown>32</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="161">
+                        <!-- (3,1) key button -->
+                        <onup>141</onup>
+                        <ondown>32</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="162">
+                        <!-- (3,2) key button -->
+                        <onup>142</onup>
+                        <ondown>32</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="163">
+                        <!-- (3,3) key button -->
+                        <onup>143</onup>
+                        <ondown>32</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="164">
+                        <!-- (3,4) key button -->
+                        <onup>144</onup>
+                        <ondown>32</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="165">
+                        <!-- (3,5) key button -->
+                        <onup>145</onup>
+                        <ondown>8</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="166">
+                        <!-- (3,6) key button -->
+                        <onup>146</onup>
+                        <ondown>8</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="167">
+                        <!-- (3,7) key button -->
+                        <onup>147</onup>
+                        <ondown>8</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="168">
+                        <!-- (3,8) key button -->
+                        <onup>148</onup>
+                        <ondown>8</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="169">
+                        <!-- (3,9) key button -->
+                        <onup>149</onup>
+                        <ondown>8</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="170">
+                        <!-- (3,10) key button -->
+                        <onup>150</onup>
+                        <ondown>305</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <control type="button" id="171">
+                        <!-- (3,11) key button -->
+                        <onup>151</onup>
+                        <ondown>306</ondown>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+
+                </control>
+
+                <!-- Fifth row -->
+                <control type="grouplist" id="5000">
+                    <right>0</right>
+                    <top>320</top>
+                    <width>100%</width>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onleft>307</onleft>
+                    <onright>307</onright>
+                    <ondown>312</ondown>
+                    <orientation>horizontal</orientation>
+
+                    <!-- SPACE -->
+                    <control type="button" id="32">
+                        <onup>4000</onup>
+                        <width>900</width>
+                        <label>20182</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- BACKSPACE -->
+                    <control type="button" id="8">
+                        <onup>4000</onup>
+                        <width>380</width>
+                        <label>20181</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- Previous -->
+                    <control type="button" id="305">
+                        <onup>4000</onup>
+                        <label>&lt;</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- Next -->
+                    <control type="button" id="306">
+                        <onup>4000</onup>
+                        <label>&gt;</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+
+                </control>
+
+                
+
+            </control>
+
+            <!-- Button grouplist -->
+            <control type="grouplist" id="9001">
+                <right>side</right>
+                <top>70</top>
+                <width>250</width>
+                <itemgap>pad</itemgap>
+                <onleft>312</onleft>
+                <onright>312</onright>
+                <onup>312</onup>
+                <ondown>1000</ondown>
+                <orientation>horizontal</orientation>
+
+                <!-- Done -->
+                <control type="button" id="300">
+                    <align>center</align>
+                    <label>186</label>
+                    <include>Defs_KeyboardButton</include>
+                    <onclick>SetFocus(100)</onclick>
+                </control>
+
+                <!-- Cancel Button -->
+                <control type="button" id="301">
+                    <align>center</align>
+                    <include>Defs_KeyboardButton</include>
+                    <label>X</label>
+                </control>
+
+            </control>
+        </control>
+    </controls>
+
+</window>

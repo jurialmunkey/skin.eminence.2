@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Dialog_Top">
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0">Hidden</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0">WindowClose</animation>
+        <left>side</left>
+        <right>side</right>
+        <top>0</top>
+        <height>toppanel</height>
+    </include>
+
+    <include name="Dialog_Background">
+        <control type="image">
+            <top>-24</top>
+            <bottom>-24</bottom>
+            <left>-24</left>
+            <right>-24</right>
+            <bordertexture border="24">common/24-shadow.png</bordertexture>
+            <bordersize>24</bordersize>
+            <texture colordiffuse="HomeBarBG">common/white.png</texture>
+        </control>
+    </include>
+
+    <include name="Dialog_Top_IconHeader">
+        <control type="image">
+            <top>0</top>
+            <left>0</left>
+            <width>80</width>
+            <height>80</height>
+            <texture colordiffuse="ListLabel">$PARAM[icon]</texture>
+        </control>
+        <control type="label">
+            <left>80</left>
+            <right>side</right>
+            <top>10</top>
+            <height>60</height>
+            <aligny>center</aligny>
+            <align>left</align>
+            <label>$PARAM[label]</label>
+        </control>
+    </include>
+
+    <include name="Dialog_Top_GroupList">
+        <left>pad</left>
+        <right>pad</right>
+        <top>80</top>
+        <bottom>pad</bottom>
+        <onup>50</onup>
+        <ondown>50</ondown>
+        <onleft>noop</onleft>
+        <onright>noop</onright>
+        <itemgap>10</itemgap>
+        <scrolltime>200</scrolltime>
+        <orientation>horizontal</orientation>
+    </include>
+
+    <include name="Dialog_Top_Arrows">
+        <control type="group">
+            <control type="image">
+                <centertop>115</centertop>
+                <left>-12</left>
+                <width>16</width>
+                <height>16</height>
+                <texture colordiffuse="ListLabel">common/16-arrow-left.png</texture>
+                <visible>Container($PARAM[id]).HasPrevious</visible>
+            </control>
+            <control type="image">
+                <centertop>115</centertop>
+                <right>-12</right>
+                <width>16</width>
+                <height>16</height>
+                <texture colordiffuse="ListLabel" flipx="true">common/16-arrow-left.png</texture>
+                <visible>Container($PARAM[id]).HasNext</visible>
+            </control>
+        </control>
+    </include>
+
+ 
+    <!-- Bottom Dialogs -->
+    <include name="Dialog_Bottom">
+        <left>0</left>
+        <right>0</right>
+        <bottom>0</bottom>
+        <height>280</height>
+        <include>Dialog_Background</include>
+        <include>Animation_Bottom</include>
+
+        <!-- Heading -->
+        <control type="label" id="1">
+            <left>70</left>
+            <right>50</right>
+            <top>30</top>
+            <height>60</height>
+            <aligny>center</aligny>
+            <align>left</align>
+        </control>
+
+        <!-- Details -->
+        <control type="textbox" id="9">
+            <left>70</left>
+            <right>720</right>
+            <top>100</top>
+            <bottom>25</bottom>
+            <align>left</align>
+            <font>Font-ListInfo-Small</font>
+        </control>
+    </include>
+    <include name="Dialog_Bottom_Grouplist">
+        <right>70</right>
+        <align>right</align>
+        <bottom>30</bottom>
+        <height>69</height>
+        <orientation>horizontal</orientation>
+        <itemgap>side</itemgap>
+    </include>
+    <include name="Dialog_Bottom_Yes">
+        <control type="button" id="11">
+            <align>center</align>
+            <width>300</width>
+            <label>186</label>
+            <include>Defs_OptionButton</include>
+            <onleft>10</onleft>
+            <onright>noop</onright>
+        </control>
+    </include>
+    <include name="Dialog_Bottom_No">
+        <control type="button" id="10">
+            <align>center</align>
+            <width>300</width>
+            <label>222</label>
+            <include>Defs_OptionButton</include>
+            <onleft>noop</onleft>
+            <onright>11</onright>
+        </control>
+    </include>
+    <!-- Yes No -->
+    <include name="Dialog_YesNo">
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Dialog_Bottom</include>
+            <control type="grouplist">
+                <include>Dialog_Bottom_Grouplist</include>
+                <include>Dialog_Bottom_Yes</include>
+                <include>Dialog_Bottom_No</include>
+            </control>
+        </control>
+    </include>
+    <!-- Ok -->
+    <include name="Dialog_Ok">
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Dialog_Bottom</include>
+            <control type="grouplist">
+                <include>Dialog_Bottom_Grouplist</include>
+                <include>Dialog_Bottom_Yes</include>
+            </control>
+        </control>
+    </include>
+    <!-- Progress -->
+    <include name="Dialog_Progress">
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Dialog_Bottom</include>
+            <control type="progress">
+                <top>0</top>
+                <width>100%</width>
+                <height>16</height>
+                <info>System.Progressbar</info>
+            </control>
+            <control type="grouplist">
+                <include>Dialog_Bottom_Grouplist</include>
+                <include>Dialog_Bottom_No</include>
+            </control>
+        </control>
+    </include>
+    <!-- Basic List -->
+    <include name="Dialog_BasicList">
+        <control type="image">
+            <width>$PARAM[width]</width>
+            <height>$PARAM[height]</height>
+            <texture colordiffuse="PosterBorder">common/white.png</texture>
+        </control>
+        <control type="panel" id="$PARAM[id]">
+            <top>0</top>
+            <left>0</left>
+            <width>$PARAM[width]</width>
+            <height>$PARAM[height]</height>
+            <onleft>$PARAM[onleft]</onleft>
+            <onright>$PARAM[onright]</onright>
+            <ondown>$PARAM[ondown]</ondown>
+            <onup>$PARAM[onup]</onup>
+            <orientation>vertical</orientation>
+            <scrolltime tween="quadratic">400</scrolltime>
+            <itemlayout height="69" width="$PARAM[width]">
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <label>$INFO[ListItem.Label2]</label>
+                </control>
+            </itemlayout>
+
+            <focusedlayout height="69" width="$PARAM[width]">
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <label>$INFO[ListItem.Label]</label>
+                    <textcolor>Selected</textcolor>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <label>$INFO[ListItem.Label2]</label>
+                    <textcolor>Selected</textcolor>
+                </control>
+            </focusedlayout>
+        </control>
+    </include>
+    <include name="Dialog_FavouriteList">
+        <param name="left" default="444" />
+        <definition>
+            <control type="panel" id="$PARAM[id]">
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <right>side</right>
+                <left>$PARAM[left]</left>
+                <top>80</top>
+                <bottom>side</bottom>
+                <onleft>$PARAM[moveid]</onleft>
+                <onright>$PARAM[moveid]</onright>
+                <scrolltime>200</scrolltime>
+                <orientation>vertical</orientation>
+                <itemlayout width="favitemw" height="69">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>69</height>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>30</right>
+                        <height>69</height>
+                        <textcolor>ListLabel</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="favitemw" height="69">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>69</height>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>30</right>
+                        <height>69</height>
+                        <textcolor>Selected</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+            </control>
+        </definition>
+    </include>
+    <include name="Dialog_ImageList">
+        <param name="left" default="444" />
+        <definition>
+            <control type="panel" id="$PARAM[id]">
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <right>side</right>
+                <left>$PARAM[left]</left>
+                <top>80</top>
+                <bottom>side</bottom>
+                <onleft>$PARAM[moveid]</onleft>
+                <onright>$PARAM[moveid]</onright>
+                <scrolltime>200</scrolltime>
+                <orientation>vertical</orientation>
+                <itemlayout width="favitemw" height="138">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <width>118</width>
+                        <height>118</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>148</left>
+                        <right>30</right>
+                        <height>100%</height>
+                        <textcolor>ListLabel</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                    </control>
+                    <control type="group">
+                        <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                        <left>148</left>
+                        <right>30</right>
+                        <control type="label">
+                            <width>100%</width>
+                            <top>0</top>
+                            <bottom>25%</bottom>
+                            <textcolor>ListLabel</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <width>100%</width>
+                            <top>25%</top>
+                            <bottom>0</bottom>
+                            <textcolor>ListLabel</textcolor>
+                            <font>Font-ListInfo-Small</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Property(Addon.Summary),[CAPITALIZE],[/CAPITALIZE]]</label>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="favitemw" height="138">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <width>118</width>
+                        <height>118</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>148</left>
+                        <right>30</right>
+                        <height>100%</height>
+                        <textcolor>Selected</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                    </control>
+                    <control type="group">
+                        <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                        <left>148</left>
+                        <right>30</right>
+                        <control type="label">
+                            <width>100%</width>
+                            <top>0</top>
+                            <bottom>25%</bottom>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <width>100%</width>
+                            <top>25%</top>
+                            <bottom>0</bottom>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Property(Addon.Summary),[CAPITALIZE],[/CAPITALIZE]]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </definition>
+    </include>
+</includes>

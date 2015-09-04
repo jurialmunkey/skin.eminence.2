@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <variable name="Label_Plot">
+        <value>$INFO[ListItem.Plot]</value>
+    </variable>
+
+    <variable name="Label_Tagline">
+        <value condition="Container.Content(episodes)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,. ]$INFO[ListItem.Title]$INFO[ListItem.Premiered,  [COLOR=LineLabel],[/COLOR]]</value>
+        <value condition="!IsEmpty(ListItem.Tagline)">$INFO[ListItem.Tagline]</value>
+        <value condition="IsEmpty(ListItem.Tagline)">$LOCALIZE[19033]</value>
+    </variable>
+
+    <variable name="Label_Label3">        
+        <!-- Episodes -->
+        <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Premiered]</value>
+        <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[551])">$INFO[ListItem.Premiered]</value>
+        <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[20359])">$INFO[ListItem.Premiered]</value>
+        <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Premiered]</value>
+        <!-- Tv Shows -->
+        <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Label2]</value>
+        <!-- Others -->
+        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
+        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Year]</value>
+        <!-- Fallback -->
+        <value>$INFO[ListItem.Label2]</value>
+    </variable>
+
+    <variable name="Label_AudioChannels">
+        <value condition="stringcompare(ListItem.AudioChannels,8)">7.1</value>
+        <value condition="stringcompare(ListItem.AudioChannels,6)">5.1</value>
+        <value condition="stringcompare(ListItem.AudioChannels,5)">4.1</value>
+        <value condition="stringcompare(ListItem.AudioChannels,4)">4.0</value>
+        <value condition="stringcompare(ListItem.AudioChannels,3)">2.1</value>
+        <value condition="stringcompare(ListItem.AudioChannels,2)">2.0</value>
+        <value condition="stringcompare(ListItem.AudioChannels,1)">1.0</value>
+    </variable>
+
+    <variable name="Label_RSS">
+        <value condition="Player.HasAudio">[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
+        <value condition="Player.HasVideo + VideoPlayer.Content(movies)">[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
+        <!-- <value condition="Container.Content(movies) + !IsEmpty(ListItem.Tagline)">$INFO[ListItem.Tagline]</value> -->
+    </variable>
+
+    <variable name="Label_PlayerStatus">
+        <value condition="Player.Caching">$LOCALIZE[439] $INFO[Player.CacheLevel,,%]</value>
+        <value condition="Player.Paused">$LOCALIZE[112]</value>
+        <value condition="Player.Forwarding32x">FF 32x</value>
+        <value condition="Player.Forwarding16x">FF 16x</value>
+        <value condition="Player.Forwarding8x">FF 8x</value>
+        <value condition="Player.Forwarding4x">FF 4x</value>
+        <value condition="Player.Forwarding2x">FF 2x</value>
+        <value condition="Player.Forwarding">FF</value>
+        <value condition="Player.Rewinding32x">RW 32x</value>
+        <value condition="Player.Rewinding16x">RW 16x</value>
+        <value condition="Player.Rewinding8x">RW 8x</value>
+        <value condition="Player.Rewinding4x">RW 4x</value>
+        <value condition="Player.Rewinding2x">RW 2x</value>
+        <value condition="Player.Rewinding">RW</value>
+        <value condition="Player.Seeking">$LOCALIZE[773]</value>
+        <value>$LOCALIZE[31072]</value>
+    </variable>
+
+    <variable name="Label_HomeWidget">
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist)">$INFO[Container(9000).ListItem.Property(widgetName)]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentMovies)">$LOCALIZE[31031]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomMovies)">$LOCALIZE[31054]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedMovies)">$LOCALIZE[31032]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomEpisodes)">$LOCALIZE[31055]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentEpisodes)">$LOCALIZE[31035]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedEpisodes)">$LOCALIZE[31036]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingMovies)">$LOCALIZE[31077]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingShows)">$LOCALIZE[31078]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),InCinemas)">$LOCALIZE[31078]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Upcoming)">$LOCALIZE[31079]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularMovies)">$LOCALIZE[31080]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedMovies)">$LOCALIZE[31081]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularTvShows)">$LOCALIZE[31082]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedTvShows)">$LOCALIZE[31083]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),OnAirTvShows)">$LOCALIZE[31084]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringTodayTvShows)">$LOCALIZE[31085]</value>
+        <value>$LOCALIZE[31054]</value>
+    </variable>
+
+    <variable name="Label_HomeWidget_Label">
+        <value condition="Container(9001).IsUpdating">$LOCALIZE[31090]...</value>
+        <value>$INFO[Container(9001).ListItem.Label]</value>
+    </variable>
+    <variable name="Label_HomeWidget_Plot">
+        <value condition="!Container(9001).IsUpdating">$INFO[Container(9001).ListItem.Plot]$INFO[Container(9001).ListItem.Property(Album_Description)]</value>
+    </variable>
+    <variable name="Label_HomeWidget_Info">
+        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
+        <value condition="!Container(9001).IsUpdating + IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
+        <value>$LOCALIZE[31092]</value>
+    </variable>
+
+    <variable name="Label_Hub_WidgetType">
+        <value condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">$INFO[Container(9500).ListItem.TvShowTitle]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Label)">$INFO[Container(9500).ListItem.Label]$INFO[Container(9500).ListItem.Year, [COLOR=PosterBorder]-[/COLOR] , ]</value>
+        <value>$LOCALIZE[31095]</value>
+    </variable>
+    <variable name="Label_Hub_WidgetLabel">
+        <value condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">$INFO[Container(9500).ListItem.Label]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Genre)">$INFO[Container(9500).ListItem.Genre]</value>
+    </variable>
+    <variable name="Label_Fanart_WidgetType">
+        <value condition="!IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]</value>
+        <value condition="!IsEmpty(ListItem.Label)">$INFO[ListItem.Label]$INFO[ListItem.Year, [COLOR=PosterBorder]-[/COLOR] , ]</value>
+    </variable>
+    <variable name="Label_Fanart_WidgetLabel">
+        <value condition="!IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Label]</value>
+        <value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
+    </variable>
+    <variable name="Label_SettingsHeader">
+        <value condition="Control.HasFocus(111) | Window.IsActive(systeminfo)">$LOCALIZE[130]</value>
+        <value condition="Control.HasFocus(110) | Window.IsActive(weathersettings)">$LOCALIZE[8]</value>
+        <value condition="Control.HasFocus(109) | Window.IsActive(systemsettings)">$LOCALIZE[13000]</value>
+        <value condition="Control.HasFocus(108) | Window.IsActive(pvrsettings)">[CAPITALIZE]$LOCALIZE[19191][/CAPITALIZE]</value>
+        <value condition="Control.HasFocus(107) | Window.IsActive(skinsettings)">$LOCALIZE[166]</value>
+        <value condition="Control.HasFocus(106) | Window.IsActive(picturessettings)">$LOCALIZE[1]</value>
+        <value condition="Control.HasFocus(105) | Window.IsActive(addonbrowser)">$LOCALIZE[24001]</value>
+        <value condition="Control.HasFocus(104) | Window.IsActive(musicsettings)">$LOCALIZE[2]</value>
+        <value condition="Control.HasFocus(103) | Window.IsActive(profiles)">$LOCALIZE[13200]</value>
+        <value condition="Control.HasFocus(102) | Window.IsActive(videossettings)">$LOCALIZE[157]</value>
+        <value condition="Control.HasFocus(101) | Window.IsActive(servicesettings)">$LOCALIZE[705]</value>
+        <value>$LOCALIZE[480]</value>
+    </variable>
+    
+</includes>

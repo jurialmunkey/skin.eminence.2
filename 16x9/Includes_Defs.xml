@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Defs_OptionButton">
+        <width>364</width>
+        <height>69</height>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>Selected</selectedcolor>
+        <focusedcolor>Selected</focusedcolor>
+        <font>Font-ListInfo-Small</font>
+        <aligny>center</aligny>
+        <textoffsetx>side</textoffsetx>
+        <radioposx>320</radioposx>
+        <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
+        <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
+        <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
+        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+    </include>
+    <include name="Defs_KeyboardButton">
+        <width>120</width>
+        <height>70</height>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>Selected</selectedcolor>
+        <focusedcolor>Selected</focusedcolor>
+        <font>Font-ListInfo-Small</font>
+        <aligny>center</aligny>
+        <textoffsetx>side</textoffsetx>
+        <radioposx>275</radioposx>
+        <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
+        <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
+        <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
+        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+    </include>
+    <variable name="Defs_Hub_Widget">
+        <value condition="Window.IsVisible(1101) + !IsEmpty(Skin.String(Widget.1101))">$INFO[Skin.String(Widget.1101)]</value>
+        <value>special://skin/extras/playlists/RandomMovies.xsp</value>
+    </variable>
+    <variable name="Defs_HomeTileColor">
+        <value condition="!IsEmpty(Container(9000).ListItem.Property(TileColor))">$INFO[Container(9000).ListItem.Property(TileColor)]</value>
+        <value>$VAR[HighlightColor]</value>
+    </variable>
+</includes>

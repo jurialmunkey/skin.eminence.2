@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="Window_Hub">
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_RSS</include>
+        <control type="group">
+            <include>Animation_Hub</include>
+            <control type="group">
+                <top>top</top>
+                <left>side</left>
+                <right>side</right>
+                <height>height</height>
+                <control type="group">
+                    <left>0</left>
+                    <top>0</top>
+                    <width>1211</width>
+                    <height>100%</height>
+                    <control type="group">
+                        <include name="Object_Line">
+                            <param name="width" value="1211" />
+                            <param name="label" value="$VAR[Label_Hub_WidgetType]" />
+                        </include>
+                    </control>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        <visible>!Control.HasFocus(9500)</visible>
+                    </control>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <visible>Control.HasFocus(9500)</visible>
+                    </control>
+                    <control type="wraplist" id="9500">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <top>pad</top>
+                        <bottom>pad</bottom>
+                        <pagecontrol>60</pagecontrol>
+                        <preloaditems>0</preloaditems>
+                        <onleft>9501</onleft>
+                        <onright>9501</onright>
+                        <orientation>vertical</orientation>
+                        <autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
+                        <scrolltime tween="quadratic">400</scrolltime>
+                        <itemlayout width="1191" height="670">
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="1191" height="670">
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                            </control>
+                        </focusedlayout>
+                        <content limit="10" target="video">$VAR[Defs_Hub_Widget]</content>
+                    </control>
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                        <height>122</height>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>240</height>
+                            <bottom>0</bottom>
+                            <texture flipy="true" colordiffuse="bfffffff">common/gradient.png</texture>
+                        </control>
+                        <control type="group">
+                            <control type="label">
+                                <left>side</left>
+                                <right>side</right>
+                                <top>10</top>
+                                <height>32</height>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$VAR[Label_Hub_WidgetLabel]</label>
+                            </control>
+                            <control type="label">
+                                <left>side</left>
+                                <right>side</right>
+                                <top>10</top>
+                                <height>32</height>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[Container(9500).ListItem.Rating]</label>
+                            </control>
+                        </control>
+                        <control type="textbox">
+                            <left>side</left>
+                            <right>side</right>
+                            <bottom>14</bottom>
+                            <height>64</height>
+                            <font>Font-ListInfo-Small</font>
+                            <label>$INFO[Container(9500).ListItem.Plot]</label>
+                        </control>
+                    </control>
+                </control>
+                <control type="group" description="hub side">
+                    <right>0</right>
+                    <top>0</top>
+                    <width>659</width>
+                    <height>100%</height>
+                    <include name="Object_Line">
+                        <param name="width" value="659" />
+                        <param name="label" value="$LOCALIZE[31073]" />
+                    </include>
+                    
+                    <control type="panel" id="9501">  
+                        <onleft>9500</onleft>
+                        <onup>9501</onup>
+                        <ondown>9501</ondown>
+                        <height>700</height>
+                        <onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
+                        <pagecontrol>60</pagecontrol>
+                        <preloaditems>2</preloaditems>
+                        <orientation>vertical</orientation>
+                        <scrolltime tween="quadratic">400</scrolltime>
+                        <itemlayout width="659" height="100">
+                            <control type="image">
+                                <width>100%</width>
+                                <top>0</top>
+                                <bottom>pad</bottom>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <right>0</right>
+                                <top>0</top>
+                                <bottom>pad</bottom>
+                                <width>90</width>
+                                <aspectratio>keep</aspectratio>
+                                <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="label">
+                                <left>30</left>
+                                <right>80</right>
+                                <top>0</top>
+                                <bottom>pad</bottom>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="659" height="100">
+                            <!-- <control type="image">
+                                <width>100%</width>
+                                <top>0</top>
+                                <bottom>pad</bottom>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control> -->
+                            <control type="image">
+                                <width>100%</width>
+                                <top>0</top>
+                                <bottom>pad</bottom>
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <right>0</right>
+                                <top>0</top>
+                                <bottom>pad</bottom>
+                                <width>90</width>
+                                <aspectratio>keep</aspectratio>
+                                <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="label">
+                                <left>30</left>
+                                <right>80</right>
+                                <top>0</top>
+                                <bottom>pad</bottom>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                       
+                        </focusedlayout>
+                        <content><include>$PARAM[categories]</include></content>
+                    </control>
+                </control>
+                
+            </control>
+        </control>
+    </include>
+
+    <!-- List -->
+    <include name="Window_FileManager_List">
+        <control type="group">
+            <width>$PARAM[width]</width>
+            <control type="grouplist">
+                <orientation>horizontal</orientation>
+                <top>-48</top>
+                <height>48</height>
+                <width>$PARAM[labelwidth]</width>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="label" id="$PARAM[pathid]">
+                    <left>0</left>
+                    <height>100%</height>
+                    <width max="$PARAM[labelwidth]">auto</width>
+                    <haspath>true</haspath>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>LineLabel</textcolor>
+                </control>
+                <control type="image">
+                    <bottom>21</bottom>
+                    <width max="$PARAM[labelwidth]">auto</width>
+                    <height>3</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+            </control>
+            <control type="label">
+                <top>-48</top>
+                <height>48</height>
+                <width>100%</width>
+                <align>right</align>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>LineLabel</textcolor>
+                <label>$INFO[Container($PARAM[id]).NumItems] $LOCALIZE[31001]</label>
+            </control>
+            <control type="image">
+                <width>$PARAM[width]</width>
+                <height>height</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+            <control type="list" id="$PARAM[id]">
+                <top>0</top>
+                <left>0</left>
+                <width>$PARAM[width]</width>
+                <height>height</height>
+                <onleft>$PARAM[moveid]</onleft>
+                <onright>$PARAM[moveid]</onright>
+                <orientation>vertical</orientation>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <itemlayout height="69" width="$PARAM[width]">
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <align>right</align>
+                        <font>Font-ListInfo</font>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="69" width="$PARAM[width]">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <animation effect="fade" start="100" end="25" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>Selected</textcolor>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <align>right</align>
+                        <font>Font-ListInfo</font>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <textcolor>Selected</textcolor>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+    
+</includes>

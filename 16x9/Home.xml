@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- home -->
+    <backgroundcolor>HomeBarBG</backgroundcolor>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|movieshub|episodeshub)</onload>
+    <onload>ClearProperty(Header.Label,home)</onload>
+    <onload>ClearProperty(Header.Icon,home)</onload>
+    <onload>ClearProperty(HighlightColor,home)</onload>
+    <onload>ClearProperty(FO9001)</onload>
+    <onload>SetProperty(HubReturn,Home)</onload>
+    <onunload>SetProperty(FO9001,1,home)</onunload>
+    <onunload>SetProperty(Header.Label,$INFO[Container(9000).ListItem.Label],home)</onunload>
+    <onunload>SetProperty(Header.Icon,$INFO[Container(9000).ListItem.Icon],home)</onunload>
+    <onunload condition="!IsEmpty(Container(9000).ListItem.Property(TileColor)">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
+    <controls>
+
+        <include>Furniture_Background</include>
+        <include>Furniture_HomeWidget_Control</include>    
+        <include>Furniture_TopBar</include>
+        
+        <control type="group">
+            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="Control.HasFocus(9001)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="!Control.HasFocus(9001)">Conditional</animation>
+            <include>Furniture_HomeWidget</include>
+            
+            <control type="group">
+                <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,266" end="0">WindowOpen</animation>
+                <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">WindowClose</animation>
+                <include>Furniture_HomeBar</include>
+                <include>Furniture_Home_NowPlaying</include>
+            </control>
+        </control>
+        
+    </controls>
+
+</window>

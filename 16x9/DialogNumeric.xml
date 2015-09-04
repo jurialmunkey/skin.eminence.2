@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- numericinput -->
+    <defaultcontrol always="true">21</defaultcontrol>
+
+    <controls>
+
+        <control type="group">
+            <centertop>588</centertop>
+            <height>560</height>
+            <centerleft>50%</centerleft>
+            <width>420</width>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <control type="group">
+                    <height>70</height>
+                    <include name="Object_Line">
+                        <param name="width" value="380" />
+                        <param name="label" value="$INFO[Control.GetLabel(1)]" />
+                    </include>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>70</height>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                    <control type="label" id="4">
+                        <align>center</align>
+                        <textoffsetx>30</textoffsetx>
+                        <width>100%</width>
+                        <onup>15</onup>
+                        <ondown>20</ondown>
+                        <font>Font-Button</font>
+                        <height>70</height>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                </control>
+                <control type="grouplist" id="1000">
+                    <left>0</left>
+                    <top>80</top>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onup>noop</onup>
+                    <orientation>horizontal</orientation>
+                    <!-- '1' -->
+                    <control type="button" id="11">
+                        <ondown>14</ondown>
+                        <label>12311</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- '2' -->
+                    <control type="button" id="12">
+                        <ondown>15</ondown>
+                        <label>12312</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- '3' -->
+                    <control type="button" id="13">
+                        <ondown>16</ondown>
+                        <label>12313</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                </control>
+                <control type="grouplist" id="2000">
+                    <left>0</left>
+                    <top>160</top>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <orientation>horizontal</orientation>
+                    <!-- '4' -->
+                    <control type="button" id="14">
+                        <onup>11</onup>
+                        <ondown>17</ondown>
+                        <label>12314</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- '5' -->
+                    <control type="button" id="15">
+                        <onup>12</onup>
+                        <ondown>18</ondown>
+                        <label>12315</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- '6' -->
+                    <control type="button" id="16">
+                        <onup>13</onup>
+                        <ondown>19</ondown>
+                        <label>12316</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                </control>
+                <control type="grouplist" id="3000">
+                    <left>0</left>
+                    <top>240</top>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <orientation>horizontal</orientation>
+                    <!-- '7' -->
+                    <control type="button" id="17">
+                        <onup>14</onup>
+                        <ondown>20</ondown>
+                        <label>12317</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- '8' -->
+                    <control type="button" id="18">
+                        <onup>15</onup>
+                        <ondown>10</ondown>
+                        <label>12318</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- '9' -->
+                    <control type="button" id="19">
+                        <onup>16</onup>
+                        <ondown>22</ondown>
+                        <label>12319</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                </control>
+                <control type="grouplist" id="4000">
+                    <left>0</left>
+                    <top>320</top>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <ondown>5000</ondown>
+                    <orientation>horizontal</orientation>
+                    <!-- Previous -->
+                    <control type="button" id="20">
+                        <onup>17</onup>
+                        <label>&lt;</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- '0' -->
+                    <control type="button" id="10">
+                        <onup>18</onup>
+                        <ondown>23</ondown>
+                        <label>12310</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                    <!-- Next -->
+                    <control type="button" id="22">
+                        <onup>19</onup>
+                        <ondown>21</ondown>
+                        <label>&gt;</label>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+                </control>
+                <control type="grouplist" id="5000">
+                    <left>0</left>
+                    <top>400</top>
+                    <height>70</height>
+                    <itemgap>pad</itemgap>
+                    <onup>4000</onup>
+                    <ondown>noop</ondown>
+                    <orientation>horizontal</orientation>
+                    <!-- BACKSPACE -->
+                    <control type="button" id="23">
+                        <label>20181</label>
+                        <onup>20</onup>
+                        <width>250</width>
+                        <include>Defs_KeyboardButton</include>
+                    </control>
+
+                    <control type="button" id="21">
+                        <onup>22</onup>
+                        <include>Defs_KeyboardButton</include>
+                        <label>20177</label>
+                    </control>
+                </control>
+            </control>
+        </control>
+
+        <!-- HIDDeN Heading -->
+        <control type="label" id="1"><visible>false</visible><font>-</font></control>
+
+        <!-- Button grouplist -->
+        
+
+    </controls>
+
+</window>

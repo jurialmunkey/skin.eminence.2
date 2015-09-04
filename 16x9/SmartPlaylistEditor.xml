@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">22</defaultcontrol>
+
+	<controls>
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <left>0</left>
+            <right>0</right>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <height>height</height>
+                <!-- Playlist Type Spin -->
+                <control type="group">
+                    <height>69</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1880" />
+                        <param name="label" value="$LOCALIZE[20333]" />
+                    </include>
+                    <control type="spincontrolex" id="22">
+                        <align>left</align>
+                        <textoffsetx>30</textoffsetx>
+                        <width>100%</width>
+                        <ondown>10</ondown>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                </control> 
+                <!-- Rule List -->
+                <control type="group">
+                    <top>138</top>
+                    <height>207</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1480" />
+                        <param name="label" value="$LOCALIZE[21421]" />
+                    </include>
+                    <include name="Dialog_BasicList">
+                        <param name="width" value="1480" />
+                        <param name="height" value="207" />
+                        <param name="id" value="10" />
+                        <param name="onright" value="8100" />
+                        <param name="ondown" value="8200" />
+                        <param name="onleft" value="" />
+                        <param name="onup" value="22" />
+                    </include>
+                </control>
+                <!-- Add Remove Edit List -->
+                <control type="group">
+                    <top>138</top>
+                    <height>207</height>
+                    <left>1490</left>
+                    <right>0</right>
+                    <include name="Object_Line">
+                        <param name="width" value="390" />
+                        <param name="label" value="$LOCALIZE[33063]" />
+                    </include>
+                    <control type="grouplist" id="8100">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <itemgap>0</itemgap>
+                        <onup>22</onup>
+                        <onleft>10</onleft>
+                        <ondown>8300</ondown>
+                        <orientation>vertical</orientation>
+                        <control type="button" id="13">
+                            <width>100%</width>
+                            <label>15019</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="button" id="14">
+                            <width>100%</width>
+                            <label>15015</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="button" id="15">
+                            <width>100%</width>
+                            <label>21435</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                    </control>
+                </control>
+                
+                <control type="group">
+                    <top>414</top>
+                    <width>1880</width>
+                    <height>207</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1880" />
+                        <param name="label" value="$LOCALIZE[10132]" />
+                    </include>
+                    <control type="grouplist" id="8200">
+                        <width>935</width>
+                        <height>100%</height>
+                        <itemgap>0</itemgap>
+                        <onup>10</onup>
+                        <onright>8300</onright>
+                        <ondown>8000</ondown>
+                        <orientation>vertical</orientation>
+                        <control type="spincontrolex" id="16">
+                            <align>left</align>
+                            <textoffsetx>30</textoffsetx>
+                            <width>935</width>
+                            <label>21424</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="spincontrolex" id="17">
+                            <right>0</right>
+                            <align>left</align>
+                            <textoffsetx>30</textoffsetx>
+                            <width>935</width>
+                            <label>21427</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="spincontrolex" id="18">
+                            <top>69</top>
+                            <left>0</left>
+                            <align>left</align>
+                            <textoffsetx>30</textoffsetx>
+                            <width>935</width>
+                            <label>21429</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                    </control>
+                    
+                    <control type="grouplist" id="8300">
+                        <right>0</right>
+                        <onright>20</onright>
+                        <width>935</width>
+                        <height>100%</height>
+                        <itemgap>0</itemgap>
+                        <onup>10</onup>
+                        <onleft>8200</onleft>
+                        <ondown>8000</ondown>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <orientation>vertical</orientation>
+                        <control type="togglebutton" id="19">
+                            <right>0</right>
+                            <align>right</align>
+                            <textoffsetx>30</textoffsetx>
+                            <width>935</width>
+                            <label>584</label>
+                            <altlabel>585</altlabel>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="8301">
+                            <top>-69</top>
+                            <right>0</right>
+                            <align>left</align>
+                            <textoffsetx>30</textoffsetx>
+                            <width>935</width>
+                            <label>580</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="spincontrolex" id="23">
+                            <left>0</left>
+                            <align>left</align>
+                            <textoffsetx>30</textoffsetx>
+                            <width>935</width>
+                            <label>21458</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="radiobutton" id="24">
+                            <right>0</right>
+                            <align>left</align>
+                            <radioposx>880</radioposx>
+                            <textoffsetx>30</textoffsetx>
+                            <width>935</width>
+                            <label>20395</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                    </control>
+                </control>
+            </control>
+            <control type="grouplist" id="8000">
+                <centerleft>50%</centerleft>
+                <width>1240</width>
+                <bottom>side</bottom>
+                <height>69</height>
+                <align>center</align>
+                <itemgap>20</itemgap>
+                <onup>8200</onup>
+                <orientation>horizontal</orientation>
+                <control type="button" id="20">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>186</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="21">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>222</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+        </control>
+        <!-- Hidden Controls -->
+        <control type="label" id="2"><visible>false</visible></control>
+	</controls>
+
+</window>

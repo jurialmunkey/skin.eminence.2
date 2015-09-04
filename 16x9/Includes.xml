@@ -1,0 +1,75 @@
+<includes>
+
+	<include file="Defaults.xml" />
+    <include file="Includes_Animation.xml" />
+	<include file="Includes_Defs.xml" />
+    <include file="Includes_Dialog.xml" />
+    <include file="Includes_Furniture.xml" />
+    <include file="Includes_Image.xml" />
+    <include file="Includes_Label.xml" />
+	<include file="Includes_Object.xml" />
+    <include file="Includes_Window.xml" />
+	<include file="script-skinshortcuts-includes.xml"/>
+	<include file="Viewtype_List.xml" />
+
+    <!-- GLOBALS -->
+    <include name="GlobalOverlay">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>100%</width>
+            <height>100%</height>
+            <texture colordiffuse="9f000000">common/white.png</texture>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+            <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+        </control>
+    </include>
+
+    <!-- VARS -->
+    <variable name="HighlightColor">
+        <value condition="!IsEmpty(Window(home).Property(HighlightColor))">$INFO[Window(home).Property(HighlightColor)]</value>
+        <value>Highlight</value>
+    </variable>
+    <variable name="HighlightColor2">
+        <value>Highlight2</value>
+    </variable>
+
+    <!-- DBUG INCLUDS -->
+    <include name="WindowID">
+        <width>780</width>
+        <height>21</height>
+        <textcolor>ff0000dd</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <align>left</align>
+    </include>
+
+    <include name="DialogID">
+        <width>780</width>
+        <height>21</height>
+        <textcolor>ff00dd00</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <align>left</align>
+    </include>
+
+    <include name="PathID">
+        <posx>15r</posx>
+        <posy>15</posy>
+        <width>780</width>
+        <height>21</height>
+        <textcolor>ff0000dd</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <align>right</align>
+    </include>
+
+    <include name="ControlID">
+        <posx>15r</posx>
+        <posy>48</posy>
+        <width>780</width>
+        <height>21</height>
+        <textcolor>ffdd0000</textcolor>
+        <shadowcolor>ff000000</shadowcolor>
+        <align>right</align>
+    </include>
+
+</includes>

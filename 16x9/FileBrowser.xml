@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">450</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>favdialogw</width>
+            <bottom>64</bottom>
+            <height>652</height>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$INFO[Control.GetLabel(411)]" />
+                <param name="icon" value="special://skin/extras/icons/filebox.png" />
+            </include>
+            <control type="image">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>552</width>
+                <height>552</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+            <control type="image">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>552</width>
+                <height>552</height>
+                <aspectratio>keep</aspectratio>
+                <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                <visible>SubString(ListItem.Icon,Default)</visible>
+            </control>
+            <control type="image">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>552</width>
+                <height>552</height>
+                <aspectratio>keep</aspectratio>
+                <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                <visible>!SubString(ListItem.Icon,Default) + !SubString(Control.GetLabel(416),*)</visible>
+            </control>
+            <control type="image">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>552</width>
+                <height>552</height>
+                <aspectratio>keep</aspectratio>
+                <texture background="true" fallback="DefaultAddon.png" flipx="true">$INFO[ListItem.Icon]</texture>
+                <visible>!SubString(ListItem.Icon,Default) + SubString(Control.GetLabel(416),*)</visible>
+            </control>
+            <include name="Dialog_ImageList">
+                <param name="id" value="450" />
+                <param name="moveid" value="9000" />
+                <param name="left" value="582" />
+            </include>
+            <include name="Dialog_ImageList">
+                <param name="id" value="451" />
+                <param name="moveid" value="9000" />
+                <param name="left" value="582" />
+            </include>
+            <!-- Button grouplist -->
+            <control type="grouplist" id="9000">
+                <right>side</right>
+                <top>pad</top>
+                <align>right</align>
+                <height>60</height>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <onup>450</onup>
+                <ondown>450</ondown>
+                <orientation>horizontal</orientation>
+                <itemgap>pad</itemgap>
+                <!-- OK Button -->
+                <control type="button" id="413">
+                    <width>324</width>
+                    <height>100%</height>
+                    <label>186</label>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+
+                <!-- Cancel Button -->
+                <control type="button" id="414">
+                    <width>324</width>
+                    <height>100%</height>
+                    <label>222</label>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+
+                <!-- New folder -->
+                <control type="button" id="415">
+                    <width>324</width>
+                    <height>100%</height>
+                    <label>119</label>
+                    <visible>Control.IsEnabled(415)</visible>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+
+                <!-- Mirror image -->
+                <control type="radiobutton" id="416">
+                    <width>324</width>
+                    <height>100%</height>
+                    <label>749</label>
+                    <visible>Control.IsEnabled(416)</visible>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+
+            </control>
+        </control>
+
+        <!-- Hidden Label -->
+        <control type="label" id="411"><visible>false</visible><font>-</font></control>
+    </controls>
+
+</window>

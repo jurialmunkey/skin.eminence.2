@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- seekbar -->
+    <defaultcontrol always="true">901</defaultcontrol>
+    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
+
+    <controls>
+        <control type="group">
+            
+            <include>Furniture_TopBar</include>
+        </control>
+        <control type="group">
+            <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="progress" description="cache">
+                <width>100%</width>
+                <bottom>0</bottom>
+                <height>16</height>
+                <info>Player.ProgressCache</info>
+                <visible>true</visible>
+                <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
+                <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
+                <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
+                <righttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</righttexture>
+            </control>
+            <control type="progress" id="23">
+                <width>100%</width>
+                <bottom>0</bottom>
+                <height>16</height>
+                <info>Player.Progress</info>
+                <visible>!Player.Seeking</visible>
+            </control>
+            <control type="progress" id="401">
+                <width>100%</width>
+                <bottom>0</bottom>
+                <height>16</height>
+                <visible>Player.Seeking</visible>
+            </control>
+        </control>
+    </controls>
+
+</window>

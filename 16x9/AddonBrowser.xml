@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- addonbrowser -->
+    <backgroundcolor>Background</backgroundcolor>
+    <defaultcontrol always="true">50</defaultcontrol>
+    <views>50</views>
+
+    <controls>
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_RSS</include>
+
+        <!-- Main group -->
+        <control type="group">
+            <include>Animation_Common</include>
+            <include>Viewtype_List</include>
+        </control>
+
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <include>Dialog_Top_GroupList</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <!-- View by -->
+                <control type="button" id="2">
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(2)</visible>
+                </control>
+                <!-- Sort by -->
+                <control type="button" id="3">
+                    <include>Defs_OptionButton</include>
+                    <label>103</label>
+                    <visible>Control.IsEnabled(3)</visible>
+                </control>
+                <!-- Sort ascending/descending -->
+                <control type="togglebutton" id="4">
+                    <include>Defs_OptionButton</include>
+                    <label>584</label>
+                    <altlabel>585</altlabel>
+                    <usealttexture>Container.SortDirection(Descending)</usealttexture>
+                    <visible>Control.IsEnabled(4)</visible>
+                </control>
+                <!-- Auto Update -->
+                <control type="button" id="5">
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(5)</visible>
+                </control>
+                <!-- Notifications -->
+                <control type="radiobutton" id="6">
+                    <label>25000</label>
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(6)</visible>
+                </control>
+                <!-- Language Filter -->
+                <control type="radiobutton" id="7">
+                    <label>25001</label>
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(7)</visible>
+                </control>
+                <!-- Hide Broken -->
+                <control type="radiobutton" id="8">
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(8)</visible>
+                </control>
+                <!-- Check Updates -->
+                <control type="button" id="9">
+                    <label>24055</label>
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(9)</visible>
+                </control>
+            </control>
+
+        </control>
+
+    </controls>
+
+</window>

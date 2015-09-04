@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Animation_FadeIn">
+        <animation effect="fade" start="0" end="100" time="200">Visible</animation>
+        <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+    </include>
+    <include name="Animation_FadeIn">
+        <animation effect="fade" start="0" end="100" time="200">Visible</animation>
+        <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+    </include>
+    <include name="Animation_FadeOut">
+        <animation effect="fade" end="0" start="100" time="200">Hidden</animation>
+        <animation effect="fade" end="0" start="100" time="200">WindowClose</animation>
+    </include>
+    <include name="Animation_Bottom">
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,450" end="0">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,450" start="0">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,450" end="0">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,450" start="0">Hidden</animation>
+    </include>
+    <include name="Animation_Left">
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1260" end="0">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1260" start="0">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1260" end="0">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1260" start="0">Hidden</animation>
+    </include>
+    <include name="Animation_Common">
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">Hidden</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
+    </include>
+    <include name="Animation_Common_Info">
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0" delay="300">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">Hidden</animation>
+    </include>
+    <include name="Animation_Hub">
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0">Hidden</animation>
+    </include>
+    <include name="Animation_SlideIn">
+        <animation type="Visible">
+            <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
+            <effect type="fade" start="0" end="100" time="200" />
+        </animation>
+        <animation type="WindowOpen">
+            <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
+            <effect type="fade" start="0" end="100" time="200" />
+        </animation>
+    </include>
+</includes>

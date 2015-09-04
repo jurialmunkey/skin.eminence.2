@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">10</defaultcontrol>
+    <controls>
+
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <left>0</left>
+            <right>0</right>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <height>height</height>
+                <include name="Object_Line">
+                    <param name="width" value="1880" />
+                    <param name="label" value="$LOCALIZE[1021]" />
+                </include>
+                <include name="Dialog_BasicList">
+                    <param name="width" value="1402" />
+                    <param name="height" value="483" />
+                    <param name="id" value="10" />
+                    <param name="onright" value="11" />
+                    <param name="ondown" value="12" />
+                    <param name="onleft" value="" />
+                    <param name="ontop" value="" />
+                </include>
+                <control type="grouplist" id="9000">
+                    <left>1422</left>
+                    <right>0</right>
+                    <onleft>10</onleft>
+                    <itemgap>pad</itemgap>
+                    <ondown>12</ondown>
+                    <control type="button" id="11">
+                        <align>center</align>
+                        <width>100%</width>
+                        <ondown>13</ondown>
+                        <label>1024</label>
+                        <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(11)</visible>
+                    </control>
+                    <control type="button" id="13">
+                        <align>center</align>
+                        <width>100%</width>
+                        <onup>11</onup>
+                        <ondown>14</ondown>
+                        <label>1026</label>
+                        <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(13)</visible>
+                    </control>
+                    <control type="button" id="14">
+                        <align>center</align>
+                        <width>100%</width>
+                        <onup>13</onup>
+                        <label>522</label>
+                        <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(14)</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <bottom>64</bottom>
+                    <height>69</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1880" />
+                        <param name="label" value="$LOCALIZE[1022]" />
+                    </include>
+                    <control type="edit" id="12">
+                        <bottom>0</bottom>
+                        <align>center</align>
+                        <width>100%</width>
+                        <onup>10</onup>
+                        <ondown>8000</ondown>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                </control>
+            </control>
+            <control type="grouplist" id="8000">
+                <centerleft>50%</centerleft>
+                <width>820</width>
+                <bottom>side</bottom>
+                <height>69</height>
+                <align>center</align>
+                <itemgap>20</itemgap>
+                <onup>12</onup>
+                <ondown>10</ondown>
+                <orientation>horizontal</orientation>
+                <control type="button" id="18">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>186</label>
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(18)</visible>
+                </control>
+                <control type="button" id="19">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>222</label>
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(19)</visible>
+                </control>
+            </control>
+        </control>
+
+        <!-- Hidden Controls -->
+        <control type="label" id="2"><visible>false</visible></control>
+
+    </controls>
+
+</window>

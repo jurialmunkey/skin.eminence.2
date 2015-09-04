@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <backgroundcolor>Background</backgroundcolor>
+    <defaultcontrol>9000</defaultcontrol>
+    <controls>
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_RSS</include>
+
+        <!-- Settings -->
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="group">
+                <left>side</left>
+                <right>pad</right>
+                <top>top</top>
+                <height>700</height>
+                <include name="Object_Line">
+                    <param name="width" value="1880" />
+                    <param name="label" value="$LOCALIZE[31073]" />
+                </include>
+            </control>
+            <control type="panel" id="9000">
+                <left>side</left>
+                <right>pad</right>
+                <top>top</top>
+                <height>700</height>
+                <orientation>horizontal</orientation>
+                <itemlayout height="115" width="945">
+                    <control type="image">
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <left>0</left>
+                        <right>pad</right>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>0</top>
+                        <right>20</right>
+                        <bottom>pad</bottom>
+                        <width>100</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <textcolor>ListLabel</textcolor>
+                        <font>Font-Button</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="115" width="945">
+                    <control type="image">
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <left>0</left>
+                        <right>pad</right>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>0</top>
+                        <right>20</right>
+                        <bottom>pad</bottom>
+                        <width>100</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <textcolor>Selected</textcolor>
+                        <font>Font-Button</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <!-- Row 1 -->
+                    <item id="1">
+                        <description>Appearance</description>
+                        <label>480</label>
+                        <onclick>activatewindow(AppearanceSettings)</onclick>
+                        <icon>special://skin/extras/icons/eye.png</icon>
+                    </item>
+                    <item id="5">
+                        <description>Video</description>
+                        <label>157</label>
+                        <onclick>activatewindow(VideosSettings)</onclick>
+                        <icon>special://skin/extras/icons/film.png</icon>
+                    </item>
+                    <item id="6">
+                        <description>Music</description>
+                        <label>2</label>
+                        <onclick>activatewindow(MusicSettings)</onclick>
+                        <icon>special://skin/extras/icons/songs.png</icon>
+                    </item>
+                    <item id="7">
+                        <description>Pictures</description>
+                        <label>1</label>
+                        <onclick>activatewindow(PicturesSettings)</onclick>
+                        <icon>special://skin/extras/icons/pictures.png</icon>
+                    </item>
+                    
+                    <item id="4">
+                        <description>Weather</description>
+                        <label>8</label>
+                        <onclick>activatewindow(WeatherSettings)</onclick>
+                        <icon>special://skin/extras/icons/sun.png</icon>
+                    </item>
+                    <item id="2">
+                        <description>Skin Settings</description>
+                        <label>20077</label>
+                        <!-- <onclick>activatewindow(skinsettings)</onclick> -->
+                        <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+                        <icon>special://skin/extras/icons/year.png</icon>
+                    </item>
+
+                    <!-- Row 2 -->
+                    <item id="9">
+                        <description>System</description>
+                        <label>13000</label>
+                        <onclick>activatewindow(SystemSettings)</onclick>
+                        <icon>special://skin/extras/icons/configure.png</icon>
+                    </item>
+                    <item id="10">
+                        <description>Addons</description>
+                        <label>24001</label>
+                        <onclick>activatewindow(AddonBrowser)</onclick>
+                        <icon>special://skin/extras/icons/addons.png</icon>
+                    </item>
+                    <item id="3">
+                        <description>Profiles</description>
+                        <label>13200</label>
+                        <onclick>activatewindow(Profiles)</onclick>
+                        <icon>special://skin/extras/icons/actor.png</icon>
+                    </item>
+                    <item id="8">
+                        <description>PVR Settings</description>
+                        <label>19191</label>
+                        <onclick>activatewindow(pvrsettings)</onclick>
+                        <icon>special://skin/extras/icons/livetv.png</icon>
+                    </item>
+                    <item id="12">
+                        <description>Network</description>
+                        <label>705</label>
+                        <onclick>activatewindow(NetworkSettings)</onclick>
+                        <icon>special://skin/extras/icons/network.png</icon>
+                    </item>
+                    <item id="11">
+                        <description>System Info</description>
+                        <label>130</label>
+                        <onclick>activatewindow(7)</onclick>
+                        <icon>special://skin/extras/icons/sysinfo.png</icon>
+                    </item>                
+                    
+                </content>
+            </control>
+        </control>
+    </controls>
+
+</window>

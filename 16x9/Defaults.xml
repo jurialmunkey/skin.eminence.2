@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <constant name="pad">10</constant>
+    <constant name="side">20</constant>
+    <constant name="top">280</constant>
+    <constant name="height">690</constant>
+    <constant name="posterh">690</constant>
+    <constant name="posterw">467</constant>
+    <constant name="infox">477</constant>
+    <constant name="posterx">1413</constant>
+    <constant name="toppanel">160</constant>
+    <constant name="listw">1403</constant>
+    <constant name="listsqw">1180</constant>
+    <constant name="sidearrowtop">625</constant>
+    <constant name="favitemw">1256</constant>
+    <constant name="favdialogw">1720</constant>
+
+    <default type="label">
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+        <font>Font-Button</font>
+        <aligny>center</aligny>
+        <align>left</align>
+    </default>
+
+    <default type="fadelabel">
+        <font>Font-Button</font>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="button">
+        <pulseonselect>false</pulseonselect>
+        <font>Font-Button</font>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="togglebutton">
+        <font>Font-Button</font>
+        <pulseonselect>false</pulseonselect>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="radiobutton">
+        <font>Font-Button</font>
+        <radioposx>1350</radioposx>
+        <radiowidth>32</radiowidth>
+        <radioheight>32</radioheight>
+        <textoffsetx>30</textoffsetx>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+        <textureradiofocus colordiffuse="ListLabel">common/radio-on.png</textureradiofocus>
+        <textureradionofocus colordiffuse="Disabled">common/radio-off.png</textureradionofocus>
+        <pulseonselect>false</pulseonselect>
+    </default>
+
+    <default type="spincontrolex">
+        <font>Font-Button</font>
+        <pulseonselect>false</pulseonselect>
+        <spinwidth>32</spinwidth>
+        <spinheight>32</spinheight>
+        <textureup flipy="true" colordiffuse="Disabled">common/spin-down.png</textureup>
+        <texturedown colordiffuse="Disabled">common/spin-down.png</texturedown>
+        <textureupfocus flipy="true" colordiffuse="Selected">common/spin-down.png</textureupfocus>
+        <texturedownfocus colordiffuse="Selected">common/spin-down.png</texturedownfocus>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="spincontrol">
+        <font>Font-Button</font>
+        <pulseonselect>false</pulseonselect>
+        <spinwidth>32</spinwidth>
+        <spinheight>32</spinheight>
+        <textureup flipy="true" colordiffuse="Disabled">common/spin-down.png</textureup>
+        <texturedown colordiffuse="Disabled">common/spin-down.png</texturedown>
+        <textureupfocus flipy="true" colordiffuse="Selected">common/spin-down.png</textureupfocus>
+        <texturedownfocus colordiffuse="Selected">common/spin-down.png</texturedownfocus>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="sliderex">
+        <font>Font-Button</font>
+        <pulseonselect>false</pulseonselect>
+        <sliderwidth>230</sliderwidth>
+        <sliderheight>23</sliderheight>
+        <texturesliderbar>common/slider_bg.png</texturesliderbar>
+        <textureslidernib border="2">common/SliderNibNF.png</textureslidernib>
+        <textureslidernibfocus border="2">common/SliderNibFO.png</textureslidernibfocus>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="slider">
+        <pulseonselect>false</pulseonselect>
+        <texturesliderbar>common/slider_bg.png</texturesliderbar>
+        <textureslidernib border="2">common/SliderNibNF.png</textureslidernib>
+        <textureslidernibfocus border="2">common/SliderNibFO.png</textureslidernibfocus>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="progress">
+        <texturebg colordiffuse="PosterBorder">osd/progress-bg.png</texturebg>
+        <lefttexture colordiffuse="$VAR[HighlightColor]">osd/progress-end.png</lefttexture>
+        <midtexture colordiffuse="$VAR[HighlightColor]">osd/progress-end.png</midtexture>
+        <righttexture colordiffuse="ListLabel">osd/progress-end.png</righttexture>
+        <overlaytexture>noop</overlaytexture>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="textbox">
+        <align>justify</align>
+        <font>Font-ListInfo</font>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>Selected</selectedcolor>
+        <autoscroll delay="8000" time="4000" repeat="12000">True</autoscroll>
+    </default>
+
+    <default type="edit">
+        <font>Font-Button</font>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+    </default>
+
+    <default type="scrollbar">
+        <width>8</width>
+        <texturesliderbackground colordiffuse="PosterBorder">common/white.png</texturesliderbackground>
+        <texturesliderbar colordiffuse="Disabled">common/white.png</texturesliderbar>
+        <texturesliderbarfocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturesliderbarfocus>
+        <textureslidernib>noop</textureslidernib>
+        <textureslidernibfocus>noop</textureslidernibfocus>
+        <showonepage>true</showonepage>
+        <orientation>vertical</orientation>
+    </default>
+
+</includes>

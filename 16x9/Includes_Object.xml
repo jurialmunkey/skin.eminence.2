@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="Object_Scrollbar">
+        <param name="left" default="0" />
+        <definition>
+            <control type="scrollbar" id="60">
+                <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <left>$PARAM[left]</left>
+                <height>height</height>
+                <onright>50</onright>
+                <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+            </control>
+        </definition>
+    </include>
+
+    <!-- Poster -->
+    <include name="Object_Poster">
+        <param name="label" default="$LOCALIZE[31098]" />
+        <definition>
+            <control type="group">
+                <left>$PARAM[left]</left>
+                <width>$PARAM[width]</width>
+                <height>height</height>
+                <include name="Object_Line">
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="image">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <aspectratio>keep</aspectratio>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$VAR[Image_Poster]</texture>
+                    <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                </control>
+                <control type="image">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <aspectratio>scale</aspectratio>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$VAR[Image_Poster]</texture>
+                    <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <!-- Line -->
+    <include name="Object_Line">
+        <control type="grouplist">
+            <orientation>horizontal</orientation>
+            <top>-48</top>
+            <height>48</height>
+            <width>$PARAM[width]</width>
+            <usecontrolcoords>true</usecontrolcoords>
+            <control type="label">
+                <left>0</left>
+                <height>100%</height>
+                <width max="$PARAM[width]">auto</width>
+                <label fallback="19033">$PARAM[label]</label>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>LineLabel</textcolor>
+            </control>
+            <control type="image">
+                <bottom>21</bottom>
+                <width max="$PARAM[width]">auto</width>
+                <height>3</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+        </control>
+    </include>
+    
+</includes>

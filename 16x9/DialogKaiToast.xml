@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <zorder>0</zorder>
+    <controls>
+        <control type="group">
+            <visible>!Window.IsVisible(home)</visible>
+            <animation effect="slide" start="0,64" end="0" time="125">WindowOpen</animation>
+            <animation effect="slide" end="0,64" start="0" time="125">WindowClose</animation>
+            <control type="image">
+                <left>0</left>
+                <posy>64r</posy>
+                <width>100%</width>
+                <height>64</height>  
+                <aspectratio>scale</aspectratio>
+                <texture colordiffuse="HomeBarBG">common/white.png</texture>
+                <visible>Window.IsVisible(fullscreenvideo)</visible>
+            </control>
+            <control type="image">
+                <posx>16</posx>
+                <posy>48r</posy>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="LineLabel">common/info.png</texture>
+            </control>
+            <control type="label">
+                <bottom>16</bottom>
+                <left>48</left>
+                <right>side</right>
+                <height>32</height>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>LineLabel</textcolor>
+                <scroll>true</scroll>
+                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+            </control>
+        </control>
+        <control type="group">
+            <visible>Window.IsVisible(home)</visible>
+            <bottom>266</bottom>
+            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
+            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
+            <control type="image">
+                <left>0</left>
+                <bottom>0</bottom>
+                <width>900</width>
+                <height>64</height>  
+                <aspectratio>scale</aspectratio>
+                <texture colordiffuse="HomeBarBG">common/white.png</texture>                
+            </control>
+            <control type="image">
+                <left>800</left>
+                <bottom>0</bottom>
+                <width>300</width>
+                <height>64</height>  
+                <aspectratio>scale</aspectratio>
+                <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
+            </control>
+            <control type="image">
+                <left>16</left>
+                <bottom>16</bottom>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="LineLabel">common/info.png</texture>
+            </control>
+            <control type="label">
+                <bottom>16</bottom>
+                <left>48</left>
+                <width>1020</width>
+                <height>32</height>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>LineLabel</textcolor>
+                <scroll>true</scroll>
+                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+            </control>
+        </control>
+        <control type="label" id="401"><visible>false</visible></control>
+        <control type="label" id="402"><visible>false</visible></control>
+    </controls>
+
+</window>

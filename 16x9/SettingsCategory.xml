@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<backgroundcolor>Background</backgroundcolor>
+
+	<controls>
+        <include>Furniture_Background</include>
+        <include>Furniture_TopBar</include>
+
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <!-- Main List -->
+            <control type="group">
+                <left>side</left>
+                <top>top</top>
+                <height>height</height>
+                <width>475</width>
+                <include name="Object_Line">
+                    <param name="width" value="475" />
+                    <param name="label" value="$INFO[Control.GetLabel(20)]" />
+                </include>
+                <control type="button" id="20">
+                    <top>-48</top>
+                    <height>48</height>
+                    <aligny>center</aligny>
+                    <width>500</width>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>00ffffff</textcolor>
+                    <focusedcolor>$VAR[HighlightColor2]</focusedcolor>
+                    <texturefocus>noop</texturefocus>
+                    <texturenofocus>noop</texturenofocus>
+                    <onright>3</onright>
+                    <ondown>3</ondown>
+                    <onclick>settingslevelchange</onclick>
+                </control>
+                <control type="grouplist" id="3">                
+                    <itemgap>0</itemgap>
+                    <onleft>20</onleft>
+                    <onup>20</onup>
+                    <onright>5</onright>
+                    <ondown>noop</ondown>
+                </control>
+            </control>
+
+            <!-- Sub List -->
+            <control type="group">
+                <left>505</left>
+                <top>top</top>
+                <height>height</height>
+                <right>side</right>
+                <include name="Object_Line">
+                    <param name="width" value="1395" />
+                    <param name="label" value="$LOCALIZE[33063]" />
+                </include>
+                <control type="grouplist" id="5">                
+                    <itemgap>0</itemgap>
+                    <onleft>3</onleft>
+                </control>
+            </control>
+        </control>
+
+        <!-- Text Box RSS -->
+        <control type="group">
+            <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
+            <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
+            <animation effect="slide" start="0,64" end="0" time="125">VisibleChange</animation>
+            <control type="image">
+                <posx>16</posx>
+                <posy>48r</posy>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
+            </control>
+            <control type="label" id="6">
+                <bottom>16</bottom>
+                <left>64</left>
+                <right>side</right>
+                <height>32</height>
+                <font>Font-ListInfo-Small-Bold</font>
+                <scroll>true</scroll>
+                <textcolor>LineLabel</textcolor>
+            </control>
+        </control>
+
+        <!-- Category Template -->
+        <control type="button" id="10">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+
+		<!-- Default Templates -->
+        <control type="button" id="7">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="radiobutton" id="8">
+            <width>100%</width>
+            <radioposx>1350</radioposx>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="spincontrolex" id="9">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="image" id="11">
+            <width>100%</width>
+            <visible>false</visible>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="edit" id="12">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="sliderex" id="13">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+
+	</controls>
+
+</window>

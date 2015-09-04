@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <!-- Home Bar -->
+    <include name="Furniture_HomeBar">
+        <control type="group">
+            <!-- Backing Bar -->
+            <control type="image">
+                <bottom>0</bottom>
+                <height>266</height>
+                <aspectratio>scale</aspectratio>
+                <texture colordiffuse="HomeBarBG">common/white.png</texture>
+            </control>
+        
+            <!-- Main list -->
+            <control type="panel" id="9000">
+                <left>16</left>
+                <right>0</right>
+                <bottom>0</bottom>
+                <height>266</height>
+                <onup>SetProperty(FO9001,1,home)</onup>
+                <onup>9001</onup>
+                <ondown condition="IntegerGreaterThan(Container(9002).NumItems,0)">9002</ondown>
+                <animation type="Visible">
+                    <effect type="slide" start="0,266" end="0" time="150" />
+                </animation>
+                <orientation>horizontal</orientation>
+                <scrolltime tween="sine" easing="out">240</scrolltime>
+                <itemlayout width="188" height="266">
+                    <control type="image">
+                        <top>16</top>
+                        <width>196</width>
+                        <height>170</height>
+                        <texture colordiffuse="HomeBarTile">common/tile.png</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <top>16</top>
+                        <width>196</width>
+                        <height>170</height>
+                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+                        <aspectratio scalediffuse="false">center</aspectratio>
+                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+                    </control>
+                    <control type="label">
+                        <top>188</top>
+                        <height>78</height>
+                        <width>170</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Font-HomeMenu</font>
+                        <textcolor>HomeBarFG</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="188" height="266">
+                    <control type="image">
+                        <top>16</top>
+                        <width>196</width>
+                        <height>170</height>
+                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/tile.png</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <top>16</top>
+                        <width>196</width>
+                        <height>170</height>
+                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+                        <aspectratio scalediffuse="false">center</aspectratio>
+                    </control>
+                    <control type="label">
+                        <top>188</top>
+                        <height>78</height>
+                        <width>170</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Font-HomeMenu</font>
+                        <textcolor>HomeBarFG</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <animation effect="slide" start="0" end="0,-10" time="100">Focus</animation>
+                    </control>
+                    <control type="image">
+                        <bottom>12</bottom>
+                        <width>170</width>
+                        <height>6</height>
+                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                </focusedlayout>
+
+                <content>
+                    <include>skinshortcuts-mainmenu</include>
+                </content>
+            </control>
+
+            <!-- Icon Hang -->
+            <control type="group">
+                <left>-172</left>
+                <right>-172</right>
+                <bottom>0</bottom>
+                <height>266</height>
+                <control type="image">
+                    <top>16</top>
+                    <left>10</left>
+                    <width>196</width>
+                    <height>170</height>
+                    <texture colordiffuse="HomeBarBG">common/tile.png</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+                <control type="image">
+                    <top>16</top>
+                    <right>10</right>
+                    <width>196</width>
+                    <height>170</height>
+                    <texture colordiffuse="HomeBarBG">common/tile.png</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+                <control type="image">
+                    <bottom>0</bottom>
+                    <right>10</right>
+                    <width>196</width>
+                    <height>70</height>
+                    <texture colordiffuse="HomeBarBG">common/white.png</texture>
+                    <aspectratio>scale</aspectratio>
+                </control>
+            </control>
+
+            <!-- Arrows -->
+            <control type="group">
+                <visible>Container(9000).HasNext | Container(9000).HasPrevious</visible>
+                <left>0</left>
+                <right>0</right>
+                <bottom>0</bottom>
+                <height>266</height>
+                <control type="image">
+                    <centertop>45</centertop>
+                    <left>8</left>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture colordiffuse="ListLabel">common/16-arrow-left.png</texture>
+                </control>
+                <control type="image">
+                    <centertop>160</centertop>
+                    <right>8</right>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture colordiffuse="ListLabel" flipx="true">common/16-arrow-left.png</texture>
+                </control>
+            </control>
+
+            <!-- SubMenu -->
+            <control type="group">
+                <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0" condition="Control.HasFocus(9002)" reversible="false">Conditional</animation>
+                <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0" condition="!Control.HasFocus(9002)" reversible="false">Conditional</animation>
+                <visible>Control.HasFocus(9000) | Control.HasFocus(9002)</visible>
+                <include>Dialog_Top</include>
+                <include>Dialog_Background</include>
+                <include name="Dialog_Top_IconHeader">
+                    <param name="label" value="$INFO[Container(9000).ListItem.Label,, ]$LOCALIZE[1034]" />
+                    <param name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
+                </include>
+                <include name="Dialog_Top_Arrows">
+                    <param name="id" value="9002" />
+                </include>
+
+                <control type="panel" id="9002">
+                    <onup>9000</onup>
+                    <ondown>9000</ondown>
+                    <onback>9000</onback>
+                    <left>pad</left>
+                    <right>0</right>
+                    <top>80</top>
+                    <bottom>pad</bottom>
+                    <onleft>noop</onleft>
+                    <onright>noop</onright>
+                    <scrolltime>200</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="374" height="69">
+                        <control type="image">
+                            <width>364</width>
+                            <height>69</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>side</left>
+                            <right>30</right>
+                            <height>69</height>
+                            <textcolor>ListLabel</textcolor>
+                            <font>Font-ListInfo-Small</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="374" height="69">
+                        <control type="image">
+                            <width>364</width>
+                            <height>69</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>side</left>
+                            <right>30</right>
+                            <height>69</height>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </focusedlayout>
+                    <content>
+                        <include>skinshortcuts-submenu</include>
+                    </content>
+                </control>
+
+            </control>
+           
+         
+        </control>
+    </include>
+
+    <!-- Home Widget -->
+    <variable name="Furniture_HomeWidget_Content">
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist)">$INFO[Container(9000).ListItem.Property(widgetPlaylist)]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomMovies)">special://skin/extras/playlists/RandomMovies.xsp</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomEpisodes)">special://skin/extras/playlists/RandomEpisodes.xsp</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentEpisodes)">special://skin/extras/playlists/NewEpisodes.xsp</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentMovies)">special://skin/extras/playlists/NewMovies.xsp</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedEpisodes)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedMovies)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom3)">$INFO[Skin.String(CustomWidget3)]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom4)">$INFO[Skin.String(CustomWidget4)]</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingShows)">plugin://script.extendedinfo?info=trendingshows</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringShows)">plugin://script.extendedinfo?info=airingshows</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PremiereShows)">plugin://script.extendedinfo?info=premiereshows</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),InCinemas)">plugin://script.extendedinfo?info=incinemas</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Upcoming)">plugin://script.extendedinfo?info=upcoming</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularMovies)">plugin://script.extendedinfo?info=popularmovies</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedMovies)">plugin://script.extendedinfo?info=topratedmovies</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularTvShows)">plugin://script.extendedinfo?info=populartvshows</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedTvShows)">plugin://script.extendedinfo?info=topratedtvshows</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),OnAirTvShows)">plugin://script.extendedinfo?info=onairtvshows</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringTodayTvShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
+        <value condition="!IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
+        <value>special://skin/extras/playlists/RandomMovies.xsp</value>
+    </variable>
+    <include name="Furniture_HomeWidget_Control">
+        <control type="wraplist" id="9001">
+            <orientation>horizontal</orientation>
+            <width>100%</width>
+            <height>100%</height>
+            <onfocus>ClearProperty(FO9001,home)</onfocus>
+            <onunfocus>ClearProperty(FO9001,home)</onunfocus>
+            <onup>ClearProperty(FO9001,home)</onup>
+            <ondown>ClearProperty(FO9001,home)</ondown>
+            <onback>ClearProperty(FO9001,home)</onback>
+            <onback>9000</onback>
+            <ondown>9000</ondown>
+            <onup>9000</onup>
+            <scrolltime tween="sine" easing="out">240</scrolltime>
+            <itemlayout />
+            <focusedlayout width="1920" height="1080" />
+            <content target="video">$VAR[Furniture_HomeWidget_Content]</content>
+        </control>
+    </include>
+    <include name="Furniture_HomeWidget">
+        <control type="group">
+            <posy>400</posy>
+            <include>Animation_Left</include>
+            <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
+            <control type="image">
+                <posx>-100</posx>
+                <width>900</width>
+                <height>340</height>    
+                <texture align="left" border="150" colordiffuse="HomeBarBG">common/half-tile.png</texture>
+            </control>
+            <control type="grouplist">
+                
+                <posx>64</posx>
+                <posy>20</posy>
+                <width>650</width>
+                <orientation>vertical</orientation>
+                <control type="label">
+                    <label>$VAR[Label_HomeWidget]</label>
+                    <aligny>top</aligny>
+                    <height>35</height>
+                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                    <textcolor>HomeBarFG</textcolor>
+                </control>
+                <control type="label">
+                    <label>$VAR[Label_HomeWidget_Label]</label>
+                    <aligny>top</aligny>
+                    <font>Font-WidgetInfoTitle</font>
+                    <height>70</height>
+                    <textcolor>$VAR[HighlightColor2]</textcolor>
+                </control>
+                <control type="textbox">
+                    <label>$VAR[Label_HomeWidget_Plot]</label>
+                    <aligny>top</aligny>
+                    <align>left</align>
+                    <height>120</height>
+                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                    <textcolor>HomeBarFG</textcolor>
+                    <font>Font-ListInfo</font>
+                </control>
+                <control type="label">
+                    <label>$VAR[Label_HomeWidget_Info]</label>
+                    <aligny>center</aligny>
+                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                    <font>Font-ListInfo-Small</font>
+                    <height>65</height>
+                    <textcolor>HomeBarFG</textcolor>
+                    <visible>!IsEmpty(Container(9001).ListItem.Year)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+
+    <include name="Furniture_RSS">
+        <control type="group">
+            <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
+            <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
+            <animation effect="slide" start="0,64" end="0" time="125">VisibleChange</animation>
+            <control type="image">
+                <posx>16</posx>
+                <posy>48r</posy>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
+            </control>
+            <control type="rss">
+                <posx>48</posx>
+                <posy>1032</posy>
+                <width>1870</width>
+                <font>Font-RSS</font>
+                <textcolor>PosterBorder</textcolor>
+                <headlinecolor>PosterBorder</headlinecolor>
+                <titlecolor>LineLabel</titlecolor>
+                <visible>!Player.HasMedia</visible>
+            </control>
+            <control type="label">
+                <bottom>16</bottom>
+                <left>48</left>
+                <right>side</right>
+                <height>32</height>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>LineLabel</textcolor>
+                <label>$VAR[Label_RSS,   ,]</label>
+                <visible>Player.HasMedia</visible>
+            </control>
+        </control>
+    </include>
+
+    <include name="Furniture_Home_NowPlaying">
+        <control type="group">
+            <visible>Window.IsVisible(home)</visible>
+            <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
+            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>Player.HasMedia</visible>
+            <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
+            <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+            <control type="image">
+                <left>0</left>
+                <posy>64r</posy>
+                <width>900</width>
+                <height>64</height>  
+                <aspectratio>scale</aspectratio>
+                <texture colordiffuse="HomeBarBG">common/white.png</texture>
+            </control>
+            <control type="image">
+                <left>800</left>
+                <posy>64r</posy>
+                <width>300</width>
+                <height>64</height>  
+                <aspectratio>scale</aspectratio>
+                <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
+            </control>
+            <control type="image">
+                <left>16</left>
+                <posy>48r</posy>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
+            </control>
+            <control type="label">
+                <bottom>16</bottom>
+                <left>48</left>
+                <width>1020</width>
+                <height>32</height>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>LineLabel</textcolor>
+                <label>$VAR[Label_RSS,   ,]</label>
+            </control>
+        </control>
+    </include>
+
+    <!-- Background -->
+    <include name="Furniture_Background">
+        <control type="multiimage">
+            <width>100%</width>
+            <height>100%</height>
+            <fadetime>600</fadetime>
+            <randomise>true</randomise>
+            <timeperimage>5000</timeperimage>
+            <imagepath background="true">$VAR[Image_Background]</imagepath>
+            <aspectratio>scale</aspectratio>
+        </control>
+        <control type="image" description="Fanart Fade">
+            <width>100%</width>
+            <height>100%</height>
+            <texture colordiffuse="FanartFade">common/white.png</texture>
+            <visible>!Window.IsVisible(home)</visible>
+        </control>
+        <!-- <control type="image" description="Silhouette">
+            <width>100%</width>
+            <height>100%</height>
+            <texture background="true" colordiffuse="4Fffffff">common/settings.png</texture>
+            <visible>Window.IsVisible(settings)</visible>
+        </control> -->
+        <!-- <control type="image">
+            <width>100%</width>
+            <height>512</height>
+            <bottom>0</bottom>
+            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+        </control> -->
+        <control type="image" description="Transition Fade">
+            <width>100%</width>
+            <height>100%</height>
+            <texture background="true" colordiffuse="Background">common/white.png</texture>
+            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+        </control>
+    </include>
+
+    <!-- Header -->
+    <!-- Variables -->
+    <variable name="Furniture_TopBar_Tile_BGCOLOR">
+        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)">HomeBarBG</value>
+        <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
+        <value>PosterBorder</value>
+    </variable>
+    <variable name="Furniture_TopBar_Header_MainLabel">
+        <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
+        <value condition="Window.IsVisible(DialogVideoInfo.xml)">$LOCALIZE[19033]</value>
+        <!-- <value condition="Window.IsVisible(DialogVideoInfo.xml)">$INFO[ListItem.Label]</value> -->
+        <value condition="!IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
+        <value condition="Window.IsVisible(home)">$LOCALIZE[10000]</value>
+        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
+        <value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
+        <value>$LOCALIZE[15100]</value>
+    </variable>
+    <variable name="Furniture_TopBar_Header_SubLabel">
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) + [Container.Content(seasons) | Container.Content(episodes)]">[COLOR=$VAR[HighlightColor2]]$INFO[ListItem.TvShowTitle][/COLOR]$INFO[ListItem.Year,  ,]</value>
+        <value condition="Window.IsVisible(DialogVideoInfo.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Year,  ,]</value>
+        <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
+        <value>[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+    </variable>
+    <variable name="Furniture_TopBar_Tile_Icon_Text">
+        <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[503]</value>
+        <value condition="Window.IsVisible(DialogMuteBug.xml)">$LOCALIZE[31013]</value>
+        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]">$VAR[Label_PlayerStatus]</value>
+        <!-- <value condition="Window.IsVisible(DialogVideoInfo.xml)">$LOCALIZE[19033]</value> -->
+        <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
+        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
+        <value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
+        <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
+        <value condition="Window.IsVisible(MyMusicPlaylist.xml)">$LOCALIZE[559]</value>
+        <value condition="!IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+        <value>$LOCALIZE[10000]</value>
+    </variable>
+    <variable name="Furniture_TopBar_Tile_Icon">
+        <value condition="Window.IsVisible(DialogMuteBug.xml)">special://skin/extras/icons/mute.png</value>
+        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasAudio">special://skin/extras/icons/songs.png</value>
+        <!-- <value condition="Window.IsVisible(DialogVideoInfo.xml)">special://skin/extras/icons/info.png</value> -->
+        <value condition="Window.IsVisible(weather)">special://skin/extras/icons/sun.png</value>
+        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">special://skin/extras/icons/settings.png</value>
+        <value condition="Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addons.png</value>
+        <value condition="Window.IsVisible(MyMusicPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
+        <value condition="Window.IsVisible(FileManager.xml)">special://skin/extras/icons/database.png</value>
+        <value condition="!IsEmpty(Window(home).Property(Header.Icon))">$INFO[Window(home).Property(Header.Icon)]</value>
+        <value>special://skin/extras/icons/home.png</value>
+    </variable>
+    <include name="Furniture_TopBar_Tile">
+        <control type="image">
+            <posy>18</posy>
+            <posx>-88</posx>
+            <width>300</width>
+            <height>164</height>    
+            <texture align="left" border="75">common/header.png</texture>
+            <colordiffuse>$VAR[Furniture_TopBar_Tile_BGCOLOR]</colordiffuse>
+        </control>
+    </include>
+    <include name="Furniture_TopBar_Tile_Content">
+        <control type="image">
+            <posy>42</posy>
+            <posx>62</posx>
+            <width>64</width>
+            <height>64</height> 
+            <texture>common/busy.gif</texture>
+            <aspectratio align="center" aligny="center">keep</aspectratio>
+            <visible>Window.IsVisible(DialogBusy.xml)</visible>
+        </control>
+        <control type="image">
+            <posy>10</posy>
+            <posx>30</posx>
+            <width>128</width>
+            <height>128</height>    
+            <texture>$VAR[Furniture_TopBar_Tile_Icon]</texture>
+            <aspectratio>keep</aspectratio>
+            <colordiffuse>HomeBarFG</colordiffuse>
+            <visible>!Container.Scrolling</visible>
+            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
+            <animation type="Visible">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="2000" />
+                <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" delay="2000" />
+            </animation>
+            <animation type="Hidden">
+                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+                <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out"/>
+            </animation>
+        </control>
+        <control type="group">
+            <visible>Container.Scrolling</visible>
+            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
+            <animation type="Visible">
+                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
+                <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" />
+            </animation>
+            <animation type="Hidden">
+                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" delay="2000" />
+                <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out" delay="2000" />
+            </animation>
+            <control type="label">
+                <posy>25</posy>
+                <posx>30</posx>
+                <width>128</width>
+                <height>100</height>
+                <aligny>top</aligny>
+                <align>center</align>
+                <font>Font-Header</font>
+                <label>$INFO[ListItem.SortLetter]</label>
+                <textcolor>HomeBarFG</textcolor>
+            </control>
+        </control>
+        <control type="label">
+            <posx>0</posx>
+            <posy>115</posy>
+            <width>184</width>
+            <aligny>top</aligny>
+            <font>Font-Sublabel</font>
+            <align>center</align>
+            <textcolor>HomeBarFG</textcolor>
+            <label>$VAR[Furniture_TopBar_Tile_Icon_Text]</label>
+        </control>
+    </include>
+    <include name="Furniture_TopBar_Header">
+        <!-- Nothing Playing -->
+        <control type="group">
+            <visible>![VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
+            <control type="label">
+                <posx>245</posx>
+                <posy>25</posy>
+                <width>1200</width>
+                <height>100</height>
+                <font>Font-Header</font>
+                <label>$VAR[Furniture_TopBar_Header_MainLabel]</label>
+                <aligny>top</aligny>
+                <textcolor>MainLabel</textcolor>
+            </control>
+            <control type="label">
+                <posx>245</posx>
+                <posy>115</posy>
+                <width>1050</width>
+                <font>Font-Sublabel</font>
+                <aligny>top</aligny>
+                <textcolor>SubLabel</textcolor>
+                <label>$VAR[Furniture_TopBar_Header_SubLabel]</label>
+            </control>
+        </control>
+        <!-- Something Playing -->
+        <control type="group">
+            <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
+            <control type="label">
+                <posx>245</posx>
+                <posy>25</posy>
+                <width>1200</width>
+                <height>100</height>
+                <font>Font-Header</font>
+                <label>$INFO[Player.Title]</label>
+                <aligny>top</aligny>
+                <textcolor>MainLabel</textcolor>
+            </control>
+            <control type="grouplist">
+                <posx>245</posx>
+                <posy>115</posy>
+                <width>1050</width>
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <visible>!IsEmpty(Player.Duration) + Player.HasVideo</visible>
+                <control type="label">
+                    <width max="400">auto</width>
+                    <font>Font-Sublabel</font>
+                    <aligny>top</aligny>
+                    <textcolor>SubLabel</textcolor>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]</label>
+                    <visible>!VideoPlayer.Content(livetv)</visible>
+                </control>
+                <control type="label">
+                    <width max="730">auto</width>
+                    <font>Font-Sublabel</font>
+                    <aligny>top</aligny>
+                    <textcolor>SubLabel</textcolor>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]</label>
+                    <visible>VideoPlayer.Content(livetv)</visible>
+                </control>
+                <control type="label">
+                    <width>auto</width>
+                    <font>Font-Sublabel</font>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <textcolor>SubLabel</textcolor>
+                    <label>$INFO[Player.FinishTime,  $LOCALIZE[31071] ,]</label>
+                </control>
+                <control type="label">
+                    <width>330</width>
+                    <font>Font-Sublabel</font>
+                    <align>right</align>
+                    <aligny>top</aligny>
+                    <visible>!VideoPlayer.Content(livetv)</visible>
+                    <textcolor>SubLabel</textcolor>
+                    <label>$INFO[Player.Time(hh:mm:ss),  •  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
+                </control>
+            </control>
+            <control type="grouplist">
+                <posx>245</posx>
+                <posy>115</posy>
+                <width>1050</width>
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <visible>!IsEmpty(Player.Duration) + !Player.HasVideo</visible>
+                <control type="label">
+                    <width max="830">auto</width>
+                    <font>Font-Sublabel</font>
+                    <aligny>top</aligny>
+                    <textcolor>SubLabel</textcolor>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]</label>
+                </control>
+                <control type="label">
+                    <width>320</width>
+                    <font>Font-Sublabel</font>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <textcolor>SubLabel</textcolor>
+                    <label>$INFO[Player.Time(hh:mm:ss),  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="Furniture_TopBar_Clock">
+        <control type="group">
+            <posx>400r</posx>
+            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>!Skin.HasSetting(disable.clockheader)</visible>
+            <include>Animation.HeaderDialog</include>
+            <animation effect="slide" start="0" end="92" condition="Skin.HasSetting(disable.weatherheader)">Conditional</animation>
+            <control type="label">
+                <posx>272</posx>
+                <posy>27</posy>
+                <width>100</width>
+                <height>100</height>
+                <font>Font-Weather</font>
+                <textcolor>MainLabel</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label> [B]$VAR[WeatherLabel][/B]</label>
+                <visible>!Skin.HasSetting(disable.weatherheader)</visible>
+            </control>
+            <control type="image">
+                <posx>284</posx>
+                <posy>28</posy>
+                <width>100</width>
+                <height>100</height>
+                <fadetime>350</fadetime>
+                <aspectratio aligny="center" align="center">keep</aspectratio>
+                <texture colordiffuse="MainLabel">$INFO[Weather.FanartCode,weather-icons/,.png]</texture>
+                <visible>!Skin.HasSetting(disable.weatherheader)</visible>
+            </control>
+            <control type="label">
+                <posx>268</posx>
+                <posy>115</posy>
+                <width>128</width>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-Sublabel</font>
+                <textcolor>SubLabel</textcolor>
+                <align>center</align>
+                <aligny>top</aligny>
+                <label>$INFO[Weather.Temperature]</label>
+                <visible>!Skin.HasSetting(disable.weatherheader)</visible>
+            </control>
+            <control type="label">
+                <posx>270</posx>
+                <posy>25</posy>
+                <width>300</width>
+                <height>100</height>
+                <font>Font-Header</font>
+                <align>right</align>
+                <aligny>top</aligny>
+                <label>$INFO[System.Time(hh:mm)]</label>
+                <textcolor>MainLabel</textcolor>
+                <animation effect="slide" start="0" end="-58" condition="!IsEmpty(System.Time(xx))">Conditional</animation>
+            </control>
+            <control type="label">
+                <posx>270</posx>
+                <posy>71</posy>
+                <width>100</width>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-Sublabel</font>
+                <textcolor>SubLabel</textcolor>
+                <align>right</align>
+                <label>$INFO[System.Time(xx)]</label>
+                <visible>!IsEmpty(System.Time(xx))</visible>
+            </control>
+            <control type="label">
+                <posx>270</posx>
+                <posy>115</posy>
+                <width>500</width>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-Sublabel</font>
+                <textcolor>SubLabel</textcolor>
+                <align>right</align>
+                <label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
+            </control>
+        </control>   
+    </include>
+    <include name="Furniture_TopBar">
+        <control type="group">
+            <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Window.IsActive(DialogMuteBug.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)]</visible>
+            <animation type="Visible">
+                <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="Hidden">
+                <effect type="fade" end="0" start="100" time="200" />
+            </animation>
+            <control type="image">
+                <width>100%</width>
+                <height>512</height>
+                <texture colordiffuse="7f000000">common/gradient.png</texture>
+            </control>
+            <include>Furniture_TopBar_Tile</include>
+            <control type="group">
+                <visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
+                <include>Furniture_TopBar_Tile_Content</include>
+            </control>
+            <control type="group">
+                <include>Furniture_TopBar_Header</include>
+            </control>
+            <include>Furniture_TopBar_Clock</include>
+        </control>
+    </include>
+    
+</includes>
