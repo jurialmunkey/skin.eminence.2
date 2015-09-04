@@ -288,14 +288,70 @@
 
 
     <!-- OSD Controls -->
+    <include name="Window_OSD_Left_Music">
+        <control type="button" id="1">
+            <description>Audio Settings</description>
+            <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+            <onclick>XBMC.PlayerControl(Repeat)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+        <control type="button" id="2">
+            <label>$LOCALIZE[191]$INFO[Playlist.Random, : ]</label>
+            <onclick>XBMC.PlayerControl(Random)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+        <control type="button" id="3">
+            <description>Playlist</description>
+            <label>559</label>
+            <onclick>Close</onclick>
+            <onclick>ActivateWindow(MusicPlaylist)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+    </include>
+    <include name="Window_OSD_Right_Music">
+        <control type="button" id="4">
+            <description>Vis</description>
+            <label>250</label>
+            <onclick>Addon.Default.Set(xbmc.player.musicviz)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>           
+        <control type="button" id="5">
+            <description>Presets</description>
+            <label>13388</label>
+            <onclick>ActivateWindow(musicsettings)</onclick>
+            <onclick>XBMC.ActivateWindow(122)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+        <control type="button" id="6">
+            <description>Lyrics</description>
+            <label>24013</label>
+            <onclick>RunScript(script.cu.lrclyrics)</onclick>
+            <enable>false</enable>
+            <include>Defs_OSDButton</include>
+        </control>
+    </include>
     <include name="Window_OSD">
         <control type="group">
             <animation type="WindowOpen">
-                <effect type="slide" start="0,80" end="0" time="200" />
+                <effect type="slide" start="0,64" end="0" time="200" />
                 <effect type="fade" start="0" end="100" time="200" />
             </animation>
+            <control type="grouplist" id="100">
+                <left>0</left>
+                <bottom>8</bottom>
+                <height>48</height>
+                <width>696</width>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <align>left</align>
+                <onleft>6</onleft>
+                <onright>12</onright>
+                <onup>noop</onup>
+                <ondown>noop</ondown>
+                <include condition="Window.IsVisible(visualisation)">Window_OSD_Left_Music</include>
+            </control>
             <control type="grouplist" id="101">
-                <bottom>16</bottom>
+                <bottom>8</bottom>
                 <width>100%</width>
                 <height>48</height>
                 <itemgap>16</itemgap>
@@ -376,6 +432,20 @@
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
             
+            </control>
+            <control type="grouplist" id="102">
+                <right>0</right>
+                <bottom>8</bottom>
+                <height>48</height>
+                <width>696</width>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <align>right</align>
+                <onleft>17</onleft>
+                <onright>1</onright>
+                <onup>noop</onup>
+                <ondown>noop</ondown>
+                <include condition="Window.IsVisible(visualisation)">Window_OSD_Right_Music</include>
             </control>
         </control>
     </include>

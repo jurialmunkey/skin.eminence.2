@@ -16,10 +16,20 @@
             <control type="group">
                 <left>477</left>
                 <right>0</right>
-                <include name="Object_Line">
-                    <param name="width" value="listw" />
-                    <param name="label" value="207" />
-                </include>
+                <control type="group">
+                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                    <include name="Object_Line">
+                        <param name="width" value="listw" />
+                        <param name="label" value="207" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                    <include name="Object_Line">
+                        <param name="width" value="listw" />
+                        <param name="label" value="206" />
+                    </include>
+                </control>
                 <control type="image">
                     <width>100%</width>
                     <height>100%</height>
@@ -37,6 +47,7 @@
                 </control> -->
                 <!-- Info -->
                 <control type="group">
+                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
                     <left>30</left>
                     <right>30</right>
                     <top>30</top>
@@ -247,6 +258,7 @@
 
                 <!-- Plot -->
                 <control type="group">
+                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
                     <left>30</left>
                     <right>30</right>
                     <top>420</top>
@@ -338,47 +350,41 @@
                     </control>
 
                 </control>
+                <!-- Cast -->
+                <control type="group">
+                    <top>30</top>
+                    <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                    <include name="Dialog_BasicList">
+                        <param name="width" value="1403" />
+                        <param name="height" value="552" />
+                        <param name="id" value="50" />
+                        <param name="onleft" value="SendClick(5)" />
+                        <param name="onback" value="9000" />
+                        <param name="onback2" value="SendClick(5)" />
+                        <param name="ondown" value="9000" />
+                        <param name="backpanel" value="false" />
+                    </include>
+                    <control type="image">
+                        <top>-28</top>
+                        <centerleft>50%</centerleft>
+                        <height>24</height>
+                        <width>24</width>
+                        <texture colordiffuse="LineLabel" flipy="true">common/spin-down.png</texture>
+                        <visible>Container(50).HasPrevious + Control.HasFocus(50)</visible>
+                    </control>
+                    <control type="image">
+                        <top>556</top>
+                        <centerleft>50%</centerleft>
+                        <height>24</height>
+                        <width>24</width>
+                        <texture colordiffuse="LineLabel">common/spin-down.png</texture>
+                        <visible>Container(50).HasNext + Control.HasFocus(50)</visible>
+                    </control>
+                </control>
             </control>
-        </control>
-
-
-        <!-- Cast -->
-        <control type="list" id="50">
-            <left>600</left>
-            <top>235</top>
-            <width>100%</width>
-            <height>580</height>
-            <onup>noop</onup>
-            <ondown>9000</ondown>
-            <onleft>9000</onleft>
-            <onright>9000</onright>
-            <orientation>vertical</orientation>
-            <viewtype label="">list</viewtype>
-            <scrolltime tween="sine" easing="out">240</scrolltime>
-            <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
-
-            <itemlayout width="100%" height="58">
-                <control type="label">
-                    <width>100%</width>
-                    <height>58</height>
-                    <font>Font-ListInfo-Bold</font>
-                    <textcolor>ListLabel</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-            </itemlayout>
-
-            <focusedlayout width="100%" height="58">
-                <control type="label">
-                    <width>100%</width>
-                    <height>58</height>
-                    <font>Font-ListInfo-Bold</font>
-                    <textcolor>ListLabel</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(50)">Conditional</animation>
-                </control>
-            </focusedlayout>
 
         </control>
+
 
 
 

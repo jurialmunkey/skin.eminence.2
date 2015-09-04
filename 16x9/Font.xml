@@ -47,6 +47,12 @@
             <size>27</size>
         </font>
         <font>
+            <name>Font-OSD</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>25</size>
+            <aspect>0.9</aspect>
+        </font>
+        <font>
             <name>Font-InfoBox-Title</name>
             <filename>Roboto-Black.ttf</filename>
             <size>36</size>

@@ -15,6 +15,21 @@
         <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
         <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
     </include>
+    <include name="Defs_OSDButton">
+        <width>230</width>
+        <height>48</height>
+        <textcolor>ListLabel</textcolor>
+        <selectedcolor>$VAR[HighlightColor]</selectedcolor>
+        <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+        <font>Font-OSD</font>
+        <aligny>center</aligny>
+        <align>center</align>
+        <textoffsetx>side</textoffsetx>
+        <texturenofocus>noop</texturenofocus>
+        <texturefocus>noop</texturefocus>
+        <alttexturenofocus>noop</alttexturenofocus>
+        <alttexturefocus>noop</alttexturefocus>
+    </include>
     <include name="Defs_KeyboardButton">
         <width>120</width>
         <height>70</height>

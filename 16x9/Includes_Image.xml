@@ -2,6 +2,7 @@
 <includes>
 
     <variable name="Image_Poster">
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) + StringCompare(Control.GetLabel(5),$LOCALIZE[207])">$INFO[Container(50).ListItem.Icon]</value>
         <value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value>$INFO[ListItem.Icon]</value>
