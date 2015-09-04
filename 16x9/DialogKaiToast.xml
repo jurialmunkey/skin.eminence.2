@@ -41,22 +41,7 @@
             <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
             <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
             <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
-            <control type="image">
-                <left>0</left>
-                <bottom>0</bottom>
-                <width>900</width>
-                <height>64</height>  
-                <aspectratio>scale</aspectratio>
-                <texture colordiffuse="HomeBarBG">common/white.png</texture>                
-            </control>
-            <control type="image">
-                <left>800</left>
-                <bottom>0</bottom>
-                <width>300</width>
-                <height>64</height>  
-                <aspectratio>scale</aspectratio>
-                <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
-            </control>
+         
             <control type="image">
                 <left>16</left>
                 <bottom>16</bottom>
