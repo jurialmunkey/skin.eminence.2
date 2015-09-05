@@ -377,3 +377,15 @@ msgstr ""
 msgctxt "#31099"
 msgid "Codec"
 msgstr ""
+
+msgctxt "#31100"
+msgid "Recently Added"
+msgstr ""
+
+msgctxt "#31101"
+msgid "Recently Played"
+msgstr ""
+
+msgctxt "#31102"
+msgid "Watch Random"
+msgstr ""

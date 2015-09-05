@@ -10,16 +10,16 @@
     <shortcut>
         <label>20342</label>
         <label2>Common Shortcut</label2>
-        <defaultID>movies</defaultID>
+        <defaultID>1101</defaultID>
         <icon>special://skin/extras/icons/film.png</icon>
-        <action>ActivateWindow(Videos,MovieTitles,return)</action>
+        <action>ActivateWindow(1101)</action>
     </shortcut>
     <shortcut>
         <label>20343</label>
         <label2>Common Shortcut</label2>
-        <defaultID>tvshows</defaultID>
+        <defaultID>1102</defaultID>
         <icon>special://skin/extras/icons/tv.png</icon>
-        <action>ActivateWindow(Videos,TVShowTitles,return)</action>
+        <action>ActivateWindow(1102)</action>
     </shortcut>
     <shortcut>
         <label>2</label>
@@ -29,7 +29,7 @@
         <action>ActivateWindow(Music)</action>
     </shortcut>
     <shortcut>
-        <label>31103</label>
+        <label>31015</label>
         <label2>Common Shortcut</label2>
         <defaultID>livetv</defaultID>
         <icon>special://skin/extras/icons/livetv.png</icon>
@@ -48,6 +48,13 @@
         <defaultID>programs</defaultID>
         <icon>special://skin/extras/icons/addons.png</icon>
         <action>ActivateWindow(Programs)</action>
+    </shortcut>
+    <shortcut>
+        <label>8</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>weather</defaultID>
+        <icon>special://skin/extras/icons/weather.png</icon>
+        <action>ActivateWindow(Weather)</action>
     </shortcut>
     <shortcut>
         <label>10004</label>

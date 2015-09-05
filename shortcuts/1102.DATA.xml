@@ -8,19 +8,19 @@
     </shortcut>
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
-        <label>31173</label>
+        <label>31100</label>
         <action>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</action>
         <icon>special://skin/extras/icons/recentlyadded.png</icon>
     </shortcut>
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
-        <label>31174</label>
+        <label>31101</label>
         <action>ActivateWindow(Videos,special://skin/extras/playlists/RecentEpisodes.xsp,return)</action>
         <icon>special://skin/extras/icons/recent.png</icon>
     </shortcut>
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
-        <label>31175</label>
+        <label>31102</label>
         <action>PlayMedia(special://skin/extras/playlists/RandomEpisodes.xsp)</action>
         <icon>special://skin/extras/icons/signpost.png</icon>
     </shortcut>

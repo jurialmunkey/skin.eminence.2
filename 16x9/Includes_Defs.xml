@@ -47,6 +47,14 @@
     </include>
     <variable name="Defs_Hub_Widget">
         <value condition="Window.IsVisible(1101) + !IsEmpty(Skin.String(Widget.1101))">$INFO[Skin.String(Widget.1101)]</value>
+        <value condition="Window.IsVisible(1102) + !IsEmpty(Skin.String(Widget.1102))">$INFO[Skin.String(Widget.1102)]</value>
+        <value condition="Window.IsVisible(1103) + !IsEmpty(Skin.String(Widget.1103))">$INFO[Skin.String(Widget.1103)]</value>
+        <value condition="Window.IsVisible(1104) + !IsEmpty(Skin.String(Widget.1104))">$INFO[Skin.String(Widget.1104)]</value>
+        <value condition="Window.IsVisible(1105) + !IsEmpty(Skin.String(Widget.1105))">$INFO[Skin.String(Widget.1105)]</value>
+        <value condition="Window.IsVisible(1106) + !IsEmpty(Skin.String(Widget.1106))">$INFO[Skin.String(Widget.1106)]</value>
+        <value condition="Window.IsVisible(1107) + !IsEmpty(Skin.String(Widget.1107))">$INFO[Skin.String(Widget.1107)]</value>
+        <value condition="Window.IsVisible(1108) + !IsEmpty(Skin.String(Widget.1108))">$INFO[Skin.String(Widget.1108)]</value>
+        <value condition="Window.IsVisible(1109) + !IsEmpty(Skin.String(Widget.1109))">$INFO[Skin.String(Widget.1109)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
     <variable name="Defs_HomeTileColor">

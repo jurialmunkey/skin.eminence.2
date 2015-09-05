@@ -7,20 +7,20 @@
         <icon>special://skin/extras/icons/film.png</icon>
     </shortcut>
     <shortcut>
-        <label>31173</label>
+        <label>31100</label>
         <label2>Movie Hub Shortcut</label2>
         <action>ActivateWindow(Videos,RecentlyAddedMovies,return)</action>
         <icon>special://skin/extras/icons/recentlyadded.png</icon>
     </shortcut>
     <shortcut>
-        <label>31174</label>
+        <label>31101</label>
         <label2>Movie Hub Shortcut</label2>
         <action>ActivateWindow(Videos,special://skin/extras/playlists/RecentMovies.xsp,return)</action>
         <icon>special://skin/extras/icons/recent.png</icon>
     </shortcut>
     
     <shortcut>
-        <label>31175</label>
+        <label>31102</label>
         <label2>Movie Hub Shortcut</label2>
         <action>PlayMedia(special://skin/extras/playlists/RandomMovies.xsp)</action>
         <icon>special://skin/extras/icons/signpost.png</icon>
