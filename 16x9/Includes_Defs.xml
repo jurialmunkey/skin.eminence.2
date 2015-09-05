@@ -77,13 +77,7 @@
             <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
             <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid])</visible>
             <include>Defs_OptionButton</include>
-            <onclick>SetProperty(Dialog.1.Label,Select widget from included playlists)</onclick>
-            <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetFile(Widget.$PARAM[hubid],.xsp|.m3u,special://skin/extras/playlists/))</onclick>
-            <onclick>SetProperty(Dialog.2.Label,Select widget from your playlists)</onclick>
-            <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetFile(Widget.$PARAM[hubid],.xsp|.m3u,special://profile/playlists/video/))</onclick>
-            <onclick>SetProperty(Dialog.3.Label,Select a widget from your library paths)</onclick>
-            <onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.skinshortcuts,type=shortcuts&amp;skinList=Widget.$PARAM[hubid]))</onclick>
-            <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31097])</onclick> 
+            <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=mygroupings&amp;skinList=Widget.$PARAM[hubid])</onclick>
         </control>
     </include>
 </includes>

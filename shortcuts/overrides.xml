@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <overrides>
     
+    <!-- Groupings -->
+    <mygroupings-groupings>
+        <content>playlist-video</content>
+        <content>addon-video</content>
+    </mygroupings-groupings>
+
 
     <!-- Movies -->
     <widget label="31031">RecentMovies</widget>
@@ -33,8 +39,8 @@
     <widgetPlaylists>True</widgetPlaylists>
         
     <!-- Additional Common Items -->
-    <shortcut label="31094" type="Hub 1101" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
-    <shortcut label="31093" type="Hub 1102" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
+    <shortcut label="31094" type="Hub 1102" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
+    <shortcut label="31093" type="Hub 1101" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
         
     <!-- Browse for Backgrounds -->
     <backgroundBrowse>True</backgroundBrowse>
