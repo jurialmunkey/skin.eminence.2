@@ -111,35 +111,17 @@
                     <include>Defs_OptionButton</include>
                 </control>
 
-                <control type="button" id="9301" description="Set 1101 HUB">
-                    <width>100%</width>
-                    <label>31096</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                    <include>Defs_OptionButton</include>
-                    <visible>stringcompare(Container(211).ListItem.Label2,1101)</visible>
-                    <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=1101)</onclick>
-                </control>
-                <control type="button" id="9401" description="Set 1101 HUB WIDGET">
-                    <width>100%</width>
-                    <label>31097</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                    <visible>stringcompare(Container(211).ListItem.Label2,1101)</visible>
-                    <include>Defs_OptionButton</include>
-                    <onclick>SetProperty(Dialog.1.Label,Select widget from included playlists)</onclick>
-                    <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetFile(Widget.1101,.xsp|.m3u,special://skin/extras/playlists/))</onclick>
-                    <onclick>SetProperty(Dialog.2.Label,Select widget from your playlists)</onclick>
-                    <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetFile(Widget.1101,.xsp|.m3u,special://profile/playlists/video/))</onclick>
-                    <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31097])</onclick> 
-                </control>
-                
-                <control type="button" id="9302" description="Set 1102 HUB">
-                    <width>100%</width>
-                    <label>31096</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                    <include>Defs_OptionButton</include>
-                    <visible>stringcompare(Container(211).ListItem.Label2,1102)</visible>
-                    <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=1102)</onclick>
-                </control> 
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1101" />
+                    <param name="buttonid1" value="9301" />
+                    <param name="buttonid2" value="9401" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1102" />
+                    <param name="buttonid1" value="9302" />
+                    <param name="buttonid2" value="9402" />
+                </include>
 
 
                 <control type="button" id="312" description="Widget">

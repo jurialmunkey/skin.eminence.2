@@ -9,15 +9,15 @@
     </shortcut>
     <shortcut>
         <label>20342</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>1101</defaultID>
+        <label2>Hub 1101</label2>
+        <defaultID>x1101</defaultID>
         <icon>special://skin/extras/icons/film.png</icon>
         <action>ActivateWindow(1101)</action>
     </shortcut>
     <shortcut>
         <label>20343</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>1102</defaultID>
+        <label2>Hub 1102</label2>
+        <defaultID>x1102</defaultID>
         <icon>special://skin/extras/icons/tv.png</icon>
         <action>ActivateWindow(1102)</action>
     </shortcut>

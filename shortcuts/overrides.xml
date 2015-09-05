@@ -31,27 +31,21 @@
 
     <!-- Playlist -->
     <widgetPlaylists>True</widgetPlaylists>
-    
-    <!-- Custom Widgets -->
-    <!-- <widget label="31086">Custom1</widget>
-    <widget label="31087">Custom2</widget>
-    <widget label="31088">Custom3</widget>
-    <widget label="31089">Custom4</widget> -->
         
     <!-- Additional Common Items -->
-    <shortcut label="31094" type="1102" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
-    <shortcut label="31093" type="1101" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
+    <shortcut label="31094" type="Hub 1101" grouping="common" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
+    <shortcut label="31093" type="Hub 1102" grouping="common" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
         
     <!-- Browse for Backgrounds -->
     <backgroundBrowse>True</backgroundBrowse>
     <background label="::PLAYLIST::">playlistBackground</background>
     
     <!-- Warning to Remove Settings -->
-    <warn heading="31176" message="31177">ActivateWindow(Settings)</warn>
+    <warn heading="31103" message="31104">ActivateWindow(Settings)</warn>
     
     <!-- Icon Overrides -->
-    <icon labelID="1102">special://skin/extras/icons/tv.png</icon>
-    <icon labelID="1101">special://skin/extras/icons/film.png</icon>
+    <icon labelID="x1102">special://skin/extras/icons/tv.png</icon>
+    <icon labelID="x1101">special://skin/extras/icons/film.png</icon>
     <icon labelID="livetv">special://skin/extras/icons/livetv.png</icon>
     <icon labelID="radio">special://skin/extras/icons/radio.png</icon>
     <icon labelID="weather">special://skin/extras/icons/sun.png</icon>

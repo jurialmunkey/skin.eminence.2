@@ -3,7 +3,7 @@
     <!-- home -->
     <backgroundcolor>HomeBarBG</backgroundcolor>
     <defaultcontrol always="true">9000</defaultcontrol>
-    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|1101|1102)</onload>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102)</onload>
     <onload>ClearProperty(Header.Label,home)</onload>
     <onload>ClearProperty(Header.Icon,home)</onload>
     <onload>ClearProperty(HighlightColor,home)</onload>

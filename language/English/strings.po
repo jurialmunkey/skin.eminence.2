@@ -389,3 +389,11 @@ msgstr ""
 msgctxt "#31102"
 msgid "Watch Random"
 msgstr ""
+
+msgctxt "#31103"
+msgid "Delete Settings Shortcut"
+msgstr ""
+
+msgctxt "#31104"
+msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
+msgstr ""

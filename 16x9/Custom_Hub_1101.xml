@@ -7,7 +7,7 @@
     <allowoverlay>false</allowoverlay>
     <controls>
         <include name="Window_Hub">
-            <param name="categories" value="skinshortcuts-group-1101" />
+            <param name="categories" value="skinshortcuts-group-x1101" />
         </include>
     </controls>
 </window>
