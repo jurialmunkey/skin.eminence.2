@@ -142,7 +142,7 @@
                 </control> 
 
 
-                <control type="button" id="309" description="Widget">
+                <control type="button" id="312" description="Widget">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>

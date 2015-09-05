@@ -222,6 +222,7 @@
 
     <!-- Home Widget -->
     <variable name="Furniture_HomeWidget_Content">
+        <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath))">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist)">$INFO[Container(9000).ListItem.Property(widgetPlaylist)]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomMovies)">special://skin/extras/playlists/RandomMovies.xsp</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomEpisodes)">special://skin/extras/playlists/RandomEpisodes.xsp</value>

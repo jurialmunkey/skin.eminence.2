@@ -8,10 +8,11 @@
 			<thumb>special://skin/extras/icons/video-addons.png</thumb>
 			<property name="labelID">3</property>
 			<property name="defaultID">videos</property>
-			<property name="widget">RecentMovies</property>
-			<property name="widgetName">Recent movies</property>
+			<property name="widget">Addon</property>
+			<property name="widgetName">YouTube - kate bush</property>
 			<property name="widgetTarget">video</property>
-			<property name="widgetPath">library://video/movies/actors.xml/</property>
+			<property name="widgetPath">plugin://plugin.video.youtube/kodion/search/query/?q=kate+bush</property>
+			<property name="widgetType">musicvideos</property>
 			<onclick>ActivateWindow(Videos,VideoLibrary)</onclick>
 			<property name="path">ActivateWindow(Videos,VideoLibrary)</property>
 			<property name="list">VideoLibrary</property>
@@ -27,9 +28,12 @@
 			<thumb />
 			<property name="labelID">movies</property>
 			<property name="defaultID">31093</property>
-			<property name="widget">RandomMovies</property>
-			<property name="widgetName">Random movies</property>
+			<property name="widget">Playlist</property>
+			<property name="widgetName">Random Movies</property>
 			<property name="translatedPath">ActivateWindow(1101)</property>
+			<property name="widgetType">movies</property>
+			<property name="widgetTarget">video</property>
+			<property name="widgetPath">/home/mergeandvary/.kodi/addons/skin.eminence.2/extras/playlists/RandomMovies.xsp</property>
 			<onclick>ActivateWindow(1101)</onclick>
 			<property name="path">ActivateWindow(1101)</property>
 			<property name="list">1101</property>
@@ -45,10 +49,11 @@
 			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
-			<property name="widget">TrendingMovies</property>
-			<property name="widgetName">Trending Movies</property>
-			<property name="widgetTarget">video</property>
-			<property name="widgetPath">special://videoplaylists/</property>
+			<property name="widget">addon</property>
+			<property name="widgetName">$LOCALIZE[10001]</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
 			<visible>Library.HasContent(TVShows)</visible>
 			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 			<property name="path">ActivateWindow(Videos,TVShowTitles,return)</property>
@@ -65,8 +70,11 @@
 			<thumb />
 			<property name="labelID">2</property>
 			<property name="defaultID">music</property>
-			<property name="widgetName">Upcoming Films</property>
-			<property name="widget">Upcoming</property>
+			<property name="widgetName">Genesis</property>
+			<property name="widget">Addon</property>
+			<property name="widgetType">video</property>
+			<property name="widgetTarget">video</property>
+			<property name="widgetPath">plugin://plugin.video.genesis</property>
 			<onclick>ActivateWindow(Music)</onclick>
 			<property name="path">ActivateWindow(Music)</property>
 			<property name="list">Music</property>
@@ -82,10 +90,11 @@
 			<thumb />
 			<property name="labelID">31103</property>
 			<property name="defaultID">livetv</property>
-			<property name="widget">TopRatedMovies</property>
-			<property name="widgetName">Top Rated Movies</property>
+			<property name="widget">Addon</property>
+			<property name="widgetName">Genesis - Most Popular</property>
 			<property name="widgetTarget">video</property>
-			<property name="widgetPath">videodb://recentlyaddedepisodes/</property>
+			<property name="widgetPath">plugin://plugin.video.genesis/?action=movies&amp;url=popular</property>
+			<property name="widgetType">movies</property>
 			<onclick>ActivateWindow(MyPVR)</onclick>
 			<property name="path">ActivateWindow(MyPVR)</property>
 			<property name="list">MyPVR</property>
@@ -135,10 +144,11 @@
 			<thumb />
 			<property name="labelID">7</property>
 			<property name="defaultID">7</property>
-			<property name="widget">AiringTodayTvShows</property>
-			<property name="widgetName">Airing Today</property>
-			<property name="widgetTarget">video</property>
-			<property name="widgetPath">addons://sources/video</property>
+			<property name="widget">addon</property>
+			<property name="widgetName">$LOCALIZE[10001]</property>
+			<property name="widgetTarget">programs</property>
+			<property name="widgetPath">addons://sources/executable</property>
+			<property name="widgetType">program</property>
 			<onclick>ActivateWindow(FileManager)</onclick>
 			<property name="path">ActivateWindow(FileManager)</property>
 			<property name="list">FileManager</property>
@@ -189,6 +199,8 @@
 			<thumb />
 			<property name="labelID">settings</property>
 			<property name="defaultID">settings</property>
+			<property name="background">/home/mergeandvary/Weather-Fanart/18/hail3.jpg</property>
+			<property name="backgroundName">/home/mergeandvary/Weather-Fanart/18/hail3.jpg</property>
 			<onclick>ActivateWindow(Settings)</onclick>
 			<property name="path">ActivateWindow(Settings)</property>
 			<property name="list">Settings</property>

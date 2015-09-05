@@ -62,7 +62,7 @@
     </variable>
 
     <variable name="Label_HomeWidget">
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist)">$INFO[Container(9000).ListItem.Property(widgetName)]</value>
+        <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetName))">$INFO[Container(9000).ListItem.Property(widgetName)]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentMovies)">$LOCALIZE[31031]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomMovies)">$LOCALIZE[31054]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedMovies)">$LOCALIZE[31032]</value>
@@ -87,7 +87,7 @@
         <value>$INFO[Container(9001).ListItem.Label]</value>
     </variable>
     <variable name="Label_HomeWidget_Plot">
-        <value condition="!Container(9001).IsUpdating">$INFO[Container(9001).ListItem.Plot]$INFO[Container(9001).ListItem.Property(Album_Description)]</value>
+        <value condition="!Container(9001).IsUpdating">$INFO[Container(9001).ListItem.Plot]$INFO[Container(9001).ListItem.Property(Album_Description)]$INFO[Container(9001).ListItem.Property(Addon.Description)]</value>
     </variable>
     <variable name="Label_HomeWidget_Info">
         <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
