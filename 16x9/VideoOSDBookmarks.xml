@@ -1,126 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- videobookmarks -->
-	<defaultcontrol always="true">2</defaultcontrol>
+    <!-- videobookmarks -->
+    <defaultcontrol always="true">2</defaultcontrol>
 
-	<controls>
-
-		<control type="list" id="11">
-			<left>150</left>
-			<top>610</top>
-			<width>1620</width>
-			<height>290</height>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
-			<ondown>9001</ondown>
-			<onup>noop</onup>
-			<orientation>horizontal</orientation>
-			<viewtype label="535">list</viewtype>
-			<scrolltime tween="sine" easing="out">240</scrolltime>
-
-			<itemlayout height="290" width="324">
-				<control type="image">
-					<width>324</width>
-					<height>242</height>
-					<texture border="1">osd/OSDBack.png</texture>
-				</control>
-				<control type="image">
-					<left>6</left>
-					<top>6</top>
-					<width>312</width>
-					<height>176</height>
-					<aspectratio aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="label">
-					<left>10</left>
-					<top>190</top>
-					<width>304</width>
-					<height>44</height>
-					<textcolor>DialogColor2</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
-
-			<focusedlayout height="290" width="324">
-				<control type="image">
-					<width>324</width>
-					<height>242</height>
-					<texture border="1">osd/OSDBack.png</texture>
-				</control>
-				<control type="image">
-					<width>324</width>
-					<height>242</height>
-					<texture border="1">osd/OSDBack.png</texture>
-				</control>
-				<control type="image">
-					<left>6</left>
-					<top>6</top>
-					<width>312</width>
-					<height>176</height>
-					<aspectratio aligny="top">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="label">
-					<left>10</left>
-					<top>190</top>
-					<width>304</width>
-					<height>44</height>
-					<textcolor>DialogColor1</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
-
-		</control>
-
-		<control type="group">
-			<left>150</left>
-			<top>945</top>
-			<width>1620</width>
-			<height>60</height>
-
-			<!-- Background -->
-			<control type="image">
-				<width>1620</width>
-				<height>60</height>
-				<texture border="1">osd/OSDBack.png</texture>
-			</control>
-
-			<!-- Button grouplist -->
-			<control type="grouplist" id="9001">
-				<left>20</left>
-				<top>-6</top>
-				<width>1600</width>
-				<height>60</height>
-				<itemgap>20</itemgap>
-				<onleft>noop</onleft>
-				<onright>noop</onright>
-				<onup>11</onup>
-				<ondown>close</ondown>
-				<orientation>horizontal</orientation>
-
-				<!-- Create Bookmark button -->
-				<control type="button" id="2">
-					<width>520</width>
-					<label>294</label>
-				</control>
-
-				<!-- Clear Bookmark button -->
-				<control type="button" id="3">
-					<width>520</width>
-					<label>296</label>
-				</control>
-
-				<!-- Use current for episode thumb -->
-				<control type="button" id="4">
-					<width>520</width>
-					<label>20406</label>
-				</control>
-
-			</control>
-
-		</control>
-
-	</controls>
+    <controls>
+        <control type="group">
+            <top>210</top>
+            <bottom>133</bottom>
+            <centerleft>50%</centerleft>
+            <width>1190</width>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>0</right>
+                <height>572</height>
+                <control type="group">
+                    <left>0</left>
+                    <right>side</right>
+                    <height>552</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1150" />
+                        <param name="label" value="$INFO[Control.GetLabel(2)]" />
+                    </include>
+                </control>
+                <include name="Dialog_ImageList">
+                    <param name="id" value="11" />
+                    <param name="moveid" value="8000" />
+                    <param name="ondown" value="8000" />
+                    <param name="left" value="0" />
+                    <param name="width" value="1150" />
+                    <param name="top" value="0" />
+                    <param name="pad" value="20" />
+                </include>
+            </control>
+            <!-- Ok Cancel Defaults -->
+            <control type="grouplist" id="8000">
+                <centerleft>50%</centerleft>
+                <width>1150</width>
+                <bottom>side</bottom>
+                <height>69</height>
+                <align>center</align>
+                <itemgap>20</itemgap>
+                <onup>11</onup>
+                <ondown>noop</ondown>
+                <orientation>horizontal</orientation>
+                <control type="button" id="2">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>294</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="3">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>296</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="4">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>20406</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+        </control>
+    </controls>
 
 </window>

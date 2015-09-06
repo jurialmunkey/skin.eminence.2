@@ -29,7 +29,7 @@
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">WindowClose</animation>
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">Visible</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">Hidden</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="Window.IsVisible(DialogVideoInfo.xml)">Conditional</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)">Conditional</animation>
     </include>
     <include name="Animation_Common_Info">
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0" delay="300">WindowOpen</animation>

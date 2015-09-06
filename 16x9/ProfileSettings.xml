@@ -26,8 +26,8 @@
                 <control type="image" id="101">
                     <width>100%</width>
                     <height>100%</height>
-                    <bordertexture colordiffuse="PosterBorder">common/white.png</bordertexture>
-                    <bordersize>pad</bordersize>
+                    <!-- <bordertexture colordiffuse="PosterBorder">common/white.png</bordertexture> -->
+                    <!-- <bordersize>pad</bordersize> -->
                     <aspectratio aligny="top">keep</aspectratio>
                 </control>
 

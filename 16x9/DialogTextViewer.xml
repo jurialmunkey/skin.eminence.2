@@ -1,40 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- textviewer -->
-	<defaultcontrol always="true">61</defaultcontrol>
-	<include>DialogZoomAnimation</include>
+    <!-- textviewer -->
+    <defaultcontrol always="true">61</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <centerleft>50%</centerleft>
+            <width>1200</width>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <bottom>side</bottom>
+                <include name="Object_Line">
+                    <param name="width" value="1160" />
+                    <param name="label" value="$LOCALIZE[587]" />
+                </include>
+                <control type="textbox" id="5">
+                    <left>40</left>
+                    <right>0</right>
+                    <top>side</top>
+                    <bottom>pad</bottom>
+                    <font>Font-ListInfo-Small</font>
+                    <pagecontrol>61</pagecontrol>
+                </control>
+                <control type="scrollbar" id="61">
+                    <left>0</left>
+                    <top>side</top>
+                    <width>pad</width>
+                    <bottom>0</bottom>
+                </control>
+            </control>
+        </control>
 
-	<controls>
+        <!-- Heading -->
+        <control type="label" id="1"><visible>false</visible></control>
 
-		<!-- Background -->
-		<include>DialogBackgroundImage</include>
-
-		<!-- Heading -->
-		<control type="label" id="1">
-			<left>150</left>
-			<top>96</top>
-			<width>1620</width>
-			<height>72</height>
-			<font>Font72</font>
-		</control>
-
-		<!-- Info -->
-		<control type="textbox" id="5">
-			<left>150</left>
-			<top>235</top>
-			<width>1620</width>
-			<height>700</height>
-			<pagecontrol>61</pagecontrol>
-		</control>
-
-		<!-- Scrollbar -->
-		<control type="scrollbar" id="61">
-			<left>150</left>
-			<top>235</top>
-			<width>10</width>
-			<height>716</height>
-		</control>
-
-	</controls>
+    </controls>
 
 </window>

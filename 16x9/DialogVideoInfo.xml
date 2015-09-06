@@ -36,15 +36,6 @@
                     <texture colordiffuse="PosterBorder">common/white.png</texture>
                 </control>
 
-
-                <!-- <control type="image">
-                    <top>pad</top>
-                    <right>30</right>
-                    <width>400</width>
-                    <height>155</height>
-                    <aspectratio aligny="top">keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-                </control> -->
                 <!-- Info -->
                 <control type="group">
                     <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
@@ -61,232 +52,23 @@
                     </control>
                     <!-- Details -->
                     <control type="grouplist">
-                        <top>76</top>
-                        <width>100%</width>
-                        <height>336</height>
-                        <itemgap>12</itemgap>
-                        <orientation>vertical</orientation>
-                        <aligny>center</aligny>
-                        <usecontrolcoords>true</usecontrolcoords>
-
-                        <!-- Artist -->
-                        <control type="group">
-                            <height>36</height>
-                            <width>100%</width>
-                            <visible>!IsEmpty(ListItem.Artist)</visible>
-                            <control type="label">
-                                <width>200</width>
-                                <height>36</height>
-                                <align>left</align>
-                                <font>Font-ListInfo-Bold</font>
-                                <label>557</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                            <control type="label">
-                                <left>220</left>
-                                <align>left</align>
-                                <height>36</height>
-                                <font>Font-ListInfo</font>
-                                <label>$INFO[ListItem.Artist]</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                        </control>
-
-                        <!-- Album -->
-                        <control type="group">
-                            <height>36</height>
-                            <width>100%</width>
-                            <visible>!IsEmpty(ListItem.Album)</visible>
-                            <control type="label">
-                                <width>200</width>
-                                <height>36</height>
-                                <align>left</align>
-                                <font>Font-ListInfo-Bold</font>
-                                <label>558</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                            <control type="label">
-                                <left>220</left>
-                                <align>left</align>
-                                <height>36</height>
-                                <font>Font-ListInfo</font>
-                                <label>$INFO[ListItem.Album]</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                        </control>
-
-                        <!-- Genre -->
-                        <control type="group">
-                            <height>36</height>
-                            <width>100%</width>
-                            <visible>!IsEmpty(ListItem.Genre)</visible>
-                            <control type="label">
-                                <width>200</width>
-                                <height>36</height>
-                                <align>left</align>
-                                <font>Font-ListInfo-Bold</font>
-                                <label>515</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                            <control type="label">
-                                <left>220</left>
-                                <align>left</align>
-                                <height>36</height>
-                                <font>Font-ListInfo</font>
-                                <label>$INFO[ListItem.Genre]</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                        </control>
-
-                        <!-- Director -->
-                        <control type="group">
-                            <height>36</height>
-                            <width>100%</width>
-                            <visible>!IsEmpty(ListItem.Director)</visible>
-                            <control type="label">
-                                <width>200</width>
-                                <height>36</height>
-                                <align>left</align>
-                                <font>Font-ListInfo-Bold</font>
-                                <label>20339</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                            <control type="label">
-                                <left>220</left>
-                                <align>left</align>
-                                <height>36</height>
-                                <font>Font-ListInfo</font>
-                                <label>$INFO[ListItem.Director]</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                        </control>
-
-                        <!-- Writer -->
-                        <control type="group">
-                            <height>36</height>
-                            <width>100%</width>
-                            <visible>!IsEmpty(ListItem.Writer)</visible>
-                            <control type="label">
-                                <width>200</width>
-                                <height>36</height>
-                                <align>left</align>
-                                <font>Font-ListInfo-Bold</font>
-                                <label>20417</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                            <control type="label">
-                                <left>220</left>
-                                <align>left</align>
-                                <height>36</height>
-                                <font>Font-ListInfo</font>
-                                <label>$INFO[ListItem.Writer]</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                        </control>
-
-                        <!-- Duration -->
-                        <control type="group">
-                            <height>36</height>
-                            <width>100%</width>
-                            <visible>!IsEmpty(ListItem.Duration)</visible>
-                            <control type="label">
-                                <width>200</width>
-                                <height>36</height>
-                                <align>left</align>
-                                <font>Font-ListInfo-Bold</font>
-                                <label>180</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                            <control type="label">
-                                <left>220</left>
-                                <align>left</align>
-                                <height>36</height>
-                                <font>Font-ListInfo</font>
-                                <label>$INFO[ListItem.Duration,, mins]</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                        </control>
-
-                        <!-- Rating -->
-                        <control type="group">
-                            <height>36</height>
-                            <width>100%</width>
-                            <visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
-                            <control type="label">
-                                <width>200</width>
-                                <height>36</height>
-                                <align>left</align>
-                                <font>Font-ListInfo-Bold</font>
-                                <label>31017</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                            <control type="label">
-                                <left>220</left>
-                                <align>left</align>
-                                <height>36</height>
-                                <font>Font-ListInfo</font>
-                                <label>$INFO[ListItem.RatingAndVotes]</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                        </control>
-
-                        <!-- Mpaa Rating -->
-                        <control type="group">
-                            <height>36</height>
-                            <width>100%</width>
-                            <visible>!IsEmpty(ListItem.Mpaa)</visible>
-                            <control type="label">
-                                <width>200</width>
-                                <height>36</height>
-                                <align>left</align>
-                                <font>Font-ListInfo-Bold</font>
-                                <label>563</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                            <control type="label">
-                                <left>220</left>
-                                <align>left</align>
-                                <height>36</height>
-                                <font>Font-ListInfo</font>
-                                <label>$INFO[ListItem.Mpaa]</label>
-                                <textcolor>ListLabel</textcolor>
-                            </control>
-                        </control>
-                     
+                        <include>Info_DetailsGrouplist</include>
+                        <include>Info_Videos</include>
                     </control>
                 </control>
 
                 <!-- Plot -->
-                <control type="group">
+                <control type="textbox">
+                    <include>Info_Textbox</include>
+                    <label>$VAR[Label_Plot]</label>
                     <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
-                    <left>30</left>
-                    <right>30</right>
-                    <top>420</top>
-                    <control type="textbox">
-                        <top>0</top>
-                        <left>0</left>
-                        <right>0</right>
-                        <height>155</height>
-                        <align>left</align>
-                        <font>Font-ListInfo</font>
-                        <label>$VAR[Label_Plot]</label>
-                        <textcolor>ListLabel</textcolor>
-                        <autoscroll delay="6000" time="3000" repeat="12000">True</autoscroll>
-                    </control>
                 </control>
+
                 <!-- Button grouplist -->
                 <control type="grouplist" id="9000">
-                    <left>pad</left>
-                    <bottom>pad</bottom>
-                    <right>11</right>
-                    <height>66</height>
-                    <itemgap>pad</itemgap>
-                    <onleft>noop</onleft>
-                    <onright>noop</onright>
+                    <include>Info_ButtonGrouplist</include>
                     <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">50</onup>
-                    <ondown>noop</ondown>
-                    <orientation>horizontal</orientation>
-
+                    
                     <!-- Play/Browse Button -->
                     <control type="togglebutton" id="8">
                         <label>208</label>

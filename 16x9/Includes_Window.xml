@@ -330,6 +330,48 @@
             <include>Defs_OSDButton</include>
         </control>
     </include>
+    <include name="Window_OSD_Left_Video">
+        <control type="button" id="1">
+            <description>Audio Settings</description>
+            <label>292</label>
+            <onclick>ActivateWindow(124)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+        <control type="button" id="2">
+            <label>291</label>
+            <onclick>ActivateWindow(123)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+        <control type="button" id="3">
+            <description>Playlist</description>
+            <label>$LOCALIZE[287]</label>
+            <onclick>Action(ShowSubtitles)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+    </include>
+    <include name="Window_OSD_Right_Video">
+        <control type="button" id="4">
+            <description>Extra Info</description>
+            <label>31105</label>
+            <onclick>Close</onclick>
+            <onclick condition="VideoPlayer.Content(movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title])</onclick>
+            <onclick condition="VideoPlayer.Content(episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[VideoPlayer.TvShowTitle])</onclick>
+            <include>Defs_OSDButton</include>
+        </control>           
+        <control type="button" id="5">
+            <description>3d Mode</description>
+            <label>31106</label>
+            <onclick>StereoMode</onclick>
+            <enable>VideoPlayer.IsStereoscopic</enable>
+            <include>Defs_OSDButton</include>
+        </control>
+        <control type="button" id="6">
+            <description>Bookmarks</description>
+            <label>298</label>
+            <onclick>ActivateWindow(125)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+    </include>
     <include name="Window_OSD">
         <control type="group">
             <animation type="WindowOpen">
@@ -349,6 +391,7 @@
                 <onup>noop</onup>
                 <ondown>noop</ondown>
                 <include condition="Window.IsVisible(visualisation)">Window_OSD_Left_Music</include>
+                <include condition="Window.IsVisible(fullscreenvideo)">Window_OSD_Left_Video</include>
             </control>
             <control type="grouplist" id="101">
                 <bottom>8</bottom>
@@ -446,6 +489,7 @@
                 <onup>noop</onup>
                 <ondown>noop</ondown>
                 <include condition="Window.IsVisible(visualisation)">Window_OSD_Right_Music</include>
+                <include condition="Window.IsVisible(fullscreenvideo)">Window_OSD_Right_Video</include>
             </control>
         </control>
     </include>

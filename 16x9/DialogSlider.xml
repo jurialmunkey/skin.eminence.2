@@ -15,30 +15,21 @@
 
 		<control type="group">
 			<centerleft>50%</centerleft>
-			<top>15</top>
+			<top>0</top>
 			<width>800</width>
 			<height>180</height>
-			<include>DialogZoomAnimation</include>
-
-			<!-- Background image -->
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>800</width>
-				<height>180</height>
-				<texture border="20">dialogs/DialogBackground.png</texture>
-			</control>
+			<include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <include>Dialog_Background</include>
 
 			<!-- Info -->
 			<control type="label">
 				<left>40</left>
-				<top>50</top>
+				<top>30</top>
 				<width>720</width>
 				<height>33</height>
 				<align>center</align>
 				<scroll>true</scroll>
-				<font>Font33</font>
-				<textcolor>DialogColor1</textcolor>
 				<label>$INFO[Control.GetLabel(10)] - $INFO[Control.GetLabel(12)]</label>
 			</control>
 
@@ -48,9 +39,6 @@
 				<top>104</top>
 				<width>720</width>
 				<height>20</height>
-				<texturesliderbar border="10,0,10,0">osd/OSDSliderBack.png</texturesliderbar>
-				<textureslidernib border="10,0,10,0">osd/OSDSliderNib.png</textureslidernib>
-				<textureslidernibfocus border="10,0,10,0">osd/OSDSliderNib.png</textureslidernibfocus>
 			</control>
 
 		</control>
