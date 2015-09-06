@@ -437,7 +437,7 @@
     <variable name="Furniture_TopBar_Header_MainLabel">
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
-        <value condition="Window.IsVisible(DialogVideoInfo.xml)">$LOCALIZE[19033]</value>
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">$LOCALIZE[19033]</value>
         <value condition="!IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
         <value condition="Window.IsVisible(home)">$LOCALIZE[10000]</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
@@ -446,6 +446,7 @@
     </variable>
     <variable name="Furniture_TopBar_Header_SubLabel">
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
+        <value condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[31105][/COLOR] $LOCALIZE[31109]</value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml) + [Container.Content(seasons) | Container.Content(episodes)]">[COLOR=$VAR[HighlightColor2]]$INFO[ListItem.TvShowTitle][/COLOR]$INFO[ListItem.Year,  ,]</value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Year,  ,]</value>
         <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>

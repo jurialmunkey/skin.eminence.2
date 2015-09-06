@@ -27,14 +27,16 @@
     <include name="Animation_Common">
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">WindowOpen</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">WindowClose</animation>
-        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">Visible</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">Hidden</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0" delay="300">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0">Hidden</animation>
+        <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]</visible>
     </include>
     <include name="Animation_Common_Info">
-        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0" delay="300">WindowOpen</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="IsEmpty(Window(home).Property(extinfo))">WindowClose</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="!IsEmpty(Window(home).Property(extinfo))">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0" delay="300" condition="IsEmpty(Window(home).Property(extinfo)) | stringcompare(Window(home).Property(extinfo),1)">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0" delay="300" condition="stringcompare(Window(home).Property(extinfo),2)">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="IsEmpty(Window(home).Property(extinfo)) | stringcompare(Window(home).Property(extinfo),2)">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="stringcompare(Window(home).Property(extinfo),1)">WindowClose</animation>
+
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">Visible</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">Hidden</animation>
     </include>

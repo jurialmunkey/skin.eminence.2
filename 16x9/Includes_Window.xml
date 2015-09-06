@@ -43,7 +43,7 @@
                         <top>pad</top>
                         <bottom>pad</bottom>
                         <pagecontrol>60</pagecontrol>
-                        <preloaditems>0</preloaditems>
+                        <preloaditems>1</preloaditems>
                         <onleft>9501</onleft>
                         <onright>9501</onright>
                         <orientation>vertical</orientation>

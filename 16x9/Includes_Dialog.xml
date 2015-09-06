@@ -178,6 +178,7 @@
     <!-- Basic List -->
     <include name="Dialog_BasicList">
         <param name="backpanel" default="true" />
+        <param name="type" default="panel" />
         <definition>
             <control type="image">
                 <width>$PARAM[width]</width>
@@ -185,7 +186,7 @@
                 <texture colordiffuse="PosterBorder">common/white.png</texture>
                 <visible>$PARAM[backpanel]</visible>
             </control>
-            <control type="panel" id="$PARAM[id]">
+            <control type="$PARAM[type]" id="$PARAM[id]">
                 <top>0</top>
                 <left>0</left>
                 <width>$PARAM[width]</width>

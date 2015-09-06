@@ -405,3 +405,15 @@ msgstr ""
 msgctxt "#31106"
 msgid "3D Mode"
 msgstr ""
+
+msgctxt "#31107"
+msgid "Similar"
+msgstr ""
+
+msgctxt "#31108"
+msgid "Youtube"
+msgstr ""
+
+msgctxt "#31109"
+msgid "provided by themoviedb.org"
+msgstr ""

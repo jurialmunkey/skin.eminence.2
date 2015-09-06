@@ -68,7 +68,7 @@
                 <!-- Button grouplist -->
                 <control type="grouplist" id="9000">
                     <include>Info_ButtonGrouplist</include>
-                    <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">50</onup>
+                    <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
                     
                     <!-- Play/Browse Button -->
                     <control type="togglebutton" id="8">
@@ -91,7 +91,7 @@
                     <control type="button" id="5">
                         <label>206</label>
                         <width>222</width>
-                        <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(50)</onclick>
+                        <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(51)</onclick>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                     </control>
@@ -141,12 +141,13 @@
                         <param name="width" value="1403" />
                         <param name="height" value="552" />
                         <param name="id" value="50" />
+                        <param name="type" value="list" />
                         <param name="onleft" value="SendClick(5)" />
                         <param name="onback" value="9000" />
                         <param name="onback2" value="SendClick(5)" />
                         <param name="ondown" value="9000" />
-                        <param name="onright" value="SetProperty(extinfo,1,home)" />
-                        <param name="onright2" value="RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])" />
+                        <!-- <param name="onright" value="SetProperty(extinfo,1,home)" />
+                        <param name="onright2" value="RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])" /> -->
                         <param name="backpanel" value="false" />
                     </include>
                     <control type="image">
@@ -168,6 +169,19 @@
                 </control>
             </control>
 
+        </control>
+        <control type="button" id="51" description="Cast List Control">
+            <visible allowhiddenfocus="true">false</visible>
+            <onup>Control.Move(50,-1)</onup>
+            <ondown>Control.Move(50,1)</ondown>
+            <onback>9000</onback>
+            <onback>SendClick(5)</onback>
+            <onleft>9000</onleft>
+            <onleft>SendClick(5)</onleft>
+            <onright>9000</onright>
+            <onright>SendClick(5)</onright>
+            <onclick>SetProperty(extinfo,1,home)</onclick>
+            <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
         </control>
 
 
