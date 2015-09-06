@@ -192,6 +192,7 @@
                 <height>$PARAM[height]</height>
                 <onleft>$PARAM[onleft]</onleft>
                 <onright>$PARAM[onright]</onright>
+                <onright>$PARAM[onright2]</onright>
                 <ondown>$PARAM[ondown]</ondown>
                 <onup>$PARAM[onup]</onup>
                 <onback>$PARAM[onback]</onback>
@@ -299,18 +300,25 @@
         <param name="width" default="favitemw" />
         <param name="top" default="80" />
         <param name="pad" default="0" />
+        <param name="bottom" default="side" />
+        <param name="visible" default="true" />
+        <param name="type" default="panel" />
         <definition>
-            <control type="panel" id="$PARAM[id]">
+            <control type="$PARAM[type]" id="$PARAM[id]">
                 <onup>$PARAM[onup]</onup>
                 <ondown>$PARAM[ondown]</ondown>
                 <right>side</right>
                 <left>$PARAM[left]</left>
                 <top>$PARAM[top]</top>
-                <bottom>side</bottom>
+                <bottom>$PARAM[bottom]</bottom>
                 <onleft>$PARAM[moveid]</onleft>
                 <onright>$PARAM[moveid]</onright>
+                <onleft>$PARAM[moveid2]</onleft>
+                <onright>$PARAM[moveid2]</onright>
                 <scrolltime>200</scrolltime>
                 <orientation>vertical</orientation>
+                <visible allowhiddenfocus="true">$PARAM[visible]</visible>
+                <preloaditems>2</preloaditems>
                 <itemlayout width="$PARAM[width]" height="138">
                     <control type="image">
                         <width>100%</width>
@@ -325,7 +333,7 @@
                             <width>118</width>
                             <height>118</height>
                             <aspectratio>keep</aspectratio>
-                            <texture>$INFO[ListItem.Icon]</texture>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
                         </control>
                         <control type="label">
                             <left>148</left>
@@ -376,7 +384,7 @@
                             <width>118</width>
                             <height>118</height>
                             <aspectratio>keep</aspectratio>
-                            <texture>$INFO[ListItem.Icon]</texture>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
                         </control>
                         <control type="label">
                             <left>148</left>

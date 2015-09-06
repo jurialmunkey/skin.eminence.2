@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
+    <onload>ClearProperty(extinfo,home)</onload>
     <controls>
 
         <control type="group">
@@ -144,6 +145,8 @@
                         <param name="onback" value="9000" />
                         <param name="onback2" value="SendClick(5)" />
                         <param name="ondown" value="9000" />
+                        <param name="onright" value="SetProperty(extinfo,1,home)" />
+                        <param name="onright2" value="RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])" />
                         <param name="backpanel" value="false" />
                     </include>
                     <control type="image">

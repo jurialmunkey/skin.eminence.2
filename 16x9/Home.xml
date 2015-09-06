@@ -8,6 +8,7 @@
     <onload>ClearProperty(Header.Icon,home)</onload>
     <onload>ClearProperty(HighlightColor,home)</onload>
     <onload>ClearProperty(FO9001)</onload>
+    <onload>ClearProperty(extinfo,home)</onload>
     <onload>SetProperty(HubReturn,Home)</onload>
     <onunload>SetProperty(FO9001,1,home)</onunload>
     <onunload>SetProperty(Header.Label,$INFO[Container(9000).ListItem.Label],home)</onunload>

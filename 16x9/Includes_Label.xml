@@ -5,6 +5,14 @@
         <value>$INFO[ListItem.Plot]</value>
     </variable>
 
+    <variable name="Label_ExtendedInfo_InfoLine">
+        <value condition="StringCompare(Window.Property(content),150)">$ADDON[script.extendedinfo 32010]</value>
+        <value condition="StringCompare(Window.Property(content),250)">$ADDON[script.extendedinfo 32031]</value>
+        <value condition="StringCompare(Window.Property(content),350)">$ADDON[script.extendedinfo 32118]</value>
+        <value condition="StringCompare(Window.Property(content),550)">$ADDON[script.extendedinfo 32115]</value>
+        <value>$LOCALIZE[19033]</value>
+    </variable>
+
     <variable name="Label_Tagline">
         <value condition="Container.Content(episodes)">$INFO[ListItem.Season]$INFO[ListItem.Episode,x,. ]$INFO[ListItem.Title]$INFO[ListItem.Premiered,  [COLOR=LineLabel],[/COLOR]]</value>
         <value condition="!IsEmpty(ListItem.Tagline)">$INFO[ListItem.Tagline]</value>
