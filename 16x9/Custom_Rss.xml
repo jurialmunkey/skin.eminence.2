@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1197">
+	<visible>!Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Skin.HasSetting(disable.rss) + !Window.IsVisible(home) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
+	<controls>
+	    <control type="rss">
+            <posx>48</posx>
+            <posy>1032</posy>
+            <width>1870</width>
+            <font>Font-RSS</font>
+            <textcolor>SideArrow</textcolor>
+            <headlinecolor>SideArrow</headlinecolor>
+            <titlecolor>LineLabel</titlecolor>
+            <visible>!Player.HasMedia</visible>
+            <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
+            <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
+            <animation effect="slide" start="0,64" end="0" time="125">VisibleChange</animation>
+        </control>
+
+        
+	    
+	</controls>
+</window>

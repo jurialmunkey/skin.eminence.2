@@ -2,101 +2,113 @@
 <window>
     <!-- profilesettings -->
     <defaultcontrol always="true">5</defaultcontrol>
-    <include>DialogZoomAnimation</include>
-
     <controls>
 
-        <!-- Background -->
-        <include>DialogBackgroundImage</include>
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <left>0</left>
+            <right>0</right>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <width>390</width>
+                <height>552</height>
+                <include name="Object_Line">
+                    <param name="width" value="390" />
+                    <param name="label" value="$INFO[Control.GetLabel(2)]" />
+                </include>
+                <control type="image" id="101">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <bordertexture colordiffuse="PosterBorder">common/white.png</bordertexture>
+                    <bordersize>pad</bordersize>
+                    <aspectratio aligny="top">keep</aspectratio>
+                </control>
 
-        <!-- Heading -->
-        <control type="label" id="2">
-            <left>150</left>
-            <top>96</top>
-            <width>1620</width>
-            <height>72</height>
-            <font>Font72</font>
-            <textcolor>DialogColor1</textcolor>
-            <label>-</label>
+            </control>
+            <control type="group">
+                <top>70</top>
+                <left>420</left>
+                <right>side</right>
+                <height>100%</height>                
+                <control type="group">
+                    <top>0</top>
+                    <width>1480</width>
+                    <height>100%</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1480" />
+                        <param name="label" value="$LOCALIZE[5]" />
+                    </include>
+                    <control type="grouplist" id="5">
+                        <onright>20</onright>
+                        <width>100%</width>
+                        <height>100%</height>
+                        <itemgap>0</itemgap>
+                        <onup>21</onup>
+                        <ondown>8000</ondown>
+                        <orientation>vertical</orientation>
+                    </control>
+                </control>
+            </control>
+            <control type="grouplist" id="8000">
+                <centerleft>50%</centerleft>
+                <width>1240</width>
+                <bottom>side</bottom>
+                <height>69</height>
+                <align>center</align>
+                <itemgap>20</itemgap>
+                <onup>5</onup>
+                <ondown>20</ondown>
+                <orientation>horizontal</orientation>
+                <control type="button" id="28">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>186</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="29">
+                    <align>center</align>
+                    <width>400</width>
+                    <label>222</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
         </control>
 
-        <!-- Image -->
-        <control type="image" id="101">
-            <left>150</left>
-            <top>225</top>
-            <width>405</width>
-            <height>600</height>
-            <aspectratio aligny="center">keep</aspectratio>
-            <texture>DefaultUser.png</texture>
-        </control>
+        <!-- Hidden Controls -->
+        <control type="label" id="2"><visible>false</visible></control>
+        <control type="label" id="102"><visible>false</visible></control>
+        <control type="label" id="103"><visible>false</visible></control>
 
-        <!-- Grouplist -->
-        <control type="grouplist" id="5">
-            <left>600</left>
-            <top>244</top>
-            <width>1200</width>
-            <height>720</height>
-            <itemgap>0</itemgap>
-            <onleft>9001</onleft>
-            <onright>9001</onright>
-            <onup>noop</onup>
-            <ondown>9001</ondown>
-            <orientation>vertical</orientation>
-            <scrolltime tween="sine" easing="out">240</scrolltime>
-        </control>
-
-        <!-- Default button -->
+        <!-- Default Controls -->
         <control type="button" id="7">
-            <width>1200</width>
-            <height>66</height>
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
         </control>
-
-        <!-- Default radiobutton -->
         <control type="radiobutton" id="8">
-            <width>1200</width>
-            <height>66</height>
-            <textwidth>1120</textwidth>
+            <width>100%</width>
+            <radioposx>1430</radioposx>
+            <include>Defs_OptionButton</include>
         </control>
-
-        <!-- Default spincontrolex -->
         <control type="spincontrolex" id="9">
-            <width>1200</width>
-            <height>66</height>
-            <textwidth>1120</textwidth>
+            <align>left</align>
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
         </control>
-
-        <!-- Default image -->
+        <control type="label" id="14">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
         <control type="image" id="11">
-            <width>1200</width>
-            <height>20</height>
-            <texture border="1,12,1,1" colordiffuse="DialogOverlayColorNF">common/ScrollBackgroundHorizontal.png</texture>
-        </control>
-
-        <!-- Button grouplist -->
-        <control type="grouplist" id="9001">
-            <left>600</left>
-            <top>926</top>
-            <width>1200</width>
-            <itemgap>0</itemgap>
-            <onleft>noop</onleft>
-            <onright>noop</onright>
-            <onup>5</onup>
-            <ondown>noop</ondown>
-            <defaultcontrol>28</defaultcontrol>
-            <orientation>horizontal</orientation>
-
-            <!-- OK Button -->
-            <control type="button" id="28">
-                <width>400</width>
-                <label>186</label>
-            </control>
-
-            <!-- Cancel Button -->
-            <control type="button" id="29">
-                <width>400</width>
-                <label>222</label>
-            </control>
-
+            <width>100%</width>
+            <visible>false</visible>
+            <include>Defs_OptionButton</include>
         </control>
 
     </controls>

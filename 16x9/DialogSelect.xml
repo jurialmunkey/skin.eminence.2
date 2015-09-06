@@ -37,6 +37,8 @@
             </include>
             <include name="Dialog_ImageList">
                 <param name="id" value="6" />
+                <param name="onup" value="6" />
+                <param name="ondown" value="6" />
                 <param name="moveid" value="5" />
                 <param name="left" value="582" />
             </include>

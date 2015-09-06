@@ -52,11 +52,15 @@
             <include name="Dialog_ImageList">
                 <param name="id" value="450" />
                 <param name="moveid" value="9000" />
+                <param name="onup" value="450" />
+                <param name="ondown" value="450" />
                 <param name="left" value="582" />
             </include>
             <include name="Dialog_ImageList">
                 <param name="id" value="451" />
                 <param name="moveid" value="9000" />
+                <param name="onup" value="451" />
+                <param name="ondown" value="451" />
                 <param name="left" value="582" />
             </include>
             <!-- Button grouplist -->

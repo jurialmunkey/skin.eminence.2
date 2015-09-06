@@ -296,111 +296,120 @@
     </include>
     <include name="Dialog_ImageList">
         <param name="left" default="444" />
+        <param name="width" default="favitemw" />
+        <param name="top" default="80" />
+        <param name="pad" default="0" />
         <definition>
             <control type="panel" id="$PARAM[id]">
-                <onup>$PARAM[id]</onup>
-                <ondown>$PARAM[id]</ondown>
+                <onup>$PARAM[onup]</onup>
+                <ondown>$PARAM[ondown]</ondown>
                 <right>side</right>
                 <left>$PARAM[left]</left>
-                <top>80</top>
+                <top>$PARAM[top]</top>
                 <bottom>side</bottom>
                 <onleft>$PARAM[moveid]</onleft>
                 <onright>$PARAM[moveid]</onright>
                 <scrolltime>200</scrolltime>
                 <orientation>vertical</orientation>
-                <itemlayout width="favitemw" height="138">
+                <itemlayout width="$PARAM[width]" height="138">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
                         <texture colordiffuse="PosterBorder">common/white.png</texture>
                     </control>
-                    <control type="image">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <width>118</width>
-                        <height>118</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Icon]</texture>
-                    </control>
-                    <control type="label">
-                        <left>148</left>
-                        <right>30</right>
-                        <height>100%</height>
-                        <textcolor>ListLabel</textcolor>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
-                        <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
-                    </control>
                     <control type="group">
-                        <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
-                        <left>148</left>
-                        <right>30</right>
+                        <left>$PARAM[pad]</left>
+                        <control type="image">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <width>118</width>
+                            <height>118</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
                         <control type="label">
-                            <width>100%</width>
-                            <top>0</top>
-                            <bottom>25%</bottom>
+                            <left>148</left>
+                            <right>30</right>
+                            <height>100%</height>
                             <textcolor>ListLabel</textcolor>
                             <font>Font-ListInfo-Small-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
+                            <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
                         </control>
-                        <control type="label">
-                            <width>100%</width>
-                            <top>25%</top>
-                            <bottom>0</bottom>
-                            <textcolor>ListLabel</textcolor>
-                            <font>Font-ListInfo-Small</font>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Property(Addon.Summary),[CAPITALIZE],[/CAPITALIZE]]</label>
+                        <control type="group">
+                            <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                            <left>148</left>
+                            <right>30</right>
+                            <control type="label">
+                                <width>100%</width>
+                                <top>0</top>
+                                <bottom>25%</bottom>
+                                <textcolor>ListLabel</textcolor>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <aligny>center</aligny>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <width>100%</width>
+                                <top>25%</top>
+                                <bottom>0</bottom>
+                                <textcolor>ListLabel</textcolor>
+                                <font>Font-ListInfo-Small</font>
+                                <aligny>center</aligny>
+                                <label>$INFO[ListItem.Property(Addon.Summary),[CAPITALIZE],[/CAPITALIZE]]</label>
+                            </control>
                         </control>
                     </control>
                 </itemlayout>
-                <focusedlayout width="favitemw" height="138">
+                <focusedlayout width="$PARAM[width]" height="138">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
                         <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                     </control>
-                    <control type="image">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <width>118</width>
-                        <height>118</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.Icon]</texture>
-                    </control>
-                    <control type="label">
-                        <left>148</left>
-                        <right>30</right>
-                        <height>100%</height>
-                        <textcolor>Selected</textcolor>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
-                        <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
-                    </control>
                     <control type="group">
-                        <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
-                        <left>148</left>
-                        <right>30</right>
+                        <left>$PARAM[pad]</left>
+                        <control type="image">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <width>118</width>
+                            <height>118</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
                         <control type="label">
-                            <width>100%</width>
-                            <top>0</top>
-                            <bottom>25%</bottom>
+                            <left>148</left>
+                            <right>30</right>
+                            <height>100%</height>
                             <textcolor>Selected</textcolor>
                             <font>Font-ListInfo-Small-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
+                            <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
                         </control>
-                        <control type="label">
-                            <width>100%</width>
-                            <top>25%</top>
-                            <bottom>0</bottom>
-                            <textcolor>Selected</textcolor>
-                            <font>Font-ListInfo-Small</font>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Property(Addon.Summary),[CAPITALIZE],[/CAPITALIZE]]</label>
+                        <control type="group">
+                            <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                            <left>148</left>
+                            <right>30</right>
+                            <control type="label">
+                                <width>100%</width>
+                                <top>0</top>
+                                <bottom>25%</bottom>
+                                <textcolor>Selected</textcolor>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <aligny>center</aligny>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <width>100%</width>
+                                <top>25%</top>
+                                <bottom>0</bottom>
+                                <textcolor>Selected</textcolor>
+                                <font>Font-ListInfo-Small</font>
+                                <aligny>center</aligny>
+                                <label>$INFO[ListItem.Property(Addon.Summary),[CAPITALIZE],[/CAPITALIZE]]</label>
+                            </control>
                         </control>
                     </control>
                 </focusedlayout>
