@@ -413,3 +413,19 @@ msgstr ""
 msgctxt "#31109"
 msgid "provided by themoviedb.org"
 msgstr ""
+
+msgctxt "#31110"
+msgid "Extras"
+msgstr ""
+
+msgctxt "#31111"
+msgid "Choose primary highlight color"
+msgstr ""
+
+msgctxt "#31112"
+msgid "Choose secondary highlight color"
+msgstr ""
+
+msgctxt "#31113"
+msgid "Reset colors to defaults"
+msgstr ""

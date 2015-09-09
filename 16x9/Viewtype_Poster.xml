@@ -307,76 +307,13 @@
                 <param name="id" value="52" />
                 <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
-            <control type="scrollbar" id="60">
-                <onup>50</onup>
-                <ondown condition="Container(52).HasNext">PageDown(60)</ondown>
-                <!-- RETURN TO BEGINNING HACK -->
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
-                <top>682</top>
-                <orientation>horizontal</orientation>
+            <control type="group">
+                <top>712</top>
                 <left>1</left>
-                <width>1878</width>
-                <height>8</height>
-                <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="50">Conditional</animation>
+                <include name="Object_Line">
+                    <param name="width" value="1879" />
+                    <param name="label" value="$INFO[ListItem.Label,, ]$VAR[Label_Label3,[COLOR=PosterBorder]-[/COLOR] , ]$INFO[ListItem.Label2,[COLOR=PosterBorder]-[/COLOR] , ]" />
+                </include>
             </control>
         </control>
     </include>
@@ -384,21 +321,21 @@
     <include name="View_Icon">
         <control type="group">
             <control type="panel" id="$PARAM[id]">
-                <top>0</top>
+                <top>-6</top>
                 <left>1</left>
                 <width>1888</width>
                 <height>682</height>
-                <!-- <onup>$PARAM[id]</onup>
+                <onup>$PARAM[id]</onup>
                 <ondown>$PARAM[id]</ondown>
                 <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
-                <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft> -->
-                <onleft>$PARAM[id]</onleft>
+                <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <!-- <onleft>$PARAM[id]</onleft>
                 <onright>$PARAM[id]</onright>
                 <ondown>60</ondown>
-                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup> -->
                 <pagecontrol>60</pagecontrol>
                 <preloaditems>2</preloaditems>
-                <orientation>horizontal</orientation>
+                <orientation>vertical</orientation>
                 <viewtype label="536">icons</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
@@ -406,8 +343,8 @@
                     <control type="group">
                         <left>0</left>
                         <right>pad</right>
-                        <bottom>12</bottom>
-                        <top>0</top>
+                        <bottom>6</bottom>
+                        <top>6</top>
                         <control type="image">
                             <width>100%</width>
                             <height>100%</height>
@@ -446,8 +383,8 @@
                     <control type="group">
                         <left>0</left>
                         <right>pad</right>
-                        <bottom>12</bottom>
-                        <top>0</top>
+                        <bottom>6</bottom>
+                        <top>6</top>
                         <control type="image">
                             <width>100%</width>
                             <height>100%</height>

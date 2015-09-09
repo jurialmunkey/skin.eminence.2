@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">3110</defaultcontrol>
+	<controls>
+
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>favdialogw</width>
+            <bottom>64</bottom>
+            <height>652</height>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$ADDON[script.skin.helper.service 32011]" />
+                <param name="icon" value="special://skin/extras/icons/filebox.png" />
+            </include>
+            <!-- <control type="image">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>552</width>
+                <height>552</height>
+                <texture colordiffuse="$INFO[Window.Property(colorstring)]">common/white.png</texture>
+            </control> -->
+            <include name="Dialog_ImageList">
+                <param name="id" value="3110" />
+                <param name="moveid" value="9000" />
+                <param name="onup" value="3110" />
+                <param name="ondown" value="3110" />
+                <param name="width" value="560" />
+                <param name="left" value="side" />
+            </include>
+            <!-- Button grouplist -->
+            <control type="grouplist" id="9000">
+                <right>side</right>
+                <top>pad</top>
+                <align>right</align>
+                <height>60</height>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <onup>3110</onup>
+                <ondown>3110</ondown>
+                <orientation>horizontal</orientation>
+                <itemgap>pad</itemgap>
+                
+                <!-- EDIT -->
+                <control type="button" id="3010">
+                    <width>400</width>
+                    <height>100%</height>
+                    <label>$ADDON[script.skin.helper.service 32012]$INFO[Window.Property(colorstring),  ,]</label>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <!-- SAVE -->
+                <control type="button" id="3012">
+                    <width>324</width>
+                    <height>100%</height>
+                    <label>190</label>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="image">
+                    <width>60</width>
+                    <height>60</height>
+                    <texture colordiffuse="$INFO[Window.Property(colorstring)]">common/white.png</texture>
+                </control>
+            </control>
+        </control>
+	</controls>
+</window>
