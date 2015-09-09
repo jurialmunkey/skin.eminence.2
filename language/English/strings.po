@@ -433,3 +433,7 @@ msgstr ""
 msgctxt "#31114"
 msgid "Set weather fanart location"
 msgstr ""
+
+msgctxt "#31115"
+msgid "Show weather with clock"
+msgstr ""

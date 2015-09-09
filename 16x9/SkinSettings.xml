@@ -127,6 +127,16 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Weather Header -->
+                    <control type="radiobutton" id="8904">
+                        <width>100%</width>
+                        <label>31115</label>
+                        <radioposx>1350</radioposx>
+                        <onclick>Skin.ToggleSetting(disable.weatherheader)</onclick>
+                        <selected>!Skin.HasSetting(disable.weatherheader)</selected>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                 </control>
             </control>
         </control>
