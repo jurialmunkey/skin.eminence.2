@@ -389,7 +389,7 @@
                     <width max="820">auto</width>
                     <font>Font-ListInfo-Small-Bold</font>
                     <textcolor>LineLabel</textcolor>
-                    <label>   [COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
+                    <label>   [COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]</label>
                     <visible>Player.HasAudio</visible>
                 </control>
                 <control type="label">
@@ -435,6 +435,7 @@
             <height>100%</height>
             <texture colordiffuse="FanartFade">common/white.png</texture>
             <visible>!Window.IsVisible(home)</visible>
+            <visible>!Window.IsVisible(weather)</visible>
         </control>
         <!-- <control type="image" description="Silhouette">
             <width>100%</width>
@@ -460,11 +461,12 @@
     <!-- Header -->
     <!-- Variables -->
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)">HomeBarBG</value>
+        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeBarBG</value>
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
         <value>PosterBorder</value>
     </variable>
     <variable name="Furniture_TopBar_Header_MainLabel">
+        <value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">$LOCALIZE[19033]</value>

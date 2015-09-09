@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
+    <include name="Object_WeatherOutlook">
+        <definition>
+            <control type="group">
+                <width>200</width>
+                <height>340</height>
+                <control type="label">
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <height>90</height>
+                    <label>$INFO[Window(weather).Property($PARAM[day].Title)]</label>
+                    <centerleft>50%</centerleft>
+                    <align>center</align>
+                    <visible>!IsEmpty($PARAM[dayname])</visible>
+                </control>
+                <control type="label">
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <height>90</height>
+                    <label>$PARAM[dayname]</label>
+                    <centerleft>50%</centerleft>
+                    <align>center</align>
+                    <visible>IsEmpty($PARAM[dayname])</visible>
+                </control>
+                <control type="image">
+                    <centertop>50%</centertop>
+                    <height>200</height>
+                    <width>200</width>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$INFO[Window(weather).Property($PARAM[day].OutlookIcon)]</texture>
+                </control>
+                <control type="label">
+                    <font>Font-ListInfo-Small</font>
+                    <bottom>0</bottom>
+                    <height>90</height>
+                    <label>[B]$INFO[Window(weather).Property($PARAM[day].HighTemp)]$INFO[System.TemperatureUnits][/B]  $INFO[Window(weather).Property($PARAM[day].LowTemp)]$INFO[System.TemperatureUnits]</label>
+                    <centerleft>50%</centerleft>
+                    <align>center</align>
+                </control>
+            </control>
+        </definition>
+    </include>
     <include name="Object_Scrollbar">
         <param name="left" default="0" />
         <definition>

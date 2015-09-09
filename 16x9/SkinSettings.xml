@@ -77,13 +77,23 @@
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
                     <!-- BACKGROUND -->
-                    <!-- Customise Home Menu -->
+                    <!-- Fanart -->
                     <control type="radiobutton" id="8201">
                         <width>100%</width>
                         <label>31021</label>
                         <radioposx>1350</radioposx>
                         <selected>!Skin.HasSetting(background.hidefanart)</selected>
                         <onclick>Skin.ToggleSetting(background.hidefanart)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
+                    <!-- Weather Fanart -->
+                    <control type="button" id="8202">
+                        <width>100%</width>
+                        <label>31114</label>
+                        <label2>$INFO[Skin.String(weather.fanart)]</label2>
+                        <onclick condition="IsEmpty(Skin.String(weather.fanart))">Skin.SetPath(weather.fanart)</onclick>
+                        <onclick condition="!IsEmpty(Skin.String(weather.fanart))">Skin.Reset(weather.fanart)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
