@@ -103,7 +103,7 @@ msgid "Background"
 msgstr ""
 
 msgctxt "#31021"
-msgid "Home"
+msgid "Show fanart"
 msgstr ""
 
 msgctxt "#31027"
@@ -112,10 +112,6 @@ msgstr ""
 
 msgctxt "#31028"
 msgid "Show background visualisation"
-msgstr ""
-
-msgctxt "#31030"
-msgid "Enable curves"
 msgstr ""
 
 msgctxt "#31031"
@@ -183,7 +179,7 @@ msgid "Playlist Options"
 msgstr ""
 
 msgctxt "#31049"
-msgid "Customise Home Menu"
+msgid "Customise home menu"
 msgstr ""
 
 msgctxt "#31051"

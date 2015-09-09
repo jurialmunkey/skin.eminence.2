@@ -9,11 +9,24 @@
                 <left>$PARAM[left]</left>
                 <height>height</height>
                 <onright>50</onright>
+                <width>8</width>
+                <orientation>vertical</orientation>
                 <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
             </control>
         </definition>
     </include>
-
+    <include name="Object_Scrollbar_Horizontal">
+        <control type="scrollbar" id="61">
+            <ondown condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
+            <onup>50</onup>
+            <top>710</top>
+            <orientation>horizontal</orientation>
+            <left>0</left>
+            <width>1880</width>
+            <height>8</height>
+            <animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+        </control>
+    </include>
     <!-- Poster -->
     <include name="Object_Poster">
         <param name="label" default="$LOCALIZE[31098]" />

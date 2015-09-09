@@ -4,10 +4,6 @@
         <animation effect="fade" start="0" end="100" time="200">Visible</animation>
         <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
     </include>
-    <include name="Animation_FadeIn">
-        <animation effect="fade" start="0" end="100" time="200">Visible</animation>
-        <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-    </include>
     <include name="Animation_FadeOut">
         <animation effect="fade" end="0" start="100" time="200">Hidden</animation>
         <animation effect="fade" end="0" start="100" time="200">WindowClose</animation>

@@ -19,19 +19,28 @@
         <value condition="IsEmpty(ListItem.Tagline)">$LOCALIZE[19033]</value>
     </variable>
 
-    <variable name="Label_Label3">        
+    <variable name="Label_Label3">      
+
+        <!-- Recently Added -->
+        <value condition="substring(Container.FolderPath,recentlyadded)">$INFO[ListItem.DateAdded]</value>
+
         <!-- Episodes -->
         <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Premiered]</value>
         <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[551])">$INFO[ListItem.Premiered]</value>
         <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[20359])">$INFO[ListItem.Premiered]</value>
         <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Premiered]</value>
+        <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[568])">$INFO[ListItem.LastPlayed]</value>
+
         <!-- Tv Shows -->
         <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Label2]</value>
+        
         <!-- Others -->
         <value condition="stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
         <value condition="stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Year]</value>
+        
         <!-- Fallback -->
         <value>$INFO[ListItem.Label2]</value>
+        
     </variable>
 
     <variable name="Label_AudioChannels">

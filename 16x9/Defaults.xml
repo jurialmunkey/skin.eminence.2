@@ -6,7 +6,9 @@
     <constant name="top">280</constant>
     <constant name="height">690</constant>
     <constant name="posterh">690</constant>
+    <constant name="thumbh">251</constant>
     <constant name="posterw">467</constant>
+    <constant name="posterlistw">487</constant>
     <constant name="infox">477</constant>
     <constant name="posterx">1413</constant>
     <constant name="toppanel">160</constant>
@@ -140,14 +142,12 @@
     </default>
 
     <default type="scrollbar">
-        <width>8</width>
         <texturesliderbackground colordiffuse="PosterBorder">common/white.png</texturesliderbackground>
         <texturesliderbar colordiffuse="Disabled">common/white.png</texturesliderbar>
         <texturesliderbarfocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturesliderbarfocus>
         <textureslidernib>noop</textureslidernib>
         <textureslidernibfocus>noop</textureslidernibfocus>
         <showonepage>true</showonepage>
-        <orientation>vertical</orientation>
     </default>
 
 </includes>

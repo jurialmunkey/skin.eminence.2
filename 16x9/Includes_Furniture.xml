@@ -734,7 +734,7 @@
     </include>
     <include name="Furniture_TopBar">
         <control type="group">
-            <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Window.IsActive(DialogMuteBug.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)]</visible>
+            <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)]</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -747,15 +747,25 @@
                 <height>512</height>
                 <texture colordiffuse="7f000000">common/gradient.png</texture>
             </control>
+            <control type="group">
+                <include>Furniture_TopBar_Header</include>
+            </control>
+            <include>Furniture_TopBar_Clock</include>
+        </control>
+        <control type="group">
+            <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Window.IsActive(DialogMuteBug.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)]</visible>
+            <animation type="Visible">
+                <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="Hidden">
+                <effect type="fade" end="0" start="100" time="200" />
+            </animation>
             <include>Furniture_TopBar_Tile</include>
             <control type="group">
                 <visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
                 <include>Furniture_TopBar_Tile_Content</include>
             </control>
-            <control type="group">
-                <include>Furniture_TopBar_Header</include>
-            </control>
-            <include>Furniture_TopBar_Clock</include>
         </control>
     </include>
     
