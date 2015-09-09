@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <!-- BIG POSTER -->
+    <!-- BIG ICON -->
     <include name="Viewtype_BigIcon">
         <control type="group">
             <visible>Control.IsVisible(51)</visible>
@@ -80,6 +80,14 @@
                             <texture background="true">$VAR[Image_Poster]</texture>
                             <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
                         </control>
+                        <control type="image">
+                            <right>side</right>
+                            <top>side</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture>$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
                     </control>
                 </itemlayout>
 
@@ -117,13 +125,21 @@
                             <texture background="true">$VAR[Image_Poster]</texture>
                             <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
                         </control>
+                        <control type="image">
+                            <right>side</right>
+                            <top>side</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture>$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
                     </control>
                 </focusedlayout>
             </control>
         </control>
     </include>
 
-    <!-- ROLODX -->
+    <!-- BIG WIDE -->
     <include name="Viewtype_BigWide">
         <control type="group">
             <visible>Control.IsVisible(53)</visible>
@@ -196,7 +212,6 @@
                             <width>32</width>
                             <texture>$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                         </control>
                     </control>
                 </itemlayout>
@@ -227,7 +242,6 @@
                             <width>32</width>
                             <texture>$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                         </control>
                     </control>
                     <control type="group">
@@ -275,7 +289,7 @@
         
     </include>
 
-    <!-- WALL -->
+    <!-- ICON -->
     <include name="Viewtype_Icon">
         <control type="group">
             <visible>Control.IsVisible(52)</visible>
@@ -295,6 +309,68 @@
             </include>
             <control type="scrollbar" id="60">
                 <onup>50</onup>
+                <ondown condition="Container(52).HasNext">PageDown(60)</ondown>
+                <!-- RETURN TO BEGINNING HACK -->
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
+                <ondown condition="!Container(52).HasNext">PageUp(60)</ondown>
                 <top>682</top>
                 <orientation>horizontal</orientation>
                 <left>1</left>
@@ -362,7 +438,6 @@
                             <width>32</width>
                             <texture>$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                         </control>
                     </control>
                 </itemlayout>
@@ -410,7 +485,6 @@
                             <width>32</width>
                             <texture>$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                         </control>
                     </control>
                 </focusedlayout>

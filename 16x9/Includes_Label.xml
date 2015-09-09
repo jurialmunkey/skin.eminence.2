@@ -56,7 +56,7 @@
     <variable name="Label_RSS">
         <value condition="Player.HasAudio">[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
         <value condition="Player.HasVideo + VideoPlayer.Content(movies)">[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
-        <!-- <value condition="Container.Content(movies) + !IsEmpty(ListItem.Tagline)">$INFO[ListItem.Tagline]</value> -->
+        <value condition="Player.HasVideo + VideoPlayer.Content(episodes)">[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
     </variable>
 
     <variable name="Label_PlayerStatus">

@@ -354,6 +354,7 @@
             <description>Extra Info</description>
             <label>31105</label>
             <onclick>Close</onclick>
+            <onclick condition="!Player.Paused">Pause</onclick>
             <onclick condition="VideoPlayer.Content(movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title])</onclick>
             <onclick condition="VideoPlayer.Content(episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[VideoPlayer.TvShowTitle])</onclick>
             <include>Defs_OSDButton</include>
