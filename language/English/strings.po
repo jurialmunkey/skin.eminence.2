@@ -30,30 +30,6 @@ msgctxt "#31002"
 msgid "Tag"
 msgstr ""
 
-msgctxt "#31003"
-msgid "Look"
-msgstr ""
-
-msgctxt "#31004"
-msgid "Layout"
-msgstr ""
-
-msgctxt "#31005"
-msgid "Scrollbars"
-msgstr ""
-
-msgctxt "#31006"
-msgid "Overlays"
-msgstr ""
-
-msgctxt "#31007"
-msgid "System music files"
-msgstr ""
-
-msgctxt "#31008"
-msgid "Current selected"
-msgstr ""
-
 msgctxt "#31009"
 msgid "Open playlist"
 msgstr ""
@@ -74,20 +50,13 @@ msgctxt "#31013"
 msgid "Muted"
 msgstr ""
 
-msgctxt "#31014"
-msgid "Show visualisation & Artist Slideshow"
-msgstr ""
-
 msgctxt "#31015"
 msgid "Live TV"
 msgstr ""
 
-msgctxt "#31016"
-msgid "Settings level"
-msgstr ""
 
 msgctxt "#31017"
-msgid "Voted"
+msgid "Votes"
 msgstr ""
 
 msgctxt "#31018"
@@ -142,14 +111,6 @@ msgctxt "#31039"
 msgid "Recommended albums"
 msgstr ""
 
-msgctxt "#31041"
-msgid "Debug grid"
-msgstr ""
-
-msgctxt "#31042"
-msgid "Debug labels"
-msgstr ""
-
 msgctxt "#31043"
 msgid "Extra art"
 msgstr ""
@@ -180,10 +141,6 @@ msgstr ""
 
 msgctxt "#31052"
 msgid "Rated"
-msgstr ""
-
-msgctxt "#31053"
-msgid "Hide submenu headings"
 msgstr ""
 
 msgctxt "#31054"
@@ -424,4 +381,20 @@ msgstr ""
 
 msgctxt "#31117"
 msgid "mins"
+msgstr ""
+
+msgctxt "#31118"
+msgid "Animate artist slideshow"
+msgstr ""
+
+msgctxt "#31119"
+msgid "Show visualisation behind artist slideshow"
+msgstr ""
+
+msgctxt "#31120"
+msgid "Show artist slideshow"
+msgstr ""
+
+msgctxt "#31121"
+msgid "Music OSD"
 msgstr ""

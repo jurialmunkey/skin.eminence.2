@@ -8,29 +8,61 @@
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <centerleft>50%</centerleft>
-            <width>favdialogw</width>
+            <width>1134</width>
             <bottom>64</bottom>
-            <height>652</height>
+            <height>504</height>
             <include>Dialog_Background</include>
             <include name="Dialog_Top_IconHeader">
                 <param name="label" value="$ADDON[script.skin.helper.service 32011]" />
                 <param name="icon" value="special://skin/extras/icons/filebox.png" />
             </include>
-            <!-- <control type="image">
+            <control type="panel" id="3110">
+                <onup>9000</onup>
+                <ondown>noop</ondown>
+                <right>0</right>
                 <left>side</left>
-                <bottom>side</bottom>
-                <width>552</width>
-                <height>552</height>
-                <texture colordiffuse="$INFO[Window.Property(colorstring)]">common/white.png</texture>
-            </control> -->
-            <include name="Dialog_ImageList">
-                <param name="id" value="3110" />
-                <param name="moveid" value="9000" />
-                <param name="onup" value="3110" />
-                <param name="ondown" value="3110" />
-                <param name="width" value="560" />
-                <param name="left" value="side" />
-            </include>
+                <top>80</top>
+                <bottom>pad</bottom>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <scrolltime>200</scrolltime>
+                <orientation>vertical</orientation>
+                <preloaditems>2</preloaditems>
+                <itemlayout width="138" height="138">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>side</right>
+                        <bottom>side</bottom>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="138" height="138">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>side</right>
+                        <bottom>side</bottom>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                </focusedlayout>
+            </control>
             <!-- Button grouplist -->
             <control type="grouplist" id="9000">
                 <right>side</right>
@@ -43,13 +75,13 @@
                 <ondown>3110</ondown>
                 <orientation>horizontal</orientation>
                 <itemgap>pad</itemgap>
-                
+                <usecontrolcoords>true</usecontrolcoords>
                 <!-- EDIT -->
                 <control type="button" id="3010">
                     <width>400</width>
                     <height>100%</height>
                     <label>$ADDON[script.skin.helper.service 32012]$INFO[Window.Property(colorstring),  ,]</label>
-                    <align>right</align>
+                    <align>center</align>
                     <texturenofocus>noop</texturenofocus>
                     <texturefocus>noop</texturefocus>
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
@@ -57,7 +89,7 @@
                 </control>
                 <!-- SAVE -->
                 <control type="button" id="3012">
-                    <width>324</width>
+                    <width>280</width>
                     <height>100%</height>
                     <label>190</label>
                     <align>right</align>
@@ -66,10 +98,22 @@
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>
-                <control type="image">
-                    <width>60</width>
-                    <height>60</height>
-                    <texture colordiffuse="$INFO[Window.Property(colorstring)]">common/white.png</texture>
+                <control type="group">
+                    <top>5</top>
+                    <width>50</width>
+                    <height>50</height>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                        <texture colordiffuse="$INFO[Window.Property(colorstring)]">common/white.png</texture>
+                    </control>
                 </control>
             </control>
         </control>

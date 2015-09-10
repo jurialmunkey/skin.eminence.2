@@ -431,7 +431,7 @@
             <width>100%</width>
             <height>100%</height>
             <fadetime>600</fadetime>
-            <randomise>true</randomise>
+            <randomize>true</randomize>
             <timeperimage>5000</timeperimage>
             <imagepath background="true">$VAR[Image_Background]</imagepath>
             <aspectratio>scale</aspectratio>
@@ -446,18 +446,6 @@
             <visible>!Window.IsVisible(home)</visible>
             <visible>!Window.IsVisible(weather)</visible>
         </control>
-        <!-- <control type="image" description="Silhouette">
-            <width>100%</width>
-            <height>100%</height>
-            <texture background="true" colordiffuse="4Fffffff">common/settings.png</texture>
-            <visible>Window.IsVisible(settings)</visible>
-        </control> -->
-        <!-- <control type="image">
-            <width>100%</width>
-            <height>512</height>
-            <bottom>0</bottom>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-        </control> -->
         <control type="image" description="Transition Fade">
             <width>100%</width>
             <height>100%</height>
@@ -779,7 +767,7 @@
     </include>
     <include name="Furniture_TopBar">
         <control type="group">
-            <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)]</visible>
+            <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -798,7 +786,7 @@
             <include>Furniture_TopBar_Clock</include>
         </control>
         <control type="group">
-            <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Window.IsActive(DialogMuteBug.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)]</visible>
+            <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Window.IsActive(DialogMuteBug.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />

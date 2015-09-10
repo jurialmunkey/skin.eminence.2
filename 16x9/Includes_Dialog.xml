@@ -4,7 +4,7 @@
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0">Visible</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0">Hidden</animation>
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0">WindowOpen</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-500" start="0">WindowClose</animation>
         <left>side</left>
         <right>side</right>
         <top>0</top>

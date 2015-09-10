@@ -1,4 +1,3 @@
-DialogAddonInfo
 DialogAlbumInfo
 DialogNetworkSetup
 DialogPeripheralManager
