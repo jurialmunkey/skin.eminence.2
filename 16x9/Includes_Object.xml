@@ -169,7 +169,7 @@
                         <height>24</height>
                         <align>right</align>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[ListItem.MPAA]$INFO[ListItem.Duration,  •  , mins]</label>
+                        <label>$VAR[Label_ExtraInfo]</label>
                     </control>
                 </control>
             </control>

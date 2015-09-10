@@ -142,10 +142,6 @@ msgctxt "#31039"
 msgid "Recommended albums"
 msgstr ""
 
-msgctxt "#31040"
-msgid "Hide Conq logo"
-msgstr ""
-
 msgctxt "#31041"
 msgid "Debug grid"
 msgstr ""
@@ -182,10 +178,6 @@ msgctxt "#31049"
 msgid "Customise home menu"
 msgstr ""
 
-msgctxt "#31051"
-msgid "Settings can be accessed from the Shutdown menu or by rebooting XBMC!"
-msgstr ""
-
 msgctxt "#31052"
 msgid "Rated"
 msgstr ""
@@ -210,20 +202,8 @@ msgctxt "#31057"
 msgid "Kiosk mode"
 msgstr ""
 
-msgctxt "#31058"
-msgid "Reset all Conq settings"
-msgstr ""
-
 msgctxt "#31059"
 msgid "Memory Used:"
-msgstr ""
-
-msgctxt "#31060"
-msgid "Enable Headings"
-msgstr ""
-
-msgctxt "#31061"
-msgid "Enable Horizontal home layout"
 msgstr ""
 
 msgctxt "#31063"
@@ -440,4 +420,8 @@ msgstr ""
 
 msgctxt "#31116"
 msgid "Animate fanart"
+msgstr ""
+
+msgctxt "#31117"
+msgid "mins"
 msgstr ""

@@ -12,7 +12,8 @@
     <include file="Includes_Window.xml" />
     <include file="script-skinshortcuts-includes.xml"/>
     <include file="Viewtype_List.xml" />
-    <include file="Viewtype_Poster.xml" />
+    <include file="Viewtype_Icon.xml" />
+    <include file="Viewtype_Wide.xml" />
 
     <!-- GLOBALS -->
     <include name="GlobalOverlay">
