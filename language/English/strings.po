@@ -431,9 +431,13 @@ msgid "Reset colors to defaults"
 msgstr ""
 
 msgctxt "#31114"
-msgid "Set weather fanart location"
+msgid "Set weather fanart"
 msgstr ""
 
 msgctxt "#31115"
 msgid "Show weather with clock"
+msgstr ""
+
+msgctxt "#31116"
+msgid "Animate fanart"
 msgstr ""

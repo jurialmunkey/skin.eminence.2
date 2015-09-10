@@ -8,18 +8,9 @@
                 <control type="label">
                     <font>Font-ListInfo-Small-Bold</font>
                     <height>90</height>
-                    <label>$INFO[Window(weather).Property($PARAM[day].Title)]</label>
-                    <centerleft>50%</centerleft>
-                    <align>center</align>
-                    <visible>!IsEmpty($PARAM[dayname])</visible>
-                </control>
-                <control type="label">
-                    <font>Font-ListInfo-Small-Bold</font>
-                    <height>90</height>
                     <label>$PARAM[dayname]</label>
                     <centerleft>50%</centerleft>
                     <align>center</align>
-                    <visible>IsEmpty($PARAM[dayname])</visible>
                 </control>
                 <control type="image">
                     <centertop>50%</centertop>

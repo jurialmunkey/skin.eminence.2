@@ -79,7 +79,7 @@
                         <font>Font-HomeMenu</font>
                         <textcolor>HomeBarFG</textcolor>
                         <label>$INFO[ListItem.Label]</label>
-                        <animation effect="slide" start="0" end="0,-10" time="100">Focus</animation>
+                        <animation effect="slide" start="0" end="0,-10" time="100" reversible="false">Focus</animation>
                     </control>
                     <control type="image">
                         <bottom>12</bottom>
@@ -222,6 +222,7 @@
 
     <!-- Home Widget -->
     <variable name="Furniture_HomeWidget_Content">
+        <value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
         <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath))">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist)">$INFO[Container(9000).ListItem.Property(widgetPlaylist)]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomMovies)">special://skin/extras/playlists/RandomMovies.xsp</value>
@@ -421,6 +422,11 @@
 
     <!-- Background -->
     <include name="Furniture_Background">
+        <control type="videowindow">
+            <visible>Skin.HasSetting(background.showvideo)</visible>
+            <width>100%</width>
+            <height>100%</height>
+        </control>
         <control type="multiimage">
             <width>100%</width>
             <height>100%</height>
@@ -429,6 +435,9 @@
             <timeperimage>5000</timeperimage>
             <imagepath background="true">$VAR[Image_Background]</imagepath>
             <aspectratio>scale</aspectratio>
+            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
         </control>
         <control type="image" description="Fanart Fade">
             <width>100%</width>

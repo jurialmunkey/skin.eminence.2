@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
 <window>
     <defaultcontrol always="true">401</defaultcontrol>
     <controls>
@@ -142,11 +142,15 @@
                 </control>
 
 
-                <!-- SET COLOR: Send focus to another list and set properties with onclicks and send to 404 -->
+                <!-- Select color needs to be pressed twice -->
+                <!-- This doesnt work properly -- need to send focus to a list within window i guess -->
                 <!-- <control type="button" id="9701" description="Select Color">
                     <width>100%</width>
-                    <label>Select Color</label>
-                    <onclick>SetFocus(9702)</onclick>
+                    <label>Select color</label>
+                    <onclick>SetProperty(customProperty,TileColor)</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=TempColor)</onclick>
+                    <onclick>SetProperty(customValue,$INFO[Skin.String(TempColor)])</onclick>
+                    <onclick>SendClick(404)</onclick>
                     <include>Defs_OptionButton</include>
                 </control> -->
                 
@@ -210,5 +214,6 @@
             
            
         </control>
+        <control type="button" id="404"><visible allowhiddenfocus="true">false</visible></control>
     </controls>
 </window>

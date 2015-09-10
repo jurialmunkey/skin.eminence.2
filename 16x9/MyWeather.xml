@@ -2,17 +2,17 @@
 <window>
     <!-- weather -->
     <backgroundcolor>Background</backgroundcolor>
-    <defaultcontrol always="true">100</defaultcontrol>
+    <defaultcontrol always="true">50</defaultcontrol>
 
     <controls>
 
         <!-- Hidden button -->
-        <control type="button" id="100">
-            <onclick condition="!Skin.HasSetting(KioskMode)">SetFocus(3001)</onclick>
-            <onup condition="!Skin.HasSetting(KioskMode)">3001</onup>
-            <ondown condition="!Skin.HasSetting(KioskMode)">3001</ondown>
-            <onleft condition="!Skin.HasSetting(KioskMode)">3001</onleft>
-            <onright condition="!Skin.HasSetting(KioskMode)">3001</onright>
+        <control type="button" id="50">
+            <onclick condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onclick>
+            <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+            <ondown condition="!Skin.HasSetting(KioskMode)">9000</ondown>
+            <onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
+            <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
         </control>
 
         <!-- Background -->
@@ -55,7 +55,7 @@
                     <textcolor>HomeBarFG</textcolor>
                 </control>
                 <control type="label">
-                    <label>$INFO[Weather.Conditions,,  ]$INFO[Weather.Temperature]</label>
+                    <label>$INFO[Weather.Temperature,,  ]$INFO[Weather.Conditions]</label>
                     <aligny>top</aligny>
                     <font>Font-WidgetInfoTitle</font>
                     <height>70</height>
@@ -91,16 +91,59 @@
                 </include>
                 <include name="Object_WeatherOutlook">
                     <param name="day" value="Day1" />
+                    <param name="dayname" value="$INFO[Window(weather).Property(Day1.Title)]" />
                 </include>
                 <include name="Object_WeatherOutlook">
                     <param name="day" value="Day2" />
+                    <param name="dayname" value="$INFO[Window(weather).Property(Day2.Title)]" />
                 </include>
                 <include name="Object_WeatherOutlook">
                     <param name="day" value="Day3" />
+                    <param name="dayname" value="$INFO[Window(weather).Property(Day3.Title)]" />
                 </include>
             </control>
         </control>
 
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <include>Dialog_Top_GroupList</include>
+                <!-- Refresh -->
+                <control type="button" id="2">
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(2)</visible>
+                </control>
+                <!-- Change Location -->
+                <control type="button" id="9001">
+                    <include>Defs_OptionButton</include>
+                    <onclick>Weather.LocationNext</onclick>
+                    <label>$INFO[Weather.Location]</label>
+                </control>
+                <!-- Fanart -->
+                <control type="button" id="9002">
+                    <label>31114</label>
+                    <onclick>Skin.SetPath(weather.fanart)</onclick>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <!-- Settings -->
+                <control type="button" id="9003">
+                    <label>$LOCALIZE[5]</label>
+                    <onclick>activatewindow(WeatherSettings)</onclick>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+        </control>
     </controls>
 
 </window>

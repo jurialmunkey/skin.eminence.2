@@ -55,10 +55,10 @@
                     <label>186</label>
                     <include>Defs_OptionButton</include>
                 </control>
-                <control type="button" id="29">
+                <control type="button" id="27">
                     <align>center</align>
                     <width>370</width>
-                    <label>222</label>
+                    <label>192</label>
                     <include>Defs_OptionButton</include>
                 </control>
             </control>

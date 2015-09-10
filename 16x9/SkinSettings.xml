@@ -3,7 +3,7 @@
     <!-- skinsettings -->
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">8001</defaultcontrol>
-    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|movieshub|episodeshub)</onunload>
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102)</onunload>
     <controls>
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
@@ -87,8 +87,29 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
+                    <!-- Show background video -->
+                    <control type="radiobutton" id="8203">
+                        <width>100%</width>
+                        <label>31027</label>
+                        <radioposx>1350</radioposx>
+                        <selected>Skin.HasSetting(background.showvideo)</selected>
+                        <onclick>Skin.ToggleSetting(background.showvideo)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
+                    
+                    <!-- Animate Fanart -->
+                    <control type="radiobutton" id="8202">
+                        <width>100%</width>
+                        <label>31116</label>
+                        <radioposx>1350</radioposx>
+                        <selected>Skin.HasSetting(background.animate)</selected>
+                        <onclick>Skin.ToggleSetting(background.animate)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
                     <!-- Weather Fanart -->
-                    <control type="button" id="8202">
+                    <control type="button" id="8209">
                         <width>100%</width>
                         <label>31114</label>
                         <label2>$INFO[Skin.String(weather.fanart)]</label2>
