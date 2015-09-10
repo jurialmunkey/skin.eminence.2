@@ -398,3 +398,7 @@ msgstr ""
 msgctxt "#31121"
 msgid "Music OSD"
 msgstr ""
+
+msgctxt "#31122"
+msgid "Match header tile with highlight color"
+msgstr ""

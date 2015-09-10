@@ -458,8 +458,9 @@
     <!-- Header -->
     <!-- Variables -->
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeBarBG</value>
+        <value condition="VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(home)">HomeBarBG</value>
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
+        <value condition="Window.IsVisible(weather)">HomeBarBG</value>
         <value>PosterBorder</value>
     </variable>
     <variable name="Furniture_TopBar_Header_MainLabel">

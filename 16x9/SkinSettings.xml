@@ -173,6 +173,16 @@
 
 
                     <!-- EXTRAS -->
+                    <!-- Weather Header -->
+                    <control type="radiobutton" id="8904">
+                        <width>100%</width>
+                        <label>31115</label>
+                        <radioposx>1350</radioposx>
+                        <onclick>Skin.ToggleSetting(disable.weatherheader)</onclick>
+                        <selected>!Skin.HasSetting(disable.weatherheader)</selected>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                     <!-- Main Color -->
                     <control type="button" id="8901">
                         <width>100%</width>
@@ -200,13 +210,14 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
-                    <!-- Weather Header -->
-                    <control type="radiobutton" id="8904">
+                    
+                    <!-- Match header tile to highlight color -->
+                    <control type="radiobutton" id="8905">
                         <width>100%</width>
-                        <label>31115</label>
+                        <label>31122</label>
                         <radioposx>1350</radioposx>
-                        <onclick>Skin.ToggleSetting(disable.weatherheader)</onclick>
-                        <selected>!Skin.HasSetting(disable.weatherheader)</selected>
+                        <onclick>Skin.ToggleSetting(header.colormatch)</onclick>
+                        <selected>Skin.HasSetting(header.colormatch)</selected>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>

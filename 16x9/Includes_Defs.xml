@@ -59,6 +59,7 @@
     </variable>
     <variable name="Defs_HomeTileColor">
         <value condition="!IsEmpty(Container(9000).ListItem.Property(TileColor))">$INFO[Container(9000).ListItem.Property(TileColor)]</value>
+        <value condition="!IsEmpty(Container(211).ListItem.Property(TileColor))">$INFO[Container(211).ListItem.Property(TileColor)]</value>
         <value>$VAR[HighlightColor]</value>
     </variable>
 

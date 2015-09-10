@@ -56,7 +56,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
                     </control>
                     <control type="label">
                         <left>90</left>
