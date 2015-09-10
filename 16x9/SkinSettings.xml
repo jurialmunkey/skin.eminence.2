@@ -137,7 +137,7 @@
                         <include>Defs_OptionButton</include>
                         <label>31021</label>
                         <selected>Skin.HasSetting(musicvis.fanartfallback)</selected>
-                        <enable>!System.HasAddon(script.artistslideshow) + !Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
+                        <enable>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
                         <onclick>Skin.ToggleSetting(musicvis.fanartfallback)</onclick>
                     </control>
                     <control type="radiobutton" id="8302" description="Use artist slideshow">
