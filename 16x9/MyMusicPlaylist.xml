@@ -33,25 +33,7 @@
             <control type="grouplist" id="9000">
                 <include>Dialog_Top_GroupList</include>
                 <defaultcontrol always="true">3</defaultcontrol>
-                <!-- View by -->
-                <control type="button" id="2">
-                    <include>Defs_OptionButton</include>
-                    <visible>Control.IsEnabled(2)</visible>
-                </control>
-                <!-- Sort by -->
-                <control type="button" id="3">
-                    <include>Defs_OptionButton</include>
-                    <label>103</label>
-                    <visible>Control.IsEnabled(3)</visible>
-                </control>
-                <!-- Sort ascending/descending -->
-                <control type="togglebutton" id="4">
-                    <include>Defs_OptionButton</include>
-                    <label>584</label>
-                    <altlabel>585</altlabel>
-                    <usealttexture>Container.SortDirection(Descending)</usealttexture>
-                    <visible>Control.IsEnabled(4)</visible>
-                </control>
+                <include>Object_BasicViewList</include>
                 <!-- Shuffle -->
                 <control type="radiobutton" id="20">
                     <include>Defs_OptionButton</include>

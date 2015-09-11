@@ -17,6 +17,26 @@
             <include>Viewtype_List</include>
             <include>Viewtype_BigList</include>
         </control>
+
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <include>Dialog_Top_GroupList</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <include>Object_BasicViewList</include>
+            </control>
+        </control>
     </controls>
 
 </window>

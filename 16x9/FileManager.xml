@@ -25,7 +25,7 @@
                     <param name="width" value="930" />
                     <param name="labelwidth" value="825" />
                     <param name="id" value="20" />
-                    <param name="moveid" value="21" />
+                    <param name="onright" value="21" />
                     <param name="pathid" value="101" />
                 </include>
 
@@ -42,7 +42,7 @@
                     <param name="width" value="930" />
                     <param name="labelwidth" value="825" />
                     <param name="id" value="21" />
-                    <param name="moveid" value="20" />
+                    <param name="onleft" value="20" />
                     <param name="pathid" value="102" />
                 </include>
             </control>

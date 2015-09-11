@@ -5,16 +5,12 @@ DialogPeripheralSettings
 DialogPictureInfo
 DialogSongInfo
 DialogSubtitles
-MyMusicPlaylistEditor
 PlayerControls
 
-Views and Menus for everything not MyVideoNav (currently only list)
 All PVR Stuff
 Global Search
 Next Aired
 Extended Info - Browser, T9
 Lyrics
-Artist Slideshow Options
 NextUp
-Use Helper Service to full (include sets stuff)
 

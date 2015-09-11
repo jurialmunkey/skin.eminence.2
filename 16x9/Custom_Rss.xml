@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window type="dialog" id="1197">
-	<visible>!Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Skin.HasSetting(disable.rss) + !Window.IsVisible(home) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
+	<visible>system.getbool(lookandfeel.enablerssfeeds) + !Window.IsVisible(slideshow) + !Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(home) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
 	<controls>
 	    <control type="rss">
             <posx>48</posx>
