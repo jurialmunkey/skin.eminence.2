@@ -16,6 +16,68 @@
             <include>Animation_Common</include>
             <include>Viewtype_List</include>
         </control>
+
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <include>Dialog_Top_GroupList</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <!-- View by -->
+                <control type="button" id="2">
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(2)</visible>
+                </control>
+                <!-- Sort by -->
+                <control type="button" id="3">
+                    <include>Defs_OptionButton</include>
+                    <label>103</label>
+                    <visible>Control.IsEnabled(3)</visible>
+                </control>
+                <!-- Sort ascending/descending -->
+                <control type="togglebutton" id="4">
+                    <include>Defs_OptionButton</include>
+                    <label>584</label>
+                    <altlabel>585</altlabel>
+                    <usealttexture>Container.SortDirection(Descending)</usealttexture>
+                    <visible>Control.IsEnabled(4)</visible>
+                </control>
+                <!-- Shuffle -->
+                <control type="radiobutton" id="20">
+                    <include>Defs_OptionButton</include>
+                    <label>191</label>
+                    <visible>Control.IsEnabled(20)</visible>
+                </control>
+                <!-- Repeat -->
+                <control type="button" id="26">
+                    <include>Defs_OptionButton</include>
+                    <visible>Control.IsEnabled(26)</visible>
+                </control>
+                <!-- Save -->
+                <control type="button" id="21">
+                    <include>Defs_OptionButton</include>
+                    <label>190</label>
+                    <visible>Control.IsEnabled(21)</visible>
+                </control>
+                <!-- Clear -->
+                <control type="button" id="22">
+                    <include>Defs_OptionButton</include>
+                    <label>192</label>
+                    <visible>Control.IsEnabled(22)</visible>
+                </control>
+            </control>
+
+        </control>
     </controls>
 
 </window>

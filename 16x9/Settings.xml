@@ -90,7 +90,7 @@
                         <description>Appearance</description>
                         <label>480</label>
                         <onclick>activatewindow(AppearanceSettings)</onclick>
-                        <icon>special://skin/extras/icons/eye.png</icon>
+                        <icon>special://skin/extras/icons/skinsettings.png</icon>
                     </item>
                     <item id="5">
                         <description>Video</description>
@@ -122,7 +122,7 @@
                         <label>20077</label>
                         <onclick>activatewindow(skinsettings)</onclick>
                         <!-- <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick> -->
-                        <icon>special://skin/extras/icons/year.png</icon>
+                        <icon>special://skin/extras/icons/paintbrush.png</icon>
                     </item>
 
                     <!-- Row 2 -->
