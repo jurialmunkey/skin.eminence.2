@@ -135,24 +135,18 @@
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
                     <include>Defs_OptionButton</include>
                 </control>
-                <control type="button" id="311" description="Browse for Thumb">
+                <control type="button" id="306" description="Browse for Thumb">
                     <width>100%</width>
                     <label>31075</label>
                     <include>Defs_OptionButton</include>
                 </control>
 
-
-                <!-- Select color needs to be pressed twice -->
-                <!-- This doesnt work properly -- need to send focus to a list within window i guess -->
-                <!-- <control type="button" id="9701" description="Select Color">
+                <control type="button" id="9701" description="Select Color">
                     <width>100%</width>
                     <label>Select color</label>
-                    <onclick>SetProperty(customProperty,TileColor)</onclick>
-                    <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=TempColor)</onclick>
-                    <onclick>SetProperty(customValue,$INFO[Skin.String(TempColor)])</onclick>
-                    <onclick>SendClick(404)</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=colorpicker,shortcutproperty=tilecolor)</onclick>
                     <include>Defs_OptionButton</include>
-                </control> -->
+                </control>
                 
                 <control type="button" id="301" description="Add">
                     <width>100%</width>
@@ -208,12 +202,8 @@
                 </control>
                 
             </control>
-            
-            
-        
-            
-           
         </control>
+
         <control type="button" id="404"><visible allowhiddenfocus="true">false</visible></control>
     </controls>
 </window>

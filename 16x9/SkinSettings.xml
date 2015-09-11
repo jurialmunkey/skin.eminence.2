@@ -3,7 +3,7 @@
     <!-- skinsettings -->
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">8001</defaultcontrol>
-    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102)</onunload>
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109)</onunload>
     <controls>
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>

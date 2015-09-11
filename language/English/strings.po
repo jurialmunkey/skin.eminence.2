@@ -402,3 +402,15 @@ msgstr ""
 msgctxt "#31122"
 msgid "Match header tile with highlight color"
 msgstr ""
+
+msgctxt "#31123"
+msgid "Hub"
+msgstr ""
+
+msgctxt "#31124"
+msgid "Similar movies"
+msgstr ""
+
+msgctxt "#31125"
+msgid "Similar to"
+msgstr ""

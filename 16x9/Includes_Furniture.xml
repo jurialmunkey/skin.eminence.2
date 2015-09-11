@@ -221,35 +221,6 @@
     </include>
 
     <!-- Home Widget -->
-    <variable name="Furniture_HomeWidget_Content">
-        <value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
-        <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath))">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist)">$INFO[Container(9000).ListItem.Property(widgetPlaylist)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomMovies)">special://skin/extras/playlists/RandomMovies.xsp</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomEpisodes)">special://skin/extras/playlists/RandomEpisodes.xsp</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentEpisodes)">special://skin/extras/playlists/NewEpisodes.xsp</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentMovies)">special://skin/extras/playlists/NewMovies.xsp</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedEpisodes)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedMovies)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom3)">$INFO[Skin.String(CustomWidget3)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom4)">$INFO[Skin.String(CustomWidget4)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingShows)">plugin://script.extendedinfo?info=trendingshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringShows)">plugin://script.extendedinfo?info=airingshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PremiereShows)">plugin://script.extendedinfo?info=premiereshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),InCinemas)">plugin://script.extendedinfo?info=incinemas</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Upcoming)">plugin://script.extendedinfo?info=upcoming</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularMovies)">plugin://script.extendedinfo?info=popularmovies</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedMovies)">plugin://script.extendedinfo?info=topratedmovies</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularTvShows)">plugin://script.extendedinfo?info=populartvshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedTvShows)">plugin://script.extendedinfo?info=topratedtvshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),OnAirTvShows)">plugin://script.extendedinfo?info=onairtvshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringTodayTvShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
-        <value condition="!IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
-        <value>special://skin/extras/playlists/RandomMovies.xsp</value>
-    </variable>
     <include name="Furniture_HomeWidget_Control">
         <control type="wraplist" id="9001">
             <orientation>horizontal</orientation>
@@ -266,7 +237,7 @@
             <scrolltime tween="sine" easing="out">240</scrolltime>
             <itemlayout />
             <focusedlayout width="1920" height="1080" />
-            <content target="video">$VAR[Furniture_HomeWidget_Content]</content>
+            <content target="video">$VAR[Defs_HomeWidget_Content]</content>
         </control>
     </include>
     <include name="Furniture_HomeWidget">

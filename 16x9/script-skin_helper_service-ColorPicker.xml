@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">3110</defaultcontrol>
+	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
 
         <include>GlobalOverlay</include>
@@ -117,5 +117,9 @@
                 </control>
             </control>
         </control>
+        <control type="button" id="3011"><visible>false</visible></control>
+        <control type="label" id="3016"><visible>false</visible></control>
+        <control type="slider" id="3015"><visible>false</visible></control>
+        <control type="label" id="3017"><visible>false</visible></control>
 	</controls>
 </window>
