@@ -24,7 +24,7 @@
                 <left>side</left>
                 <top>80</top>
                 <bottom>side</bottom>
-                <scrolltime>200</scrolltime>
+                <scrolltime>0</scrolltime>
                 <orientation>vertical</orientation>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <itemlayout height="69" width="favitemw">
@@ -191,14 +191,14 @@
                     <visible>Skin.HasSetting(home.tilecolor)</visible>
                 </control>
                 
-                <control type="button" id="301" description="Add">
+                <!-- <control type="button" id="301" description="Add">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
                 </control>
                 <control type="button" id="302" description="Delete">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
-                </control>
+                </control> -->
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
@@ -212,7 +212,7 @@
                 <top>97</top>
                 <width>600</width>
                 <align>right</align>
-                <itemgap>0</itemgap>
+                <itemgap>4</itemgap>
                 <onright>9100</onright>
                 <onup>Control.Move(211,-1)</onup>
                 <ondown>Control.Move(211,1)</ondown>
@@ -229,6 +229,20 @@
                 <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,9)">Conditional</animation>
                 <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,10)">Conditional</animation>
                 <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,11)">Conditional</animation>
+                <control type="button" id="302" description="Delete">
+                    <width>32</width>
+                    <height>32</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="Disabled">common/delete.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected">common/delete.png</texturefocus>
+                </control>
+                <control type="button" id="301" description="Add">
+                    <width>32</width>
+                    <height>32</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="Disabled">common/add.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected">common/add.png</texturefocus>
+                </control>
                 <control type="button" id="303" description="Up">
                     <width>32</width>
                     <height>32</height>
@@ -241,7 +255,7 @@
                     <height>32</height>
                     <font>-</font>
                     <texturenofocus colordiffuse="Disabled" flipy="false">common/spin-down.png</texturenofocus>
-                    <texturefocus colordiffuse="Selected" flipy="fLase">common/spin-down.png</texturefocus>
+                    <texturefocus colordiffuse="Selected" flipy="false">common/spin-down.png</texturefocus>
                 </control>
                 
             </control>
