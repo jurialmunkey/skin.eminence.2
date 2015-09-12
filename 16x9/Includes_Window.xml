@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <!-- Hubs -->
+    <!-- HUBS -->
     <include name="Window_Hub">
-        <!-- Background -->
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
@@ -116,7 +115,6 @@
                         <param name="width" value="659" />
                         <param name="label" value="$LOCALIZE[31073]" />
                     </include>
-                    
                     <control type="panel" id="9501">  
                         <onleft>9500</onleft>
                         <onup>9501</onup>
@@ -151,12 +149,6 @@
                             </control>
                         </itemlayout>
                         <focusedlayout width="659" height="100">
-                            <!-- <control type="image">
-                                <width>100%</width>
-                                <top>0</top>
-                                <bottom>pad</bottom>
-                                <texture colordiffuse="PosterBorder">common/white.png</texture>
-                            </control> -->
                             <control type="image">
                                 <width>100%</width>
                                 <top>0</top>
@@ -179,116 +171,15 @@
                                 <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
-                       
                         </focusedlayout>
                         <content><include>$PARAM[categories]</include></content>
                     </control>
                 </control>
-                
             </control>
         </control>
     </include>
 
-    <!-- List -->
-    <include name="Window_FileManager_List">
-        <param name="numitemsvisible" default="true" />
-        <definition>
-            <control type="group">
-                <width>$PARAM[width]</width>
-                <control type="grouplist">
-                    <orientation>horizontal</orientation>
-                    <top>-48</top>
-                    <height>48</height>
-                    <width>$PARAM[labelwidth]</width>
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <control type="label" id="$PARAM[pathid]">
-                        <left>0</left>
-                        <height>100%</height>
-                        <width max="$PARAM[labelwidth]">auto</width>
-                        <haspath>true</haspath>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <textcolor>LineLabel</textcolor>
-                    </control>
-                    <control type="image">
-                        <bottom>21</bottom>
-                        <width max="$PARAM[labelwidth]">auto</width>
-                        <height>3</height>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                    </control>
-                </control>
-                <control type="label">
-                    <top>-48</top>
-                    <height>48</height>
-                    <width>100%</width>
-                    <align>right</align>
-                    <font>Font-ListInfo-Small-Bold</font>
-                    <textcolor>LineLabel</textcolor>
-                    <label>$INFO[Container($PARAM[id]).NumItems] $LOCALIZE[31001]</label>
-                    <visible>$PARAM[numitemsvisible]</visible>
-                </control>
-                <control type="image">
-                    <width>$PARAM[width]</width>
-                    <height>height</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
-                <control type="list" id="$PARAM[id]">
-                    <top>0</top>
-                    <left>0</left>
-                    <width>$PARAM[width]</width>
-                    <height>height</height>
-                    <onleft>$PARAM[onleft]</onleft>
-                    <onright>$PARAM[onright]</onright>
-                    <orientation>vertical</orientation>
-                    <scrolltime tween="quadratic">400</scrolltime>
-                    <itemlayout height="69" width="$PARAM[width]">
-                        <control type="label">
-                            <left>30</left>
-                            <right>30</right>
-                            <top>0</top>
-                            <height>100%</height>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                        <control type="label">
-                            <left>30</left>
-                            <right>30</right>
-                            <top>0</top>
-                            <height>100%</height>
-                            <align>right</align>
-                            <font>Font-ListInfo</font>
-                            <label>$INFO[ListItem.Label2]</label>
-                        </control>
-                    </itemlayout>
-
-                    <focusedlayout height="69" width="$PARAM[width]">
-                        <control type="image">
-                            <width>100%</width>
-                            <height>100%</height>
-                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-                            <animation effect="fade" start="100" end="25" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
-                        </control>
-                        <control type="label">
-                            <left>30</left>
-                            <right>30</right>
-                            <top>0</top>
-                            <height>100%</height>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textcolor>Selected</textcolor>
-                        </control>
-                        <control type="label">
-                            <left>30</left>
-                            <right>30</right>
-                            <top>0</top>
-                            <height>100%</height>
-                            <align>right</align>
-                            <font>Font-ListInfo</font>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textcolor>Selected</textcolor>
-                        </control>
-                    </focusedlayout>
-                </control>
-            </control>
-        </definition>
-    </include>
+    
 
 
     <!-- OSD Controls -->
@@ -350,6 +241,7 @@
             <description>Playlist</description>
             <label>$LOCALIZE[287]</label>
             <onclick>Action(ShowSubtitles)</onclick>
+            <onup>9302</onup>
             <include>Defs_OSDButton</include>
         </control>
     </include>
@@ -496,7 +388,53 @@
                 <include condition="Window.IsVisible(visualisation)">Window_OSD_Right_Music</include>
                 <include condition="Window.IsVisible(fullscreenvideo)">Window_OSD_Right_Video</include>
             </control>
+
+            <control type="group">
+                <visible allowhiddenfocus="true">ControlGroup(9300).HasFocus() | Control.HasFocus(3)</visible>
+                <bottom>64</bottom>
+                <centerleft>572</centerleft>
+                <width>320</width>
+                <height>138</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>-24</left>
+                    <right>-24</right>
+                    <top>-24</top>
+                    <bottom>-24</bottom>
+                    <bordersize>24</bordersize>
+                    <bordertexture border="24">common/24-shadow.png</bordertexture>
+                    <texture colordiffuse="HomeBarBG">common/white.png</texture>
+                </control>
+                <control type="grouplist" id="9300">
+                    <left>0</left>
+                    <right>0</right>
+                    <top>0</top>
+                    <bottom>0</bottom>
+                    <onup>noop</onup>
+                    <ondown>3</ondown>
+                    <onleft>3</onleft>
+                    <onright>3</onright>
+                    <itemgap>0</itemgap>
+                    <orientation>vertical</orientation>
+                    <scrolltime>200</scrolltime>
+                    <control type="button" id="9301" description="Download">
+                        <width>100%</width>
+                        <height>69</height>
+                        <include>Defs_OSDButton</include>
+                        <label>33003</label>
+                        <onclick>ActivateWindow(SubtitleSearch)</onclick>
+                    </control>
+                    <control type="togglebutton" id="9302" description="Enable Subs">
+                        <width>100%</width>
+                        <height>69</height>
+                        <include>Defs_OSDButton</include>
+                        <label>$LOCALIZE[305] $INFO[VideoPlayer.SubtitlesLanguage,[UPPERCASE],[/UPPERCASE]]</label>
+                        <altlabel>13106</altlabel>
+                        <onclick>NextSubtitle</onclick>
+                        <usealttexture>!VideoPlayer.SubtitlesEnabled</usealttexture>
+                    </control>
+                </control>
+            </control>
         </control>
     </include>
-    
 </includes>

@@ -123,6 +123,48 @@
                     <param name="buttonid2" value="9402" />
                 </include>
 
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1103" />
+                    <param name="buttonid1" value="9303" />
+                    <param name="buttonid2" value="9403" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1104" />
+                    <param name="buttonid1" value="9304" />
+                    <param name="buttonid2" value="9404" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1105" />
+                    <param name="buttonid1" value="9305" />
+                    <param name="buttonid2" value="9405" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1106" />
+                    <param name="buttonid1" value="9306" />
+                    <param name="buttonid2" value="9406" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1107" />
+                    <param name="buttonid1" value="9307" />
+                    <param name="buttonid2" value="9407" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1108" />
+                    <param name="buttonid1" value="9308" />
+                    <param name="buttonid2" value="9408" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1109" />
+                    <param name="buttonid1" value="9309" />
+                    <param name="buttonid2" value="9409" />
+                </include>
+
 
                 <control type="button" id="312" description="Widget">
                     <width>100%</width>
@@ -143,9 +185,10 @@
 
                 <control type="button" id="9701" description="Select Color">
                     <width>100%</width>
-                    <label>Select color</label>
+                    <label>31128</label>
                     <onclick>RunScript(script.skin.helper.service,action=colorpicker,shortcutproperty=tilecolor)</onclick>
                     <include>Defs_OptionButton</include>
+                    <visible>Skin.HasSetting(home.tilecolor)</visible>
                 </control>
                 
                 <control type="button" id="301" description="Add">

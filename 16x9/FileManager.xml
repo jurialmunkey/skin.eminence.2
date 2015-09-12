@@ -21,7 +21,7 @@
                 <top>top</top>
                 <include>Animation_Hub</include>
 
-                <include name="Window_FileManager_List">
+                <include name="Dialog_FileManager_List">
                     <param name="width" value="930" />
                     <param name="labelwidth" value="825" />
                     <param name="id" value="20" />
@@ -38,7 +38,7 @@
                 <top>top</top>
                 <include>Animation_Common</include>
 
-                <include name="Window_FileManager_List">
+                <include name="Dialog_FileManager_List">
                     <param name="width" value="930" />
                     <param name="labelwidth" value="825" />
                     <param name="id" value="21" />

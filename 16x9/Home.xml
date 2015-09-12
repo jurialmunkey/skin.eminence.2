@@ -17,19 +17,19 @@
     <controls>
 
         <include>Furniture_Background</include>
-        <include>Furniture_HomeWidget_Control</include>
+        <include>Home_Widget_Control</include>
         <include>Furniture_TopBar</include>
         
         <control type="group">
             <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="Control.HasFocus(9001)">Conditional</animation>
             <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="!Control.HasFocus(9001)">Conditional</animation>
-            <include>Furniture_HomeWidget</include>
+            <include>Home_Widget</include>
             
             <control type="group">
                 <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,266" end="0">WindowOpen</animation>
                 <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">WindowClose</animation>
-                <include>Furniture_HomeBar</include>
-                <include>Furniture_Home_NowPlaying</include>
+                <include>Home_Menu</include>
+                <include>Home_NowPlaying</include>
                 <control type="group">
                     <bottom>266</bottom>
                     <visible>Window.IsActive(DialogKaiToast.xml)</visible>

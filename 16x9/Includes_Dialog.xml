@@ -249,19 +249,21 @@
     </include>
     <include name="Dialog_FavouriteList">
         <param name="left" default="444" />
+        <param name="width" default="favitemw" />
+        <param name="top" default="80" />
         <definition>
             <control type="panel" id="$PARAM[id]">
                 <onup>$PARAM[id]</onup>
                 <ondown>$PARAM[id]</ondown>
                 <right>side</right>
                 <left>$PARAM[left]</left>
-                <top>80</top>
+                <top>$PARAM[top]</top>
                 <bottom>side</bottom>
                 <onleft>$PARAM[moveid]</onleft>
                 <onright>$PARAM[moveid]</onright>
                 <scrolltime>200</scrolltime>
                 <orientation>vertical</orientation>
-                <itemlayout width="favitemw" height="69">
+                <itemlayout width="$PARAM[width]" height="69">
                     <control type="image">
                         <width>100%</width>
                         <height>69</height>
@@ -277,7 +279,7 @@
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout width="favitemw" height="69">
+                <focusedlayout width="$PARAM[width]" height="69">
                     <control type="image">
                         <width>100%</width>
                         <height>69</height>
@@ -422,6 +424,106 @@
                         </control>
                     </control>
                 </focusedlayout>
+            </control>
+        </definition>
+    </include>
+    <!-- List -->
+    <include name="Dialog_FileManager_List">
+        <param name="numitemsvisible" default="true" />
+        <definition>
+            <control type="group">
+                <width>$PARAM[width]</width>
+                <control type="grouplist">
+                    <orientation>horizontal</orientation>
+                    <top>-48</top>
+                    <height>48</height>
+                    <width>$PARAM[labelwidth]</width>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <control type="label" id="$PARAM[pathid]">
+                        <left>0</left>
+                        <height>100%</height>
+                        <width max="$PARAM[labelwidth]">auto</width>
+                        <haspath>true</haspath>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                    </control>
+                    <control type="image">
+                        <bottom>21</bottom>
+                        <width max="$PARAM[labelwidth]">auto</width>
+                        <height>3</height>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                </control>
+                <control type="label">
+                    <top>-48</top>
+                    <height>48</height>
+                    <width>100%</width>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>LineLabel</textcolor>
+                    <label>$INFO[Container($PARAM[id]).NumItems] $LOCALIZE[31001]</label>
+                    <visible>$PARAM[numitemsvisible]</visible>
+                </control>
+                <control type="image">
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="list" id="$PARAM[id]">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                    <orientation>vertical</orientation>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <itemlayout height="69" width="$PARAM[width]">
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <align>right</align>
+                            <font>Font-ListInfo</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                        </control>
+                    </itemlayout>
+
+                    <focusedlayout height="69" width="$PARAM[width]">
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            <animation effect="fade" start="100" end="25" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
+                        </control>
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>Selected</textcolor>
+                        </control>
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <align>right</align>
+                            <font>Font-ListInfo</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>Selected</textcolor>
+                        </control>
+                    </focusedlayout>
+                </control>
             </control>
         </definition>
     </include>

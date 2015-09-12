@@ -414,3 +414,23 @@ msgstr ""
 msgctxt "#31125"
 msgid "Similar to"
 msgstr ""
+
+msgctxt "#31126"
+msgid "Colors"
+msgstr ""
+
+msgctxt "#31127"
+msgid "Header"
+msgstr ""
+
+msgctxt "#31128"
+msgid "Set color"
+msgstr ""
+
+msgctxt "#31129"
+msgid "Enable individual tile colors in home customisation"
+msgstr ""
+
+msgctxt "#31130"
+msgid "items found"
+msgstr ""

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
-	<controls>
-
-        <include>GlobalOverlay</include>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <controls>
         <control type="group">
             <include>Animation_SlideIn</include>
-            <include>Animation_FadeOut</include>
             <centerleft>50%</centerleft>
             <width>1134</width>
             <bottom>64</bottom>
@@ -117,9 +114,11 @@
                 </control>
             </control>
         </control>
-        <control type="button" id="3011"><visible>false</visible></control>
-        <control type="label" id="3016"><visible>false</visible></control>
-        <control type="slider" id="3015"><visible>false</visible></control>
-        <control type="label" id="3017"><visible>false</visible></control>
-	</controls>
+        <control type="button" id="3011"><visible allowhiddenfocus="true">false</visible></control>
+        <control type="group" id="3020">
+            <control type="label" id="3016"><visible allowhiddenfocus="true">false</visible></control>
+            <control type="slider" id="3015"><visible allowhiddenfocus="true">false</visible></control>
+            <control type="label" id="3017"><visible allowhiddenfocus="true">false</visible></control>
+        </control>
+    </controls>
 </window>

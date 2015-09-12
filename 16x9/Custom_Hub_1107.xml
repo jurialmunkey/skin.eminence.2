@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="window" id="1107">
+    <backgroundcolor>Background</backgroundcolor>
+    <defaultcontrol always="true">9501</defaultcontrol>
+    <onunload>SetProperty(HubReturn,1107,home)</onunload>
+    <allowoverlay>false</allowoverlay>
+    <controls>
+        <include name="Window_Hub">
+            <param name="categories" value="skinshortcuts-group-x1107" />
+        </include>
+    </controls>
+</window>

@@ -58,8 +58,8 @@
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
     <variable name="Defs_HomeTileColor">
-        <value condition="!IsEmpty(Container(9000).ListItem.Property(tilecolor))">$INFO[Container(9000).ListItem.Property(tilecolor)]</value>
-        <value condition="!IsEmpty(Container(211).ListItem.Property(tilecolor))">$INFO[Container(211).ListItem.Property(tilecolor)]</value>
+        <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Container(9000).ListItem.Property(tilecolor))">$INFO[Container(9000).ListItem.Property(tilecolor)]</value>
+        <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Container(211).ListItem.Property(tilecolor))">$INFO[Container(211).ListItem.Property(tilecolor)]</value>
         <value>$VAR[HighlightColor]</value>
     </variable>
 
