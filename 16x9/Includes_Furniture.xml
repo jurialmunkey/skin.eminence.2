@@ -311,7 +311,7 @@
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
                     <textcolor>SubLabel</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor2]]$VAR[Label_HeaderDirector][/COLOR]</label>
                     <visible>!VideoPlayer.Content(livetv)</visible>
                 </control>
                 <control type="label">

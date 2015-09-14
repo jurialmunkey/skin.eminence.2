@@ -3,7 +3,6 @@
     <!-- Home Bar -->
     <include name="Home_Menu">
         <control type="group">
-            <!-- <animation effect="slide" end="0,-64" start="0" time="125" condition="Window.IsVisible(DialogKaiToast.xml)">Conditional</animation> -->
             <!-- Backing Bar -->
             <control type="image">
                 <bottom>-64</bottom>
@@ -14,6 +13,16 @@
         
             <!-- Main list -->
             <control type="panel" id="9000">
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,0)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,1)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,2)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,3)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,4)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,5)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,6)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,7)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,8)">Conditional</animation>
+                <animation effect="slide" end="94" condition="!IntegerGreaterThan(Container(9000).NumItems,9)">Conditional</animation>
                 <left>16</left>
                 <right>0</right>
                 <bottom>0</bottom>

@@ -5,6 +5,11 @@
         <value>$INFO[ListItem.Plot]</value>
     </variable>
 
+    <variable name="Label_HeaderDirector">
+        <value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TvShowTitle]</value>
+        <value condition="!VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Director]</value>
+    </variable>
+
     <variable name="Label_ExtraInfo">
         <value condition="!IsEmpty(ListItem.MPAA) + !IsEmpty(ListItem.Duration)">$INFO[ListItem.MPAA]$INFO[ListItem.Duration,  •  , $LOCALIZE[31117]]</value>
         <value condition="!IsEmpty(ListItem.MPAA)">$INFO[ListItem.MPAA]</value>

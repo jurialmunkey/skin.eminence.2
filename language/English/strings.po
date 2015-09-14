@@ -462,3 +462,7 @@ msgstr ""
 msgctxt "#31137"
 msgid "Panel List"
 msgstr ""
+
+msgctxt "#31138"
+msgid "Show clock"
+msgstr ""

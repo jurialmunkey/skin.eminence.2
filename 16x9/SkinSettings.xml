@@ -182,8 +182,8 @@
                     </control>
 
                     <!-- HEADER -->
-                    <!-- Weather Header -->
-                    <control type="radiobutton" id="8904">
+                    <!-- Disable Weather -->
+                    <control type="radiobutton" id="8701">
                         <width>100%</width>
                         <label>31115</label>
                         <radioposx>1350</radioposx>
@@ -192,9 +192,20 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8007)</visible>
                     </control>
+
+                    <!-- Disable Clock -->
+                    <control type="radiobutton" id="8702">
+                        <width>100%</width>
+                        <label>31138</label>
+                        <radioposx>1350</radioposx>
+                        <onclick>Skin.ToggleSetting(disable.clockheader)</onclick>
+                        <selected>!Skin.HasSetting(disable.clockheader)</selected>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                    </control>
                     
                     <!-- Match header tile to highlight color -->
-                    <control type="radiobutton" id="8905">
+                    <control type="radiobutton" id="8709">
                         <width>100%</width>
                         <label>31122</label>
                         <radioposx>1350</radioposx>
