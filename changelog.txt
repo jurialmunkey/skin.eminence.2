@@ -2,6 +2,7 @@
 Center homebar when items less than 10
 Fix tvshowtitle for now playing header
 Add remove clock setting
+Fix DialogOK case issue
 
 [B]0.9.1[/B]
 Alpha Release

@@ -154,7 +154,7 @@
             <include>Dialog_Bottom</include>
             <control type="grouplist">
                 <include>Dialog_Bottom_Grouplist</include>
-                <include>Dialog_Bottom_Yes</include>
+                <include>Dialog_Bottom_No</include>
             </control>
         </control>
     </include>
