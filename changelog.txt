@@ -1,0 +1,12 @@
+[B]0.9.1[/B]
+Alpha Release
+
+Still to complete
+-- PVR windows
+-- Next Aired
+-- NextUp
+-- ExtendedInfo Browser
+-- Video Extras
+-- Lyrics
+-- Peripherals Dialogs
+-- Network Dialog

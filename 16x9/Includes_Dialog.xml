@@ -251,6 +251,7 @@
         <param name="left" default="444" />
         <param name="width" default="favitemw" />
         <param name="top" default="80" />
+        <param name="label2" default="false" />
         <definition>
             <control type="panel" id="$PARAM[id]">
                 <onup>$PARAM[id]</onup>
@@ -271,12 +272,23 @@
                     </control>
                     <control type="label">
                         <left>side</left>
-                        <right>30</right>
+                        <right>side</right>
                         <height>69</height>
                         <textcolor>ListLabel</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>side</right>
+                        <height>69</height>
+                        <align>right</align>
+                        <textcolor>ListLabel</textcolor>
+                        <font>Font-ListInfo-Small</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <visible>$PARAM[label2]</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout width="$PARAM[width]" height="69">
@@ -287,12 +299,23 @@
                     </control>
                     <control type="label">
                         <left>side</left>
-                        <right>30</right>
+                        <right>side</right>
                         <height>69</height>
                         <textcolor>Selected</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>side</right>
+                        <height>69</height>
+                        <align>right</align>
+                        <textcolor>Selected</textcolor>
+                        <font>Font-ListInfo-Small</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <visible>$PARAM[label2]</visible>
                     </control>
                 </focusedlayout>
             </control>

@@ -113,7 +113,7 @@
             </include>
             <include name="View_Fanart">
                 <param name="id" value="56" />
-                <param name="condition" value="Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
+                <param name="condition" value="Window.IsVisible(MyPics.xml) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
         </control>
     </include>

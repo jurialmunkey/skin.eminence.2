@@ -89,6 +89,7 @@
             <include>Furniture_TopBar</include>
         </control>
 
+        <include>Furniture_Filter</include>
 
         
     </controls>

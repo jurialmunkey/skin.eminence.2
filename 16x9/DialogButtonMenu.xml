@@ -19,11 +19,11 @@
                 <ondown>Close</ondown>
                 <include>Dialog_Top_GroupList</include>
                 <defaultcontrol always="true">6002</defaultcontrol>
-                <control type="button" id="6001">
+                <!-- <control type="button" id="6001">
                     <include>Defs_OptionButton</include>
                     <label>Reload Skin</label>
                     <onclick>ReloadSkin()</onclick>
-                </control>
+                </control> -->
                 <control type="button" id="6002">
                     <include>Defs_OptionButton</include>
                     <label>13012</label>

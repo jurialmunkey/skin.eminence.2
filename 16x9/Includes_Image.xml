@@ -11,7 +11,7 @@
     </variable>
 
     <variable name="Image_Thumb">
-        <value condition="Container.Content(episodes)">$INFO[ListItem.Art(thumb)]</value>
+        <value condition="Container.Content(episodes) | Window.IsVisible(MyPics.xml)">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
     </variable>
 

@@ -2,7 +2,7 @@
 <window>
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50</views>
+    <views>50,57,58</views>
     <onunload>SetProperty(NodeReturn,programs,home)</onunload>
     <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
     <controls>
@@ -15,6 +15,8 @@
         <control type="group">
             <include>Animation_Common</include>
             <include>Viewtype_List</include>
+            <include>Viewtype_BigList</include>
+            <include>Viewtype_PanelList</include>
         </control>
 
         <!-- Menu -->

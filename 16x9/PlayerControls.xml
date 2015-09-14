@@ -3,7 +3,7 @@
     <defaultcontrol always="true">8000</defaultcontrol>
     <controls>
         <control type="group">
-            <visible allowhiddenfocus="true">ControlGroup(8000).HasFocus()</visible>
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus() | ControlGroup(8000).HasFocus()</visible>
             <include>Dialog_Top</include>
             <include>Dialog_Background</include>
             <include name="Dialog_Top_IconHeader">
@@ -14,7 +14,19 @@
                 <param name="id" value="8000" />
             </include>
 
+            <control type="grouplist" id="9000">
+                <top>14</top>
+                <height>64</height>
+                <align>center</align>
+                <itemgap>side</itemgap>
+                <ondown>8000</ondown>
+                <include>Dialog_Top_GroupList</include>
+                <include>Window_OSD_Controls</include>
+
+            </control>
+
             <control type="grouplist" id="8000">
+                <onup>9000</onup>
                 <include>Dialog_Top_GroupList</include>
                 <control type="button" id="8001">
                     <include>Defs_OptionButton</include>

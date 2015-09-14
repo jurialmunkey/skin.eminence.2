@@ -132,8 +132,12 @@
     <!-- GROUPINGS -->
     <!-- Hub Widget Groupings -->
     <hubwidget-groupings>
-        <content>playlist-video</content>
-        <content>addon-video</content>
+        <node label="32040">
+            <content>playlist-video</content>
+        </node>
+        <node label="32010">
+            <content>addon-video</content>
+        </node>
     </hubwidget-groupings>
 
     <!-- Main Grouping -->

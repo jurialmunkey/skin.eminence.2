@@ -41,6 +41,30 @@
         </control>
     </include>
 
+    <!-- PANEL LIST -->
+    <include name="Viewtype_PanelList">
+        <control type="group">
+            <visible>Control.IsVisible(58)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>0</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_BigList">
+                <param name="id" value="58" />
+                <param name="width" value="630" />
+                <param name="condition" value="true" />
+                <param name="name" value="31137" />
+            </include>
+            <include>Object_Scrollbar</include>
+        </control>
+    </include>
+
     <!-- BIG LIST -->
     <include name="Viewtype_BigList">
         <control type="group">
@@ -59,6 +83,7 @@
                 <param name="id" value="57" />
                 <param name="width" value="1890" />
                 <param name="condition" value="true" />
+                <param name="name" value="537" />
             </include>
             <include>Object_Scrollbar</include>
         </control>
@@ -75,7 +100,7 @@
                 <pagecontrol>60</pagecontrol>
                 <preloaditems>2</preloaditems>
                 <orientation>vertical</orientation>
-                <viewtype label="537">biglist</viewtype>
+                <viewtype label="$PARAM[name]">biglist</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="140" width="$PARAM[width]">

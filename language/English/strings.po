@@ -458,3 +458,7 @@ msgstr ""
 msgctxt "#31136"
 msgid "by Studio"
 msgstr ""
+
+msgctxt "#31137"
+msgid "Panel List"
+msgstr ""
