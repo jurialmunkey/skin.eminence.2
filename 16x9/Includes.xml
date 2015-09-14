@@ -32,7 +32,7 @@
 
     <!-- VARS -->
     <variable name="HighlightColor">
-        <value condition="!IsEmpty(Window(home).Property(HighlightColor))">$INFO[Window(home).Property(HighlightColor)]</value>
+        <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Window(home).Property(HighlightColor))">$INFO[Window(home).Property(HighlightColor)]</value>
         <value condition="!IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
         <value>Highlight</value>
     </variable>

@@ -177,6 +177,7 @@
                 </control>
             </control>
         </control>
+        <include>Furniture_Filter</include>
     </include>
 
     

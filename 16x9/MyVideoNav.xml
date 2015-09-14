@@ -73,6 +73,7 @@
 
         </control>
 
+        <include>Furniture_Filter</include>
     </controls>
 
 </window>

@@ -12,6 +12,9 @@
                 <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
                 <include>Dialog_Background</include>
                 <control type="group">
+                    <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0" delay="300">Visible</animation>
+                    <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0">Hidden</animation>
+                    <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
                     <top>70</top>
                     <left>side</left>
                     <right>side</right>

@@ -59,7 +59,7 @@
                     <include>Info_ButtonGrouplist</include>
                     <!-- Launch Addon Button -->
                     <control type="button" id="12">
-                        <width>231</width>
+                        <width>222</width>
                         <label>518</label>
                         <visible>Control.IsEnabled(12)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
@@ -67,7 +67,7 @@
                     </control>
                     <!-- Configure Addon Button -->
                     <control type="button" id="9">
-                        <width>231</width>
+                        <width>222</width>
                         <label>24020</label>
                         <visible>Control.IsEnabled(9)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
@@ -75,7 +75,7 @@
                     </control>
                     <!-- Update Addon Button -->
                     <control type="button" id="8">
-                        <width>231</width>
+                        <width>222</width>
                         <label>24069</label>
                         <visible>Control.IsEnabled(8)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
@@ -83,7 +83,7 @@
                     </control>
                     <!-- Install/UnInstall Addon button -->
                     <control type="button" id="6">
-                        <width>231</width>
+                        <width>222</width>
                         <label>24022</label>
                         <visible>Control.IsEnabled(6)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
@@ -91,7 +91,7 @@
                     </control>
                     <!-- Enable/Disable Addon button -->
                     <control type="button" id="7">
-                        <width>231</width>
+                        <width>222</width>
                         <label>24021</label>
                         <visible>Control.IsEnabled(7)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
@@ -99,7 +99,7 @@
                     </control>
                     <!-- Rollback Button -->
                     <control type="button" id="11">
-                        <width>231</width>
+                        <width>222</width>
                         <label>24048</label>
                         <visible>Control.IsEnabled(11)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
@@ -107,7 +107,7 @@
                     </control>
                     <!-- Changelog Button -->
                     <control type="button" id="10">
-                        <width>231</width>
+                        <width>222</width>
                         <label>24036</label>
                         <visible>Control.IsEnabled(10)</visible>
                         <font>Font-ListInfo-Small-Bold</font>

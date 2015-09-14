@@ -191,11 +191,11 @@
                     <visible>Skin.HasSetting(home.tilecolor)</visible>
                 </control>
                 
-                <!-- <control type="button" id="301" description="Add">
+                <control type="button" id="301" description="Add">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
                 </control>
-                <control type="button" id="302" description="Delete">
+                <!-- <control type="button" id="302" description="Delete">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
                 </control> -->
@@ -236,13 +236,13 @@
                     <texturenofocus colordiffuse="Disabled">common/delete.png</texturenofocus>
                     <texturefocus colordiffuse="Selected">common/delete.png</texturefocus>
                 </control>
-                <control type="button" id="301" description="Add">
+                <!-- <control type="button" id="301" description="Add">
                     <width>32</width>
                     <height>32</height>
                     <font>-</font>
                     <texturenofocus colordiffuse="Disabled">common/add.png</texturenofocus>
                     <texturefocus colordiffuse="Selected">common/add.png</texturefocus>
-                </control>
+                </control> -->
                 <control type="button" id="303" description="Up">
                     <width>32</width>
                     <height>32</height>

@@ -3,10 +3,11 @@
     <!-- Home Bar -->
     <include name="Home_Menu">
         <control type="group">
+            <!-- <animation effect="slide" end="0,-64" start="0" time="125" condition="Window.IsVisible(DialogKaiToast.xml)">Conditional</animation> -->
             <!-- Backing Bar -->
             <control type="image">
-                <bottom>0</bottom>
-                <height>266</height>
+                <bottom>-64</bottom>
+                <height>330</height>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="HomeBarBG">common/white.png</texture>
             </control>

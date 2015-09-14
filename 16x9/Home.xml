@@ -10,7 +10,7 @@
     <onload>ClearProperty(FO9001)</onload>
     <onload>ClearProperty(extinfo,home)</onload>
     <onload>SetProperty(HubReturn,Home)</onload>
-    <onunload>SetProperty(FO9001,1,home)</onunload>
+    <!-- <onunload>SetProperty(FO9001,1,home)</onunload> -->
     <onunload>SetProperty(Header.Label,$INFO[Container(9000).ListItem.Label],home)</onunload>
     <onunload>SetProperty(Header.Icon,$INFO[Container(9000).ListItem.Icon],home)</onunload>
     <onunload condition="!IsEmpty(Container(9000).ListItem.Property(TileColor)">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
@@ -26,8 +26,8 @@
             <include>Home_Widget</include>
             
             <control type="group">
-                <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,266" end="0">WindowOpen</animation>
-                <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">WindowClose</animation>
+                <animation effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>
+                <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
                 <include>Home_Menu</include>
                 <include>Home_NowPlaying</include>
                 <control type="group">

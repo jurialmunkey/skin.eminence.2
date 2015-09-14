@@ -304,7 +304,7 @@ msgid "Select hub widget"
 msgstr ""
 
 msgctxt "#31098"
-msgid "Poster"
+msgid "Artwork"
 msgstr ""
 
 msgctxt "#31099"
@@ -433,4 +433,28 @@ msgstr ""
 
 msgctxt "#31130"
 msgid "items found"
+msgstr ""
+
+msgctxt "#31131"
+msgid "Search Options"
+msgstr ""
+
+msgctxt "#31132"
+msgid "by Title"
+msgstr ""
+
+msgctxt "#31133"
+msgid "by Genre"
+msgstr ""
+
+msgctxt "#31134"
+msgid "by Actor"
+msgstr ""
+
+msgctxt "#31135"
+msgid "by Director"
+msgstr ""
+
+msgctxt "#31136"
+msgid "by Studio"
 msgstr ""

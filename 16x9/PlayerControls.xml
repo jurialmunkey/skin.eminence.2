@@ -1,7 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<visible>false</visible>
-	<controls>
-	</controls>
+    <defaultcontrol always="true">8000</defaultcontrol>
+    <controls>
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(8000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31131]" />
+                <param name="icon" value="special://skin/extras/icons/search.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="8000" />
+            </include>
 
+            <control type="grouplist" id="8000">
+                <include>Dialog_Top_GroupList</include>
+                <control type="button" id="8001">
+                    <include>Defs_OptionButton</include>
+                    <label>31132</label>
+                    <onclick>Close</onclick>
+                    <onclick>RunScript(script.globalsearch)</onclick>
+                </control>
+                <control type="button" id="8002">
+                    <include>Defs_OptionButton</include>
+                    <label>31133</label>
+                    <onclick>SetProperty(searchfilter.header,$LOCALIZE[135],home)</onclick>
+                    <onclick>SetProperty(searchfilter.content,videodb://movies/genres/,home)</onclick>
+                    <onclick>Close</onclick>
+                    <onclick>SetFocus(7000)</onclick>
+                </control>
+                <control type="button" id="8003">
+                    <include>Defs_OptionButton</include>
+                    <label>31134</label>
+                    <onclick>SetProperty(searchfilter.header,$LOCALIZE[344],home)</onclick>
+                    <onclick>SetProperty(searchfilter.content,videodb://movies/actors/,home)</onclick>
+                    <onclick>Close</onclick>
+                    <onclick>SetFocus(7000)</onclick>
+                </control>
+                <control type="button" id="8004">
+                    <include>Defs_OptionButton</include>
+                    <label>31135</label>
+                    <onclick>SetProperty(searchfilter.header,$LOCALIZE[20348],home)</onclick>
+                    <onclick>SetProperty(searchfilter.content,videodb://movies/directors/,home)</onclick>
+                    <onclick>Close</onclick>
+                    <onclick>SetFocus(7000)</onclick>
+                </control>
+                <control type="button" id="8005">
+                    <include>Defs_OptionButton</include>
+                    <label>31136</label>
+                    <onclick>SetProperty(searchfilter.header,$LOCALIZE[20388],home)</onclick>
+                    <onclick>SetProperty(searchfilter.content,videodb://movies/studios/,home)</onclick>
+                    <onclick>Close</onclick>
+                    <onclick>SetFocus(7000)</onclick>
+                </control>
+            </control>
+
+        </control>
+        
+    </controls>
 </window>
