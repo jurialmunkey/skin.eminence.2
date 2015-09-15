@@ -269,6 +269,30 @@
             <include>Defs_OSDButton</include>
         </control>
     </include>
+    <include name="Window_OSD_Right_LiveTV">
+        <control type="button" id="4">
+            <description>CHANNELS</description>
+            <label>19019</label>
+            <include>Defs_OSDButton</include>
+            <onclick>Close</onclick>
+            <onclick>ActivateWindow(pvrosdchannels)</onclick>
+        </control>
+        <control type="button" id="5">
+            <description>EPG</description>
+            <label>$LOCALIZE[19030] / $LOCALIZE[19031]</label>
+            <onclick>Close</onclick>
+            <onclick>ActivateWindow(pvrosdguide)</onclick>
+            <include>Defs_OSDButton</include>
+        </control>
+
+        <control type="button" id="6">
+            <description>TIMELINE</description>
+            <include>Defs_OSDButton</include>
+            <label>19032</label>
+            <onclick>Close</onclick>
+            <onclick>ActivateWindow(tvguide,,return)</onclick>
+        </control>
+    </include>
     <include name="Window_OSD_Controls">
         <control type="button" id="12">
             <description>Skip Back</description>
@@ -389,7 +413,8 @@
                 <onup>noop</onup>
                 <ondown>noop</ondown>
                 <include condition="Window.IsVisible(visualisation)">Window_OSD_Right_Music</include>
-                <include condition="Window.IsVisible(fullscreenvideo)">Window_OSD_Right_Video</include>
+                <include condition="Window.IsVisible(fullscreenvideo) + !VideoPlayer.Content(LiveTV)">Window_OSD_Right_Video</include>
+                <include condition="Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(LiveTV)">Window_OSD_Right_LiveTV</include>
             </control>
 
             <control type="group">

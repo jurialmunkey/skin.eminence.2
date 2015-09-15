@@ -390,7 +390,15 @@
                 </control>
                 <control type="label">
                     <height>100%</height>
-                    <width>200</width>
+                    <width max="820">auto</width>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>LineLabel</textcolor>
+                    <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                    <visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
+                </control>
+                <control type="label">
+                    <height>100%</height>
+                    <width max="320">auto</width>
                     <font>Font-ListInfo-Small-Bold</font>
                     <textcolor>LineLabel</textcolor>
                     <label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>

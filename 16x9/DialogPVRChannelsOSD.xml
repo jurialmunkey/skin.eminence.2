@@ -1,183 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
 <window>
-	<!-- pvrosdchannels -->
-	<defaultcontrol always="true">11</defaultcontrol>
+    <defaultcontrol always="true">11</defaultcontrol>
+    
+    <controls>
+    
+        <control type="group">
+            <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
+            <animation effect="slide" start="-668" end="0" time="150" tween="quadratic">Visible</animation>
+            <animation effect="slide" start="-668" end="0" time="150" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="-668" start="0" time="150" tween="quadratic">Hidden</animation>
+            <animation effect="slide" end="-668" start="0" time="150" tween="quadratic">WindowClose</animation>
+            <control type="image">
+                <left>-24</left>
+                <top>-24</top>
+                <bottom>-24</bottom>
+                <width>720</width>
+                <bordersize>24</bordersize>
+                <bordertexture border="24">common/24-shadow.png</bordertexture>
+                <texture border="5" colordiffuse="HomeBarBG">common/white.png</texture>
+            </control>
+            <control type="image">
+                <left>530</left>
+                <top>-4</top>  
+                <width>128</width>
+                <height>128</height>
+                <texture colordiffuse="ListLabel">special://skin/extras/icons/livetv.png</texture>
+            </control>
+            <control type="label">
+                <left>30</left>
+                <top>pad</top>
+                <width>400</width>
+                <height>70</height>
+                <align>left</align>
+                <font>Font-WidgetInfoTitle</font>
+                <label>$INFO[VideoPlayer.ChannelGroup]</label>
+            </control>
+            <control type="label">
+                <left>30</left>
+                <top>50</top>
+                <height>70</height>
+                <width>400</width>
+                <align>left</align>
+                <font>Font-ListInfo-Bold</font>
+                <label>$INFO[Container(11).NumItems,,  $LOCALIZE[19019]]</label>
+            </control>
 
-	<controls>
-
-		<!-- Menu -->
-		<control type="group">
-			<left>150</left>
-			<top>150</top>
-
-			<!-- Background -->
-			<control type="image">
-				<width>790</width>
-				<height>695</height>
-				<texture>osd/OSDSettingsBack.png</texture>
-			</control>
-
-			<!-- Heading label -->
-			<control type="label" id="2">
-				<left>20</left>
-				<top>14</top>
-				<width>750</width>
-				<height>48</height>
-				<font>Font48</font>
-				<textcolor>DialogColor1</textcolor>
-				<label>[B]$INFO[VideoPlayer.ChannelGroup][/B]</label>
-			</control>
-
-			<!-- List -->
-			<control type="list" id="11">
-				<left>20</left>
-				<top>116</top>
-				<width>750</width>
-				<height>540</height>
-				<onleft>PreviousChannelGroup</onleft>
-				<onright>NextChannelGroup</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
-				<scrolltime tween="sine" easing="out">240</scrolltime>
-
-				<itemlayout width="750" height="108">
-
-					<!-- Channel image -->
-					<control type="image">
-						<left>9</left>
-						<top>9</top>
-						<width>90</width>
-						<height>90</height>
-						<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
-					</control>
-
-					<!-- Start time -->
-					<control type="label">
-						<left>268</left>
-						<top>12</top>
-						<width>200</width>
-						<align>right</align>
-						<textcolor>TextColor2</textcolor>
-						<label>$INFO[ListItem.StartTime]</label>
-					</control>
-
-					<!-- End time -->
-					<control type="label">
-						<left>268</left>
-						<top>54</top>
-						<width>200</width>
-						<height>27</height>
-						<align>right</align>
-						<textcolor>TextColor2</textcolor>
-						<label>$INFO[ListItem.EndTime]</label>
-					</control>
-
-					<!-- Program name -->
-					<control type="label">
-						<left>308</left>
-						<top>12</top>
-						<width>442</width>
-						<textcolor>TextColor2</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-
-					<!-- Title -->
-					<control type="label">
-						<left>308</left>
-						<top>54</top>
-						<width>442</width>
-						<height>27</height>
-						<font>Font27</font>
-						<textcolor>TextColor2</textcolor>
-						<label>$INFO[ListItem.Title]</label>
-					</control>
-
-					<!-- Progress -->
-					<control type="progress">
-						<left>308</left>
-						<top>93</top>
-						<width>436</width>
-						<height>6</height>
-						<colordiffuse>OverlayColorNF</colordiffuse>
-						<texturebg border="2">osd/OSDProgressBack.png</texturebg>
-						<lefttexture>-</lefttexture>
-						<midtexture border="2">osd/OSDProgressBar.png</midtexture>
-						<righttexture>-</righttexture>
-						<info>ListItem.Progress</info>
-						<visible>ListItem.HasEpg</visible>
-					</control>
-
-				</itemlayout>
-
-				<focusedlayout width="750" height="108">
-
-					<!-- Channel image -->
-					<control type="image">
-						<left>9</left>
-						<top>9</top>
-						<width>90</width>
-						<height>90</height>
-						<texture background="true" fallback="pvr/defaultchannel.png">$VAR[PVRChannelIcon]</texture>
-					</control>
-
-					<!-- Start time -->
-					<control type="label">
-						<left>268</left>
-						<top>12</top>
-						<width>200</width>
-						<align>right</align>
-						<label>$INFO[ListItem.StartTime]</label>
-					</control>
-
-					<!-- End time -->
-					<control type="label">
-						<left>268</left>
-						<top>54</top>
-						<width>200</width>
-						<height>27</height>
-						<align>right</align>
-						<label>$INFO[ListItem.EndTime]</label>
-					</control>
-
-					<!-- Program name -->
-					<control type="label">
-						<left>308</left>
-						<top>12</top>
-						<width>442</width>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-
-					<!-- Title -->
-					<control type="label">
-						<left>308</left>
-						<top>54</top>
-						<width>442</width>
-						<height>27</height>
-						<font>Font27</font>
-						<label>$INFO[ListItem.Title]</label>
-					</control>
-
-					<!-- Progress -->
-					<control type="progress">
-						<left>308</left>
-						<top>93</top>
-						<width>436</width>
-						<height>6</height>
-						<colordiffuse>OverlayColorFO</colordiffuse>
-						<texturebg border="2">osd/OSDProgressBack.png</texturebg>
-						<lefttexture>-</lefttexture>
-						<midtexture border="2">osd/OSDProgressBar.png</midtexture>
-						<righttexture>-</righttexture>
-						<info>ListItem.Progress</info>
-						<visible>ListItem.HasEpg</visible>
-					</control>
-
-				</focusedlayout>
-
-			</control>
-
-		</control>
-
-	</controls>
+            <control type="list" id="11">
+                <left>0</left>
+                <top>120</top>
+                <height>980</height>
+                <width>670</width>
+                <onleft>PreviousChannelGroup</onleft>
+                <onright>NextChannelGroup</onright>
+                <orientation>vertical</orientation>
+                <itemlayout height="120" width="670">
+                    <control type="image">
+                        <left>22</left>
+                        <top>12</top>  
+                        <width>85</width>
+                        <height>85</height>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <left>560</left>
+                        <width>70</width>
+                        <height>70</height>
+                        <align>left</align>
+                        <label>$INFO[ListItem.ChannelNumber]</label>
+                    </control>
+                    <control type="progress">
+                        <left>560</left>
+                        <top>78</top>
+                        <width>80</width>
+                        <height>8</height>
+                        <reveal>true</reveal>
+                        <info>ListItem.Progress</info>
+                        <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
+                        <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
+                    </control>
+                    <control type="label">
+                        <left>130</left>
+                        <height>70</height>
+                        <width>400</width>
+                        <align>left</align>
+                        <textcolor>ListLabel</textcolor>
+                        <label>$INFO[ListItem.ChannelName]</label>
+                    </control>
+                    <control type="label">
+                        <left>130</left>
+                        <top>40</top>
+                        <width>400</width>
+                        <height>70</height>
+                        <align>left</align>
+                        <font>Font-ListInfo</font>
+                        <textcolor>ListLabel</textcolor>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="120" width="670">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>109</height>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>22</left>
+                        <top>12</top>  
+                        <width>85</width>
+                        <height>85</height>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <left>560</left>
+                        <width>70</width>
+                        <height>70</height>
+                        <align>left</align>
+                        <label>$INFO[ListItem.ChannelNumber]</label>
+                    </control>
+                    <control type="progress">
+                        <left>560</left>
+                        <top>78</top>
+                        <width>80</width>
+                        <height>8</height>
+                        <reveal>true</reveal>
+                        <info>ListItem.Progress</info>
+                        <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
+                        <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
+                    </control>
+                    <control type="label">
+                        <left>130</left>
+                        <height>70</height>
+                        <width>400</width>
+                        <align>left</align>
+                        <textcolor>ListLabel</textcolor>
+                        <label>$INFO[ListItem.ChannelName]</label>
+                    </control>
+                    <control type="label">
+                        <left>130</left>
+                        <top>40</top>
+                        <width>400</width>
+                        <height>70</height>
+                        <align>left</align>
+                        <font>Font-ListInfo</font>
+                        <textcolor>ListLabel</textcolor>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                </focusedlayout>
+            
+            </control>
+        </control>
+    </controls>
 
 </window>

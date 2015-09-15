@@ -1,147 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
 <window>
-	<!-- osdvideosettings -->
-	<defaultcontrol always="true">11</defaultcontrol>
-	<controls>
+    <defaultcontrol always="true">11</defaultcontrol>
+    
+    <controls>
+    
+        <control type="group">
+            <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
+            <animation effect="slide" start="-668" end="0" time="150" tween="quadratic">Visible</animation>
+            <animation effect="slide" start="-668" end="0" time="150" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="-668" start="0" time="150" tween="quadratic">Hidden</animation>
+            <animation effect="slide" end="-668" start="0" time="150" tween="quadratic">WindowClose</animation>
+            <control type="image">
+                <left>-24</left>
+                <top>-24</top>
+                <bottom>-24</bottom>
+                <width>720</width>
+                <bordersize>24</bordersize>
+                <bordertexture border="24">common/24-shadow.png</bordertexture>
+                <texture border="5" colordiffuse="HomeBarBG">common/white.png</texture>
+            </control>
+            <control type="image">
+                <left>530</left>
+                <top>-4</top>  
+                <width>128</width>
+                <height>128</height>
+                <texture colordiffuse="ListLabel">special://skin/extras/icons/livetv.png</texture>
+            </control>
+            <control type="label">
+                <left>30</left>
+                <top>pad</top>
+                <width>400</width>
+                <height>70</height>
+                <align>left</align>
+                <font>Font-WidgetInfoTitle</font>
+                <label>$INFO[VideoPlayer.ChannelName]</label>
+            </control>
+            <control type="label">
+                <left>30</left>
+                <top>50</top>
+                <height>70</height>
+                <width>400</width>
+                <align>left</align>
+                <font>Font-ListInfo-Bold</font>
+                <label>$INFO[Container(11).ListItem.StartDate]</label>
+            </control>
 
-		<!-- Menu -->
-		<control type="group">
-			<left>150</left>
-			<top>150</top>
-
-			<!-- Background -->
-			<control type="image">
-				<width>790</width>
-				<height>695</height>
-				<texture>osd/OSDSettingsBack.png</texture>
-			</control>
-
-			<!-- Heading label -->
-			<control type="label" id="2">
-				<left>20</left>
-				<top>10</top>
-				<width>750</width>
-				<height>48</height>
-				<font>Font48</font>
-				<textcolor>DialogColor1</textcolor>
-				<label>$INFO[VideoPlayer.ChannelName]</label>
-			</control>
-
-			<!-- Date label -->
-			<control type="label" id="2">
-				<left>20</left>
-				<top>66</top>
-				<width>750</width>
-				<height>36</height>
-				<font>Font36</font>
-				<textcolor>DialogColor2</textcolor>
-				<label>$INFO[Container(11).ListItem.StartDate]</label>
-			</control>
-
-			<!-- List -->
-			<control type="list" id="11">
-				<left>20</left>
-				<top>116</top>
-				<width>750</width>
-				<height>561</height>
-				<onleft>Close</onleft>
-				<onright>Close</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
-				<scrolltime tween="sine" easing="out">240</scrolltime>
-
-				<itemlayout width="750" height="51">
-
-					<!-- Start time -->
-					<control type="label">
-						<top>2</top>
-						<width>140</width>
-						<height>51</height>
-						<font>Font27</font>
-						<align>right</align>
-						<textcolor>DialogColor2</textcolor>
-						<label>$INFO[ListItem.StartTime]</label>
-					</control>
-
-					<!-- Program name -->
-					<control type="label">
-						<left>160</left>
-						<width>520</width>
-						<height>51</height>
-						<textcolor>DialogColor2</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-
-					<!-- Recording image -->
-					<control type="image">
-						<right>4</right>
-						<top>14</top>
-						<width>30</width>
-						<height>30</height>
-						<texture>pvr/Recording.png</texture>
-						<visible>ListItem.IsRecording</visible>
-					</control>
-
-					<!-- Timer image -->
-					<control type="image">
-						<right>0</right>
-						<top>10</top>
-						<width>38</width>
-						<height>40</height>
-						<texture>pvr/Timer.png</texture>
-						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-					</control>
-
-				</itemlayout>
-
-				<focusedlayout width="750" height="51">
-
-					<!-- Start time -->
-					<control type="label">
-						<top>2</top>
-						<width>140</width>
-						<height>51</height>
-						<font>Font27</font>
-						<align>right</align>
-						<textcolor>DialogColor1</textcolor>
-						<label>$INFO[ListItem.StartTime]</label>
-					</control>
-
-					<!-- Program name -->
-					<control type="label">
-						<left>160</left>
-						<width>520</width>
-						<height>51</height>
-						<textcolor>DialogColor1</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-
-					<!-- Recording image -->
-					<control type="image">
-						<right>4</right>
-						<top>14</top>
-						<width>30</width>
-						<height>30</height>
-						<texture>pvr/Recording.png</texture>
-						<visible>ListItem.IsRecording</visible>
-					</control>
-
-					<!-- Timer image -->
-					<control type="image">
-						<right>0</right>
-						<top>10</top>
-						<width>38</width>
-						<height>40</height>
-						<texture>pvr/Timer.png</texture>
-						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-					</control>
-
-				</focusedlayout>
-
-			</control>
-
-		</control>
-
-	</controls>
+            <control type="list" id="11">
+                <left>0</left>
+                <top>120</top>
+                <height>980</height>
+                <width>670</width>
+                <onleft>PreviousChannelGroup</onleft>
+                <onright>NextChannelGroup</onright>
+                <orientation>vertical</orientation>
+                <itemlayout height="120" width="670">
+                    <control type="label">
+                        <left>30</left>
+                        <height>70</height>
+                        <width>400</width>
+                        <align>left</align>
+                        <textcolor>ListLabel</textcolor>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <top>40</top>
+                        <width>400</width>
+                        <height>70</height>
+                        <align>left</align>
+                        <font>Font-ListInfo</font>
+                        <textcolor>ListLabel</textcolor>
+                        <label>$INFO[ListItem.StartTime]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="120" width="670">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>109</height>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <height>70</height>
+                        <width>400</width>
+                        <align>left</align>
+                        <textcolor>Selected</textcolor>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <top>40</top>
+                        <width>400</width>
+                        <height>70</height>
+                        <align>left</align>
+                        <font>Font-ListInfo</font>
+                        <textcolor>Selected</textcolor>
+                        <label>$INFO[ListItem.StartTime]</label>
+                    </control>
+                </focusedlayout>
+            
+            </control>
+        </control>
+    </controls>
 
 </window>
