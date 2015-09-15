@@ -1,3 +1,6 @@
+[B]0.9.4[/B]
+Update hub widget to show type at top and name in window
+
 [B]0.9.3[/B]
 Add indicator to home for submenu
 Up/Down indicators on content

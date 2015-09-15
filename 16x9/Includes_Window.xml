@@ -83,7 +83,6 @@
                                 <right>side</right>
                                 <top>10</top>
                                 <height>32</height>
-                                <font>Font-ListInfo-Small-Bold</font>
                                 <label>$VAR[Label_Hub_WidgetLabel]</label>
                             </control>
                             <control type="label">
@@ -93,7 +92,7 @@
                                 <height>32</height>
                                 <align>right</align>
                                 <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[Container(9500).ListItem.Rating]</label>
+                                <label>$VAR[Label_Hub_WidgetLabel2]</label>
                             </control>
                         </control>
                         <control type="textbox">

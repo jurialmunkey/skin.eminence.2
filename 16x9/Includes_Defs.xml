@@ -78,7 +78,7 @@
             <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
             <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid])</visible>
             <include>Defs_OptionButton</include>
-            <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=hubwidget&amp;skinList=Widget.$PARAM[hubid])</onclick>
+            <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=hubwidget&amp;skinList=Widget.$PARAM[hubid]&amp;skinLabel=Widget.$PARAM[hubid].Label)</onclick>
         </control>
     </include>
     <variable name="Defs_HomeWidget_Content">
