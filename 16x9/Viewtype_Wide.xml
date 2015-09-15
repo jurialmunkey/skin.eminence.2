@@ -8,7 +8,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <left>side</left>
-            <right>0</right>
+            <right>side</right>
             <top>top</top>
             <height>height</height>
             <include name="Object_Line">
@@ -19,6 +19,7 @@
                 <param name="id" value="55" />
                 <param name="condition" value="Container.Content(tvshows) | Container.Content(movies)" />
             </include>
+            <include>Object_Arrows_Vertical</include>
         </control>
     </include>
     <include name="View_Wide">
@@ -104,7 +105,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <left>side</left>
-            <right>0</right>
+            <right>side</right>
             <top>top</top>
             <height>height</height>
             <include name="Object_Line">
@@ -115,6 +116,7 @@
                 <param name="id" value="56" />
                 <param name="condition" value="Window.IsVisible(MyPics.xml) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
+            <include>Object_Arrows_Vertical</include>
         </control>
     </include>
     <include name="View_Fanart">
@@ -247,7 +249,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <left>side</left>
-            <right>0</right>
+            <right>side</right>
             <top>top</top>
             <height>height</height>
             <include name="Object_Line">

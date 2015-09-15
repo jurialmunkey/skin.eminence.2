@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="Object_Arrows_Vertical">
+        <control type="image">
+            <top>-48</top>
+            <centerleft>50%</centerleft>
+            <width>16</width>
+            <height>16</height>
+            <texture flipy="true" colordiffuse="ListLabel">common/16-arrow-down.png</texture>
+            <visible>Container.HasPrevious</visible>
+        </control>
+        <control type="image">
+            <bottom>-32</bottom>
+            <centerleft>50%</centerleft>
+            <width>16</width>
+            <height>16</height>
+            <texture flipy="false" colordiffuse="ListLabel">common/16-arrow-down.png</texture>
+            <visible>Container.HasNext</visible>
+        </control>
+    </include>
     <include name="Object_BasicViewList">
         <!-- View by -->
         <control type="button" id="2">

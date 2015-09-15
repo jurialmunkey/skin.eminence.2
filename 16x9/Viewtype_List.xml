@@ -19,6 +19,10 @@
                 <param name="id" value="50" />
                 <param name="condition" value="true" />
             </include>
+            <control type="group">
+                <width>listw</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
         </control>
     </include>
 
@@ -38,6 +42,10 @@
                 <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
             </include>
             <include>Object_ExtraInfo</include>
+            <control type="group">
+                <width>1130</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
         </control>
     </include>
 
@@ -62,6 +70,7 @@
                 <param name="name" value="31137" />
             </include>
             <include>Object_Scrollbar</include>
+            <include>Object_Arrows_Vertical</include>
         </control>
     </include>
 
@@ -86,6 +95,7 @@
                 <param name="name" value="537" />
             </include>
             <include>Object_Scrollbar</include>
+            <include>Object_Arrows_Vertical</include>
         </control>
     </include>
     <include name="View_BigList">

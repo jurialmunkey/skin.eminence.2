@@ -165,6 +165,7 @@
                     <param name="label" value="$INFO[ListItem.Label,, ]$VAR[Label_Label3,[COLOR=PosterBorder]-[/COLOR] , ]$INFO[ListItem.Rating,[COLOR=PosterBorder]-[/COLOR] , ]" />
                 </include>
             </control>
+            <include>Object_Arrows_Vertical</include>
         </control>
     </include>
 
