@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Colors_Home">
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff283ba8" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff287ba8" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff28a855" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff28a895" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff3ba828" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff5528a8" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff7ba828" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff9528a8" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffa8283b" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffa8287b" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffa85528" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffa89528" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffe5b535" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffbce535" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff64e535" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff35e55e" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff35e5b6" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff35bce5" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff3564e5" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ff5e35e5" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffb635e5" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffe535bc" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffe53564" />
+        </include>
+        <include name="Object_HomeTile">
+            <param name="tilecolor" value="ffe55e35" />
+        </include>
+    </include>
+</includes>
