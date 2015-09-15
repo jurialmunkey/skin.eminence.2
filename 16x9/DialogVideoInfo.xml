@@ -53,10 +53,73 @@
                         <align>left</align>
                         <font>Font-InfoBox-Title</font>
                         <label>$VAR[Label_Tagline]</label>
-                        <textcolor>MainLabel</textcolor>
+                        <textcolor>SubLabel</textcolor>
+                    </control>
+                    <control type="grouplist">
+                        <top>80</top>
+                        <width>100%</width>
+                        <height>128</height>
+                        <itemgap>pad</itemgap>
+                        <orientation>horizontal</orientation>
+                        <control type="group">
+                            <visible>!IsEmpty(ListItem.Duration)</visible>
+                            <width>210</width>
+                            <height>100%</height>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <font>Font-ListInfo-Small</font>
+                                <label>180</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Duration,, mins]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>260</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(ListItem.MPAA)</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <font>Font-ListInfo-Small</font>
+                                <label>563</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.MPAA]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>350</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <font>Font-ListInfo-Small</font>
+                                <label>31017</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.RatingAndVotes]</label>
+                            </control>
+                        </control>
+                        
                     </control>
                     <!-- Details -->
                     <control type="grouplist">
+                        <top>200</top>
                         <include>Info_DetailsGrouplist</include>
                         <include>Info_Videos</include>
                     </control>
