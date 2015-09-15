@@ -1,6 +1,7 @@
 [B]0.9.3[/B]
 Add indicator to home for submenu
 Up/Down indicators on content
+Seekbar seektime indicator bubble
 
 [B]0.9.2[/B]
 Center homebar when items less than 10
