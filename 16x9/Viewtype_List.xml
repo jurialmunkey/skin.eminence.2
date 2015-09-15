@@ -132,17 +132,16 @@
                         <control type="label">
                             <left>160</left>
                             <right>80</right>
-                            <top>30</top>
+                            <top>28</top>
                             <height>30</height>
-                            <font>Font-ListInfo-Bold</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="label">
                             <left>160</left>
                             <right>80</right>
-                            <bottom>35</bottom>
+                            <bottom>32</bottom>
                             <height>30</height>
-                            <font>Font-ListInfo-Small</font>
+                            <font>Font-ListInfo</font>
                             <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
                         </control>
                     </control>
@@ -177,19 +176,18 @@
                         <control type="label">
                             <left>160</left>
                             <right>80</right>
-                            <top>30</top>
+                            <top>28</top>
                             <height>30</height>
                             <textcolor>Selected</textcolor>
-                            <font>Font-ListInfo-Bold</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="label">
                             <left>160</left>
                             <right>80</right>
-                            <bottom>35</bottom>
+                            <bottom>32</bottom>
                             <height>30</height>
                             <textcolor>Selected</textcolor>
-                            <font>Font-ListInfo-Small</font>
+                            <font>Font-ListInfo</font>
                             <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
                         </control>
                     </control>

@@ -111,6 +111,8 @@
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedTvShows)">$LOCALIZE[31083]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),OnAirTvShows)">$LOCALIZE[31084]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringTodayTvShows)">$LOCALIZE[31085]</value>
+        <value condition="!IsEmpty(Skin.String(home.fallbackwidget)) + StringCompare(Skin.String(home.fallbackwidget.name),$LOCALIZE[31124])">$INFO[Container(9001).ListItem.Property(originaltitle),$LOCALIZE[31125] ,]</value>
+        <value condition="!IsEmpty(Skin.String(home.fallbackwidget)) + !IsEmpty(Skin.String(home.fallbackwidget.name))">$INFO[Skin.String(home.fallbackwidget.name)]</value>
         <value>$LOCALIZE[31054]</value>
     </variable>
 

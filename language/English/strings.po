@@ -466,3 +466,7 @@ msgstr ""
 msgctxt "#31138"
 msgid "Show clock"
 msgstr ""
+
+msgctxt "#31139"
+msgid "Hubs"
+msgstr ""

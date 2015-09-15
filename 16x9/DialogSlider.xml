@@ -39,6 +39,7 @@
 				<top>104</top>
 				<width>720</width>
 				<height>20</height>
+                <texturesliderbar>common/slider_bg_2.png</texturesliderbar>
 			</control>
 
 		</control>

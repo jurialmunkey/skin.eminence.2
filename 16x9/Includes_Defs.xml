@@ -109,6 +109,7 @@
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),OnAirTvShows)">plugin://script.extendedinfo?info=onairtvshows</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringTodayTvShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
         <value condition="!IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
+        <value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
 </includes>

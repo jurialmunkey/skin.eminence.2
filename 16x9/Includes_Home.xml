@@ -88,15 +88,26 @@
                         <font>Font-HomeMenu</font>
                         <textcolor>HomeBarFG</textcolor>
                         <label>$INFO[ListItem.Label]</label>
-                        <animation effect="slide" start="0" end="0,-10" time="100" reversible="false">Focus</animation>
+                        <animation effect="slide" start="0" end="0,-12" time="100" reversible="false">Focus</animation>
                     </control>
                     <control type="image">
-                        <bottom>12</bottom>
+                        <centerleft>85</centerleft>
+                        <bottom>0</bottom>
+                        <width>16</width>
+                        <height>16</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/16-arrow-down.png</texture>
+                        <visible>IntegerGreaterThan(Container(9002).NumItems,0)</visible>
+                        <animation effect="fade" start="0" end="100" time="300" delay="300" reversible="false">Focus</animation>
+                    </control>
+                    <control type="image">
+                        <bottom>16</bottom>
                         <width>170</width>
                         <height>6</height>
                         <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
                         <aspectratio>scale</aspectratio>
                     </control>
+                    
                 </focusedlayout>
 
                 <content>
