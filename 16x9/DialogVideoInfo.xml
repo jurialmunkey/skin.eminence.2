@@ -14,6 +14,7 @@
                 <param name="left" value="0" />
                 <param name="width" value="posterw" />
             </include>
+
             <control type="group">
                 <left>477</left>
                 <right>0</right>
@@ -31,11 +32,14 @@
                         <param name="label" value="206" />
                     </include>
                 </control>
+
                 <control type="image">
                     <width>100%</width>
                     <height>100%</height>
                     <texture colordiffuse="PosterBorder">common/white.png</texture>
                 </control>
+
+
 
                 <!-- Info -->
                 <control type="group">
@@ -49,7 +53,7 @@
                         <align>left</align>
                         <font>Font-InfoBox-Title</font>
                         <label>$VAR[Label_Tagline]</label>
-                        <textcolor>SubLabel</textcolor>
+                        <textcolor>MainLabel</textcolor>
                     </control>
                     <!-- Details -->
                     <control type="grouplist">

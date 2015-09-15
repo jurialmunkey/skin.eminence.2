@@ -38,7 +38,7 @@
                         <align>left</align>
                         <font>Font-InfoBox-Title</font>
                         <label>$INFO[ListItem.Artist]$INFO[ListItem.Album,  -  ,]$INFO[ListItem.Year, (,)]</label>
-                        <textcolor>SubLabel</textcolor>
+                        <textcolor>MainLabel</textcolor>
                     </control>
                     <!-- Details -->
                     <control type="grouplist">

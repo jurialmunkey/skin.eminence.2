@@ -458,6 +458,7 @@
                 <width>100%</width>
                 <height>512</height>
                 <texture colordiffuse="7f000000">common/gradient.png</texture>
+                <visible>Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
             </control>
             <control type="group">
                 <include>Furniture_TopBar_Header</include>

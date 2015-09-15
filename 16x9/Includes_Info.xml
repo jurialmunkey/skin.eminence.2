@@ -41,6 +41,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>21866</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -64,6 +65,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>21863</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -87,6 +89,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>24051</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -110,6 +113,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>20037</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -134,6 +138,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>515</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -157,6 +162,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>146</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -180,6 +186,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>21899</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -203,6 +210,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>175</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -226,6 +234,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>176</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -251,6 +260,7 @@
                 <label>21895</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
             <control type="label">
                 <left>220</left>
@@ -258,6 +268,7 @@
                 <label>$INFO[ListItem.Property(Album_Theme)]</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
         </control>
 
@@ -273,6 +284,7 @@
                 <label>21893</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
             <control type="label">
                 <left>220</left>
@@ -280,6 +292,7 @@
                 <label>$INFO[ListItem.Property(Artist_Born)]</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
         </control>
 
@@ -295,6 +308,7 @@
                 <label>21894</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
             <control type="label">
                 <left>220</left>
@@ -302,6 +316,7 @@
                 <label>$INFO[ListItem.Property(Artist_Formed)]</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
         </control>
 
@@ -317,6 +332,7 @@
                 <label>175</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
             <control type="label">
                 <left>220</left>
@@ -324,6 +340,7 @@
                 <label>$INFO[ListItem.Property(Artist_Mood)]</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
         </control>
 
@@ -339,6 +356,7 @@
                 <label>176</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
             <control type="label">
                 <left>220</left>
@@ -346,6 +364,7 @@
                 <label>$INFO[ListItem.Property(Artist_Style)]</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
         </control>
 
@@ -361,6 +380,7 @@
                 <label>21892</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
             <control type="label">
                 <left>220</left>
@@ -368,6 +388,7 @@
                 <label>$INFO[ListItem.Property(Artist_Instrument)]</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
         </control>
 
@@ -383,6 +404,7 @@
                 <label>21897</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
             <control type="label">
                 <left>220</left>
@@ -390,6 +412,7 @@
                 <label>$INFO[ListItem.Property(Artist_Died)]</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
         </control>
 
@@ -405,6 +428,7 @@
                 <label>652</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
             <control type="label">
                 <left>220</left>
@@ -412,6 +436,7 @@
                 <label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
                 <textcolor>ListLabel</textcolor>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
             </control>
         </control>
     </include>
@@ -426,6 +451,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>557</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -449,6 +475,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>558</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -472,6 +499,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>515</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -495,6 +523,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>20339</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -518,6 +547,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>20417</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -541,6 +571,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>180</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -564,6 +595,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>31017</label>
                 <textcolor>ListLabel</textcolor>
             </control>
@@ -587,6 +619,7 @@
                 <height>36</height>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
+                <textcolor>MainLabel</textcolor>
                 <label>563</label>
                 <textcolor>ListLabel</textcolor>
             </control>

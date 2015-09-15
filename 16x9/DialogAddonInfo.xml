@@ -39,7 +39,7 @@
                         <align>left</align>
                         <font>Font-InfoBox-Title</font>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>SubLabel</textcolor>
+                        <textcolor>MainLabel</textcolor>
                     </control>
                     <!-- Details -->
                     <control type="grouplist">
