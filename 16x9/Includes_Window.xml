@@ -42,7 +42,7 @@
                         <top>pad</top>
                         <bottom>pad</bottom>
                         <pagecontrol>60</pagecontrol>
-                        <preloaditems>1</preloaditems>
+                        <preloaditems>2</preloaditems>
                         <onleft>9501</onleft>
                         <onright>9501</onright>
                         <orientation>vertical</orientation>
@@ -53,7 +53,7 @@
                                 <width>100%</width>
                                 <height>100%</height>
                                 <aspectratio>scale</aspectratio>
-                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
                             </control>
                         </itemlayout>
                         <focusedlayout width="1191" height="670">
@@ -61,7 +61,7 @@
                                 <width>100%</width>
                                 <height>100%</height>
                                 <aspectratio>scale</aspectratio>
-                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
                             </control>
                         </focusedlayout>
                         <content limit="10" target="video">$VAR[Defs_Hub_Widget]</content>

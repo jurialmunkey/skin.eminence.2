@@ -112,7 +112,7 @@
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringTodayTvShows)">$LOCALIZE[31085]</value>
         <value condition="!IsEmpty(Skin.String(home.fallbackwidget)) + StringCompare(Skin.String(home.fallbackwidget.name),$LOCALIZE[31124])">$INFO[Container(9001).ListItem.Property(originaltitle),$LOCALIZE[31125] ,]</value>
         <value condition="!IsEmpty(Skin.String(home.fallbackwidget)) + !IsEmpty(Skin.String(home.fallbackwidget.name))">$INFO[Skin.String(home.fallbackwidget.name)]</value>
-        <value>$LOCALIZE[31054]</value>
+        <value>$LOCALIZE[31095]</value>
     </variable>
 
     <variable name="Label_Hub_WidgetType">
@@ -125,7 +125,7 @@
         <value condition="Window.IsVisible(1107) + !IsEmpty(Skin.String(Widget.1107.Label))">$INFO[Skin.String(Widget.1107.Label)]</value>
         <value condition="Window.IsVisible(1108) + !IsEmpty(Skin.String(Widget.1108.Label))">$INFO[Skin.String(Widget.1108.Label)]</value>
         <value condition="Window.IsVisible(1109) + !IsEmpty(Skin.String(Widget.1109.Label))">$INFO[Skin.String(Widget.1109.Label)]</value>
-        <value>$LOCALIZE[31054]</value>
+        <value>$LOCALIZE[31095]</value>
     </variable>
 
     <variable name="Label_HomeWidget_Label">
@@ -144,7 +144,6 @@
     <variable name="Label_Hub_WidgetLabel">
         <value condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">$INFO[Container(9500).ListItem.TvShowTitle]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Label)">$INFO[Container(9500).ListItem.Label]</value>
-        <value>$LOCALIZE[31095]</value>
     </variable>
     <variable name="Label_Hub_WidgetLabel2">
         <value condition="!IsEmpty(Container(9500).ListItem.Episode)">$INFO[Container(9500).ListItem.Season,,x]$INFO[Container(9500).ListItem.Episode,,. ]$INFO[Container(9500).ListItem.Title]</value>

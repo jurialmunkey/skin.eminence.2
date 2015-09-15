@@ -13,6 +13,7 @@
     <variable name="Image_Thumb">
         <value condition="Container.Content(episodes) | Window.IsVisible(MyPics.xml)">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value>$INFO[ListItem.Icon]</value>
     </variable>
 
     <variable name="Image_Fanart">
@@ -42,7 +43,8 @@
         <value condition="Window.IsVisible(home) | Skin.HasSetting(background.hidefanart)">special://skin/extras/backgrounds/home.jpg</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
-        <value>special://skin/extras/backgrounds/home.jpg</value>
+        <value condition="Window.IsVisible(home)">special://skin/extras/backgrounds/home.jpg</value>
+        <value>common/black.png</value>
     </variable>
 
     <variable name="Image_Indicator">
