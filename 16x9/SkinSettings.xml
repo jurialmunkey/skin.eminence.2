@@ -191,19 +191,8 @@
                     </control>
 
                     <!-- HEADER -->
-                    <!-- Disable Weather -->
-                    <control type="radiobutton" id="8701">
-                        <width>100%</width>
-                        <label>31115</label>
-                        <radioposx>1350</radioposx>
-                        <onclick>Skin.ToggleSetting(disable.weatherheader)</onclick>
-                        <selected>!Skin.HasSetting(disable.weatherheader)</selected>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
-                    </control>
-
                     <!-- Disable Clock -->
-                    <control type="radiobutton" id="8702">
+                    <control type="radiobutton" id="8701">
                         <width>100%</width>
                         <label>31138</label>
                         <radioposx>1350</radioposx>
@@ -212,6 +201,19 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8007)</visible>
                     </control>
+                    <!-- Disable Weather -->
+                    <control type="radiobutton" id="8702">
+                        <width>100%</width>
+                        <label>31115</label>
+                        <radioposx>1350</radioposx>
+                        <onclick>Skin.ToggleSetting(disable.weatherheader)</onclick>
+                        <selected>!Skin.HasSetting(disable.weatherheader)</selected>
+                        <enable>!Skin.HasSetting(disable.clockheader)</enable>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                    </control>
+
+                    
                     
                     <!-- Match header tile to highlight color -->
                     <control type="radiobutton" id="8709">
@@ -252,7 +254,7 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
                     </control>
-                    <!-- Reset Colors -->
+                    <!-- Tile Colors -->
                     <control type="radiobutton" id="8904">
                         <width>100%</width>
                         <label>31129</label>
@@ -260,6 +262,16 @@
                         <onclick>Skin.ToggleSetting(home.tilecolor)</onclick>
                         <selected>Skin.HasSetting(home.tilecolor)</selected>
                         <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                    </control>
+                    <control type="radiobutton" id="8905">
+                        <width>100%</width>
+                        <label>31140</label>
+                        <radioposx>1350</radioposx>
+                        <onclick>Skin.ToggleSetting(home.tilecolor.nofocus)</onclick>
+                        <selected>Skin.HasSetting(home.tilecolor.nofocus)</selected>
+                        <include>Defs_OptionButton</include>
+                        <enable>Skin.HasSetting(home.tilecolor)</enable>
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
                     </control>
                 </control>

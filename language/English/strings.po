@@ -470,3 +470,7 @@ msgstr ""
 msgctxt "#31139"
 msgid "Hubs"
 msgstr ""
+
+msgctxt "#31140"
+msgid "Show tile colour on unfocused tiles"
+msgstr ""
