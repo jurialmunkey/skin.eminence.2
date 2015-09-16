@@ -47,10 +47,10 @@
         <value condition="Window.IsVisible(home) + StringCompare(Container(9000).ListItem.Property(widgetType),picture) + !IsEmpty(Container(9001).ListItem.Icon)">$INFO[Container(9001).ListItem.Icon]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Container(9001).ListItem.Art(fanart))">$INFO[Container(9001).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Container(9000).ListItem.Property(Background))">$INFO[Container(9000).ListItem.Property(Background)]</value>
-        <value condition="Window.IsVisible(home) | Skin.HasSetting(background.hidefanart)">special://skin/extras/backgrounds/home.jpg</value>
+        <value condition="Window.IsVisible(home)">special://skin/extras/backgrounds/home.jpg</value>
+        <value condition="Skin.HasSetting(background.hidefanart)">common/black.png</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="Window.IsVisible(home)">special://skin/extras/backgrounds/home.jpg</value>
         <value>common/black.png</value>
     </variable>
 
