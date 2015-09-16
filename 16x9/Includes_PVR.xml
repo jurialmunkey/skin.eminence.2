@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <!-- PVR LIST -->
+    <include name="PVR_List">
+        <control type="group">
+            <include>Animation_Common</include>
+            <visible>Control.IsVisible(50)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <control type="group">
+                <width>1140</width>
+                <include name="Object_Line">
+                    <param name="width" value="1130" />
+                    <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+                </include>
+                <control type="panel" id="50">
+                    <width>1140</width>
+                    <height>700</height>
+                    <onup>50</onup>
+                    <ondown>50</ondown>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <onleft>60</onleft>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <orientation>vertical</orientation>
+                    <viewtype>list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <itemlayout height="140" width="1140">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="0fffffff">common/selected.png</texture>
+                                <aspectratio>scale</aspectratio>
+                                <visible>ListItem.IsPlaying</visible>
+                            </control>
+                            <control type="image">
+                                <left>side</left>
+                                <width>110</width>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="progress">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>16</bottom>
+                                <height>8</height>
+                                <reveal>true</reveal>
+                                <info>ListItem.Progress</info>
+                                <lefttexture colordiffuse="5fededed">osd/progress-end.png</lefttexture>
+                                <midtexture colordiffuse="5fededed">osd/progress-end.png</midtexture>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <top>15</top>
+                                <height>30</height>
+                                <selectedcolor>ListLabel</selectedcolor>
+                                <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>45</bottom>
+                                <height>30</height>
+                                <font>Font-ListInfo</font>
+                                <selectedcolor>ListLabel</selectedcolor>
+                                <label>$INFO[ListItem.Title]</label>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>45</bottom>
+                                <height>30</height>
+                                <align>right</align>
+                                <font>Font-OSD</font>
+                                <selectedcolor>ListLabel</selectedcolor>
+                                <label>$INFO[ListItem.NextTitle,$LOCALIZE[31141]... ,]</label>
+                            </control>
+                        </control>
+                    </itemlayout>
+
+                    <focusedlayout height="140" width="1140">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="1fffffff">common/selected.png</texture>
+                                <aspectratio>scale</aspectratio>
+                                <visible>ListItem.IsPlaying</visible>
+                            </control>
+                            <control type="image">
+                                <left>side</left>
+                                <width>110</width>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="progress">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>16</bottom>
+                                <height>8</height>
+                                <reveal>true</reveal>
+                                <info>ListItem.Progress</info>
+                                <lefttexture colordiffuse="Selected">osd/progress-end.png</lefttexture>
+                                <midtexture colordiffuse="Selected">osd/progress-end.png</midtexture>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <top>15</top>
+                                <height>30</height>
+                                <textcolor>Selected</textcolor>
+                                <selectedcolor>Selected</selectedcolor>
+                                <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>45</bottom>
+                                <height>30</height>
+                                <textcolor>Selected</textcolor>
+                                <selectedcolor>Selected</selectedcolor>
+                                <font>Font-ListInfo</font>
+                                <label>$INFO[ListItem.Title]</label>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>45</bottom>
+                                <height>30</height>
+                                <align>right</align>
+                                <font>Font-OSD</font>
+                                <selectedcolor>Selected</selectedcolor>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.NextTitle,$LOCALIZE[31141]... ,]</label>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <include>Object_Scrollbar</include>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+            <include>PVR_InfoBox</include>
+        </control>
+    </include>
+
+    <!-- PVR SIPLE LIST -->
+    <include name="PVR_SimpleList">
+        <control type="group">
+            <include>Animation_Common</include>
+            <visible>Control.IsVisible(50)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <control type="group">
+                <width>1140</width>
+                <include name="Object_Line">
+                    <param name="width" value="1130" />
+                    <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+                </include>
+                <control type="panel" id="50">
+                    <width>1140</width>
+                    <height>700</height>
+                    <onup>50</onup>
+                    <ondown>50</ondown>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <onleft>60</onleft>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <orientation>vertical</orientation>
+                    <viewtype>list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <itemlayout height="140" width="1140">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>side</left>
+                                <width>110</width>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <top>30</top>
+                                <height>30</height>
+                                <selectedcolor>ListLabel</selectedcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>30</bottom>
+                                <height>30</height>
+                                <font>Font-ListInfo</font>
+                                <selectedcolor>ListLabel</selectedcolor>
+                                <label>$INFO[ListItem.Label2]</label>
+                            </control>
+                            <control type="image">
+                                <right>30</right>
+                                <centertop>65</centertop>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture>$VAR[Image_Indicator]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </itemlayout>
+
+                    <focusedlayout height="140" width="1140">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>side</left>
+                                <width>110</width>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <top>30</top>
+                                <height>30</height>
+                                <selectedcolor>Selected</selectedcolor>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <right>side</right>
+                                <bottom>30</bottom>
+                                <height>30</height>
+                                <font>Font-ListInfo</font>
+                                <selectedcolor>Selected</selectedcolor>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Label2]</label>
+                            </control>
+                            <control type="image">
+                                <right>30</right>
+                                <centertop>65</centertop>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture>$VAR[Image_Indicator]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <include>Object_Scrollbar</include>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+            <include>PVR_InfoBox</include>
+        </control>
+    </include>
+
+    <include name="PVR_InfoBox">
+        <control type="group">
+            <left>1140</left>
+            <width>740</width>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="740" />
+                <param name="label" value="19033" />
+            </include>
+            <control type="image">
+                <width>100%</width>
+                <height>100%</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+            <control type="grouplist">
+                <usecontrolcoords>true</usecontrolcoords>
+                <itemgap>pad</itemgap>
+                <orientation>vertical</orientation>
+                <left>pad</left>
+                <right>pad</right>
+                <top>pad</top>
+                <bottom>pad</bottom>
+                <control type="image">
+                    <width>100%</width>
+                    <height>405</height>
+                    <aspectratio>keep</aspectratio>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$VAR[Image_PVRThumb]</texture>
+                </control>
+                <control type="videowindow">
+                    <top>-415</top>
+                    <width>100%</width>
+                    <height>405</height>
+                    <visible>Player.HasVideo</visible>
+                </control>
+                <control type="label">
+                    <top>pad</top>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <height>36</height>
+                    <font>Font-InfoBox-Title</font>
+                    <label>$INFO[ListItem.Title]</label>
+                </control>
+                <control type="label">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <height>32</height>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]</label>
+                </control>
+                <control type="textbox">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <height>114</height>
+                    <font>Font-ListInfo</font>
+                    <align>left</align>
+                    <label>$VAR[Label_Plot]</label>
+                    <visible>!IsEmpty(ListItem.Genre)</visible>
+                </control>
+                <control type="textbox">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <height>154</height>
+                    <font>Font-ListInfo</font>
+                    <align>left</align>
+                    <label>$VAR[Label_Plot]</label>
+                    <visible>IsEmpty(ListItem.Genre)</visible>
+                </control>
+                <control type="label">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Font-OSD</font>
+                    <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,  -  ,]</label>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="PVR_Menu">
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <include>Dialog_Top_GroupList</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <include>Object_BasicViewList</include>
+                <!-- Groups -->
+                <control type="button" id="28">
+                    <include>Defs_OptionButton</include>
+                    <label>103</label>
+                    <visible>Control.IsEnabled(28)</visible>
+                </control>
+                <!-- Filter -->
+                <control type="radiobutton" id="31">
+                    <include>Defs_OptionButton</include>
+                    <label>587</label>
+                    <selected>Container.Filtered</selected>
+                    <visible>Control.IsEnabled(31) + Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
+
+</includes>

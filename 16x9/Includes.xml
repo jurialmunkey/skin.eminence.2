@@ -11,6 +11,7 @@
     <include file="Includes_Image.xml" />
     <include file="Includes_Label.xml" />
     <include file="Includes_Object.xml" />
+    <include file="Includes_PVR.xml" />
     <include file="Includes_Window.xml" />
     <include file="script-skinshortcuts-includes.xml"/>
     <include file="Viewtype_List.xml" />

@@ -144,11 +144,13 @@
         <value>PosterBorder</value>
     </variable>
     <variable name="Furniture_TopBar_Header_MainLabel">
+        <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
         <value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
-        <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
-        <value condition="Window.IsVisible(DialogVideoInfo.xml)">$INFO[ListItem.Title]</value>
-        <value condition="Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">$LOCALIZE[19033]</value>
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">$LOCALIZE[19033]</value>
+        <value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
+        <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
+        <value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>
         <value condition="!IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
         <value condition="Window.IsVisible(home)">$LOCALIZE[10000]</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
@@ -159,7 +161,7 @@
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
         <value condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[31105][/COLOR] $LOCALIZE[31109]</value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml) + [Container.Content(seasons) | Container.Content(episodes)]">[COLOR=$VAR[HighlightColor2]]$INFO[ListItem.TvShowTitle][/COLOR]$INFO[ListItem.Year,  ,]</value>
-        <value condition="Window.IsVisible(DialogVideoInfo.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR]$INFO[ListItem.Year,  ,]</value>
+        <value condition="Window.IsVisible(DialogVideoInfo.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Year,  ,]</value>
         <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
         <value>[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
     </variable>
@@ -459,7 +461,6 @@
                 <width>100%</width>
                 <height>512</height>
                 <texture colordiffuse="7f000000">common/gradient.png</texture>
-                <visible>Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
             </control>
             <control type="group">
                 <include>Furniture_TopBar_Header</include>

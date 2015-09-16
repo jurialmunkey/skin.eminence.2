@@ -7,7 +7,8 @@
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
-        <include>Viewtype_PVR</include>
+        <include>PVR_SimpleList</include>
+        <include>PVR_Menu</include>
     </controls>
 
 </window>

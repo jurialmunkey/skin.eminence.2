@@ -8,200 +8,231 @@
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
-        <control type="group">
-            <left>side</left>
-            <right>side</right>
-            <top>top</top>
-            <height>height</height>
-            <include>Animation_Common</include>
-            <control type="epggrid" id="10" description="EPG">     
-                <left>0</left>
-                <top>-60</top>
-                <width>1890</width>
-                <height>700</height>
-                <onback>28</onback>
-                <viewtype label="19069">list</viewtype>
-                <progresstexture border="5" colordiffuse="bf777777">pvr/progressline.png</progresstexture>
-                <scrolltime tween="quadratic">300</scrolltime>
-                <timeblocks>40</timeblocks>
-                <rulerunit>6</rulerunit>
-                <rulerlayout height="70" width="286">
-                    <control type="label" id="2">
-                        <posx>10</posx>
-                        <posy>30</posy>
-                        <width>200</width>
-                        <align>left</align>
-                        <aligny>top</aligny>
-                        <font>Font-ListInfo-Small</font>
-                        <label>$INFO[ListItem.Label]</label>
-                        <textcolor>ListLable</textcolor>
+        <control type="group" id="50">
+            <control type="group">
+                <left>side</left>
+                <right>side</right>
+                <top>top</top>
+                <height>height</height>
+                <include>Animation_Common</include>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="epggrid" id="10" description="EPG">     
+                    <left>0</left>
+                    <top>-70</top>
+                    <width>1880</width>
+                    <height>560</height>
+                    <onback>9000</onback>
+                    <viewtype label="19069">list</viewtype>
+                    <progresstexture border="5" colordiffuse="bf777777">pvr/progressline.png</progresstexture>
+                    <scrolltime tween="quadratic">300</scrolltime>
+                    <timeblocks>40</timeblocks>
+                    <rulerunit>6</rulerunit>
+                    <rulerlayout height="70" width="284">
+                        <control type="label" id="2">
+                            <posx>0</posx>
+                            <posy>30</posy>
+                            <width>200</width>
+                            <align>left</align>
+                            <aligny>top</aligny>
+                            <font>Font-OSD</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>ListLabel</textcolor>
+                        </control>
+                    </rulerlayout>
+                    <channellayout height="70" width="460">
+                        <control type="image" id="2">
+                            <width>100%</width>
+                            <height>67</height>
+                            <texture>common/white.png</texture>
+                            <colordiffuse>PosterBorder</colordiffuse>
+                        </control>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>67</height>
+                            <texture colordiffuse="0fffffff">common/selected.png</texture>
+                            <aspectratio aligny="top">center</aspectratio>
+                            <visible>ListItem.IsPlaying</visible>
+                        </control>
+                        <control type="label">
+                            <posx>90</posx>
+                            <width>300</width>
+                            <aligny>center</aligny>
+                            <height>67</height>
+                            <textcolor>ListLabel</textcolor>
+                            <label>$INFO[ListItem.ChannelName]</label>
+                        </control>
+                        <control type="label">
+                            <centerleft>45</centerleft>
+                            <width>90</width>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <height>67</height>
+                            <textcolor>ListLabel</textcolor>
+                            <label>$INFO[ListItem.ChannelNumber]</label>
+                        </control>
+                        <control type="image">
+                            <top>10</top>
+                            <bottom>10</bottom>
+                            <right>10</right>
+                            <width>50</width>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                            <aspectratio aligny="center" align="right">keep</aspectratio>
+                        </control>
+                    </channellayout>
+                    <focusedchannellayout height="70" width="460">
+                        
+                        <control type="image">
+                            <width>100%</width>
+                            <height>67</height>
+                            <texture border="12" colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>67</height>
+                            <texture colordiffuse="1fffffff">common/selected.png</texture>
+                            <aspectratio aligny="top">center</aspectratio>
+                            <visible>ListItem.IsPlaying</visible>
+                        </control>
+                        <control type="label">
+                            <posx>90</posx>
+                            <width>300</width>
+                            <aligny>center</aligny>
+                            <height>67</height>
+                            <selectedcolor>Selected</selectedcolor>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.ChannelName]</label>
+                        </control>
+                        <control type="label">
+                            <centerleft>45</centerleft>
+                            <width>90</width>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <selectedcolor>Selected</selectedcolor>
+                            <height>67</height>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.ChannelNumber]</label>
+                        </control>
+                        <control type="image">
+                            <top>10</top>
+                            <bottom>10</bottom>
+                            <right>10</right>
+                            <width>50</width>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                            <aspectratio aligny="center" align="right">keep</aspectratio>
+                        </control>
+                    </focusedchannellayout>    
+                    <itemlayout height="70" width="284">
+                        
+                        <control type="image" id="2">
+                            <width>280</width>
+                            <height>67</height>
+                            <texture border="5">common/white.png</texture>
+                            <colordiffuse>PosterBorder</colordiffuse>
+                        </control> 
+                        <control type="image" id="2">
+                            <width>280</width>
+                            <height>67</height>
+                            <texture>pvrgenre/$INFO[ListItem.Property(GenreType)].png</texture>
+                            <aspectratio>scale</aspectratio>
+                            <colordiffuse>5fffffff</colordiffuse>
+                        </control> 
+                        <control type="image">
+                            <posy>6</posy>
+                            <width>52</width>
+                            <height>52</height>
+                            <texture>special://skin/extras/icons/timer.png</texture>
+                            <colordiffuse>ListLabel</colordiffuse>
+                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+                        </control>   
+                        <control type="label" id="1">
+                            <posx>0</posx>
+                            <height>66</height>
+                            <width>285</width>
+                            <textoffsetx>50</textoffsetx>
+                            <textcolor>ListLabel</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+                        </control>
+                        <control type="label" id="1">
+                            <posx>15</posx>
+                            <width>226</width>
+                            <height>67</height>
+                            <textcolor>ListLabel</textcolor>
+                            <textoffsetx>0</textoffsetx>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="70" width="284">
+        
+                        <control type="image" id="2">
+                            <width>280</width>
+                            <height>67</height>
+                            <texture border="5">common/white.png</texture>
+                            <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+                        </control> 
+                        
+                        <control type="image">
+                            <posy>6</posy>
+                            <width>52</width>
+                            <height>52</height>
+                            <texture>special://skin/extras/icons/timer.png</texture>
+                            <colordiffuse>Selected</colordiffuse>
+                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+                        </control>   
+                        <control type="label" id="1">
+                            <posx>0</posx>
+                            <height>66</height>
+                            <width>285</width>
+                            <textoffsetx>50</textoffsetx>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+                        </control>
+                        <control type="label" id="1">
+                            <posx>15</posx>
+                            <width>226</width>
+                            <height>67</height>
+                            <textcolor>Selected</textcolor>
+                            <textoffsetx>0</textoffsetx>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                    </focusedlayout>
+                
+                </control>
+                <control type="group">
+                    <bottom>0</bottom>
+                    <height>180</height>
+                    <left>side</left>
+                    <right>side</right>
+                    <control type="grouplist">
+                        <orientation>vertical</orientation>
+                        <itemgap>pad</itemgap>
+                        <control type="label">
+                            <height>36</height>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[ListItem.Title]</label>
+                        </control>
+                        <control type="label">
+                            <height>36</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]$INFO[ListItem.StartTime,   ,]$INFO[ListItem.EndTime,  -  ,]</label>
+                        </control>
+                        <control type="textbox">
+                            <height>76</height>
+                            <font>Font-ListInfo</font>
+                            <label>$INFO[ListItem.Plot]</label>
+                        </control>
                     </control>
-                </rulerlayout>
-                <channellayout height="70" width="460">
-                    <control type="image" id="2">
-                        <width>100%</width>
-                        <height>67</height>
-                        <texture>common/white.png</texture>
-                        <colordiffuse>PosterBorder</colordiffuse>
-                    </control> 
-                    <control type="image">
-                        <width>100%</width>
-                        <height>100%</height>
-                        <texture>common/selected.png</texture>
-                        <aspectratio aligny="top">center</aspectratio>
-                        <animation effect="fade" start="100" end="10" condition="true">Conditional</animation>
-                        <visible>ListItem.IsPlaying</visible>
-                    </control>
-                    <control type="label">
-                        <posx>90</posx>
-                        <width>300</width>
-                        <aligny>center</aligny>
-                        <height>67</height>
-                        <textcolor>ListLabel</textcolor>
-                        <label>$INFO[ListItem.ChannelName]</label>
-                    </control>
-                    <control type="label">
-                        <centerleft>45</centerleft>
-                        <width>90</width>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <height>67</height>
-                        <textcolor>ListLabel</textcolor>
-                        <label>$INFO[ListItem.ChannelNumber]</label>
-                    </control>
-                    <control type="image">
-                        <top>10</top>
-                        <bottom>10</bottom>
-                        <right>10</right>
-                        <width>50</width>
-                        <texture>$INFO[ListItem.Icon]</texture>
-                        <aspectratio aligny="center" align="right">keep</aspectratio>
-                    </control>
-                </channellayout>
-                <focusedchannellayout height="70" width="460">
-                    
-                    <control type="image">
-                        <width>100%</width>
-                        <height>67</height>
-                        <texture border="12" colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-                    </control>
-                    <control type="image">
-                        <width>100%</width>
-                        <height>100%</height>
-                        <texture>common/selected.png</texture>
-                        <aspectratio aligny="top">center</aspectratio>
-                        <animation effect="fade" start="100" end="20" condition="true">Conditional</animation>
-                        <visible>ListItem.IsPlaying</visible>
-                    </control>
-                    <control type="label">
-                        <posx>90</posx>
-                        <width>300</width>
-                        <aligny>center</aligny>
-                        <height>67</height>
-                        <selectedcolor>Selected</selectedcolor>
-                        <textcolor>Selected</textcolor>
-                        <label>$INFO[ListItem.ChannelName]</label>
-                    </control>
-                    <control type="label">
-                        <centerleft>45</centerleft>
-                        <width>90</width>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <selectedcolor>Selected</selectedcolor>
-                        <height>67</height>
-                        <textcolor>Selected</textcolor>
-                        <label>$INFO[ListItem.ChannelNumber]</label>
-                    </control>
-                    <control type="image">
-                        <top>10</top>
-                        <bottom>10</bottom>
-                        <right>10</right>
-                        <width>50</width>
-                        <texture>$INFO[ListItem.Icon]</texture>
-                        <aspectratio aligny="center" align="right">keep</aspectratio>
-                    </control>
-                </focusedchannellayout>    
-                <itemlayout height="70" width="286">
-                    
-                    <control type="image" id="2">
-                        <width>280</width>
-                        <height>67</height>
-                        <texture border="5">common/white.png</texture>
-                        <colordiffuse>PosterBorder</colordiffuse>
-                    </control> 
-                    <control type="image" id="2">
-                        <width>280</width>
-                        <height>67</height>
-                        <texture>pvrgenre/$INFO[ListItem.Property(GenreType)].png</texture>
-                        <aspectratio>scale</aspectratio>
-                        <colordiffuse>5fffffff</colordiffuse>
-                    </control> 
-                    <control type="image">
-                        <posy>6</posy>
-                        <width>52</width>
-                        <height>52</height>
-                        <texture>special://skin/extras/icons/timer.png</texture>
-                        <colordiffuse>ListLabel</colordiffuse>
-                        <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
-                    </control>   
-                    <control type="label" id="1">
-                        <posx>0</posx>
-                        <height>66</height>
-                        <width>285</width>
-                        <textoffsetx>50</textoffsetx>
-                        <textcolor>ListLabel</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                        <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
-                    </control>
-                    <control type="label" id="1">
-                        <posx>15</posx>
-                        <width>226</width>
-                        <height>67</height>
-                        <textcolor>ListLabel</textcolor>
-                        <textoffsetx>0</textoffsetx>
-                        <label>$INFO[ListItem.Label]</label>
-                        <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="70" width="286">
-    
-                    <control type="image" id="2">
-                        <width>280</width>
-                        <height>67</height>
-                        <texture border="5">common/white.png</texture>
-                        <colordiffuse>$VAR[HighlightColor]</colordiffuse>
-                    </control> 
-                    
-                    <control type="image">
-                        <posy>6</posy>
-                        <width>52</width>
-                        <height>52</height>
-                        <texture>special://skin/extras/icons/timer.png</texture>
-                        <colordiffuse>Selected</colordiffuse>
-                        <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
-                    </control>   
-                    <control type="label" id="1">
-                        <posx>0</posx>
-                        <height>66</height>
-                        <width>285</width>
-                        <textoffsetx>50</textoffsetx>
-                        <textcolor>Selected</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
-                        <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
-                    </control>
-                    <control type="label" id="1">
-                        <posx>15</posx>
-                        <width>226</width>
-                        <height>67</height>
-                        <textcolor>Selected</textcolor>
-                        <textoffsetx>0</textoffsetx>
-                        <label>$INFO[ListItem.Label]</label>
-                        <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
-                    </control>
-                </focusedlayout>
-            
+                </control>
             </control>
         </control>
+        <include>PVR_Menu</include>
 
     </controls>
 
