@@ -1,79 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
+    <onload>SendClick(12)</onload>
+    <onload>Close</onload>
     <controls>
-        <control type="group">
-            <include>Animation_Common_Info</include>
-            <left>side</left>
-            <right>side</right>
-            <top>top</top>
-            <height>height</height>
-            <include name="Object_Poster">
-                <param name="left" value="0" />
-                <param name="width" value="posterw" />
-            </include>
-            <control type="group">
-                <left>477</left>
-                <right>0</right>
-                <include name="Object_Line">
-                    <param name="width" value="listw" />
-                    <param name="label" value="19033" />
-                </include>
-                <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
-
-                <!-- Info -->
-                <control type="group">
-                    <left>30</left>
-                    <right>30</right>
-                    <top>30</top>
-                    <control type="label">
-                        <width>100%</width>
-                        <height>36</height>
-                        <align>left</align>
-                        <font>Font-InfoBox-Title</font>
-                        <label>$INFO[ListItem.Artist]$INFO[ListItem.Album,  -  ,]$INFO[ListItem.Year, (,)]</label>
-                        <textcolor>MainLabel</textcolor>
-                    </control>
-                    <!-- Details -->
-                    <control type="grouplist">
-                        <include>Info_DetailsGrouplist</include>
-                        <include>Info_ArtistAlbum</include>
-                    </control>
-                </control>
-
-                <!-- Plot -->
-                <control type="textbox">
-                    <include>Info_Textbox</include>
-                    <label>$INFO[ListItem.Property(Artist_Description)]$INFO[ListItem.Property(Album_Description)]</label>
-                </control>
-
-                <!-- Button grouplist -->
-                <control type="grouplist" id="9000">
-                    <include>Info_ButtonGrouplist</include>
-                    <!-- Youtube Button -->
-                    <control type="button" id="9001">
-                        <width>338</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <label>31108</label>
-                        <onclick>RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Artist],header=Youtube - $INFO[ListItem.Artist])</onclick>
-                    </control>
-                    <!-- Get Thumb Button -->
-                    <control type="button" id="13">
-                        <width>338</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <label>13511</label>
-                    </control>
-                </control>
-            </control>
-
-        </control>
-
+        <control type="button" id="12"><visible allowhiddenfocus="true">false</visible></control>
     </controls>
 
 </window>
