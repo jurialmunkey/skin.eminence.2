@@ -2,7 +2,6 @@
 <window>
     <defaultcontrol always="true">7</defaultcontrol>
     <controls>
-        <include>GlobalOverlay</include>
         <control type="group">
             <top>210</top>
             <bottom>133</bottom>

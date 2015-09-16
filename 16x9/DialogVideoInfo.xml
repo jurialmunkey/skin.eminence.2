@@ -4,7 +4,6 @@
     <onload>ClearProperty(extinfo,home)</onload>
     <controls>
 
-        <include>GlobalOverlay</include>
         <control type="group">
             <top>210</top>
             <height>780</height>

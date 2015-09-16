@@ -31,6 +31,19 @@
             <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
         </control>
     </include>
+    <include name="GlobalInfoOverlay">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>100%</width>
+            <height>100%</height>
+            <texture colordiffuse="9f000000">common/white.png</texture>
+            <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+            <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+            <visible>Window.IsVisible(DialogPVRRecordingInfo.xml) | Window.IsVisible(DialogPVRGuideInfo.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogAlbumInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+        </control>
+    </include>
 
     <!-- VARS -->
     <variable name="HighlightColor">

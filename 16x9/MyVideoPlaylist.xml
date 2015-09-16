@@ -8,7 +8,6 @@
     <controls>
         <!-- Background -->
         <include>Furniture_Background</include>
-        <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
 
         <!-- Main group -->
@@ -17,6 +16,8 @@
             <include>Viewtype_List</include>
             <include>Viewtype_BigList</include>
         </control>
+
+        <include>Furniture_TopBar</include>
 
         <!-- Menu -->
         <control type="group">

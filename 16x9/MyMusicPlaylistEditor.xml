@@ -7,7 +7,6 @@
 
         <!-- Background -->
         <include>Furniture_Background</include>
-        <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
 
         <!-- Main group -->
@@ -51,6 +50,9 @@
             </control>
 
         </control>
+
+        <include>Furniture_TopBar</include>
+        
 
         <!-- Menu -->
         <control type="group">
