@@ -27,23 +27,14 @@
                 <left>497</left>
                 <right>side</right>
                 <control type="group">
-                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
                     <include name="Object_Line">
                         <param name="width" value="1150" />
-                        <param name="label" value="207" />
-                    </include>
-                </control>
-                <control type="group">
-                    <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
-                    <include name="Object_Line">
-                        <param name="width" value="1150" />
-                        <param name="label" value="206" />
+                        <param name="label" value="19033" />
                     </include>
                 </control>
 
                 <!-- INFO -->
                 <control type="grouplist">
-                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
                     <usecontrolcoords>true</usecontrolcoords>
                     <itemgap>pad</itemgap>
                     <orientation>vertical</orientation>
@@ -66,15 +57,6 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Property(Addon.Type)][/COLOR][/UPPERCASE]</label>
                     </control>
-                    <!-- <control type="label">
-                        <top>-42</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[ListItem.RatingAndVotes]</label>
-                    </control> -->
                     <control type="textbox">
                         <top>pad</top>
                         <left>pad</left>
@@ -165,7 +147,6 @@
                     </control>
                 </control>
                 <control type="grouplist">
-                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
                     <bottom>74</bottom>
                     <left>-20</left>
                     <right>-20</right>
@@ -213,26 +194,6 @@
                             <label>$INFO[ListItem.Property(Addon.Status)]</label>
                         </control>
                     </control>
-                    <!-- <control type="group">
-                        <width>370</width>
-                        <height>100%</height>
-                        <visible>!IsEmpty(ListItem.Year)</visible>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>345</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Year]</label>
-                        </control> -->
-                    </control>
                     
                 </control>
                 <!-- BUTTONS -->
@@ -244,13 +205,11 @@
                     <align>left</align>
                     <itemgap>pad</itemgap>
                     <orientation>horizontal</orientation>
-                    <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
                     
                     <!-- Launch Addon Button -->
                     <control type="button" id="12">
                         <width>290</width>
                         <label>518</label>
-                        <visible>Control.IsEnabled(12)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                     </control>
@@ -258,7 +217,6 @@
                     <control type="button" id="9">
                         <width>290</width>
                         <label>24020</label>
-                        <visible>Control.IsEnabled(9)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                     </control>
@@ -266,7 +224,6 @@
                     <control type="button" id="8">
                         <width>290</width>
                         <label>24069</label>
-                        <visible>Control.IsEnabled(8)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                     </control>
@@ -274,7 +231,6 @@
                     <control type="button" id="6">
                         <width>290</width>
                         <label>24022</label>
-                        <visible>Control.IsEnabled(6)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                     </control>
@@ -282,7 +238,6 @@
                     <control type="button" id="7">
                         <width>290</width>
                         <label>24021</label>
-                        <visible>Control.IsEnabled(7)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                     </control>
@@ -290,7 +245,6 @@
                     <control type="button" id="11">
                         <width>290</width>
                         <label>24048</label>
-                        <visible>Control.IsEnabled(11)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                     </control>
@@ -298,7 +252,6 @@
                     <control type="button" id="10">
                         <width>290</width>
                         <label>24036</label>
-                        <visible>Control.IsEnabled(10)</visible>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                     </control>
