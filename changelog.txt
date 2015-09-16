@@ -1,5 +1,6 @@
 [B]0.9.5[/B]
 Begin work on PVR
+New Info Screens
 
 [B]0.9.4[/B]
 Update hub widget to show type at top and name in window

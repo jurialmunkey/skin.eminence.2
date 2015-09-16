@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Info_DetailsGrouplist">
-        <top>76</top>
+        <top>side</top>
         <width>100%</width>
         <height>336</height>
         <itemgap>12</itemgap>

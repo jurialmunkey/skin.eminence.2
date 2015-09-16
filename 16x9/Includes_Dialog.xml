@@ -328,6 +328,7 @@
         <param name="pad" default="0" />
         <param name="bottom" default="side" />
         <param name="visible" default="true" />
+        <param name="backpanel" default="true" />
         <param name="type" default="panel" />
         <definition>
             <control type="$PARAM[type]" id="$PARAM[id]">
@@ -350,6 +351,7 @@
                         <width>100%</width>
                         <height>100%</height>
                         <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        <visible>$PARAM[backpanel]</visible>
                     </control>
                     <control type="group">
                         <left>$PARAM[pad]</left>
