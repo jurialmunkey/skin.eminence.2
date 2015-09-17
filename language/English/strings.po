@@ -486,3 +486,7 @@ msgstr ""
 msgctxt "#31143"
 msgid "Media Info 2"
 msgstr ""
+
+msgctxt "#31144"
+msgid "Player Controls"
+msgstr ""
