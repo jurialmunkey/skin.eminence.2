@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- mediafilter -->
-	<defaultcontrol always="true">5</defaultcontrol>
-	<controls>
+    <defaultcontrol always="true">5</defaultcontrol>
+    <controls>
 
         <control type="group">
             <top>210</top>
@@ -89,6 +88,6 @@
 
         
 
-	</controls>
+    </controls>
 
 </window>

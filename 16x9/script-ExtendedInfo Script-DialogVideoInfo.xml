@@ -18,9 +18,7 @@
             <centerleft>50%</centerleft>
             <width>1717</width>
             <include>Animation_SlideIn</include>
-            <include>Animation_FadeOut</include>
-            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
-            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <!-- <include>Animation_FadeOut</include> -->
             <include>Dialog_Background</include>
             <control type="group">
                 <top>70</top>
@@ -36,7 +34,7 @@
                 <right>side</right>
                 <control type="group">
                     <include name="Object_Line">
-                        <param name="width" value="1150" />
+                        <param name="width" value="1200" />
                         <param name="label" value="$VAR[Label_ExtendedInfo_InfoLine]" />
                     </include>
                 </control>
@@ -79,7 +77,7 @@
                         <top>pad</top>
                         <left>pad</left>
                         <right>pad</right>
-                        <height max="228">auto</height>
+                        <height max="152">auto</height>
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$INFO[Window.Property(movie.Plot)]</label>
@@ -158,6 +156,30 @@
                                     <height>36</height>
                                     <font>Font-ListInfo-Bold</font>
                                     <label>$INFO[Window.Property(movie.Studio)]</label>
+                                    <textcolor>SubLabel</textcolor>
+                                </control>
+                            </control>
+
+                            <!-- Released -->
+                            <control type="group">
+                                <height>36</height>
+                                <width>100%</width>
+                                <visible>!IsEmpty(Window.Property(movie.release_date))</visible>
+                                <control type="label">
+                                    <width>200</width>
+                                    <height>36</height>
+                                    <align>left</align>
+                                    <font>Font-ListInfo-Small</font>
+                                    <textcolor>ListLabel</textcolor>
+                                    <label>$INFO[Window.Property(movie.Status)]</label>
+                                    <textcolor>ListLabel</textcolor>
+                                </control>
+                                <control type="label">
+                                    <left>220</left>
+                                    <align>left</align>
+                                    <height>36</height>
+                                    <font>Font-ListInfo-Bold</font>
+                                    <label>$INFO[Window.Property(movie.release_date)]</label>
                                     <textcolor>SubLabel</textcolor>
                                 </control>
                             </control>

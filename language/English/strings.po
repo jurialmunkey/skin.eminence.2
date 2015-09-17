@@ -474,3 +474,15 @@ msgstr ""
 msgctxt "#31140"
 msgid "Show tile colour on unfocused tiles"
 msgstr ""
+
+msgctxt "#31141"
+msgid "Info icons"
+msgstr ""
+
+msgctxt "#31142"
+msgid "Big list info"
+msgstr ""
+
+msgctxt "#31143"
+msgid "Media Info 2"
+msgstr ""

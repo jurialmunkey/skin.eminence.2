@@ -1,113 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- pvrguidesearch -->
-	<defaultcontrol always="true">29</defaultcontrol>
-	<include>DialogZoomAnimation</include>
+    <defaultcontrol always="true">5</defaultcontrol>
+    <controls>
 
-	<controls>
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <centerleft>50%</centerleft>
+            <width>800</width>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <height>621</height>
+                <control type="group">
+                    <width>100%</width>
+                    <height>621</height>
+                    <include name="Object_Line">
+                        <param name="width" value="760" />
+                        <param name="label" value="$LOCALIZE[587]" />
+                    </include>
+                    <control type="grouplist" id="5">
+                        <ondown>8000</ondown>
+                        <onup>noop</onup>
+                        <onleft>8000</onleft>
+                        <onright>8000</onright>
+                        <width>100%</width>
+                        <height>621</height>
+                        <orientation>vertical</orientation>
+                        <itemgap>0</itemgap>
+                    </control>
+                </control>
+            </control>
+            <!-- Ok Cancel Defaults -->
+            <control type="grouplist" id="8000">
+                <centerleft>50%</centerleft>
+                <width>760</width>
+                <bottom>side</bottom>
+                <height>69</height>
+                <align>center</align>
+                <itemgap>20</itemgap>
+                <onup>5</onup>
+                <ondown>noop</ondown>
+                <orientation>horizontal</orientation>
+                <control type="button" id="28">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>186</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="29">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>222</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+        </control>
 
-		<!-- Background -->
-		<include>DialogBackgroundImage</include>
+        <!-- Default Templates -->
+        <control type="button" id="7">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="radiobutton" id="8">
+            <width>100%</width>
+            <radioposx>710</radioposx>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="spincontrolex" id="9">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="edit" id="12">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="sliderex" id="13">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
 
-		<!-- Heading -->
-		<control type="label">
-			<left>150</left>
-			<top>96</top>
-			<width>1620</width>
-			<height>72</height>
-			<font>Font72</font>
-			<label>19142</label>
-		</control>
+        
 
-		<!-- Control group -->
-		<control type="grouplist" id="5">
-			<left>360</left>
-			<top>228</top>
-			<width>1200</width>
-			<height>726</height>
-			<onup>noop</onup>
-			<ondown>9000</ondown>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
-			<itemgap>0</itemgap>
-			<orientation>vertical</orientation>
-		</control>
-
-		<!-- Default button -->
-		<control type="button" id="7">
-			<width>1200</width>
-			<height>66</height>
-		</control>
-
-		<!-- Default radiobutton -->
-		<control type="radiobutton" id="8">
-			<width>1200</width>
-			<height>66</height>
-			<textwidth>1120</textwidth>
-		</control>
-
-		<!-- Default spincontrolex -->
-		<control type="spincontrolex" id="9">
-			<width>1200</width>
-			<height>66</height>
-			<textwidth>1120</textwidth>
-		</control>
-
-		<!-- Default slider -->
-		<control type="sliderex" id="13">
-			<width>1200</width>
-			<height>66</height>
-		</control>
-
-		<!-- Default label -->
-		<control type="label" id="7">
-			<width>1200</width>
-			<height>66</height>
-			<label>-</label>
-		</control>
-
-		<!-- Default seperator -->
-		<control type="image" id="11">
-			<width>1200</width>
-			<height>20</height>
-			<texture border="1,12,1,1" colordiffuse="DialogOverlayColorNF">common/ScrollBackgroundHorizontal.png</texture>
-		</control>
-
-		<!-- Default edit -->
-		<control type="edit" id="12">
-			<textoffsetx>20</textoffsetx>
-			<textwidth>1120</textwidth>
-			<texturefocus>dialogs/DialogTextBackground.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-		</control>
-
-		<!-- Button grouplist -->
-		<control type="grouplist" id="9000">
-			<left>150</left>
-			<top>954</top>
-			<width>1620</width>
-			<height>66</height>
-			<itemgap>0</itemgap>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
-			<onup>5</onup>
-			<ondown>noop</ondown>
-			<orientation>horizontal</orientation>
-
-			<!-- Search Button -->
-			<control type="button" id="28">
-				<width>400</width>
-				<label>137</label>
-			</control>
-
-			<!-- Cancel Button -->
-			<control type="button" id="29">
-				<width>400</width>
-				<label>222</label>
-			</control>
-
-		</control>
-
-	</controls>
+    </controls>
 
 </window>

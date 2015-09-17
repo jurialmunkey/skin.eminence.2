@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- karaoke -->
+    <controls>
 
-	<controls>
+        <!-- Karaoke visualisation -->
 
-		<!-- Karaoke visualisation -->
+        <control type="karvisualisation" id="1">
+            <width>100%</width>
+            <height>100%</height>
+            <visible>true</visible>
+        </control>
 
-		<control type="karvisualisation" id="1">
-			<include>FullscreenDimensions</include>
-			<visible>true</visible>
-		</control>
+        <!-- Karaoke background -->
 
-		<!-- Karaoke background -->
+        <control type="image" id="2">
+            <width>100%</width>
+            <height>100%</height>
+            <visible>false</visible>
+        </control>
 
-		<control type="image" id="2">
-			<include>FullscreenDimensions</include>
-			<visible>false</visible>
-		</control>
-
-	</controls>
+    </controls>
 
 </window>

@@ -10,9 +10,7 @@
             <centerleft>50%</centerleft>
             <width>1717</width>
             <include>Animation_SlideIn</include>
-            <include>Animation_FadeOut</include>
-            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
-            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <!-- <include>Animation_FadeOut</include> -->
             <include>Dialog_Background</include>
             <control type="group">
                 <top>70</top>
@@ -28,7 +26,7 @@
                 <right>side</right>
                 <control type="group">
                     <include name="Object_Line">
-                        <param name="width" value="1150" />
+                        <param name="width" value="1200" />
                         <param name="label" value="19033" />
                     </include>
                 </control>
@@ -212,6 +210,7 @@
                         <label>518</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(12)</visible>
                     </control>
                     <!-- Configure Addon Button -->
                     <control type="button" id="9">
@@ -219,6 +218,7 @@
                         <label>24020</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(9)</visible>
                     </control>
                     <!-- Update Addon Button -->
                     <control type="button" id="8">
@@ -226,6 +226,7 @@
                         <label>24069</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(8)</visible>
                     </control>
                     <!-- Install/UnInstall Addon button -->
                     <control type="button" id="6">
@@ -233,6 +234,7 @@
                         <label>24022</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(6)</visible>
                     </control>
                     <!-- Enable/Disable Addon button -->
                     <control type="button" id="7">
@@ -240,6 +242,7 @@
                         <label>24021</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(7)</visible>
                     </control>
                     <!-- Rollback Button -->
                     <control type="button" id="11">
@@ -247,6 +250,7 @@
                         <label>24048</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(11)</visible>
                     </control>
                     <!-- Changelog Button -->
                     <control type="button" id="10">
@@ -254,6 +258,7 @@
                         <label>24036</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
+                        <visible>Control.IsEnabled(10)</visible>
                     </control>
                 </control>
             </control>

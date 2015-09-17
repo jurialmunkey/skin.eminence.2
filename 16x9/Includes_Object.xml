@@ -13,21 +13,26 @@
         </control>
     </include>
     <include name="Object_Arrows_Vertical">
-        <control type="image">
-            <top>-48</top>
-            <centerleft>50%</centerleft>
-            <width>16</width>
-            <height>16</height>
-            <texture flipy="true" colordiffuse="ListLabel">common/16-arrow-down.png</texture>
-            <visible>Container.HasPrevious</visible>
-        </control>
-        <control type="image">
-            <bottom>-32</bottom>
-            <centerleft>50%</centerleft>
-            <width>16</width>
-            <height>16</height>
-            <texture flipy="false" colordiffuse="ListLabel">common/16-arrow-down.png</texture>
-            <visible>Container.HasNext</visible>
+        <control type="group">
+            <visible>![Window.IsVisible(DialogPVRRecordingInfo.xml) | Window.IsVisible(DialogPVRGuideInfo.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogAlbumInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="image">
+                <top>-48</top>
+                <centerleft>50%</centerleft>
+                <width>16</width>
+                <height>16</height>
+                <texture flipy="true" colordiffuse="ListLabel">common/16-arrow-down.png</texture>
+                <visible>Container.HasPrevious</visible>
+            </control>
+            <control type="image">
+                <bottom>-32</bottom>
+                <centerleft>50%</centerleft>
+                <width>16</width>
+                <height>16</height>
+                <texture flipy="false" colordiffuse="ListLabel">common/16-arrow-down.png</texture>
+                <visible>Container.HasNext</visible>
+            </control>
         </control>
     </include>
     <include name="Object_BasicViewList">
@@ -186,14 +191,16 @@
                         <left>pad</left>
                         <right>pad</right>
                         <height>32</height>
+                        <font>Font-Button-Black</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
                         <left>pad</left>
                         <right>pad</right>
                         <height>24</height>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[ListItem.Genre]</label>
+                        <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
                         <visible>!IsEmpty(ListItem.Genre)</visible>
                     </control>
                     <control type="textbox">

@@ -25,6 +25,11 @@
             <size>32</size>
         </font>
         <font>
+            <name>Font-Button-Black</name>
+            <filename>Roboto-Black.ttf</filename>
+            <size>32</size>
+        </font>
+        <font>
             <name>Font-ListInfo-Bold</name>
             <filename>Roboto-Bold.ttf</filename>
             <size>30</size>
