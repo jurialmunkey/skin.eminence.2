@@ -490,3 +490,7 @@ msgstr ""
 msgctxt "#31144"
 msgid "Player Controls"
 msgstr ""
+
+msgctxt "#31145"
+msgid "Extended Info"
+msgstr ""

@@ -1,3 +1,6 @@
+[B]0.9.8[/B]
+Extended Info Browser
+
 [B]0.9.7[/B]
 Peripherals and Network dialogs
 Many label fixes

@@ -70,6 +70,15 @@
                         <include>Defs_OptionButton</include>
                     </control>
 
+                    <!-- EXTRAS -->
+                    <control type="togglebutton" id="8009">
+                        <width>100%</width>
+                        <label>31110</label>
+                        <usealttexture>ControlGroup(8000).HasFocus(8009)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                        <include>Defs_OptionButton</include>
+                    </control>
+
                     
                 </control>
             </control>
@@ -212,9 +221,6 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8007)</visible>
                     </control>
-
-                    
-                    
                     <!-- Match header tile to highlight color -->
                     <control type="radiobutton" id="8709">
                         <width>100%</width>
@@ -228,7 +234,7 @@
 
                     <!-- COLORS -->
                     <!-- Main Color -->
-                    <control type="button" id="8901">
+                    <control type="button" id="8801">
                         <width>100%</width>
                         <label>31111</label>
                         <label2>$INFO[Skin.String(HighlightColor)]</label2>
@@ -237,7 +243,7 @@
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
                     </control>
                     <!-- Second Color -->
-                    <control type="button" id="8902">
+                    <control type="button" id="8802">
                         <width>100%</width>
                         <label>31112</label>
                         <label2>$INFO[Skin.String(HighlightColor2)]</label2>
@@ -246,7 +252,7 @@
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
                     </control>
                     <!-- Reset Colors -->
-                    <control type="button" id="8903">
+                    <control type="button" id="8803">
                         <width>100%</width>
                         <label>31113</label>
                         <onclick>Skin.Reset(HighlightColor)</onclick>
@@ -255,7 +261,7 @@
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
                     </control>
                     <!-- Tile Colors -->
-                    <control type="radiobutton" id="8904">
+                    <control type="radiobutton" id="8804">
                         <width>100%</width>
                         <label>31129</label>
                         <radioposx>1350</radioposx>
@@ -264,7 +270,7 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
                     </control>
-                    <control type="radiobutton" id="8905">
+                    <control type="radiobutton" id="8805">
                         <width>100%</width>
                         <label>31140</label>
                         <radioposx>1350</radioposx>
@@ -273,6 +279,18 @@
                         <include>Defs_OptionButton</include>
                         <enable>Skin.HasSetting(home.tilecolor)</enable>
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                    </control>
+
+                    <!-- EXTRAS -->
+                    <!-- Kiosk -->
+                    <control type="radiobutton" id="8901">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>31057</label>
+                        <selected>Skin.HasSetting(KioskMode)</selected>
+                        <onclick>Skin.ToggleSetting(KioskMode)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
                 </control>
             </control>

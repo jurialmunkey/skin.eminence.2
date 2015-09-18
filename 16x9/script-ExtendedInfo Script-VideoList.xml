@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">500</defaultcontrol>
+    <controls>
+
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_RSS</include>
+
+        <control type="group">
+            <visible>Control.IsVisible(500)</visible>
+            <include>Animation_Info</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1169" />
+                <param name="label" value="$INFO[Window.Property(Sort_Label),$ADDON[script.extendedinfo 32104]: , ]$INFO[Window.Property(Order_Label),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_Icon">
+                <param name="id" value="500" />
+                <param name="name" value="31141" />
+                <param name="width" value="1180" />
+                <param name="condition" value="true" />
+                <param name="updownid" value="false" />
+                <param name="onup" value="700" />
+                <param name="ondown" value="600" />
+            </include>
+            <control type="group">
+                <top>712</top>
+                <left>1</left>
+                <control type="image">
+                    <bottom>21</bottom>
+                    <width max="$PARAM[width]">auto</width>
+                    <height>3</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+            </control>
+            <control type="group">
+                <right>0</right>
+                <width>699</width>
+                <height>670</height>
+                <include name="Object_Line">
+                    <param name="width" value="699" />
+                    <param name="label" value="19033" />
+                </include>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>381</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$INFO[Container(500).ListItem.Property(Fanart_small)]</texture>
+                    </control>
+                    <control type="label">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>32</height>
+                        <font>Font-Button-Black</font>
+                        <label>$INFO[Container(500).ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>24</height>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[Container(500).ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                        <visible>!IsEmpty(Container(500).ListItem.Genre)</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>120</height>
+                        <font>Font-ListInfo</font>
+                        <align>left</align>
+                        <label>$INFO[Container(500).ListItem.Plot]</label>
+                        <visible>!IsEmpty(Container(500).ListItem.Genre)</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>154</height>
+                        <font>Font-ListInfo</font>
+                        <align>left</align>
+                        <label>$INFO[Container(500).ListItem.Plot]</label>
+                        <visible>IsEmpty(Container(500).ListItem.Genre)</visible>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>24</height>
+                        <align>right</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[Container(500).ListItem.Year]$INFO[Container(500).ListItem.Rating,  •  ,]</label>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <width>1180</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+
+        <include>Furniture_TopBar</include>
+
+        <!-- Menu -->
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <ondown>500</ondown>
+                <include>Dialog_Top_GroupList</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <control type="button" id="6000">
+                    <include>Defs_OptionButton</include>
+                    <label>19140</label>
+                </control>
+                <control type="button" id="7000">
+                    <include>Defs_OptionButton</include>
+                    <label>$ADDON[script.extendedinfo 32024]</label>
+                </control>
+                <control type="button" id="5007">
+                    <include>Defs_OptionButton</include>
+                    <label>$LOCALIZE[467]:</label>
+                    <label2>$INFO[Window.Property(Type)]</label2>
+                </control>
+                <control type="button" id="5001">
+                    <include>Defs_OptionButton</include>
+                    <label>$ADDON[script.extendedinfo 32104]</label>
+                    <label2>$INFO[Window.Property(Sort_Label)]</label2>
+                </control>
+                <control type="button" id="5004">
+                    <include>Defs_OptionButton</include>
+                    <label>$ADDON[script.extendedinfo 32128]</label>
+                    <label2>$INFO[Window.Property(Order_Label)]</label2>
+                </control>
+                <control type="label" id="5333">
+                    <textoffsetx>30</textoffsetx>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <include>Defs_OptionButton</include>
+                    <label>$ADDON[script.extendedinfo 32023]</label>
+                    <visible>false</visible>
+                </control>
+                <control type="button" id="5002">
+                    <include>Defs_OptionButton</include>
+                    <label>$LOCALIZE[515]</label>
+                </control>
+                <control type="button" id="5003">
+                    <label>$LOCALIZE[172]</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="5006">
+                    <label>$ADDON[script.extendedinfo 32127]</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="5008">
+                    <label>$ADDON[script.extendedinfo 32126]</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="5009">
+                    <label>$ADDON[script.extendedinfo 32114]</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="5010">
+                    <label>$LOCALIZE[572]</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="5012">
+                    <label>$ADDON[script.extendedinfo 32111]</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="5005">
+                    <label>$ADDON[script.extendedinfo 32022]</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+
+        </control>
+
+        <!-- NEXT PREVIOUS PAGE CONTROLS -->
+        <control type="button" id="600">
+            <onfocus>SetFocus(500)</onfocus>
+            <width>1</width>
+            <height>1</height>
+            <posx>-1000</posx>
+        </control>
+        <control type="button" id="700">
+            <onfocus>SetFocus(500)</onfocus>
+            <width>1</width>
+            <height>1</height>
+            <posx>-1000</posx>
+        </control>
+       
+    </controls>
+</window>
