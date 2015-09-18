@@ -5,7 +5,6 @@
         <include>GlobalOverlay</include>
 		<control type="group">
             <include>Animation_SlideIn</include>
-            <!-- <include>Animation_FadeOut</include> -->
             <centerleft>50%</centerleft>
             <width>favdialogw</width>
             <bottom>80</bottom>

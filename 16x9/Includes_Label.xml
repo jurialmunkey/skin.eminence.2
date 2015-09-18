@@ -2,6 +2,7 @@
 <includes>
 
     <variable name="Label_Plot">
+        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.MovieSet.Title)]</value>
         <value>$INFO[ListItem.Plot]</value>
     </variable>
 
@@ -11,16 +12,24 @@
     </variable>
 
     <variable name="Label_ExtraInfo">
+        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.MovieSet.Count),, $LOCALIZE[20342]  •  ]$INFO[Window(Home).Property(SkinHelper.MovieSet.Year)]</value>
         <value condition="!IsEmpty(ListItem.MPAA) + !IsEmpty(ListItem.Duration)">$INFO[ListItem.MPAA]$INFO[ListItem.Duration,  •  , $LOCALIZE[31117]]</value>
         <value condition="!IsEmpty(ListItem.MPAA)">$INFO[ListItem.MPAA]</value>
         <value condition="!IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
     </variable>
 
+    <variable name="Label_ExtraInfo_Icons">
+        <value condition="!ListItem.IsCollection">$VAR[Label_ExtraInfo]$VAR[Label_Label3,  •  ,]$INFO[ListItem.Rating,  •  ,]</value>
+        <value condition="ListItem.IsCollection">$VAR[Label_ExtraInfo]</value>
+    </variable>
+
     <variable name="Label_ExtendedInfo_InfoLine">
-        <value condition="StringCompare(Window.Property(content),150)">$ADDON[script.extendedinfo 32010]</value>
+        <value condition="StringCompare(Window.Property(content),150) + Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">$ADDON[script.extendedinfo 32010]</value>
+        <value condition="StringCompare(Window.Property(content),150) + Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">$LOCALIZE[31107]</value>
+        <value condition="StringCompare(Window.Property(content),1000)">$LOCALIZE[206]</value>
         <value condition="StringCompare(Window.Property(content),250)">$ADDON[script.extendedinfo 32031]</value>
         <value condition="StringCompare(Window.Property(content),350)">$ADDON[script.extendedinfo 32118]</value>
-        <value condition="StringCompare(Window.Property(content),550)">$ADDON[script.extendedinfo 32115]</value>
+        <value condition="StringCompare(Window.Property(content),550) | StringCompare(Window.Property(content),750)">$ADDON[script.extendedinfo 32115]</value>
         <value>$LOCALIZE[19033]</value>
     </variable>
 
@@ -30,13 +39,12 @@
         <value condition="IsEmpty(ListItem.Tagline)">$LOCALIZE[19033]</value>
     </variable>
 
-    <variable name="Label_Label3">      
-
+    <variable name="Label_Label3">
         <!-- Recently Added -->
-        <value condition="substring(Container.FolderPath,recentlyadded)">$INFO[ListItem.DateAdded]</value>
+        <value condition="!ListItem.IsCollection + substring(Container.FolderPath,recentlyadded)">$INFO[ListItem.DateAdded]</value>
         
         <!-- Last Played -->
-        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[568])">$INFO[ListItem.LastPlayed]</value>
+        <value condition="!ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[568])">$INFO[ListItem.LastPlayed]</value>
 
         <!-- Episodes -->
         <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Premiered]</value>
@@ -48,11 +56,11 @@
         <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Label2]</value>
         
         <!-- Others -->
-        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
-        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Year]</value>
+        <value condition="!ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
+        <value condition="!ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Year]</value>
         
         <!-- Fallback -->
-        <value>$INFO[ListItem.Label2]</value>
+        <value condition="!ListItem.IsCollection">$INFO[ListItem.Label2]</value>
         
     </variable>
 

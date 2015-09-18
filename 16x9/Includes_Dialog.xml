@@ -77,6 +77,30 @@
         </control>
     </include>
 
+    <include name="Dialog_Info_Arrows">
+        <control type="group">
+            <left>pad</left>
+            <width>1190</width>
+            <bottom>side</bottom>
+            <height>69</height>
+            <control type="image">
+                <centertop>50%</centertop>
+                <left>-18</left>
+                <width>16</width>
+                <height>16</height>
+                <texture colordiffuse="ListLabel">common/16-arrow-left.png</texture>
+                <visible>Container($PARAM[id]).HasPrevious</visible>
+            </control>
+            <control type="image">
+                <centertop>50%</centertop>
+                <right>-18</right>
+                <width>16</width>
+                <height>16</height>
+                <texture colordiffuse="ListLabel" flipx="true">common/16-arrow-left.png</texture>
+                <visible>Container($PARAM[id]).HasNext</visible>
+            </control>
+        </control>
+    </include>
  
     <!-- Bottom Dialogs -->
     <include name="Dialog_Bottom">

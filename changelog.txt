@@ -1,5 +1,6 @@
 [B]0.9.7[/B]
 Peripherals and Network dialogs
+Many label fixes
 
 [B]0.9.6[/B]
 New views

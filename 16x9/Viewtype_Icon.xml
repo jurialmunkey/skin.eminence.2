@@ -238,7 +238,7 @@
                         <height>24</height>
                         <align>right</align>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>$VAR[Label_ExtraInfo]$VAR[Label_Label3,  •  ,]$INFO[ListItem.Rating,  •  ,]</label>
+                        <label>$VAR[Label_ExtraInfo_Icons]</label>
                     </control>
                 </control>
             </control>
