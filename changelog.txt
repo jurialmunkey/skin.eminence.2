@@ -1,3 +1,6 @@
+[B]0.9.7[/B]
+Peripherals and Network dialogs
+
 [B]0.9.6[/B]
 New views
 -- Media Info 2

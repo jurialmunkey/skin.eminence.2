@@ -1,125 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- peripherals -->
-	<defaultcontrol always="true">20</defaultcontrol>
-	<include>DialogZoomAnimation</include>
+    <defaultcontrol always="true">20</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <centerleft>50%</centerleft>
+            <width>1190</width>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <height>621</height>
+                <control type="group">
+                    <width>100%</width>
+                    <height>621</height>
+                    <include name="Object_Line">
+                        <param name="width" value="1150" />
+                        <param name="label" value="35000" />
+                    </include>
+                    <control type="panel" id="20">
+                        <ondown>8000</ondown>
+                        <onup>noop</onup>
+                        <onleft>8000</onleft>
+                        <onright>8000</onright>
+                        <width>100%</width>
+                        <height>621</height>
+                        <orientation>vertical</orientation>
+                        <itemlayout width="1150" height="124">
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="label">
+                                <height>60%</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <bottom>0</bottom>
+                                <height>60%</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[ListItem.Property(Product)]</label>
+                            </control>
+                            <control type="label">
+                                <height>60%</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <bottom>0</bottom>
+                                <height>60%</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$INFO[ListItem.Property(Class)]</label>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="1150" height="124">
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            </control>
+                            <control type="label">
+                                <height>60%</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textcolor>Selected</textcolor>
+                            </control>
+                            <control type="label">
+                                <bottom>0</bottom>
+                                <height>60%</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Property(Product)]</label>
+                            </control>
+                            <control type="label">
+                                <height>60%</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small</font>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                            </control>
+                            <control type="label">
+                                <bottom>0</bottom>
+                                <height>60%</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small</font>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Property(Class)]</label>
+                            </control>
+                        </focusedlayout>
+                    </control>
 
-	<controls>
+                </control>
+            </control>
+            <!-- Ok Cancel Defaults -->
+            <control type="grouplist" id="8000">
+                <centerleft>50%</centerleft>
+                <width>1150</width>
+                <bottom>side</bottom>
+                <height>69</height>
+                <align>center</align>
+                <itemgap>20</itemgap>
+                <onup>20</onup>
+                <ondown>noop</ondown>
+                <orientation>horizontal</orientation>
+                <control type="button" id="10">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>186</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="11">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>5</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+        </control>
 
-		<!-- Background -->
-		<include>DialogBackgroundImage</include>
+        
 
-		<!-- Heading -->
-		<control type="label" id="1">
-			<left>150</left>
-			<top>96</top>
-			<width>1620</width>
-			<height>72</height>
-			<font>Font72</font>
-			<label>35000</label>
-		</control>
-
-		<control type="list" id="20">
-			<left>600</left>
-			<top>235</top>
-			<width>1200</width>
-			<height>576</height>
-			<onup>noop</onup>
-			<ondown>10</ondown>
-			<onleft>noop</onleft>
-			<onright>10</onright>
-			<orientation>vertical</orientation>
-			<viewtype label="535">list</viewtype>
-			<scrolltime tween="sine" easing="out">240</scrolltime>
-
-			<itemlayout width="1200" height="112">
-				<control type="label">
-					<top>22</top>
-					<width>1220</width>
-					<height>36</height>
-					<font>Font36</font>
-					<textcolor>DialogColor2</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-				<control type="label">
-					<top>70</top>
-					<width>390</width>
-					<height>30</height>
-					<font>Font30</font>
-					<textcolor>DialogColor2</textcolor>
-					<label>[COLOR=DialogColor1]$LOCALIZE[35504]:[/COLOR] $INFO[ListItem.Property(Product)]</label>
-				</control>
-				<control type="label">
-					<left>430</left>
-					<top>70</top>
-					<width>390</width>
-					<height>30</height>
-					<font>Font30</font>
-					<textcolor>DialogColor2</textcolor>
-					<label>[COLOR=DialogColor1]$LOCALIZE[35503]:[/COLOR] $INFO[ListItem.Property(Vendor)]</label>
-				</control>
-				<control type="label">
-					<left>840</left>
-					<top>70</top>
-					<width>390</width>
-					<height>30</height>
-					<font>Font30</font>
-					<textcolor>DialogColor2</textcolor>
-					<label>[COLOR=DialogColor1]$LOCALIZE[35501]:[/COLOR] $INFO[ListItem.Property(Class)]</label>
-				</control>
-			</itemlayout>
-
-			<focusedlayout width="1260" height="112">
-				<control type="label">
-					<top>22</top>
-					<width>1220</width>
-					<height>36</height>
-					<font>Font36</font>
-					<textcolor>DialogColor1</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-				<control type="label">
-					<top>70</top>
-					<width>390</width>
-					<height>30</height>
-					<font>Font30</font>
-					<textcolor>DialogColor2</textcolor>
-					<label>[COLOR=DialogColor1]$LOCALIZE[35504]:[/COLOR] $INFO[ListItem.Property(Product)]</label>
-				</control>
-				<control type="label">
-					<left>430</left>
-					<top>70</top>
-					<width>390</width>
-					<height>30</height>
-					<font>Font30</font>
-					<textcolor>DialogColor2</textcolor>
-					<label>[COLOR=DialogColor1]$LOCALIZE[35503]:[/COLOR] $INFO[ListItem.Property(Vendor)]</label>
-				</control>
-				<control type="label">
-					<left>840</left>
-					<top>70</top>
-					<width>390</width>
-					<height>30</height>
-					<font>Font30</font>
-					<textcolor>DialogColor2</textcolor>
-					<label>[COLOR=DialogColor1]$LOCALIZE[35501]:[/COLOR] $INFO[ListItem.Property(Class)]</label>
-				</control>
-			</focusedlayout>
-
-		</control>
-
-		<!-- OK button -->
-		<control type="button" id="10">
-			<left>600</left>
-			<top>926</top>
-			<width>400</width>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
-			<onup>20</onup>
-			<ondown>noop</ondown>
-			<label>186</label>
-		</control>
-
-	</controls>
+    </controls>
 
 </window>
