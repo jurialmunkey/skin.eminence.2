@@ -310,5 +310,122 @@
             </control>
         </control>
     </include>
+
+    <include name="Object_NextAired_List">
+        <control type="group">
+            <width>270</width>
+            <control type="label">
+                <height>48</height>
+                <left>pad</left>
+                <right>side</right>
+                <align>center</align>
+                <font>Font-OSD</font>
+                <label>$INFO[Window(home).Property(NextAired.$PARAM[id].Weekday)]$INFO[Window(home).Property(NextAired.$PARAM[id].Date), - ,]</label>
+            </control>
+            <control type="panel" id="$PARAM[id]">
+                <width>233</width>
+                <centerleft>50%</centerleft>
+                <top>48</top>
+                <height>700</height>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <onleft>$PARAM[onleft]</onleft>
+                <onright>$PARAM[onright]</onright>
+                <preloaditems>2</preloaditems>
+                <orientation>vertical</orientation>
+                <viewtype label="20445">fanart</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <itemlayout height="350" width="233">
+                    <control type="group">
+                        <left>0</left>
+                        <right>0</right>
+                        <bottom>pad</bottom>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$VAR[Image_Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <texture flipy="true" colordiffuse="9f000000">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>side</left>
+                            <right>side</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <font>Font-OSD</font>
+                            <label>$INFO[ListItem.Property(NextNumber),[B],[/B]]</label>
+                        </control>
+                        <control type="label">
+                            <left>side</left>
+                            <right>side</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <align>right</align>
+                            <font>Font-OSD</font>
+                            <label>$INFO[ListItem.Property(ShortTime)]</label>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="350" width="233">
+                    <control type="group">
+                        <left>0</left>
+                        <right>0</right>
+                        <bottom>pad</bottom>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$VAR[Image_Thumb]</texture>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <texture flipy="true" colordiffuse="9f000000">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>side</left>
+                            <right>side</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <font>Font-OSD</font>
+                            <label>$INFO[ListItem.Property(NextNumber),[B],[/B]]</label>
+                        </control>
+                        <control type="label">
+                            <left>side</left>
+                            <right>side</right>
+                            <bottom>pad</bottom>
+                            <height>48</height>
+                            <align>right</align>
+                            <font>Font-OSD</font>
+                            <label>$INFO[ListItem.Property(ShortTime)]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
     
 </includes>

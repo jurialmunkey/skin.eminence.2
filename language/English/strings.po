@@ -506,3 +506,7 @@ msgstr ""
 msgctxt "#31148"
 msgid "Media Info 3"
 msgstr ""
+
+msgctxt "#31149"
+msgid "Next Aired"
+msgstr ""

@@ -1,6 +1,7 @@
 [B]0.9.8[/B]
 Extended Info Browser
 Media Info 3
+Next Aired
 
 [B]0.9.7[/B]
 Peripherals and Network dialogs
