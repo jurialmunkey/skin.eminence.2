@@ -2,7 +2,7 @@
 <window>
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,56,57,58</views>
+    <views>50,56,57,58,500</views>
     <onunload>SetProperty(NodeReturn,pictures,home)</onunload>
     <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
     <controls>
@@ -17,6 +17,7 @@
             <include>Viewtype_Fanart</include>
             <include>Viewtype_BigList</include>
             <include>Viewtype_PanelList</include>
+            <include>Viewtype_Thumbs</include>
         </control>
 
         <include>Furniture_TopBar</include>

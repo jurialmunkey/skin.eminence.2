@@ -65,9 +65,36 @@
             <height>height</height>
             <include name="View_List">
                 <param name="viewlabel" value="31143" />
+                <param name="posx" value="0" />
+                <param name="width" value="850" />
+                <param name="id" value="502" />
+                <param name="label3" value="true" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
+            </include>
+            <include>Object_ExtraInfo2</include>
+            <control type="group">
+                <left>0</left>
+                <width>850</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
+    <!-- MEDIA INFO 3 -->
+    <include name="Viewtype_MediaInfo3">
+        <control type="group">
+            <visible>Control.IsVisible(503)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="View_List">
+                <param name="viewlabel" value="31148" />
                 <param name="posx" value="477" />
                 <param name="width" value="653" />
-                <param name="id" value="502" />
+                <param name="id" value="503" />
                 <param name="label3" value="false" />
                 <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
             </include>
@@ -216,7 +243,7 @@
                             <bottom>32</bottom>
                             <height>30</height>
                             <font>Font-ListInfo</font>
-                            <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
+                            <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
                         </control>
                     </control>
                 </itemlayout>
@@ -262,7 +289,7 @@
                             <height>30</height>
                             <textcolor>Selected</textcolor>
                             <font>Font-ListInfo</font>
-                            <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
+                            <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
                         </control>
                     </control>
                 </focusedlayout>

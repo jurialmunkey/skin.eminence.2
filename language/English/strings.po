@@ -494,3 +494,15 @@ msgstr ""
 msgctxt "#31145"
 msgid "Extended Info"
 msgstr ""
+
+msgctxt "#31146"
+msgid "Fallback image"
+msgstr ""
+
+msgctxt "#31147"
+msgid "Fallback widget"
+msgstr ""
+
+msgctxt "#31148"
+msgid "Media Info 3"
+msgstr ""

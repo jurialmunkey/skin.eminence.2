@@ -106,7 +106,7 @@
                     </control>
                     <control type="button" id="8102">
                         <width>100%</width>
-                        <label>Fallback widget</label>
+                        <label>31147</label>
                         <label2>$INFO[Skin.String(home.fallbackwidget.name)]</label2>
                         <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=hubwidget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name)</onclick>
                         <include>Defs_OptionButton</include>
@@ -142,6 +142,16 @@
                         <radioposx>1350</radioposx>
                         <selected>Skin.HasSetting(background.animate)</selected>
                         <onclick>Skin.ToggleSetting(background.animate)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
+                    <!-- Fallback Fanart -->
+                    <control type="button" id="8208">
+                        <width>100%</width>
+                        <label>31146</label>
+                        <label2>$INFO[Skin.String(background.fallback)]</label2>
+                        <onclick condition="IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
+                        <onclick condition="!IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>

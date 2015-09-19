@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+
+
     <!-- BIG ICON -->
     <include name="Viewtype_BigIcon">
         <control type="group">
@@ -391,5 +393,111 @@
                 </control>
             </control>
         </definition>
+    </include>
+
+    <include name="Viewtype_Thumbs">
+        <control type="group">
+            <visible>Control.IsVisible(500)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_Thumbs">
+                <param name="id" value="500" />
+                <param name="width" value="1890" />
+                <param name="condition" value="true" />
+                <param name="name" value="21371" />
+            </include>
+            <include>Object_Arrows_Vertical</include>
+        </control>
+    </include>
+
+    <include name="View_Thumbs">
+        <control type="group">
+            <control type="panel" id="$PARAM[id]">
+                <top>0</top>
+                <left>0</left>
+                <width>$PARAM[width]</width>
+                <height>700</height>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <pagecontrol>60</pagecontrol>
+                <preloaditems>2</preloaditems>
+                <orientation>vertical</orientation>
+                <viewtype label="$PARAM[name]">icons</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="350" width="270">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <height>250</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="textbox">
+                            <left>side</left>
+                            <right>side</right>
+                            <bottom>pad</bottom>
+                            <height>65</height>
+                            <font>Font-OSD</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>center</align>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="350" width="270">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <height>250</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="textbox">
+                            <left>side</left>
+                            <right>side</right>
+                            <bottom>pad</bottom>
+                            <height>65</height>
+                            <font>Font-OSD</font>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>center</align>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
     </include>
 </includes>

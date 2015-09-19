@@ -3,7 +3,7 @@
     <!-- videolibrary -->
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,54,502,51,52,59,55,56,53,57,501,58</views>
+    <views>50,54,502,503,51,52,59,55,56,53,57,501,58,500</views>
     <onunload>SetProperty(NodeReturn,videos,home)</onunload>
     <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
     <controls>
@@ -22,11 +22,13 @@
             <include>Viewtype_BigWide</include>
             <include>Viewtype_MediaInfo</include>
             <include>Viewtype_MediaInfo2</include>
+            <include>Viewtype_MediaInfo3</include>
             <include>Viewtype_Wide</include>
             <include>Viewtype_Fanart</include>
             <include>Viewtype_BigList</include>
             <include>Viewtype_BigListInfo</include>
             <include>Viewtype_PanelList</include>
+            <include>Viewtype_Thumbs</include>
         </control>
 
         <include>Furniture_TopBar</include>

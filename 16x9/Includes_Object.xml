@@ -186,52 +186,104 @@
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
                     </control>
-                    <control type="label">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>32</height>
-                        <font>Font-Button-Black</font>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>24</height>
-                        <textcolor>$VAR[HighlightColor2]</textcolor>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
-                        <visible>!IsEmpty(ListItem.Genre)</visible>
-                    </control>
-                    <control type="textbox">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>120</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$VAR[Label_Plot]</label>
-                        <visible>!IsEmpty(ListItem.Genre)</visible>
-                    </control>
-                    <control type="textbox">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>154</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$VAR[Label_Plot]</label>
-                        <visible>IsEmpty(ListItem.Genre)</visible>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>24</height>
-                        <align>right</align>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$VAR[Label_ExtraInfo]</label>
-                    </control>
+                    <include>Object_ExtraInfo_Content</include>
                 </control>
             </control>
         </definition>
+    </include>
+
+    <include name="Object_ExtraInfo2">
+        <param name="label" default="19033" />
+        <param name="left" default="860" />
+        <definition>
+            <control type="group">
+                <left>$PARAM[left]</left>
+                <width>1020</width>
+                <height>height</height>
+                <include name="Object_Line">
+                    <param name="width" value="1020" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="image">
+                        <left>0</left>
+                        <width>270</width>
+                        <height>405</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$VAR[Image_Poster]</texture>
+                    </control>
+                    <control type="image">
+                        <top>-415</top>
+                        <right>0</right>
+                        <width>720</width>
+                        <height>405</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$VAR[Image_Thumb]</texture>
+                    </control>
+                    <include>Object_ExtraInfo_Content</include>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_ExtraInfo_Content">
+        <control type="label">
+            <top>pad</top>
+            <left>pad</left>
+            <right>pad</right>
+            <height>32</height>
+            <font>Font-Button-Black</font>
+            <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="label">
+            <left>pad</left>
+            <right>pad</right>
+            <height>24</height>
+            <textcolor>$VAR[HighlightColor2]</textcolor>
+            <font>Font-ListInfo-Small-Bold</font>
+            <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+        </control>
+        <control type="textbox">
+            <left>pad</left>
+            <right>pad</right>
+            <height>120</height>
+            <font>Font-ListInfo</font>
+            <align>left</align>
+            <label>$VAR[Label_Plot]</label>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+        </control>
+        <control type="textbox">
+            <left>pad</left>
+            <right>pad</right>
+            <height>154</height>
+            <font>Font-ListInfo</font>
+            <align>left</align>
+            <label>$VAR[Label_Plot]</label>
+            <visible>IsEmpty(ListItem.Genre)</visible>
+        </control>
+        <control type="label">
+            <left>pad</left>
+            <right>pad</right>
+            <height>24</height>
+            <align>right</align>
+            <font>Font-ListInfo-Small-Bold</font>
+            <label>$VAR[Label_ExtraInfo]</label>
+        </control>
     </include>
 
     <!-- Line -->
