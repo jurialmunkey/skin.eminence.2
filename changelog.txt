@@ -2,6 +2,7 @@
 Extended Info Browser
 Media Info 3
 Next Aired
+NextUp
 
 [B]0.9.7[/B]
 Peripherals and Network dialogs
