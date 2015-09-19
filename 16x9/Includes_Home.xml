@@ -266,6 +266,7 @@
             <onback>9000</onback>
             <ondown>9000</ondown>
             <onup>9000</onup>
+            <autoscroll time="8000">!Control.HasFocus(9001)</autoscroll>
             <scrolltime tween="sine" easing="out">240</scrolltime>
             <itemlayout />
             <focusedlayout width="1920" height="1080" />
