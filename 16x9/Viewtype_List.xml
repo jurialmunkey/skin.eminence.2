@@ -118,7 +118,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <left>side</left>
-            <right>0</right>
+            <right>side</right>
             <top>top</top>
             <height>height</height>
             <include name="Object_Line">
