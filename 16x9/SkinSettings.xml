@@ -43,7 +43,7 @@
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
                     </control>
-                    <!-- OSD -->
+                    <!-- MUSIC OSD -->
                     <control type="togglebutton" id="8003">
                         <width>100%</width>
                         <label>31121</label>
@@ -51,7 +51,14 @@
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
                     </control>
-
+                    <!-- VIDEO OSD -->
+                    <control type="togglebutton" id="8004">
+                        <width>100%</width>
+                        <label>31005</label>
+                        <usealttexture>ControlGroup(8000).HasFocus(8004)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                        <include>Defs_OptionButton</include>
+                    </control>
                     <!-- HEADER -->
                     <control type="togglebutton" id="8007">
                         <width>100%</width>
@@ -60,7 +67,6 @@
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
                     </control>
-
                     <!-- COLORS -->
                     <control type="togglebutton" id="8008">
                         <width>100%</width>
@@ -69,7 +75,6 @@
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
                     </control>
-
                     <!-- EXTRAS -->
                     <control type="togglebutton" id="8009">
                         <width>100%</width>
@@ -78,8 +83,6 @@
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
                     </control>
-
-                    
                 </control>
             </control>
             <!-- Right List -->
@@ -134,7 +137,6 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
-                    
                     <!-- Animate Fanart -->
                     <control type="radiobutton" id="8202">
                         <width>100%</width>
@@ -166,8 +168,7 @@
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
 
-
-                    <!-- OSD -->
+                    <!-- MUSIC OSD -->
                     <control type="radiobutton" id="8301" description="Show Fanart">
                         <visible>ControlGroup(8000).HasFocus(8003)</visible>
                         <width>100%</width>
@@ -207,6 +208,18 @@
                         <selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
                         <enable>Skin.HasSetting(musicvis.fanartfallback) | [Skin.HasSetting(ArtistSlideShow.Enabled) + System.HasAddon(script.artistslideshow)]</enable>
+                    </control>
+
+                    <!-- VIDEO OSD -->
+                    <!-- Show Info -->
+                    <control type="radiobutton" id="8401" description="Show Info">
+                        <visible>ControlGroup(8000).HasFocus(8004)</visible>
+                        <width>100%</width>
+                        <radioposx>1350</radioposx>
+                        <include>Defs_OptionButton</include>
+                        <label>31006</label>
+                        <selected>Skin.HasSetting(videoosd.showinfo)</selected>
+                        <onclick>Skin.ToggleSetting(videoosd.showinfo)</onclick>
                     </control>
 
                     <!-- HEADER -->

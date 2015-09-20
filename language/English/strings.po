@@ -38,6 +38,14 @@ msgctxt "#31004"
 msgid "Opaque panels"
 msgstr ""
 
+msgctxt "#31005"
+msgid "Video OSD"
+msgstr ""
+
+msgctxt "#31006"
+msgid "Show plot when pressing info"
+msgstr ""
+
 msgctxt "#31009"
 msgid "Open playlist"
 msgstr ""

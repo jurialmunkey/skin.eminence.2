@@ -292,6 +292,7 @@
                     <control type="group">
                         <left>0</left>
                         <right>pad</right>
+                        
                         <control type="image">
                             <left>0</left>
                             <right>0</right>
@@ -299,6 +300,7 @@
                             <bottom>0</bottom>
                             <texture colordiffuse="PosterBorder">common/white.png</texture>
                         </control>
+
                         <control type="label">
                             <left>0</left>
                             <top>640</top>

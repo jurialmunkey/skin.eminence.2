@@ -245,8 +245,8 @@
             <top>pad</top>
             <left>pad</left>
             <right>pad</right>
-            <height>32</height>
-            <font>Font-Button-Black</font>
+            <height>36</height>
+            <font>Font-InfoBox-Title</font>
             <label>$INFO[ListItem.Label]</label>
         </control>
         <control type="label">
@@ -279,7 +279,7 @@
         <control type="label">
             <left>pad</left>
             <right>pad</right>
-            <height>24</height>
+            <height>20</height>
             <align>right</align>
             <font>Font-ListInfo-Small-Bold</font>
             <label>$VAR[Label_ExtraInfo_Icons]</label>

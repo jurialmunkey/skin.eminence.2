@@ -50,7 +50,6 @@
                         <top>0</top>
                         <bottom>pad</bottom>
                         <textcolor>ListLabel</textcolor>
-                        <font>Font-Button</font>
                         <align>left</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
@@ -78,7 +77,6 @@
                         <top>0</top>
                         <bottom>pad</bottom>
                         <textcolor>Selected</textcolor>
-                        <font>Font-Button</font>
                         <align>left</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
