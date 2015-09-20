@@ -129,6 +129,7 @@
 
             <!-- Icon Hang -->
             <control type="group">
+                <visible>Container(9000).HasNext | Container(9000).HasPrevious</visible>
                 <left>-172</left>
                 <right>-172</right>
                 <bottom>0</bottom>
