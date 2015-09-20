@@ -302,6 +302,16 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Opaque Panels -->
+                    <control type="radiobutton" id="8902">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>31004</label>
+                        <selected>Skin.HasSetting(global.backpanelmode)</selected>
+                        <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                 </control>
             </control>
         </control>

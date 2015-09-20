@@ -11,6 +11,8 @@
         <!-- Background -->
         <include>Furniture_Background</include>
         <include>Furniture_RSS</include>
+        <include>Furniture_TopBar</include>
+        
 
         <!-- Main group -->
         <control type="group">
@@ -31,7 +33,6 @@
             <include>Viewtype_Thumbs</include>
         </control>
 
-        <include>Furniture_TopBar</include>
 
         <!-- Menu -->
         <control type="group">
@@ -75,6 +76,13 @@
                     <label>653</label>
                     <include>Defs_OptionButton</include>
                     <onclick>SetFocus(50)</onclick>
+                </control>
+                <!-- Back Panels -->
+                <control type="radiobutton" id="9001">
+                    <label>31004</label>
+                    <include>Defs_OptionButton</include>
+                    <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
+                    <selected>Skin.HasSetting(global.backpanelmode)</selected>
                 </control>
             </control>
 

@@ -30,6 +30,14 @@ msgctxt "#31002"
 msgid "Tag"
 msgstr ""
 
+msgctxt "#31003"
+msgid "Next"
+msgstr ""
+
+msgctxt "#31004"
+msgid "Opaque panels"
+msgstr ""
+
 msgctxt "#31009"
 msgid "Open playlist"
 msgstr ""

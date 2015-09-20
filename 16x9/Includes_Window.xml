@@ -16,11 +16,11 @@
                 <control type="group">
                     <left>0</left>
                     <top>0</top>
-                    <width>1211</width>
+                    <width>1210</width>
                     <height>100%</height>
                     <control type="group">
                         <include name="Object_Line">
-                            <param name="width" value="1211" />
+                            <param name="width" value="1210" />
                             <param name="label" value="$VAR[Label_Hub_WidgetType]" />
                         </include>
                     </control>
@@ -48,7 +48,7 @@
                         <orientation>vertical</orientation>
                         <autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
                         <scrolltime tween="quadratic">400</scrolltime>
-                        <itemlayout width="1191" height="670">
+                        <itemlayout width="1190" height="670">
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>
@@ -56,7 +56,7 @@
                                 <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
                             </control>
                         </itemlayout>
-                        <focusedlayout width="1191" height="670">
+                        <focusedlayout width="1190" height="670">
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>
@@ -108,10 +108,10 @@
                 <control type="group" description="hub side">
                     <right>0</right>
                     <top>0</top>
-                    <width>659</width>
+                    <width>660</width>
                     <height>100%</height>
                     <include name="Object_Line">
-                        <param name="width" value="659" />
+                        <param name="width" value="660" />
                         <param name="label" value="$LOCALIZE[31073]" />
                     </include>
                     <control type="panel" id="9501">  
@@ -124,7 +124,7 @@
                         <preloaditems>2</preloaditems>
                         <orientation>vertical</orientation>
                         <scrolltime tween="quadratic">400</scrolltime>
-                        <itemlayout width="659" height="100">
+                        <itemlayout width="660" height="100">
                             <control type="image">
                                 <width>100%</width>
                                 <top>0</top>
@@ -147,7 +147,7 @@
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>
-                        <focusedlayout width="659" height="100">
+                        <focusedlayout width="660" height="100">
                             <control type="image">
                                 <width>100%</width>
                                 <top>0</top>
@@ -394,8 +394,8 @@
                 <align>center</align>
                 <onleft>3</onleft>
                 <onright>4</onright>
-                <onup>noop</onup>
-                <ondown>noop</ondown>
+                <onup>SetProperty(osdinfo,1,home)</onup>
+                <ondown>ClearProperty(osdinfo,home)</ondown>
 
                 <include>Window_OSD_Controls</include>
             

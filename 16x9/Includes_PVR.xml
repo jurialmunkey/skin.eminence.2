@@ -89,7 +89,7 @@
                                 <align>right</align>
                                 <font>Font-OSD</font>
                                 <selectedcolor>ListLabel</selectedcolor>
-                                <label>$INFO[ListItem.NextTitle,$LOCALIZE[31141]... ,]</label>
+                                <label>$INFO[ListItem.NextTitle,$LOCALIZE[31003]... ,]</label>
                             </control>
                         </control>
                     </itemlayout>
@@ -158,7 +158,7 @@
                                 <font>Font-OSD</font>
                                 <selectedcolor>Selected</selectedcolor>
                                 <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.NextTitle,$LOCALIZE[31141]... ,]</label>
+                                <label>$INFO[ListItem.NextTitle,$LOCALIZE[31003]... ,]</label>
                             </control>
                         </control>
                     </focusedlayout>

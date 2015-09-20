@@ -12,15 +12,15 @@
     </variable>
 
     <variable name="Label_ExtraInfo">
-        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.MovieSet.Count),, $LOCALIZE[20342]  •  ]$INFO[Window(Home).Property(SkinHelper.MovieSet.Year)]</value>
-        <value condition="!IsEmpty(ListItem.MPAA) + !IsEmpty(ListItem.Duration)">$INFO[ListItem.MPAA]$INFO[ListItem.Duration,  •  , $LOCALIZE[31117]]</value>
+        <value condition="!IsEmpty(ListItem.MPAA) + !IsEmpty(ListItem.Duration)">$INFO[ListItem.MPAA,,  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
         <value condition="!IsEmpty(ListItem.MPAA)">$INFO[ListItem.MPAA]</value>
         <value condition="!IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
     </variable>
 
     <variable name="Label_ExtraInfo_Icons">
-        <value condition="!ListItem.IsCollection">$VAR[Label_ExtraInfo]$VAR[Label_Label3,  •  ,]$INFO[ListItem.Rating,  •  ,]</value>
-        <value condition="ListItem.IsCollection">$VAR[Label_ExtraInfo]</value>
+        <value condition="!ListItem.IsCollection + Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Rating]</value>
+        <value condition="!ListItem.IsCollection + !Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Premiered,,  •  ]$INFO[ListItem.Rating]</value>
+        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.MovieSet.Count),, $LOCALIZE[20342]  •  ]$INFO[Window(Home).Property(SkinHelper.MovieSet.Year)]</value>
     </variable>
 
     <variable name="Label_ExtendedInfo_InfoLine">
@@ -53,11 +53,15 @@
         <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Premiered]</value>
 
         <!-- Tv Shows -->
-        <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Label2]</value>
+        <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(UnWatchedEpisodes,, [LOWERCASE]$LOCALIZE[16101][/LOWERCASE]]</value>
         
         <!-- Others -->
-        <value condition="!ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
-        <value condition="!ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Year]</value>
+        <value condition="!Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
+        <value condition="!Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Year]</value>
+
+        <value condition="Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
+        <value condition="Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
+        <value condition="Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[562])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
         
         <!-- Fallback -->
         <value condition="!ListItem.IsCollection">$INFO[ListItem.Label2]</value>

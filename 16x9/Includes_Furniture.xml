@@ -52,6 +52,16 @@
             <texture colordiffuse="FanartFade">common/white.png</texture>
             <visible>!Window.IsVisible(home)</visible>
             <visible>!Window.IsVisible(weather)</visible>
+            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
+        </control>
+        <control type="group">
+            <top>210</top>
+            <height>806</height>
+            <width>100%</width>
+            <visible>Skin.HasSetting(global.backpanelmode)</visible>
+            <include>Dialog_Background</include>
+            <visible>!Window.IsVisible(home)</visible>
+            <visible>!Window.IsVisible(weather)</visible>
         </control>
         <control type="image" description="Transition Fade">
             <width>100%</width>
@@ -66,7 +76,7 @@
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
         <value condition="VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(home)">HomeBarBG</value>
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
-        <value condition="Window.IsVisible(weather)">HomeBarBG</value>
+        <value condition="Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeBarBG</value>
         <value>PosterBorder</value>
     </variable>
     <variable name="Furniture_TopBar_Header_MainLabel">
@@ -380,7 +390,7 @@
         </control>   
     </include>
     <include name="Furniture_TopBar">
-        <include>GlobalInfoOverlay</include>
+        <!-- <include>GlobalInfoOverlay</include> -->
         <control type="group">
             <visible>[Window.IsVisible(home) + !Control.HasFocus(9001)] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
             <animation type="Visible">
@@ -394,7 +404,7 @@
                 <width>100%</width>
                 <height>512</height>
                 <texture colordiffuse="7f000000">common/gradient.png</texture>
-                <visible>Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
+                <visible>Skin.HasSetting(global.backpanelmode) | Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
             </control>
             <control type="group">
                 <include>Furniture_TopBar_Header</include>

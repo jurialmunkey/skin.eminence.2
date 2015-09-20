@@ -282,7 +282,7 @@
             <height>24</height>
             <align>right</align>
             <font>Font-ListInfo-Small-Bold</font>
-            <label>$VAR[Label_ExtraInfo]</label>
+            <label>$VAR[Label_ExtraInfo_Icons]</label>
         </control>
     </include>
 
