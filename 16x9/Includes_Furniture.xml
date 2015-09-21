@@ -342,6 +342,7 @@
         <!-- Nothing Playing -->
         <control type="group">
             <visible>![VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
+            <visible>!Skin.HasSetting(disable.mainheader)</visible>
             <control type="label">
                 <posx>245</posx>
                 <posy>25</posy>

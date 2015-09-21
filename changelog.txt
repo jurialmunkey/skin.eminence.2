@@ -1,5 +1,6 @@
 [B]0.9.11[/B]
 Plot overlay
+Hide header text
 
 [B]0.9.10[/B]
 Show info on osd toggle

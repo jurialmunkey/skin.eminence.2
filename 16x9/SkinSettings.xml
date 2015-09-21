@@ -244,6 +244,16 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8007)</visible>
                     </control>
+                    <!-- Disable Header -->
+                    <control type="radiobutton" id="8703">
+                        <width>100%</width>
+                        <label>31014</label>
+                        <radioposx>1350</radioposx>
+                        <onclick>Skin.ToggleSetting(disable.mainheader)</onclick>
+                        <selected>!Skin.HasSetting(disable.mainheader)</selected>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                    </control>
                     <!-- Match header tile to highlight color -->
                     <control type="radiobutton" id="8709">
                         <width>100%</width>

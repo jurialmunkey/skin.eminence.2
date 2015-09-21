@@ -74,10 +74,13 @@ msgctxt "#31013"
 msgid "Muted"
 msgstr ""
 
+msgctxt "#31014"
+msgid "Show header"
+msgstr ""
+
 msgctxt "#31015"
 msgid "Live TV"
 msgstr ""
-
 
 msgctxt "#31017"
 msgid "Votes"
