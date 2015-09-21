@@ -27,6 +27,8 @@
         </control>
         <control type="grouplist">
             <visible>Skin.HasSetting(furniture.showflags)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <bottom>42</bottom>
             <left>side</left>
             <right>side</right>
