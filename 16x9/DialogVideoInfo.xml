@@ -18,6 +18,7 @@
                     <param name="left" value="0" />
                     <param name="width" value="posterw" />
                 </include>
+
             </control>
             <control type="group">
                 <top>70</top>
@@ -37,6 +38,7 @@
                         <param name="label" value="206" />
                     </include>
                 </control>
+                
 
                 <!-- INFO -->
                 <control type="grouplist">

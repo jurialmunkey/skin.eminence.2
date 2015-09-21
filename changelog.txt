@@ -2,6 +2,7 @@
 Show info on osd toggle
 Add transparent home bar theme (use only with 10 items or less)
 Conditional side home bar masks for more than ten items
+Media flags
 
 [B]0.9.9[/B]
 Opaque Panels

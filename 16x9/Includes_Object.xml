@@ -149,6 +149,7 @@
                     <texture background="true">$VAR[Image_Poster]</texture>
                     <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
                 </control>
+                
             </control>
         </definition>
     </include>
@@ -284,6 +285,15 @@
             <font>Font-ListInfo-Small-Bold</font>
             <label>$VAR[Label_ExtraInfo_Icons]</label>
         </control>
+        <!-- <control type="image">
+            <top>-48</top>
+            <left>5</left>
+            <width>64</width>
+            <height>64</height>
+            <aspectratio>keep</aspectratio>
+            <texture>indicator/3D.png</texture>
+            <visible>ListItem.IsStereoscopic</visible>
+        </control> -->
     </include>
 
     <!-- Line -->

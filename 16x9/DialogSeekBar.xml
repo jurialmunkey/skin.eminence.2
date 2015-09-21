@@ -30,6 +30,69 @@
                 <control type="grouplist">
                     <usecontrolcoords>true</usecontrolcoords>
                     <itemgap>pad</itemgap>
+                    <right>side</right>
+                    <top>50</top>
+                    <height>64</height>
+                    <align>right</align>
+                    <orientation>horizontal</orientation>
+                    <itemgap>side</itemgap>
+                    <control type="image">
+                        <width>64</width>
+                        <height>64</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">INFO[VideoPlayer.VideoResolution,indicator/resolution/,.png]</texture>
+                        <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+                    </control>
+                    <control type="image">
+                        <width>64</width>
+                        <height>64</height>
+                        <aspectratio>keep</aspectratio>
+                        <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[VideoPlayer.AudioChannels,indicator/channels/,.png]</texture>
+                    </control>
+                    <control type="image">
+                        <width>64</width>
+                        <height>64</height>
+                        <aspectratio>keep</aspectratio>
+                        <visible>!IsEmpty(VideoPlayer.Top250)</visible>
+                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
+                    </control>
+                    <control type="image">
+                        <width>64</width>
+                        <height>64</height>
+                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/bluray.png</texture>
+                        <visible>[substring(VideoPlayer.FilenameAndPath,bluray) | substring(VideoPlayer.FilenameAndPath,bdrip) | substring(VideoPlayer.FilenameAndPath,bd25) | substring(VideoPlayer.FilenameAndPath,bd50)]</visible>
+                    </control>
+                    <control type="image">
+                        <width>95</width>
+                        <height>64</height>
+                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/hddvd.png</texture>
+                        <visible>substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+                    </control>
+                    <control type="image">
+                        <width>64</width>
+                        <height>64</height>
+                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/dvd.png</texture>
+                        <visible>substring(VideoPlayer.FilenameAndPath,dvd) + !substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+                    </control>
+                    <control type="image">
+                        <width>64</width>
+                        <height>64</height>
+                        <aspectratio>keep</aspectratio>
+                        <visible>VideoPlayer.IsStereoscopic</visible>
+                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>64</height>
+                        <align>right</align>
+                        <font>Font-ListInfo-Small</font>
+                        <label>$INFO[VideoPlayer.MPAA, ,]$INFO[VideoPlayer.RatingAndVotes,  •  ,]</label>
+                    </control>
+                </control>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
                     <orientation>vertical</orientation>
                     <left>pad</left>
                     <right>pad</right>
@@ -45,20 +108,12 @@
                     </control>
                     <control type="label">
                         <left>pad</left>
-                        <right>pad</right>
+                        <right>580</right>
                         <height>32</height>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre][/COLOR][/UPPERCASE]</label>
                     </control>
-                    <control type="label">
-                        <top>-42</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Font-ListInfo-Small</font>
-                        <label>$INFO[VideoPlayer.MPAA]$INFO[VideoPlayer.RatingAndVotes,  •  ,]</label>
-                    </control>
+                    
                     <control type="textbox">
                         <left>pad</left>
                         <right>pad</right>

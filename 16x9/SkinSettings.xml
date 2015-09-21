@@ -325,6 +325,16 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Media Flags -->
+                    <control type="radiobutton" id="8903">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>31007</label>
+                        <selected>Skin.HasSetting(furniture.showflags)</selected>
+                        <onclick>Skin.ToggleSetting(furniture.showflags)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                 </control>
             </control>
         </control>

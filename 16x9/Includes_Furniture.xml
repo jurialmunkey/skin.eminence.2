@@ -25,6 +25,63 @@
                 <visible>Player.HasMedia</visible>
             </control>
         </control>
+        <control type="grouplist">
+            <visible>Skin.HasSetting(furniture.showflags)</visible>
+            <bottom>42</bottom>
+            <left>side</left>
+            <right>side</right>
+            <align>right</align>
+            <height>64</height>
+            <orientation>horizontal</orientation>
+            <itemgap>side</itemgap>
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
+                <visible>!IsEmpty(ListItem.VideoResolution)</visible>
+            </control>
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
+            </control>
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!IsEmpty(ListItem.Top250)</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
+            </control>
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/bluray.png</texture>
+                <visible>[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]</visible>
+            </control>
+            <control type="image">
+                <width>95</width>
+                <height>64</height>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/hddvd.png</texture>
+                <visible>substring(ListItem.FilenameAndPath,hddvd)</visible>
+            </control>
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/dvd.png</texture>
+                <visible>substring(ListItem.FilenameAndPath,dvd) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+            </control>
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <visible>ListItem.IsStereoscopic</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
+            </control>
+        </control>
+        
     </include>
 
     <!-- BACKGROUND -->
@@ -54,6 +111,15 @@
             <visible>!Window.IsVisible(weather)</visible>
             <visible>!Skin.HasSetting(global.backpanelmode)</visible>
         </control>
+        <control type="image">
+            <bottom>0</bottom>
+            <width>100%</width>
+            <height>512</height>
+            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+            <visible>Skin.HasSetting(global.backpanelmode)</visible>
+            <visible>!Window.IsVisible(home)</visible>
+            <visible>!Window.IsVisible(weather)</visible>
+        </control>
         <control type="group">
             <top>210</top>
             <height>806</height>
@@ -74,7 +140,8 @@
 
     <!-- TOP BAR -->
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
-        <value condition="VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(home)">HomeBarBG</value>
+        <value condition="Window.IsVisible(home)">HomeBarBG</value>
+        <value condition="VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)">HomeBarBG</value>
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
         <value condition="Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeBarBG</value>
         <value>PosterBorder</value>

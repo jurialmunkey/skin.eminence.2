@@ -46,6 +46,10 @@ msgctxt "#31006"
 msgid "Show plot when pressing info"
 msgstr ""
 
+msgctxt "#31007"
+msgid "Show media flags"
+msgstr ""
+
 msgctxt "#31009"
 msgid "Open playlist"
 msgstr ""
