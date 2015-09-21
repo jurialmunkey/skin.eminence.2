@@ -42,6 +42,12 @@
             <linespacing>1.08</linespacing>
         </font>
         <font>
+            <name>Font-ListInfo-Big</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>38</size>
+            <linespacing>1.08</linespacing>
+        </font>
+        <font>
             <name>Font-ListInfo-Small</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>27</size>

@@ -50,6 +50,10 @@ msgctxt "#31007"
 msgid "Show media flags"
 msgstr ""
 
+msgctxt "#31008"
+msgid "Show plot overlay in video library after delay"
+msgstr ""
+
 msgctxt "#31009"
 msgid "Open playlist"
 msgstr ""

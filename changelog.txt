@@ -1,3 +1,6 @@
+[B]0.9.11[/B]
+Plot overlay
+
 [B]0.9.10[/B]
 Show info on osd toggle
 Add transparent home bar theme (use only with 10 items or less)

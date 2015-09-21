@@ -88,7 +88,7 @@
 
         </control>
 
-        
+        <include>Furniture_OverlayInfo</include>
     </controls>
 
 </window>
