@@ -541,3 +541,7 @@ msgstr ""
 msgctxt "#31149"
 msgid "Next Aired"
 msgstr ""
+
+msgctxt "#31150"
+msgid "Show widget posters"
+msgstr ""

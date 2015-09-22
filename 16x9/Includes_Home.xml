@@ -258,7 +258,8 @@
         <control type="wraplist" id="9001">
             <orientation>horizontal</orientation>
             <width>100%</width>
-            <height>100%</height>
+            <top>top</top>
+            <height>height</height>
             <onfocus>ClearProperty(FO9001,home)</onfocus>
             <onunfocus>ClearProperty(FO9001,home)</onunfocus>
             <onup>ClearProperty(FO9001,home)</onup>
@@ -277,6 +278,59 @@
     <include name="Home_Widget">
         <control type="group">
             <posy>400</posy>
+            <include>Animation_Right</include>
+            <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
+            <visible>Skin.HasSetting(home.showwidgetposters)</visible>
+            <control type="image">
+                <posx>540</posx>
+                <width>2000</width>
+                <height>340</height>    
+                <texture colordiffuse="df181818" border="150">common/half-tile.png</texture>
+            </control>
+            <control type="grouplist">
+                <visible>!Container(9001).IsUpdating</visible>
+                <include>Animation_FadeIn</include>
+                <include>Animation_FadeOut</include>
+                <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
+                <animation effect="slide" start="0" end="220" condition="!Container(9001).OnPrevious" reversible="false" time="200">Conditional</animation>
+                <posx>595</posx>
+                <width>2000</width>
+                <top>pad</top>
+                <height>320</height>
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="-1" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="0" />
+                    <param name="focuseditem" value="true" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="1" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="2" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="3" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="4" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="5" />
+                    <param name="focuseditem" value="false" />
+                </include>     
+            </control>
+        </control>
+        <control type="group">
+            <posy>400</posy>
             <include>Animation_Left</include>
             <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
             <control type="image">
@@ -285,8 +339,7 @@
                 <height>340</height>    
                 <texture align="left" border="150" colordiffuse="HomeBarBG">common/half-tile.png</texture>
             </control>
-            <control type="grouplist">
-                
+            <control type="grouplist">     
                 <posx>64</posx>
                 <posy>20</posy>
                 <width>650</width>
@@ -382,6 +435,48 @@
 
     <!-- Now Playing -->
     <include name="Home_NowPlaying">
+        <control type="group">
+            <visible>Window.IsVisible(home)</visible>
+            <!-- <visible>!Control.HasFocus(9001)</visible> -->
+            <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
+            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>!Player.HasMedia</visible>
+            <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+            <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
+            <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+            <control type="image">
+                <left>0</left>
+                <posy>64r</posy>
+                <width>900</width>
+                <height>64</height>  
+                <aspectratio>scale</aspectratio>
+                <texture colordiffuse="HomeBarBG">common/white.png</texture>
+            </control>
+            <control type="image">
+                <left>800</left>
+                <posy>64r</posy>
+                <width>300</width>
+                <height>64</height>  
+                <aspectratio>scale</aspectratio>
+                <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
+            </control>
+            <control type="image">
+                <left>16</left>
+                <posy>48r</posy>
+                <width>32</width>
+                <height>32</height>
+                <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
+            </control>
+            <control type="rss">
+                <posx>48</posx>
+                <posy>48r</posy>
+                <width>1020</width>
+                <font>Font-RSS</font>
+                <textcolor>SideArrow</textcolor>
+                <headlinecolor>SideArrow</headlinecolor>
+                <titlecolor>LineLabel</titlecolor>
+            </control>
+        </control>
         <control type="group">
             <visible>Window.IsVisible(home)</visible>
             <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
