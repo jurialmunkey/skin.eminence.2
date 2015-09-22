@@ -326,6 +326,59 @@
             </control>
         </control>
     </include>
+    <include name="Home_Widget_Hidden">
+        <control type="group">
+            <posy>666</posy>
+            <include>Animation_Left</include>
+            <visible>Control.HasFocus(9001)</visible>
+            <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
+            <control type="image">
+                <posx>-100</posx>
+                <width>900</width>
+                <height>340</height>    
+                <texture align="left" border="150" colordiffuse="HomeBarBG">common/half-tile.png</texture>
+            </control>
+            <control type="grouplist">
+                
+                <posx>64</posx>
+                <posy>20</posy>
+                <width>650</width>
+                <orientation>vertical</orientation>
+                <control type="label">
+                    <label>$VAR[Label_HomeWidget]</label>
+                    <aligny>top</aligny>
+                    <height>35</height>
+                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                    <textcolor>HomeBarFG</textcolor>
+                </control>
+                <control type="label">
+                    <label>$VAR[Label_HomeWidget_Label]</label>
+                    <aligny>top</aligny>
+                    <font>Font-WidgetInfoTitle</font>
+                    <height>70</height>
+                    <textcolor>$VAR[HighlightColor2]</textcolor>
+                </control>
+                <control type="textbox">
+                    <label>$VAR[Label_HomeWidget_Plot]</label>
+                    <aligny>top</aligny>
+                    <align>left</align>
+                    <height>120</height>
+                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                    <textcolor>HomeBarFG</textcolor>
+                    <font>Font-ListInfo</font>
+                </control>
+                <control type="label">
+                    <label>$VAR[Label_HomeWidget_Info]</label>
+                    <aligny>center</aligny>
+                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                    <font>Font-ListInfo-Small</font>
+                    <height>65</height>
+                    <textcolor>HomeBarFG</textcolor>
+                    <visible>!IsEmpty(Container(9001).ListItem.Year)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
 
     <!-- Now Playing -->
     <include name="Home_NowPlaying">

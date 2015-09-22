@@ -102,7 +102,7 @@
                 <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
+                <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
                 <visible>!IsEmpty(ListItem.VideoResolution)</visible>
             </control>
             <control type="image">

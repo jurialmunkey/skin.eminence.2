@@ -115,6 +115,15 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
+                    <control type="radiobutton" id="8103">
+                        <width>100%</width>
+                        <label>31016</label>
+                        <radioposx>1350</radioposx>
+                        <selected>!Skin.HasSetting(home.hidewidgetbox)</selected>
+                        <onclick>Skin.ToggleSetting(home.hidewidgetbox)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                    </control>
 
                     <!-- BACKGROUND -->
                     <!-- Fanart -->

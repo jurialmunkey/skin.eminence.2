@@ -82,6 +82,10 @@ msgctxt "#31015"
 msgid "Live TV"
 msgstr ""
 
+msgctxt "#31016"
+msgid "Show widget information"
+msgstr ""
+
 msgctxt "#31017"
 msgid "Votes"
 msgstr ""
