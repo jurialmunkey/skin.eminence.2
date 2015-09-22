@@ -285,7 +285,8 @@
                 <posx>540</posx>
                 <width>2000</width>
                 <height>340</height>    
-                <texture colordiffuse="df181818" border="150">common/half-tile.png</texture>
+                <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
+                <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
             </control>
             <control type="grouplist">
                 <visible>!Container(9001).IsUpdating</visible>
@@ -337,7 +338,7 @@
                 <posx>-100</posx>
                 <width>900</width>
                 <height>340</height>    
-                <texture align="left" border="150" colordiffuse="HomeBarBG">common/half-tile.png</texture>
+                <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
             </control>
             <control type="grouplist">     
                 <posx>64</posx>
