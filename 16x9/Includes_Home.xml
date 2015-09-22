@@ -437,7 +437,7 @@
     <!-- Now Playing -->
     <include name="Home_NowPlaying">
         <control type="group">
-            <visible>Window.IsVisible(home)</visible>
+            <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
             <!-- <visible>!Control.HasFocus(9001)</visible> -->
             <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
             <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
@@ -448,18 +448,9 @@
             <control type="image">
                 <left>0</left>
                 <posy>64r</posy>
-                <width>900</width>
+                <width>1100</width>
                 <height>64</height>  
-                <aspectratio>scale</aspectratio>
-                <texture colordiffuse="HomeBarBG">common/white.png</texture>
-            </control>
-            <control type="image">
-                <left>800</left>
-                <posy>64r</posy>
-                <width>300</width>
-                <height>64</height>  
-                <aspectratio>scale</aspectratio>
-                <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
+                <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
             </control>
             <control type="image">
                 <left>16</left>
@@ -468,18 +459,10 @@
                 <height>32</height>
                 <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
             </control>
-            <control type="rss">
-                <posx>48</posx>
-                <posy>48r</posy>
-                <width>1020</width>
-                <font>Font-RSS</font>
-                <textcolor>SideArrow</textcolor>
-                <headlinecolor>SideArrow</headlinecolor>
-                <titlecolor>LineLabel</titlecolor>
-            </control>
+            
         </control>
         <control type="group">
-            <visible>Window.IsVisible(home)</visible>
+            <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
             <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
             <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
             <visible>Player.HasMedia</visible>
@@ -488,18 +471,9 @@
             <control type="image">
                 <left>0</left>
                 <posy>64r</posy>
-                <width>900</width>
+                <width>1100</width>
                 <height>64</height>  
-                <aspectratio>scale</aspectratio>
-                <texture colordiffuse="HomeBarBG">common/white.png</texture>
-            </control>
-            <control type="image">
-                <left>800</left>
-                <posy>64r</posy>
-                <width>300</width>
-                <height>64</height>  
-                <aspectratio>scale</aspectratio>
-                <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
+                <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
             </control>
             <control type="image">
                 <left>16</left>
@@ -554,6 +528,31 @@
                     <textcolor>LineLabel</textcolor>
                     <label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
                 </control>
+            </control>
+        </control>
+        <control type="group">
+            <bottom>266</bottom>
+            <visible>Window.IsActive(DialogKaiToast.xml)</visible>
+            <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+            <control type="image">
+                <left>0</left>
+                <posy>64r</posy>
+                <width>1100</width>
+                <height>64</height>  
+                <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
+            </control>
+        </control>
+        <control type="group">
+            <bottom>266</bottom>
+            <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
+            <visible>Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+            <control type="image">
+                <left>0</left>
+                <posy>64r</posy>
+                <width>1100</width>
+                <height>64</height>  
+                <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
             </control>
         </control>
     </include>

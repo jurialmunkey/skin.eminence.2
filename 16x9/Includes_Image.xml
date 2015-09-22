@@ -37,7 +37,7 @@
     <variable name="Image_RSS_Icon">
         <value condition="Player.HasMedia + Player.Paused">common/pause.png</value>
         <value condition="Player.HasMedia + !Player.Paused">common/play.png</value>
-        <value condition="!Player.HasMedia">common/rss.png</value>
+        <value condition="!Player.HasMedia + [system.getbool(lookandfeel.enablerssfeeds) | Window.IsVisible(SettingsCategory.xml)]">common/rss.png</value>
     </variable>
 
     <variable name="Image_Background">

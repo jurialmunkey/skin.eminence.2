@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window type="dialog" id="1197">
-	<visible>system.getbool(lookandfeel.enablerssfeeds) + !Window.IsVisible(slideshow) + !Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(home) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
+	<visible>system.getbool(lookandfeel.enablerssfeeds) + !Window.IsVisible(slideshow) + !Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
 	<controls>
 	    <control type="rss">
             <posx>48</posx>
@@ -12,9 +12,28 @@
             <headlinecolor>SideArrow</headlinecolor>
             <titlecolor>LineLabel</titlecolor>
             <visible>!Player.HasMedia</visible>
+            <animation effect="fade" start="100" end="0" condition="Window.IsVisible(weather) | Window.IsVisible(home)">Conditional</animation>
             <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
             <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
             <animation effect="slide" start="0,64" end="0" time="125">VisibleChange</animation>
+        </control>
+        <control type="rss">
+            <posx>48</posx>
+            <posy>314r</posy>
+            <width>1020</width>
+            <font>Font-RSS</font>
+            <textcolor>SideArrow</textcolor>
+            <headlinecolor>SideArrow</headlinecolor>
+            <titlecolor>LineLabel</titlecolor>
+            <visible>Window.IsVisible(weather) | Window.IsVisible(home)</visible>
+            <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
+            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>!Player.HasMedia</visible>
+            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
         </control>
 
         

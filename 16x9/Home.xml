@@ -32,49 +32,6 @@
                 <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
                 <include>Home_Menu</include>
                 <include>Home_NowPlaying</include>
-                <control type="group">
-                    <bottom>266</bottom>
-                    <visible>Window.IsActive(DialogKaiToast.xml)</visible>
-                    <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                    <control type="image">
-                        <left>0</left>
-                        <bottom>0</bottom>
-                        <width>900</width>
-                        <height>64</height>  
-                        <aspectratio>scale</aspectratio>
-                        <texture colordiffuse="HomeBarBG">common/white.png</texture>                
-                    </control>
-                    <control type="image">
-                        <left>800</left>
-                        <bottom>0</bottom>
-                        <width>300</width>
-                        <height>64</height>  
-                        <aspectratio>scale</aspectratio>
-                        <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
-                    </control>
-                </control>
-                <control type="group">
-                    <bottom>266</bottom>
-                    <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
-                    <visible>Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-                    <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                    <control type="image">
-                        <left>0</left>
-                        <bottom>0</bottom>
-                        <width>900</width>
-                        <height>64</height>  
-                        <aspectratio>scale</aspectratio>
-                        <texture colordiffuse="HomeBarBG">common/white.png</texture>                
-                    </control>
-                    <control type="image">
-                        <left>800</left>
-                        <bottom>0</bottom>
-                        <width>300</width>
-                        <height>64</height>  
-                        <aspectratio>scale</aspectratio>
-                        <texture align="left" flipy="true" flipx="false" border="70" colordiffuse="HomeBarBG">common/header.png</texture>
-                    </control>
-                </control>
             </control>
         </control>
 

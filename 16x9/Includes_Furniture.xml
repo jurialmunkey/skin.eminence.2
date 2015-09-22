@@ -112,6 +112,13 @@
                 <visible>!IsEmpty(ListItem.AudioChannels)</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
             </control>
+            <!-- <control type="image">
+                <width>95</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!IsEmpty(ListItem.MPAA)</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/mpaa/NR.png">$INFO[ListItem.MPAA,indicator/mpaa/,.png]</texture>
+            </control> -->
             <control type="image">
                 <width>64</width>
                 <height>64</height>
