@@ -53,6 +53,11 @@
             <size>27</size>
         </font>
         <font>
+            <name>Font-RSS</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>24</size>
+        </font>
+        <font>
             <name>Font-ListInfo-Small-Bold</name>
             <filename>Roboto-Bold.ttf</filename>
             <size>27</size>
