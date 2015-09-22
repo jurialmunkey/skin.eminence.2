@@ -159,6 +159,8 @@
     <include name="Furniture_Background">
         <control type="videowindow">
             <visible>Skin.HasSetting(background.showvideo)</visible>
+            <visible>Player.HasVideo</visible>
+            <visible>!Window.IsVisible(weather)</visible>
             <width>100%</width>
             <height>100%</height>
         </control>
@@ -172,7 +174,7 @@
             <aspectratio>scale</aspectratio>
             <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
             <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
+            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
         </control>
         <control type="image" description="Fanart Fade">
             <width>100%</width>

@@ -128,7 +128,7 @@
                         <width>100%</width>
                         <label>31150</label>
                         <radioposx>1350</radioposx>
-                        <enable>!Skin.HasSetting(home.hidewidgetbox)</enable>
+                        <!-- <enable>!Skin.HasSetting(home.hidewidgetbox)</enable> -->
                         <selected>Skin.HasSetting(home.showwidgetposters)</selected>
                         <onclick>Skin.ToggleSetting(home.showwidgetposters)</onclick>
                         <include>Defs_OptionButton</include>

@@ -383,6 +383,61 @@
     <include name="Home_Widget_Hidden">
         <control type="group">
             <posy>666</posy>
+            <include>Animation_Right</include>
+            <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
+            <visible>Skin.HasSetting(home.showwidgetposters)</visible>
+            <visible>Control.HasFocus(9001)</visible>
+            <control type="image">
+                <posx>540</posx>
+                <width>2000</width>
+                <height>340</height>    
+                <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
+                <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
+            </control>
+            <control type="grouplist">
+                <visible>!Container(9001).IsUpdating</visible>
+                <include>Animation_FadeIn</include>
+                <include>Animation_FadeOut</include>
+                <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
+                <animation effect="slide" start="0" end="220" condition="!Container(9001).OnPrevious" reversible="false" time="200">Conditional</animation>
+                <posx>595</posx>
+                <width>2000</width>
+                <top>pad</top>
+                <height>320</height>
+                <orientation>horizontal</orientation>
+                <itemgap>0</itemgap>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="-1" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="0" />
+                    <param name="focuseditem" value="true" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="1" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="2" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="3" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="4" />
+                    <param name="focuseditem" value="false" />
+                </include>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="5" />
+                    <param name="focuseditem" value="false" />
+                </include>     
+            </control>
+        </control>
+        <control type="group">
+            <posy>666</posy>
             <include>Animation_Left</include>
             <visible>Control.HasFocus(9001)</visible>
             <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
@@ -390,7 +445,7 @@
                 <posx>-100</posx>
                 <width>900</width>
                 <height>340</height>    
-                <texture align="left" border="150" colordiffuse="HomeBarBG">common/half-tile.png</texture>
+                <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
             </control>
             <control type="grouplist">
                 

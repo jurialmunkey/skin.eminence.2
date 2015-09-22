@@ -329,9 +329,10 @@
                     <aspectratio>keep</aspectratio>
                     <fadetime>200</fadetime>
                     <texture background="true">$VAR[Image_PVRThumb]</texture>
+                    <visible>!Player.HasVideo</visible>
                 </control>
                 <control type="videowindow">
-                    <top>-415</top>
+                    <!-- <top>-415</top> -->
                     <width>100%</width>
                     <height>405</height>
                     <visible>Player.HasVideo</visible>
