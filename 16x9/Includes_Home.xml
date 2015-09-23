@@ -282,7 +282,7 @@
             <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
             <visible>Skin.HasSetting(home.showwidgetposters)</visible>
             <control type="image">
-                <posx>540</posx>
+                <posx>305</posx>
                 <width>2000</width>
                 <height>340</height>    
                 <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
@@ -294,12 +294,16 @@
                 <include>Animation_FadeOut</include>
                 <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
                 <animation effect="slide" start="0" end="220" condition="!Container(9001).OnPrevious" reversible="false" time="200">Conditional</animation>
-                <posx>595</posx>
+                <posx>455</posx>
                 <width>2000</width>
                 <top>pad</top>
                 <height>320</height>
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="-2" />
+                    <param name="focuseditem" value="false" />
+                </include>
                 <include name="Object_HomeWidgetPoster">
                     <param name="id" value="-1" />
                     <param name="focuseditem" value="false" />
@@ -388,7 +392,7 @@
             <visible>Skin.HasSetting(home.showwidgetposters)</visible>
             <visible>Control.HasFocus(9001)</visible>
             <control type="image">
-                <posx>540</posx>
+                <posx>305</posx>
                 <width>2000</width>
                 <height>340</height>    
                 <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
@@ -400,12 +404,16 @@
                 <include>Animation_FadeOut</include>
                 <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
                 <animation effect="slide" start="0" end="220" condition="!Container(9001).OnPrevious" reversible="false" time="200">Conditional</animation>
-                <posx>595</posx>
+                <posx>455</posx>
                 <width>2000</width>
                 <top>pad</top>
                 <height>320</height>
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
+                <include name="Object_HomeWidgetPoster">
+                    <param name="id" value="-2" />
+                    <param name="focuseditem" value="false" />
+                </include>
                 <include name="Object_HomeWidgetPoster">
                     <param name="id" value="-1" />
                     <param name="focuseditem" value="false" />
