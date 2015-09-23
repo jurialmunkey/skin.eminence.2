@@ -104,7 +104,13 @@
                                 <width>100%</width>
                                 <height>100%</height>
                                 <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-                                <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(11)">Conditional</animation>
+                                <visible>Control.HasFocus(11)</visible>
+                            </control>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                                <visible>!Control.HasFocus(11)</visible>
                             </control>
                             <control type="label">
                                 <left>side</left>
@@ -155,7 +161,13 @@
                                 <width>100%</width>
                                 <height>100%</height>
                                 <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-                                <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(12)">Conditional</animation>
+                                <visible>Control.HasFocus(12)</visible>
+                            </control>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                                <visible>!Control.HasFocus(12)</visible>
                             </control>
                             <control type="label">
                                 <left>side</left>
