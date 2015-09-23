@@ -545,3 +545,11 @@ msgstr ""
 msgctxt "#31150"
 msgid "Show widget posters"
 msgstr ""
+
+msgctxt "#31151"
+msgid "Set home tile icon"
+msgstr ""
+
+msgctxt "#31152"
+msgid "Set home tile text"
+msgstr ""

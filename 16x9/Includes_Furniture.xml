@@ -231,7 +231,7 @@
         <value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>
         <value condition="stringcompare(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]</value>
         <value condition="stringcompare(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
-        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle)">[CAPITALIZE]$INFO[ListItem.TvShowTitle][/CAPITALIZE]</value>
+        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle) + substring(Container.FolderPath,videodb://tvshows/titles/)">[CAPITALIZE]$INFO[ListItem.TvShowTitle][/CAPITALIZE]</value>
         <value condition="!IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
         <value condition="Window.IsVisible(home)">$LOCALIZE[10000]</value>
         <value condition="Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
