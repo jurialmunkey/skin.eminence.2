@@ -15,16 +15,16 @@
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,450" start="0">Hidden</animation>
     </include>
     <include name="Animation_Left">
-        <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1260" end="0">WindowOpen</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1260" start="0">WindowClose</animation>
-        <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1260" end="0">Visible</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1260" start="0">Hidden</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="250" start="-1860" end="0" delay="100">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="250" end="-1860" start="0">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="250" start="-1860" end="0" delay="100">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="250" end="-1860" start="0">Hidden</animation>
     </include>
     <include name="Animation_Right">
-        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1260" end="0">WindowOpen</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1260" start="0">WindowClose</animation>
-        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1260" end="0">Visible</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1260" start="0">Hidden</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="250" start="1860" end="0" delay="100">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="250" end="1860" start="0">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="250" start="1860" end="0" delay="100">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="250" end="1860" start="0">Hidden</animation>
     </include>
     <include name="Animation_Common">
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">WindowOpen</animation>
