@@ -1,6 +1,7 @@
 [B]0.9.14[/B]
 Add ability to show posters only on up (widget info hidden)
 Fix favourites bug
+All PVR Dialogs complete
 
 [B]0.9.13[/B]
 Widget poster options

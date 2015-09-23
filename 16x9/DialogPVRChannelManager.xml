@@ -1,264 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- pvrchannelmanager -->
-	<defaultcontrol always="true">20</defaultcontrol>
-	<include>DialogZoomAnimation</include>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <controls>
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <left>0</left>
+            <right>0</right>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <height>height</height>
+                <include name="Object_Line">
+                    <param name="width" value="1880" />
+                    <param name="label" value="$LOCALIZE[19199]" />
+                </include>
+                <control type="list" id="20">
+                    <scrolltime>200</scrolltime>
+                    <orientation>vertical</orientation>
+                    <preloaditems>2</preloaditems>
+                    <onright>9000</onright>
+                    <itemlayout width="690" height="138">
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="group">
+                            <control type="image">
+                                <top>pad</top>
+                                <left>pad</left>
+                                <width>118</width>
+                                <height>118</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="group">
+                                <left>148</left>
+                                <right>30</right>
+                                <control type="label">
+                                    <width>100%</width>
+                                    <top>0</top>
+                                    <bottom>30%</bottom>
+                                    <textcolor>ListLabel</textcolor>
+                                    <font>Font-ListInfo-Small-Bold</font>
+                                    <aligny>center</aligny>
+                                    <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
+                                </control>
+                                <control type="label">
+                                    <width>100%</width>
+                                    <top>30%</top>
+                                    <bottom>0</bottom>
+                                    <textcolor>ListLabel</textcolor>
+                                    <font>Font-ListInfo-Small</font>
+                                    <aligny>center</aligny>
+                                    <label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
+                                </control>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="690" height="138">
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(20)">Conditional</animation>
+                        </control>
+                        <control type="group">
+                            <control type="image">
+                                <top>pad</top>
+                                <left>pad</left>
+                                <width>118</width>
+                                <height>118</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="group">
+                                <left>148</left>
+                                <right>30</right>
+                                <control type="label">
+                                    <width>100%</width>
+                                    <top>0</top>
+                                    <bottom>30%</bottom>
+                                    <textcolor>Selected</textcolor>
+                                    <font>Font-ListInfo-Small-Bold</font>
+                                    <aligny>center</aligny>
+                                    <label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
+                                </control>
+                                <control type="label">
+                                    <width>100%</width>
+                                    <top>30%</top>
+                                    <bottom>0</bottom>
+                                    <textcolor>Selected</textcolor>
+                                    <font>Font-ListInfo-Small</font>
+                                    <aligny>center</aligny>
+                                    <label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
+                                </control>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="grouplist" id="9000">
+                    <left>710</left>
+                    <width>690</width>
+                    <itemgap>0</itemgap>
+                    <onleft>20</onleft>
+                    <onright>9100</onright>
+                    <!-- Channel activated -->
+                    <control type="radiobutton" id="7">
+                        <radioposx>640</radioposx>
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19074</label>
+                    </control>
 
-	<controls>
+                    <!-- Channel name -->
+                    <control type="edit" id="8">
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <textoffsetx>20</textoffsetx>
+                        <textwidth>650</textwidth>
+                        <label>19201</label>
+                    </control>
 
-		<!-- Background -->
-		<include>DialogBackgroundImage</include>
+                    <!-- Channel logo button -->
+                    <control type="button" id="9">
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19202</label>
+                    </control>
 
-		<!-- Heading -->
-		<control type="label">
-			<left>150</left>
-			<top>96</top>
-			<width>1620</width>
-			<height>72</height>
-			<font>Font72</font>
-			<label>19199</label>
-		</control>
+                    <!-- EPG activated -->
+                    <control type="radiobutton" id="12">
+                        <radioposx>640</radioposx>
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19074</label>
+                    </control>
 
-		<!-- Left list -->			
-		<control type="list" id="20">
-			<left>150</left>
-			<top>228</top>
-			<width>800</width>
-			<height>660</height>
-			<onup>20</onup>
-			<ondown>20</ondown>
-			<onleft>noop</onleft>
-			<onright>9000</onright>
-			<scrolltime tween="sine" easing="out">240</scrolltime>
+                    <!-- EPG source -->
+                    <control type="spincontrolex" id="13">
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <textwidth>650</textwidth>
+                        <label>19200</label>
+                    </control>
 
-			<itemlayout width="800" height="66">
+                    <!-- Parental locked -->
+                    <control type="radiobutton" id="14">
+                        <radioposx>640</radioposx>
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19267</label>
+                    </control>
 
-				<control type="group">
-					<animation effect="fade" start="100" end="50" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
-					<control type="image">
-						<left>3</left>
-						<top>3</top>
-						<width>60</width>
-						<height>60</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<left>80</left>
-						<width>720</width>
-						<height>66</height>
-						<textcolor>SelectedColor</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
-						<label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-						<visible>ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<left>80</left>
-						<width>720</width>
-						<height>66</height>
-						<textcolor>DialogColor2</textcolor>
-						<selectedcolor>DialogColor2</selectedcolor>
-						<label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-						<visible>!ListItem.Property(Changed)</visible>
-					</control>
-				</control>
+                    <!-- Edit channel button -->
+                    <control type="button" id="31">
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19203</label>
+                    </control>
 
-			</itemlayout>
+                    <!-- Delete channel button -->
+                    <control type="button" id="32">
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19211</label>
+                    </control>
 
-			<focusedlayout width="800" height="132">
+                    <!-- New channel button -->
+                    <control type="button" id="33">
+                        <width>690</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19204</label>
+                    </control>
+                </control>
+                <control type="grouplist" id="9100">
+                    <left>1420</left>
+                    <right>0</right>
+                    <itemgap>0</itemgap>
+                    <onleft>9000</onleft>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <!-- OK Button -->
+                    <control type="button" id="4">
+                        <width>100%</width>
+                        <include>Defs_OptionButton</include>
+                        <label>186</label>
+                    </control>
 
-				<control type="group">
-					<animation effect="fade" start="100" end="50" condition="!ListItem.Property(ActiveChannel)">Conditional</animation>
-					<animation effect="fade" start="100" end="75" condition="!Control.HasFocus(20)">Conditional</animation>
-					<control type="image">
-						<left>3</left>
-						<top>3</top>
-						<width>60</width>
-						<height>60</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="label">
-						<left>80</left>
-						<width>720</width>
-						<height>66</height>
-						<textcolor>SelectedColor</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
-						<label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-						<visible>ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<left>80</left>
-						<width>720</width>
-						<height>66</height>
-						<textcolor>DialogColor1</textcolor>
-						<selectedcolor>DialogColor1</selectedcolor>
-						<label>$INFO[ListItem.Property(Number),(,) ]$INFO[ListItem.Property(Name)]</label>
-						<visible>!ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<top>80</top>
-						<left>20</left>
-						<width>860</width>
-						<height>27</height>
-						<font>Font27</font>
-						<textcolor>SelectedColor</textcolor>
-						<selectedcolor>SelectedColor</selectedcolor>
-						<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
-						<visible>ListItem.Property(Changed)</visible>
-					</control>
-					<control type="label">
-						<top>80</top>
-						<left>20</left>
-						<width>860</width>
-						<height>27</height>
-						<font>Font27</font>
-						<textcolor>DialogColor1</textcolor>
-						<selectedcolor>DialogColor1</selectedcolor>
-						<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
-						<visible>!ListItem.Property(Changed)</visible>
-					</control>
-				</control>
+                    <!-- Cancel Button -->
+                    <control type="button" id="6">
+                        <width>100%</width>
+                        <include>Defs_OptionButton</include>
+                        <label>222</label>
+                    </control>
 
-			</focusedlayout>
+                    <!-- Apply changes Button -->
+                    <control type="button" id="5">
+                        <width>100%</width>
+                        <include>Defs_OptionButton</include>
+                        <label>14070</label>
+                    </control>
 
-		</control>
+                    <!-- TV/Radio Button -->
+                    <control type="togglebutton" id="34">
+                        <width>100%</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19024</label>
+                        <altlabel>19023</altlabel>
+                        <usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
+                    </control>
 
-		<control type="grouplist" id="9000">
-			<left>960</left>
-			<top>228</top>
-			<width>800</width>
-			<height>660</height>
-			<itemgap>0</itemgap>
-			<onleft>20</onleft>
-			<onright>noop</onright>
-			<onup>noop</onup>
-			<ondown>4</ondown>
-			<orientation>vertical</orientation>
-			<usecontrolcoords>true</usecontrolcoords>
+                    <!-- Group Manager Button -->
+                    <control type="button" id="30">
+                        <width>100%</width>
+                        <include>Defs_OptionButton</include>
+                        <label>19205</label>
+                    </control>
 
-			<!-- Channel options header -->
-			<control type="label" id="100">
-				<width>800</width>
-				<height>66</height>
-				<label>$LOCALIZE[19029] $LOCALIZE[33063]</label>
-			</control>
+                    <!-- Icon Background -->
+                    <control type="image" id="9101">
+                        <top>side</top>
+                        <height>325</height>
+                        <width>460</width>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
 
-			<!-- Channel activated -->
-			<control type="radiobutton" id="7">
-				<width>800</width>
-				<label>19074</label>
-			</control>
-
-			<!-- Channel name -->
-			<control type="edit" id="8">
-				<width>800</width>
-				<textoffsetx>20</textoffsetx>
-				<textwidth>760</textwidth>
-				<label>19201</label>
-				<texturefocus>dialogs/DialogTextBackground.png</texturefocus>
-				<texturenofocus>dialogs/DialogTextBackground.png</texturenofocus>
-			</control>
-
-			<!-- Channel logo button -->
-			<control type="button" id="9">
-				<width>800</width>
-				<label>19202</label>
-			</control>
-
-			<!-- Current channel logo -->
-			<control type="image" id="10">
-				<top>-63</top>
-				<left>737</left>
-				<width>60</width>
-				<height>60</height>
-				<texture>$INFO[ListItem.Icon]</texture>
-			</control>
-
-			<!-- EPG activated -->
-			<control type="radiobutton" id="12">
-				<width>800</width>
-				<label>19074</label>
-			</control>
-
-			<!-- EPG source -->
-			<control type="spincontrolex" id="13">
-				<width>800</width>
-				<textwidth>760</textwidth>
-				<label>19200</label>
-			</control>
-
-			<!-- Parental locked -->
-			<control type="radiobutton" id="14">
-				<width>800</width>
-				<label>19267</label>
-			</control>
-
-			<!-- Edit channel button -->
-			<control type="button" id="31">
-				<width>800</width>
-				<label>19203</label>
-			</control>
-
-			<!-- Delete channel button -->
-			<control type="button" id="32">
-				<width>800</width>
-				<label>19211</label>
-			</control>
-
-			<!-- New channel button -->
-			<control type="button" id="33">
-				<width>800</width>
-				<label>19204</label>
-			</control>
-
-		</control>
-
-		<!-- Button grouplist -->
-		<control type="grouplist" id="9001">
-			<left>150</left>
-			<top>926</top>
-			<width>1620</width>
-			<itemgap>0</itemgap>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
-			<onup>9000</onup>
-			<ondown>noop</ondown>
-			<defaultcontrol>4</defaultcontrol>
-			<orientation>horizontal</orientation>
-
-			<!-- OK Button -->
-			<control type="button" id="4">
-				<width>260</width>
-				<label>186</label>
-			</control>
-
-			<!-- Cancel Button -->
-			<control type="button" id="6">
-				<width>260</width>
-				<label>222</label>
-			</control>
-
-			<!-- Apply changes Button -->
-			<control type="button" id="5">
-				<width>366</width>
-				<label>14070</label>
-			</control>
-
-			<!-- TV/Radio Button -->
-			<control type="togglebutton" id="34">
-				<width>366</width>
-				<label>19024</label>
-				<altlabel>19023</altlabel>
-				<usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
-			</control>
-
-			<!-- Group Manager Button -->
-			<control type="button" id="30">
-				<width>366</width>
-				<label>19205</label>
-			</control>
-
-		</control>
-
-	</controls>
-
+                    <!-- Icon -->
+                    <control type="image" id="10">
+                        <top>-325</top>
+                        <height>325</height>
+                        <width>460</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <bordersize>50</bordersize>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
 </window>
