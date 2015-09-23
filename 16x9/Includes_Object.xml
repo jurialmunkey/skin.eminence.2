@@ -7,11 +7,11 @@
             <visible>!IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
             <control type="image">
                 <centerleft>50%</centerleft>
-                <width>208</width>
-                <bottom>6</bottom>
-                <top>6</top>
+                <width>210</width>
+                <bottom>5</bottom>
+                <top>5</top>
                 <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
-                <bordersize>4</bordersize>
+                <bordersize>5</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
                 <visible>Control.HasFocus(9001)</visible>
@@ -33,11 +33,11 @@
             <visible>!IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) + IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
             <control type="image">
                 <centerleft>50%</centerleft>
-                <width>208</width>
-                <bottom>6</bottom>
-                <top>6</top>
+                <width>210</width>
+                <bottom>5</bottom>
+                <top>5</top>
                 <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
-                <bordersize>4</bordersize>
+                <bordersize>5</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
                 <visible>Control.HasFocus(9001)</visible>
@@ -59,11 +59,11 @@
             <visible>IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)) + IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster))</visible>
             <control type="image">
                 <centerleft>50%</centerleft>
-                <width>208</width>
-                <bottom>6</bottom>
-                <top>6</top>
+                <width>210</width>
+                <bottom>5</bottom>
+                <top>5</top>
                 <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
-                <bordersize>4</bordersize>
+                <bordersize>5</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
                 <visible>Control.HasFocus(9001)</visible>
