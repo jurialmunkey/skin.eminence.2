@@ -1,5 +1,6 @@
 [B]0.9.15[/B]
 Widget poster and discart options
+Add director movies to info
 
 [B]0.9.14[/B]
 Add ability to show posters only on up (widget info hidden)

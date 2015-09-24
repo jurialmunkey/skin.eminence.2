@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="skin.eminence.2"
-	version="0.9.14"
-	name="Eminence 2.0"
-	provider-name="jurialmunkey">
-	<requires>
-		<import addon="xbmc.gui" version="5.3.0"/>
-		<import addon="script.skinshortcuts" version="0.5.3"/>
+    id="skin.eminence.2"
+    version="0.9.14"
+    name="Eminence 2.0"
+    provider-name="jurialmunkey">
+    <requires>
+        <import addon="xbmc.gui" version="5.3.0"/>
+        <import addon="script.skinshortcuts" version="0.6.0"/>
         <import addon="script.skin.helper.service" version="0.0.1"/>
-	</requires>
-	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
-		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Clean, clear, simple, modern.</summary>
-		<disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
-		<description lang="en">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
-	</extension>
+        <import addon="script.extendedinfo" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Clean, clear, simple, modern.</summary>
+        <disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
+        <description lang="en">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
+    </extension>
 </addon>

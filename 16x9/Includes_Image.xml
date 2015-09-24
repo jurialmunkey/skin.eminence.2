@@ -4,6 +4,7 @@
     <variable name="Image_Poster">
         <value condition="!IsEmpty(Window.Property(actor.thumb))">$INFO[Window.Property(actor.thumb)]</value>
         <value condition="!IsEmpty(Window.Property(movie.thumb))">$INFO[Window.Property(movie.thumb)]</value>
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) + !IsEmpty(Window.Property(list))">$INFO[Container(9500).ListItem.Icon]</value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml) + StringCompare(Control.GetLabel(5),$LOCALIZE[207])">$INFO[Container(50).ListItem.Icon]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>

@@ -25,24 +25,31 @@
                 <left>497</left>
                 <right>side</right>
                 <control type="group">
-                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
                     <include name="Object_Line">
                         <param name="width" value="1200" />
                         <param name="label" value="207" />
                     </include>
                 </control>
                 <control type="group">
-                    <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                    <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
                     <include name="Object_Line">
                         <param name="width" value="1200" />
                         <param name="label" value="206" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible allowhiddenfocus="true">StringCompare(Window.Property(list),Director)</visible>
+                    <include name="Object_Line">
+                        <param name="width" value="1200" />
+                        <param name="label" value="20339" />
                     </include>
                 </control>
                 
 
                 <!-- INFO -->
                 <control type="grouplist">
-                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                    <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
                     <usecontrolcoords>true</usecontrolcoords>
                     <itemgap>pad</itemgap>
                     <orientation>vertical</orientation>
@@ -164,7 +171,7 @@
                     </control>
                 </control>
                 <control type="grouplist">
-                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                    <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
                     <bottom>74</bottom>
                     <left>-20</left>
                     <right>-20</right>
@@ -257,6 +264,7 @@
                         <width>290</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
+                        <onfocus>ClearProperty(list)</onfocus>
                     </control>
                     <!-- Trailer Button -->
                     <control type="button" id="11">
@@ -265,6 +273,7 @@
                         <label>20410</label>
                         <visible>!IsEmpty(ListItem.Trailer)</visible>
                         <include>Defs_OptionButton</include>
+                        <onfocus>ClearProperty(list)</onfocus>
                     </control>
                     <!-- Cast Button -->
                     <control type="button" id="5">
@@ -273,6 +282,17 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(51)</onclick>
                         <include>Defs_OptionButton</include>
+                        <onfocus>ClearProperty(list)</onfocus>
+                    </control>
+                    <!-- Director Button -->
+                    <control type="button" id="9001">
+                        <label>20339</label>
+                        <width>290</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <onclick>SetProperty(list,Director)</onclick>
+                        <onclick>SetFocus(9500)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <onfocus>ClearProperty(list)</onfocus>
                     </control>
                     <!-- Refresh Button -->
                     <control type="button" id="6">
@@ -281,6 +301,7 @@
                         <label>184</label>
                         <width>147</width>
                         <include>Defs_OptionButton</include>
+                        <onfocus>ClearProperty(list)</onfocus>
                     </control>
                     <!-- Get Thumb Button -->
                     <control type="button" id="10">
@@ -288,6 +309,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>13511</label>
                         <include>Defs_OptionButton</include>
+                        <onfocus>ClearProperty(list)</onfocus>
                     </control>
                     <!-- Artwork Downloader Button -->
                     <control type="button" id="20">
@@ -298,6 +320,7 @@
                         <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
                         <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
                         <include>Defs_OptionButton</include>
+                        <onfocus>ClearProperty(list)</onfocus>
                     </control>
                     
                     <!-- Cinema Experience Button -->
@@ -309,6 +332,7 @@
                         <onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
                         <visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
                         <include>Defs_OptionButton</include>
+                        <onfocus>ClearProperty(list)</onfocus>
                     </control>
                 </control>
 
@@ -344,6 +368,43 @@
                         <width>16</width>
                         <texture colordiffuse="LineLabel">common/16-arrow-down.png</texture>
                         <visible>Container(50).HasNext + Control.HasFocus(51)</visible>
+                    </control>
+                </control>
+
+                <!-- DIRECTOR -->
+                <control type="group">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>30</top>
+                    <visible allowhiddenfocus="true">StringCompare(Window.Property(list),Director)</visible>
+                    <include name="Dialog_BasicList">
+                        <param name="width" value="1190" />
+                        <param name="height" value="552" />
+                        <param name="id" value="9500" />
+                        <param name="type" value="list" />
+                        <param name="onleft" value="9000" />
+                        <param name="onback" value="9000" />
+                        <param name="onback2" value="ClearProperty(list)" />
+                        <param name="ondown" value="9000" />
+                        <param name="backpanel" value="false" />
+                        <param name="contentvisible" value="true" />
+                        <param name="content" value="plugin://script.extendedinfo?info=directormovies&amp;&amp;director=$INFO[ListItem.Director]" />
+                    </include>
+                    <control type="image">
+                        <top>-28</top>
+                        <centerleft>50%</centerleft>
+                        <height>16</height>
+                        <width>16</width>
+                        <texture colordiffuse="LineLabel" flipy="true">common/16-arrow-down.png</texture>
+                        <visible>Container(9500).HasPrevious + Control.HasFocus(9500)</visible>
+                    </control>
+                    <control type="image">
+                        <top>556</top>
+                        <centerleft>50%</centerleft>
+                        <height>16</height>
+                        <width>16</width>
+                        <texture colordiffuse="LineLabel">common/16-arrow-down.png</texture>
+                        <visible>Container(9500).HasNext + Control.HasFocus(9500)</visible>
                     </control>
                 </control>
             </control>
