@@ -553,3 +553,19 @@ msgstr ""
 msgctxt "#31152"
 msgid "Set home tile text"
 msgstr ""
+
+msgctxt "#31153"
+msgid "Always"
+msgstr ""
+
+msgctxt "#31154"
+msgid "On Up"
+msgstr ""
+
+msgctxt "#31155"
+msgid "Never"
+msgstr ""
+
+msgctxt "#31156"
+msgid "Show widget discart"
+msgstr ""

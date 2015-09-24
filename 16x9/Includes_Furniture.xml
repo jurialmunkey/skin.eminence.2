@@ -271,7 +271,7 @@
         <value condition="Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addons.png</value>
         <value condition="Window.IsVisible(MyMusicPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
         <value condition="Window.IsVisible(FileManager.xml)">special://skin/extras/icons/database.png</value>
-        <value condition="!IsEmpty(Window(home).Property(Header.Icon))">$INFO[Window(home).Property(Header.Icon)]</value>
+        <value condition="!IsEmpty(Window(home).Property(Header.Icon)) + substring(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
         <value>special://skin/extras/icons/home.png</value>
     </variable>
     <include name="Furniture_TopBar_Tile">

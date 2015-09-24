@@ -272,225 +272,148 @@
             <content target="video">$VAR[Defs_HomeWidget_Content]</content>
         </control>
     </include>
+    <include name="Home_Widget_DiscArt">
+        <control type="image">
+            <left>620</left>
+            <top>side</top>
+            <width>300</width>
+            <height>300</height>    
+            <aspectratio>keep</aspectratio>
+            <animation type="VisibleChange">
+                <effect type="slide" start="-300" end="0" time="300" />
+                <effect type="rotate" start="120" end="0" time="300" center="auto"/>
+            </animation>
+            <fadetime>300</fadetime>
+            <visible>!IsEmpty(Container(9001).ListItem.Art(discart))</visible>
+            <texture background="true">$INFO[Container(9001).ListItem.Art(discart)]</texture>
+        </control>
+    </include>
+    <include name="Home_Widget_Left">
+        <include>Animation_Left</include>
+        <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
+        <include condition="Skin.HasSetting(home.showdiscart) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Home_Widget_DiscArt</include>
+        <control type="image">
+            <posx>-100</posx>
+            <width>900</width>
+            <height>340</height>    
+            <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
+        </control>
+        <control type="grouplist">     
+            <posx>64</posx>
+            <posy>20</posy>
+            <width>650</width>
+            <orientation>vertical</orientation>
+            <control type="label">
+                <label>$VAR[Label_HomeWidget]</label>
+                <aligny>top</aligny>
+                <height>35</height>
+                <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                <textcolor>HomeBarFG</textcolor>
+            </control>
+            <control type="label">
+                <label>$VAR[Label_HomeWidget_Label]</label>
+                <aligny>top</aligny>
+                <font>Font-WidgetInfoTitle</font>
+                <height>70</height>
+                <textcolor>$VAR[HighlightColor2]</textcolor>
+            </control>
+            <control type="textbox">
+                <label>$VAR[Label_HomeWidget_Plot]</label>
+                <aligny>top</aligny>
+                <align>left</align>
+                <height>120</height>
+                <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                <textcolor>HomeBarFG</textcolor>
+                <font>Font-ListInfo</font>
+            </control>
+            <control type="label">
+                <label>$VAR[Label_HomeWidget_Info]</label>
+                <aligny>center</aligny>
+                <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+                <font>Font-ListInfo-Small</font>
+                <height>65</height>
+                <textcolor>HomeBarFG</textcolor>
+                <visible>!IsEmpty(Container(9001).ListItem.Year)</visible>
+            </control>
+        </control>
+    </include>
+    <include name="Home_Widget_Right">
+        <include>Animation_Right</include>
+        <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
+        <control type="image">
+            <posx>305</posx>
+            <width>2000</width>
+            <height>340</height>    
+            <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
+            <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
+        </control>
+        <control type="grouplist">
+            <visible>!Container(9001).IsUpdating</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
+            <animation effect="slide" start="0" end="220" condition="!Container(9001).OnPrevious" reversible="false" time="200">Conditional</animation>
+            <posx>455</posx>
+            <width>2000</width>
+            <top>pad</top>
+            <height>320</height>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <include name="Object_HomeWidgetPoster">
+                <param name="id" value="-2" />
+                <param name="focuseditem" value="false" />
+            </include>
+            <include name="Object_HomeWidgetPoster">
+                <param name="id" value="-1" />
+                <param name="focuseditem" value="false" />
+            </include>
+            <include name="Object_HomeWidgetPoster">
+                <param name="id" value="0" />
+                <param name="focuseditem" value="true" />
+            </include>
+            <include name="Object_HomeWidgetPoster">
+                <param name="id" value="1" />
+                <param name="focuseditem" value="false" />
+            </include>
+            <include name="Object_HomeWidgetPoster">
+                <param name="id" value="2" />
+                <param name="focuseditem" value="false" />
+            </include>
+            <include name="Object_HomeWidgetPoster">
+                <param name="id" value="3" />
+                <param name="focuseditem" value="false" />
+            </include>
+            <include name="Object_HomeWidgetPoster">
+                <param name="id" value="4" />
+                <param name="focuseditem" value="false" />
+            </include>
+            <include name="Object_HomeWidgetPoster">
+                <param name="id" value="5" />
+                <param name="focuseditem" value="false" />
+            </include>     
+        </control>
+    </include>
     <include name="Home_Widget">
         <control type="group">
             <posy>400</posy>
-            <include>Animation_Right</include>
-            <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
-            <visible>Skin.HasSetting(home.showwidgetposters)</visible>
-            <control type="image">
-                <posx>305</posx>
-                <width>2000</width>
-                <height>340</height>    
-                <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
-                <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
-            </control>
-            <control type="grouplist">
-                <visible>!Container(9001).IsUpdating</visible>
-                <include>Animation_FadeIn</include>
-                <include>Animation_FadeOut</include>
-                <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
-                <animation effect="slide" start="0" end="220" condition="!Container(9001).OnPrevious" reversible="false" time="200">Conditional</animation>
-                <posx>455</posx>
-                <width>2000</width>
-                <top>pad</top>
-                <height>320</height>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="-2" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="-1" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="0" />
-                    <param name="focuseditem" value="true" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="1" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="2" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="3" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="4" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="5" />
-                    <param name="focuseditem" value="false" />
-                </include>     
-            </control>
+            <visible>Control.HasFocus(9001) | stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])</visible>
+            <include condition="stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) | stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Home_Widget_Right</include>
         </control>
         <control type="group">
             <posy>400</posy>
-            <include>Animation_Left</include>
-            <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
-            <control type="image">
-                <posx>-100</posx>
-                <width>900</width>
-                <height>340</height>    
-                <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
-            </control>
-            <control type="grouplist">     
-                <posx>64</posx>
-                <posy>20</posy>
-                <width>650</width>
-                <orientation>vertical</orientation>
-                <control type="label">
-                    <label>$VAR[Label_HomeWidget]</label>
-                    <aligny>top</aligny>
-                    <height>35</height>
-                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                    <textcolor>HomeBarFG</textcolor>
-                </control>
-                <control type="label">
-                    <label>$VAR[Label_HomeWidget_Label]</label>
-                    <aligny>top</aligny>
-                    <font>Font-WidgetInfoTitle</font>
-                    <height>70</height>
-                    <textcolor>$VAR[HighlightColor2]</textcolor>
-                </control>
-                <control type="textbox">
-                    <label>$VAR[Label_HomeWidget_Plot]</label>
-                    <aligny>top</aligny>
-                    <align>left</align>
-                    <height>120</height>
-                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                    <textcolor>HomeBarFG</textcolor>
-                    <font>Font-ListInfo</font>
-                </control>
-                <control type="label">
-                    <label>$VAR[Label_HomeWidget_Info]</label>
-                    <aligny>center</aligny>
-                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                    <font>Font-ListInfo-Small</font>
-                    <height>65</height>
-                    <textcolor>HomeBarFG</textcolor>
-                    <visible>!IsEmpty(Container(9001).ListItem.Year)</visible>
-                </control>
-            </control>
+            <include>Home_Widget_Left</include>
         </control>
     </include>
     <include name="Home_Widget_Hidden">
         <control type="group">
             <posy>666</posy>
-            <include>Animation_Right</include>
-            <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
-            <visible>Skin.HasSetting(home.showwidgetposters)</visible>
             <visible>Control.HasFocus(9001)</visible>
-            <control type="image">
-                <posx>305</posx>
-                <width>2000</width>
-                <height>340</height>    
-                <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
-                <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
-            </control>
-            <control type="grouplist">
-                <visible>!Container(9001).IsUpdating</visible>
-                <include>Animation_FadeIn</include>
-                <include>Animation_FadeOut</include>
-                <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
-                <animation effect="slide" start="0" end="220" condition="!Container(9001).OnPrevious" reversible="false" time="200">Conditional</animation>
-                <posx>455</posx>
-                <width>2000</width>
-                <top>pad</top>
-                <height>320</height>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="-2" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="-1" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="0" />
-                    <param name="focuseditem" value="true" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="1" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="2" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="3" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="4" />
-                    <param name="focuseditem" value="false" />
-                </include>
-                <include name="Object_HomeWidgetPoster">
-                    <param name="id" value="5" />
-                    <param name="focuseditem" value="false" />
-                </include>     
-            </control>
+            <include condition="stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Home_Widget_Right</include>
         </control>
         <control type="group">
             <posy>666</posy>
-            <include>Animation_Left</include>
             <visible>Control.HasFocus(9001)</visible>
-            <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
-            <control type="image">
-                <posx>-100</posx>
-                <width>900</width>
-                <height>340</height>    
-                <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
-            </control>
-            <control type="grouplist">
-                
-                <posx>64</posx>
-                <posy>20</posy>
-                <width>650</width>
-                <orientation>vertical</orientation>
-                <control type="label">
-                    <label>$VAR[Label_HomeWidget]</label>
-                    <aligny>top</aligny>
-                    <height>35</height>
-                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                    <textcolor>HomeBarFG</textcolor>
-                </control>
-                <control type="label">
-                    <label>$VAR[Label_HomeWidget_Label]</label>
-                    <aligny>top</aligny>
-                    <font>Font-WidgetInfoTitle</font>
-                    <height>70</height>
-                    <textcolor>$VAR[HighlightColor2]</textcolor>
-                </control>
-                <control type="textbox">
-                    <label>$VAR[Label_HomeWidget_Plot]</label>
-                    <aligny>top</aligny>
-                    <align>left</align>
-                    <height>120</height>
-                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                    <textcolor>HomeBarFG</textcolor>
-                    <font>Font-ListInfo</font>
-                </control>
-                <control type="label">
-                    <label>$VAR[Label_HomeWidget_Info]</label>
-                    <aligny>center</aligny>
-                    <animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-                    <font>Font-ListInfo-Small</font>
-                    <height>65</height>
-                    <textcolor>HomeBarFG</textcolor>
-                    <visible>!IsEmpty(Container(9001).ListItem.Year)</visible>
-                </control>
-            </control>
+            <include>Home_Widget_Left</include>
         </control>
     </include>
 
