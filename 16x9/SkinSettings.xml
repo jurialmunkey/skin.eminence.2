@@ -146,7 +146,7 @@
                         <label>31156</label>
                         <radioposx>1350</radioposx>
                         <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])</enable>
-                        <selected>!Skin.HasSetting(home.showdiscart)</selected>
+                        <selected>Skin.HasSetting(home.showdiscart)</selected>
                         <onclick>Skin.ToggleSetting(home.showdiscart)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
