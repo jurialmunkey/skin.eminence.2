@@ -56,7 +56,7 @@
                 <left>side</left>
                 <right>side</right>
                 <width>100%</width>
-                <height>552</height>
+                <height>572</height>
                 <include name="Dialog_ImageList">
                     <param name="id" value="2" />
                     <param name="moveid" value="5" />

@@ -3,6 +3,8 @@
     <!-- skinsettings -->
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">8001</defaultcontrol>
+    <onload condition="IsEmpty(Skin.String(home.mainheadertext))">Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onload>
+    <onload condition="IsEmpty(Skin.String(home.headertext))">Skin.SetString(home.headertext,$LOCALIZE[10000])</onload>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109)</onunload>
     <controls>
         <include>Furniture_Background</include>
@@ -152,7 +154,7 @@
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
                     <!-- Header Icon -->
-                    <control type="button" id="8108">
+                    <control type="button" id="8107">
                         <width>100%</width>
                         <label>31151</label>
                         <label2>$INFO[Skin.String(home.headericon)]</label2>
@@ -161,12 +163,21 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
-                    <!-- Header Text -->
-                    <control type="button" id="8109">
+                    <!-- Header Icon Text -->
+                    <control type="button" id="8108">
                         <width>100%</width>
                         <label>31152</label>
                         <label2>$INFO[Skin.String(home.headertext)]</label2>
                         <onclick>Skin.SetString(home.headertext)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                    </control>
+                    <!-- Main Header Text -->
+                    <control type="button" id="8109">
+                        <width>100%</width>
+                        <label>31157</label>
+                        <label2>$INFO[Skin.String(home.mainheadertext)]</label2>
+                        <onclick>Skin.SetString(home.mainheadertext)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>

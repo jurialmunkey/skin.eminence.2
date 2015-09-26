@@ -233,7 +233,8 @@
         <value condition="stringcompare(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
         <value condition="Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle) + substring(Container.FolderPath,videodb://tvshows/titles/)">[CAPITALIZE]$INFO[ListItem.TvShowTitle][/CAPITALIZE]</value>
         <value condition="!IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
-        <value condition="Window.IsVisible(home)">$LOCALIZE[10000]</value>
+        <value condition="Window.IsVisible(home) + IsEmpty(Skin.String(home.mainheadertext))">$LOCALIZE[31158]</value>
+        <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(home.mainheadertext))">$INFO[Skin.String(home.mainheadertext)]</value>
         <value condition="Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
         <value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
         <value>$LOCALIZE[15100]</value>

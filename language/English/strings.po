@@ -569,3 +569,11 @@ msgstr ""
 msgctxt "#31156"
 msgid "Show widget discart"
 msgstr ""
+
+msgctxt "#31157"
+msgid "Set home header text"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Media Center"
+msgstr ""
