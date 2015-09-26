@@ -1,6 +1,7 @@
 [B]0.9.16[/B]
 Add ability to change home main header text
 Set home main header text default to "Media Center"
+Fix power menu button
 
 [B]0.9.15[/B]
 Widget poster and discart options

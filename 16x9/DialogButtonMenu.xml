@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+    <onload>ClearProperty(FO9001,home)</onload>
     <defaultcontrol always="true">9000</defaultcontrol>
     <controls>
         <include>GlobalOverlay</include>
