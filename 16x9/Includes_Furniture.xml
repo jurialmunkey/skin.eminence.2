@@ -23,7 +23,8 @@
             <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
             <include>Animation_FadeIn</include>
             <control type="image" description="Background">
-                <include>Dimensions_Fullscreen</include>
+                <width>100%</width>
+                <height>100%</height>
                 <texture colordiffuse="Background">common/white.png</texture>
                 <animation effect="fade" start="100" end="95" condition="true">Conditional</animation>
             </control>
@@ -202,12 +203,23 @@
             <visible>!Window.IsVisible(home)</visible>
             <visible>!Window.IsVisible(weather)</visible>
         </control>
+
         <control type="image" description="Transition Fade">
             <width>100%</width>
             <height>100%</height>
             <texture background="true" colordiffuse="Background">common/white.png</texture>
             <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
             <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+        </control>
+        <control type="image" description="Background Overlay">
+            <width>100%</width>
+            <height>100%</height>
+            <fadetime>1000</fadetime>
+            <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
+            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
         </control>
     </include>
 

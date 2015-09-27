@@ -527,7 +527,7 @@ msgid "Extended Info"
 msgstr ""
 
 msgctxt "#31146"
-msgid "Fallback image"
+msgid "Fallback fanart image"
 msgstr ""
 
 msgctxt "#31147"
@@ -576,4 +576,8 @@ msgstr ""
 
 msgctxt "#31158"
 msgid "Media Center"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Global overlay"
 msgstr ""

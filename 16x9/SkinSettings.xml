@@ -213,6 +213,16 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
+                    <!-- Overlay -->
+                    <control type="button" id="8207">
+                        <width>100%</width>
+                        <label>31159</label>
+                        <label2>$INFO[Skin.String(global.background)]</label2>
+                        <onclick condition="IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background)</onclick>
+                        <onclick condition="!IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
                     <!-- Fallback Fanart -->
                     <control type="button" id="8208">
                         <width>100%</width>

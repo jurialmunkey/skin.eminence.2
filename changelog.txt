@@ -1,5 +1,6 @@
 [B]0.9.17[/B]
 Fix transparent info box conditional on posters
+Global overlay option
 
 [B]0.9.16[/B]
 Add ability to change home main header text
