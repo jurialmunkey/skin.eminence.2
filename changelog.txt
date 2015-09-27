@@ -1,3 +1,6 @@
+[B]0.9.17[/B]
+Fix transparent info box conditional on posters
+
 [B]0.9.16[/B]
 Add ability to change home main header text
 Set home main header text default to "Media Center"
