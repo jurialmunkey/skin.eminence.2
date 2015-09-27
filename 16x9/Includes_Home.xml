@@ -296,7 +296,7 @@
             <posx>-100</posx>
             <width>900</width>
             <height>340</height>
-            <animation effect="fade" start="100" end="90" time="200" condition="substring(Skin.CurrentColourTheme,Transparent) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) | [stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !Control.HasFocus(9001)]">Conditional</animation>
+            <animation effect="fade" start="100" end="90" time="200" condition="substring(Skin.CurrentColourTheme,Transparent) + [!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) | [stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !Control.HasFocus(9001)]]">Conditional</animation>
             <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
         </control>
         <control type="grouplist">     
