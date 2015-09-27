@@ -5,7 +5,7 @@
     name="Eminence 2.0"
     provider-name="jurialmunkey">
     <requires>
-        <import addon="xbmc.gui" version="5.3.0"/>
+        <import addon="xbmc.gui" version="5.9.0"/>
         <import addon="script.skinshortcuts" version="0.6.0"/>
         <import addon="script.skin.helper.service" version="0.0.1"/>
         <import addon="script.extendedinfo" version="3.0.0"/>
