@@ -253,7 +253,7 @@
                 <control type="label">
                     <left>0</left>
                     <right>0</right>
-                    <label>$INFO[Player.SeekTime]</label>
+                    <label>$VAR[Label_SeekStep]</label>
                     <height>30</height>
                     <top>8</top>
                     <align>center</align>

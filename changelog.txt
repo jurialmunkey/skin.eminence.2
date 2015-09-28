@@ -1,5 +1,6 @@
 [B]0.9.18[/B]
 Conditional content counters on home screen
+Add SeekStepSize
 
 [B]0.9.17[/B]
 Fix transparent info box conditional on posters

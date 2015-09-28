@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_SeekStep">
+        <value condition="!IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize]</value>
+        <value condition="!IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset]</value>
+        <value>$INFO[Player.SeekTime]</value>
+    </variable>
+
     <variable name="Label_OverlayPlot">
         <value condition="!IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
         <value condition="!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
