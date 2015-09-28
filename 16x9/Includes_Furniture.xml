@@ -196,9 +196,20 @@
         </control>
         <control type="group">
             <top>210</top>
-            <height>806</height>
+            <bottom>0</bottom>
             <width>100%</width>
             <visible>Skin.HasSetting(global.backpanelmode)</visible>
+            <visible>Skin.HasSetting(furniture.showflags)</visible>
+            <include>Dialog_Background</include>
+            <visible>!Window.IsVisible(home)</visible>
+            <visible>!Window.IsVisible(weather)</visible>
+        </control>
+        <control type="group">
+            <top>210</top>
+            <bottom>64</bottom>
+            <width>100%</width>
+            <visible>Skin.HasSetting(global.backpanelmode)</visible>
+            <visible>!Skin.HasSetting(furniture.showflags)</visible>
             <include>Dialog_Background</include>
             <visible>!Window.IsVisible(home)</visible>
             <visible>!Window.IsVisible(weather)</visible>
@@ -261,8 +272,8 @@
         <value condition="IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
     </variable>
     <variable name="Furniture_Counter_Channels">
-        <value condition="IntegerGreaterThan(Pvr.BackendChannels) + [IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) | IntegerGreaterThan(Window(home).Property(Episodes.Count),0) | IntegerGreaterThan(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-        <value condition="IntegerGreaterThan(Pvr.BackendChannels) + !IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+        <value condition="IntegerGreaterThan(Pvr.BackendChannels,0) + [IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) | IntegerGreaterThan(Window(home).Property(Episodes.Count),0) | IntegerGreaterThan(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+        <value condition="IntegerGreaterThan(Pvr.BackendChannels,0) + !IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
     </variable>
     <variable name="Furniture_TopBar_Header_SubLabel">
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
