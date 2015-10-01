@@ -277,6 +277,12 @@
             <height>height</height>
             <onfocus>SetProperty(FO9001,1,home)</onfocus>
             <onunfocus>ClearProperty(FO9001,home)</onunfocus>
+            <onup>ClearProperty(FO9001,home)</onup>
+            <ondown>ClearProperty(FO9001,home)</ondown>
+            <onback>ClearProperty(FO9001,home)</onback>
+            <onback>9000</onback>
+            <ondown>9000</ondown>
+            <onup>9000</onup>
             <onclick>PlayMedia($INFO[Container(9001).ListItem.FileNameAndPath])</onclick>
             <visible>IntegerGreaterThan(Container(9001).NumItems,0)</visible>
         </control>
