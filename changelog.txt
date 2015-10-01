@@ -4,6 +4,7 @@ Fix highlight issue with nextup
 Update spinner to png multiimage
 Fix home screen playlist background
 Big Icon view for Music
+Square list for Music / Pictures / Programs
 
 [B]0.9.18[/B]
 Conditional content counters on home screen

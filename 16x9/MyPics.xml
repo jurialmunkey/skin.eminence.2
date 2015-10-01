@@ -15,7 +15,7 @@
         <!-- Main group -->
         <control type="group">
             <include>Animation_Common</include>
-            <include>Viewtype_List</include>
+            <include>Viewtype_SquareList</include>
             <include>Viewtype_Fanart</include>
             <include>Viewtype_BigList</include>
             <include>Viewtype_PanelList</include>

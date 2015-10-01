@@ -28,6 +28,33 @@
         </control>
     </include>
 
+    <include name="Viewtype_SquareList">
+        <control type="group">
+            <visible>Control.IsVisible(50)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Poster">
+                <param name="left" value="1190" />
+                <param name="width" value="690" />
+            </include>
+            <include name="View_List">
+                <param name="viewlabel" value="535" />
+                <param name="posx" value="0" />
+                <param name="width" value="1180" />
+                <param name="id" value="50" />
+                <param name="condition" value="true" />
+            </include>
+            <control type="group">
+                <width>1180</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
     <!-- MEDIA INFO -->
     <include name="Viewtype_MediaInfo">
         <control type="group">
