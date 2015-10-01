@@ -14,7 +14,7 @@
                 <bordersize>10</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
-                <visible>Control.HasFocus(9001)</visible>
+                <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
             </control>
             <control type="image">
@@ -24,7 +24,7 @@
                 <width>200</width>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
-                <visible>!$PARAM[focuseditem] | !Control.HasFocus(9001)</visible>
+                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
             </control>
         </control>
         <control type="group">
@@ -40,7 +40,7 @@
                 <bordersize>10</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
-                <visible>Control.HasFocus(9001)</visible>
+                <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
             </control>
             <control type="image">
@@ -50,7 +50,7 @@
                 <width>200</width>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
-                <visible>!$PARAM[focuseditem] | !Control.HasFocus(9001)</visible>
+                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
             </control>
         </control>
         <control type="group">
@@ -66,7 +66,7 @@
                 <bordersize>10</bordersize>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
-                <visible>Control.HasFocus(9001)</visible>
+                <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
             </control>
             <control type="image">
@@ -76,7 +76,7 @@
                 <width>200</width>
                 <aspectratio>keep</aspectratio>
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
-                <visible>!$PARAM[focuseditem] | !Control.HasFocus(9001)</visible>
+                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
             </control>
         </control>
 

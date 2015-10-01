@@ -25,8 +25,8 @@
         <include condition="Skin.HasSetting(home.hidewidgetbox)">Home_Widget_Hidden</include>
 
         <control type="group">
-            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="Control.HasFocus(9001)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="!Control.HasFocus(9001)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
+            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
             <include condition="!Skin.HasSetting(home.hidewidgetbox)">Home_Widget</include>
             
             <control type="group">

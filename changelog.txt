@@ -1,3 +1,6 @@
+[B]0.9.19[/B]
+Fix home screen issue with RSS / Notifications and mouse over
+
 [B]0.9.18[/B]
 Conditional content counters on home screen
 Add SeekStepSize

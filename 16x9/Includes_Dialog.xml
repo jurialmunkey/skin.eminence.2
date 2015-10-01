@@ -80,7 +80,7 @@
     <include name="Dialog_Info_Arrows">
         <control type="group">
             <left>pad</left>
-            <width>1190</width>
+            <width>1394</width>
             <bottom>side</bottom>
             <height>69</height>
             <control type="image">
