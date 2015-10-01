@@ -116,7 +116,7 @@
                 <font>Font-ListInfo-Small-Bold</font>
                 <textcolor>ListLabel</textcolor>
                 <focusedcolor>Selected</focusedcolor>
-                <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/box.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/white.png</texturefocus>
                 <texturenofocus colordiffuse="00ffffff" border="5">noop</texturenofocus>
             </control>
         </control>

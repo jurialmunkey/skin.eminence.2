@@ -1,5 +1,6 @@
 [B]0.9.19[/B]
 Fix home screen issue with RSS / Notifications and mouse over
+Fix highlight issue with nextup
 
 [B]0.9.18[/B]
 Conditional content counters on home screen
