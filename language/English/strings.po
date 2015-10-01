@@ -581,3 +581,7 @@ msgstr ""
 msgctxt "#31159"
 msgid "Global overlay"
 msgstr ""
+
+msgctxt "#31160"
+msgid "Show unwatched count in header"
+msgstr ""
