@@ -323,13 +323,16 @@
         </control>
     </include>
     <include name="Furniture_TopBar_Tile_Content">
-        <control type="image">
+        <control type="multiimage">
             <posy>42</posy>
             <posx>62</posx>
             <width>64</width>
             <height>64</height> 
-            <texture>common/busy.gif</texture>
-            <aspectratio align="center" aligny="center">keep</aspectratio>
+            <aspectratio>keep</aspectratio>
+            <imagepath>special://skin/extras/spinner/balls</imagepath>
+            <timeperimage>75</timeperimage>
+            <fadetime>0</fadetime>
+            <colordiffuse>HomeBarFG</colordiffuse>
             <visible>Window.IsVisible(DialogBusy.xml)</visible>
         </control>
         <control type="image">
