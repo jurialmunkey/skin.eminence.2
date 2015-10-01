@@ -19,6 +19,7 @@
     <widget label="31083">TopRatedTvShows</widget>
     <widget label="31084">OnAirTvShows</widget>
     <widget label="31085">AiringTodayTvShows</widget>
+    <widget label="8" condition="!IsEmpty(Skin.String(weather.fanart))">Weather</widget>
     <widgetPlaylists>True</widgetPlaylists>
         
     <!-- BACKGROUND SETTINGS -->

@@ -29,19 +29,17 @@
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <control type="image">
-                <top>-24</top>
-                <bottom>-24</bottom>
-                <left>-24</left>
-                <right>-24</right>
-                <texture colordiffuse="HomeBarBG">common/white.png</texture>
-                <bordertexture border="24">common/24-shadow.png</bordertexture>
-                <bordersize>24</bordersize>
-            </control>
-            <control type="image">
-                <posx>750</posx>
+                <posx>0</posx>
                 <width>2000</width>
                 <height>340</height>    
-                <texture colordiffuse="PosterBorder" border="150">common/half-tile.png</texture>
+                <texture colordiffuse="HomeWidgetBG">common/white.png</texture>
+                <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>-100</posx>
+                <width>900</width>
+                <height>340</height>
+                <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
             </control>
 
             <control type="grouplist">

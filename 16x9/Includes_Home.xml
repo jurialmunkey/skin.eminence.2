@@ -349,7 +349,6 @@
                 <font>Font-ListInfo-Small</font>
                 <height>65</height>
                 <textcolor>HomeBarFG</textcolor>
-                <visible>!IsEmpty(Container(9001).ListItem.Year)</visible>
             </control>
         </control>
     </include>
@@ -365,6 +364,7 @@
         </control>
         <control type="grouplist">
             <visible>!Container(9001).IsUpdating</visible>
+            <visible>!StringCompare(Container(9000).ListItem.Property(widget),Weather) | IsEmpty(Skin.String(weather.fanart))</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
@@ -407,6 +407,33 @@
                 <param name="id" value="5" />
                 <param name="focuseditem" value="false" />
             </include>     
+        </control>
+        <control type="grouplist">
+            <left>850</left>
+            <right>0</right>
+            <orientation>horizontal</orientation>
+            <height>340</height>
+            <itemgap>70</itemgap>
+            <visible>!Container(9001).IsUpdating</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <visible>StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart))</visible>
+            <include name="Object_WeatherOutlook">
+                <param name="day" value="Day0" />
+                <param name="dayname" value="$LOCALIZE[33006]" />
+            </include>
+            <include name="Object_WeatherOutlook">
+                <param name="day" value="Day1" />
+                <param name="dayname" value="$INFO[Window(weather).Property(Day1.Title)]" />
+            </include>
+            <include name="Object_WeatherOutlook">
+                <param name="day" value="Day2" />
+                <param name="dayname" value="$INFO[Window(weather).Property(Day2.Title)]" />
+            </include>
+            <include name="Object_WeatherOutlook">
+                <param name="day" value="Day3" />
+                <param name="dayname" value="$INFO[Window(weather).Property(Day3.Title)]" />
+            </include>
         </control>
     </include>
     <include name="Home_Widget">

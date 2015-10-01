@@ -341,7 +341,7 @@
                     <left>pad</left>
                     <right>pad</right>
                     <top>30</top>
-                    <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                    <visible>StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
                     <include name="Dialog_BasicList">
                         <param name="width" value="1190" />
                         <param name="height" value="552" />
@@ -376,7 +376,7 @@
                     <left>pad</left>
                     <right>pad</right>
                     <top>30</top>
-                    <visible allowhiddenfocus="true">StringCompare(Window.Property(list),Director)</visible>
+                    <visible>StringCompare(Window.Property(list),Director)</visible>
                     <include name="Dialog_BasicList">
                         <param name="width" value="1190" />
                         <param name="height" value="552" />
@@ -412,6 +412,10 @@
         </control>
 
         <control type="button" id="51" description="Cast List Control">
+            <width>1</width>
+            <height>1</height>
+            <left>-1000</left>
+            <top>-1000</top>
             <visible allowhiddenfocus="true">false</visible>
             <onup>Control.Move(50,-1)</onup>
             <ondown>Control.Move(50,1)</ondown>

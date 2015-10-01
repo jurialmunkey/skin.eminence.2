@@ -78,12 +78,12 @@
                     <onclick>SetFocus(50)</onclick>
                 </control>
                 <!-- Back Panels -->
-                <control type="radiobutton" id="9001">
+                <!-- <control type="radiobutton" id="9001">
                     <label>31004</label>
                     <include>Defs_OptionButton</include>
                     <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
                     <selected>Skin.HasSetting(global.backpanelmode)</selected>
-                </control>
+                </control> -->
             </control>
 
         </control>

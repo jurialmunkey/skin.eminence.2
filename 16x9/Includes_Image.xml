@@ -45,7 +45,8 @@
         <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$INFO[Container(500).ListItem.Property(Fanart_small)]</value>
         <value condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !IsEmpty(Window(home).Property(ExtendedInfo_fanart))">$INFO[Window(home).Property(ExtendedInfo_fanart)]</value>
         <value condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">special://skin/extras/backgrounds/actor.jpg</value>
-        <value condition="Window.IsVisible(weather)">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+        <value condition="Window.IsVisible(weather) + !IsEmpty(Skin.String(weather.fanart))">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+        <value condition="Window.IsVisible(home) + StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart))">$INFO[Container(9001).ListItem.FileNameAndPath]</value>
         <value condition="Window.IsVisible(home) + StringCompare(Container(9000).ListItem.Property(widgetType),picture) + !IsEmpty(Container(9001).ListItem.Icon)">$INFO[Container(9001).ListItem.Icon]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Container(9001).ListItem.Art(fanart))">$INFO[Container(9001).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(home) + StringCompare(Container(9000).ListItem.Property(background),playlistBackground)">$INFO[Container(9988).ListItem.Art(fanart)]</value>

@@ -329,7 +329,7 @@
             <width>64</width>
             <height>64</height> 
             <aspectratio>keep</aspectratio>
-            <imagepath>special://skin/extras/spinner/balls</imagepath>
+            <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
             <timeperimage>75</timeperimage>
             <fadetime>0</fadetime>
             <colordiffuse>HomeBarFG</colordiffuse>

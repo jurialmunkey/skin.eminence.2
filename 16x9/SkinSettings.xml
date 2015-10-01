@@ -194,7 +194,7 @@
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
                     <!-- Show background video -->
-                    <control type="radiobutton" id="8203">
+                    <control type="radiobutton" id="8202">
                         <width>100%</width>
                         <label>31027</label>
                         <radioposx>1350</radioposx>
@@ -204,12 +204,22 @@
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
                     <!-- Animate Fanart -->
-                    <control type="radiobutton" id="8202">
+                    <control type="radiobutton" id="8203">
                         <width>100%</width>
                         <label>31116</label>
                         <radioposx>1350</radioposx>
                         <selected>Skin.HasSetting(background.animate)</selected>
                         <onclick>Skin.ToggleSetting(background.animate)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
+                    <!-- Opaque Panels -->
+                    <control type="radiobutton" id="8204">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>31004</label>
+                        <selected>Skin.HasSetting(global.backpanelmode)</selected>
+                        <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
@@ -401,18 +411,8 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
-                    <!-- Opaque Panels -->
-                    <control type="radiobutton" id="8902">
-                        <radioposx>1350</radioposx>
-                        <width>100%</width>
-                        <label>31004</label>
-                        <selected>Skin.HasSetting(global.backpanelmode)</selected>
-                        <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
                     <!-- Media Flags -->
-                    <control type="radiobutton" id="8903">
+                    <control type="radiobutton" id="8902">
                         <radioposx>1350</radioposx>
                         <width>100%</width>
                         <label>31007</label>
@@ -422,12 +422,21 @@
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
                     <!-- Overlay Plot -->
-                    <control type="radiobutton" id="8904">
+                    <control type="radiobutton" id="8903">
                         <radioposx>1350</radioposx>
                         <width>100%</width>
                         <label>31008</label>
                         <selected>Skin.HasSetting(furniture.overlayinfo)</selected>
                         <onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Busy Spinner -->
+                    <control type="button" id="8904">
+                        <width>100%</width>
+                        <label>Busy spinner</label>
+                        <label2>$INFO[Skin.String(SkinHelper.SpinnerTexture)]</label2>
+                        <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>

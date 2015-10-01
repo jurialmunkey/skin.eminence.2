@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Defs_SpinnerTexture">
+        <value condition="!IsEmpty(Skin.String(SkinHelper.SpinnerTexturePath)) + !IsEmpty(Skin.String(SkinHelper.SpinnerTexture)) + !StringCompare(Skin.String(SkinHelper.SpinnerTexturePath),None)">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</value>
+        <value>special://skin/extras/busy_spinners/Default</value>
+    </variable>
     <include name="Defs_OptionButton">
         <width>364</width>
         <height>69</height>
@@ -83,6 +87,7 @@
     </include>
     <variable name="Defs_HomeWidget_Content">
         <value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart))">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
         <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath))">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist)">$INFO[Container(9000).ListItem.Property(widgetPlaylist)]</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomMovies)">special://skin/extras/playlists/RandomMovies.xsp</value>
