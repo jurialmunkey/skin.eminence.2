@@ -2,6 +2,7 @@
 Fix home screen issue with RSS / Notifications and mouse over
 Fix highlight issue with nextup
 Update spinner to png multiimage
+Fix home screen playlist background
 
 [B]0.9.18[/B]
 Conditional content counters on home screen
