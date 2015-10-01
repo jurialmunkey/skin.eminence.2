@@ -20,7 +20,7 @@
             <include name="View_BigIcon">
                 <param name="width" value="2375" />
                 <param name="id" value="51" />
-                <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+                <param name="condition" value="Container.Content(albums) | Container.Content(artists) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
             <control type="scrollbar" id="60">
                 <!-- <ondown condition="!Skin.HasSetting(KioskMode)">9000</ondown> -->
@@ -55,7 +55,7 @@
                 <viewtype label="538">bigicons</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
-                <itemlayout height="670" width="475">
+                <itemlayout height="670" width="475" condition="!Container.Content(artists) + !Container.Content(albums)">
                     <control type="group">
                         <left>0</left>
                         <right>side</right>
@@ -92,8 +92,36 @@
                         </control>
                     </control>
                 </itemlayout>
-
-                <focusedlayout height="670" width="475">
+                <itemlayout height="670" width="475" condition="Container.Content(artists) | Container.Content(albums)">
+                    <control type="group">
+                        <left>0</left>
+                        <right>side</right>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <height>435</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                        </control>
+                        <control type="textbox">
+                            <left>side</left>
+                            <right>side</right>
+                            <top>460</top>
+                            <bottom>side</bottom>
+                            <label>$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Album,,[CR]]$INFO[ListItem.Year]</label>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textcolor>Selected</textcolor>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="670" width="475" condition="!Container.Content(artists) + !Container.Content(albums)">
                     <control type="group">
                         <left>0</left>
                         <right>side</right>
@@ -134,6 +162,42 @@
                             <width>32</width>
                             <texture>$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <focusedlayout height="670" width="475" condition="Container.Content(artists) | Container.Content(albums)">
+                    <control type="group">
+                        <left>0</left>
+                        <right>side</right>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            <visible>!Control.HasFocus($PARAM[id])</visible>
+                        </control>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            <visible>Control.HasFocus($PARAM[id])</visible>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <height>435</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                        </control>
+                        <control type="textbox">
+                            <left>side</left>
+                            <right>side</right>
+                            <top>460</top>
+                            <bottom>side</bottom>
+                            <label>$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Album,,[CR]]$INFO[ListItem.Year]</label>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <textcolor>Selected</textcolor>
                         </control>
                     </control>
                 </focusedlayout>
