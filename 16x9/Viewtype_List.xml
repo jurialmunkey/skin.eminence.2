@@ -138,6 +138,45 @@
         </control>
     </include>
 
+    <!-- FANART LIST -->
+    <include name="Viewtype_FanartList">
+        <control type="group">
+            <visible>Control.IsVisible(506)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <control type="group">
+                <right>-10</right>
+                <width>1221</width>
+                <include>View_BigWide_Fanart</include>
+                <include>View_BigWide_Info</include>
+            </control>
+            <control type="group">
+                <right>0</right>
+                <width>1211</width>
+                <include name="Object_Line">
+                    <param name="width" value="1211" />
+                    <param name="label" value="19033" />
+                </include>
+            </control>
+            <include name="View_List">
+                <param name="viewlabel" value="31164" />
+                <param name="posx" value="0" />
+                <param name="width" value="659" />
+                <param name="id" value="506" />
+                <param name="label3" value="false" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
+            </include>
+            <control type="group">
+                <width>659</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
     <!-- PANEL LIST -->
     <include name="Viewtype_PanelList">
         <control type="group">

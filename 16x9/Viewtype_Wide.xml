@@ -270,6 +270,133 @@
             </control>
         </control>
     </include>
+    <include name="Viewtype_Gallery">
+        <control type="group">
+            <visible>Control.IsVisible(505)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_Gallery">
+                <param name="id" value="505" />
+                <param name="condition" value="Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+            <control type="scrollbar" id="60">
+                <onup>50</onup>
+                <top>682</top>
+                <orientation>horizontal</orientation>
+                <width>1880</width>
+                <height>8</height>
+                <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="50">Conditional</animation>
+            </control>
+        </control>
+    </include>
+    <include name="View_BigWide_Fanart">
+        <control type="group">
+            <top>0</top>
+            <left>0</left>
+            <right>pad</right>
+            <height>100%</height>
+            <control type="image">
+                <width>100%</width>
+                <height>100%</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+            <control type="image">
+                <left>pad</left>
+                <right>pad</right>
+                <top>pad</top>
+                <bottom>pad</bottom>
+                <fadetime>200</fadetime>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$VAR[Image_Thumb]</texture>
+            </control>
+            <control type="image">
+                <right>side</right>
+                <top>side</top>
+                <height>32</height>
+                <width>32</width>
+                <texture>$VAR[Image_Indicator]</texture>
+                <visible>!IsEmpty(ListItem.Overlay)</visible>
+            </control>
+        </control>
+    </include>
+    <include name="View_BigWide_Info">
+        <control type="group">
+            <left>pad</left>
+            <right>side</right>
+            <bottom>15</bottom>
+            <height>122</height>
+            <control type="image">
+                <width>100%</width>
+                <height>240</height>
+                <bottom>-5</bottom>
+                <texture flipy="true" colordiffuse="bfffffff">common/gradient.png</texture>
+            </control>
+            <control type="group">
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
+                </control>
+                <control type="textbox">
+                    <left>side</left>
+                    <right>side</right>
+                    <bottom>14</bottom>
+                    <height>64</height>
+                    <font>Font-ListInfo-Small</font>
+                    <label>$VAR[Label_Plot]</label>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="View_Gallery">
+        <control type="group">
+            <control type="wraplist" id="$PARAM[id]">
+                <top>0</top>
+                <centerleft>945</centerleft>
+                <width>3558</width>
+                <height>height</height>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+                <ondown>60</ondown>
+                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <pagecontrol>60</pagecontrol>
+                <focusposition>1</focusposition>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="31163">bigwide</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="670" width="1186">
+                    <include>View_BigWide_Fanart</include>
+                </itemlayout>
+
+                <focusedlayout height="670" width="1186">
+                    <include>View_BigWide_Fanart</include>
+                    <include>View_BigWide_Info</include>
+                </focusedlayout>
+            </control>
+        </control>
+        
+    </include>
     <include name="View_BigWide">
         <control type="group">
             <control type="wraplist" id="$PARAM[id]">
@@ -322,71 +449,8 @@
                 </itemlayout>
 
                 <focusedlayout height="670" width="1186">
-                    <control type="group">
-                        <top>0</top>
-                        <width>1176</width>
-                        <height>670</height>
-                        <control type="image">
-                            <width>100%</width>
-                            <height>100%</height>
-                            <texture colordiffuse="PosterBorder">common/white.png</texture>
-                        </control>
-                        <control type="image">
-                            <left>pad</left>
-                            <right>pad</right>
-                            <top>pad</top>
-                            <bottom>pad</bottom>
-                            <aspectratio>scale</aspectratio>
-                            <texture background="true">$VAR[Image_Thumb]</texture>
-                        </control>
-                        <control type="image">
-                            <right>side</right>
-                            <top>side</top>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture>$VAR[Image_Indicator]</texture>
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <left>pad</left>
-                        <right>side</right>
-                        <bottom>15</bottom>
-                        <height>122</height>
-                        <control type="image">
-                            <width>100%</width>
-                            <height>240</height>
-                            <bottom>-5</bottom>
-                            <texture flipy="true" colordiffuse="bfffffff">common/gradient.png</texture>
-                        </control>
-                        <control type="group">
-                            <control type="label">
-                                <left>side</left>
-                                <right>side</right>
-                                <top>10</top>
-                                <height>32</height>
-                                
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                            <control type="label">
-                                <left>side</left>
-                                <right>side</right>
-                                <top>10</top>
-                                <height>32</height>
-                                <align>right</align>
-                                <font>Font-ListInfo-Small-Bold</font>
-                                <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
-                            </control>
-                        </control>
-                        <control type="textbox">
-                            <left>side</left>
-                            <right>side</right>
-                            <bottom>14</bottom>
-                            <height>64</height>
-                            <font>Font-ListInfo-Small</font>
-                            <label>$VAR[Label_Plot]</label>
-                        </control>
-                    </control>
+                    <include>View_BigWide_Fanart</include>
+                    <include>View_BigWide_Info</include>
                 </focusedlayout>
             </control>
         </control>

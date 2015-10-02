@@ -434,9 +434,35 @@
                     <!-- Busy Spinner -->
                     <control type="button" id="8904">
                         <width>100%</width>
-                        <label>Busy spinner</label>
+                        <label>31160</label>
                         <label2>$INFO[Skin.String(SkinHelper.SpinnerTexture)]</label2>
                         <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Info Line -->
+                    <control type="radiobutton" id="8905">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>31165</label>
+                        <selected>!Skin.HasSetting(furniture.hidesortinfo)</selected>
+                        <onclick>Skin.ToggleSetting(furniture.hidesortinfo)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Backup -->
+                    <control type="button" id="8908">
+                        <width>100%</width>
+                        <label>31161</label>
+                        <onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Restore -->
+                    <control type="button" id="8909">
+                        <width>100%</width>
+                        <label>31162</label>
+                        <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>

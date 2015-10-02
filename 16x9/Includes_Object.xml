@@ -380,6 +380,7 @@
     <!-- Line -->
     <include name="Object_Line">
         <control type="grouplist">
+            <visible>!Skin.HasSetting(furniture.hidesortinfo)</visible>
             <orientation>horizontal</orientation>
             <top>-48</top>
             <height>48</height>

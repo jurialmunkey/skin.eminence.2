@@ -1,6 +1,11 @@
 [B]0.9.20[/B]
 Busy Spinner selection option
 Weather Widget
+New View - Gallery
+New View - Fanart List
+Option to disable info line headers
+Backup options
+Some mouse fixes
 
 [B]0.9.19[/B]
 Fix home screen issue with RSS / Notifications and mouse over

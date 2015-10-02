@@ -581,3 +581,27 @@ msgstr ""
 msgctxt "#31159"
 msgid "Global overlay"
 msgstr ""
+
+msgctxt "#31160"
+msgid "Busy spinner"
+msgstr ""
+
+msgctxt "#31161"
+msgid "Backup skin settings"
+msgstr ""
+
+msgctxt "#31162"
+msgid "Restore skin settings"
+msgstr ""
+
+msgctxt "#31163"
+msgid "Gallery"
+msgstr ""
+
+msgctxt "#31164"
+msgid "Fanart list"
+msgstr ""
+
+msgctxt "#31165"
+msgid "Show sorting and info line headers"
+msgstr ""
