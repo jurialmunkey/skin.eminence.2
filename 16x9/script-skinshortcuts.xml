@@ -172,6 +172,20 @@
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
                 </control>
 
+                <control type="radiobutton" id="9702" description="PosterWidget">
+                    <label>31150</label>
+                    <width>100%</width>
+                    <radioposx>364</radioposx>
+                    <selected>!IsEmpty(Container(211).ListItem.Property(PosterWidget))</selected>
+                    <onclick>SetProperty(customProperty,PosterWidget)</onclick>
+                    <onclick condition="IsEmpty(Container(211).ListItem.Property(PosterWidget))">SetProperty(customValue,true)</onclick>
+                    <onclick condition="!IsEmpty(Container(211).ListItem.Property(PosterWidget))">ClearProperty(customValue)</onclick>
+                    <onclick>SendClick(404)</onclick>
+                    <include>Defs_OptionButton</include>
+                    <visible>stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166])</visible>
+                    <!-- <visible>!IsEmpty(Container(211).ListItem.Property(widget))</visible> -->
+                </control>
+
                 <control type="button" id="310" description="Background">
                     <width>100%</width>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
