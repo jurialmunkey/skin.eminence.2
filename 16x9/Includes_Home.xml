@@ -54,7 +54,17 @@
                         <aspectratio>scale</aspectratio>
                         <visible>IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
                     </control>
-                    <include>Colors_Home</include>
+                    <!-- <include>Colors_Home</include> -->
+                    <control type="image">
+                        <top>16</top>
+                        <width>196</width>
+                        <height>170</height>
+                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
+                        <!-- <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">special://home/addons/script.skin.helper.service/resources/colors/$INFO[ListItem.Property(tilecolor)].png</texture> -->
+                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">special://skin/extras/colors/$INFO[ListItem.Property(tilecolor)].png</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <visible>!IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
+                    </control>
                     <control type="image">
                         <top>16</top>
                         <width>196</width>
