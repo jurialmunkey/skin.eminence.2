@@ -430,10 +430,10 @@
 
                         <control type="label">
                             <left>0</left>
-                            <top>640</top>
+                            <top>620</top>
                             <height>75</height>
                             <width>570</width>
-                            <animation effect="rotate" end="90" start="0" condition="true" center="0,640">Conditional</animation>
+                            <animation effect="rotate" end="90" start="0" condition="true" center="20,640">Conditional</animation>
                             <label>$INFO[ListItem.Label]</label>
                             <align>left</align>
                         </control>
