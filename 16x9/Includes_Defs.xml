@@ -73,14 +73,14 @@
             <label>31096</label>
             <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
             <include>Defs_OptionButton</include>
-            <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid])</visible>
+            <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
         </control>
         <control type="button" id="$PARAM[buttonid2]" description="Set HUB WIDGET">
             <width>100%</width>
             <label>31097</label>
             <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-            <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid])</visible>
+            <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <include>Defs_OptionButton</include>
             <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=hubwidget&amp;skinList=Widget.$PARAM[hubid]&amp;skinLabel=Widget.$PARAM[hubid].Label)</onclick>
         </control>
