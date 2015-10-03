@@ -247,6 +247,10 @@
         <value condition="Window.IsVisible(filemanager)">$LOCALIZE[7]</value>
         <value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
+        <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(10)">$LOCALIZE[19032]</value>
+        <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(11)">$LOCALIZE[19030]</value>
+        <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(12)">$LOCALIZE[19031]</value>
+        <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(13)">$LOCALIZE[19029]</value>
         <value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
         <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
         <value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>

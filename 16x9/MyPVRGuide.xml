@@ -2,7 +2,7 @@
 <window>
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol>10</defaultcontrol>
-    <views>10</views>
+    <views>10,11,12,13</views>
 
     <controls>
         <include>Furniture_Background</include>
@@ -10,7 +10,23 @@
         <include>Furniture_TopBar</include>
         
         <control type="group" id="50">
+            <include name="PVR_SmallList">
+                <param name="id" value="11" />
+                <param name="label" value="19030" />
+            </include>
+            <include name="PVR_SmallList">
+                <param name="id" value="12" />
+                <param name="label" value="19031" />
+                <param name="include" value="PVR_SmallList_StartTime" />
+            </include>
+            <include name="PVR_SmallList">
+                <param name="id" value="13" />
+                <param name="visible" value="Player.HasVideo + VideoPlayer.Content(livetv)" />
+                <param name="label" value="19029" />
+                <param name="include" value="PVR_SmallList_StartTime" />
+            </include>
             <control type="group">
+                <visible>Control.IsVisible(10)</visible>
                 <left>side</left>
                 <right>side</right>
                 <top>top</top>
@@ -236,7 +252,6 @@
 
         
         <include>PVR_Menu</include>
-
     </controls>
 
 </window>

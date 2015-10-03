@@ -2,13 +2,16 @@
 <window>
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol>50</defaultcontrol>
-
+    <views>51,50</views>
     <controls>
         <include>Furniture_Background</include>
         <include>Furniture_RSS</include>
         <include>Furniture_TopBar</include>
         
         <include>PVR_List</include>
+        <include name="PVR_SmallList">
+            <param name="id" value="51" />
+        </include>
 
         <include>PVR_Menu</include>
     </controls>
