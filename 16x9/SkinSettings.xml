@@ -114,7 +114,7 @@
                         <width>100%</width>
                         <label>31147</label>
                         <label2>$INFO[Skin.String(home.fallbackwidget.name)]</label2>
-                        <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=hubwidget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name)</onclick>
+                        <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=fallbackwidget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
