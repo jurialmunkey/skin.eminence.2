@@ -119,19 +119,21 @@
             <height>height</height>
             <include name="View_List">
                 <param name="viewlabel" value="31148" />
-                <param name="posx" value="477" />
+                <param name="posx" value="0" />
                 <param name="width" value="653" />
                 <param name="id" value="503" />
                 <param name="label3" value="false" />
                 <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
             </include>
             <include name="Object_Poster">
-                <param name="left" value="0" />
+                <param name="left" value="1413" />
                 <param name="width" value="posterw" />
             </include>
-            <include>Object_ExtraInfo</include>
+            <include name="Object_ExtraInfo">
+                <param name="left" value="663" />
+            </include>
             <control type="group">
-                <left>477</left>
+                <left>0</left>
                 <width>653</width>
                 <include>Object_Arrows_Vertical</include>
             </control>
