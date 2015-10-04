@@ -3,12 +3,11 @@
     <defaultcontrol always="true">9000</defaultcontrol>
 
     <controls>
-        <include>GlobalOverlay</include>
         <control type="group">
             <top>210</top>
             <height>780</height>
             <centerleft>50%</centerleft>
-            <width>1717</width>
+            <width>1880</width>
             <include>Animation_Info</include>
             <include>Dialog_Background</include>
             <control type="group">
@@ -25,7 +24,7 @@
                 <right>side</right>
                 <control type="group">
                     <include name="Object_Line">
-                        <param name="width" value="1200" />
+                        <param name="width" value="1364" />
                         <param name="label" value="207" />
                     </include>
                 </control>
@@ -371,7 +370,7 @@
                 <!-- BUTTONS -->
                 <control type="grouplist" id="9000">
                     <left>pad</left>
-                    <width>1190</width>
+                    <width>1354</width>
                     <bottom>side</bottom>
                     <height>69</height>
                     <align>left</align>
@@ -381,7 +380,7 @@
                     
                     <!-- Youtube Button -->
                     <control type="button" id="9001">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <label>31108</label>
@@ -389,21 +388,21 @@
                     </control>
                     <!-- Refresh Button -->
                     <control type="button" id="6">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <label>184</label>
                     </control>
                     <!-- Get Thumb Button -->
                     <control type="button" id="10">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <label>13511</label>
                     </control>
                     <!-- Fanart Button -->
                     <control type="button" id="12">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <label>20413</label>

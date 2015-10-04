@@ -21,7 +21,7 @@
                     <right>side</right>
                     <height>552</height>
                     <include name="Object_Line">
-                        <param name="width" value="1200" />
+                        <param name="width" value="1150" />
                         <param name="label" value="$INFO[Control.GetLabel(2)]" />
                     </include>
                 </control>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_ImageList">
+        <value condition="!IsEmpty(ListItem.Property(job))">$INFO[ListItem.Property(job)]</value>
+        <value condition="!IsEmpty(ListItem.Property(character))">$INFO[ListItem.Property(character)]</value>
+        <value>$INFO[ListItem.Property(Addon.Summary)]</value>
+    </variable>
+
     <variable name="Label_SeekStep">
         <value condition="!IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize]</value>
         <value condition="!IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset]</value>

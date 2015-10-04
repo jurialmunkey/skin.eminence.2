@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<controls>
+        <control type="multiimage">
+            <posy>42</posy>
+            <posx>62</posx>
+            <width>64</width>
+            <height>64</height> 
+            <aspectratio>keep</aspectratio>
+            <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
+            <timeperimage>75</timeperimage>
+            <fadetime>0</fadetime>
+            <colordiffuse>HomeBarFG</colordiffuse>
+        </control>
 	</controls>
 </window>

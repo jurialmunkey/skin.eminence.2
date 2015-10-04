@@ -80,7 +80,7 @@
     <include name="Dialog_Info_Arrows">
         <control type="group">
             <left>pad</left>
-            <width>1394</width>
+            <width>1354</width>
             <bottom>side</bottom>
             <height>69</height>
             <control type="image">
@@ -403,9 +403,11 @@
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                            <visible>IsEmpty(ListItem.Property(character))</visible>
+                            <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                            <visible>!IsEmpty(ListItem.Property(Addon.Summary)) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">
@@ -424,7 +426,7 @@
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Small</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.Property(Addon.Summary),[CAPITALIZE],[/CAPITALIZE]]</label>
+                                <label>$VAR[Label_ImageList,[CAPITALIZE],[/CAPITALIZE]]</label>
                             </control>
                         </control>
                     </control>
@@ -454,9 +456,11 @@
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                            <visible>IsEmpty(ListItem.Property(character))</visible>
+                            <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                            <visible>!IsEmpty(ListItem.Property(Addon.Summary)) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">
@@ -475,7 +479,7 @@
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.Property(Addon.Summary),[CAPITALIZE],[/CAPITALIZE]]</label>
+                                <label>$VAR[Label_ImageList,[CAPITALIZE],[/CAPITALIZE]]</label>
                             </control>
                         </control>
                     </control>

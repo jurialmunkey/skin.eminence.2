@@ -3,12 +3,12 @@
     <defaultcontrol always="true">9000</defaultcontrol>
     <onload>ClearProperty(extinfo,home)</onload>
     <controls>
-        <include>GlobalOverlay</include>
+        <!-- <include>GlobalOverlay</include> -->
         <control type="group">
             <top>210</top>
             <height>780</height>
             <centerleft>50%</centerleft>
-            <width>1717</width>
+            <width>1880</width>
             <include>Animation_Info</include>
             <include>Dialog_Background</include>
             <control type="group">
@@ -27,21 +27,21 @@
                 <control type="group">
                     <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
                     <include name="Object_Line">
-                        <param name="width" value="1200" />
+                        <param name="width" value="1364" />
                         <param name="label" value="207" />
                     </include>
                 </control>
                 <control type="group">
                     <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
                     <include name="Object_Line">
-                        <param name="width" value="1200" />
+                        <param name="width" value="1364" />
                         <param name="label" value="206" />
                     </include>
                 </control>
                 <control type="group">
                     <visible allowhiddenfocus="true">StringCompare(Window.Property(list),Director)</visible>
                     <include name="Object_Line">
-                        <param name="width" value="1200" />
+                        <param name="width" value="1364" />
                         <param name="label" value="20339" />
                     </include>
                 </control>
@@ -246,7 +246,7 @@
                 </include>
                 <control type="grouplist" id="9000">
                     <left>pad</left>
-                    <width>1190</width>
+                    <width>1354</width>
                     <bottom>side</bottom>
                     <height>69</height>
                     <align>left</align>
@@ -261,14 +261,14 @@
                         <label>208</label>
                         <altlabel>1024</altlabel>
                         <usealttexture>Container.Content(TVShows)</usealttexture>
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <onfocus>ClearProperty(list)</onfocus>
                     </control>
                     <!-- Trailer Button -->
                     <control type="button" id="11">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>20410</label>
                         <visible>!IsEmpty(ListItem.Trailer)</visible>
@@ -278,7 +278,7 @@
                     <!-- Cast Button -->
                     <control type="button" id="5">
                         <label>206</label>
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(51)</onclick>
                         <include>Defs_OptionButton</include>
@@ -287,7 +287,7 @@
                     <!-- Director Button -->
                     <control type="button" id="9001">
                         <label>20339</label>
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <onclick>SetProperty(list,Director)</onclick>
                         <onclick>SetFocus(9500)</onclick>
@@ -296,7 +296,7 @@
                     </control>
                     <!-- Refresh Button -->
                     <control type="button" id="6">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>184</label>
                         <width>147</width>
@@ -305,7 +305,7 @@
                     </control>
                     <!-- Get Thumb Button -->
                     <control type="button" id="10">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>13511</label>
                         <include>Defs_OptionButton</include>
@@ -313,7 +313,7 @@
                     </control>
                     <!-- Artwork Downloader Button -->
                     <control type="button" id="20">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>31043</label>
                         <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
@@ -325,7 +325,7 @@
                     
                     <!-- Cinema Experience Button -->
                     <control type="button" id="21">
-                        <width>290</width>
+                        <width>331</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>31066</label>
                         <onclick>Dialog.Close(MovieInformation)</onclick>
@@ -343,7 +343,7 @@
                     <top>30</top>
                     <visible>StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
                     <include name="Dialog_BasicList">
-                        <param name="width" value="1190" />
+                        <param name="width" value="1354" />
                         <param name="height" value="552" />
                         <param name="id" value="50" />
                         <param name="type" value="list" />
@@ -378,7 +378,7 @@
                     <top>30</top>
                     <visible>StringCompare(Window.Property(list),Director)</visible>
                     <include name="Dialog_BasicList">
-                        <param name="width" value="1190" />
+                        <param name="width" value="1354" />
                         <param name="height" value="552" />
                         <param name="id" value="9500" />
                         <param name="type" value="list" />

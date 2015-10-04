@@ -1,3 +1,8 @@
+[B]0.9.23[/B]
+Wider info boxes
+Busy spinner moved to dialog
+More widget options for global widget
+
 [B]0.9.22[/B]
 Guide: Now, Next, Channel
 New PVR channel view shows more channels

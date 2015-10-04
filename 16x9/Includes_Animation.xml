@@ -42,6 +42,7 @@
             <effect type="slide" start="0,-96" end="0" time="200" easing="out" tween="quadratic" />
             <effect type="fade" start="0" end="100" time="200" />
         </animation>
+        <include>Animation_FadeOut</include>
     </include>
     <include name="Animation_Hub">
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0">WindowOpen</animation>

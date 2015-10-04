@@ -327,18 +327,7 @@
         </control>
     </include>
     <include name="Furniture_TopBar_Tile_Content">
-        <control type="multiimage">
-            <posy>42</posy>
-            <posx>62</posx>
-            <width>64</width>
-            <height>64</height> 
-            <aspectratio>keep</aspectratio>
-            <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
-            <timeperimage>75</timeperimage>
-            <fadetime>0</fadetime>
-            <colordiffuse>HomeBarFG</colordiffuse>
-            <visible>Window.IsVisible(DialogBusy.xml)</visible>
-        </control>
+        
         <control type="image">
             <posy>10</posy>
             <posx>30</posx>
