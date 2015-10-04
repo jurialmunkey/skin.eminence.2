@@ -84,7 +84,7 @@
                     <height>710</height>
                     <include name="Object_Line">
                         <param name="width" value="1400" />
-                        <param name="label" value="$INFO[Control.GetLabel(130)]$INFO[Control.GetLabel(140)]" />
+                        <param name="label" value="$INFO[Control.GetLabel(130)]$INFO[Control.GetLabel(140)]$INFO[Player.FileName, - ,]" />
                     </include>
                     <control type="panel" id="120">
                         <right>side</right>
