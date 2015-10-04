@@ -490,20 +490,7 @@
             <posx>400r</posx>
             <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
             <visible>!Skin.HasSetting(disable.clockheader)</visible>
-            <include>Animation.HeaderDialog</include>
             <animation effect="slide" start="0" end="92" condition="Skin.HasSetting(disable.weatherheader)">Conditional</animation>
-            <control type="label">
-                <posx>272</posx>
-                <posy>27</posy>
-                <width>100</width>
-                <height>100</height>
-                <font>Font-Weather</font>
-                <textcolor>MainLabel</textcolor>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label> [B]$VAR[WeatherLabel][/B]</label>
-                <visible>!Skin.HasSetting(disable.weatherheader)</visible>
-            </control>
             <control type="image">
                 <posx>284</posx>
                 <posy>28</posy>

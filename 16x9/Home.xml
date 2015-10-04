@@ -15,7 +15,7 @@
     <!-- <onunload>SetProperty(FO9001,1,home)</onunload> -->
     <onunload>SetProperty(Header.Label,$INFO[Container(9000).ListItem.Label],home)</onunload>
     <onunload>SetProperty(Header.Icon,$INFO[Container(9000).ListItem.Icon],home)</onunload>
-    <onunload condition="!IsEmpty(Container(9000).ListItem.Property(TileColor)">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
+    <onunload condition="!IsEmpty(Container(9000).ListItem.Property(TileColor))">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
     <controls>
 
         <include>Furniture_Background</include>
