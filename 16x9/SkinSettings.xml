@@ -341,6 +341,17 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8007)</visible>
                     </control>
+                    <!-- Switch between All/Unwatched media counter -->
+                    <control type="radiobutton" id="8704">
+                        <width>100%</width>
+                        <radioposx>1350</radioposx>
+                        <label>31167</label>
+                        <enable>!Skin.HasSetting(disable.mainheader)</enable>
+                        <onclick>Skin.ToggleSetting(header.mainheadercount)</onclick>
+                        <selected>Skin.HasSetting(header.mainheadercount)</selected>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                    </control>
                     <!-- Match header tile to highlight color -->
                     <control type="radiobutton" id="8709">
                         <width>100%</width>

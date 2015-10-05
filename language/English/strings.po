@@ -613,3 +613,7 @@ msgstr ""
 msgctxt "#31166"
 msgid "Individually set in customisation dialog"
 msgstr ""
+
+msgctxt "#31167"
+msgid "Show unwatched count in header"
+msgstr ""
