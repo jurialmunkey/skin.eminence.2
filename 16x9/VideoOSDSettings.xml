@@ -15,6 +15,7 @@
             <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
             <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
             <include>Dialog_Background</include>
+            <visible>!Window.IsVisible(DialogSlider.xml)</visible>
             <control type="group">
                 <top>70</top>
                 <left>side</left>

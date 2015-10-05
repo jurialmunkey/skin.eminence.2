@@ -1,5 +1,7 @@
 [B]0.9.25[/B]
 New info screens with clear background
+Fix syntax errors
+Hide OSD settings dialog when adjustment slider visible
 
 [B]0.9.24[/B]
 Fix video resolution info on osd
