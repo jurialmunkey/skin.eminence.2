@@ -4,6 +4,7 @@ Busy spinner moved to dialog
 More widget options for global widget
 Fix log errors (unmatched parentheses and missing includes)
 Add pvr progress texture
+Now / Next Channel view
 
 [B]0.9.22[/B]
 Guide: Now, Next, Channel

@@ -397,6 +397,236 @@
         </definition>
     </include>
 
+    <!-- PVR Wide List -->
+    <include name="PVR_WideList">
+        <param name="id" default="52" />
+        <param name="visible" default="true" />
+        <param name="label" default="31138" />
+        <param name="include" default="PVR_SmallList_Progress" />
+        <definition>
+            <control type="group">
+                <include>Animation_Common</include>
+                <visible>Control.IsVisible($PARAM[id])</visible>
+                <include>Animation_FadeIn</include>
+                <include>Animation_FadeOut</include>
+                <left>side</left>
+                <right>side</right>
+                <top>top</top>
+                <height>height</height>
+                <control type="group">
+                    <width>1880</width>
+                    <include name="Object_Line">
+                        <param name="width" value="1880" />
+                        <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+                    </include>
+                    <control type="panel" id="$PARAM[id]">
+                        <width>1890</width>
+                        <height>483</height>
+                        <onup>$PARAM[id]</onup>
+                        <ondown>$PARAM[id]</ondown>
+                        <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                        <onleft>60</onleft>
+                        <pagecontrol>60</pagecontrol>
+                        <preloaditems>2</preloaditems>
+                        <orientation>vertical</orientation>
+                        <viewtype label="$PARAM[label]">list</viewtype>
+                        <scrolltime tween="quadratic">400</scrolltime>
+                        <visible>$PARAM[visible]</visible>
+                        <itemlayout height="69" width="1890">
+                            <control type="group">
+                                <left>0</left>
+                                <right>pad</right>
+                                <bottom>0</bottom>
+                                <control type="image">
+                                    <width>100%</width>
+                                    <height>100%</height>
+                                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                                </control>
+                                <control type="image">
+                                    <width>100%</width>
+                                    <height>100%</height>
+                                    <texture colordiffuse="0fffffff">common/selected.png</texture>
+                                    <aspectratio>scale</aspectratio>
+                                    <visible>ListItem.IsPlaying</visible>
+                                </control>
+                                <control type="image">
+                                    <left>side</left>
+                                    <width>110</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                                </control>
+                                <control type="label">
+                                    <left>150</left>
+                                    <width>80</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>ListLabel</textcolor>
+                                    <selectedcolor>ListLabel</selectedcolor>
+                                    <font>Font-Button</font>
+                                    <label>$INFO[ListItem.ChannelNumber]</label>
+                                </control>
+                                <control type="label">
+                                    <left>250</left>
+                                    <width>240</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <aligny>center</aligny>
+                                    <textcolor>ListLabel</textcolor>
+                                    <selectedcolor>ListLabel</selectedcolor>
+                                    <font>Font-Button</font>
+                                    <label>$INFO[ListItem.ChannelName]</label>
+                                </control>
+                                <control type="label">
+                                    <left>500</left>
+                                    <width>615</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <aligny>center</aligny>
+                                    <textcolor>ListLabel</textcolor>
+                                    <selectedcolor>ListLabel</selectedcolor>
+                                    <font>Font-ListInfo</font>
+                                    <label>$INFO[ListItem.Title]</label>
+                                </control>
+                                <control type="label">
+                                    <left>1125</left>
+                                    <width>615</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <aligny>center</aligny>
+                                    <textcolor>ListLabel</textcolor>
+                                    <selectedcolor>ListLabel</selectedcolor>
+                                    <font>Font-ListInfo</font>
+                                    <label>$INFO[ListItem.NextTitle]</label>
+                                </control>
+                                <include>$PARAM[include]_Item</include>
+                            </control>
+                        </itemlayout>
+
+                        <focusedlayout height="69" width="1890">
+                            <control type="group">
+                                <left>0</left>
+                                <right>pad</right>
+                                <bottom>0</bottom>
+                                
+                                <control type="image">
+                                    <width>100%</width>
+                                    <height>100%</height>
+                                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                </control>
+                                <control type="image">
+                                    <width>100%</width>
+                                    <height>100%</height>
+                                    <texture colordiffuse="1fffffff">common/selected.png</texture>
+                                    <aspectratio>scale</aspectratio>
+                                    <visible>ListItem.IsPlaying</visible>
+                                </control>
+                                <control type="image">
+                                    <left>side</left>
+                                    <width>110</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.Icon]</texture>
+                                </control>
+                                <control type="label">
+                                    <left>150</left>
+                                    <width>80</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>Selected</textcolor>
+                                    <selectedcolor>Selected</selectedcolor>
+                                    <font>Font-Button</font>
+                                    <label>$INFO[ListItem.ChannelNumber]</label>
+                                </control>
+                                <control type="label">
+                                    <left>250</left>
+                                    <width>250</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <aligny>center</aligny>
+                                    <textcolor>Selected</textcolor>
+                                    <selectedcolor>Selected</selectedcolor>
+                                    <font>Font-Button</font>
+                                    <label>$INFO[ListItem.ChannelName]</label>
+                                </control>
+                                <control type="label">
+                                    <left>500</left>
+                                    <width>615</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <aligny>center</aligny>
+                                    <textcolor>Selected</textcolor>
+                                    <selectedcolor>Selected</selectedcolor>
+                                    <font>Font-ListInfo</font>
+                                    <label>$INFO[ListItem.Title]</label>
+                                </control>
+                                <control type="label">
+                                    <left>1125</left>
+                                    <width>615</width>
+                                    <top>pad</top>
+                                    <bottom>pad</bottom>
+                                    <aligny>center</aligny>
+                                    <textcolor>Selected</textcolor>
+                                    <selectedcolor>Selected</selectedcolor>
+                                    <font>Font-ListInfo</font>
+                                    <label>$INFO[ListItem.NextTitle]</label>
+                                </control>
+                                <include>$PARAM[include]_Focus</include>
+                            </control>
+                        </focusedlayout>
+                    </control>
+                    <control type="scrollbar" id="60">
+                        <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                        <left>0</left>
+                        <height>483</height>
+                        <onright>50</onright>
+                        <width>8</width>
+                        <orientation>vertical</orientation>
+                        <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+                    </control>
+                    <include>Object_Arrows_Vertical</include>
+                </control>
+                <control type="group">
+                    <bottom>0</bottom>
+                    <height>207</height>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                    <control type="grouplist">
+                        <top>side</top>
+                        <left>side</left>
+                        <right>side</right>
+                        <orientation>vertical</orientation>
+                        <itemgap>pad</itemgap>
+                        <control type="label">
+                            <height>36</height>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[ListItem.Title]</label>
+                        </control>
+                        <control type="label">
+                            <height>36</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]$INFO[ListItem.StartTime,   ,]$INFO[ListItem.EndTime,  -  ,]</label>
+                        </control>
+                        <control type="textbox">
+                            <height>76</height>
+                            <font>Font-ListInfo</font>
+                            <label>$INFO[ListItem.Plot]</label>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <!-- PVR SIPLE LIST -->
     <include name="PVR_SimpleList">
         <control type="group">
