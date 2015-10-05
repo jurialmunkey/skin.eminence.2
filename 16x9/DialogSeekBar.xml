@@ -40,7 +40,7 @@
                         <width>64</width>
                         <height>64</height>
                         <aspectratio>keep</aspectratio>
-                        <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">INFO[VideoPlayer.VideoResolution,indicator/resolution/,.png]</texture>
+                        <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[VideoPlayer.VideoResolution,indicator/resolution/,.png]</texture>
                         <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
                     </control>
                     <control type="image">
