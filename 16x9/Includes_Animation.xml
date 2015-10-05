@@ -8,6 +8,10 @@
         <animation effect="fade" end="0" start="100" time="200">Hidden</animation>
         <animation effect="fade" end="0" start="100" time="200">WindowClose</animation>
     </include>
+    <include name="Animation_FadeOut_Delay">
+        <animation effect="fade" end="0" start="100" time="200" delay="200">Hidden</animation>
+        <animation effect="fade" end="0" start="100" time="200" delay="200">WindowClose</animation>
+    </include>
     <include name="Animation_Bottom">
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,450" end="0">WindowOpen</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,450" start="0">WindowClose</animation>
@@ -32,23 +36,30 @@
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0">Visible</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">Hidden</animation>
         <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">Conditional</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" start="-1920" end="0" delay="300" condition="![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(DialogAlbumInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]">Conditional</animation>
     </include>
     <include name="Animation_Info">
-        <animation type="WindowOpen">
-            <effect type="slide" start="0,-96" end="0" time="200" easing="out" tween="quadratic" />
-            <effect type="fade" start="0" end="100" time="200" />
-        </animation>
-        <animation type="Visible" reversible="false">
-            <effect type="slide" start="0,-96" end="0" time="200" easing="out" tween="quadratic" />
-            <effect type="fade" start="0" end="100" time="200" />
-        </animation>
-        <include>Animation_FadeOut</include>
+        <!-- No Property Set (From Library) -->
+        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="1920" end="0" condition="IsEmpty(Window(home).Property(extinfo))">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="IsEmpty(Window(home).Property(extinfo))">WindowClose</animation>
+
+        <!-- Property 1 Set (Move Left) -->
+        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="-1920" end="0" condition="stringcompare(Window(home).Property(extinfo),1)">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="stringcompare(Window(home).Property(extinfo),1)">WindowClose</animation>
+
+        <!-- Property 2 Set (Move Right) -->
+        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="1920" end="0" condition="stringcompare(Window(home).Property(extinfo),2)">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="stringcompare(Window(home).Property(extinfo),2)">WindowClose</animation>
+
+        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="1920" end="0">Visible</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">Hidden</animation>
     </include>
     <include name="Animation_Hub">
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0">WindowOpen</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0">WindowClose</animation>
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0">Visible</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0">Hidden</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" start="-1920" end="0" delay="300" condition="![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(DialogAlbumInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]">Conditional</animation>
     </include>
     <include name="Animation_SlideIn">
         <animation type="Visible">

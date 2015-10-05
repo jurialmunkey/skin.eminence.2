@@ -6,6 +6,17 @@
 
     <controls>
 
+        <control type="group">
+            <visible>Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+            <top>210</top>
+            <height>780</height>
+            <centerleft>50%</centerleft>
+            <width>1920</width>
+            <include>Dialog_Background</include>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut_Delay</include>
+        </control>
+
         <include>Furniture_TopBar</include>
 
         <control type="group">
