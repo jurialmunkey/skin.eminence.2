@@ -2,8 +2,6 @@
 <window>
     <!-- virtualkeyboard -->
     <defaultcontrol always="true">300</defaultcontrol>
-    <include>DialogZoomAnimation</include>
-
     <controls>
 
         <control type="group">

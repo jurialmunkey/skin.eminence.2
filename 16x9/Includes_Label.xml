@@ -81,7 +81,7 @@
         <value condition="Container.Content(episodes) + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Premiered]</value>
 
         <!-- Tv Shows -->
-        <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(UnWatchedEpisodes,, [LOWERCASE]$LOCALIZE[16101][/LOWERCASE]]</value>
+        <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(UnWatchedEpisodes),, [LOWERCASE]$LOCALIZE[16101][/LOWERCASE]]</value>
         
         <!-- Others -->
         <value condition="!Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
