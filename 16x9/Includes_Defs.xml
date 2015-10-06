@@ -83,37 +83,13 @@
             <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
             <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <include>Defs_OptionButton</include>
-            <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=hubwidget&amp;skinList=Widget.$PARAM[hubid]&amp;skinLabel=Widget.$PARAM[hubid].Label)</onclick>
+            <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=Widget.$PARAM[hubid]&amp;skinLabel=Widget.$PARAM[hubid].Label)</onclick>
         </control>
     </include>
     <variable name="Defs_HomeWidget_Content">
         <value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
         <value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart))">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
         <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath))">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist)">$INFO[Container(9000).ListItem.Property(widgetPlaylist)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomMovies)">special://skin/extras/playlists/RandomMovies.xsp</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RandomEpisodes)">special://skin/extras/playlists/RandomEpisodes.xsp</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentEpisodes)">special://skin/extras/playlists/NewEpisodes.xsp</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecentMovies)">special://skin/extras/playlists/NewMovies.xsp</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedEpisodes)">plugin://script.skin.helper.service/?action=nextepisodes&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),RecommendedMovies)">plugin://script.skin.helper.service/?action=recommendedmovies&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),SimilarMovies)">plugin://script.skin.helper.service/?action=similarmovies&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom1)">$INFO[Skin.String(CustomWidget1)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom2)">$INFO[Skin.String(CustomWidget2)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom3)">$INFO[Skin.String(CustomWidget3)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Custom4)">$INFO[Skin.String(CustomWidget4)]</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingShows)">plugin://script.extendedinfo?info=trendingshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringShows)">plugin://script.extendedinfo?info=airingshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PremiereShows)">plugin://script.extendedinfo?info=premiereshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),InCinemas)">plugin://script.extendedinfo?info=incinemas</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Upcoming)">plugin://script.extendedinfo?info=upcoming</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularMovies)">plugin://script.extendedinfo?info=popularmovies</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedMovies)">plugin://script.extendedinfo?info=topratedmovies</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularTvShows)">plugin://script.extendedinfo?info=populartvshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedTvShows)">plugin://script.extendedinfo?info=topratedtvshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),OnAirTvShows)">plugin://script.extendedinfo?info=onairtvshows</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringTodayTvShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
         <value condition="!IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
         <value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>

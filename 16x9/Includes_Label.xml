@@ -188,11 +188,16 @@
 
     <variable name="Label_Hub_WidgetLabel">
         <value condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">$INFO[Container(9500).ListItem.TvShowTitle]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Artist)">$INFO[Container(9500).ListItem.Artist]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Label)">$INFO[Container(9500).ListItem.Label]</value>
     </variable>
     <variable name="Label_Hub_WidgetLabel2">
         <value condition="!IsEmpty(Container(9500).ListItem.Episode)">$INFO[Container(9500).ListItem.Season,,x]$INFO[Container(9500).ListItem.Episode,,. ]$INFO[Container(9500).ListItem.Title]</value>
-        <value condition="IsEmpty(Container(9500).ListItem.TvShowTitle)">$INFO[Container(9500).ListItem.Year,,  •  ]$INFO[Container(9500).ListItem.Rating]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Artist) + !IsEmpty(Container(9500).ListItem.Year)">$INFO[Container(9500).ListItem.Title]$INFO[Container(9500).ListItem.Year, (,)]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Artist) + IsEmpty(Container(9500).ListItem.Year)">$INFO[Container(9500).ListItem.Title]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Album)">$INFO[Container(9500).ListItem.Year]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Property(Addon.Version))">$INFO[Container(9500).ListItem.Property(Addon.Version)]</value>
+        <value condition="IsEmpty(Container(9500).ListItem.TvShowTitle) + !IsEmpty(Container(9500).ListItem.Year)">$INFO[Container(9500).ListItem.Year,,  •  ]$INFO[Container(9500).ListItem.Rating]</value>
         <value>$INFO[Container(9500).ListItem.Rating]</value>
     </variable>
     <variable name="Label_Fanart_WidgetType">

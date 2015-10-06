@@ -89,7 +89,7 @@
                     <!-- RESET SKIN -->
                     <control type="togglebutton" id="8099">
                         <width>100%</width>
-                        <label>Reset Skin Settings</label>
+                        <label>31170</label>
                         <usealttexture>ControlGroup(8000).HasFocus(8099)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -123,7 +123,7 @@
                         <width>100%</width>
                         <label>31147</label>
                         <label2>$INFO[Skin.String(home.fallbackwidget.name)]</label2>
-                        <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=fallbackwidget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name)</onclick>
+                        <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
@@ -493,7 +493,7 @@
                     <!-- Reset Skin to Defaults -->
                     <control type="button" id="8999">
                         <width>100%</width>
-                        <label>Reset skin to defaults (WARNING - This will override all skin settings)</label>
+                        <label>31169</label>
                         <onclick>Skin.ResetSettings</onclick>
                         <onclick>Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onclick>
                         <onclick>Skin.SetString(home.headertext,$LOCALIZE[10000])</onclick>

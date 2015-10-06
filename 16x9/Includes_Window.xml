@@ -100,8 +100,9 @@
                             <right>side</right>
                             <bottom>14</bottom>
                             <height>64</height>
+                            <align>left</align>
                             <font>Font-ListInfo-Small</font>
-                            <label>$INFO[Container(9500).ListItem.Plot]</label>
+                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
                         </control>
                     </control>
                 </control>
