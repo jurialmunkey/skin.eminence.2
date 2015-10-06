@@ -495,10 +495,6 @@ msgid "Panel list"
 msgstr ""
 
 msgctxt "#31138"
-msgid "Now / Next"
-msgstr ""
-
-msgctxt "#31138"
 msgid "Show clock"
 msgstr ""
 
@@ -616,4 +612,8 @@ msgstr ""
 
 msgctxt "#31167"
 msgid "Show unwatched count in header"
+msgstr ""
+
+msgctxt "#31168"
+msgid "Now / Next"
 msgstr ""

@@ -31,6 +31,11 @@
                 <top>70</top>
                 <left>497</left>
                 <right>side</right>
+                <control type="image">
+                    <width>100%</width>
+                    <height>height</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
                 <control type="group">
                     <include name="Object_Line">
                         <param name="width" value="1404" />
@@ -46,7 +51,7 @@
                     <orientation>vertical</orientation>
                     <left>pad</left>
                     <right>pad</right>
-                    <top>0</top>
+                    <top>pad</top>
                     <bottom>pad</bottom>
                     <control type="label">
                         <top>pad</top>
@@ -282,8 +287,8 @@
                 </include>
                 <control type="grouplist" id="9000">
                     <left>pad</left>
-                    <width>1394</width>
-                    <bottom>side</bottom>
+                    <width>1384</width>
+                    <bottom>30</bottom>
                     <height>69</height>
                     <align>left</align>
                     <itemgap>pad</itemgap>
@@ -294,7 +299,7 @@
                         <description>Play</description>
                         <label>208</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -306,7 +311,7 @@
                         <description>Browse</description>
                         <label>21385</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -318,7 +323,7 @@
                         <description>Cast</description>
                         <label>206</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -330,7 +335,7 @@
                         <description>Similar</description>
                         <label>31107</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -341,7 +346,7 @@
                         <description>Youtube</description>
                         <label>31108</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -352,7 +357,7 @@
                         <description>Crew</description>
                         <label>$ADDON[script.extendedinfo 32115]</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -368,7 +373,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -381,7 +386,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -394,7 +399,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -407,7 +412,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -420,7 +425,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />

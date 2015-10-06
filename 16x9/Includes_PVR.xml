@@ -401,7 +401,7 @@
     <include name="PVR_WideList">
         <param name="id" default="52" />
         <param name="visible" default="true" />
-        <param name="label" default="31138" />
+        <param name="label" default="31168" />
         <param name="include" default="PVR_SmallList_Progress" />
         <definition>
             <control type="group">

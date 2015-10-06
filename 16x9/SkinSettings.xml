@@ -5,6 +5,7 @@
     <defaultcontrol always="true">8001</defaultcontrol>
     <onload condition="IsEmpty(Skin.String(home.mainheadertext))">Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onload>
     <onload condition="IsEmpty(Skin.String(home.headertext))">Skin.SetString(home.headertext,$LOCALIZE[10000])</onload>
+    <onload condition="IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onload>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109)</onunload>
     <controls>
         <include>Furniture_Background</include>
@@ -82,6 +83,14 @@
                         <width>100%</width>
                         <label>31110</label>
                         <usealttexture>ControlGroup(8000).HasFocus(8009)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                    <!-- RESET SKIN -->
+                    <control type="togglebutton" id="8099">
+                        <width>100%</width>
+                        <label>Reset Skin Settings</label>
+                        <usealttexture>ControlGroup(8000).HasFocus(8099)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
                     </control>
@@ -214,16 +223,7 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
-                    <!-- Opaque Panels -->
-                    <control type="radiobutton" id="8204">
-                        <radioposx>1350</radioposx>
-                        <width>100%</width>
-                        <label>31004</label>
-                        <selected>Skin.HasSetting(global.backpanelmode)</selected>
-                        <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
-                    </control>
+                    
                     <!-- Overlay -->
                     <control type="button" id="8207">
                         <width>100%</width>
@@ -462,6 +462,16 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Opaque Panels -->
+                    <control type="radiobutton" id="8906">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>31004</label>
+                        <selected>Skin.HasSetting(global.backpanelmode)</selected>
+                        <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                     <!-- Backup -->
                     <control type="button" id="8908">
                         <width>100%</width>
@@ -477,6 +487,20 @@
                         <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+
+                    <!-- RESET -->
+                    <!-- Reset Skin to Defaults -->
+                    <control type="button" id="8999">
+                        <width>100%</width>
+                        <label>Reset skin to defaults (WARNING - This will override all skin settings)</label>
+                        <onclick>Skin.ResetSettings</onclick>
+                        <onclick>Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onclick>
+                        <onclick>Skin.SetString(home.headertext,$LOCALIZE[10000])</onclick>
+                        <onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
+                        <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8099)</visible>
                     </control>
                 </control>
             </control>

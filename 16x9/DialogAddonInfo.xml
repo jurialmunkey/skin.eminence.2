@@ -23,6 +23,11 @@
                 <top>70</top>
                 <left>720</left>
                 <right>side</right>
+                <control type="image">
+                    <width>100%</width>
+                    <height>height</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
                 <control type="group">
                     <include name="Object_Line">
                         <param name="width" value="1180" />
@@ -37,7 +42,7 @@
                     <orientation>vertical</orientation>
                     <left>pad</left>
                     <right>pad</right>
-                    <top>0</top>
+                    <top>pad</top>
                     <bottom>pad</bottom>
                     <control type="label">
                         <top>pad</top>
@@ -196,7 +201,7 @@
                 <!-- BUTTONS -->
                 <control type="grouplist" id="9000">
                     <left>pad</left>
-                    <width>1170</width>
+                    <width>1160</width>
                     <bottom>side</bottom>
                     <height>69</height>
                     <align>left</align>
@@ -205,7 +210,7 @@
                     
                     <!-- Launch Addon Button -->
                     <control type="button" id="12">
-                        <width>285</width>
+                        <width>282.5</width>
                         <label>518</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -213,7 +218,7 @@
                     </control>
                     <!-- Configure Addon Button -->
                     <control type="button" id="9">
-                        <width>285</width>
+                        <width>282.5</width>
                         <label>24020</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -221,7 +226,7 @@
                     </control>
                     <!-- Update Addon Button -->
                     <control type="button" id="8">
-                        <width>285</width>
+                        <width>282.5</width>
                         <label>24069</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -229,7 +234,7 @@
                     </control>
                     <!-- Install/UnInstall Addon button -->
                     <control type="button" id="6">
-                        <width>285</width>
+                        <width>282.5</width>
                         <label>24022</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -237,7 +242,7 @@
                     </control>
                     <!-- Enable/Disable Addon button -->
                     <control type="button" id="7">
-                        <width>285</width>
+                        <width>282.5</width>
                         <label>24021</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -245,7 +250,7 @@
                     </control>
                     <!-- Rollback Button -->
                     <control type="button" id="11">
-                        <width>285</width>
+                        <width>282.5</width>
                         <label>24048</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -253,7 +258,7 @@
                     </control>
                     <!-- Changelog Button -->
                     <control type="button" id="10">
-                        <width>285</width>
+                        <width>282.5</width>
                         <label>24036</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>

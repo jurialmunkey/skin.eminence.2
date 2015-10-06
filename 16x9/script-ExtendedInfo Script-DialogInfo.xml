@@ -30,6 +30,11 @@
                 <top>70</top>
                 <left>497</left>
                 <right>side</right>
+                <control type="image">
+                    <width>100%</width>
+                    <height>height</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
                 <control type="group">
                     <include name="Object_Line">
                         <param name="width" value="1404" />
@@ -45,7 +50,7 @@
                     <orientation>vertical</orientation>
                     <left>pad</left>
                     <right>pad</right>
-                    <top>0</top>
+                    <top>pad</top>
                     <bottom>pad</bottom>
                     <control type="label">
                         <top>pad</top>
@@ -179,8 +184,8 @@
                 <!-- BUTTONS -->
                 <control type="grouplist" id="9000">
                     <left>pad</left>
-                    <width>1394</width>
-                    <bottom>side</bottom>
+                    <width>1384</width>
+                    <bottom>30</bottom>
                     <height>69</height>
                     <align>left</align>
                     <itemgap>pad</itemgap>
@@ -189,7 +194,7 @@
                     
                     <!-- Movies -->
                     <control type="button" id="9001">
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <label>$ADDON[script.extendedinfo 32010]</label>
                         <onclick>SetProperty(content,150)</onclick>
@@ -200,7 +205,7 @@
                     </control>
                     <!-- TvShows -->
                     <control type="button" id="9002">
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <label>20343</label>
                         <onclick>SetProperty(content,250)</onclick>
@@ -211,7 +216,7 @@
                     </control>
                     <!-- YouTube -->
                     <control type="button" id="9003">
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <label>$ADDON[script.extendedinfo 32118]</label>
                         <onclick>SetProperty(content,350)</onclick>
@@ -222,7 +227,7 @@
                     </control>
                     <!-- As Crew -->
                     <control type="button" id="9004">
-                        <width>341</width>
+                        <width>338.5</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <label>$ADDON[script.extendedinfo 32115]</label>
                         <onclick>SetProperty(content,550)</onclick>
@@ -240,7 +245,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -253,7 +258,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -266,7 +271,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -279,7 +284,7 @@
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1394" />
+                <param name="width" value="1384" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />

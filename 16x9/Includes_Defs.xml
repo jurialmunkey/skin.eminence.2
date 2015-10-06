@@ -59,6 +59,7 @@
         <value condition="Window.IsVisible(1107) + !IsEmpty(Skin.String(Widget.1107))">$INFO[Skin.String(Widget.1107)]</value>
         <value condition="Window.IsVisible(1108) + !IsEmpty(Skin.String(Widget.1108))">$INFO[Skin.String(Widget.1108)]</value>
         <value condition="Window.IsVisible(1109) + !IsEmpty(Skin.String(Widget.1109))">$INFO[Skin.String(Widget.1109)]</value>
+        <value condition="Window.IsVisible(1102)">special://skin/extras/playlists/RandomEpisodes.xsp</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
     <variable name="Defs_HomeTileColor">
