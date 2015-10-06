@@ -4,7 +4,10 @@
     <zorder>10</zorder>
     <controls>
         <control type="label" id="3000"><visible>false</visible></control>
+        <control type="textbox" id="3001"><visible>false</visible></control>
         <control type="label" id="3002"><visible>false</visible></control>
+        <control type="label" id="3003"><visible>false</visible></control>
+        <control type="label" id="3004"><visible>false</visible></control>
 
         <control type="group">
             <include>Animation_SlideIn</include>
@@ -69,7 +72,7 @@
                 <bottom>0</bottom>
                 <aligny>center</aligny>
                 <font>Font-ListInfo-Small</font>
-                <label>$INFO[Control.GetLabel(3002)]$INFO[Control.GetLabel(3000)]</label>
+                <label>$INFO[Control.GetLabel(3002),, ]$INFO[Control.GetLabel(3000)]</label>
                 <textcolor>Selected</textcolor>
             </control>
 
