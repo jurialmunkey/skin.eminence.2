@@ -202,7 +202,7 @@
                 <control type="grouplist" id="9000">
                     <left>pad</left>
                     <width>1160</width>
-                    <bottom>side</bottom>
+                    <bottom>30</bottom>
                     <height>69</height>
                     <align>left</align>
                     <itemgap>pad</itemgap>
