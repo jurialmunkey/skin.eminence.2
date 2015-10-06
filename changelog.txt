@@ -2,6 +2,7 @@
 Fix up some widget code
 More options for fallback and hubs widgets
 Fix overrides for new options
+Global fallback weather widget
 
 [B]0.9.25[/B]
 New info screens with clear background

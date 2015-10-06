@@ -375,7 +375,7 @@
         </control>
         <control type="grouplist">
             <visible>!Container(9001).IsUpdating</visible>
-            <visible>!StringCompare(Container(9000).ListItem.Property(widget),Weather) | IsEmpty(Skin.String(weather.fanart))</visible>
+            <visible>![StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] | IsEmpty(Skin.String(weather.fanart))</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <animation effect="slide" start="0" end="-220" condition="!Container(9001).OnNext" reversible="false" time="200">Conditional</animation>
@@ -428,7 +428,7 @@
             <visible>!Container(9001).IsUpdating</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-            <visible>StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart))</visible>
+            <visible>[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart))</visible>
             <include name="Object_WeatherOutlook">
                 <param name="day" value="Day0" />
                 <param name="dayname" value="$LOCALIZE[33006]" />
