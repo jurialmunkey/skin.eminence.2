@@ -4,6 +4,7 @@ More options for fallback and hubs widgets
 Fix overrides for new options
 Global fallback weather widget
 Hide buttons in extendedinfo if no content available
+Move backup and restore to new menu item with skin reset
 
 [B]0.9.25[/B]
 New info screens with clear background

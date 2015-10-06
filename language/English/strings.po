@@ -623,5 +623,5 @@ msgid "Reset skin settings to defaults (WARNING - This will override all skin se
 msgstr ""
 
 msgctxt "#31170"
-msgid "Reset skin settings"
+msgid "Backup / Restore"
 msgstr ""

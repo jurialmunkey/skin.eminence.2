@@ -472,24 +472,25 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    
+
+                    <!-- RESET -->
                     <!-- Backup -->
-                    <control type="button" id="8908">
+                    <control type="button" id="8997">
                         <width>100%</width>
                         <label>31161</label>
                         <onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
                         <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        <visible>ControlGroup(8000).HasFocus(8099)</visible>
                     </control>
                     <!-- Restore -->
-                    <control type="button" id="8909">
+                    <control type="button" id="8998">
                         <width>100%</width>
                         <label>31162</label>
                         <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
                         <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        <visible>ControlGroup(8000).HasFocus(8099)</visible>
                     </control>
-
-                    <!-- RESET -->
                     <!-- Reset Skin to Defaults -->
                     <control type="button" id="8999">
                         <width>100%</width>
