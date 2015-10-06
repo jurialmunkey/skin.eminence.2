@@ -191,6 +191,12 @@
                     <itemgap>pad</itemgap>
                     <orientation>horizontal</orientation>
                     <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+
+                    <control type="button" id="9999">
+                        <visible allowhiddenfocus="true">false</visible>
+                        <onfocus>Right</onfocus>
+                        <onclick>Right</onclick>
+                    </control>
                     
                     <!-- Movies -->
                     <control type="button" id="9001">
@@ -202,6 +208,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
+                        <visible>IntegerGreaterThan(Container(150).NumItems,0)</visible>
                     </control>
                     <!-- TvShows -->
                     <control type="button" id="9002">
@@ -213,6 +220,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
+                        <visible>IntegerGreaterThan(Container(250).NumItems,0)</visible>
                     </control>
                     <!-- YouTube -->
                     <control type="button" id="9003">
@@ -224,6 +232,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
+                        <visible>IntegerGreaterThan(Container(350).NumItems,0)</visible>
                     </control>
                     <!-- As Crew -->
                     <control type="button" id="9004">
@@ -235,6 +244,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
+                        <visible>IntegerGreaterThan(Container(550).NumItems,0)</visible>
                     </control>
                 </control>
 

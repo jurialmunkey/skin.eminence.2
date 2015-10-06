@@ -294,6 +294,11 @@
                     <itemgap>pad</itemgap>
                     <orientation>horizontal</orientation>
                     <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                    <control type="button" id="9999">
+                        <visible allowhiddenfocus="true">false</visible>
+                        <onfocus>Right</onfocus>
+                        <onclick>Right</onclick>
+                    </control>
                     
                     <control type="button" id ="8">
                         <description>Play</description>
@@ -329,6 +334,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,1000)</onclick>
                         <onclick>SetFocus(1000)</onclick>
+                        <visible>IntegerGreaterThan(Container(1000).NumItems,0)</visible>
                     </control>
 
                     <control type="button" id ="9003">
@@ -341,6 +347,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,150)</onclick>
                         <onclick>SetFocus(150)</onclick>
+                        <visible>IntegerGreaterThan(Container(150).NumItems,0)</visible>
                     </control>
                     <control type="button" id ="9004">
                         <description>Youtube</description>
@@ -352,6 +359,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,350)</onclick>
                         <onclick>SetFocus(350)</onclick>
+                        <visible>IntegerGreaterThan(Container(350).NumItems,0)</visible>
                     </control>
                     <control type="button" id ="9005">
                         <description>Crew</description>
@@ -363,6 +371,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,750)</onclick>
                         <onclick>SetFocus(750)</onclick>
+                        <visible>IntegerGreaterThan(Container(750).NumItems,0)</visible>
                     </control>  
                 </control>
 
