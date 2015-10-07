@@ -361,6 +361,7 @@
         <param name="visible" default="true" />
         <param name="backpanel" default="true" />
         <param name="type" default="panel" />
+        <param name="noimage" default="false" />
         <definition>
             <control type="$PARAM[type]" id="$PARAM[id]">
                 <onup>$PARAM[onup]</onup>
@@ -377,7 +378,30 @@
                 <orientation>vertical</orientation>
                 <visible allowhiddenfocus="true">$PARAM[visible]</visible>
                 <preloaditems>2</preloaditems>
-                <itemlayout width="$PARAM[width]" height="138">
+                <itemlayout width="$PARAM[width]" height="69" condition="$PARAM[noimage]">
+                    <control type="image">
+                        <left>5</left>
+                        <right>5</right>
+                        <bottom>pad</bottom>
+                        <top>0</top>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        <visible>$PARAM[backpanel]</visible>
+                    </control>
+                    <control type="group">
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <bottom>pad</bottom>
+                            <top>0</top>
+                            <align>center</align>
+                            <textcolor>ListLabel</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </itemlayout>
+                <itemlayout width="$PARAM[width]" height="138" condition="!$PARAM[noimage]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -431,7 +455,29 @@
                         </control>
                     </control>
                 </itemlayout>
-                <focusedlayout width="$PARAM[width]" height="138">
+                <focusedlayout width="$PARAM[width]" height="69" condition="$PARAM[noimage]">
+                    <control type="image">
+                        <left>5</left>
+                        <right>5</right>
+                        <bottom>pad</bottom>
+                        <top>0</top>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="group">
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <bottom>pad</bottom>
+                            <top>0</top>
+                            <align>center</align>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <focusedlayout width="$PARAM[width]" height="138" condition="!$PARAM[noimage]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>

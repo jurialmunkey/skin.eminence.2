@@ -6,6 +6,8 @@
     <onload>SetProperty(150_onback,SetFocus(9000))</onload>
     <onload>SetProperty(350_onback,SetFocus(9000))</onload>
     <onload>SetProperty(750_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(850_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(950_onback,SetFocus(9000))</onload>
     <onload>SetProperty(1000_onback,SetFocus(9000))</onload>
     <onload>SetProperty(1150_onback,SetFocus(9000))</onload>
     <onload>ClearProperty(content)</onload>
@@ -296,8 +298,12 @@
                     <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
                     <control type="button" id="9999">
                         <visible allowhiddenfocus="true">false</visible>
+                        <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>Right</onfocus>
                         <onclick>Right</onclick>
+                        <ondown>Right</ondown>
+                        <onup>Right</onup>
+                        <onleft>Right</onleft>
                     </control>
                     
                     <control type="button" id ="8">
@@ -372,7 +378,40 @@
                         <onclick>SetProperty(content,750)</onclick>
                         <onclick>SetFocus(750)</onclick>
                         <visible>IntegerGreaterThan(Container(750).NumItems,0)</visible>
-                    </control>  
+                    </control>
+                    <control type="button" id ="9006">
+                        <description>Genres</description>
+                        <label>135</label>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <width>338.5</width>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <onfocus>ClearProperty(content)</onfocus>
+                        <include>Defs_OptionButton</include>
+                        <onclick>SetProperty(content,850)</onclick>
+                        <onclick>SetFocus(850)</onclick>
+                        <visible>IntegerGreaterThan(Container(850).NumItems,0)</visible>
+                    </control>
+                    <control type="button" id ="9007">
+                        <description>Keywords</description>
+                        <label>$ADDON[script.extendedinfo 32114]</label>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <width>338.5</width>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <onfocus>ClearProperty(content)</onfocus>
+                        <include>Defs_OptionButton</include>
+                        <onclick>SetProperty(content,950)</onclick>
+                        <onclick>SetFocus(950)</onclick>
+                        <visible>IntegerGreaterThan(Container(950).NumItems,0)</visible>
+                    </control>
+                    <control type="button" id="9998">
+                        <visible allowhiddenfocus="true">false</visible>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <onfocus>Left</onfocus>
+                        <onclick>Left</onclick>
+                        <ondown>Left</ondown>
+                        <onup>Left</onup>
+                        <onleft>Left</onleft>
+                    </control>
                 </control>
 
             </control>
@@ -404,11 +443,11 @@
             </include>
             <include name="Dialog_ImageList">
                 <param name="id" value="750" />
-                <param name="type" value="list" />
+                <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1384" />
+                <param name="width" value="692" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -417,11 +456,11 @@
             </include>
             <include name="Dialog_ImageList">
                 <param name="id" value="1000" />
-                <param name="type" value="list" />
+                <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
                 <param name="left" value="507" />
-                <param name="width" value="1384" />
+                <param name="width" value="692" />
                 <param name="top" value="100" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
@@ -441,14 +480,42 @@
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),1150)" />
             </include>
+            <include name="Dialog_ImageList">
+                <param name="id" value="850" />
+                <param name="type" value="panel" />
+                <param name="moveid" value="ClearProperty(content)" />
+                <param name="moveid2" value="SetFocus(9000)" />
+                <param name="left" value="507" />
+                <param name="width" value="346" />
+                <param name="top" value="100" />
+                <param name="pad" value="pad" />
+                <param name="bottom" value="128" />
+                <param name="backpanel" value="true" />
+                <param name="noimage" value="true" />
+                <param name="visible" value="StringCompare(Window.Property(content),850)" />
+            </include>
+            <include name="Dialog_ImageList">
+                <param name="id" value="950" />
+                <param name="type" value="panel" />
+                <param name="moveid" value="ClearProperty(content)" />
+                <param name="moveid2" value="SetFocus(9000)" />
+                <param name="left" value="507" />
+                <param name="width" value="346" />
+                <param name="top" value="100" />
+                <param name="pad" value="pad" />
+                <param name="bottom" value="128" />
+                <param name="backpanel" value="true" />
+                <param name="noimage" value="true" />
+                <param name="visible" value="StringCompare(Window.Property(content),950)" />
+            </include>
        
             <control type="list" id="250"><visible>false</visible></control>
             <control type="list" id="450"><visible>false</visible></control>
             <control type="list" id="550"><visible>false</visible></control>
             <control type="list" id="650"><visible>false</visible></control>
-            <control type="list" id="850"><visible>false</visible></control>
-            <control type="list" id="950"><visible>false</visible></control>
-            <control type="list" id="1050"><visible>false</visible></control>
+            <!-- <control type="list" id="850"><visible>false</visible></control> -->
+            <!-- <control type="list" id="950"><visible>false</visible></control> -->
+            <!-- <control type="list" id="1050"><visible>false</visible></control> -->
             <control type="list" id="1250"><visible>false</visible></control>
             <control type="list" id="1350"><visible>false</visible></control>
             <control type="list" id="1450"><visible>false</visible></control>

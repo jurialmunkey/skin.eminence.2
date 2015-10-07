@@ -57,6 +57,8 @@
         <value condition="StringCompare(Window.Property(content),1000)">$LOCALIZE[206]</value>
         <value condition="StringCompare(Window.Property(content),250)">$ADDON[script.extendedinfo 32031]</value>
         <value condition="StringCompare(Window.Property(content),350)">$ADDON[script.extendedinfo 32118]</value>
+        <value condition="StringCompare(Window.Property(content),850)">$LOCALIZE[135]</value>
+        <value condition="StringCompare(Window.Property(content),950)">$ADDON[script.extendedinfo 32114]</value>
         <value condition="StringCompare(Window.Property(content),550) | StringCompare(Window.Property(content),750)">$ADDON[script.extendedinfo 32115]</value>
         <value>$LOCALIZE[19033]</value>
     </variable>

@@ -591,7 +591,7 @@ msgid "Backup skin settings"
 msgstr ""
 
 msgctxt "#31162"
-msgid "Restore skin settings"
+msgid "Restore skin settings from file"
 msgstr ""
 
 msgctxt "#31163"
@@ -619,9 +619,10 @@ msgid "Now / Next"
 msgstr ""
 
 msgctxt "#31169"
-msgid "Reset skin settings to defaults (WARNING - This will override all skin settings)"
+msgid "Reset skin settings to defaults  (WARNING - This will override all skin settings)"
 msgstr ""
 
 msgctxt "#31170"
 msgid "Backup / Restore"
 msgstr ""
+

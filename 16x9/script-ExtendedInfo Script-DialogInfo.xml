@@ -189,13 +189,18 @@
                     <height>69</height>
                     <align>left</align>
                     <itemgap>pad</itemgap>
+                    <onright>noop</onright>
                     <orientation>horizontal</orientation>
                     <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
 
                     <control type="button" id="9999">
                         <visible allowhiddenfocus="true">false</visible>
+                        <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>Right</onfocus>
                         <onclick>Right</onclick>
+                        <ondown>Right</ondown>
+                        <onup>Right</onup>
+                        <onleft>Right</onleft>
                     </control>
                     
                     <!-- Movies -->
@@ -245,6 +250,16 @@
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
                         <visible>IntegerGreaterThan(Container(550).NumItems,0)</visible>
+                    </control>
+
+                    <control type="button" id="9998">
+                        <visible allowhiddenfocus="true">false</visible>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <onfocus>Left</onfocus>
+                        <onclick>Left</onclick>
+                        <ondown>Left</ondown>
+                        <onup>Left</onup>
+                        <onleft>Left</onleft>
                     </control>
                 </control>
 

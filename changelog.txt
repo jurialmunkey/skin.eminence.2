@@ -5,6 +5,8 @@ Fix overrides for new options
 Global fallback weather widget
 Hide buttons in extendedinfo if no content available
 Move backup and restore to new menu item with skin reset
+Genre and Keyword lists in extended info dialogs
+Double pane cast and crew in extended info dialogs
 
 [B]0.9.25[/B]
 New info screens with clear background
