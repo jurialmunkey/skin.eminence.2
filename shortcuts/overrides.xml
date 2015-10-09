@@ -31,10 +31,13 @@
 
     <!-- ADDITIONAL ON CLICK -->
     <!-- Hack for Kaitoast and ExtendedProgress -->
-    <groupoverride group="mainmenu" condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) | SubString(Container(9000).ListItem.Property(path),PlayMedia,left)">SetProperty(FO9001,2,home)</groupoverride>
+    <groupoverride group="mainmenu" condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left)">SetProperty(FO9001,2,home)</groupoverride>
 
     <!-- Need to Fix this -->
-    <groupoverride group="submenu" condition="SubString(Container(9002).ListItem.Property(path),ActivateWindow,left) | SubString(Container(9002).ListItem.Property(path),PlayMedia,left)">SetProperty(FO9001,2,home)</groupoverride>
+    <groupoverride group="submenu" condition="SubString(Container(9002).ListItem.Property(path),ActivateWindow,left)">SetProperty(FO9001,2,home)</groupoverride>
+
+    <!-- For Power Menu -->
+    <groupoverride group="powermenu" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
 
     <!-- ICON DIRECTORY -->
     <thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>

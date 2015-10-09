@@ -34,11 +34,20 @@
                         <texture colordiffuse="PosterBorder">common/white.png</texture>
                     </control>
                     <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>stringcompare(Window.Property(groupname),powermenu)</visible>
+                    </control>
+                    <control type="label">
                         <left>90</left>
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
                         <label>$INFO[ListItem.Label]</label>
+                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
                     </control>
                     <control type="image">
                         <left>10</left>
@@ -48,6 +57,7 @@
                         <align>right</align>
                         <font>Font-ListInfo</font>
                         <aspectratio align="left">keep</aspectratio>
+                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
                         <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
                     </control>
                 </itemlayout>
@@ -59,12 +69,22 @@
                         <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
                     </control>
                     <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>Selected</textcolor>
+                        <visible>stringcompare(Window.Property(groupname),powermenu)</visible>
+                    </control>
+                    <control type="label">
                         <left>90</left>
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>Selected</textcolor>
+                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
                     </control>
                     <control type="image">
                         <left>10</left>
@@ -75,6 +95,7 @@
                         <font>Font-ListInfo</font>
                         <aspectratio align="left">keep</aspectratio>
                         <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
                     </control>
                 </focusedlayout>
             </control>
@@ -195,6 +216,7 @@
                     <width>100%</width>
                     <label>31075</label>
                     <include>Defs_OptionButton</include>
+                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
                 </control>
 
                 <control type="button" id="9701" description="Select Color">

@@ -2,6 +2,7 @@
 Fix mainmenu group override for non ActivateWindow commands
 Fix screen calibration missing textures
 Fixes to biglist in music
+Add ability to fully customise Power/Shutdown menu
 
 [B]0.9.26[/B]
 Fix up some widget code

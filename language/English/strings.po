@@ -626,3 +626,7 @@ msgctxt "#31170"
 msgid "Backup / Restore"
 msgstr ""
 
+msgctxt "#31171"
+msgid "Reload skin"
+msgstr ""
+

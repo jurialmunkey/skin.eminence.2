@@ -6,7 +6,7 @@
     <onload condition="IsEmpty(Skin.String(home.mainheadertext))">Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onload>
     <onload condition="IsEmpty(Skin.String(home.headertext))">Skin.SetString(home.headertext,$LOCALIZE[10000])</onload>
     <onload condition="IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onload>
-    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109)</onunload>
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|powermenu)</onunload>
     <controls>
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
@@ -469,6 +469,14 @@
                         <label>31004</label>
                         <selected>Skin.HasSetting(global.backpanelmode)</selected>
                         <onclick>Skin.ToggleSetting(global.backpanelmode)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Customise Shutdown Menu -->
+                    <control type="button" id="8907">
+                        <width>100%</width>
+                        <label>Customise shutdown menu</label>
+                        <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>

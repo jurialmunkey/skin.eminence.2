@@ -55,6 +55,52 @@
         <scrolltime>200</scrolltime>
         <orientation>horizontal</orientation>
     </include>
+    <include name="Dialog_Top_PowerMenu">
+        <left>pad</left>
+        <right>0</right>
+        <onup>Close</onup>
+        <ondown>Close</ondown>
+        <top>80</top>
+        <bottom>pad</bottom>
+        <onleft>SetFocus(9000)</onleft>
+        <onright>SetFocus(9000)</onright>
+        <scrolltime>200</scrolltime>
+        <orientation>horizontal</orientation>
+        <itemlayout width="374" height="69">
+            <control type="image">
+                <left>0</left>
+                <right>pad</right>
+                <height>100%</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+            <control type="label">
+                <left>side</left>
+                <right>30</right>
+                <height>100%</height>
+                <font>Font-ListInfo-Small</font>
+                <aligny>center</aligny>
+                <textcolor>ListLabel</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </itemlayout>
+        <focusedlayout width="374" height="69">
+            <control type="image">
+                <left>0</left>
+                <right>pad</right>
+                <height>100%</height>
+                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+            </control>
+            <control type="label">
+                <left>side</left>
+                <right>30</right>
+                <height>100%</height>
+                <font>Font-ListInfo-Small</font>
+                <aligny>center</aligny>
+                <textcolor>Selected</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </focusedlayout>
+    </include>
 
     <include name="Dialog_Top_Arrows">
         <control type="group">
