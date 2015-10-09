@@ -1,3 +1,7 @@
+[B]0.9.27[/B]
+Fix mainmenu group override for non ActivateWindow commands
+Fix screen calibration missing textures
+
 [B]0.9.26[/B]
 Fix up some widget code
 More options for fallback and hubs widgets

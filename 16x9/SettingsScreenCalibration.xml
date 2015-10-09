@@ -2,12 +2,13 @@
 <window>
     <!-- screencalibration -->
     <defaultcontrol always="true">8</defaultcontrol>
-
+    <backgroundcolor>Background</backgroundcolor>
     <controls>
 
         <!-- Video window -->
         <control type="videowindow" id="20">
-            <include>FullscreenDimensions</include>
+            <width>100%</width>
+            <height>100%</height>
         </control>
 
         <!-- Top left mover -->
@@ -48,7 +49,6 @@
             <width>1920</width>
             <height>36</height>
             <align>center</align>
-            <textcolor>DialogColor1</textcolor>
         </control>
 
         <!-- Help information -->
@@ -57,7 +57,6 @@
             <width>1920</width>
             <height>36</height>
             <align>center</align>
-            <textcolor>DialogColor1</textcolor>
         </control>
 
     </controls>

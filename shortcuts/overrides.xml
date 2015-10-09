@@ -31,8 +31,8 @@
 
     <!-- ADDITIONAL ON CLICK -->
     <!-- Hack for Kaitoast and ExtendedProgress -->
-    <groupoverride group="mainmenu" condition="true">SetProperty(FO9001,2,home)</groupoverride>
-    <groupoverride group="submenu" condition="true">SetProperty(FO9001,2,home)</groupoverride>
+    <groupoverride group="mainmenu" condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left)">SetProperty(FO9001,2,home)</groupoverride>
+    <groupoverride group="submenu" condition="SubString(Container(9002).ListItem.Property(path),ActivateWindow,left)">SetProperty(FO9001,2,home)</groupoverride>
 
     <!-- ICON DIRECTORY -->
     <thumbnailBrowseDefault>special://skin/extras/icons/</thumbnailBrowseDefault>
