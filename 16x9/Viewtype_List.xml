@@ -301,9 +301,18 @@
                         <control type="label">
                             <left>160</left>
                             <right>80</right>
+                            <height>100%</height>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!IntegerGreaterThan(ListItem.Rating,0) + IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
                             <top>28</top>
                             <height>30</height>
                             <label>$INFO[ListItem.Label]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>
                         </control>
                         <control type="label">
                             <left>160</left>
@@ -312,6 +321,7 @@
                             <height>30</height>
                             <font>Font-ListInfo</font>
                             <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>
                         </control>
                     </control>
                 </itemlayout>
@@ -345,10 +355,20 @@
                         <control type="label">
                             <left>160</left>
                             <right>80</right>
+                            <height>100%</height>
+                            <aligny>center</aligny>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!IntegerGreaterThan(ListItem.Rating,0) + IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
                             <top>28</top>
                             <height>30</height>
                             <textcolor>Selected</textcolor>
                             <label>$INFO[ListItem.Label]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>
                         </control>
                         <control type="label">
                             <left>160</left>
@@ -358,6 +378,7 @@
                             <textcolor>Selected</textcolor>
                             <font>Font-ListInfo</font>
                             <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>
                         </control>
                     </control>
                 </focusedlayout>
