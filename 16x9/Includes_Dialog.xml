@@ -19,7 +19,7 @@
             <right>-24</right>
             <bordertexture border="24">common/24-shadow.png</bordertexture>
             <bordersize>24</bordersize>
-            <texture colordiffuse="HomeBarBG">common/white.png</texture>
+            <texture colordiffuse="DialogBG">common/white.png</texture>
         </control>
     </include>
 

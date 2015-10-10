@@ -71,15 +71,18 @@
                 <height>32</height>
                 <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
             </control>
-            <control type="label" id="6">
+            <control type="label">
                 <bottom>16</bottom>
-                <left>64</left>
-                <right>side</right>
+                <left>48</left>
+                <right>0</right>
                 <height>32</height>
-                <font>Font-ListInfo-Small-Bold</font>
+                <font>Font-RSS</font>
+                <label>$INFO[Control.GetLabel(6),   ,]</label>
                 <scroll>true</scroll>
                 <textcolor>LineLabel</textcolor>
+                <wrapmultiline>false</wrapmultiline>
             </control>
+            <control type="label" id="6"><visible>false</visible></control>
         </control>
 
         <!-- Category Template -->

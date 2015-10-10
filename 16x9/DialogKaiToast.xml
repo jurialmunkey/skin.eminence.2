@@ -12,7 +12,7 @@
                 <width>100%</width>
                 <height>64</height>  
                 <aspectratio>scale</aspectratio>
-                <texture colordiffuse="HomeBarBG">common/white.png</texture>
+                <texture colordiffuse="DialogBG">common/white.png</texture>
                 <visible>Window.IsVisible(fullscreenvideo)</visible>
             </control>
             <control type="image">
@@ -27,7 +27,7 @@
                 <left>48</left>
                 <right>side</right>
                 <height>32</height>
-                <font>Font-ListInfo-Small-Bold</font>
+                <font>Font-RSS</font>
                 <textcolor>LineLabel</textcolor>
                 <scroll>true</scroll>
                 <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
@@ -53,11 +53,11 @@
             <control type="label">
                 <bottom>16</bottom>
                 <left>48</left>
-                <width>1020</width>
+                <width>1040</width>
                 <height>32</height>
-                <font>Font-ListInfo-Small-Bold</font>
+                <font>Font-RSS</font>
                 <textcolor>LineLabel</textcolor>
-                <scroll>true</scroll>
+                <scroll>false</scroll>
                 <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
             </control>
         </control>

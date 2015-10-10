@@ -433,7 +433,7 @@
                     <bottom>-24</bottom>
                     <bordersize>24</bordersize>
                     <bordertexture border="24">common/24-shadow.png</bordertexture>
-                    <texture colordiffuse="HomeBarBG">common/white.png</texture>
+                    <texture colordiffuse="DialogBG">common/white.png</texture>
                 </control>
                 <control type="grouplist" id="9300">
                     <left>0</left>

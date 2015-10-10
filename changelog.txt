@@ -1,3 +1,7 @@
+[B]0.9.28[/B]
+Option for home text inside tiles
+Move transparent home from theme to option in skin settings
+
 [B]0.9.27[/B]
 Fix mainmenu group override for non ActivateWindow commands
 Fix screen calibration missing textures

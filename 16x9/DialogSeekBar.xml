@@ -29,7 +29,7 @@
                 <bottom>-500</bottom>
                 <height>500</height>
                 <width>100%</width>
-                <texture colordiffuse="HomeBarBG">common/white.png</texture>
+                <texture colordiffuse="DialogBG">common/white.png</texture>
             </control>
             <control type="group">
                 <visible>[Window.IsVisible(DialogFullScreenInfo.xml) + Skin.HasSetting(videoosd.showinfo)] | [!IsEmpty(Window(home).Property(osdinfo)) + !Window.IsVisible(visualisation)]</visible>
@@ -259,7 +259,7 @@
                 <control type="image">
                     <width>100%</width>
                     <height>100%</height>
-                    <texture colordiffuse="HomeBarBG" border="32">common/bubble.png</texture>
+                    <texture colordiffuse="DialogBG" border="32">common/bubble.png</texture>
                 </control>
                 <control type="label">
                     <left>0</left>

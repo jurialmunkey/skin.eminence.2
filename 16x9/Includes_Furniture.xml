@@ -76,6 +76,9 @@
                 <width>32</width>
                 <height>32</height>
                 <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
+                <visible>Player.HasMedia | [!Player.HasMedia + [system.getbool(lookandfeel.enablerssfeeds) | Window.IsVisible(SettingsCategory.xml)] + [Window.IsVisible(weather) | Window.IsVisible(home)]]</visible>
+                <include>Animation_FadeIn</include>
+                <include>Animation_FadeOut</include>
             </control>
             <control type="label">
                 <bottom>16</bottom>
@@ -331,6 +334,7 @@
             <height>164</height>    
             <texture align="left" border="75">common/header.png</texture>
             <colordiffuse>$VAR[Furniture_TopBar_Tile_BGCOLOR]</colordiffuse>
+            <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [Window.IsVisible(home) | Window.IsVisible(weather)]">Conditional</animation>
         </control>
     </include>
     <include name="Furniture_TopBar_Tile_Content">

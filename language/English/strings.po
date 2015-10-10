@@ -630,3 +630,10 @@ msgctxt "#31171"
 msgid "Reload skin"
 msgstr ""
 
+msgctxt "#31172"
+msgid "Transparent home bar"
+msgstr ""
+
+msgctxt "#31173"
+msgid "Show home bar text inside tiles"
+msgstr ""

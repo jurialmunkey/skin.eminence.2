@@ -18,7 +18,7 @@
                 <width>720</width>
                 <bordersize>24</bordersize>
                 <bordertexture border="24">common/24-shadow.png</bordertexture>
-                <texture border="5" colordiffuse="HomeBarBG">common/white.png</texture>
+                <texture border="5" colordiffuse="DialogBG">common/white.png</texture>
             </control>
             <control type="image">
                 <left>530</left>
