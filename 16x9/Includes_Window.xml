@@ -381,8 +381,9 @@
                 <align>left</align>
                 <onleft>6</onleft>
                 <onright>12</onright>
-                <onup>noop</onup>
-                <ondown>noop</ondown>
+                <onup>SetProperty(osdinfo,1,home)</onup>
+                <ondown condition="IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
+                <ondown condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
                 <include condition="Window.IsVisible(visualisation)">Window_OSD_Left_Music</include>
                 <include condition="Window.IsVisible(fullscreenvideo)">Window_OSD_Left_Video</include>
             </control>
@@ -396,7 +397,8 @@
                 <onleft>3</onleft>
                 <onright>4</onright>
                 <onup>SetProperty(osdinfo,1,home)</onup>
-                <ondown>ClearProperty(osdinfo,home)</ondown>
+                <ondown condition="IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
+                <ondown condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
 
                 <include>Window_OSD_Controls</include>
             
@@ -411,8 +413,9 @@
                 <align>right</align>
                 <onleft>17</onleft>
                 <onright>1</onright>
-                <onup>noop</onup>
-                <ondown>noop</ondown>
+                <onup>SetProperty(osdinfo,1,home)</onup>
+                <ondown condition="IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
+                <ondown condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
                 <include condition="Window.IsVisible(visualisation)">Window_OSD_Right_Music</include>
                 <include condition="Window.IsVisible(fullscreenvideo) + !VideoPlayer.Content(LiveTV)">Window_OSD_Right_Video</include>
                 <include condition="Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(LiveTV)">Window_OSD_Right_LiveTV</include>
