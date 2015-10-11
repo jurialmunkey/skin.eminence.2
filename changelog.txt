@@ -1,6 +1,15 @@
 [B]0.9.31[/B]
 Jarvis changes
 -- DialogPVRInfo.xml
+-- Remove VideoOverlay.xml
+-- Remove MusicOverlay.xml
+-- Remove DialogPVRGuideInfo.xml
+-- Remove DialogPVRRecordingInfo.xml
+-- Remove VisualisationPresetList.xml
+-- Remove DialogFileStacking.xml
+-- Remove MyMusicSongs.xml
+-- Remove DialogPeripheralManager.xml
+-- Remove <allowoverlay> tags
 
 [B]0.9.30[/B]
 Switch git hub main branch to Jarvis
