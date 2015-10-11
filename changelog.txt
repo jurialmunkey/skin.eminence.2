@@ -1,3 +1,7 @@
+[B]0.9.31[/B]
+Jarvis changes
+-- DialogPVRInfo.xml
+
 [B]0.9.30[/B]
 Switch git hub main branch to Jarvis
 Isengard development on Isengard branch
