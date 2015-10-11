@@ -246,7 +246,7 @@
             <include name="View_BigList">
                 <param name="id" value="501" />
                 <param name="width" value="1140" />
-                <param name="condition" value="true" />
+                <param name="condition" value="Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums)" />
                 <param name="name" value="31142" />
             </include>
             <include>Object_ExtraInfo</include>

@@ -495,8 +495,17 @@
                     <!-- Customise Shutdown Menu -->
                     <control type="button" id="8907">
                         <width>100%</width>
-                        <label>Customise shutdown menu</label>
+                        <label>31175</label>
                         <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Set genre icons -->
+                    <control type="button" id="8908">
+                        <width>100%</width>
+                        <label>31176</label>
+                        <label2>$INFO[Skin.String(genre.icons.name)]</label2>
+                        <onclick>RunScript(script.image.resource.select,property=genre.icons&amp;type=resource.images.moviegenreicons)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
