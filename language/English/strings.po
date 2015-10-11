@@ -637,3 +637,7 @@ msgstr ""
 msgctxt "#31173"
 msgid "Show home bar text inside tiles"
 msgstr ""
+
+msgctxt "#31174"
+msgid "Set weather icons"
+msgstr ""

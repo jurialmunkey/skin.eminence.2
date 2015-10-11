@@ -1,3 +1,6 @@
+[B]0.9.32[/B]
+Weather fanart and icon selection resource
+
 [B]0.9.31[/B]
 Jarvis changes
 -- DialogPVRInfo.xml
@@ -11,7 +14,6 @@ Jarvis changes
 -- Remove DialogPeripheralManager.xml
 -- Remove <allowoverlay> tags
 -- Add EventLog.xml
--- Weather fanart resource addon
 
 [B]0.9.30[/B]
 Switch git hub main branch to Jarvis

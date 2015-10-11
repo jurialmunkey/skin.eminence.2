@@ -154,7 +154,16 @@
                     <height>200</height>
                     <width>200</width>
                     <aspectratio>keep</aspectratio>
+                    <texture>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property($PARAM[day].FanartCode),,.png]</texture>
+                    <visible>!IsEmpty(Skin.String(weather.icons.path))</visible>
+                </control>
+                <control type="image">
+                    <centertop>50%</centertop>
+                    <height>200</height>
+                    <width>200</width>
+                    <aspectratio>keep</aspectratio>
                     <texture>$INFO[Window(weather).Property($PARAM[day].OutlookIcon)]</texture>
+                    <visible>IsEmpty(Skin.String(weather.icons.path))</visible>
                 </control>
                 <control type="label">
                     <font>Font-ListInfo-Small</font>
