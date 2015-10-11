@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.eminence.2"
-    version="0.9.28"
+    version="0.9.30"
     name="Eminence 2.0"
     provider-name="jurialmunkey">
     <requires>
-        <import addon="xbmc.gui" version="5.9.0"/>
+        <import addon="xbmc.gui" version="5.10.0"/>
         <import addon="script.skinshortcuts" version="0.6.0"/>
         <import addon="script.skin.helper.service" version="0.0.1"/>
         <import addon="script.extendedinfo" version="3.0.0"/>

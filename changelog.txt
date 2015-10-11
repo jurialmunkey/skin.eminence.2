@@ -1,3 +1,7 @@
+[B]0.9.30[/B]
+Switch git hub main branch to Jarvis
+Isengard development on Isengard branch
+
 [B]0.9.29[/B]
 Ability to close OSD on down
 Fix unmatched parentheses
