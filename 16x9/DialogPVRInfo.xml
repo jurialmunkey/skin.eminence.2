@@ -13,16 +13,16 @@
             <include>Dialog_Background</include>
             <control type="group">
                 <top>70</top>
-                <left>side</left>
+                <left>0</left>
                 <right>0</right>
                 <height>572</height>
                 <control type="group">
-                    <left>0</left>
+                    <left>side</left>
                     <right>side</right>
                     <height>552</height>
                     <include name="Object_Line">
                         <param name="width" value="1150" />
-                        <param name="label" value="$INFO[Control.GetLabel(2)]" />
+                        <param name="label" value="19033" />
                     </include>
                 </control>
 
@@ -30,8 +30,8 @@
                     <usecontrolcoords>true</usecontrolcoords>
                     <itemgap>pad</itemgap>
                     <orientation>vertical</orientation>
-                    <left>pad</left>
-                    <right>pad</right>
+                    <left>side</left>
+                    <right>side</right>
                     <top>pad</top>
                     <bottom>pad</bottom>
                     <control type="label">
@@ -96,6 +96,11 @@
                 <onup>11</onup>
                 <ondown>noop</ondown>
                 <orientation>horizontal</orientation>
+                <control type="button" id="8">
+                    <align>center</align>
+                    <width>370</width>
+                    <include>Defs_OptionButton</include>
+                </control>
                 <control type="button" id="7">
                     <align>center</align>
                     <width>370</width>
@@ -113,9 +118,10 @@
                     <width>370</width>
                     <include>Defs_OptionButton</include>
                 </control>
+
             </control>
         </control>
-
+        <control type="label" id="2"><visible>false</visible></control>
     </controls>
 
 </window>
