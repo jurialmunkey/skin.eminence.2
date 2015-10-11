@@ -263,6 +263,7 @@
         <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(home.mainheadertext))">$INFO[Skin.String(home.mainheadertext)]</value>
         <value condition="Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
         <value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
+        <value condition="Window.IsVisible(EventLog.xml)">$LOCALIZE[14111]</value>
         <value>$LOCALIZE[15100]</value>
     </variable>
     <variable name="Furniture_Counter_Movies">
@@ -302,6 +303,7 @@
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]">$VAR[Label_PlayerStatus]</value>
         <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
+        <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">$LOCALIZE[5]</value>
         <value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
         <value condition="Window.IsVisible(MyMusicPlaylist.xml)">$LOCALIZE[559]</value>
@@ -318,6 +320,7 @@
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo">special://skin/extras/icons/video-addons.png</value>
         <value condition="Window.IsVisible(weather)">special://skin/extras/icons/sun.png</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">special://skin/extras/icons/settings.png</value>
+        <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">special://skin/extras/icons/settings.png</value>
         <value condition="Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addons.png</value>
         <value condition="Window.IsVisible(MyMusicPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
         <value condition="Window.IsVisible(FileManager.xml)">special://skin/extras/icons/database.png</value>

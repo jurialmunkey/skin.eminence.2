@@ -96,29 +96,39 @@
                 <onup>11</onup>
                 <ondown>noop</ondown>
                 <orientation>horizontal</orientation>
-                <control type="button" id="8">
+                <control type="button" id="4">
                     <align>center</align>
-                    <width>370</width>
+                    <width>272.5</width>
+                    <label>19003</label>
                     <include>Defs_OptionButton</include>
-                </control>
-                <control type="button" id="7">
-                    <align>center</align>
-                    <width>370</width>
-                    <label>186</label>
-                    <include>Defs_OptionButton</include>
+                    <visible>Window.IsActive(PVRGuideInfo)</visible>
                 </control>
                 <control type="button" id="5">
                     <align>center</align>
-                    <width>370</width>
+                    <width>272.5</width>
                     <label>19165</label>
                     <include>Defs_OptionButton</include>
+                    <visible>Window.IsActive(PVRGuideInfo)</visible>
+                </control>
+                <control type="button" id="8">
+                    <align>center</align>
+                    <width>272.5</width>
+                    <label>19687</label>
+                    <include>Defs_OptionButton</include>
+                    <visible>Window.IsActive(PVRGuideInfo)</visible>
                 </control>
                 <control type="button" id="6">
                     <align>center</align>
-                    <width>370</width>
+                    <width>272.5</width>
+                    <include>Defs_OptionButton</include>
+                    <visible>Window.IsActive(PVRGuideInfo)</visible>
+                </control>
+                <control type="button" id="7">
+                    <align>center</align>
+                    <width>272.5</width>
+                    <label>186</label>
                     <include>Defs_OptionButton</include>
                 </control>
-
             </control>
         </control>
         <control type="label" id="2"><visible>false</visible></control>

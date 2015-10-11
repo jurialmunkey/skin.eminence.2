@@ -10,6 +10,8 @@ Jarvis changes
 -- Remove MyMusicSongs.xml
 -- Remove DialogPeripheralManager.xml
 -- Remove <allowoverlay> tags
+-- Add EventLog.xml
+-- Weather fanart resource addon
 
 [B]0.9.30[/B]
 Switch git hub main branch to Jarvis

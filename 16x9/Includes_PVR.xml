@@ -365,7 +365,7 @@
                                 </control>
                                 <control type="label">
                                     <left>250</left>
-                                    <width>250</width>
+                                    <width>240</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>

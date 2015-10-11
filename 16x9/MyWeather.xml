@@ -135,7 +135,7 @@
                 <!-- Fanart -->
                 <control type="button" id="9002">
                     <label>31114</label>
-                    <onclick>Skin.SetPath(weather.fanart)</onclick>
+                    <onclick>RunScript(script.image.resource.select,property=weather.fanart&amp;type=resource.images.weatherfanart)</onclick>
                     <include>Defs_OptionButton</include>
                 </control>
                 <!-- Settings -->

@@ -59,8 +59,12 @@
         <textcolor>ListLabel</textcolor>
         <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
-        <textureradiofocus colordiffuse="ListLabel">common/radio-on.png</textureradiofocus>
-        <textureradionofocus colordiffuse="Disabled">common/radio-off.png</textureradionofocus>
+        <textureradioonfocus colordiffuse="Selected">common/radio-on.png</textureradioonfocus>
+        <textureradioonnofocus colordiffuse="ListLabel">common/radio-on.png</textureradioonnofocus>
+        <textureradioofffocus colordiffuse="Disabled">common/radio-off.png</textureradioofffocus>
+        <textureradiooffnofocus colordiffuse="Disabled">common/radio-off.png</textureradiooffnofocus>
+        <textureradiooffdisabled colordiffuse="Disabled">common/radio-off.png</textureradiooffdisabled>
+        <textureradioondisabled colordiffuse="Disabled">common/radio-on.png</textureradioondisabled>
         <pulseonselect>false</pulseonselect>
     </default>
 
@@ -73,6 +77,8 @@
         <texturedown colordiffuse="Disabled">common/spin-down.png</texturedown>
         <textureupfocus flipy="true" colordiffuse="Selected">common/spin-down.png</textureupfocus>
         <texturedownfocus colordiffuse="Selected">common/spin-down.png</texturedownfocus>
+        <textureupdisabled flipy="true" colordiffuse="Disabled">common/spin-down.png</textureupdisabled>
+        <texturedowndisabled colordiffuse="Disabled">common/spin-down.png</texturedowndisabled>
         <textcolor>ListLabel</textcolor>
         <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
@@ -87,6 +93,8 @@
         <texturedown colordiffuse="Disabled">common/spin-down.png</texturedown>
         <textureupfocus flipy="true" colordiffuse="Selected">common/spin-down.png</textureupfocus>
         <texturedownfocus colordiffuse="Selected">common/spin-down.png</texturedownfocus>
+        <textureupdisabled flipy="true" colordiffuse="Disabled">common/spin-down.png</textureupdisabled>
+        <texturedowndisabled colordiffuse="Disabled">common/spin-down.png</texturedowndisabled>
         <textcolor>ListLabel</textcolor>
         <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
