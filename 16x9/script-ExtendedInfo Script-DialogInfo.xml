@@ -213,7 +213,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
-                        <visible>IntegerGreaterThan(Container(150).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
                     </control>
                     <!-- TvShows -->
                     <control type="button" id="9002">
@@ -225,7 +225,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
-                        <visible>IntegerGreaterThan(Container(250).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(250).NumItems,0)</enable>
                     </control>
                     <!-- YouTube -->
                     <control type="button" id="9003">
@@ -237,7 +237,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
-                        <visible>IntegerGreaterThan(Container(350).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
                     </control>
                     <!-- As Crew -->
                     <control type="button" id="9004">
@@ -249,7 +249,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
-                        <visible>IntegerGreaterThan(Container(550).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(550).NumItems,0)</enable>
                     </control>
 
                     <control type="button" id="9998">

@@ -340,7 +340,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,1000)</onclick>
                         <onclick>SetFocus(1000)</onclick>
-                        <visible>IntegerGreaterThan(Container(1000).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(1000).NumItems,0)</enable>
                     </control>
 
                     <control type="button" id ="9003">
@@ -353,7 +353,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,150)</onclick>
                         <onclick>SetFocus(150)</onclick>
-                        <visible>IntegerGreaterThan(Container(150).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
                     </control>
                     <control type="button" id ="9004">
                         <description>Youtube</description>
@@ -365,7 +365,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,350)</onclick>
                         <onclick>SetFocus(350)</onclick>
-                        <visible>IntegerGreaterThan(Container(350).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
                     </control>
                     <control type="button" id ="9005">
                         <description>Crew</description>
@@ -377,7 +377,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,750)</onclick>
                         <onclick>SetFocus(750)</onclick>
-                        <visible>IntegerGreaterThan(Container(750).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(750).NumItems,0)</enable>
                     </control>
                     <control type="button" id ="9006">
                         <description>Genres</description>
@@ -389,7 +389,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,850)</onclick>
                         <onclick>SetFocus(850)</onclick>
-                        <visible>IntegerGreaterThan(Container(850).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(850).NumItems,0)</enable>
                     </control>
                     <control type="button" id ="9007">
                         <description>Keywords</description>
@@ -401,7 +401,7 @@
                         <include>Defs_OptionButton</include>
                         <onclick>SetProperty(content,950)</onclick>
                         <onclick>SetFocus(950)</onclick>
-                        <visible>IntegerGreaterThan(Container(950).NumItems,0)</visible>
+                        <enable>IntegerGreaterThan(Container(950).NumItems,0)</enable>
                     </control>
                     <control type="button" id="9998">
                         <visible allowhiddenfocus="true">false</visible>
