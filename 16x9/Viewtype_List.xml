@@ -196,7 +196,7 @@
             <include name="View_BigList">
                 <param name="id" value="58" />
                 <param name="width" value="630" />
-                <param name="condition" value="!Container.Content(genres)" />
+                <param name="condition" value="!Container.Content(genres) + !Container.Content(songs) + !Container.Content(files)" />
                 <param name="name" value="31137" />
             </include>
             <include>Object_Scrollbar</include>

@@ -39,12 +39,6 @@
                 <include>Dialog_Top_GroupList</include>
                 <defaultcontrol always="true">3</defaultcontrol>
                 <include>Object_BasicViewList</include>
-                <!-- Files -->
-                <control type="button" id="5">
-                    <include>Defs_OptionButton</include>
-                    <label>744</label>
-                    <visible>Control.IsEnabled(5)</visible>
-                </control>
                 <!-- Now Playing -->
                 <control type="button" id="9003">
                     <include>Defs_OptionButton</include>
