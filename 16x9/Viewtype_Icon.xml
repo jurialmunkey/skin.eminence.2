@@ -475,7 +475,7 @@
             <include name="View_Thumbs">
                 <param name="id" value="500" />
                 <param name="width" value="1890" />
-                <param name="condition" value="true" />
+                <param name="condition" value="!Container.Content(genres)" />
                 <param name="name" value="21371" />
             </include>
             <include>Object_Arrows_Vertical</include>
