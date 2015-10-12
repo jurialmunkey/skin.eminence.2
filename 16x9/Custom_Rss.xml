@@ -12,7 +12,7 @@
             <headlinecolor>SideArrow</headlinecolor>
             <titlecolor>LineLabel</titlecolor>
             <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
-            <visible>Skin.HasSetting(home.tiletextinside)</visible>
+            <visible>stringcompare(Skin.String(home.style),$LOCALIZE[31181])</visible>
             <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
             <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
             <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2)">Conditional</animation>
@@ -26,7 +26,7 @@
             <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
             <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
             <visible>!Player.HasMedia</visible>
-            <visible>!Skin.HasSetting(home.tiletextinside)</visible>
+            <visible>stringcompare(Skin.String(home.style),$LOCALIZE[31180])</visible>
             <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
             <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
             <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2)">Conditional</animation>

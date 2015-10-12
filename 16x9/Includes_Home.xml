@@ -44,8 +44,8 @@
     <include name="Home_Menu">
         <control type="group">
             <!-- Backing Bar -->
-            <include condition="!Skin.HasSetting(home.tiletextinside)">Home_Menu_BG_Big</include>
-            <include condition="Skin.HasSetting(home.tiletextinside)">Home_Menu_BG_Small</include>
+            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31180]) | stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Menu_BG_Big</include>
+            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31181])">Home_Menu_BG_Small</include>
         
             <!-- Main list -->
             <control type="panel" id="9000">
@@ -71,7 +71,8 @@
                 </animation>
                 <orientation>horizontal</orientation>
                 <scrolltime tween="sine" easing="out">240</scrolltime>
-                <itemlayout width="188" height="266" condition="!Skin.HasSetting(home.tiletextinside)">
+                <!-- Default Home -->
+                <itemlayout width="188" height="266" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31180])">
                     
                     <control type="image">
                         <top>16</top>
@@ -119,7 +120,7 @@
                         <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
                     </control>
                 </itemlayout>
-                <focusedlayout width="188" height="266" condition="!Skin.HasSetting(home.tiletextinside)">
+                <focusedlayout width="188" height="266" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31180])">
                     <control type="image">
                         <top>16</top>
                         <width>196</width>
@@ -164,7 +165,8 @@
                     </control>
                 </focusedlayout>
 
-                <itemlayout width="188" height="266" condition="Skin.HasSetting(home.tiletextinside)">
+                <!-- Tile in Text -->
+                <itemlayout width="188" height="266" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31181])">
                     <control type="image">
                         <top>16</top>
                         <width>196</width>
@@ -222,8 +224,7 @@
                         <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
                     </control>
                 </itemlayout>
-
-                <focusedlayout width="188" height="266" condition="Skin.HasSetting(home.tiletextinside)">
+                <focusedlayout width="188" height="266" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31181])">
                     <control type="image">
                         <top>16</top>
                         <width>196</width>
@@ -270,7 +271,50 @@
                     </control>
                 </focusedlayout>
 
-                
+                <!-- Text Only -->
+                <itemlayout width="188" height="266" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">
+                    <control type="label">
+                        <top>16</top>
+                        <height>78</height>
+                        <width>170</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Font-HomeMenu</font>
+                        <textcolor>HomeBarFG</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="188" height="266" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">
+                    <control type="label">
+                        <top>16</top>
+                        <height>78</height>
+                        <width>170</width>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>Font-HomeMenu</font>
+                        <textcolor>HomeBarFG</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <animation effect="slide" start="0" end="0,-12" time="100" reversible="false">Focus</animation>
+                    </control>
+                    <control type="image">
+                        <centerleft>85</centerleft>
+                        <top>88</top>
+                        <width>16</width>
+                        <height>16</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/16-arrow-down.png</texture>
+                        <visible>IntegerGreaterThan(Container(9002).NumItems,0)</visible>
+                        <animation effect="fade" start="0" end="100" time="300" delay="300" reversible="false">Focus</animation>
+                    </control>
+                    <control type="image">
+                        <top>80</top>
+                        <width>170</width>
+                        <height>6</height>
+                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                </focusedlayout>
                 <content>
                     <include>skinshortcuts-mainmenu</include>
                 </content>
@@ -621,7 +665,7 @@
             <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
             <visible>!Player.HasMedia</visible>
             <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-            <visible>!Skin.HasSetting(home.tiletextinside)</visible>
+            <visible>stringcompare(Skin.String(home.style),$LOCALIZE[31180])</visible>
             <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
             <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
             <control type="image">
