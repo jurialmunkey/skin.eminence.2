@@ -1,3 +1,6 @@
+[B]0.9.34[/B]
+Merge fix for text only home onup posters
+
 [B]0.9.33[/B]
 Merge Isengard changes to Home
 Add Light color theme
