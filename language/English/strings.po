@@ -638,6 +638,18 @@ msgctxt "#31173"
 msgid "Home bar style"
 msgstr ""
 
+msgctxt "#31174"
+msgid "Set weather icons"
+msgstr ""
+
+msgctxt "#31175"
+msgid "Customise shutdown menu"
+msgstr ""
+
+msgctxt "#31176"
+msgid "Set genre icons"
+msgstr ""
+
 msgctxt "#31180"
 msgid "Default"
 msgstr ""
