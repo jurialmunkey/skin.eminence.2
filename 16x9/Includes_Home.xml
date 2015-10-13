@@ -152,7 +152,7 @@
                         <top>16</top>
                         <width>196</width>
                         <height>170</height>
-                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+                        <texture colordiffuse="Selected" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
                         <aspectratio scalediffuse="false">center</aspectratio>
                     </control>
                     <control type="label">
@@ -256,7 +256,7 @@
                         <top>-6</top>
                         <width>196</width>
                         <height>170</height>
-                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+                        <texture colordiffuse="Selected" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
                         <aspectratio scalediffuse="false">center</aspectratio>
                         <visible>substring(ListItem.Icon,special://skin/extras/icons/)</visible>
                     </control>
@@ -264,7 +264,7 @@
                         <top>16</top>
                         <width>196</width>
                         <height>170</height>
-                        <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+                        <texture colordiffuse="Selected" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
                         <aspectratio scalediffuse="false">center</aspectratio>
                         <visible>!substring(ListItem.Icon,special://skin/extras/icons/)</visible>
                     </control>
