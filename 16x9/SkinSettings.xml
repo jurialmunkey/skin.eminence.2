@@ -201,14 +201,15 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
-                    <!-- Tile text inside tile -->
-                    <control type="radiobutton" id="8111">
+                    <!-- Home Style -->
+                    <control type="button" id="8111">
                         <width>100%</width>
                         <label>31173</label>
-                        <radioposx>1350</radioposx>
-                        <selected>Skin.HasSetting(home.tiletextinside)</selected>
-                        <onclick>Skin.ToggleSetting(home.tiletextinside)</onclick>
-                        <onclick>ReloadSkin()</onclick>
+                        <label2>$INFO[Skin.String(home.style)]</label2>
+                        <onclick condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
+                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31180])">Skin.SetString(home.style,$LOCALIZE[31181])</onclick>
+                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31181])">Skin.SetString(home.style,$LOCALIZE[31182])</onclick>
+                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31182])">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>

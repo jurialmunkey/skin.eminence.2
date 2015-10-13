@@ -635,7 +635,19 @@ msgid "Transparent home bar"
 msgstr ""
 
 msgctxt "#31173"
-msgid "Show home bar text inside tiles"
+msgid "Home bar style"
+msgstr ""
+
+msgctxt "#31180"
+msgid "Default"
+msgstr ""
+
+msgctxt "#31181"
+msgid "Text in tiles"
+msgstr ""
+
+msgctxt "#31182"
+msgid "Text only"
 msgstr ""
 
 msgctxt "#31174"
