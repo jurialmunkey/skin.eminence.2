@@ -496,11 +496,12 @@
                     <!-- Customise Shutdown Menu -->
                     <control type="button" id="8907">
                         <width>100%</width>
-                        <label>31175</label>
+                        <label>31183</label>
                         <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+
                     <!-- Set genre icons -->
                     <control type="button" id="8908">
                         <width>100%</width>
@@ -509,6 +510,17 @@
                         <onclick>RunScript(script.image.resource.select,property=genre.icons&amp;type=resource.images.moviegenreicons)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+
+                    <!-- Startup Video -->
+                    <control type="button" id="8909">
+                        <width>100%</width>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        <include>Defs_OptionButton</include>
+                        <label>31184</label>
+                        <label2>$INFO[Skin.String(StartupPlaylist)]</label2>
+                        <onclick condition="IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
+                        <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
                     </control>
                     
 

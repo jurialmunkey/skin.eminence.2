@@ -638,6 +638,18 @@ msgctxt "#31173"
 msgid "Home bar style"
 msgstr ""
 
+msgctxt "#31174"
+msgid "Set weather icons"
+msgstr ""
+
+msgctxt "#31175"
+msgid "Customise shutdown menu"
+msgstr ""
+
+msgctxt "#31176"
+msgid "Set genre icons"
+msgstr ""
+
 msgctxt "#31180"
 msgid "Default"
 msgstr ""
@@ -650,14 +662,10 @@ msgctxt "#31182"
 msgid "Text only"
 msgstr ""
 
-msgctxt "#31174"
-msgid "Set weather icons"
-msgstr ""
-
-msgctxt "#31175"
+msgctxt "#31183"
 msgid "Customise shutdown menu"
 msgstr ""
 
-msgctxt "#31176"
-msgid "Set genre icons"
+msgctxt "#31184"
+msgid "Startup video or playlist"
 msgstr ""
