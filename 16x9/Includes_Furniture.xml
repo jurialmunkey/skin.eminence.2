@@ -241,6 +241,14 @@
         <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeBarBG</value>
         <value>PosterBorder</value>
     </variable>
+    <variable name="Furniture_TopBar_MainLabel_Color">
+        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeMainLabel</value>
+        <value>MainLabel</value>
+    </variable>
+    <variable name="Furniture_TopBar_SubLabel_Color">
+        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeSubLabel</value>
+        <value>SubLabel</value>
+    </variable>
     <variable name="Furniture_TopBar_Header_MainLabel">
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
         <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$LOCALIZE[31145]</value>
@@ -406,7 +414,7 @@
                 <font>Font-Header</font>
                 <label>$VAR[Furniture_TopBar_Header_MainLabel]</label>
                 <aligny>top</aligny>
-                <textcolor>MainLabel</textcolor>
+                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
             </control>
             <control type="label">
                 <posx>245</posx>
@@ -414,7 +422,7 @@
                 <width>1050</width>
                 <font>Font-Sublabel</font>
                 <aligny>top</aligny>
-                <textcolor>SubLabel</textcolor>
+                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <label>$VAR[Furniture_TopBar_Header_SubLabel]</label>
             </control>
         </control>
@@ -429,7 +437,7 @@
                 <font>Font-Header</font>
                 <label>$INFO[Player.Title]</label>
                 <aligny>top</aligny>
-                <textcolor>MainLabel</textcolor>
+                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
             </control>
             <control type="grouplist">
                 <posx>245</posx>
@@ -442,7 +450,7 @@
                     <width max="400">auto</width>
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
-                    <textcolor>SubLabel</textcolor>
+                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                     <label>[COLOR=$VAR[HighlightColor2]]$VAR[Label_HeaderDirector][/COLOR]</label>
                     <visible>!VideoPlayer.Content(livetv)</visible>
                 </control>
@@ -450,7 +458,7 @@
                     <width max="730">auto</width>
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
-                    <textcolor>SubLabel</textcolor>
+                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                     <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]</label>
                     <visible>VideoPlayer.Content(livetv)</visible>
                 </control>
@@ -459,7 +467,7 @@
                     <font>Font-Sublabel</font>
                     <align>left</align>
                     <aligny>top</aligny>
-                    <textcolor>SubLabel</textcolor>
+                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                     <label>$INFO[Player.FinishTime,  $LOCALIZE[31071] ,]</label>
                 </control>
                 <control type="label">
@@ -468,7 +476,7 @@
                     <align>right</align>
                     <aligny>top</aligny>
                     <visible>!VideoPlayer.Content(livetv)</visible>
-                    <textcolor>SubLabel</textcolor>
+                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                     <label>$INFO[Player.Time(hh:mm:ss),  •  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
                 </control>
             </control>
@@ -483,7 +491,7 @@
                     <width max="830">auto</width>
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
-                    <textcolor>SubLabel</textcolor>
+                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                     <label>[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]</label>
                 </control>
                 <control type="label">
@@ -491,7 +499,7 @@
                     <font>Font-Sublabel</font>
                     <align>left</align>
                     <aligny>top</aligny>
-                    <textcolor>SubLabel</textcolor>
+                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                     <label>$INFO[Player.Time(hh:mm:ss),  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
                 </control>
             </control>
@@ -510,7 +518,7 @@
                 <height>100</height>
                 <fadetime>350</fadetime>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
-                <texture colordiffuse="MainLabel">$INFO[Weather.FanartCode,weather-icons/,.png]</texture>
+                <texture colordiffuse="$VAR[Furniture_TopBar_MainLabel_Color]">$INFO[Weather.FanartCode,weather-icons/,.png]</texture>
                 <visible>!Skin.HasSetting(disable.weatherheader)</visible>
             </control>
             <control type="label">
@@ -520,7 +528,7 @@
                 <height>100</height>
                 <aligny>top</aligny>
                 <font>Font-Sublabel</font>
-                <textcolor>SubLabel</textcolor>
+                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <align>center</align>
                 <aligny>top</aligny>
                 <label>$INFO[Weather.Temperature]</label>
@@ -535,7 +543,7 @@
                 <align>right</align>
                 <aligny>top</aligny>
                 <label>$INFO[System.Time(hh:mm)]</label>
-                <textcolor>MainLabel</textcolor>
+                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
                 <animation effect="slide" start="0" end="-58" condition="!IsEmpty(System.Time(xx))">Conditional</animation>
             </control>
             <control type="label">
@@ -545,7 +553,7 @@
                 <height>100</height>
                 <aligny>top</aligny>
                 <font>Font-Sublabel</font>
-                <textcolor>SubLabel</textcolor>
+                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <align>right</align>
                 <label>$INFO[System.Time(xx)]</label>
                 <visible>!IsEmpty(System.Time(xx))</visible>
@@ -557,7 +565,7 @@
                 <height>100</height>
                 <aligny>top</aligny>
                 <font>Font-Sublabel</font>
-                <textcolor>SubLabel</textcolor>
+                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <align>right</align>
                 <label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
             </control>
