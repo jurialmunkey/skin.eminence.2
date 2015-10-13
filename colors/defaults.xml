@@ -11,6 +11,8 @@
     <color name="Selected">fff0f0f0</color>
     <color name="MainLabel">FFededed</color>
     <color name="SubLabel">BFededed</color>
+    <color name="HomeMainLabel">FFededed</color>
+    <color name="HomeSubLabel">BFededed</color>
     <color name="LineLabel">9Fededed</color>
     <color name="SideArrow">5Fededed</color>
     <color name="PosterBorder">3e555555</color>

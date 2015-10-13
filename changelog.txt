@@ -1,6 +1,7 @@
 [B]0.9.30[/B]
 Text only home
 Startup playlist
+Light Theme
 
 [B]0.9.29[/B]
 Ability to close OSD on down

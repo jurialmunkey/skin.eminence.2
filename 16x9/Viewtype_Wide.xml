@@ -172,6 +172,7 @@
                             <right>25</right>
                             <bottom>pad</bottom>
                             <height>48</height>
+                            <textcolor>HomeSubLabel</textcolor>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
@@ -182,6 +183,7 @@
                             <height>48</height>
                             <align>right</align>
                             <font>Font-ListInfo-Small</font>
+                            <textcolor>HomeSubLabel</textcolor>
                             <label>$INFO[ListItem.Label2]</label>
                         </control>
                     </control>
@@ -226,6 +228,7 @@
                             <bottom>pad</bottom>
                             <height>48</height>
                             <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>HomeSubLabel</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="label">
@@ -235,6 +238,7 @@
                             <height>48</height>
                             <align>right</align>
                             <font>Font-ListInfo-Small</font>
+                            <textcolor>HomeSubLabel</textcolor>
                             <label>$INFO[ListItem.Label2]</label>
                         </control>
                     </control>
@@ -345,6 +349,7 @@
                     <right>side</right>
                     <top>10</top>
                     <height>32</height>
+                    <textcolor>HomeSubLabel</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
                 <control type="label">
@@ -354,14 +359,16 @@
                     <height>32</height>
                     <align>right</align>
                     <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
                     <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
                 </control>
                 <control type="textbox">
                     <left>side</left>
                     <right>side</right>
                     <bottom>14</bottom>
-                    <height>64</height>
+                    <height>68</height>
                     <font>Font-ListInfo-Small</font>
+                    <textcolor>HomeSubLabel</textcolor>
                     <label>$VAR[Label_Plot]</label>
                 </control>
             </control>
