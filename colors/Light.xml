@@ -1,11 +1,11 @@
 <colors>
-    <color name="Background">ffefefef</color>
-    <color name="FanartFade">e2efefef</color>
-    <color name="HomeBarBG">ffefefef</color>
+    <color name="Background">ffdfdfdf</color>
+    <color name="FanartFade">e2dfdfdf</color>
+    <color name="HomeBarBG">ffdfdfdf</color>
     <color name="HomeBarFG">ff333333</color>
     <color name="HomeBarTile">3e555555</color>
-    <color name="HomeWidgetBG">ffefefef</color>
-    <color name="DialogBG">ffefefef</color>
+    <color name="HomeWidgetBG">ffdfdfdf</color>
+    <color name="DialogBG">ffdfdfdf</color>
     <color name="Highlight">ff287ba8</color>
     <color name="Highlight2">ffe55e35</color>
     <color name="Selected">fff0f0f0</color>
