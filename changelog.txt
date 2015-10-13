@@ -1,3 +1,6 @@
+[B]0.9.31[/B]
+Fix textonly on up bug
+
 [B]0.9.30[/B]
 Text only home
 Startup playlist

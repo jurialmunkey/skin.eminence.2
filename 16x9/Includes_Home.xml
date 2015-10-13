@@ -669,14 +669,12 @@
     <include name="Home_Widget_Hidden">
         <control type="group">
             <posy>666</posy>
-            <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
             <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
             <visible>stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) | [!IsEmpty(Container(9000).ListItem.Property(PosterWidget)) + stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166])]</visible>
             <include>Home_Widget_Right</include>
         </control>
         <control type="group">
             <posy>666</posy>
-            <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
             <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
             <include>Home_Widget_Left</include>
         </control>
