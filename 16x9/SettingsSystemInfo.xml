@@ -78,6 +78,13 @@
                     <onleft>9000</onleft>
                     <usecontrolcoords>true</usecontrolcoords>
                     <control type="label">
+                        <top>16</top>
+                        <width>100%</width>
+                        <height>48</height>
+                        <include>Defs_OptionButton</include>
+                        <label>$INFO[Control.GetLabel(52)]</label>
+                    </control>
+                    <control type="label">
                         <description>CPU Text</description>
                         <label>$LOCALIZE[13271]</label>
                         <width>100%</width>
@@ -180,6 +187,7 @@
                 </control>
             </control>
         </control>
+        <control type="label" id="52"><visible>false</visible></control>
     </controls>
 
 </window>
