@@ -649,3 +649,11 @@ msgstr ""
 msgctxt "#31182"
 msgid "Text only"
 msgstr ""
+
+msgctxt "#31183"
+msgid "Customise shutdown menu"
+msgstr ""
+
+msgctxt "#31184"
+msgid "Startup video or playlist"
+msgstr ""
