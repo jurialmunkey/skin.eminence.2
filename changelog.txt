@@ -1,3 +1,6 @@
+[B]0.9.35[/B]
+Merge recording icon and header text for PVR
+
 [B]0.9.34[/B]
 Merge fix for text only home onup posters
 
