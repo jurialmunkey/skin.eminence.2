@@ -168,7 +168,7 @@
                         <width>100%</width>
                         <label>31151</label>
                         <label2>$INFO[Skin.String(home.headericon)]</label2>
-                        <onclick condition="IsEmpty(Skin.String(home.headericon))">Skin.SetImage(home.headericon,,special://skin/extras/icons/)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(home.headericon))">Skin.SetImage(home.headericon,special://skin/extras/icons/)</onclick>
                         <onclick condition="!IsEmpty(Skin.String(home.headericon))">Skin.Reset(home.headericon)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
