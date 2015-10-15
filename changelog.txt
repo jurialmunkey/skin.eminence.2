@@ -1,5 +1,7 @@
 [B]0.9.31[/B]
 Fix textonly on up bug
+Add recording indicator
+Fix timer resolution
 
 [B]0.9.30[/B]
 Text only home

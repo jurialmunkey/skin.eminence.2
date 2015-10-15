@@ -158,13 +158,23 @@
                             <colordiffuse>5fffffff</colordiffuse>
                         </control> 
                         <control type="image">
-                            <posy>6</posy>
-                            <width>52</width>
-                            <height>52</height>
-                            <texture>special://skin/extras/icons/timer.png</texture>
+                            <posy>17</posy>
+                            <posx>8</posx>
+                            <width>32</width>
+                            <height>32</height>
+                            <texture>pvr/timer.png</texture>
                             <colordiffuse>ListLabel</colordiffuse>
-                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
-                        </control>   
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                        <control type="image">
+                            <posy>17</posy>
+                            <posx>8</posx>
+                            <width>32</width>
+                            <height>32</height>
+                            <texture>pvr/recording.png</texture>
+                            <colordiffuse>ListLabel</colordiffuse>
+                            <visible>ListItem.IsRecording</visible>
+                        </control>
                         <control type="label" id="1">
                             <posx>0</posx>
                             <height>66</height>
@@ -194,13 +204,23 @@
                         </control> 
                         
                         <control type="image">
-                            <posy>6</posy>
-                            <width>52</width>
-                            <height>52</height>
-                            <texture>special://skin/extras/icons/timer.png</texture>
+                            <posy>17</posy>
+                            <posx>8</posx>
+                            <width>32</width>
+                            <height>32</height>
+                            <texture>pvr/timer.png</texture>
                             <colordiffuse>Selected</colordiffuse>
-                            <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
-                        </control>   
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                        <control type="image">
+                            <posy>17</posy>
+                            <posx>8</posx>
+                            <width>32</width>
+                            <height>32</height>
+                            <texture>pvr/recording.png</texture>
+                            <colordiffuse>Selected</colordiffuse>
+                            <visible>ListItem.IsRecording</visible>
+                        </control>
                         <control type="label" id="1">
                             <posx>0</posx>
                             <height>66</height>
