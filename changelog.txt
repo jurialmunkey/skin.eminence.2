@@ -1,3 +1,6 @@
+[B]0.9.36[/B]
+Bump addon version to match master branch for revisioning purposes
+
 [B]0.9.32[/B]
 Fix home screen localisation issue
 Modify hoem customisation dialog to show settings for items
