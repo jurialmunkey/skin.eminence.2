@@ -27,7 +27,7 @@
                 <scrolltime>0</scrolltime>
                 <orientation>vertical</orientation>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <itemlayout height="69" width="favitemw">
+                <itemlayout height="69" width="635">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -62,7 +62,7 @@
                     </control>
                 </itemlayout>
 
-                <focusedlayout height="69" width="favitemw">
+                <focusedlayout height="69" width="635">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -108,28 +108,57 @@
                 <right>side</right>
                 <top>80</top>
                 <bottom>side</bottom>
-                <width>414</width>
+                <width>1035</width>
                 <orientation>vertical</orientation>
                 <itemgap>0</itemgap>
-                
+
                 <control type="button" id="401" description="Alt chooser">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
                 </control>
+                
                 <control type="button" id="307" description="Custom">
                     <width>100%</width>
-                    <include>Defs_OptionButton</include>
-                </control>
-                <control type="button" id="305" description="Set Label">
-                    <width>100%</width>
+                    <label>31186</label>
+                    <label2>$INFO[Container(211).ListItem.Property(path)]</label2>
                     <include>Defs_OptionButton</include>
                 </control>
 
-                <control type="button" id="405" description="Set Submenu">
+                <control type="button" id="305" description="Set Label">
                     <width>100%</width>
-                    <label>31074</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <label>31185</label>
+                    <label2>$INFO[Container(211).ListItem.Label]</label2>
                     <include>Defs_OptionButton</include>
+                </control>
+
+                <control type="button" id="306" description="Browse for Thumb">
+                    <width>100%</width>
+                    <label>31075</label>
+                    <label2>$INFO[Container(211).ListItem.Icon]</label2>
+                    <include>Defs_OptionButton</include>
+                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                </control>
+
+                <control type="button" id="312" description="Widget">
+                    <width>100%</width>
+                    <label>Widget</label>
+                    <label2>$VAR[Label_ShortcutsWidget]</label2>
+                    <include>Defs_OptionButton</include>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                </control>
+
+                <control type="radiobutton" id="9702" description="PosterWidget">
+                    <label>31150</label>
+                    <width>100%</width>
+                    <radioposx>985</radioposx>
+                    <selected>!IsEmpty(Container(211).ListItem.Property(PosterWidget))</selected>
+                    <onclick>SetProperty(customProperty,PosterWidget)</onclick>
+                    <onclick condition="IsEmpty(Container(211).ListItem.Property(PosterWidget))">SetProperty(customValue,true)</onclick>
+                    <onclick condition="!IsEmpty(Container(211).ListItem.Property(PosterWidget))">ClearProperty(customValue)</onclick>
+                    <onclick>SendClick(404)</onclick>
+                    <include>Defs_OptionButton</include>
+                    <visible>stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166])</visible>
+                    <!-- <visible>!IsEmpty(Container(211).ListItem.Property(widget))</visible> -->
                 </control>
 
                 <include name="Defs_Shortcuts_SetHub">
@@ -186,55 +215,40 @@
                     <param name="buttonid2" value="9409" />
                 </include>
 
-
-                <control type="button" id="312" description="Widget">
+                <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
-                    <include>Defs_OptionButton</include>
+                    <label>31074</label>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-                </control>
-
-                <control type="radiobutton" id="9702" description="PosterWidget">
-                    <label>31150</label>
-                    <width>100%</width>
-                    <radioposx>364</radioposx>
-                    <selected>!IsEmpty(Container(211).ListItem.Property(PosterWidget))</selected>
-                    <onclick>SetProperty(customProperty,PosterWidget)</onclick>
-                    <onclick condition="IsEmpty(Container(211).ListItem.Property(PosterWidget))">SetProperty(customValue,true)</onclick>
-                    <onclick condition="!IsEmpty(Container(211).ListItem.Property(PosterWidget))">ClearProperty(customValue)</onclick>
-                    <onclick>SendClick(404)</onclick>
                     <include>Defs_OptionButton</include>
-                    <visible>stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166])</visible>
-                    <!-- <visible>!IsEmpty(Container(211).ListItem.Property(widget))</visible> -->
                 </control>
 
                 <control type="button" id="310" description="Background">
                     <width>100%</width>
+                    <label>31187</label>
+                    <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
                     <include>Defs_OptionButton</include>
                 </control>
-                <control type="button" id="306" description="Browse for Thumb">
-                    <width>100%</width>
-                    <label>31075</label>
-                    <include>Defs_OptionButton</include>
-                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
-                </control>
+
 
                 <control type="button" id="9701" description="Select Color">
                     <width>100%</width>
                     <label>31128</label>
+                    <label2>$INFO[Container(211).ListItem.Property(tilecolor)]</label2>
                     <onclick>RunScript(script.skin.helper.service,action=colorpicker,shortcutproperty=tilecolor)</onclick>
                     <include>Defs_OptionButton</include>
                     <visible>Skin.HasSetting(home.tilecolor)</visible>
                 </control>
-                
-                <control type="button" id="301" description="Add">
+
+                <!-- <control type="button" id="301" description="Add">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
-                </control>
+                </control> -->
                 <!-- <control type="button" id="302" description="Delete">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
                 </control> -->
+                
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
@@ -244,7 +258,7 @@
             <control type="label" id="500"><visible>false</visible><font>-</font></control>
             
             <control type="grouplist" id="9200">
-                <right>464</right>
+                <right>1085</right>
                 <top>97</top>
                 <width>600</width>
                 <align>right</align>
@@ -272,13 +286,13 @@
                     <texturenofocus colordiffuse="Disabled">common/delete.png</texturenofocus>
                     <texturefocus colordiffuse="Selected">common/delete.png</texturefocus>
                 </control>
-                <!-- <control type="button" id="301" description="Add">
+                <control type="button" id="301" description="Add">
                     <width>32</width>
                     <height>32</height>
                     <font>-</font>
                     <texturenofocus colordiffuse="Disabled">common/add.png</texturenofocus>
                     <texturefocus colordiffuse="Selected">common/add.png</texturefocus>
-                </control> -->
+                </control>
                 <control type="button" id="303" description="Up">
                     <width>32</width>
                     <height>32</height>

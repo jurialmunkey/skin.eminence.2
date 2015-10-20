@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_ShortcutsWidget">
+        <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
+        <value condition="!IsEmpty(Container(211).ListItem.Property(background))">$LOCALIZE[31188]</value>
+        <value>$LOCALIZE[31147]$INFO[Skin.String(home.fallbackwidget.name), (,)]</value>
+    </variable>
+
     <variable name="Label_ImageList">
         <value condition="!IsEmpty(ListItem.Property(job))">$INFO[ListItem.Property(job)]</value>
         <value condition="!IsEmpty(ListItem.Property(character))">$INFO[ListItem.Property(character)]</value>
