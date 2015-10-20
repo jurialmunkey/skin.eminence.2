@@ -1,3 +1,6 @@
+[B]0.9.36[/B]
+Merge changes from Isengard version
+
 [B]0.9.35[/B]
 Merge recording icon and header text for PVR
 
