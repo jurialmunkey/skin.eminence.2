@@ -1,6 +1,8 @@
 [B]0.9.32[/B]
 Fix home screen localisation issue
 Modify hoem customisation dialog to show settings for items
+Light theme tweaks
+Fix skinsettings left pane not following selected text color when navigating right pane
 
 [B]0.9.31[/B]
 Fix textonly on up bug

@@ -34,6 +34,7 @@
                     <control type="togglebutton" id="8001">
                         <width>100%</width>
                         <label>10000</label>
+                                                <altlabel>[COLOR=Selected]$LOCALIZE[10000][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8001)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -42,6 +43,7 @@
                     <control type="togglebutton" id="8002">
                         <width>100%</width>
                         <label>31020</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31020][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8002)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -50,6 +52,7 @@
                     <control type="togglebutton" id="8003">
                         <width>100%</width>
                         <label>31121</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31121][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8003)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -58,6 +61,7 @@
                     <control type="togglebutton" id="8004">
                         <width>100%</width>
                         <label>31005</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31005][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8004)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -66,6 +70,7 @@
                     <control type="togglebutton" id="8007">
                         <width>100%</width>
                         <label>31127</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31127][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8007)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -74,6 +79,7 @@
                     <control type="togglebutton" id="8008">
                         <width>100%</width>
                         <label>31126</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31126][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8008)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -82,6 +88,7 @@
                     <control type="togglebutton" id="8009">
                         <width>100%</width>
                         <label>31110</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31110][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8009)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -90,6 +97,7 @@
                     <control type="togglebutton" id="8099">
                         <width>100%</width>
                         <label>31170</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31170][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8099)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
