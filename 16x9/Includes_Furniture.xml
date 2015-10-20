@@ -510,7 +510,6 @@
     <include name="Furniture_TopBar_Clock">
         <control type="group">
             <posx>400r</posx>
-            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
             <visible>!Skin.HasSetting(disable.clockheader)</visible>
             <animation effect="slide" start="0" end="92" condition="Skin.HasSetting(disable.weatherheader)">Conditional</animation>
             <control type="image">

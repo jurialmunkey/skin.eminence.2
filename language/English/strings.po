@@ -239,11 +239,11 @@ msgid "Categories"
 msgstr ""
 
 msgctxt "#31074"
-msgid "Set submenu"
+msgid "Submenu"
 msgstr ""
 
 msgctxt "#31075"
-msgid "Select icon"
+msgid "Icon"
 msgstr ""
 
 msgctxt "#31076"
@@ -327,11 +327,11 @@ msgid "Spotlight"
 msgstr ""
 
 msgctxt "#31096"
-msgid "Set hub items"
+msgid "Hub items"
 msgstr ""
 
 msgctxt "#31097"
-msgid "Select hub widget"
+msgid "Hub widget"
 msgstr ""
 
 msgctxt "#31098"
@@ -455,7 +455,7 @@ msgid "Header"
 msgstr ""
 
 msgctxt "#31128"
-msgid "Set color"
+msgid "Color"
 msgstr ""
 
 msgctxt "#31129"
@@ -669,3 +669,20 @@ msgstr ""
 msgctxt "#31184"
 msgid "Startup video or playlist"
 msgstr ""
+
+msgctxt "#31185"
+msgid "Label"
+msgstr ""
+
+msgctxt "#31186"
+msgid "Action"
+msgstr ""
+
+msgctxt "#31187"
+msgid "Background"
+msgstr ""
+
+msgctxt "#31188"
+msgid "None (show user background)"
+msgstr ""
+
