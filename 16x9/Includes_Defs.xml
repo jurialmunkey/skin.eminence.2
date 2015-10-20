@@ -8,6 +8,7 @@
         <width>364</width>
         <height>69</height>
         <textcolor>ListLabel</textcolor>
+        <alttextcolor>Selected</alttextcolor>
         <selectedcolor>Selected</selectedcolor>
         <focusedcolor>Selected</focusedcolor>
         <font>Font-ListInfo-Small</font>
