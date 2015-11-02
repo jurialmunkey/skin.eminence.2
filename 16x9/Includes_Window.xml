@@ -224,8 +224,9 @@
         <control type="button" id="6">
             <description>Lyrics</description>
             <label>24013</label>
+            <onclick>Close</onclick>
             <onclick>RunScript(script.cu.lrclyrics)</onclick>
-            <enable>false</enable>
+            <enable>System.HasAddon(script.cu.lrclyrics)</enable>
             <include>Defs_OSDButton</include>
         </control>
     </include>
