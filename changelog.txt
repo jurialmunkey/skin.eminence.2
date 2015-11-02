@@ -11,6 +11,7 @@ Merge fix for text only home onup posters
 Merge Isengard changes to Home
 Add Light color theme
 Add kodi version name
+Bump addon version to match master branch for revisioning purposes
 
 [B]0.9.32[/B]
 Weather fanart and icon selection resource
