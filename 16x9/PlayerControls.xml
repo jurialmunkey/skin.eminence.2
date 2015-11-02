@@ -11,6 +11,7 @@
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
             <control type="grouplist" id="9000">
+                <visible>!Window.IsVisible(MusicVisualisation.xml)</visible>
                 <top>90</top>
                 <height>64</height>
                 <align>center</align>
