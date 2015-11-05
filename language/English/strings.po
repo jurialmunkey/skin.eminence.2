@@ -686,3 +686,7 @@ msgctxt "#31188"
 msgid "None (show user background)"
 msgstr ""
 
+msgctxt "#31189"
+msgid "None"
+msgstr ""
+
