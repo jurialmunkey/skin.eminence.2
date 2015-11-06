@@ -3,6 +3,8 @@ Add more default/none items to settings
 Change default home background
 Add fix for extendedinfo
 Dont pause on extended info from osd
+Make Extra Info from OSD more like library view
+Add episode and season number to OSD info
 
 [B]0.9.36[/B]
 Bump addon version to match master branch for revisioning purposes
