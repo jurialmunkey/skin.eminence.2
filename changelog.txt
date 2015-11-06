@@ -1,3 +1,5 @@
+[B]0.9.38[/B]
+
 [B]0.9.37[/B]
 Add more default/none items to settings
 Change default home background
