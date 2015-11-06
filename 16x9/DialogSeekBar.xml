@@ -6,13 +6,22 @@
 
     <controls>
 
-        <control type="group">
+        <!-- <control type="group">
             <visible>Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
             <top>210</top>
             <height>780</height>
             <centerleft>50%</centerleft>
             <width>1920</width>
             <include>Dialog_Background</include>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut_Delay</include>
+        </control> -->
+
+        <control type="image">
+            <visible>Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+            <width>1920</width>
+            <height>1080</height>
+            <texture colordiffuse="FanartFade">common/white.png</texture>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut_Delay</include>
         </control>
@@ -115,7 +124,7 @@
                         <right>pad</right>
                         <height>36</height>
                         <font>Font-InfoBox-Title</font>
-                        <label>$INFO[VideoPlayer.Title]</label>
+                        <label>$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]</label>
                     </control>
                     <control type="label">
                         <left>pad</left>

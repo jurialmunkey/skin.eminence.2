@@ -238,6 +238,7 @@
     <!-- TOP BAR -->
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
+        <value condition="VideoPlayer.IsFullscreen + [Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">PosterBorder</value>
         <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeBarBG</value>
         <value>PosterBorder</value>
     </variable>

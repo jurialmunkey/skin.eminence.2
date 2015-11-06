@@ -1,3 +1,9 @@
+[B]0.9.37[/B]
+Add more default/none items to settings
+Change default home background
+Add fix for extendedinfo
+Dont pause on extended info from osd
+
 [B]0.9.36[/B]
 Merge changes from Isengard version
 

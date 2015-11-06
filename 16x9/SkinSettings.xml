@@ -34,7 +34,7 @@
                     <control type="togglebutton" id="8001">
                         <width>100%</width>
                         <label>10000</label>
-                                                <altlabel>[COLOR=Selected]$LOCALIZE[10000][/COLOR]</altlabel>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[10000][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8001)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <include>Defs_OptionButton</include>
@@ -130,7 +130,7 @@
                     <control type="button" id="8102">
                         <width>100%</width>
                         <label>31147</label>
-                        <label2>$INFO[Skin.String(home.fallbackwidget.name)]</label2>
+                        <label2>$VAR[Label_SkinSetting_FallbackWidget]</label2>
                         <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
@@ -175,8 +175,8 @@
                     <control type="button" id="8107">
                         <width>100%</width>
                         <label>31151</label>
-                        <label2>$INFO[Skin.String(home.headericon)]</label2>
                         <onclick condition="IsEmpty(Skin.String(home.headericon))">Skin.SetImage(home.headericon,special://skin/extras/icons/)</onclick>
+                        <label2>$VAR[Label_SkinSetting_HeaderIcon]</label2>
                         <onclick condition="!IsEmpty(Skin.String(home.headericon))">Skin.Reset(home.headericon)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
@@ -258,7 +258,7 @@
                     <control type="button" id="8207">
                         <width>100%</width>
                         <label>31159</label>
-                        <label2>$INFO[Skin.String(global.background)]</label2>
+                        <label2>$VAR[Label_SkinSetting_GlobalOverlay]</label2>
                         <onclick condition="IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background)</onclick>
                         <onclick condition="!IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
                         <include>Defs_OptionButton</include>
@@ -268,7 +268,7 @@
                     <control type="button" id="8208">
                         <width>100%</width>
                         <label>31146</label>
-                        <label2>$INFO[Skin.String(background.fallback)]</label2>
+                        <label2>$VAR[Label_SkinSetting_FallbackFanart]</label2>
                         <onclick condition="IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
                         <onclick condition="!IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
                         <include>Defs_OptionButton</include>
@@ -397,7 +397,7 @@
                     <control type="button" id="8801">
                         <width>100%</width>
                         <label>31111</label>
-                        <label2>$INFO[Skin.String(HighlightColor)]</label2>
+                        <label2>$VAR[Label_SkinSetting_HighlightColor]</label2>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
@@ -406,7 +406,7 @@
                     <control type="button" id="8802">
                         <width>100%</width>
                         <label>31112</label>
-                        <label2>$INFO[Skin.String(HighlightColor2)]</label2>
+                        <label2>$VAR[Label_SkinSetting_HighlightColor2]</label2>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor2)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
@@ -476,7 +476,7 @@
                     <control type="button" id="8904">
                         <width>100%</width>
                         <label>31160</label>
-                        <label2>$INFO[Skin.String(SkinHelper.SpinnerTexture)]</label2>
+                        <label2>$VAR[Label_SkinSetting_BusyTexture]</label2>
                         <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>

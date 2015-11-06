@@ -217,5 +217,34 @@
         <value condition="Control.HasFocus(101) | Window.IsActive(servicesettings)">$LOCALIZE[705]</value>
         <value>$LOCALIZE[480]</value>
     </variable>
-    
+
+    <!-- Skin Settings VARS -->
+    <variable name="Label_SkinSetting_FallbackWidget">
+        <value condition="!IsEmpty(Skin.String(home.fallbackwidget.name))">$INFO[Skin.String(home.fallbackwidget.name)]</value>
+        <value>$LOCALIZE[31180]</value>
+    </variable>
+    <variable name="Label_SkinSetting_HeaderIcon">
+        <value condition="!IsEmpty(Skin.String(home.headericon))">$INFO[Skin.String(home.headericon)]</value>
+        <value>$LOCALIZE[31180]</value>
+    </variable>
+    <variable name="Label_SkinSetting_HighlightColor">
+        <value condition="!IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
+        <value>$LOCALIZE[31180]</value>
+    </variable>
+    <variable name="Label_SkinSetting_HighlightColor2">
+        <value condition="!IsEmpty(Skin.String(HighlightColor2))">$INFO[Skin.String(HighlightColor2)]</value>
+        <value>$LOCALIZE[31180]</value>
+    </variable>
+    <variable name="Label_SkinSetting_BusyTexture">
+        <value condition="!IsEmpty(Skin.String(SkinHelper.SpinnerTexture))">$INFO[Skin.String(SkinHelper.SpinnerTexture)]</value>
+        <value>$LOCALIZE[31180]</value>
+    </variable>
+    <variable name="Label_SkinSetting_GlobalOverlay">
+        <value condition="!IsEmpty(Skin.String(global.background))">$INFO[Skin.String(global.background)]</value>
+        <value>$LOCALIZE[31189]</value>
+    </variable>
+    <variable name="Label_SkinSetting_FallbackFanart">
+        <value condition="!IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
+        <value>$LOCALIZE[31189]</value>
+    </variable>
 </includes>

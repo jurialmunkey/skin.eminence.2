@@ -254,10 +254,12 @@
         <control type="button" id="4">
             <description>Extra Info</description>
             <label>31105</label>
-            <onclick>Close</onclick>
-            <onclick condition="!Player.Paused">Pause</onclick>
+            <!-- <onclick>Close</onclick> -->
+            <!-- <onclick condition="!Player.Paused">Pause</onclick>
             <onclick condition="VideoPlayer.Content(movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title])</onclick>
-            <onclick condition="VideoPlayer.Content(episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[VideoPlayer.TvShowTitle])</onclick>
+            <onclick condition="VideoPlayer.Content(episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[VideoPlayer.TvShowTitle])</onclick> -->
+            <onclick condition="VideoPlayer.Content(movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title],imdb_id=$INFO[VideoPlayer.IMDBNumber])</onclick>
+            <onclick condition="VideoPlayer.Content(episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[VideoPlayer.TvShowTitle],imdb_id=$INFO[VideoPlayer.IMDBNumber])</onclick>
             <include>Defs_OSDButton</include>
         </control>           
         <control type="button" id="5">
