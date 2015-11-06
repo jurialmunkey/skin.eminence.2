@@ -248,14 +248,6 @@
                         <include>Defs_OptionButton</include>
                         <visible>Control.IsEnabled(7)</visible>
                     </control>
-                    <!-- Rollback Button -->
-                    <control type="button" id="11">
-                        <width>282.5</width>
-                        <label>24048</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <visible>Control.IsEnabled(11)</visible>
-                    </control>
                     <!-- Changelog Button -->
                     <control type="button" id="10">
                         <width>282.5</width>
