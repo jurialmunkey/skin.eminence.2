@@ -1,6 +1,8 @@
 [B]0.9.38[/B]
 Next Aired RSS
 Various other things
+Add osd controls to Home Screen on up
+Fix text for movie streams now playing
 
 [B]0.9.37[/B]
 Add more default/none items to settings

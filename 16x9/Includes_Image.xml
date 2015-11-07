@@ -36,9 +36,9 @@
 
 
     <variable name="Image_RSS_Icon">
+        <value condition="Window.IsVisible(SettingsCategory.xml)">common/rss.png</value>
         <value condition="Player.HasMedia + Player.Paused">common/pause.png</value>
         <value condition="Player.HasMedia + !Player.Paused">common/play.png</value>
-        <value condition="!Player.HasMedia + Window.IsVisible(SettingsCategory.xml)">common/rss.png</value>
         <value condition="!IsEmpty(Window(Home).Property(NextAired.NextDate))">common/nextaired.png</value>
         <value condition="IsEmpty(Window(Home).Property(NextAired.NextDate)) + !IsEmpty(Window(Home).Property(NextAired.LatestTitle))">common/nextaired.png</value>
     </variable>
