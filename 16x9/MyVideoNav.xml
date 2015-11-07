@@ -2,6 +2,7 @@
 <window>
     <!-- videolibrary -->
     <backgroundcolor>Background</backgroundcolor>
+    <menucontrol>9000</menucontrol>
     <defaultcontrol always="true">50</defaultcontrol>
     <views>50,54,502,503,506,51,52,59,55,56,505,53,57,501,58,500</views>
     <onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <backgroundcolor>Background</backgroundcolor>
+    <menucontrol>9000</menucontrol>
     <onload>SetFocus(50)</onload>
     <onload>SetFocus(6)</onload>
     <controls>

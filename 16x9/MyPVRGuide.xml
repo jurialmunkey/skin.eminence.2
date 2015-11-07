@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <backgroundcolor>Background</backgroundcolor>
+    <menucontrol>9000</menucontrol>
     <defaultcontrol>10</defaultcontrol>
     <views>10,11,12,13</views>
 
