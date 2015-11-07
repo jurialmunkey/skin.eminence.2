@@ -2,6 +2,7 @@
 (Jarvis) Remove MyMusicSongs and Karaoke
 (Jarvis) Remove rollback id11 in AddonInfo
 Merge Isengard changes
+Next Aired RSS
 
 [B]0.9.37[/B]
 Add more default/none items to settings
