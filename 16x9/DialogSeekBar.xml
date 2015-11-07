@@ -124,7 +124,7 @@
                         <right>pad</right>
                         <height>36</height>
                         <font>Font-InfoBox-Title</font>
-                        <label>$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]</label>
+                        <label>19033</label>
                     </control>
                     <control type="label">
                         <left>pad</left>
@@ -132,6 +132,15 @@
                         <height>32</height>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre][/COLOR][/UPPERCASE]</label>
+                        <visible>IsEmpty(VideoPlayer.Season)</visible>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>580</right>
+                        <height>32</height>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre,,  -  ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] , ][/COLOR][/UPPERCASE]</label>
+                        <visible>!IsEmpty(VideoPlayer.Season)</visible>
                     </control>
                     
                     <control type="textbox">

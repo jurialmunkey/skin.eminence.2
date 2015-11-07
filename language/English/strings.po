@@ -690,3 +690,10 @@ msgctxt "#31189"
 msgid "None"
 msgstr ""
 
+msgctxt "#31190"
+msgid "Next Episode"
+msgstr ""
+
+msgctxt "#31191"
+msgid "Last Episode"
+msgstr ""
