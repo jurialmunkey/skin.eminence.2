@@ -366,15 +366,6 @@
             <font>Font-ListInfo-Small-Bold</font>
             <label>$VAR[Label_ExtraInfo_Icons]</label>
         </control>
-        <!-- <control type="image">
-            <top>-48</top>
-            <left>5</left>
-            <width>64</width>
-            <height>64</height>
-            <aspectratio>keep</aspectratio>
-            <texture>indicator/3D.png</texture>
-            <visible>ListItem.IsStereoscopic</visible>
-        </control> -->
     </include>
 
     <!-- Line -->

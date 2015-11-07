@@ -361,6 +361,18 @@
                     <font>Font-ListInfo-Small-Bold</font>
                     <textcolor>HomeSubLabel</textcolor>
                     <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
+                    <visible>!Container.Content(seasons)</visible>
+                </control>
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    <visible>Container.Content(seasons)</visible>
                 </control>
                 <control type="textbox">
                     <left>side</left>
@@ -554,4 +566,5 @@
         </control>
         
     </include>
+    
 </includes>

@@ -697,3 +697,7 @@ msgstr ""
 msgctxt "#31191"
 msgid "Last Episode"
 msgstr ""
+
+msgctxt "#31192"
+msgid "Info List"
+msgstr ""
