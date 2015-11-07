@@ -481,6 +481,8 @@
             <onback>9000</onback>
             <ondown>9000</ondown>
             <onup>9000</onup>
+            <oninfo condition="IsEmpty(Container(9001).ListItem.TvShowTitle) + IsEmpty(Container(9001).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9001).ListItem.Title],imdb_id=$INFO[Container(9001).ListItem.IMDBNumber])</oninfo>
+            <oninfo condition="!IsEmpty(Container(9001).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9001).ListItem.TvShowTitle],imdb_id=$INFO[Container(9001).ListItem.IMDBNumber])</oninfo>
             <autoscroll time="8000">![Control.HasFocus(9001) | Control.HasFocus(9101)]</autoscroll>
             <scrolltime tween="sine" easing="out">240</scrolltime>
             <itemlayout />

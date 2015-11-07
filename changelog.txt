@@ -3,6 +3,7 @@
 (Jarvis) Remove rollback id11 in AddonInfo
 Merge Isengard changes
 Next Aired RSS
+Add oninfo for Home and Hub Movie and TV Widgets
 
 [B]0.9.37[/B]
 Add more default/none items to settings
