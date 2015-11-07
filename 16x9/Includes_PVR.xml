@@ -301,7 +301,7 @@
                                 </control>
                                 <control type="label">
                                     <left>250</left>
-                                    <width>240</width>
+                                    <width>370</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -311,7 +311,7 @@
                                     <label>$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
-                                    <left>500</left>
+                                    <left>630</left>
                                     <right>120</right>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -365,7 +365,7 @@
                                 </control>
                                 <control type="label">
                                     <left>250</left>
-                                    <width>240</width>
+                                    <width>370</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -375,7 +375,7 @@
                                     <label>$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
-                                    <left>500</left>
+                                    <left>630</left>
                                     <right>120</right>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -471,7 +471,7 @@
                                 </control>
                                 <control type="label">
                                     <left>250</left>
-                                    <width>240</width>
+                                    <width>370</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -481,8 +481,8 @@
                                     <label>$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
-                                    <left>500</left>
-                                    <width>615</width>
+                                    <left>620</left>
+                                    <width>555</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -492,8 +492,8 @@
                                     <label>$INFO[ListItem.Title]</label>
                                 </control>
                                 <control type="label">
-                                    <left>1125</left>
-                                    <width>615</width>
+                                    <left>1185</left>
+                                    <width>555</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -546,7 +546,7 @@
                                 </control>
                                 <control type="label">
                                     <left>250</left>
-                                    <width>250</width>
+                                    <width>370</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -556,8 +556,8 @@
                                     <label>$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
-                                    <left>500</left>
-                                    <width>615</width>
+                                    <left>620</left>
+                                    <width>555</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
@@ -567,8 +567,8 @@
                                     <label>$INFO[ListItem.Title]</label>
                                 </control>
                                 <control type="label">
-                                    <left>1125</left>
-                                    <width>615</width>
+                                    <left>1185</left>
+                                    <width>555</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aligny>center</aligny>
