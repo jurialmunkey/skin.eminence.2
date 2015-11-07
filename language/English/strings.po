@@ -399,7 +399,7 @@ msgid "Reset colors to defaults"
 msgstr ""
 
 msgctxt "#31114"
-msgid "Set weather fanart"
+msgid "Weather fanart"
 msgstr ""
 
 msgctxt "#31115"
@@ -527,7 +527,7 @@ msgid "Extended Info"
 msgstr ""
 
 msgctxt "#31146"
-msgid "Fallback fanart image"
+msgid "Fanart fallback image"
 msgstr ""
 
 msgctxt "#31147"
@@ -547,11 +547,11 @@ msgid "Show widget posters"
 msgstr ""
 
 msgctxt "#31151"
-msgid "Set home tile icon"
+msgid "Home tile icon"
 msgstr ""
 
 msgctxt "#31152"
-msgid "Set home tile text"
+msgid "Home tile text"
 msgstr ""
 
 msgctxt "#31153"
@@ -571,7 +571,7 @@ msgid "Show widget discart"
 msgstr ""
 
 msgctxt "#31157"
-msgid "Set home header text"
+msgid "Home header text"
 msgstr ""
 
 msgctxt "#31158"
@@ -579,7 +579,7 @@ msgid "Media Center"
 msgstr ""
 
 msgctxt "#31159"
-msgid "Global overlay"
+msgid "Background overlay image"
 msgstr ""
 
 msgctxt "#31160"
@@ -639,7 +639,7 @@ msgid "Home bar style"
 msgstr ""
 
 msgctxt "#31174"
-msgid "Set weather icons"
+msgid "Weather icons"
 msgstr ""
 
 msgctxt "#31175"
@@ -647,7 +647,7 @@ msgid "Customise shutdown menu"
 msgstr ""
 
 msgctxt "#31176"
-msgid "Set genre icons"
+msgid "Genre icons"
 msgstr ""
 
 msgctxt "#31180"

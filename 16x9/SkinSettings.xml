@@ -278,7 +278,7 @@
                     <control type="button" id="8209">
                         <width>100%</width>
                         <label>31114</label>
-                        <label2>$INFO[Skin.String(weather.fanart)]</label2>
+                        <label2>$VAR[Label_SkinSetting_WeatherFanart]</label2>
                         <onclick condition="IsEmpty(Skin.String(weather.fanart))">Skin.SetPath(weather.fanart)</onclick>
                         <onclick condition="!IsEmpty(Skin.String(weather.fanart))">Skin.Reset(weather.fanart)</onclick>
                         <include>Defs_OptionButton</include>
@@ -516,7 +516,7 @@
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                         <include>Defs_OptionButton</include>
                         <label>31184</label>
-                        <label2>$INFO[Skin.String(StartupPlaylist)]</label2>
+                        <label2>$VAR[Label_SkinSetting_StartupVideo]</label2>
                         <onclick condition="IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
                         <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
                     </control>
