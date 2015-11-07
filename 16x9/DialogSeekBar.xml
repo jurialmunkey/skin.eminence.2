@@ -50,8 +50,8 @@
                 <control type="image">
                     <top>pad</top>
                     <left>0</left>
-                    <width>157</width>
-                    <bottom>54</bottom>
+                    <width>147</width>
+                    <bottom>70</bottom>
                     <aspectratio>keep</aspectratio>
                     <texture>$INFO[Player.Art(tvshow.poster)]</texture>
                     <visible>!IsEmpty(Player.Art(tvshow.poster))</visible>
@@ -59,8 +59,8 @@
                 <control type="image">
                     <top>pad</top>
                     <left>0</left>
-                    <width>157</width>
-                    <bottom>54</bottom>
+                    <width>147</width>
+                    <bottom>70</bottom>
                     <aspectratio>keep</aspectratio>
                     <texture>$INFO[Player.Art(thumb)]</texture>
                     <visible>IsEmpty(Player.Art(tvshow.poster))</visible>
