@@ -119,8 +119,8 @@
 
     <variable name="Label_RSS">
         <value condition="Player.HasAudio">[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
-        <value condition="Player.HasVideo + VideoPlayer.Content(movies)">[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
-        <value condition="Player.HasVideo + VideoPlayer.Content(episodes)">[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
+        <value condition="Player.HasVideo + !VideoPlayer.Content(LiveTV) + IsEmpty(VideoPlayer.TvShowTitle)">[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
+        <value condition="Player.HasVideo + !VideoPlayer.Content(LiveTV) + !IsEmpty(VideoPlayer.TvShowTitle)">[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
         <value condition="Player.HasVideo + VideoPlayer.Content(LiveTV)">[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]  $INFO[VideoPlayer.Title]  •  $INFO[Player.Time] / $INFO[Player.Duration]</value>
         <value condition="!IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[31190]... [/COLOR]$INFO[Window(Home).Property(NextAired.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.AirTime),, • ]$INFO[Window(Home).Property(NextAired.NextDate)]</value>
         <value condition="IsEmpty(Window(Home).Property(NextAired.NextDate)) + !IsEmpty(Window(Home).Property(NextAired.LatestTitle))">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[31191]... [/COLOR]$INFO[Window(Home).Property(NextAired.LatestTitle),, • ]$INFO[Window(Home).Property(NextAired.LatestDate),, • ]$INFO[Window(Home).Property(NextAired.Status)]</value>

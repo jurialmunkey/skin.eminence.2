@@ -83,8 +83,9 @@
                 <right>0</right>
                 <bottom>0</bottom>
                 <height>266</height>
-                <onup>SetProperty(FO9001,1,home)</onup>
-                <onup>9001</onup>
+                <onup condition="!Player.HasMedia">SetProperty(FO9001,1,home)</onup>
+                <onup condition="!Player.HasMedia">9001</onup>
+                <onup condition="Player.HasMedia">9005</onup>
                 <ondown condition="IntegerGreaterThan(Container(9002).NumItems,0)">9002</ondown>
                 <animation type="Visible">
                     <effect type="slide" start="0,266" end="0" time="150" />
@@ -727,14 +728,139 @@
                     <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
                     <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
                 </control>
+
+                <!-- Player Controls -->
+                <control type="grouplist" id="9005">
+                    <onup condition="IntegerGreaterThan(Container(9001).NumItems,0)">9001</onup>
+                    <ondown>9000</ondown>
+                    <visible allowhiddenfocus="true">ControlGroup(9005).HasFocus()</visible>
+                    <orientation>horizontal</orientation>
+                    <itemgap>8</itemgap>
+                    <bottom>16</bottom>
+                    <left>16</left>
+                    <width>1020</width>
+                    <height>32</height>
+                    <control type="button" id="12">
+                        <description>Skip Back</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
+                        <onclick>PlayerControl(Previous)</onclick>
+                    </control>
+
+                    <control type="button" id="13">
+                        <description>Rewind</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
+                        <onclick>PlayerControl(Rewind)</onclick>
+                    </control>
+
+                    <control type="togglebutton" id="14">
+                        <description>Play/Pause</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <altlabel></altlabel>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
+                        <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+                        <alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
+                        <alttexturenofocus colordiffuse="LineLabel">osd/play.png</alttexturenofocus>
+                        <onclick>PlayerControl(Play)</onclick>
+                    </control>
+
+                    <control type="button" id="15">
+                        <description>Stop</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
+                        <onclick>PlayerControl(Stop)</onclick>
+                    </control>
+
+                    <control type="button" id="16">
+                        <description>Fast Forward</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
+                        <onclick>PlayerControl(Forward)</onclick>
+                    </control>
+
+                    <control type="button" id="17">
+                        <description>Next</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
+                        <onclick>PlayerControl(Next)</onclick>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="820">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]</label>
+                        <visible>Player.HasAudio</visible>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="820">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + IsEmpty(VideoPlayer.TvShowTitle)</visible>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="820">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + !IsEmpty(VideoPlayer.TvShowTitle)</visible>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="820">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                        <visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="320">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
+                    </control>
+                </control>
+
+                <!-- Now Playing -->
                 <control type="image">
                     <left>16</left>
                     <posy>48r</posy>
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
+                    <visible>!ControlGroup(9005).HasFocus()</visible>
                 </control>
                 <control type="grouplist">
+                    <visible>!ControlGroup(9005).HasFocus()</visible>
                     <orientation>horizontal</orientation>
                     <itemgap>0</itemgap>
                     <bottom>16</bottom>
@@ -755,7 +881,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <textcolor>LineLabel</textcolor>
                         <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]</label>
-                        <visible>Player.HasVideo + VideoPlayer.Content(movies)</visible>
+                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + IsEmpty(VideoPlayer.TvShowTitle)</visible>
                     </control>
                     <control type="label">
                         <height>100%</height>
@@ -763,7 +889,7 @@
                         <font>Font-ListInfo-Small-Bold</font>
                         <textcolor>LineLabel</textcolor>
                         <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]</label>
-                        <visible>Player.HasVideo + VideoPlayer.Content(episodes)</visible>
+                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + !IsEmpty(VideoPlayer.TvShowTitle)</visible>
                     </control>
                     <control type="label">
                         <height>100%</height>

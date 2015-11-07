@@ -47,109 +47,132 @@
                 <left>side</left>
                 <right>side</right>
                 <height>300</height>
-                <control type="grouplist">
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>pad</itemgap>
-                    <right>side</right>
-                    <top>50</top>
-                    <height>64</height>
-                    <align>right</align>
-                    <orientation>horizontal</orientation>
-                    <itemgap>side</itemgap>
-                    <control type="image">
-                        <width>64</width>
-                        <height>64</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[VideoPlayer.VideoResolution,indicator/resolution/,.png]</texture>
-                        <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
-                    </control>
-                    <control type="image">
-                        <width>64</width>
-                        <height>64</height>
-                        <aspectratio>keep</aspectratio>
-                        <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
-                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[VideoPlayer.AudioChannels,indicator/channels/,.png]</texture>
-                    </control>
-                    <control type="image">
-                        <width>64</width>
-                        <height>64</height>
-                        <aspectratio>keep</aspectratio>
-                        <visible>!IsEmpty(VideoPlayer.Top250)</visible>
-                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
-                    </control>
-                    <control type="image">
-                        <width>64</width>
-                        <height>64</height>
-                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/bluray.png</texture>
-                        <visible>[substring(VideoPlayer.FilenameAndPath,bluray) | substring(VideoPlayer.FilenameAndPath,bdrip) | substring(VideoPlayer.FilenameAndPath,bd25) | substring(VideoPlayer.FilenameAndPath,bd50)]</visible>
-                    </control>
-                    <control type="image">
-                        <width>95</width>
-                        <height>64</height>
-                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/hddvd.png</texture>
-                        <visible>substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
-                    </control>
-                    <control type="image">
-                        <width>64</width>
-                        <height>64</height>
-                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/dvd.png</texture>
-                        <visible>substring(VideoPlayer.FilenameAndPath,dvd) + !substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
-                    </control>
-                    <control type="image">
-                        <width>64</width>
-                        <height>64</height>
-                        <aspectratio>keep</aspectratio>
-                        <visible>VideoPlayer.IsStereoscopic</visible>
-                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
-                    </control>
-                    <control type="label">
-                        <width>auto</width>
+                <control type="image">
+                    <top>pad</top>
+                    <left>0</left>
+                    <width>157</width>
+                    <bottom>54</bottom>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$INFO[Player.Art(tvshow.poster)]</texture>
+                    <visible>!IsEmpty(Player.Art(tvshow.poster))</visible>
+                </control>
+                <control type="image">
+                    <top>pad</top>
+                    <left>0</left>
+                    <width>157</width>
+                    <bottom>54</bottom>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$INFO[Player.Art(thumb)]</texture>
+                    <visible>IsEmpty(Player.Art(tvshow.poster))</visible>
+                </control>
+                <control type="group">
+                    <include condition="!IsEmpty(Player.Art(thumb)) | !IsEmpty(Player.Art(tvshow.poster))">Defs_OSDInfoPoster</include>
+                    <include condition="IsEmpty(Player.Art(thumb)) + IsEmpty(Player.Art(tvshow.poster))">Defs_OSDInfoNoPoster</include>
+                    <right>0</right>
+                    <control type="grouplist">
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <right>side</right>
+                        <top>50</top>
                         <height>64</height>
                         <align>right</align>
-                        <font>Font-ListInfo-Small</font>
-                        <label>$INFO[VideoPlayer.MPAA, ,]$INFO[VideoPlayer.RatingAndVotes,  •  ,]</label>
+                        <orientation>horizontal</orientation>
+                        <itemgap>side</itemgap>
+                        <control type="image">
+                            <width>64</width>
+                            <height>64</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[VideoPlayer.VideoResolution,indicator/resolution/,.png]</texture>
+                            <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+                        </control>
+                        <control type="image">
+                            <width>64</width>
+                            <height>64</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+                            <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[VideoPlayer.AudioChannels,indicator/channels/,.png]</texture>
+                        </control>
+                        <control type="image">
+                            <width>64</width>
+                            <height>64</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>!IsEmpty(VideoPlayer.Top250)</visible>
+                            <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
+                        </control>
+                        <control type="image">
+                            <width>64</width>
+                            <height>64</height>
+                            <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/bluray.png</texture>
+                            <visible>[substring(VideoPlayer.FilenameAndPath,bluray) | substring(VideoPlayer.FilenameAndPath,bdrip) | substring(VideoPlayer.FilenameAndPath,bd25) | substring(VideoPlayer.FilenameAndPath,bd50)]</visible>
+                        </control>
+                        <control type="image">
+                            <width>95</width>
+                            <height>64</height>
+                            <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/hddvd.png</texture>
+                            <visible>substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+                        </control>
+                        <control type="image">
+                            <width>64</width>
+                            <height>64</height>
+                            <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/dvd.png</texture>
+                            <visible>substring(VideoPlayer.FilenameAndPath,dvd) + !substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+                        </control>
+                        <control type="image">
+                            <width>64</width>
+                            <height>64</height>
+                            <aspectratio>keep</aspectratio>
+                            <visible>VideoPlayer.IsStereoscopic</visible>
+                            <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
+                        </control>
+                        <control type="label">
+                            <width>auto</width>
+                            <height>64</height>
+                            <align>right</align>
+                            <font>Font-ListInfo-Small</font>
+                            <label>$INFO[VideoPlayer.MPAA, ,]$INFO[VideoPlayer.RatingAndVotes,  •  ,]</label>
+                        </control>
                     </control>
-                </control>
-                <control type="grouplist">
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>pad</itemgap>
-                    <orientation>vertical</orientation>
-                    <left>pad</left>
-                    <right>pad</right>
-                    <top>pad</top>
-                    <bottom>pad</bottom>
-                    <control type="label">
+                    <control type="grouplist">
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>vertical</orientation>
+                        <left>pad</left>
+                        <right>pad</right>
                         <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>36</height>
-                        <font>Font-InfoBox-Title</font>
-                        <label>19033</label>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>580</right>
-                        <height>32</height>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre][/COLOR][/UPPERCASE]</label>
-                        <visible>IsEmpty(VideoPlayer.Season)</visible>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>580</right>
-                        <height>32</height>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre,,  -  ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] , ][/COLOR][/UPPERCASE]</label>
-                        <visible>!IsEmpty(VideoPlayer.Season)</visible>
-                    </control>
-                    
-                    <control type="textbox">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>114</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$INFO[VideoPlayer.Plot]</label>
+                        <bottom>pad</bottom>
+                        <control type="label">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
+                            <font>Font-InfoBox-Title</font>
+                            <label>19033</label>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>580</right>
+                            <height>32</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre][/COLOR][/UPPERCASE]</label>
+                            <visible>IsEmpty(VideoPlayer.Season)</visible>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>580</right>
+                            <height>32</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre,,  -  ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] , ][/COLOR][/UPPERCASE]</label>
+                            <visible>!IsEmpty(VideoPlayer.Season)</visible>
+                        </control>
+                        
+                        <control type="textbox">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>114</height>
+                            <font>Font-ListInfo</font>
+                            <align>left</align>
+                            <label>$INFO[VideoPlayer.Plot]</label>
+                        </control>
                     </control>
                 </control>
             </control>
