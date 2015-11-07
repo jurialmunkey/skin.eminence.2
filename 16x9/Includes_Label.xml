@@ -52,6 +52,7 @@
     </variable>
 
     <variable name="Label_ExtraInfo_Icons">
+        <value condition="Container.Content(seasons)">$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Episode,, $LOCALIZE[20360]]</value>
         <value condition="!ListItem.IsCollection + Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Rating]</value>
         <value condition="!ListItem.IsCollection + !Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Premiered,,  •  ]$INFO[ListItem.Rating]</value>
         <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.MovieSet.Count),, $LOCALIZE[20342]  •  ]$INFO[Window(Home).Property(SkinHelper.MovieSet.Year)]</value>
