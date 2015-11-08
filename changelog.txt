@@ -2,6 +2,7 @@
 Big Icon view for episodes
 New viewtype InfoList
 OSD video plot info poster size fix
+(Jarvis) Genre icons using new helper service fix for thumbs
 
 [B]0.9.38[/B]
 (Jarvis) Remove MyMusicSongs and Karaoke

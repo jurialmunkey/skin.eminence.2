@@ -500,7 +500,7 @@
                 <param name="id" value="52" />
                 <param name="name" value="536" />
                 <param name="width" value="1888" />
-                <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+                <param name="condition" value="Container.Content(genres) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
             <control type="group">
                 <top>712</top>
@@ -553,7 +553,7 @@
                                 <bottom>pad</bottom>
                                 <aspectratio>keep</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
-                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster)) + !Container.Content(genres)</visible>
                             </control>
                             <control type="image">
                                 <left>pad</left>
@@ -562,7 +562,7 @@
                                 <bottom>pad</bottom>
                                 <aspectratio>scale</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
-                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster)) + !Container.Content(genres)]</visible>
                             </control>
                             <control type="image">
                                 <right>15</right>
@@ -600,7 +600,7 @@
                                 <bottom>pad</bottom>
                                 <aspectratio>keep</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
-                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster)) + !Container.Content(genres)</visible>
                             </control>
                             <control type="image">
                                 <left>pad</left>
@@ -609,7 +609,7 @@
                                 <bottom>pad</bottom>
                                 <aspectratio>scale</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
-                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster)) + !Container.Content(genres)]</visible>
                             </control>
                             <control type="image">
                                 <right>15</right>
@@ -642,7 +642,7 @@
             <include name="View_Thumbs">
                 <param name="id" value="500" />
                 <param name="width" value="1890" />
-                <param name="condition" value="!Container.Content(genres)" />
+                <param name="condition" value="true" />
                 <param name="name" value="21371" />
             </include>
             <include>Object_Arrows_Vertical</include>
@@ -683,7 +683,7 @@
                             <top>pad</top>
                             <height>250</height>
                             <aspectratio>keep</aspectratio>
-                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <texture background="true" fallback="$INFO[ListItem.Icon]">$VAR[Image_Icon]</texture>
                         </control>
                         <control type="textbox">
                             <left>side</left>
@@ -714,7 +714,7 @@
                             <top>pad</top>
                             <height>250</height>
                             <aspectratio>keep</aspectratio>
-                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <texture background="true" fallback="$INFO[ListItem.Icon]">$VAR[Image_Icon]</texture>
                         </control>
                         <control type="textbox">
                             <left>side</left>
