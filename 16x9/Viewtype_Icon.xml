@@ -500,7 +500,7 @@
                 <param name="id" value="52" />
                 <param name="name" value="536" />
                 <param name="width" value="1888" />
-                <param name="condition" value="Container.Content(genres) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
             <control type="group">
                 <top>712</top>
@@ -642,7 +642,7 @@
             <include name="View_Thumbs">
                 <param name="id" value="500" />
                 <param name="width" value="1890" />
-                <param name="condition" value="true" />
+                <param name="condition" value="!Container.Content(genres)" />
                 <param name="name" value="21371" />
             </include>
             <include>Object_Arrows_Vertical</include>

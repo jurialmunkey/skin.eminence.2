@@ -1,3 +1,6 @@
+[B]0.9.40[/B]
+Revert genre icons until fix made available in skin helper
+
 [B]0.9.39[/B]
 Big Icon view for episodes
 New viewtype InfoList
