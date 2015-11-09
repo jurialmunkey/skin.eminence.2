@@ -30,7 +30,7 @@
             <control type="label">
                 <left>30</left>
                 <top>pad</top>
-                <width>400</width>
+                <width>500</width>
                 <height>70</height>
                 <align>left</align>
                 <font>Font-WidgetInfoTitle</font>
@@ -40,7 +40,7 @@
                 <left>30</left>
                 <top>50</top>
                 <height>70</height>
-                <width>400</width>
+                <width>500</width>
                 <align>left</align>
                 <font>Font-ListInfo-Bold</font>
                 <label>$INFO[Container(11).ListItem.StartDate]</label>
@@ -55,6 +55,13 @@
                 <onright>NextChannelGroup</onright>
                 <orientation>vertical</orientation>
                 <itemlayout height="120" width="670">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="0fffffff">common/selected.png</texture>
+                        <aspectratio>scale</aspectratio>
+                        <visible>StringCompare(ListItem.Title,VideoPlayer.Title) + StringCompare(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + StringCompare(ListItem.EndTime,VideoPlayer.EndTime)</visible>
+                    </control>
                     <control type="label">
                         <left>30</left>
                         <height>70</height>
@@ -79,6 +86,13 @@
                         <width>100%</width>
                         <height>109</height>
                         <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="1fffffff">common/selected.png</texture>
+                        <aspectratio>scale</aspectratio>
+                        <visible>StringCompare(ListItem.Title,VideoPlayer.Title) + StringCompare(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + StringCompare(ListItem.EndTime,VideoPlayer.EndTime)</visible>
                     </control>
                     <control type="label">
                         <left>30</left>

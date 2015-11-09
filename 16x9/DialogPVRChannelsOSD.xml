@@ -56,6 +56,13 @@
                 <orientation>vertical</orientation>
                 <itemlayout height="120" width="670">
                     <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="0fffffff">common/selected.png</texture>
+                        <aspectratio>scale</aspectratio>
+                        <visible>ListItem.IsPlaying</visible>
+                    </control>
+                    <control type="image">
                         <left>22</left>
                         <top>12</top>  
                         <width>85</width>
@@ -69,6 +76,7 @@
                         <height>70</height>
                         <align>left</align>
                         <label>$INFO[ListItem.ChannelNumber]</label>
+                        <selectedcolor>ListLabel</selectedcolor>
                     </control>
                     <control type="progress">
                         <left>560</left>
@@ -77,8 +85,8 @@
                         <height>8</height>
                         <reveal>true</reveal>
                         <info>ListItem.Progress</info>
-                        <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
-                        <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
+                        <lefttexture colordiffuse="ListLabel">osd/progress-end.png</lefttexture>
+                        <midtexture colordiffuse="ListLabel">osd/progress-end.png</midtexture>
                     </control>
                     <control type="label">
                         <left>130</left>
@@ -87,6 +95,7 @@
                         <align>left</align>
                         <textcolor>ListLabel</textcolor>
                         <label>$INFO[ListItem.ChannelName]</label>
+                        <selectedcolor>ListLabel</selectedcolor>
                     </control>
                     <control type="label">
                         <left>130</left>
@@ -97,6 +106,7 @@
                         <font>Font-ListInfo</font>
                         <textcolor>ListLabel</textcolor>
                         <label>$INFO[ListItem.Title]</label>
+                        <selectedcolor>ListLabel</selectedcolor>
                     </control>
                 </itemlayout>
                 <focusedlayout height="120" width="670">
@@ -106,6 +116,13 @@
                         <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                     </control>
                     <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="1fffffff">common/selected.png</texture>
+                        <aspectratio>scale</aspectratio>
+                        <visible>ListItem.IsPlaying</visible>
+                    </control>
+                    <control type="image">
                         <left>22</left>
                         <top>12</top>  
                         <width>85</width>
@@ -119,6 +136,8 @@
                         <height>70</height>
                         <align>left</align>
                         <label>$INFO[ListItem.ChannelNumber]</label>
+                        <selectedcolor>Selected</selectedcolor>
+                        <textcolor>Selected</textcolor>
                     </control>
                     <control type="progress">
                         <left>560</left>
@@ -127,16 +146,17 @@
                         <height>8</height>
                         <reveal>true</reveal>
                         <info>ListItem.Progress</info>
-                        <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
-                        <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
+                        <lefttexture colordiffuse="Selected">osd/progress-end.png</lefttexture>
+                        <midtexture colordiffuse="Selected">osd/progress-end.png</midtexture>
                     </control>
                     <control type="label">
                         <left>130</left>
                         <height>70</height>
                         <width>400</width>
                         <align>left</align>
-                        <textcolor>ListLabel</textcolor>
+                        <textcolor>Selected</textcolor>
                         <label>$INFO[ListItem.ChannelName]</label>
+                        <selectedcolor>Selected</selectedcolor>
                     </control>
                     <control type="label">
                         <left>130</left>
@@ -145,8 +165,9 @@
                         <height>70</height>
                         <align>left</align>
                         <font>Font-ListInfo</font>
-                        <textcolor>ListLabel</textcolor>
+                        <textcolor>Selected</textcolor>
                         <label>$INFO[ListItem.Title]</label>
+                        <selectedcolor>Selected</selectedcolor>
                     </control>
                 </focusedlayout>
             
