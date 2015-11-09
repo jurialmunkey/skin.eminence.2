@@ -1,3 +1,7 @@
+[B]0.9.40[/B]
+PVR OSD Guide + Channel now playing select stripe
+-- fix some highlight color issues
+
 [B]0.9.39[/B]
 Big Icon view for episodes
 New viewtype InfoList
