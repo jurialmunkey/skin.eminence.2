@@ -9,6 +9,7 @@
         <control type="group">
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
+            <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
             <!-- Main List -->
             <control type="group">
                 <left>side</left>
@@ -81,6 +82,7 @@
                 <scroll>true</scroll>
                 <textcolor>LineLabel</textcolor>
                 <wrapmultiline>false</wrapmultiline>
+                <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
             </control>
             <control type="label" id="6"><visible>false</visible></control>
         </control>
