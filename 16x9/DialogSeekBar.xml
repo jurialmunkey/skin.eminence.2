@@ -62,12 +62,11 @@
                     <width>147</width>
                     <bottom>70</bottom>
                     <aspectratio>keep</aspectratio>
-                    <texture>$INFO[Player.Art(thumb)]</texture>
+                    <texture fallback="DefaultAddonVideo.png">$INFO[Player.Art(thumb)]</texture>
                     <visible>IsEmpty(Player.Art(tvshow.poster))</visible>
                 </control>
                 <control type="group">
-                    <include condition="!IsEmpty(Player.Art(thumb)) | !IsEmpty(Player.Art(tvshow.poster))">Defs_OSDInfoPoster</include>
-                    <include condition="IsEmpty(Player.Art(thumb)) + IsEmpty(Player.Art(tvshow.poster))">Defs_OSDInfoNoPoster</include>
+                    <left>157</left>
                     <right>0</right>
                     <control type="grouplist">
                         <usecontrolcoords>true</usecontrolcoords>
