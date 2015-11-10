@@ -97,6 +97,4 @@
         <value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
-    <include name="Defs_OSDInfoPoster"><left>157</left></include>
-    <include name="Defs_OSDInfoNoPoster"><left>0</left></include>
 </includes>

@@ -47,6 +47,8 @@
 
     <!-- VARS -->
     <variable name="HighlightColor">
+        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)] + !IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
+        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)]">Highlight</value>
         <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Window(home).Property(HighlightColor))">$INFO[Window(home).Property(HighlightColor)]</value>
         <value condition="!IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
         <value>Highlight</value>
