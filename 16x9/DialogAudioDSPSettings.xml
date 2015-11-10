@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>5</defaultcontrol>
+	<controls>
+		<control type="group">
+            <top>210</top>
+            <bottom>133</bottom>
+            <centerleft>50%</centerleft>
+            <width>800</width>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+            <include>Dialog_Background</include>
+            <visible>!Window.IsVisible(DialogSlider.xml)</visible>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <right>side</right>
+                <height>552</height>
+                <control type="group">
+                    <width>100%</width>
+                    <height>552</height>
+                    <include name="Object_Line">
+                        <param name="width" value="760" />
+                        <param name="label" value="$INFO[Control.GetLabel(2)]" />
+                    </include>
+                    <control type="grouplist" id="5">
+                        <ondown>8000</ondown>
+                        <onup>noop</onup>
+                        <onleft>8000</onleft>
+                        <onright>8000</onright>
+                        <width>100%</width>
+                        <height>552</height>
+                        <orientation>vertical</orientation>
+                        <itemgap>0</itemgap>
+                    </control>
+                </control>
+            </control>
+            <!-- Ok Cancel Defaults -->
+            <control type="grouplist" id="8000">
+                <centerleft>50%</centerleft>
+                <width>760</width>
+                <bottom>side</bottom>
+                <height>69</height>
+                <align>center</align>
+                <itemgap>20</itemgap>
+                <onup>5</onup>
+                <ondown>noop</ondown>
+                <orientation>horizontal</orientation>
+                <control type="button" id="28">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>186</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="29">
+                    <align>center</align>
+                    <width>370</width>
+                    <label>222</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+        </control>
+
+        <!-- Default Templates -->
+        <control type="label" id="2"><visible>false</visible></control>
+        <control type="button" id="7">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="radiobutton" id="8">
+            <width>100%</width>
+            <radioposx>710</radioposx>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="spincontrolex" id="9">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="edit" id="12">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="label" id="14">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+        <control type="sliderex" id="13">
+            <width>100%</width>
+            <include>Defs_OptionButton</include>
+        </control>
+	</controls>
+</window>
