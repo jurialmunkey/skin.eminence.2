@@ -507,7 +507,7 @@
                 <movement>2</movement>
                 <preloaditems>2</preloaditems>
                 <orientation>vetical</orientation>
-                <viewtype label="31192">infolist</viewtype>
+                <viewtype label="31192">list</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="69" width="listw">
