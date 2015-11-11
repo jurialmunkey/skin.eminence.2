@@ -383,31 +383,25 @@
             <top>top</top>
             <height>height</height>
             <include name="Object_Line">
-                <param name="width" value="1169" />
+                <param name="width" value="1205" />
                 <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
             </include>
             <include name="View_Icon">
                 <param name="id" value="59" />
                 <param name="name" value="31141" />
-                <param name="width" value="1180" />
+                <param name="width" value="1215" />
                 <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+                <param name="posx" value="0" />
+                <param name="posy" value="-5" />
+                <param name="height" value="700" />
+                <param name="infovisible" value="true" />
             </include>
             <control type="group">
-                <top>712</top>
-                <left>1</left>
-                <control type="image">
-                    <bottom>21</bottom>
-                    <width max="$PARAM[width]">auto</width>
-                    <height>3</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
-            </control>
-            <control type="group">
                 <right>0</right>
-                <width>699</width>
-                <height>670</height>
+                <width>665</width>
+                <height>690</height>
                 <include name="Object_Line">
-                    <param name="width" value="699" />
+                    <param name="width" value="665" />
                     <param name="label" value="19033" />
                 </include>
                 <control type="image">
@@ -425,7 +419,7 @@
                     <bottom>pad</bottom>
                     <control type="image">
                         <width>100%</width>
-                        <height>381</height>
+                        <height>363</height>
                         <aspectratio>scale</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
@@ -435,7 +429,7 @@
                         <left>pad</left>
                         <right>pad</right>
                         <height>32</height>
-                        <font>Font-Button-Black</font>
+                        <font>Font-InfoBox-Title</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
@@ -450,7 +444,7 @@
                     <control type="textbox">
                         <left>pad</left>
                         <right>pad</right>
-                        <height>120</height>
+                        <height>154</height>
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$VAR[Label_Plot]</label>
@@ -459,7 +453,7 @@
                     <control type="textbox">
                         <left>pad</left>
                         <right>pad</right>
-                        <height>154</height>
+                        <height>190</height>
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$VAR[Label_Plot]</label>
@@ -468,7 +462,7 @@
                     <control type="label">
                         <left>pad</left>
                         <right>pad</right>
-                        <height>24</height>
+                        <height>40</height>
                         <align>right</align>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>$VAR[Label_ExtraInfo_Icons]</label>
@@ -516,13 +510,17 @@
 
     <include name="View_Icon">
         <param name="updownid" default="true" />
+        <param name="posx" default="1" />
+        <param name="posy" default="-6" />
+        <param name="height" default="682" />
+        <param name="infovisible" default="false" />
         <definition>
             <control type="group">
                 <control type="panel" id="$PARAM[id]">
-                    <top>-6</top>
-                    <left>1</left>
+                    <top>$PARAM[posy]</top>
+                    <left>$PARAM[posx]</left>
                     <width>$PARAM[width]</width>
-                    <height>682</height>
+                    <height>$PARAM[height]</height>
                     <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
                     <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
@@ -535,7 +533,7 @@
                     <viewtype label="$PARAM[name]">icons</viewtype>
                     <scrolltime tween="quadratic">400</scrolltime>
                     <visible>$PARAM[condition]</visible>
-                    <itemlayout height="341" width="236">
+                    <itemlayout height="341" width="236" condition="!$PARAM[infovisible]">
                         <control type="group">
                             <left>0</left>
                             <right>pad</right>
@@ -574,13 +572,97 @@
                             </control>
                         </control>
                     </itemlayout>
-
-                    <focusedlayout height="341" width="236">
+                    <itemlayout height="350" width="243" condition="$PARAM[infovisible]">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>5</bottom>
+                            <top>5</top>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                            </control>
+                            <control type="image">
+                                <right>15</right>
+                                <top>15</top>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture>$VAR[Image_Indicator]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="341" width="236" condition="!$PARAM[infovisible]">
                         <control type="group">
                             <left>0</left>
                             <right>pad</right>
                             <bottom>6</bottom>
                             <top>6</top>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                                <visible>!Control.HasFocus($PARAM[id])</visible>
+                            </control>
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                <visible>Control.HasFocus($PARAM[id])</visible>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true">$VAR[Image_Poster]</texture>
+                                <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                            </control>
+                            <control type="image">
+                                <right>15</right>
+                                <top>15</top>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture>$VAR[Image_Indicator]</texture>
+                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <focusedlayout height="350" width="243" condition="$PARAM[infovisible]">
+                        <control type="group">
+                            <left>0</left>
+                            <right>pad</right>
+                            <bottom>5</bottom>
+                            <top>5</top>
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>

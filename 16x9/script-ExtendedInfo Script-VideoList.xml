@@ -16,34 +16,28 @@
             <top>top</top>
             <height>height</height>
             <include name="Object_Line">
-                <param name="width" value="1169" />
+                <param name="width" value="1205" />
                 <param name="label" value="$INFO[Window.Property(Sort_Label),$ADDON[script.extendedinfo 32104]: , ]$INFO[Window.Property(Order_Label),[COLOR=PosterBorder]-[/COLOR] , ]" />
             </include>
             <include name="View_Icon">
                 <param name="id" value="500" />
                 <param name="name" value="31141" />
-                <param name="width" value="1180" />
+                <param name="width" value="1215" />
                 <param name="condition" value="true" />
                 <param name="updownid" value="false" />
                 <param name="onup" value="700" />
                 <param name="ondown" value="600" />
+                <param name="posx" value="0" />
+                <param name="posy" value="-5" />
+                <param name="height" value="700" />
+                <param name="infovisible" value="true" />
             </include>
             <control type="group">
-                <top>712</top>
-                <left>1</left>
-                <control type="image">
-                    <bottom>21</bottom>
-                    <width max="$PARAM[width]">auto</width>
-                    <height>3</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
-            </control>
-            <control type="group">
                 <right>0</right>
-                <width>699</width>
-                <height>670</height>
+                <width>665</width>
+                <height>690</height>
                 <include name="Object_Line">
-                    <param name="width" value="699" />
+                    <param name="width" value="665" />
                     <param name="label" value="19033" />
                 </include>
                 <control type="image">
@@ -61,7 +55,7 @@
                     <bottom>pad</bottom>
                     <control type="image">
                         <width>100%</width>
-                        <height>381</height>
+                        <height>363</height>
                         <aspectratio>scale</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$INFO[Container(500).ListItem.Property(Fanart_small)]</texture>
@@ -86,7 +80,7 @@
                     <control type="textbox">
                         <left>pad</left>
                         <right>pad</right>
-                        <height>120</height>
+                        <height>154</height>
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$INFO[Container(500).ListItem.Plot]</label>
@@ -95,7 +89,7 @@
                     <control type="textbox">
                         <left>pad</left>
                         <right>pad</right>
-                        <height>154</height>
+                        <height>190</height>
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$INFO[Container(500).ListItem.Plot]</label>
@@ -104,7 +98,7 @@
                     <control type="label">
                         <left>pad</left>
                         <right>pad</right>
-                        <height>24</height>
+                        <height>40</height>
                         <align>right</align>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>$INFO[Container(500).ListItem.Year]$INFO[Container(500).ListItem.Rating,  •  ,]</label>
