@@ -2,6 +2,7 @@
 Fixed viewtype selection bug
 Tweak Info Icons viewtype to remove bottom line and match dimensions
 Match extendedinfo browser to new info icons viewtype
+Add rottentomatoes score and critic consensus to movie info
 
 [B]0.9.40[/B]
 PVR OSD Guide + Channel now playing select stripe

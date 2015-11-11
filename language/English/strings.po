@@ -701,3 +701,7 @@ msgstr ""
 msgctxt "#31192"
 msgid "Info List"
 msgstr ""
+
+msgctxt "#31193"
+msgid "Box Office"
+msgstr ""
