@@ -193,7 +193,7 @@
                                 <left>pad</left>
                                 <right>pad</right>
                                 <height>20</height>
-                                <align>right</align>
+                                <align>center</align>
                                 <font>Font-RSS</font>
                                 <label>$VAR[Label_ExtraInfo_Icons]</label>
                             </control>
@@ -360,7 +360,7 @@
                                 <left>pad</left>
                                 <right>pad</right>
                                 <height>20</height>
-                                <align>right</align>
+                                <align>center</align>
                                 <textcolor>Selected</textcolor>
                                 <font>Font-RSS</font>
                                 <label>$VAR[Label_ExtraInfo_Icons]</label>
