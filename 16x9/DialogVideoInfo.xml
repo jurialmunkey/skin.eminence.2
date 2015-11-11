@@ -89,19 +89,40 @@
                     </control>
                     <control type="label">
                         <left>pad</left>
-                        <right>pad</right>
+                        <right>550</right>
                         <height>32</height>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]</label>
                     </control>
                     <control type="label">
-                        <top>-42</top>
+                        <top>-40</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>28</height>
+                        <align>right</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesRating),Rotten Tomatoes ,%  •  ]$INFO[ListItem.RatingAndVotes]</label>
+                        <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
+                    </control>
+                    <control type="label">
+                        <top>-40</top>
                         <left>pad</left>
                         <right>pad</right>
                         <height>28</height>
                         <align>right</align>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>$INFO[ListItem.RatingAndVotes]</label>
+                        <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
+                    </control>
+                    <control type="textbox">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height max="228">auto</height>
+                        <font>Font-ListInfo</font>
+                        <align>left</align>
+                        <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesConsensus),, ]$VAR[Label_Plot]</label>
+                        <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
                     </control>
                     <control type="textbox">
                         <top>pad</top>
@@ -111,6 +132,7 @@
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$VAR[Label_Plot]</label>
+                        <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
                     </control>
                     <control type="group">
                         <left>pad</left>
@@ -203,7 +225,7 @@
                     <orientation>horizontal</orientation>
                     <control type="group">
                         <visible>!IsEmpty(ListItem.Duration)</visible>
-                        <width>370</width>
+                        <width>330</width>
                         <height>100%</height>
                         <control type="label">
                             <top>0</top>
@@ -222,7 +244,7 @@
                         </control>
                     </control>
                     <control type="group">
-                        <width>370</width>
+                        <width>330</width>
                         <height>100%</height>
                         <visible>!IsEmpty(ListItem.MPAA)</visible>
                         <control type="label">
@@ -242,7 +264,7 @@
                         </control>
                     </control>
                     <control type="group">
-                        <width>370</width>
+                        <width>330</width>
                         <height>100%</height>
                         <visible>!IsEmpty(ListItem.Year)</visible>
                         <control type="label">
@@ -259,6 +281,26 @@
                             <textcolor>SubLabel</textcolor>
                             <font>Font-InfoBox-Title</font>
                             <label>$INFO[ListItem.Year]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <width>330</width>
+                        <height>100%</height>
+                        <visible>!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice))</visible>
+                        <control type="label">
+                            <top>0</top>
+                            <height>32</height>
+                            <align>center</align>
+                            <font>Font-ListInfo-Small</font>
+                            <label>31193</label>
+                        </control>
+                        <control type="label">
+                            <top>32</top>
+                            <height>48</height>
+                            <align>center</align>
+                            <textcolor>SubLabel</textcolor>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice)]</label>
                         </control>
                     </control>
                     
