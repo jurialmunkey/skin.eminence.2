@@ -46,8 +46,8 @@
     </variable>
 
     <variable name="Label_ExtraInfo">
-        <value condition="!IsEmpty(ListItem.MPAA) + !IsEmpty(ListItem.Duration)">$INFO[ListItem.MPAA,,  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
-        <value condition="!IsEmpty(ListItem.MPAA)">$INFO[ListItem.MPAA]</value>
+        <value condition="!IsEmpty(ListItem.MPAA) + !IsEmpty(ListItem.Duration) + !Control.IsVisible(51)">$INFO[ListItem.MPAA,,  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
+        <value condition="!IsEmpty(ListItem.MPAA) + !Control.IsVisible(51)">$INFO[ListItem.MPAA]</value>
         <value condition="!IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
     </variable>
 
