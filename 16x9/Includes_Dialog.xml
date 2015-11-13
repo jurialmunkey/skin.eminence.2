@@ -441,7 +441,7 @@
                             <top>0</top>
                             <align>center</align>
                             <textcolor>ListLabel</textcolor>
-                            <font>Font-ListInfo-Small-Bold</font>
+                            <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
@@ -469,7 +469,7 @@
                             <right>30</right>
                             <height>100%</height>
                             <textcolor>ListLabel</textcolor>
-                            <font>Font-ListInfo-Small-Bold</font>
+                            <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
@@ -485,7 +485,7 @@
                                 <top>0</top>
                                 <bottom>30%</bottom>
                                 <textcolor>ListLabel</textcolor>
-                                <font>Font-ListInfo-Small-Bold</font>
+                                <font>Font-ListInfo-Bold</font>
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
@@ -517,7 +517,7 @@
                             <top>0</top>
                             <align>center</align>
                             <textcolor>Selected</textcolor>
-                            <font>Font-ListInfo-Small-Bold</font>
+                            <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
@@ -544,7 +544,7 @@
                             <right>30</right>
                             <height>100%</height>
                             <textcolor>Selected</textcolor>
-                            <font>Font-ListInfo-Small-Bold</font>
+                            <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
@@ -560,7 +560,7 @@
                                 <top>0</top>
                                 <bottom>30%</bottom>
                                 <textcolor>Selected</textcolor>
-                                <font>Font-ListInfo-Small-Bold</font>
+                                <font>Font-ListInfo-Bold</font>
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
