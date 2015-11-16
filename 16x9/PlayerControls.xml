@@ -808,6 +808,7 @@
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
                         <texturenofocus colordiffuse="ListLabel">osd/stop.png</texturenofocus>
                         <onclick>PlayerControl(Stop)</onclick>
+                        <onclick>Close</onclick>
                     </control>
 
                     <control type="button" id="16">
