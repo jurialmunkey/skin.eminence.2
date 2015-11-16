@@ -1,3 +1,6 @@
+[B]0.9.42[/B]
+New PlayerControls window that shows music playlist or now playing video plus information
+
 [B]0.9.41[/B]
 Fixed viewtype selection bug
 Tweak Info Icons viewtype to remove bottom line and match dimensions

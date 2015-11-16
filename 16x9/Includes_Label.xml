@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="Label_PlayerControl_Header">
+        <value>$INFO[VideoPlayer.Title]</value>
+        <value>$INFO[MusicPlayer.Artist]</value>
+    </variable>
+    
+    <variable name="Label_PlayerControl_SubHeader">
+        <value>$INFO[VideoPlayer.Year]</value>
+        <value>$INFO[MusicPlayer.Title]</value>
+    </variable>
+
+    <variable name="Label_PlayerControl_ByLine">
+        <value>$INFO[VideoPlayer.Director]</value>
+        <value>$INFO[MusicPlayer.Album]</value>
+    </variable>
+    
     <variable name="Label_ShortcutsWidget">
         <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
         <value condition="!IsEmpty(Container(211).ListItem.Property(background))">$LOCALIZE[31188]</value>
