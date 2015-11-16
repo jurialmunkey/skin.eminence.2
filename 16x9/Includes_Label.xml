@@ -2,18 +2,18 @@
 <includes>
 
     <variable name="Label_PlayerControl_Header">
+        <value condition="!IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]</value>
         <value>$INFO[VideoPlayer.Title]</value>
-        <value>$INFO[MusicPlayer.Artist]</value>
     </variable>
     
     <variable name="Label_PlayerControl_SubHeader">
+        <value condition="!IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
         <value>$INFO[VideoPlayer.Year]</value>
-        <value>$INFO[MusicPlayer.Title]</value>
     </variable>
 
     <variable name="Label_PlayerControl_ByLine">
+        <value condition="!IsEmpty(MusicPlayer.Album)">$INFO[MusicPlayer.Album]</value>
         <value>$INFO[VideoPlayer.Director]</value>
-        <value>$INFO[MusicPlayer.Album]</value>
     </variable>
     
     <variable name="Label_ShortcutsWidget">
