@@ -8,11 +8,15 @@
     
     <variable name="Label_PlayerControl_SubHeader">
         <value condition="!IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
+        <value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</value>
+        <value condition="!IsEmpty(VideoPlayer.TvShowTitle)">$INFO[VideoPlayer.TvShowTitle]</value>
         <value>$INFO[VideoPlayer.Year]</value>
     </variable>
 
     <variable name="Label_PlayerControl_ByLine">
         <value condition="!IsEmpty(MusicPlayer.Album)">$INFO[MusicPlayer.Album]</value>
+        <value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.StartTime,, - ]$INFO[VideoPlayer.EndTime]</value>
+        <value condition="!IsEmpty(VideoPlayer.Episode)">$INFO[VideoPlayer.Season,Season ,  ]$INFO[VideoPlayer.Episode,Episode ,]</value>
         <value>$INFO[VideoPlayer.Director]</value>
     </variable>
     
