@@ -22,6 +22,36 @@
         <value>special://skin/extras/backgrounds/home.jpg</value>
     </variable>
 
+    <variable name="Image_OSDMusicFlagstar5">
+        <value condition="StringCompare(Player.StarRating,rating5.png)">star10</value>
+        <value>star0</value>
+    </variable>
+    <variable name="Image_OSDMusicFlagstar4">
+        <value condition="StringCompare(Player.StarRating,rating5.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating4.png)">star10</value>
+        <value>star0</value>
+    </variable>
+    <variable name="Image_OSDMusicFlagstar3">
+        <value condition="StringCompare(Player.StarRating,rating5.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating4.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating3.png)">star10</value>
+        <value>star0</value>
+    </variable>
+    <variable name="Image_OSDMusicFlagstar2">
+        <value condition="StringCompare(Player.StarRating,rating5.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating4.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating3.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating2.png)">star10</value>
+        <value>star0</value>
+    </variable>
+    <variable name="Image_OSDMusicFlagstar1">
+        <value condition="StringCompare(Player.StarRating,rating5.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating4.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating3.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating2.png)">star10</value>
+        <value condition="StringCompare(Player.StarRating,rating1.png)">star10</value>
+        <value>star0</value>
+    </variable>
 
 
     <variable name="Image_Fanart">
