@@ -53,6 +53,7 @@
                 <animation effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>
                 <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
                 <include>Home_Menu</include>
+                <include>Home_SubMenu</include>
                 <include>Home_NowPlaying</include>
             </control>
         </control>

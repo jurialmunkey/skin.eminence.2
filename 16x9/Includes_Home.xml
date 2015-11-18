@@ -83,10 +83,10 @@
                 <right>0</right>
                 <bottom>0</bottom>
                 <height>266</height>
-                <onup condition="!Player.HasMedia">SetProperty(FO9001,1,home)</onup>
-                <onup condition="!Player.HasMedia">9001</onup>
-                <onup condition="Player.HasMedia">9005</onup>
-                <ondown condition="IntegerGreaterThan(Container(9002).NumItems,0)">9002</ondown>
+                <onup condition="!Player.HasMedia + !Window.IsVisible(PlayerControls.xml)">SetProperty(FO9001,1,home)</onup>
+                <onup condition="!Player.HasMedia + !Window.IsVisible(PlayerControls.xml)">9001</onup>
+                <onup condition="Player.HasMedia + !Window.IsVisible(PlayerControls.xml)">9005</onup>
+                <ondown condition="IntegerGreaterThan(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</ondown>
                 <animation type="Visible">
                     <effect type="slide" start="0,266" end="0" time="150" />
                 </animation>
@@ -400,69 +400,72 @@
                 </control>
             </control>
 
-            <!-- SubMenu -->
-            <control type="group">
-                <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0" condition="Control.HasFocus(9002)" reversible="false">Conditional</animation>
-                <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0" condition="!Control.HasFocus(9002)" reversible="false">Conditional</animation>
-                <visible>Control.HasFocus(9000) | Control.HasFocus(9002)</visible>
-                <include>Dialog_Top</include>
-                <include>Dialog_Background</include>
-                <include name="Dialog_Top_IconHeader">
-                    <param name="label" value="$INFO[Container(9000).ListItem.Label,, ]$LOCALIZE[1034]" />
-                    <param name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
-                </include>
-                <include name="Dialog_Top_Arrows">
-                    <param name="id" value="9002" />
-                </include>
+        </control>
+    </include>
+    
+    <!-- SubMenu -->
+    <include name="Home_SubMenu">
+        <control type="group">
+            <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0" condition="Control.HasFocus(9002)" reversible="false">Conditional</animation>
+            <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0" condition="!Control.HasFocus(9002)" reversible="false">Conditional</animation>
+            <visible>Control.HasFocus(9000) | Control.HasFocus(9002)</visible>
+            <include>Dialog_Top</include>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$INFO[Container(9000).ListItem.Label,, ]$LOCALIZE[1034]" />
+                <param name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
+            </include>
+            <include name="Dialog_Top_Arrows">
+                <param name="id" value="9002" />
+            </include>
 
-                <control type="panel" id="9002">
-                    <onup>9000</onup>
-                    <ondown>9000</ondown>
-                    <onback>9000</onback>
-                    <left>pad</left>
-                    <right>0</right>
-                    <top>80</top>
-                    <bottom>pad</bottom>
-                    <onleft>noop</onleft>
-                    <onright>noop</onright>
-                    <scrolltime>200</scrolltime>
-                    <orientation>horizontal</orientation>
-                    <itemlayout width="374" height="69">
-                        <control type="image">
-                            <width>364</width>
-                            <height>69</height>
-                            <texture colordiffuse="PosterBorder">common/white.png</texture>
-                        </control>
-                        <control type="label">
-                            <left>side</left>
-                            <right>30</right>
-                            <height>69</height>
-                            <textcolor>ListLabel</textcolor>
-                            <font>Font-ListInfo-Small</font>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout width="374" height="69">
-                        <control type="image">
-                            <width>364</width>
-                            <height>69</height>
-                            <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
-                        </control>
-                        <control type="label">
-                            <left>side</left>
-                            <right>30</right>
-                            <height>69</height>
-                            <textcolor>Selected</textcolor>
-                            <font>Font-ListInfo-Small</font>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-                    </focusedlayout>
-                    <content>
-                        <include>skinshortcuts-submenu</include>
-                    </content>
-                </control>
+            <control type="panel" id="9002">
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <onback>9000</onback>
+                <left>pad</left>
+                <right>0</right>
+                <top>80</top>
+                <bottom>pad</bottom>
+                <onleft>noop</onleft>
+                <onright>noop</onright>
+                <scrolltime>200</scrolltime>
+                <orientation>horizontal</orientation>
+                <itemlayout width="374" height="69">
+                    <control type="image">
+                        <width>364</width>
+                        <height>69</height>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>30</right>
+                        <height>69</height>
+                        <textcolor>ListLabel</textcolor>
+                        <font>Font-ListInfo-Small</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="374" height="69">
+                    <control type="image">
+                        <width>364</width>
+                        <height>69</height>
+                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>side</left>
+                        <right>30</right>
+                        <height>69</height>
+                        <textcolor>Selected</textcolor>
+                        <font>Font-ListInfo-Small</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <include>skinshortcuts-submenu</include>
+                </content>
             </control>
         </control>
     </include>
