@@ -36,6 +36,9 @@
     <!-- Need to Fix this -->
     <groupoverride group="submenu" condition="SubString(Container(9002).ListItem.Property(path),ActivateWindow,left)">SetProperty(FO9001,2,home)</groupoverride>
 
+    <!-- For Player Controls -->
+    <groupoverride group="mainmenu" condition="Window.IsActive(PlayerControls.xml)">Close</groupoverride>
+
     <!-- For Power Menu -->
     <groupoverride group="powermenu" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
 
