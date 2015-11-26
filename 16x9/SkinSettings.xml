@@ -463,6 +463,16 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Info Line -->
+                    <control type="radiobutton" id="8909">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>31194</label>
+                        <selected>!Skin.HasSetting(furniture.hidehubplot)</selected>
+                        <onclick>Skin.ToggleSetting(furniture.hidehubplot)</onclick>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                     <!-- Overlay Plot -->
                     <control type="radiobutton" id="8903">
                         <radioposx>1350</radioposx>
