@@ -469,7 +469,7 @@
                                 <aspectratio>scale</aspectratio>
                                 <texture background="true">$VAR[Image_Thumb]</texture>
                                 <animation effect="fade" start="100" end="25" time="200" reversible="false">UnFocus</animation>
-                                <animation effect="fade" start="25" end="100" time="600">Focus</animation>
+                                <animation effect="fade" start="25" end="100" time="200">Focus</animation>
                             </control>
                             <control type="image">
                                 <right>side</right>
