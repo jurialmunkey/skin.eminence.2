@@ -26,6 +26,7 @@
                 <height>50</height>
                 <label>-</label>
                 <font>Font-ListInfo</font>
+                <textcolor>ffededed</textcolor>
             </control>
 
             <!-- Row 2 label -->
@@ -36,6 +37,7 @@
                 <height>50</height>
                 <label>-</label>
                 <font>Font-ListInfo</font>
+                <textcolor>ffededed</textcolor>
             </control>
 
             <!-- Row 3 label -->
@@ -46,6 +48,7 @@
                 <height>50</height>
                 <label>-</label>
                 <font>Font-ListInfo</font>
+                <textcolor>ffededed</textcolor>
             </control>
 
         </control>
