@@ -1,5 +1,6 @@
 [B]0.9.44[/B]
 Add Info List 2 (Info list without side poster)
+Add option to turn plot off in hub widget
 
 [B]0.9.43[/B]
 Add Home menu to player controls window when nothing is playing

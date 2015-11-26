@@ -73,6 +73,7 @@
                         <right>pad</right>
                         <bottom>pad</bottom>
                         <height>122</height>
+                        <visible>!Skin.HasSetting(furniture.hidehubplot)</visible>
                         <control type="image">
                             <width>100%</width>
                             <height>240</height>
