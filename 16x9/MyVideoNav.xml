@@ -3,7 +3,7 @@
     <!-- videolibrary -->
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,54,502,503,508,506,51,52,59,55,56,505,53,57,501,58,500</views>
+    <views>50,54,502,503,508,509,506,51,52,59,55,56,505,53,57,501,58,500</views>
     <onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
     <onunload>SetProperty(NodeReturn,videos,home)</onunload>
     <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
@@ -26,6 +26,7 @@
             <include>Viewtype_Gallery</include>
             <include>Viewtype_FanartList</include>
             <include>Viewtype_InfoList</include>
+            <include>Viewtype_InfoList2</include>
             <include>Viewtype_MediaInfo</include>
             <include>Viewtype_MediaInfo2</include>
             <include>Viewtype_MediaInfo3</include>
