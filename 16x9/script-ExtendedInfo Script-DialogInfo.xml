@@ -58,14 +58,14 @@
                         <right>pad</right>
                         <height>36</height>
                         <font>Font-InfoBox-Title</font>
-                        <label>$INFO[Window.Property(actor.title)]</label>
+                        <label>$INFO[Window.Property(title)]</label>
                     </control>
                     <control type="label">
                         <left>pad</left>
                         <right>pad</right>
                         <height>32</height>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(actor.AlsoKnownAs)][/COLOR][/UPPERCASE]</label>
+                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(AlsoKnownAs)][/COLOR][/UPPERCASE]</label>
                     </control>
                     <control type="textbox">
                         <top>pad</top>
@@ -74,7 +74,7 @@
                         <height max="266">auto</height>
                         <font>Font-ListInfo</font>
                         <align>left</align>
-                        <label>$INFO[Window.Property(actor.Biography)]</label>
+                        <label>$INFO[Window.Property(Biography)]</label>
                     </control>
                     <control type="group">
                         <left>pad</left>
@@ -88,7 +88,7 @@
                             <control type="group">
                                 <height>36</height>
                                 <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(actor.PlaceOfBirth))</visible>
+                                <visible>!IsEmpty(Window.Property(PlaceOfBirth))</visible>
                                 <control type="label">
                                     <width>200</width>
                                     <height>36</height>
@@ -103,7 +103,7 @@
                                     <align>left</align>
                                     <height>36</height>
                                     <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(actor.PlaceOfBirth)]</label>
+                                    <label>$INFO[Window.Property(PlaceOfBirth)]</label>
                                     <textcolor>SubLabel</textcolor>
                                 </control>
                             </control>
@@ -120,7 +120,7 @@
                     <align>center</align>
                     <orientation>horizontal</orientation>
                     <control type="group">
-                        <visible>!IsEmpty(Window.Property(actor.Birthday))</visible>
+                        <visible>!IsEmpty(Window.Property(Birthday))</visible>
                         <width>370</width>
                         <height>100%</height>
                         <control type="label">
@@ -136,13 +136,13 @@
                             <align>center</align>
                             <textcolor>SubLabel</textcolor>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(actor.Birthday)]</label>
+                            <label>$INFO[Window.Property(Birthday)]</label>
                         </control>
                     </control>
                     <control type="group">
                         <width>370</width>
                         <height>100%</height>
-                        <visible>!IsEmpty(Window.Property(actor.DeathDay))</visible>
+                        <visible>!IsEmpty(Window.Property(DeathDay))</visible>
                         <control type="label">
                             <top>0</top>
                             <height>32</height>
@@ -156,13 +156,13 @@
                             <align>center</align>
                             <textcolor>SubLabel</textcolor>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(actor.DeathDay)]</label>
+                            <label>$INFO[Window.Property(DeathDay)]</label>
                         </control>
                     </control>
                     <control type="group">
                         <width>370</width>
                         <height>100%</height>
-                        <visible>!IsEmpty(Window.Property(actor.Age))</visible>
+                        <visible>!IsEmpty(Window.Property(Age))</visible>
                         <control type="label">
                             <top>0</top>
                             <height>32</height>
@@ -176,7 +176,7 @@
                             <align>center</align>
                             <textcolor>SubLabel</textcolor>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(actor.Age)]</label>
+                            <label>$INFO[Window.Property(Age)]</label>
                         </control>
                     </control>
                     
