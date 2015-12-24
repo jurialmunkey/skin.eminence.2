@@ -87,6 +87,7 @@
         <value condition="Window.IsVisible(home) + [StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Container(9001).ListItem.FileNameAndPath]</value>
         <value condition="Window.IsVisible(home) + StringCompare(Container(9000).ListItem.Property(widgetType),picture) + !IsEmpty(Container(9001).ListItem.Icon)">$INFO[Container(9001).ListItem.Icon]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Container(9001).ListItem.Art(fanart))">$INFO[Container(9001).ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(home) + !IsEmpty(Container(9001).ListItem.Art(thumb))">$INFO[Container(9001).ListItem.Art(thumb)]</value>
         <value condition="Window.IsVisible(home) + StringCompare(Container(9000).ListItem.Property(background),playlistBackground)">$INFO[Container(9988).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Container(9000).ListItem.Property(Background))">$INFO[Container(9000).ListItem.Property(Background)]</value>
         <value condition="Window.IsVisible(home) + IsEmpty(Skin.String(background.fallback))">special://skin/extras/backgrounds/home.jpg</value>
