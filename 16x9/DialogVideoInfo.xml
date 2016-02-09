@@ -313,7 +313,7 @@
                     <width>1384</width>
                     <bottom>30</bottom>
                     <height>69</height>
-                    <align>left</align>
+                    <align>center</align>
                     <itemgap>pad</itemgap>
                     <onleft>noop</onleft>
                     <onright>noop</onright>
@@ -325,14 +325,14 @@
                         <label>208</label>
                         <altlabel>1024</altlabel>
                         <usealttexture>Container.Content(TVShows)</usealttexture>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <onfocus>ClearProperty(list)</onfocus>
                     </control>
                     <!-- Trailer Button -->
                     <control type="button" id="11">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>20410</label>
                         <visible>!IsEmpty(ListItem.Trailer)</visible>
@@ -342,7 +342,7 @@
                     <!-- Cast Button -->
                     <control type="button" id="5">
                         <label>206</label>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(51)</onclick>
                         <include>Defs_OptionButton</include>
@@ -351,7 +351,7 @@
                     <!-- Director Button -->
                     <control type="button" id="9001">
                         <label>20339</label>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <onclick>SetProperty(list,Director)</onclick>
                         <onclick>SetFocus(9500)</onclick>
@@ -360,7 +360,7 @@
                     </control>
                     <!-- Refresh Button -->
                     <control type="button" id="6">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>184</label>
                         <width>147</width>
@@ -369,7 +369,7 @@
                     </control>
                     <!-- Get Thumb Button -->
                     <control type="button" id="10">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>13511</label>
                         <include>Defs_OptionButton</include>
@@ -377,7 +377,7 @@
                     </control>
                     <!-- Artwork Downloader Button -->
                     <control type="button" id="20">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>31043</label>
                         <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
@@ -389,7 +389,7 @@
                     
                     <!-- Cinema Experience Button -->
                     <control type="button" id="21">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>31066</label>
                         <onclick>Dialog.Close(MovieInformation)</onclick>

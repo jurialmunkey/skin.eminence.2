@@ -4,8 +4,8 @@
     <zorder>1</zorder>
     <controls>
         <control type="group">
-            <include>Animation.FadeIn</include>
-            <include>Animation.FadeOut</include>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <control type="group">
     
                 <control type="group">
