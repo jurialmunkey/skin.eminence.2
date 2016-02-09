@@ -391,7 +391,7 @@
                 <height>100%</height>
                 <width max="$PARAM[width]">auto</width>
                 <label fallback="19033">$PARAM[label]</label>
-                <font>Font-ListInfo-Small-Bold</font>
+                <font>Font-LineLabel</font>
                 <textcolor>LineLabel</textcolor>
             </control>
             <control type="image">

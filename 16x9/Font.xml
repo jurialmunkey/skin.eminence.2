@@ -53,6 +53,12 @@
             <size>27</size>
         </font>
         <font>
+            <name>Font-LineLabel</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>18</size>
+            <style>uppercase</style>
+        </font>
+        <font>
             <name>Font-RSS</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>24</size>
