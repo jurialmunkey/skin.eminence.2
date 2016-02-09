@@ -61,14 +61,14 @@
                         <right>pad</right>
                         <height>36</height>
                         <font>Font-InfoBox-Title</font>
-                        <label>$INFO[Window.Property(movie.title)]</label>
+                        <label>$INFO[Window.Property(title)]</label>
                     </control>
                     <control type="label">
                         <left>pad</left>
                         <right>pad</right>
                         <height>32</height>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(movie.Genre)][/COLOR][/UPPERCASE]</label>
+                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(Genre)][/COLOR][/UPPERCASE]</label>
                     </control>
                     <control type="label">
                         <top>-42</top>
@@ -77,7 +77,7 @@
                         <height>28</height>
                         <align>right</align>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[Window.Property(movie.rating)]$INFO[Window.Property(movie.votes), (,[LOWERCASE] $LOCALIZE[31017][/LOWERCASE])]</label>
+                        <label>$INFO[Window.Property(rating)]$INFO[Window.Property(votes), (,[LOWERCASE] $LOCALIZE[31017][/LOWERCASE])]</label>
                     </control>
                     <control type="textbox">
                         <top>pad</top>
@@ -86,7 +86,7 @@
                         <height max="152">auto</height>
                         <font>Font-ListInfo</font>
                         <align>left</align>
-                        <label>$INFO[Window.Property(movie.Plot)]</label>
+                        <label>$INFO[Window.Property(Plot)]</label>
                     </control>
                     <control type="group">
                         <left>pad</left>
@@ -98,7 +98,7 @@
                             <control type="group">
                                 <height>36</height>
                                 <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(movie.Director))</visible>
+                                <visible>!IsEmpty(Window.Property(Director))</visible>
                                 <control type="label">
                                     <width>200</width>
                                     <height>36</height>
@@ -113,7 +113,7 @@
                                     <align>left</align>
                                     <height>36</height>
                                     <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(movie.Director)]</label>
+                                    <label>$INFO[Window.Property(Director)]</label>
                                     <textcolor>SubLabel</textcolor>
                                 </control>
                             </control>
@@ -122,7 +122,7 @@
                             <control type="group">
                                 <height>36</height>
                                 <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(movie.Writer))</visible>
+                                <visible>!IsEmpty(Window.Property(Writer))</visible>
                                 <control type="label">
                                     <width>200</width>
                                     <height>36</height>
@@ -137,7 +137,7 @@
                                     <align>left</align>
                                     <height>36</height>
                                     <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(movie.Writer)]</label>
+                                    <label>$INFO[Window.Property(Writer)]</label>
                                     <textcolor>SubLabel</textcolor>
                                 </control>
                             </control>
@@ -146,7 +146,7 @@
                             <control type="group">
                                 <height>36</height>
                                 <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(movie.Studio))</visible>
+                                <visible>!IsEmpty(Window.Property(Studio))</visible>
                                 <control type="label">
                                     <width>200</width>
                                     <height>36</height>
@@ -161,7 +161,7 @@
                                     <align>left</align>
                                     <height>36</height>
                                     <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(movie.Studio)]</label>
+                                    <label>$INFO[Window.Property(Studio)]</label>
                                     <textcolor>SubLabel</textcolor>
                                 </control>
                             </control>
@@ -170,14 +170,14 @@
                             <control type="group">
                                 <height>36</height>
                                 <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(movie.release_date))</visible>
+                                <visible>!IsEmpty(Window.Property(release_date))</visible>
                                 <control type="label">
                                     <width>200</width>
                                     <height>36</height>
                                     <align>left</align>
                                     <font>Font-ListInfo-Small</font>
                                     <textcolor>ListLabel</textcolor>
-                                    <label>$INFO[Window.Property(movie.Status)]</label>
+                                    <label>$INFO[Window.Property(Status)]</label>
                                     <textcolor>ListLabel</textcolor>
                                 </control>
                                 <control type="label">
@@ -185,7 +185,7 @@
                                     <align>left</align>
                                     <height>36</height>
                                     <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(movie.release_date)]</label>
+                                    <label>$INFO[Window.Property(release_date)]</label>
                                     <textcolor>SubLabel</textcolor>
                                 </control>
                             </control>
@@ -202,7 +202,7 @@
                     <align>center</align>
                     <orientation>horizontal</orientation>
                     <control type="group">
-                        <visible>!IsEmpty(Window.Property(movie.duration))</visible>
+                        <visible>!IsEmpty(Window.Property(duration))</visible>
                         <width>272</width>
                         <height>100%</height>
                         <control type="label">
@@ -218,13 +218,13 @@
                             <align>center</align>
                             <textcolor>SubLabel</textcolor>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(movie.duration),, mins]</label>
+                            <label>$INFO[Window.Property(duration),, mins]</label>
                         </control>
                     </control>
                     <control type="group">
                         <width>272</width>
                         <height>100%</height>
-                        <visible>!IsEmpty(Window.Property(movie.mpaa))</visible>
+                        <visible>!IsEmpty(Window.Property(mpaa))</visible>
                         <control type="label">
                             <top>0</top>
                             <height>32</height>
@@ -238,13 +238,13 @@
                             <align>center</align>
                             <textcolor>SubLabel</textcolor>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(movie.mpaa)]</label>
+                            <label>$INFO[Window.Property(mpaa)]</label>
                         </control>
                     </control>
                     <control type="group">
                         <width>272</width>
                         <height>100%</height>
-                        <visible>!IsEmpty(Window.Property(movie.Budget))</visible>
+                        <visible>!IsEmpty(Window.Property(Budget))</visible>
                         <control type="label">
                             <top>0</top>
                             <height>32</height>
@@ -258,13 +258,13 @@
                             <align>center</align>
                             <textcolor>SubLabel</textcolor>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(movie.Budget),$,]</label>
+                            <label>$INFO[Window.Property(Budget),$,]</label>
                         </control>
                     </control>
                     <control type="group">
                         <width>272</width>
                         <height>100%</height>
-                        <visible>!IsEmpty(Window.Property(movie.Revenue))</visible>
+                        <visible>!IsEmpty(Window.Property(Revenue))</visible>
                         <control type="label">
                             <top>0</top>
                             <height>32</height>
@@ -278,7 +278,7 @@
                             <align>center</align>
                             <textcolor>SubLabel</textcolor>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(movie.Revenue),$,]</label>
+                            <label>$INFO[Window.Property(Revenue),$,]</label>
                         </control>
                     </control>
                     
@@ -314,7 +314,7 @@
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
-                        <visible>!IsEmpty(Window.Property(movie.DBID)) + !Stringcompare(Window.Property(Type),tvshow)</visible>
+                        <visible>!IsEmpty(Window.Property(DBID)) + !Stringcompare(Window.Property(Type),tvshow)</visible>
                         <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
                         <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
                     </control>
@@ -327,7 +327,7 @@
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
-                        <visible>!IsEmpty(Window.Property(movie.DBID)) + Stringcompare(Window.Property(Type),tvshow)</visible>
+                        <visible>!IsEmpty(Window.Property(DBID)) + Stringcompare(Window.Property(Type),tvshow)</visible>
                         <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
                         <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
                     </control>
