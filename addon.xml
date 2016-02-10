@@ -15,8 +15,14 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
+        <summary lang="bg">Изчистен, ясен, прост и модерен.</summary>
         <summary lang="en">Clean, clear, simple, modern.</summary>
+        <disclaimer lang="bg">Не поддържа мишка и сензорни екрани.</disclaimer>
         <disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
+        <description lang="bg">Eminence е облик, който е изграден около идеята да бъде изчистен, ясен, прост и модерен.</description>
         <description lang="en">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
+        <license>Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</license>
+        <forum>http://forum.kodi.tv/forumdisplay.php?fid=213</forum>
+        <source>https://github.com/jurialmunkey/skin.eminence.2</source>
     </extension>
 </addon>

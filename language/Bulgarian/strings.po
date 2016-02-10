@@ -1,0 +1,710 @@
+# XBMC Media Center language file
+# Addon Name: Eminence 2
+# Addon id: skin.eminence.2
+# Addon Provider: jurialmunkey
+# Translators:
+# Kiril <neohidra@gmail.com>, 2015
+# Lyubomir Vasilev, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-11-14 19:57+0000\n"
+"Last-Translator: Kiril <neohidra@gmail.com>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/teamxbmc/xbmc-skins/language/bg/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#Misc labels
+
+msgctxt "#31000"
+msgid "Item"
+msgstr "Елемент"
+
+msgctxt "#31001"
+msgid "Items"
+msgstr "Елемента"
+
+msgctxt "#31002"
+msgid "Tag"
+msgstr "Етикет"
+
+msgctxt "#31003"
+msgid "Next"
+msgstr "Следващ"
+
+msgctxt "#31004"
+msgid "Opaque panels"
+msgstr "Непрозрачни панели"
+
+msgctxt "#31005"
+msgid "Video OSD"
+msgstr "Екранно меню за видео"
+
+msgctxt "#31006"
+msgid "Show plot when pressing info"
+msgstr ""
+
+msgctxt "#31007"
+msgid "Show media flags"
+msgstr ""
+
+msgctxt "#31008"
+msgid "Show plot overlay in video library after delay"
+msgstr ""
+
+msgctxt "#31009"
+msgid "Open playlist"
+msgstr "Отвори плейлист"
+
+msgctxt "#31010"
+msgid "Save playlist"
+msgstr "Запиши плейлиста"
+
+msgctxt "#31011"
+msgid "Close playlist"
+msgstr "Затвори плейлиста"
+
+msgctxt "#31012"
+msgid "Current playlist"
+msgstr "Текущ плейлист"
+
+msgctxt "#31013"
+msgid "Muted"
+msgstr "Без звук"
+
+msgctxt "#31014"
+msgid "Show header"
+msgstr "Показвай горния колонтитул"
+
+msgctxt "#31015"
+msgid "Live TV"
+msgstr "Телевизия"
+
+msgctxt "#31016"
+msgid "Show widget information"
+msgstr "Показвай информация от джаджите"
+
+msgctxt "#31017"
+msgid "Votes"
+msgstr "Гласа"
+
+msgctxt "#31018"
+msgid "Increase"
+msgstr "Увеличи"
+
+msgctxt "#31019"
+msgid "Decrease"
+msgstr "Намали"
+
+msgctxt "#31020"
+msgid "Background"
+msgstr "Фон"
+
+msgctxt "#31021"
+msgid "Show fanart"
+msgstr "Показвай фен-арт"
+
+msgctxt "#31027"
+msgid "Show background video"
+msgstr "Ползвай за фон възпроизвежданото видео"
+
+msgctxt "#31028"
+msgid "Show background visualisation"
+msgstr "Ползвай за фон възпроизвежданата визуализация"
+
+msgctxt "#31031"
+msgid "Recent movies"
+msgstr "Последни филми"
+
+msgctxt "#31032"
+msgid "Recommended movies"
+msgstr "Препоръчани филми"
+
+msgctxt "#31034"
+msgid "Enable Artist Slideshow"
+msgstr ""
+
+msgctxt "#31035"
+msgid "Recent episodes"
+msgstr "Последни епизоди"
+
+msgctxt "#31036"
+msgid "Recommended episodes"
+msgstr "Препоръчани епизоди"
+
+msgctxt "#31038"
+msgid "Recent albums"
+msgstr "Последни албуми"
+
+msgctxt "#31039"
+msgid "Recommended albums"
+msgstr "Препоръчани албуми"
+
+msgctxt "#31043"
+msgid "Extra art"
+msgstr "Допълнителни изображения"
+
+msgctxt "#31044"
+msgid "Local subtitle found!"
+msgstr "Локално са налични субтитри!"
+
+msgctxt "#31045"
+msgid "Supplied by"
+msgstr ""
+
+msgctxt "#31046"
+msgid "Currently"
+msgstr ""
+
+msgctxt "#31047"
+msgid "Visualisation Presets"
+msgstr "Шаблони за визуализацията"
+
+msgctxt "#31048"
+msgid "Playlist Options"
+msgstr "Настройки на плейлиста"
+
+msgctxt "#31049"
+msgid "Customise home menu"
+msgstr "Персонализиране на началното меню"
+
+msgctxt "#31052"
+msgid "Rated"
+msgstr "Оценка"
+
+msgctxt "#31054"
+msgid "Random movies"
+msgstr "Произволни филми"
+
+msgctxt "#31055"
+msgid "Random episodes"
+msgstr "Произволни епизоди"
+
+msgctxt "#31056"
+msgid "Random albums"
+msgstr "Произволни албуми"
+
+msgctxt "#31057"
+msgid "Kiosk mode"
+msgstr "Kiosk режим"
+
+msgctxt "#31059"
+msgid "Memory Used:"
+msgstr "Памет в употреба"
+
+msgctxt "#31063"
+msgid "Addons"
+msgstr "Добавки"
+
+msgctxt "#31064"
+msgid "Custom background image"
+msgstr "Персонално изображение за фон"
+
+msgctxt "#31065"
+msgid "Hide 'Mouse' warning"
+msgstr "Скрий предупреждението за \"мишката\""
+
+msgctxt "#31066"
+msgid "Cinema Exp."
+msgstr "Cinema Experience"
+
+msgctxt "#31067"
+msgid "Pages"
+msgstr "Страници"
+
+msgctxt "#31068"
+msgid "View Options"
+msgstr "Визуални настройки"
+
+msgctxt "#31069"
+msgid "Context Menu"
+msgstr "Контекстно меню"
+
+msgctxt "#31070"
+msgid "Info"
+msgstr "Инф."
+
+msgctxt "#31071"
+msgid "Finishes at"
+msgstr "Ще свърши в:"
+
+msgctxt "#31072"
+msgid "Playing"
+msgstr "Възпроизвеждане"
+
+msgctxt "#31073"
+msgid "Categories"
+msgstr "Категории"
+
+msgctxt "#31074"
+msgid "Submenu"
+msgstr "Подменю"
+
+msgctxt "#31075"
+msgid "Icon"
+msgstr "Икона"
+
+msgctxt "#31076"
+msgid "Weather Fanart"
+msgstr "Фен-арт за времето"
+
+msgctxt "#31077"
+msgid "Trending Movies"
+msgstr "Налагащи се филми"
+
+msgctxt "#31078"
+msgid "In Cinemas"
+msgstr "В кината"
+
+msgctxt "#31079"
+msgid "Upcoming Films"
+msgstr "Предстоящи филми"
+
+msgctxt "#31080"
+msgid "Popular Movies"
+msgstr "Популярни филми"
+
+msgctxt "#31081"
+msgid "Top Rated Movies"
+msgstr "Филми с най-висока оценка"
+
+msgctxt "#31082"
+msgid "Popular Shows"
+msgstr "Популярни ТВ Сериали"
+
+msgctxt "#31083"
+msgid "Top Rated Shows"
+msgstr "ТВ Сериали с най-висока оценка"
+
+msgctxt "#31084"
+msgid "On Air Shows"
+msgstr ""
+
+msgctxt "#31085"
+msgid "Airing Today"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Custom 1"
+msgstr ""
+
+msgctxt "#31087"
+msgid "Custom 2"
+msgstr ""
+
+msgctxt "#31088"
+msgid "Custom 3"
+msgstr ""
+
+msgctxt "#31089"
+msgid "Custom 4"
+msgstr ""
+
+msgctxt "#31090"
+msgid "Content Loading"
+msgstr "Съдържанието се зарежда"
+
+msgctxt "#31091"
+msgid "Trending Shows"
+msgstr "Налагащи се ТВ Сериали"
+
+msgctxt "#31092"
+msgid "No information available"
+msgstr "Няма информация"
+
+msgctxt "#31093"
+msgid "Movie Hub"
+msgstr ""
+
+msgctxt "#31094"
+msgid "TV Hub"
+msgstr ""
+
+msgctxt "#31095"
+msgid "Spotlight"
+msgstr "Представени"
+
+msgctxt "#31096"
+msgid "Hub items"
+msgstr ""
+
+msgctxt "#31097"
+msgid "Hub widget"
+msgstr ""
+
+msgctxt "#31098"
+msgid "Artwork"
+msgstr "Изображения"
+
+msgctxt "#31099"
+msgid "Codec"
+msgstr ""
+
+msgctxt "#31100"
+msgid "Recently Added"
+msgstr "Последно добавени"
+
+msgctxt "#31101"
+msgid "Recently Played"
+msgstr "Последно възпроизвеждани"
+
+msgctxt "#31102"
+msgid "Watch Random"
+msgstr ""
+
+msgctxt "#31103"
+msgid "Delete Settings Shortcut"
+msgstr ""
+
+msgctxt "#31104"
+msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
+msgstr ""
+
+msgctxt "#31105"
+msgid "Extra Info"
+msgstr "Допълнителна инф."
+
+msgctxt "#31106"
+msgid "3D Mode"
+msgstr "3D режим"
+
+msgctxt "#31107"
+msgid "Similar"
+msgstr "Подобни"
+
+msgctxt "#31108"
+msgid "Youtube"
+msgstr "Youtube"
+
+msgctxt "#31109"
+msgid "provided by themoviedb.org"
+msgstr ""
+
+msgctxt "#31110"
+msgid "Extras"
+msgstr "Екстри"
+
+msgctxt "#31111"
+msgid "Choose primary highlight color"
+msgstr "Изберете основен цвят за отличаване"
+
+msgctxt "#31112"
+msgid "Choose secondary highlight color"
+msgstr "Изберете допълнителен цвят за отличаване"
+
+msgctxt "#31113"
+msgid "Reset colors to defaults"
+msgstr "Нулиране на цветовете"
+
+msgctxt "#31114"
+msgid "Weather fanart"
+msgstr "Фен-арт за времето"
+
+msgctxt "#31115"
+msgid "Show weather with clock"
+msgstr "Показвай текущите метеорологични условия и часа"
+
+msgctxt "#31116"
+msgid "Animate fanart"
+msgstr "Анимиран фен-арт"
+
+msgctxt "#31117"
+msgid "mins"
+msgstr "мин"
+
+msgctxt "#31118"
+msgid "Animate artist slideshow"
+msgstr ""
+
+msgctxt "#31119"
+msgid "Show visualisation behind artist slideshow"
+msgstr ""
+
+msgctxt "#31120"
+msgid "Show artist slideshow"
+msgstr ""
+
+msgctxt "#31121"
+msgid "Music OSD"
+msgstr "Екранно меню за музика"
+
+msgctxt "#31122"
+msgid "Match header tile with highlight color"
+msgstr "Оцвети началната плочка в основния цвят за отличаване"
+
+msgctxt "#31123"
+msgid "Hub"
+msgstr ""
+
+msgctxt "#31124"
+msgid "Similar movies"
+msgstr "Подобни филми"
+
+msgctxt "#31125"
+msgid "Similar to"
+msgstr "Подобни на"
+
+msgctxt "#31126"
+msgid "Colors"
+msgstr "Цветове"
+
+msgctxt "#31127"
+msgid "Header"
+msgstr "Горен колонтитул"
+
+msgctxt "#31128"
+msgid "Color"
+msgstr "Цвят"
+
+msgctxt "#31129"
+msgid "Enable individual tile colors in home customisation"
+msgstr "Избиране на различни цветове за отделните плочки от началното меню"
+
+msgctxt "#31130"
+msgid "items found"
+msgstr "намерени елемента"
+
+msgctxt "#31131"
+msgid "Search Options"
+msgstr ""
+
+msgctxt "#31132"
+msgid "by Title"
+msgstr "по заглавие"
+
+msgctxt "#31133"
+msgid "by Genre"
+msgstr "по жарн"
+
+msgctxt "#31134"
+msgid "by Actor"
+msgstr "по актьор"
+
+msgctxt "#31135"
+msgid "by Director"
+msgstr "по режисьор"
+
+msgctxt "#31136"
+msgid "by Studio"
+msgstr "по студио"
+
+msgctxt "#31137"
+msgid "Panel list"
+msgstr ""
+
+msgctxt "#31138"
+msgid "Show clock"
+msgstr "Показвай часовник"
+
+msgctxt "#31139"
+msgid "Hubs"
+msgstr ""
+
+msgctxt "#31140"
+msgid "Show tile colour on unfocused tiles"
+msgstr "Оцветяване и на нефокусираните плочки"
+
+msgctxt "#31141"
+msgid "Info icons"
+msgstr "Икони с инф."
+
+msgctxt "#31142"
+msgid "Big list info"
+msgstr "Голям списък с инф."
+
+msgctxt "#31143"
+msgid "Media Info 2"
+msgstr "Информация 2"
+
+msgctxt "#31144"
+msgid "Player Controls"
+msgstr ""
+
+msgctxt "#31145"
+msgid "Extended Info"
+msgstr "Разширена информация"
+
+msgctxt "#31146"
+msgid "Fanart fallback image"
+msgstr "Алтернативно изображение за фен-арт"
+
+msgctxt "#31147"
+msgid "Fallback widget"
+msgstr "Алтернативна джаджа"
+
+msgctxt "#31148"
+msgid "Media Info 3"
+msgstr "Информация 3"
+
+msgctxt "#31149"
+msgid "Next Aired"
+msgstr ""
+
+msgctxt "#31150"
+msgid "Show widget posters"
+msgstr "Показвай плакати в джаджите"
+
+msgctxt "#31151"
+msgid "Home tile icon"
+msgstr "Икона за началната плочка"
+
+msgctxt "#31152"
+msgid "Home tile text"
+msgstr "Текст на началната плочка"
+
+msgctxt "#31153"
+msgid "Always"
+msgstr "Винаги"
+
+msgctxt "#31154"
+msgid "On Up"
+msgstr ""
+
+msgctxt "#31155"
+msgid "Never"
+msgstr "Никога"
+
+msgctxt "#31156"
+msgid "Show widget discart"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Home header text"
+msgstr "Текст в горния колонтитул"
+
+msgctxt "#31158"
+msgid "Media Center"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Background overlay image"
+msgstr ""
+
+msgctxt "#31160"
+msgid "Busy spinner"
+msgstr ""
+
+msgctxt "#31161"
+msgid "Backup skin settings"
+msgstr "Създаване на резервно копие на настройките на облика"
+
+msgctxt "#31162"
+msgid "Restore skin settings from file"
+msgstr "Възстановяване настройките на облика от файл"
+
+msgctxt "#31163"
+msgid "Gallery"
+msgstr "Галерия"
+
+msgctxt "#31164"
+msgid "Fanart list"
+msgstr "Списък с фен-арт"
+
+msgctxt "#31165"
+msgid "Show sorting and info line headers"
+msgstr ""
+
+msgctxt "#31166"
+msgid "Individually set in customisation dialog"
+msgstr ""
+
+msgctxt "#31167"
+msgid "Show unwatched count in header"
+msgstr "Показвай броя неизгледани елементи в горния колонтитул"
+
+msgctxt "#31168"
+msgid "Now / Next"
+msgstr ""
+
+msgctxt "#31169"
+msgid "Reset skin settings to defaults  (WARNING - This will override all skin settings)"
+msgstr "Нулирай настройките на облика (ВНИМАНИЕ - настройките на облика ще бъдат нулирани)"
+
+msgctxt "#31170"
+msgid "Backup / Restore"
+msgstr "Резервно копие / Възстановяване"
+
+msgctxt "#31171"
+msgid "Reload skin"
+msgstr "Презареди облика"
+
+msgctxt "#31172"
+msgid "Transparent home bar"
+msgstr "Прозрачно начално меню"
+
+msgctxt "#31173"
+msgid "Home bar style"
+msgstr "Стил на началното меню"
+
+msgctxt "#31174"
+msgid "Weather icons"
+msgstr "Икони за времето"
+
+msgctxt "#31175"
+msgid "Customise shutdown menu"
+msgstr "Персонализиране на менюто за изключване"
+
+msgctxt "#31176"
+msgid "Genre icons"
+msgstr "Икони за жанр"
+
+msgctxt "#31180"
+msgid "Default"
+msgstr "Стандартно"
+
+msgctxt "#31181"
+msgid "Text in tiles"
+msgstr "Текст в плочките"
+
+msgctxt "#31182"
+msgid "Text only"
+msgstr "Само текст"
+
+msgctxt "#31183"
+msgid "Customise shutdown menu"
+msgstr "Персонализиране на менюто за изключване"
+
+msgctxt "#31184"
+msgid "Startup video or playlist"
+msgstr "Начално видео или плейлист"
+
+msgctxt "#31185"
+msgid "Label"
+msgstr "Етикет"
+
+msgctxt "#31186"
+msgid "Action"
+msgstr "Действие"
+
+msgctxt "#31187"
+msgid "Background"
+msgstr "Фон"
+
+msgctxt "#31188"
+msgid "None (show user background)"
+msgstr "Без (ползвай фона зададен от потребителя)"
+
+msgctxt "#31189"
+msgid "None"
+msgstr "Без"
+
+msgctxt "#31190"
+msgid "Next Episode"
+msgstr "Следващ епизод"
+
+msgctxt "#31191"
+msgid "Last Episode"
+msgstr "Последен епизод"
+
+msgctxt "#31192"
+msgid "Info List"
+msgstr "Списък с инф."
+
+msgctxt "#31193"
+msgid "Box Office"
+msgstr ""
