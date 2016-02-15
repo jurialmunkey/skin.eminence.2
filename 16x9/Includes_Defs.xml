@@ -36,7 +36,7 @@
         <alttexturefocus>noop</alttexturefocus>
     </include>
     <include name="Defs_KeyboardButton">
-        <width>120</width>
+        <width>110</width>
         <height>70</height>
         <textcolor>ListLabel</textcolor>
         <selectedcolor>Selected</selectedcolor>
@@ -44,7 +44,7 @@
         <font>Font-ListInfo-Small</font>
         <aligny>center</aligny>
         <textoffsetx>side</textoffsetx>
-        <radioposx>275</radioposx>
+        <radioposx>295</radioposx>
         <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
         <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
         <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>

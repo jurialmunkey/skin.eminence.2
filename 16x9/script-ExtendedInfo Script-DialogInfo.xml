@@ -187,7 +187,7 @@
                     <width>1384</width>
                     <bottom>30</bottom>
                     <height>69</height>
-                    <align>left</align>
+                    <align>center</align>
                     <itemgap>pad</itemgap>
                     <onright>noop</onright>
                     <orientation>horizontal</orientation>
@@ -205,7 +205,7 @@
                     
                     <!-- Movies -->
                     <control type="button" id="9001">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <label>$ADDON[script.extendedinfo 32010]</label>
                         <onclick>SetProperty(content,150)</onclick>
@@ -217,7 +217,7 @@
                     </control>
                     <!-- TvShows -->
                     <control type="button" id="9002">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <label>20343</label>
                         <onclick>SetProperty(content,250)</onclick>
@@ -229,7 +229,7 @@
                     </control>
                     <!-- YouTube -->
                     <control type="button" id="9003">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <label>$ADDON[script.extendedinfo 32118]</label>
                         <onclick>SetProperty(content,350)</onclick>
@@ -241,7 +241,7 @@
                     </control>
                     <!-- As Crew -->
                     <control type="button" id="9004">
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <label>$ADDON[script.extendedinfo 32115]</label>
                         <onclick>SetProperty(content,550)</onclick>

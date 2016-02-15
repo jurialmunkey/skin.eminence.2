@@ -3,10 +3,14 @@
     <!-- virtualkeyboard -->
     <defaultcontrol always="true">300</defaultcontrol>
     <controls>
-
+        <include>GlobalOverlay</include>
         <control type="group">
             <height>580</height>
-            <include>Dialog_Bottom</include>
+            <left>50</left>
+            <right>50</right>
+            <bottom>50</bottom>
+            <include>Dialog_Background</include>
+            <include>Animation_Bottom</include>
             <!-- Heading -->
             <control type="label" id="311">
                 <left>-1000</left>
@@ -19,7 +23,7 @@
             <control type="grouplist" id="9000">
                 <left>side</left>
                 <top>170</top>
-                <width>320</width>
+                <width>340</width>
                 <height>660</height>
                 <itemgap>pad</itemgap>
                 <onup>noop</onup>
@@ -83,11 +87,11 @@
             <!-- Edit -->
             <control type="group">
                 <left>side</left>
-                <right>280</right>
+                <right>260</right>
                 <top>70</top>
                 <height>70</height>
                 <include name="Object_Line">
-                    <param name="width" value="1880" />
+                    <param name="width" value="1780" />
                     <param name="label" value="$INFO[Control.GetLabel(311)]" />
                 </include>
                 <control type="image">
@@ -112,7 +116,7 @@
             <control type="group">
                 <right>side</right>
                 <top>170</top>
-                <width>1550</width>
+                <width>1430</width>
 
                 <!-- First row -->
                 <control type="grouplist" id="1000">
@@ -462,14 +466,14 @@
                     <!-- SPACE -->
                     <control type="button" id="32">
                         <onup>4000</onup>
-                        <width>900</width>
+                        <width>830</width>
                         <label>20182</label>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- BACKSPACE -->
                     <control type="button" id="8">
                         <onup>4000</onup>
-                        <width>380</width>
+                        <width>350</width>
                         <label>20181</label>
                         <include>Defs_KeyboardButton</include>
                     </control>
@@ -496,6 +500,7 @@
             <control type="grouplist" id="9001">
                 <right>side</right>
                 <top>70</top>
+                <align>right</align>
                 <width>250</width>
                 <itemgap>pad</itemgap>
                 <onleft>312</onleft>

@@ -283,16 +283,12 @@
                     </control>
                     
                 </control>
-                <!-- BUTTONS -->
-                <include name="Dialog_Info_Arrows">
-                    <param name="id" value="9000" />
-                </include>
                 <control type="grouplist" id="9000">
                     <left>pad</left>
                     <width>1384</width>
                     <bottom>30</bottom>
                     <height>69</height>
-                    <align>left</align>
+                    <align>center</align>
                     <itemgap>pad</itemgap>
                     <orientation>horizontal</orientation>
                     <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
@@ -310,7 +306,7 @@
                         <description>Play</description>
                         <label>208</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -323,7 +319,7 @@
                         <description>Browse</description>
                         <label>21385</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -336,7 +332,7 @@
                         <description>Cast</description>
                         <label>206</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -349,7 +345,7 @@
                         <description>Similar</description>
                         <label>31107</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -361,7 +357,7 @@
                         <description>Youtube</description>
                         <label>31108</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -373,7 +369,7 @@
                         <description>Crew</description>
                         <label>$ADDON[script.extendedinfo 32115]</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -385,7 +381,7 @@
                         <description>Genres</description>
                         <label>135</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>
@@ -397,7 +393,7 @@
                         <description>Keywords</description>
                         <label>$ADDON[script.extendedinfo 32114]</label>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <width>338.5</width>
+                        <width>auto</width>
                         <onback>SetProperty(extinfo,1,home)</onback>
                         <onfocus>ClearProperty(content)</onfocus>
                         <include>Defs_OptionButton</include>

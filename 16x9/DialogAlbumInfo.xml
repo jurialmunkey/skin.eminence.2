@@ -378,14 +378,14 @@
                     <width>1160</width>
                     <bottom>30</bottom>
                     <height>69</height>
-                    <align>left</align>
+                    <align>center</align>
                     <itemgap>pad</itemgap>
                     <orientation>horizontal</orientation>
                     <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
                     
                     <!-- Youtube Button -->
                     <control type="button" id="9001">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <label>31108</label>
@@ -393,21 +393,21 @@
                     </control>
                     <!-- Refresh Button -->
                     <control type="button" id="6">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <label>184</label>
                     </control>
                     <!-- Get Thumb Button -->
                     <control type="button" id="10">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <label>13511</label>
                     </control>
                     <!-- Fanart Button -->
                     <control type="button" id="12">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
                         <label>20413</label>

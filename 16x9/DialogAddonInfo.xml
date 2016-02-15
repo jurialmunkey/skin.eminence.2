@@ -204,13 +204,13 @@
                     <width>1160</width>
                     <bottom>30</bottom>
                     <height>69</height>
-                    <align>left</align>
+                    <align>center</align>
                     <itemgap>pad</itemgap>
                     <orientation>horizontal</orientation>
                     
                     <!-- Launch Addon Button -->
                     <control type="button" id="12">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <label>518</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -218,7 +218,7 @@
                     </control>
                     <!-- Configure Addon Button -->
                     <control type="button" id="9">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <label>24020</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -226,7 +226,7 @@
                     </control>
                     <!-- Update Addon Button -->
                     <control type="button" id="8">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <label>24069</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -234,7 +234,7 @@
                     </control>
                     <!-- Install/UnInstall Addon button -->
                     <control type="button" id="6">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <label>24022</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -242,7 +242,7 @@
                     </control>
                     <!-- Enable/Disable Addon button -->
                     <control type="button" id="7">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <label>24021</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -250,7 +250,7 @@
                     </control>
                     <!-- Changelog Button -->
                     <control type="button" id="10">
-                        <width>282.5</width>
+                        <width>auto</width>
                         <label>24036</label>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
