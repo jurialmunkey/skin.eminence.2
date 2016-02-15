@@ -4,7 +4,7 @@
     <defaultcontrol always="true">21</defaultcontrol>
 
     <controls>
-
+        <include>GlobalOverlay</include>
         <control type="group">
             <centertop>588</centertop>
             <height>560</height>
@@ -53,18 +53,21 @@
                     <control type="button" id="11">
                         <ondown>14</ondown>
                         <label>12311</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '2' -->
                     <control type="button" id="12">
                         <ondown>15</ondown>
                         <label>12312</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '3' -->
                     <control type="button" id="13">
                         <ondown>16</ondown>
                         <label>12313</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                 </control>
@@ -79,6 +82,7 @@
                         <onup>11</onup>
                         <ondown>17</ondown>
                         <label>12314</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '5' -->
@@ -86,6 +90,7 @@
                         <onup>12</onup>
                         <ondown>18</ondown>
                         <label>12315</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '6' -->
@@ -93,6 +98,7 @@
                         <onup>13</onup>
                         <ondown>19</ondown>
                         <label>12316</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                 </control>
@@ -107,6 +113,7 @@
                         <onup>14</onup>
                         <ondown>20</ondown>
                         <label>12317</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '8' -->
@@ -114,6 +121,7 @@
                         <onup>15</onup>
                         <ondown>10</ondown>
                         <label>12318</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '9' -->
@@ -121,6 +129,7 @@
                         <onup>16</onup>
                         <ondown>22</ondown>
                         <label>12319</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                 </control>
@@ -135,6 +144,7 @@
                     <control type="button" id="20">
                         <onup>17</onup>
                         <label>&lt;</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- '0' -->
@@ -142,6 +152,7 @@
                         <onup>18</onup>
                         <ondown>23</ondown>
                         <label>12310</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                     <!-- Next -->
@@ -149,6 +160,7 @@
                         <onup>19</onup>
                         <ondown>21</ondown>
                         <label>&gt;</label>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
                 </control>
@@ -165,11 +177,13 @@
                         <label>20181</label>
                         <onup>20</onup>
                         <width>250</width>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
 
                     <control type="button" id="21">
                         <onup>22</onup>
+                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                         <label>20177</label>
                     </control>

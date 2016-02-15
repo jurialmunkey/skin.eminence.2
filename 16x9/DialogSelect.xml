@@ -4,13 +4,23 @@
     <controls>
         <include>GlobalOverlay</include>
         <control type="group">
+            <animation effect="slide" start="0" end="293" time="0" condition="Control.IsVisible(3)">Conditional</animation>
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <centerleft>50%</centerleft>
-            <width>favdialogw</width>
-            <bottom>64</bottom>
+            <width>1742</width>
+            <bottom>89</bottom>
             <height>652</height>
-            <include>Dialog_Background</include>
+            <control type="group">
+                <visible>Control.IsVisible(6)</visible>
+                <include>Dialog_Background</include>
+            </control>
+            <control type="group">
+                <left>0</left>
+                <right>586</right>
+                <visible>Control.IsVisible(3)</visible>
+                <include>Dialog_Background</include>
+            </control>
             <include name="Dialog_Top_IconHeader">
                 <param name="label" value="$INFO[Control.GetLabel(1)]" />
                 <param name="icon" value="special://skin/extras/icons/filebox.png" />
@@ -20,6 +30,7 @@
                 <bottom>side</bottom>
                 <width>552</width>
                 <height>552</height>
+                <visible>Control.IsVisible(6)</visible>
                 <texture colordiffuse="PosterBorder">common/white.png</texture>
             </control>
             <control type="image">
@@ -28,12 +39,18 @@
                 <width>552</width>
                 <height>552</height>
                 <aspectratio>keep</aspectratio>
+                <visible>Control.IsVisible(6)</visible>
                 <texture background="true" fallback="DefaultAddon.png">$INFO[Container(6).ListItem.Icon]</texture>
             </control>
             <include name="Dialog_FavouriteList">
                 <param name="id" value="3" />
+                <param name="onup" value="3" />
+                <param name="ondown" value="3" />
                 <param name="moveid" value="5" />
-                <param name="left" value="582" />
+                <param name="left" value="side" />
+                <param name="top" value="80" />
+                <param name="width" value="1116" />
+                <param name="bottom" value="side" />
             </include>
             <include name="Dialog_ImageList">
                 <param name="id" value="6" />
@@ -41,6 +58,7 @@
                 <param name="ondown" value="6" />
                 <param name="moveid" value="5" />
                 <param name="left" value="582" />
+                <param name="width" value="1160" />
             </include>
             <control type="button" id="5">
                 <right>side</right>

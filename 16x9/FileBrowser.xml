@@ -7,8 +7,8 @@
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <centerleft>50%</centerleft>
-            <width>favdialogw</width>
-            <bottom>64</bottom>
+            <width>1742</width>
+            <bottom>89</bottom>
             <height>652</height>
             <include>Dialog_Background</include>
             <include name="Dialog_Top_IconHeader">
@@ -55,13 +55,15 @@
                 <param name="onup" value="450" />
                 <param name="ondown" value="450" />
                 <param name="left" value="582" />
+                <param name="width" value="1160" />
             </include>
             <include name="Dialog_ImageList">
                 <param name="id" value="451" />
                 <param name="moveid" value="9000" />
-                <param name="onup" value="451" />
-                <param name="ondown" value="451" />
+                <param name="onup" value="450" />
+                <param name="ondown" value="450" />
                 <param name="left" value="582" />
+                <param name="width" value="1160" />
             </include>
             <!-- Button grouplist -->
             <control type="grouplist" id="9000">
@@ -69,15 +71,15 @@
                 <top>pad</top>
                 <align>right</align>
                 <height>60</height>
-                <onleft>9000</onleft>
-                <onright>9000</onright>
-                <onup>450</onup>
+                <onleft>450</onleft>
+                <onright>noop</onright>
+                <onup>noop</onup>
                 <ondown>450</ondown>
                 <orientation>horizontal</orientation>
                 <itemgap>pad</itemgap>
                 <!-- OK Button -->
                 <control type="button" id="413">
-                    <width>324</width>
+                    <width>auto</width>
                     <height>100%</height>
                     <label>186</label>
                     <align>right</align>
@@ -89,7 +91,7 @@
 
                 <!-- Cancel Button -->
                 <control type="button" id="414">
-                    <width>324</width>
+                    <width>auto</width>
                     <height>100%</height>
                     <label>222</label>
                     <align>right</align>
@@ -101,7 +103,7 @@
 
                 <!-- New folder -->
                 <control type="button" id="415">
-                    <width>324</width>
+                    <width>auto</width>
                     <height>100%</height>
                     <label>119</label>
                     <visible>Control.IsEnabled(415)</visible>
@@ -114,7 +116,7 @@
 
                 <!-- Mirror image -->
                 <control type="radiobutton" id="416">
-                    <width>324</width>
+                    <width>auto</width>
                     <height>100%</height>
                     <label>749</label>
                     <visible>Control.IsEnabled(416)</visible>
