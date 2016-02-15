@@ -9,7 +9,13 @@
             <left>50</left>
             <right>50</right>
             <bottom>50</bottom>
-            <include>Dialog_Background</include>
+            <control type="group">
+                <left>-10</left>
+                <right>-10</right>
+                <top>-10</top>
+                <bottom>-10</bottom>
+                <include>Dialog_Background</include>
+            </control>
             <include>Animation_Bottom</include>
             <!-- Heading -->
             <control type="label" id="311">
