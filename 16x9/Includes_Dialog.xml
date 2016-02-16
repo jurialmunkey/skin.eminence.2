@@ -252,6 +252,7 @@
     <include name="Dialog_BasicList">
         <param name="backpanel" default="true" />
         <param name="type" default="panel" />
+        <param name="imagelist" default="true" />
         <param name="contentvisible" default="false" />
         <definition>
             <control type="image">
@@ -274,7 +275,7 @@
                 <onback>$PARAM[onback2]</onback>
                 <orientation>vertical</orientation>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <itemlayout height="69" width="$PARAM[width]">
+                <itemlayout height="69" width="$PARAM[width]" condition="!$PARAM[imagelist]">
                     <control type="label">
                         <left>30</left>
                         <right>30</right>
@@ -293,7 +294,7 @@
                     </control>
                 </itemlayout>
 
-                <focusedlayout height="69" width="$PARAM[width]">
+                <focusedlayout height="69" width="$PARAM[width]" condition="!$PARAM[imagelist]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -315,6 +316,91 @@
                         <align>right</align>
                         <font>Font-ListInfo</font>
                         <label>$INFO[ListItem.Label2]</label>
+                        <textcolor>Selected</textcolor>
+                    </control>
+                </focusedlayout>
+
+                <!-- Image List Style -->
+                <itemlayout height="138" width="$PARAM[width]" condition="$PARAM[imagelist]">
+                    <control type="image">
+                        <left>pad</left>
+                        <top>pad</top>
+                        <bottom>pad</bottom>
+                        <width>118</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="group">
+                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                        <control type="label">
+                            <left>148</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>66%</height>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <left>148</left>
+                            <right>30</right>
+                            <bottom>0</bottom>
+                            <height>66%</height>
+                            <align>left</align>
+                            <font>Font-ListInfo</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                        </control>
+                    </control>
+                    <control type="label">
+                        <left>148</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>IsEmpty(ListItem.Label2)</visible>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="138" width="$PARAM[width]" condition="$PARAM[imagelist]">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>pad</left>
+                        <top>pad</top>
+                        <bottom>pad</bottom>
+                        <width>118</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="group">
+                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                        <control type="label">
+                            <left>148</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>66%</height>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>Selected</textcolor>
+                        </control>
+                        <control type="label">
+                            <left>148</left>
+                            <right>30</right>
+                            <bottom>0</bottom>
+                            <height>66%</height>
+                            <align>left</align>
+                            <font>Font-ListInfo</font>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>Selected</textcolor>
+                        </control>
+                    </control>
+                    <control type="label">
+                        <left>148</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>IsEmpty(ListItem.Label2)</visible>
                         <textcolor>Selected</textcolor>
                     </control>
                 </focusedlayout>
@@ -404,6 +490,7 @@
         <param name="top" default="80" />
         <param name="pad" default="0" />
         <param name="bottom" default="side" />
+        <param name="right" default="side" />
         <param name="visible" default="true" />
         <param name="backpanel" default="true" />
         <param name="type" default="panel" />
@@ -412,7 +499,7 @@
             <control type="$PARAM[type]" id="$PARAM[id]">
                 <onup>$PARAM[onup]</onup>
                 <ondown>$PARAM[ondown]</ondown>
-                <right>side</right>
+                <right>$PARAM[right]</right>
                 <left>$PARAM[left]</left>
                 <top>$PARAM[top]</top>
                 <bottom>$PARAM[bottom]</bottom>

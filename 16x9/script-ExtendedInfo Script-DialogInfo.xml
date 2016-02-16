@@ -183,6 +183,7 @@
                 </control>
                 <!-- BUTTONS -->
                 <control type="grouplist" id="9000">
+                    <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
                     <left>pad</left>
                     <width>1384</width>
                     <bottom>30</bottom>
@@ -269,11 +270,11 @@
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="507" />
-                <param name="width" value="1384" />
-                <param name="top" value="100" />
+                <param name="left" value="497" />
+                <param name="width" value="1404" />
+                <param name="top" value="70" />
                 <param name="pad" value="pad" />
-                <param name="bottom" value="128" />
+                <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),150)" />
             </include>
@@ -282,11 +283,11 @@
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="507" />
-                <param name="width" value="1384" />
-                <param name="top" value="100" />
+                <param name="left" value="497" />
+                <param name="width" value="1404" />
+                <param name="top" value="70" />
                 <param name="pad" value="pad" />
-                <param name="bottom" value="128" />
+                <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),250)" />
             </include>
@@ -295,11 +296,11 @@
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="507" />
-                <param name="width" value="1384" />
-                <param name="top" value="100" />
+                <param name="left" value="497" />
+                <param name="width" value="1404" />
+                <param name="top" value="70" />
                 <param name="pad" value="pad" />
-                <param name="bottom" value="128" />
+                <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),350)" />
             </include>
@@ -308,11 +309,11 @@
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="507" />
-                <param name="width" value="1384" />
-                <param name="top" value="100" />
+                <param name="left" value="497" />
+                <param name="width" value="1404" />
+                <param name="top" value="70" />
                 <param name="pad" value="pad" />
-                <param name="bottom" value="128" />
+                <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),550)" />
             </include>

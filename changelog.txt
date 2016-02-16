@@ -1,8 +1,11 @@
+[B]0.9.47[/B]
+Tweak how cast lists etc are handled in videoinfo / extinfo
+Fix SettingsLevel button font
+
 [B]0.9.46[/B]
 New Keyboard
 Auto size buttons
 Tweak Select, Browse and Profile dialogs
-
 
 [B]0.9.45[/B]
 Fix ExtendedInfo for v4.0
