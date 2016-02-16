@@ -20,7 +20,6 @@
             <centerleft>50%</centerleft>
             <width>1920</width>
             <include>Animation_Info</include>
-            <!-- <include>Dialog_Background</include> -->
             <control type="group">
                 <top>70</top>
                 <left>side</left>
@@ -378,7 +377,7 @@
                         <onclick>SetFocus(750)</onclick>
                         <enable>IntegerGreaterThan(Container(750).NumItems,0)</enable>
                     </control>
-                    <!-- <control type="button" id ="9006">
+                    <control type="button" id ="9006">
                         <description>Genres</description>
                         <label>135</label>
                         <font>Font-ListInfo-Small-Bold</font>
@@ -401,7 +400,7 @@
                         <onclick>SetProperty(content,950)</onclick>
                         <onclick>SetFocus(950)</onclick>
                         <enable>IntegerGreaterThan(Container(950).NumItems,0)</enable>
-                    </control> -->
+                    </control>
                     <control type="button" id="9998">
                         <visible allowhiddenfocus="true">false</visible>
                         <onback>SetProperty(extinfo,1,home)</onback>
