@@ -1,3 +1,6 @@
+[B]2.0.0[/B]
+Version bump for Repo submission
+
 [B]0.9.47[/B]
 Tweak how cast lists etc are handled in videoinfo / extinfo
 Fix SettingsLevel button font
