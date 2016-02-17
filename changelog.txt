@@ -1,3 +1,6 @@
+[B]2.0.1[/B]
+Readd fixes for dbid lookup in extendedinfo
+
 [B]2.0.0[/B]
 Version bump for Repo submission
 

@@ -22,9 +22,9 @@
         <control type="button" id="9402">
             <visible allowhiddenfocus="true">false</visible>
             <onfocus>Action(Close)</onfocus>
-            <onfocus condition="Control.IsVisible(110)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(100).ListItem.Label])</onfocus>
-            <onfocus condition="Control.IsVisible(120)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(100).ListItem.Label])</onfocus>
-            <onfocus condition="Control.IsVisible(140)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(100).ListItem.Property(TvShowTitle)])</onfocus>
+            <onfocus condition="Control.IsVisible(110)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(100).ListItem.Label],dbid=$INFO[Container(100).ListItem.Property(dbid)])</onfocus>
+            <onfocus condition="Control.IsVisible(120)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(100).ListItem.Label],dbid=$INFO[Container(100).ListItem.Property(dbid)])</onfocus>
+            <onfocus condition="Control.IsVisible(140)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(100).ListItem.Property(TvShowTitle)],dbid=$INFO[Container(100).ListItem.Property(dbid)])</onfocus>
         </control>
 
         <control type="group">
