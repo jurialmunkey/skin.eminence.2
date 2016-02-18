@@ -4,6 +4,7 @@
     <defaultcontrol always="true">300</defaultcontrol>
     <controls>
         <include>GlobalOverlay</include>
+        
         <control type="group">
             <height>580</height>
             <left>50</left>
@@ -12,9 +13,68 @@
             <control type="group">
                 <left>-10</left>
                 <right>-10</right>
+                <top>-99</top>
+                <bottom>-10</bottom>
+                <include>Dialog_Background</include>
+                <visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+            </control>
+            <control type="group">
+                <left>-10</left>
+                <right>-10</right>
                 <top>-10</top>
                 <bottom>-10</bottom>
                 <include>Dialog_Background</include>
+                <visible>!IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+            </control>
+            <control type="panel" id="8000">
+                <height>69</height>
+                <top>-69</top>
+                <left>side</left>
+                <right>10</right>
+                <ondown>9001</ondown>
+                <orientation>horizontal</orientation>
+                <itemlayout height="69" width="358">
+                    <control type="group">
+                        <left>0</left>
+                        <right>10</right>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>side</left>
+                            <right>side</right>
+                            <height>100%</height>
+                            <aligny>center</aligny>
+                            <align>center</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>Font-RSS</font>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="69" width="358">
+                    <control type="group">
+                        <left>0</left>
+                        <right>10</right>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>side</left>
+                            <right>side</right>
+                            <height>100%</height>
+                            <aligny>center</aligny>
+                            <align>center</align>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>Font-RSS</font>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
             </control>
             <include>Animation_Bottom</include>
             <!-- Heading -->
@@ -110,8 +170,9 @@
                     <top>0</top>
                     <width>100%</width>
                     <height>100%</height>
-                    <onup>32</onup>
-                    <ondown>9001</ondown>
+                    <onup>8000</onup>
+                    <onright>9001</onright>
+                    <ondown>1000</ondown>
                     <align>center</align>
                     <aligny>center</aligny>
                     <scroll>true</scroll>
@@ -502,6 +563,8 @@
 
             </control>
 
+
+            
             <!-- Button grouplist -->
             <control type="grouplist" id="9001">
                 <right>side</right>
@@ -511,7 +574,7 @@
                 <itemgap>pad</itemgap>
                 <onleft>312</onleft>
                 <onright>312</onright>
-                <onup>312</onup>
+                <onup>8000</onup>
                 <ondown>1000</ondown>
                 <orientation>horizontal</orientation>
 

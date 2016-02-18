@@ -1,3 +1,6 @@
+[B]2.0.2[/B]
+Add keyboard autocompletion
+
 [B]2.0.1[/B]
 Readd fixes for dbid lookup in extendedinfo
 
