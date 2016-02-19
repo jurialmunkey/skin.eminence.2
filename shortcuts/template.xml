@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <other include="widget">
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="content">$VAR[Defs_HomeWidget_Content]</property>
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="wraplist" id="9001">
+                <skinshortcuts>visibility</skinshortcuts>
+                <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
+                <orientation>horizontal</orientation>
+                <width>100%</width>
+                <top>top</top>
+                <height>height</height>
+                <onfocus>SetProperty(FO9001,1,home)</onfocus>
+                <onunfocus>ClearProperty(FO9001,home)</onunfocus>
+                <onup>ClearProperty(FO9001,home)</onup>
+                <ondown>ClearProperty(FO9001,home)</ondown>
+                <onback>ClearProperty(FO9001,home)</onback>
+                <onback>9000</onback>
+                <ondown>9000</ondown>
+                <onup>9000</onup>
+                <oninfo condition="IsEmpty(Container(9001).ListItem.TvShowTitle) + IsEmpty(Container(9001).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9001).ListItem.Title],imdb_id=$INFO[Container(9001).ListItem.IMDBNumber])</oninfo>
+                <oninfo condition="!IsEmpty(Container(9001).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9001).ListItem.TvShowTitle],imdb_id=$INFO[Container(9001).ListItem.IMDBNumber])</oninfo>
+                <autoscroll time="8000">![Control.HasFocus(9001) | Control.HasFocus(9101)]</autoscroll>
+                <scrolltime tween="sine" easing="out">240</scrolltime>
+                <itemlayout />
+                <focusedlayout width="1920" height="1080" />
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+</template>

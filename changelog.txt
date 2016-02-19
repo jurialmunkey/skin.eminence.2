@@ -1,3 +1,6 @@
+[B]2.0.3[/B]
+Add persistent widgets
+
 [B]2.0.2[/B]
 Add keyboard autocompletion
 
