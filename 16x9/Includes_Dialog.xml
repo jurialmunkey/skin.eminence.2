@@ -252,7 +252,7 @@
     <include name="Dialog_BasicList">
         <param name="backpanel" default="true" />
         <param name="type" default="panel" />
-        <param name="imagelist" default="true" />
+        <param name="imagelist" default="false" />
         <param name="contentvisible" default="false" />
         <definition>
             <control type="image">

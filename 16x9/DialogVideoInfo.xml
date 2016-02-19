@@ -415,6 +415,7 @@
                         <param name="ondown" value="50" />
                         <param name="onup" value="50" />
                         <param name="backpanel" value="false" />
+                        <param name="imagelist" value="true" />
                     </include>
                 </control>
 
@@ -436,6 +437,7 @@
                         <param name="ondown" value="9500" />
                         <param name="onup" value="9500" />
                         <param name="backpanel" value="false" />
+                        <param name="imagelist" value="true" />
                         <param name="contentvisible" value="true" />
                         <param name="content" value="plugin://script.extendedinfo?info=directormovies&amp;&amp;director=$INFO[ListItem.Director]" />
                     </include>
