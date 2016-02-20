@@ -26,8 +26,8 @@
                         <param name="label" value="$INFO[Control.GetLabel(20)]" />
                     </include>
                     <control type="grouplist" id="9">
-                        <ondown>9</ondown>
-                        <onup>9</onup>
+                        <ondown>8000</ondown>
+                        <onup>noop</onup>
                         <onleft>8000</onleft>
                         <onright>2</onright>
                         <width>100%</width>
