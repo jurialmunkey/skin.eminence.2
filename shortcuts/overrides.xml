@@ -2,23 +2,6 @@
 <overrides>
 
     <!-- WIDGET DEFAULTS -->
-    <widget label="31031" icon="special://skin/extras/icons/film.png" path="special://skin/extras/playlists/NewMovies.xsp">special://skin/extras/playlists/NewMovies.xsp</widget>
-    <widget label="31054" icon="special://skin/extras/icons/film.png" path="special://skin/extras/playlists/RandomMovies.xsp">special://skin/extras/playlists/RandomMovies.xsp</widget>
-    <widget label="31032" icon="special://skin/extras/icons/film.png" path="plugin://script.skin.helper.service/?action=recommendedmovies&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]">plugin://script.skin.helper.service/?action=recommendedmovies&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]</widget>
-    <widget label="31124" icon="special://skin/extras/icons/film.png" path="plugin://script.skin.helper.service/?action=similarmovies&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]">plugin://script.skin.helper.service/?action=similarmovies&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]</widget>
-    <widget label="31055" icon="special://skin/extras/icons/tv.png" path="special://skin/extras/playlists/RandomEpisodes.xsp">special://skin/extras/playlists/RandomEpisodes.xsp</widget>
-    <widget label="31035" icon="special://skin/extras/icons/tv.png" path="special://skin/extras/playlists/NewEpisodes.xsp">special://skin/extras/playlists/NewEpisodes.xsp</widget>
-    <widget label="31036" icon="special://skin/extras/icons/tv.png" path="plugin://script.skin.helper.service/?action=nextepisodes&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]">plugin://script.skin.helper.service/?action=nextepisodes&amp;limit=20&amp;reload=$INFO[Window(Home).Property(widgetreload)]</widget>
-    <widget label="31077" icon="special://skin/extras/icons/film.png" path="plugin://script.extendedinfo?info=trendingmovies">plugin://script.extendedinfo?info=trendingmovies</widget>
-    <widget label="31091" icon="special://skin/extras/icons/tv.png" path="plugin://script.extendedinfo?info=trendingshows">plugin://script.extendedinfo?info=trendingshows</widget>
-    <widget label="31078" icon="special://skin/extras/icons/film.png" path="plugin://script.extendedinfo?info=incinemas">plugin://script.extendedinfo?info=incinemas</widget>
-    <widget label="31079" icon="special://skin/extras/icons/film.png" path="plugin://script.extendedinfo?info=upcoming">plugin://script.extendedinfo?info=upcoming</widget>
-    <widget label="31080" icon="special://skin/extras/icons/film.png" path="plugin://script.extendedinfo?info=popularmovies">plugin://script.extendedinfo?info=popularmovies</widget>
-    <widget label="31081" icon="special://skin/extras/icons/film.png" path="plugin://script.extendedinfo?info=topratedmovies">plugin://script.extendedinfo?info=topratedmovies</widget>
-    <widget label="31082" icon="special://skin/extras/icons/tv.png" path="plugin://script.extendedinfo?info=populartvshows">plugin://script.extendedinfo?info=populartvshows</widget>
-    <widget label="31083" icon="special://skin/extras/icons/tv.png" path="plugin://script.extendedinfo?info=topratedtvshows">plugin://script.extendedinfo?info=topratedtvshows</widget>
-    <widget label="31084" icon="special://skin/extras/icons/tv.png" path="plugin://script.extendedinfo?info=onairtvshows">plugin://script.extendedinfo?info=onairtvshows</widget>
-    <widget label="31085" icon="special://skin/extras/icons/tv.png" path="plugin://script.extendedinfo?info=airingtodaytvshows">plugin://script.extendedinfo?info=airingtodaytvshows</widget>
     <widget label="8" condition="!IsEmpty(Skin.String(weather.fanart))">Weather</widget>
     <widgetPlaylists>True</widgetPlaylists>
         

@@ -1,3 +1,7 @@
+[B]2.0.4[/B]
+Set non-persistent widgets as default
+Use option "prevent widget reloading" to enable persistent widgets
+
 [B]2.0.3[/B]
 Add persistent widgets
 

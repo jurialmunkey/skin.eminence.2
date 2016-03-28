@@ -709,3 +709,7 @@ msgstr ""
 msgctxt "#31194"
 msgid "Show plot for hub widgets"
 msgstr ""
+
+msgctxt "#31195"
+msgid "Prevent widget reloading"
+msgstr ""
