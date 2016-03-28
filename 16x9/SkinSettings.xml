@@ -140,7 +140,7 @@
                         <width>100%</width>
                         <label>31195</label>
                         <radioposx>1350</radioposx>
-                        <selected>Skin.HasSetting(widgets.persistent)</selected>
+                        <selected>!Skin.HasSetting(widgets.persistent)</selected>
                         <onclick>Skin.ToggleSetting(widgets.persistent)</onclick>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
