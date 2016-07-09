@@ -18,10 +18,10 @@
                     <top>70</top>
                     <left>bigpad</left>
                     <right>bigpad</right>
-                    <height>621</height>
+                    <height>648</height>
                     <control type="group">
                         <width>460</width>
-                        <height>621</height>
+                        <height>648</height>
                         <include name="Object_Line">
                             <param name="width" value="460" />
                             <param name="label" value="$INFO[Control.GetLabel(190)]$INFO[Control.GetLabel(191)]$INFO[Control.GetLabel(199)]" />
@@ -40,7 +40,7 @@
                             <onright condition="Container(8000).HasFocus(9)">181</onright>
                             <onright condition="Container(8000).HasFocus(10)">221</onright>
                             <width>100%</width>
-                            <height>690</height>
+                            <height>posterh</height>
                             <orientation>vertical</orientation>
                             <itemlayout width="460" height="69">
                                 <control type="image">
@@ -166,10 +166,14 @@
 
                     <control type="group" id="9000">
                         <left>480</left>
-                        <width>1420</width>
-                        <height>690</height>
+                        <width>1292</width>
+                        <height>posterh</height>
+                        <control type="group">
+                            <right>bigpad</right>
+                            <include>Object_Background</include>
+                        </control>
                         <include name="Object_Line">
-                            <param name="width" value="1400" />
+                            <param name="width" value="1272" />
                             <param name="label" value="$INFO[Container(8000).ListItem.Label2,, $LOCALIZE[31130]]" />
                         </include>
                         <control type="group" id="119">
