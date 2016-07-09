@@ -60,7 +60,7 @@
                     <control type="grouplist">
                         <usecontrolcoords>true</usecontrolcoords>
                         <itemgap>pad</itemgap>
-                        <left>1100</left>
+                        <left>900</left>
                         <right>bigpad</right>
                         <top>50</top>
                         <height>64</height>
@@ -147,7 +147,7 @@
                         </control>
                         <control type="label">
                             <left>pad</left>
-                            <right>580</right>
+                            <right>800</right>
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre,,  -  ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] , ][/COLOR][/UPPERCASE]</label>
