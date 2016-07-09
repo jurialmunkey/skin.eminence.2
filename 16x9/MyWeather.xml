@@ -124,12 +124,12 @@
                 <include>Dialog_Top_GroupList</include>
                 <!-- Refresh -->
                 <control type="button" id="2">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(2)</visible>
                 </control>
                 <!-- Change Location -->
                 <control type="button" id="9001">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <onclick>Weather.LocationNext</onclick>
                     <label>$INFO[Weather.Location]</label>
                 </control>
@@ -137,19 +137,19 @@
                 <control type="button" id="9002">
                     <label>31114</label>
                     <onclick>RunScript(script.image.resource.select,property=weather.fanart&amp;type=resource.images.weatherfanart)</onclick>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
                 <!-- Icon -->
                 <control type="button" id="9003">
                     <label>31174</label>
                     <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
                 <!-- Settings -->
                 <control type="button" id="9004">
                     <label>$LOCALIZE[5]</label>
                     <onclick>activatewindow(WeatherSettings)</onclick>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
             </control>
         </control>

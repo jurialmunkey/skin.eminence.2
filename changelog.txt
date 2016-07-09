@@ -1,6 +1,7 @@
 [B]2.5.1[/B]
 Fix overlap on now playing
 Enable weather widget
+Fix some menu buttons
 
 [B]2.5.0[/B]
 Massive overhaul of design. Lots of goodies, too many to name.
