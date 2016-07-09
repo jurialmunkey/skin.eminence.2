@@ -2,7 +2,7 @@
 <overrides>
 
     <!-- WIDGET DEFAULTS -->
-    <widget label="8" condition="!IsEmpty(Skin.String(weather.fanart))">Weather</widget>
+    <widget label="8">Weather</widget>
     <widgetPlaylists>True</widgetPlaylists>
         
     <!-- BACKGROUND SETTINGS -->
