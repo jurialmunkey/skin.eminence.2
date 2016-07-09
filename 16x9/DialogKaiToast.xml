@@ -24,7 +24,7 @@
             <control type="label">
                 <bottom>16</bottom>
                 <left>48</left>
-                <right>side</right>
+                <right>300</right>
                 <height>32</height>
                 <font>Font-RSS</font>
                 <textcolor>LineLabel</textcolor>

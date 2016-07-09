@@ -1,3 +1,6 @@
+[B]2.5.0[/B]
+Massive overhaul of design. Lots of goodies, too many to name.
+
 [B]2.0.4[/B]
 Set non-persistent widgets as default
 Use option "prevent widget reloading" to enable persistent widgets

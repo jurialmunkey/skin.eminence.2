@@ -3,10 +3,10 @@
     <defaultcontrol always="true">9000</defaultcontrol>
     <controls>
         <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <left>0</left>
-            <right>0</right>
+            <top>dialogtop</top>
+            <bottom>60</bottom>
+            <left>sidepad</left>
+            <right>sidepad</right>
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
@@ -14,30 +14,31 @@
             <include>Dialog_Background</include>
             <control type="group">
                 <top>70</top>
-                <left>side</left>
-                <right>side</right>
-                <height>height</height>
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <height>posterh</height>
                 <include name="Object_Line">
-                    <param name="width" value="1880" />
+                    <param name="width" value="1752" />
                     <param name="label" value="$LOCALIZE[19199]" />
                 </include>
+                <control type="group">
+                    <left>0</left>
+                    <width>690</width>
+                    <include>Object_Background</include>
+                </control>
                 <control type="list" id="20">
                     <scrolltime>200</scrolltime>
                     <orientation>vertical</orientation>
                     <preloaditems>2</preloaditems>
                     <onright>9000</onright>
-                    <itemlayout width="690" height="138">
-                        <control type="image">
-                            <width>100%</width>
-                            <height>100%</height>
-                            <texture colordiffuse="PosterBorder">common/white.png</texture>
-                        </control>
+                    <itemlayout width="690" height="144">
+                
                         <control type="group">
                             <control type="image">
                                 <top>pad</top>
                                 <left>pad</left>
-                                <width>118</width>
-                                <height>118</height>
+                                <width>124</width>
+                                <height>124</height>
                                 <aspectratio>keep</aspectratio>
                                 <texture background="true">$INFO[ListItem.Icon]</texture>
                             </control>
@@ -65,7 +66,7 @@
                             </control>
                         </control>
                     </itemlayout>
-                    <focusedlayout width="690" height="138">
+                    <focusedlayout width="690" height="144">
                         <control type="image">
                             <width>100%</width>
                             <height>100%</height>
@@ -76,8 +77,8 @@
                             <control type="image">
                                 <top>pad</top>
                                 <left>pad</left>
-                                <width>118</width>
-                                <height>118</height>
+                                <width>124</width>
+                                <height>124</height>
                                 <aspectratio>keep</aspectratio>
                                 <texture background="true">$INFO[ListItem.Icon]</texture>
                             </control>
@@ -105,6 +106,11 @@
                             </control>
                         </control>
                     </focusedlayout>
+                </control>
+                <control type="group">
+                    <left>710</left>
+                    <width>690</width>
+                    <include>Object_Background</include>
                 </control>
                 <control type="grouplist" id="9000">
                     <left>710</left>
@@ -181,6 +187,11 @@
                         <label>19204</label>
                     </control>
                 </control>
+                <control type="group">
+                    <left>1420</left>
+                    <right>0</right>
+                    <include>Object_Background</include>
+                </control>
                 <control type="grouplist" id="9100">
                     <left>1420</left>
                     <right>0</right>
@@ -224,19 +235,10 @@
                         <label>19205</label>
                     </control>
 
-                    <!-- Icon Background -->
-                    <control type="image" id="9101">
-                        <top>side</top>
-                        <height>325</height>
-                        <width>460</width>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                    </control>
-
                     <!-- Icon -->
                     <control type="image" id="10">
-                        <top>-325</top>
-                        <height>325</height>
-                        <width>460</width>
+                        <height>338</height>
+                        <width>338</width>
                         <aspectratio>keep</aspectratio>
                         <texture>$INFO[ListItem.Icon]</texture>
                         <bordersize>50</bordersize>

@@ -7,8 +7,8 @@
         <control type="group">
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
-            <left>side</left>
-            <right>side</right>
+            <left>bigpad</left>
+            <right>bigpad</right>
             <top>top</top>
             <height>height</height>
         
@@ -143,15 +143,15 @@
                             </control>
                             <control type="label">
                                 <left>150</left>
-                                <top>side</top>
-                                <right>side</right>
+                                <top>bigpad</top>
+                                <right>bigpad</right>
                                 <height>60</height>
                                 <label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
                             </control>
                             <control type="label">
                                 <left>150</left>
-                                <bottom>side</bottom>
-                                <right>side</right>
+                                <bottom>bigpad</bottom>
+                                <right>bigpad</right>
                                 <height>60</height>
                                 <font>Font-RSS</font>
                                 <label>$INFO[ListItem.Property(Description)]</label>
@@ -183,16 +183,16 @@
                             </control>
                             <control type="label">
                                 <left>150</left>
-                                <top>side</top>
-                                <right>side</right>
+                                <top>bigpad</top>
+                                <right>bigpad</right>
                                 <height>60</height>
                                 <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
                             </control>
                             <control type="label">
                                 <left>150</left>
-                                <bottom>side</bottom>
-                                <right>side</right>
+                                <bottom>bigpad</bottom>
+                                <right>bigpad</right>
                                 <height>60</height>
                                 <font>Font-RSS</font>
                                 <textcolor>Selected</textcolor>
@@ -245,15 +245,15 @@
                             </control>
                             <control type="label">
                                 <left>150</left>
-                                <top>side</top>
-                                <right>side</right>
+                                <top>bigpad</top>
+                                <right>bigpad</right>
                                 <height>60</height>
                                 <label>$INFO[ListItem.Property(Number)].  $INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
                             </control>
                             <control type="label">
                                 <left>150</left>
-                                <bottom>side</bottom>
-                                <right>side</right>
+                                <bottom>bigpad</bottom>
+                                <right>bigpad</right>
                                 <height>60</height>
                                 <font>Font-RSS</font>
                                 <label>$INFO[ListItem.Property(Description)]</label>
@@ -285,16 +285,16 @@
                             </control>
                             <control type="label">
                                 <left>150</left>
-                                <top>side</top>
-                                <right>side</right>
+                                <top>bigpad</top>
+                                <right>bigpad</right>
                                 <height>60</height>
                                 <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Property(Number)].  $INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
                             </control>
                             <control type="label">
                                 <left>150</left>
-                                <bottom>side</bottom>
-                                <right>side</right>
+                                <bottom>bigpad</bottom>
+                                <right>bigpad</right>
                                 <height>60</height>
                                 <font>Font-RSS</font>
                                 <textcolor>Selected</textcolor>

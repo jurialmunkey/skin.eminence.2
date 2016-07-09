@@ -3,10 +3,10 @@
     <defaultcontrol>13</defaultcontrol>
     <controls>
         <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <left>0</left>
-            <right>0</right>
+            <top>dialogtop</top>
+            <bottom>sidepad</bottom>
+            <left>sidepad</left>
+            <right>sidepad</right>
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
@@ -14,33 +14,31 @@
             <include>Dialog_Background</include>
             <control type="group">
                 <top>70</top>
-                <left>side</left>
-                <right>side</right>
-                <height>height</height>
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <height>posterh</height>
                 <control type="group">
-                    <width>620</width>
+                    <width>570</width>
+                    <height>576</height>
+                    <include>Object_Background</include>
                     <include name="Object_Line">
-                        <param name="width" value="620" />
+                        <param name="width" value="570" />
                         <param name="label" value="$LOCALIZE[19146]" />
                     </include>
                     <control type="list" id="13">
                         <onright>11</onright>
                         <onleft>8000</onleft>
                         <ondown>8000</ondown>
-                        <width>620</width>
-                        <height>621</height>
+                        <width>570</width>
+                        <height>576</height>
                         <scrolltime>200</scrolltime>
                         <orientation>vertical</orientation>
                         <preloaditems>2</preloaditems>
-                        <itemlayout width="620" height="69">
-                            <control type="image">
-                                <width>100%</width>
-                                <height>100%</height>
-                                <texture colordiffuse="PosterBorder">common/white.png</texture>
-                            </control>
+                        <itemlayout width="570" height="72">
+                 
                             <control type="label">
-                                <left>side</left>
-                                <right>side</right>
+                                <left>bigpad</left>
+                                <right>bigpad</right>
                                 <height>100%</height>
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
@@ -48,7 +46,7 @@
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>
-                        <focusedlayout width="620" height="69">
+                        <focusedlayout width="570" height="72">
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>
@@ -56,8 +54,8 @@
                                 <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(13)">Conditional</animation>
                             </control>
                             <control type="label">
-                                <left>side</left>
-                                <right>side</right>
+                                <left>bigpad</left>
+                                <right>bigpad</right>
                                 <height>100%</height>
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
@@ -68,30 +66,28 @@
                     </control>
                 </control>
                 <control type="group">
-                    <left>630</left>
-                    <width>620</width>
+                    <centerleft>50%</centerleft>
+                    <width>570</width>
+                    <height>576</height>
+                    <include>Object_Background</include>
                     <include name="Object_Line">
-                        <param name="width" value="620" />
+                        <param name="width" value="570" />
                         <param name="label" value="$INFO[Control.GetLabel(21)]" />
                     </include>
                     <control type="list" id="11">
                         <onleft>13</onleft>
                         <onright>12</onright>
                         <ondown>8000</ondown>
-                        <width>620</width>
-                        <height>621</height>
+                        <width>570</width>
+                        <height>576</height>
                         <scrolltime>200</scrolltime>
                         <orientation>vertical</orientation>
                         <preloaditems>2</preloaditems>
-                        <itemlayout width="620" height="69">
-                            <control type="image">
-                                <width>100%</width>
-                                <height>100%</height>
-                                <texture colordiffuse="PosterBorder">common/white.png</texture>
-                            </control>
+                        <itemlayout width="570" height="72">
+                        
                             <control type="label">
-                                <left>side</left>
-                                <right>side</right>
+                                <left>bigpad</left>
+                                <right>bigpad</right>
                                 <height>100%</height>
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
@@ -99,7 +95,7 @@
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>
-                        <focusedlayout width="620" height="69">
+                        <focusedlayout width="570" height="72">
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>
@@ -113,8 +109,8 @@
                                 <visible>!Control.HasFocus(11)</visible>
                             </control>
                             <control type="label">
-                                <left>side</left>
-                                <right>side</right>
+                                <left>bigpad</left>
+                                <right>bigpad</right>
                                 <height>100%</height>
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
@@ -125,30 +121,28 @@
                     </control>
                 </control>
                 <control type="group">
-                    <left>1260</left>
-                    <width>620</width>
+                    <right>0</right>
+                    <width>570</width>
+                    <height>576</height>
+                    <include>Object_Background</include>
                     <include name="Object_Line">
-                        <param name="width" value="620" />
+                        <param name="width" value="570" />
                         <param name="label" value="$INFO[Control.GetLabel(22)]" />
                     </include>
                     <control type="list" id="12">
                         <onleft>11</onleft>
                         <onright>8000</onright>
                         <ondown>8000</ondown>
-                        <width>620</width>
-                        <height>621</height>
+                        <width>570</width>
+                        <height>576</height>
                         <scrolltime>200</scrolltime>
                         <orientation>vertical</orientation>
                         <preloaditems>2</preloaditems>
-                        <itemlayout width="620" height="69">
-                            <control type="image">
-                                <width>100%</width>
-                                <height>100%</height>
-                                <texture colordiffuse="PosterBorder">common/white.png</texture>
-                            </control>
+                        <itemlayout width="570" height="72">
+                        
                             <control type="label">
-                                <left>side</left>
-                                <right>side</right>
+                                <left>bigpad</left>
+                                <right>bigpad</right>
                                 <height>100%</height>
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
@@ -156,7 +150,7 @@
                                 <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>
-                        <focusedlayout width="620" height="69">
+                        <focusedlayout width="570" height="72">
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>
@@ -170,8 +164,8 @@
                                 <visible>!Control.HasFocus(12)</visible>
                             </control>
                             <control type="label">
-                                <left>side</left>
-                                <right>side</right>
+                                <left>bigpad</left>
+                                <right>bigpad</right>
                                 <height>100%</height>
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
@@ -185,8 +179,8 @@
             <control type="grouplist" id="8000">
                 <centerleft>50%</centerleft>
                 <width>1660</width>
-                <bottom>side</bottom>
-                <height>69</height>
+                <bottom>44</bottom>
+                <height>72</height>
                 <align>center</align>
                 <itemgap>20</itemgap>
                 <onup>13</onup>
@@ -194,28 +188,28 @@
                 <!-- OK Button -->
                 <control type="button" id="29">
                     <width>400</width>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>186</label>
                 </control>
 
                 <!-- Delete Button -->
                 <control type="button" id="28">
                     <width>400</width>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>$LOCALIZE[117] $LOCALIZE[19141]</label>
                 </control>
 
                 <!-- Rename Button -->
                 <control type="button" id="27">
                     <width>400</width>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>$LOCALIZE[118] $LOCALIZE[19141]</label>
                 </control>
 
                 <!-- Add Button -->
                 <control type="button" id="26">
                     <width>400</width>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>$LOCALIZE[15019] $LOCALIZE[19141]</label>
                 </control>
             </control>

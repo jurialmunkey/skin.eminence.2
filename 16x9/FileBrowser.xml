@@ -7,67 +7,62 @@
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <centerleft>50%</centerleft>
-            <width>1742</width>
-            <bottom>89</bottom>
-            <height>652</height>
+            <width>1792</width>
+            <bottom>100</bottom>
+            <height>676</height>
             <include>Dialog_Background</include>
             <include name="Dialog_Top_IconHeader">
                 <param name="label" value="$INFO[Control.GetLabel(411)]" />
                 <param name="icon" value="special://skin/extras/icons/filebox.png" />
             </include>
-            <control type="image">
-                <left>side</left>
-                <bottom>side</bottom>
-                <width>552</width>
-                <height>552</height>
-                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            <control type="group">
+                <left>bigpad</left>
+                <bottom>bigpad</bottom>
+                <width>576</width>
+                <height>576</height>
+                <include>Object_Background</include>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                    <visible>SubString(ListItem.Icon,Default)</visible>
+                </control>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                    <visible>!SubString(ListItem.Icon,Default) + !SubString(Control.GetLabel(416),*)</visible>
+                </control>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png" flipx="true">$INFO[ListItem.Icon]</texture>
+                    <visible>!SubString(ListItem.Icon,Default) + SubString(Control.GetLabel(416),*)</visible>
+                </control>
             </control>
-            <control type="image">
-                <left>side</left>
-                <bottom>side</bottom>
-                <width>552</width>
-                <height>552</height>
-                <aspectratio>keep</aspectratio>
-                <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
-                <visible>SubString(ListItem.Icon,Default)</visible>
-            </control>
-            <control type="image">
-                <left>side</left>
-                <bottom>side</bottom>
-                <width>552</width>
-                <height>552</height>
-                <aspectratio>keep</aspectratio>
-                <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
-                <visible>!SubString(ListItem.Icon,Default) + !SubString(Control.GetLabel(416),*)</visible>
-            </control>
-            <control type="image">
-                <left>side</left>
-                <bottom>side</bottom>
-                <width>552</width>
-                <height>552</height>
-                <aspectratio>keep</aspectratio>
-                <texture background="true" fallback="DefaultAddon.png" flipx="true">$INFO[ListItem.Icon]</texture>
-                <visible>!SubString(ListItem.Icon,Default) + SubString(Control.GetLabel(416),*)</visible>
+            <control type="group">
+                <left>616</left>
+                <bottom>bigpad</bottom>
+                <width>1156</width>
+                <height>576</height>
+                <include>Object_Background</include>
             </control>
             <include name="Dialog_ImageList">
                 <param name="id" value="450" />
                 <param name="moveid" value="9000" />
                 <param name="onup" value="450" />
                 <param name="ondown" value="450" />
-                <param name="left" value="582" />
-                <param name="width" value="1160" />
+                <param name="left" value="616" />
+                <param name="width" value="1156" />
             </include>
             <include name="Dialog_ImageList">
                 <param name="id" value="451" />
                 <param name="moveid" value="9000" />
                 <param name="onup" value="450" />
                 <param name="ondown" value="450" />
-                <param name="left" value="582" />
-                <param name="width" value="1160" />
+                <param name="left" value="616" />
+                <param name="width" value="1156" />
             </include>
             <!-- Button grouplist -->
             <control type="grouplist" id="9000">
-                <right>side</right>
+                <right>bigpad</right>
                 <top>pad</top>
                 <align>right</align>
                 <height>60</height>

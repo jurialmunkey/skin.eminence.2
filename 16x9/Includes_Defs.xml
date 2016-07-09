@@ -6,14 +6,30 @@
     </variable>
     <include name="Defs_OptionButton">
         <width>364</width>
-        <height>69</height>
+        <height>72</height>
         <textcolor>ListLabel</textcolor>
         <alttextcolor>Selected</alttextcolor>
         <selectedcolor>Selected</selectedcolor>
         <focusedcolor>Selected</focusedcolor>
         <font>Font-ListInfo-Small</font>
         <aligny>center</aligny>
-        <textoffsetx>side</textoffsetx>
+        <textoffsetx>bigpad</textoffsetx>
+        <radioposx>320</radioposx>
+        <!-- <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus> -->
+        <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
+        <!-- <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus> -->
+        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+    </include>
+    <include name="Defs_OptionButton2">
+        <width>364</width>
+        <height>72</height>
+        <textcolor>ListLabel</textcolor>
+        <alttextcolor>Selected</alttextcolor>
+        <selectedcolor>Selected</selectedcolor>
+        <focusedcolor>Selected</focusedcolor>
+        <font>Font-ListInfo-Small</font>
+        <aligny>center</aligny>
+        <textoffsetx>bigpad</textoffsetx>
         <radioposx>320</radioposx>
         <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
         <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
@@ -29,7 +45,7 @@
         <font>Font-OSD</font>
         <aligny>center</aligny>
         <align>center</align>
-        <textoffsetx>side</textoffsetx>
+        <textoffsetx>bigpad</textoffsetx>
         <texturenofocus>noop</texturenofocus>
         <texturefocus>noop</texturefocus>
         <alttexturenofocus>noop</alttexturenofocus>
@@ -43,7 +59,7 @@
         <focusedcolor>Selected</focusedcolor>
         <font>Font-ListInfo-Small</font>
         <aligny>center</aligny>
-        <textoffsetx>side</textoffsetx>
+        <textoffsetx>bigpad</textoffsetx>
         <radioposx>295</radioposx>
         <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
         <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
@@ -68,7 +84,20 @@
         <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Container(211).ListItem.Property(tilecolor))">$INFO[Container(211).ListItem.Property(tilecolor)]</value>
         <value>$VAR[HighlightColor]</value>
     </variable>
-
+    <include name="Defs_ViewBackground">
+        <left>sidepad</left>
+        <right>sidepad</right>
+        <top>top</top>
+        <height>height</height>
+        <include>Animation_Common</include>
+    </include>
+    <include name="Defs_InfoBackground">
+        <left>sidepad</left>
+        <right>sidepad</right>
+        <top>top</top>
+        <height>height</height>
+        <include>Animation_Info</include>
+    </include>
     <include name="Defs_Shortcuts_SetHub">
         <control type="button" id="$PARAM[buttonid2]" description="Set HUB WIDGET">
             <width>100%</width>

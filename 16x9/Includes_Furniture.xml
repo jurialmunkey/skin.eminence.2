@@ -31,9 +31,9 @@
         </control>
 
         <control type="group">
-            <left>side</left>
-            <right>side</right>
-            <top>210</top>
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>dialogtop</top>
             <height>690</height>
             <visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
@@ -81,7 +81,7 @@
             <control type="label">
                 <bottom>16</bottom>
                 <left>48</left>
-                <right>side</right>
+                <right>bigpad</right>
                 <height>32</height>
                 <font>Font-ListInfo-Small-Bold</font>
                 <textcolor>LineLabel</textcolor>
@@ -93,13 +93,13 @@
             <visible>Skin.HasSetting(furniture.showflags)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-            <bottom>42</bottom>
-            <left>side</left>
-            <right>side</right>
+            <bottom>6</bottom>
+            <left>bigpad</left>
+            <right>bigpad</right>
             <align>right</align>
             <height>64</height>
             <orientation>horizontal</orientation>
-            <itemgap>side</itemgap>
+            <itemgap>bigpad</itemgap>
             <control type="image">
                 <width>64</width>
                 <height>64</height>
@@ -184,36 +184,6 @@
             <texture colordiffuse="FanartFade">common/white.png</texture>
             <visible>!Window.IsVisible(home)</visible>
             <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <width>100%</width>
-            <height>512</height>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>0</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
         </control>
 
         <control type="image" description="Transition Fade">
@@ -228,7 +198,7 @@
             <height>100%</height>
             <fadetime>1000</fadetime>
             <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+            <visible>!IsEmpty(Skin.String(global.background))</visible>
             <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
             <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
             <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
@@ -239,15 +209,15 @@
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
         <value condition="VideoPlayer.IsFullscreen + [Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">PosterBorder</value>
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeBarBG</value>
+        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeBarBG</value>
         <value>PosterBorder</value>
     </variable>
     <variable name="Furniture_TopBar_MainLabel_Color">
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeMainLabel</value>
+        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeMainLabel</value>
         <value>MainLabel</value>
     </variable>
     <variable name="Furniture_TopBar_SubLabel_Color">
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeSubLabel</value>
+        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeSubLabel</value>
         <value>SubLabel</value>
     </variable>
     <variable name="Furniture_TopBar_Header_MainLabel">
@@ -588,7 +558,7 @@
                 <width>100%</width>
                 <height>512</height>
                 <texture colordiffuse="7f000000">common/gradient.png</texture>
-                <visible>Skin.HasSetting(global.backpanelmode) | Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
+                <visible>Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
             </control>
             <control type="group">
                 <include>Furniture_TopBar_Header</include>

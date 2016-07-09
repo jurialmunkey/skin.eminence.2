@@ -10,16 +10,17 @@
         <control type="group">
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
+            <include>Defs_ViewBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="19033" />
+            </include>
             <!-- Main List -->
             <control type="group">
-                <left>side</left>
-                <top>top</top>
-                <height>height</height>
-                <width>475</width>
-                <include name="Object_Line">
-                    <param name="width" value="475" />
-                    <param name="label" value="21866" />
-                </include>
+                <left>bigpad</left>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <width>465</width>
+                <include>Object_Background</include>
                 <control type="grouplist" id="9000">                
                     <itemgap>0</itemgap>
                     <onright>9100</onright>
@@ -61,18 +62,10 @@
             <!-- Sub List -->
             <control type="group">
                 <left>505</left>
-                <top>top</top>
-                <height>height</height>
-                <right>side</right>
-                <include name="Object_Line">
-                    <param name="width" value="1395" />
-                    <param name="label" value="19033" />
-                </include>
-                <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <right>bigpad</right>
+                <include>Object_Background</include>
                 <control type="grouplist" id="9100">                
                     <itemgap>0</itemgap>
                     <onleft>9000</onleft>
@@ -128,7 +121,7 @@
                         <description>Memory BAR</description>
                         <height>10</height>
                         <left>980</left>
-                        <width>390</width>
+                        <width>265</width>
                         <info>system.memory(used)</info>
                         <include>Defs_OptionButton</include>
                     </control>

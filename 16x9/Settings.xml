@@ -10,74 +10,71 @@
 
         <!-- Settings -->
         <control type="group">
+            <include>Defs_ViewBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="$LOCALIZE[5]" />
+            </include>
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
-            <control type="group">
-                <left>side</left>
-                <right>pad</right>
-                <top>top</top>
-                <height>700</height>
-                <include name="Object_Line">
-                    <param name="width" value="1880" />
-                    <param name="label" value="$LOCALIZE[31073]" />
-                </include>
-            </control>
             <control type="panel" id="9000">
-                <left>side</left>
-                <right>pad</right>
-                <top>top</top>
-                <height>700</height>
-                <orientation>horizontal</orientation>
-                <itemlayout height="115" width="945">
-                    <control type="image">
+                <left>bigpad</left>
+                <right>0</right>
+                <top>bigpad</top>
+                <height>730</height>
+                <orientation>vertical</orientation>
+                <itemlayout height="350" width="295.33">
+                    <control type="group">
                         <top>0</top>
-                        <bottom>pad</bottom>
+                        <bottom>bigpad</bottom>
                         <left>0</left>
-                        <right>pad</right>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        <right>bigpad</right>
+                        <include>Object_Background</include>
                     </control>
                     <control type="image">
-                        <top>0</top>
+                        <top>50</top>
+                        <left>0</left>
                         <right>20</right>
-                        <bottom>pad</bottom>
-                        <width>100</width>
+                        <height>128</height>
                         <aspectratio>keep</aspectratio>
                         <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="label">
                         <left>30</left>
-                        <right>30</right>
-                        <top>0</top>
-                        <bottom>pad</bottom>
+                        <right>50</right>
+                        <height>50</height>
+                        <bottom>50</bottom>
                         <textcolor>ListLabel</textcolor>
-                        <align>left</align>
+                        <align>center</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout height="115" width="945">
-                    <control type="image">
+                <focusedlayout height="350" width="295.33">
+                    <control type="group">
                         <top>0</top>
-                        <bottom>pad</bottom>
+                        <bottom>bigpad</bottom>
                         <left>0</left>
-                        <right>pad</right>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        <right>bigpad</right>
+                        <include>Object_Background</include>
+                        <control type="image">
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
                     </control>
                     <control type="image">
-                        <top>0</top>
+                        <top>50</top>
+                        <left>0</left>
                         <right>20</right>
-                        <bottom>pad</bottom>
-                        <width>100</width>
+                        <height>128</height>
                         <aspectratio>keep</aspectratio>
                         <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="label">
                         <left>30</left>
-                        <right>30</right>
-                        <top>0</top>
-                        <bottom>pad</bottom>
+                        <right>50</right>
+                        <height>50</height>
+                        <bottom>50</bottom>
                         <textcolor>Selected</textcolor>
-                        <align>left</align>
+                        <align>center</align>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>

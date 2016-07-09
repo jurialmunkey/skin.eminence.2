@@ -18,4 +18,5 @@
     <color name="PosterBorder">3e555555</color>
     <color name="ListLabel">bfededed</color>
     <color name="Disabled">2fededed</color>
+    <color name="ListBG">bf2a2a2a</color>
 </colors>

@@ -4,446 +4,437 @@
     <onload>ClearProperty(extinfo,home)</onload>
     <controls>
         <control type="group">
-            <top>210</top>
-            <height>780</height>
-            <centerleft>50%</centerleft>
-            <width>1920</width>
-            <include>Animation_Info</include>
+            <include>Defs_InfoBackground</include>
+
             <control type="group">
-                <top>70</top>
-                <left>side</left>
+                <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
+                <include name="Object_Headline">
+                    <param name="label" value="207" />
+                </include>
+            </control>
+            <control type="group">
+                <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
+                <include name="Object_Headline">
+                    <param name="label" value="206" />
+                </include>
+            </control>
+            <control type="group">
+                <visible allowhiddenfocus="true">StringCompare(Window.Property(list),Director)</visible>
+                <include name="Object_Headline">
+                    <param name="label" value="20339" />
+                </include>
+            </control>
+
+            <control type="group">
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <bottom>bigpad</bottom>
                 <include name="Object_Poster">
-                    <param name="left" value="0" />
+                    <param name="flipx" value="false" />
                     <param name="width" value="posterw" />
                 </include>
-
-            </control>
-            <control type="group">
-                <top>70</top>
-                <left>497</left>
-                <right>side</right>
-                <control type="image">
-                    <width>100%</width>
-                    <height>height</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
                 <control type="group">
-                    <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
-                    <include name="Object_Line">
-                        <param name="width" value="1404" />
-                        <param name="label" value="207" />
-                    </include>
-                </control>
-                <control type="group">
-                    <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
-                    <include name="Object_Line">
-                        <param name="width" value="1404" />
-                        <param name="label" value="206" />
-                    </include>
-                </control>
-                <control type="group">
-                    <visible allowhiddenfocus="true">StringCompare(Window.Property(list),Director)</visible>
-                    <include name="Object_Line">
-                        <param name="width" value="1404" />
-                        <param name="label" value="20339" />
-                    </include>
-                </control>
-                
-                <!-- LANGUAGE -->
-                <control type="grouplist">
-                    <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>pad</itemgap>
-                    <orientation>horizontal</orientation>
-                    <align>right</align>
-                    <left>pad</left>
-                    <right>side</right>
-                    <top>pad</top>
-                    <height>32</height>
-                    <control type="image">
-                        <width>32</width>
-                        <height>32</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.AudioLanguage,lang/,.png]</texture>
-                    </control>
-                </control>
-
-                <!-- INFO -->
-                <control type="grouplist">
-                    <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>pad</itemgap>
-                    <orientation>vertical</orientation>
-                    <left>pad</left>
-                    <right>pad</right>
-                    <top>pad</top>
-                    <bottom>pad</bottom>
-                    <control type="label">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>36</height>
-                        <font>Font-InfoBox-Title</font>
-                        <label>$INFO[ListItem.Title]</label>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>550</right>
-                        <height>32</height>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]</label>
-                    </control>
-                    <control type="label">
-                        <top>-40</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesRating),Rotten Tomatoes ,%  •  ]$INFO[ListItem.RatingAndVotes]</label>
-                        <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
-                    </control>
-                    <control type="label">
-                        <top>-40</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[ListItem.RatingAndVotes]</label>
-                        <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
-                    </control>
-                    <control type="textbox">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height max="228">auto</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesConsensus),, ]$VAR[Label_Plot]</label>
-                        <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
-                    </control>
-                    <control type="textbox">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height max="228">auto</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$VAR[Label_Plot]</label>
-                        <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
-                    </control>
-                    <control type="group">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <top>-10</top>
-                        <control type="grouplist">
-                            <include>Info_DetailsGrouplist</include>
-                            <!-- Director -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Director)</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>20339</label>
-                                    <textcolor>ListLabel</textcolor>
-                                </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[ListItem.Director]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
-
-                            <!-- Writer -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Writer)</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>20417</label>
-                                    <textcolor>ListLabel</textcolor>
-                                </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[ListItem.Writer]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
-
-                            <!-- Studio -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Studio)</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>572</label>
-                                    <textcolor>ListLabel</textcolor>
-                                </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[ListItem.Studio]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
-                        </control>
-                    </control>
-                </control>
-                <control type="grouplist">
-                    <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
-                    <bottom>74</bottom>
-                    <left>-20</left>
-                    <right>-20</right>
-                    <height>128</height>
-                    <itemgap>20</itemgap>
-                    <align>center</align>
-                    <orientation>horizontal</orientation>
-                    <control type="group">
-                        <visible>!IsEmpty(ListItem.Duration)</visible>
-                        <width>330</width>
-                        <height>100%</height>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>180</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Duration,, mins]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <width>330</width>
-                        <height>100%</height>
-                        <visible>!IsEmpty(ListItem.MPAA)</visible>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>563</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.MPAA]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <width>330</width>
-                        <height>100%</height>
-                        <visible>!IsEmpty(ListItem.Year)</visible>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>345</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Year]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <width>330</width>
-                        <height>100%</height>
-                        <visible>!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice))</visible>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>31193</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice)]</label>
-                        </control>
-                    </control>
-                    
-                </control>
-                <control type="grouplist" id="9000">
-                    <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-                    <left>pad</left>
-                    <width>1384</width>
-                    <bottom>30</bottom>
-                    <height>69</height>
-                    <align>center</align>
-                    <itemgap>pad</itemgap>
-                    <onleft>noop</onleft>
-                    <onright>noop</onright>
-                    <orientation>horizontal</orientation>
-                    <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
-                    
-                    <!-- Play/Browse Button -->
-                    <control type="togglebutton" id="8">
-                        <label>208</label>
-                        <altlabel>1024</altlabel>
-                        <usealttexture>Container.Content(TVShows)</usealttexture>
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <onfocus>ClearProperty(list)</onfocus>
-                    </control>
-                    <!-- Trailer Button -->
-                    <control type="button" id="11">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>20410</label>
-                        <visible>!IsEmpty(ListItem.Trailer)</visible>
-                        <include>Defs_OptionButton</include>
-                        <onfocus>ClearProperty(list)</onfocus>
-                    </control>
-                    <!-- Cast Button -->
-                    <control type="button" id="5">
-                        <label>206</label>
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(51)</onclick>
-                        <include>Defs_OptionButton</include>
-                        <onfocus>ClearProperty(list)</onfocus>
-                    </control>
-                    <!-- Director Button -->
-                    <control type="button" id="9001">
-                        <label>20339</label>
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <onclick>SetProperty(list,Director)</onclick>
-                        <onclick>SetFocus(9500)</onclick>
-                        <include>Defs_OptionButton</include>
-                        <onfocus>ClearProperty(list)</onfocus>
-                    </control>
-                    <!-- Refresh Button -->
-                    <control type="button" id="6">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>184</label>
-                        <width>147</width>
-                        <include>Defs_OptionButton</include>
-                        <onfocus>ClearProperty(list)</onfocus>
-                    </control>
-                    <!-- Get Thumb Button -->
-                    <control type="button" id="10">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>13511</label>
-                        <include>Defs_OptionButton</include>
-                        <onfocus>ClearProperty(list)</onfocus>
-                    </control>
-                    <!-- Artwork Downloader Button -->
-                    <control type="button" id="20">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>31043</label>
-                        <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-                        <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-                        <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-                        <include>Defs_OptionButton</include>
-                        <onfocus>ClearProperty(list)</onfocus>
-                    </control>
-                    
-                    <!-- Cinema Experience Button -->
-                    <control type="button" id="21">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>31066</label>
-                        <onclick>Dialog.Close(MovieInformation)</onclick>
-                        <onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
-                        <visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
-                        <include>Defs_OptionButton</include>
-                        <onfocus>ClearProperty(list)</onfocus>
-                    </control>
-                </control>
-
-                <!-- CAST -->
-                <control type="group">
-                    <left>0</left>
+                    <left>500</left>
                     <right>0</right>
-                    <top>0</top>
-                    <visible>StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
-                    <include name="Dialog_BasicList">
-                        <param name="width" value="1404"/>
-                        <param name="height" value="height" />
-                        <param name="id" value="50" />
-                        <param name="type" value="list" />
-                        <param name="onleft" value="SendClick(5)" />
-                        <param name="onright" value="SendClick(5)" />
-                        <param name="onback" value="9000" />
-                        <param name="onback2" value="SendClick(5)" />
-                        <param name="ondown" value="50" />
-                        <param name="onup" value="50" />
-                        <param name="backpanel" value="false" />
-                        <param name="imagelist" value="true" />
-                    </include>
-                </control>
+                    <include>Object_Background</include>
+                    
+                    
+                    <!-- LANGUAGE -->
+                    <control type="grouplist">
+                        <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>horizontal</orientation>
+                        <align>right</align>
+                        <left>pad</left>
+                        <right>bigpad</right>
+                        <top>pad</top>
+                        <height>32</height>
+                        <control type="image">
+                            <width>32</width>
+                            <height>32</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture>$INFO[ListItem.AudioLanguage,lang/,.png]</texture>
+                        </control>
+                    </control>
 
-                <!-- DIRECTOR -->
-                <control type="group">
-                    <left>0</left>
-                    <right>0</right>
-                    <top>0</top>
-                    <visible>StringCompare(Window.Property(list),Director)</visible>
-                    <include name="Dialog_BasicList">
-                        <param name="width" value="1404" />
-                        <param name="height" value="height" />
-                        <param name="id" value="9500" />
-                        <param name="type" value="list" />
-                        <param name="onleft" value="9000" />
-                        <param name="onright" value="9000" />
-                        <param name="onback" value="9000" />
-                        <param name="onback2" value="ClearProperty(list)" />
-                        <param name="ondown" value="9500" />
-                        <param name="onup" value="9500" />
-                        <param name="backpanel" value="false" />
-                        <param name="imagelist" value="true" />
-                        <param name="contentvisible" value="true" />
-                        <param name="content" value="plugin://script.extendedinfo?info=directormovies&amp;&amp;director=$INFO[ListItem.Director]" />
-                    </include>
+                    <!-- INFO -->
+                    <control type="grouplist">
+                        <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>vertical</orientation>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <top>pad</top>
+                        <bottom>pad</bottom>
+                        <control type="label">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[ListItem.Title]</label>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>550</right>
+                            <height>32</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]</label>
+                        </control>
+                        <control type="label">
+                            <top>-40</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>28</height>
+                            <align>right</align>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesRating),Rotten Tomatoes ,%  •  ]$INFO[ListItem.RatingAndVotes]</label>
+                            <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
+                        </control>
+                        <control type="label">
+                            <top>-40</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>28</height>
+                            <align>right</align>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.RatingAndVotes]</label>
+                            <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
+                        </control>
+                        <control type="textbox">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height max="228">auto</height>
+                            <font>Font-ListInfo</font>
+                            <align>left</align>
+                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesConsensus),, ]$VAR[Label_Plot]</label>
+                            <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
+                        </control>
+                        <control type="textbox">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height max="228">auto</height>
+                            <font>Font-ListInfo</font>
+                            <align>left</align>
+                            <label>$VAR[Label_Plot]</label>
+                            <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
+                        </control>
+                        <control type="group">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>-10</top>
+                            <control type="grouplist">
+                                <include>Info_DetailsGrouplist</include>
+                                <!-- Director -->
+                                <control type="group">
+                                    <height>36</height>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Director)</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>20339</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Director]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
+                                </control>
+
+                                <!-- Writer -->
+                                <control type="group">
+                                    <height>36</height>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Writer)</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>20417</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Writer]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
+                                </control>
+
+                                <!-- Studio -->
+                                <control type="group">
+                                    <height>36</height>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Studio)</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>572</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Studio]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
+                                </control>
+                            </control>
+                        </control>
+                    </control>
+                    <control type="grouplist">
+                        <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
+                        <bottom>74</bottom>
+                        <left>-20</left>
+                        <right>-20</right>
+                        <height>128</height>
+                        <itemgap>20</itemgap>
+                        <align>center</align>
+                        <orientation>horizontal</orientation>
+                        <control type="group">
+                            <visible>!IsEmpty(ListItem.Duration)</visible>
+                            <width>330</width>
+                            <height>100%</height>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>180</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Duration,, mins]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>330</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(ListItem.MPAA)</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>563</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.MPAA]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>330</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(ListItem.Year)</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>345</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Year]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>330</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice))</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>31193</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice)]</label>
+                            </control>
+                        </control>
+                        
+                    </control>
+                    <control type="grouplist" id="9000">
+                        <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+                        <left>pad</left>
+                        <width>100%</width>
+                        <bottom>30</bottom>
+                        <height>69</height>
+                        <align>center</align>
+                        <itemgap>pad</itemgap>
+                        <onleft>noop</onleft>
+                        <onright>noop</onright>
+                        <orientation>horizontal</orientation>
+                        <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                        
+                        <!-- Play/Browse Button -->
+                        <control type="togglebutton" id="8">
+                            <label>208</label>
+                            <altlabel>1024</altlabel>
+                            <usealttexture>Container.Content(TVShows)</usealttexture>
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                        </control>
+                        <!-- Trailer Button -->
+                        <control type="button" id="11">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>20410</label>
+                            <visible>!IsEmpty(ListItem.Trailer)</visible>
+                            <include>Defs_OptionButton2</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                        </control>
+                        <!-- Cast Button -->
+                        <control type="button" id="5">
+                            <label>206</label>
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(51)</onclick>
+                            <include>Defs_OptionButton2</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                        </control>
+                        <!-- Director Button -->
+                        <control type="button" id="9001">
+                            <label>20339</label>
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <onclick>SetProperty(list,Director)</onclick>
+                            <onclick>SetFocus(9500)</onclick>
+                            <include>Defs_OptionButton2</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                        </control>
+                        <!-- Refresh Button -->
+                        <control type="button" id="6">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>184</label>
+                            <width>147</width>
+                            <include>Defs_OptionButton2</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                        </control>
+                        <!-- Get Thumb Button -->
+                        <control type="button" id="10">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>13511</label>
+                            <include>Defs_OptionButton2</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                        </control>
+                        <!-- Artwork Downloader Button -->
+                        <control type="button" id="20">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>31043</label>
+                            <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+                            <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+                            <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+                            <include>Defs_OptionButton2</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                        </control>
+                        
+                        <!-- Cinema Experience Button -->
+                        <control type="button" id="21">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>31066</label>
+                            <onclick>Dialog.Close(MovieInformation)</onclick>
+                            <onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
+                            <visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
+                            <include>Defs_OptionButton2</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                        </control>
+                    </control>
+
+                    <!-- CAST -->
+                    <control type="group">
+                        <left>0</left>
+                        <right>0</right>
+                        <top>0</top>
+                        <visible>StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
+                        <include name="Dialog_BasicList">
+                            <param name="width" value="listw"/>
+                            <param name="height" value="posterh" />
+                            <param name="id" value="50" />
+                            <param name="type" value="list" />
+                            <param name="onleft" value="SendClick(5)" />
+                            <param name="onright" value="SendClick(5)" />
+                            <param name="onback" value="9000" />
+                            <param name="onback2" value="SendClick(5)" />
+                            <param name="ondown" value="50" />
+                            <param name="onup" value="50" />
+                            <param name="backpanel" value="false" />
+                            <param name="imagelist" value="true" />
+                        </include>
+                    </control>
+
+                    <!-- DIRECTOR -->
+                    <control type="group">
+                        <left>0</left>
+                        <right>0</right>
+                        <top>0</top>
+                        <visible>StringCompare(Window.Property(list),Director)</visible>
+                        <include name="Dialog_BasicList">
+                            <param name="width" value="listw" />
+                            <param name="height" value="posterh" />
+                            <param name="id" value="9500" />
+                            <param name="type" value="list" />
+                            <param name="onleft" value="9000" />
+                            <param name="onright" value="9000" />
+                            <param name="onback" value="9000" />
+                            <param name="onback2" value="ClearProperty(list)" />
+                            <param name="ondown" value="9500" />
+                            <param name="onup" value="9500" />
+                            <param name="backpanel" value="false" />
+                            <param name="imagelist" value="true" />
+                            <param name="contentvisible" value="true" />
+                            <param name="content" value="plugin://script.extendedinfo?info=directormovies&amp;&amp;director=$INFO[ListItem.Director]" />
+                        </include>
+                    </control>
                 </control>
             </control>
-            
         </control>
 
         <control type="button" id="51" description="Cast List Control">

@@ -29,7 +29,7 @@
             <control type="panel" id="8000">
                 <height>69</height>
                 <top>-69</top>
-                <left>side</left>
+                <left>bigpad</left>
                 <right>10</right>
                 <ondown>9001</ondown>
                 <orientation>horizontal</orientation>
@@ -43,8 +43,8 @@
                             <texture colordiffuse="PosterBorder">common/white.png</texture>
                         </control>
                         <control type="label">
-                            <left>side</left>
-                            <right>side</right>
+                            <left>bigpad</left>
+                            <right>bigpad</right>
                             <height>100%</height>
                             <aligny>center</aligny>
                             <align>center</align>
@@ -63,8 +63,8 @@
                             <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                         </control>
                         <control type="label">
-                            <left>side</left>
-                            <right>side</right>
+                            <left>bigpad</left>
+                            <right>bigpad</right>
                             <height>100%</height>
                             <aligny>center</aligny>
                             <align>center</align>
@@ -87,7 +87,7 @@
 
             <!-- Left grouplist -->
             <control type="grouplist" id="9000">
-                <left>side</left>
+                <left>bigpad</left>
                 <top>170</top>
                 <width>340</width>
                 <height>660</height>
@@ -152,7 +152,7 @@
             <!-- Keys -->
             <!-- Edit -->
             <control type="group">
-                <left>side</left>
+                <left>bigpad</left>
                 <right>260</right>
                 <top>70</top>
                 <height>70</height>
@@ -181,7 +181,7 @@
             </control>
 
             <control type="group">
-                <right>side</right>
+                <right>bigpad</right>
                 <top>170</top>
                 <width>1430</width>
 
@@ -567,7 +567,7 @@
             
             <!-- Button grouplist -->
             <control type="grouplist" id="9001">
-                <right>side</right>
+                <right>bigpad</right>
                 <top>70</top>
                 <align>right</align>
                 <width>250</width>

@@ -16,10 +16,10 @@
             <include>Dialog_Background</include>
             <control type="group">
                 <top>70</top>
-                <left>side</left>
-                <right>side</right>
+                <left>bigpad</left>
+                <right>bigpad</right>
                 <control type="group">
-                    <height>69</height>
+                    <height>72</height>
                     <include name="Object_Line">
                         <param name="width" value="1360" />
                         <param name="label" value="$LOCALIZE[21421]" />
@@ -33,7 +33,7 @@
                         <width>675</width>
                         <ondown>17</ondown>
                         <onright>16</onright>
-                        <include>Defs_OptionButton</include>
+                        <include>Defs_OptionButton2</include>
                     </control>
                     <control type="spincontrolex" id="16">
                         <right>0</right>
@@ -42,40 +42,40 @@
                         <width>675</width>
                         <onleft>15</onleft>
                         <ondown>17</ondown>
-                        <include>Defs_OptionButton</include>
+                        <include>Defs_OptionButton2</include>
                     </control>
                     <control type="edit" id="17">
-                        <top>79</top>
+                        <top>82</top>
                         <align>center</align>
                         <textoffsetx>30</textoffsetx>
                         <width>100%</width>
                         <onup>15</onup>
                         <ondown>20</ondown>
-                        <include>Defs_OptionButton</include>
+                        <include>Defs_OptionButton2</include>
                     </control>
 
                 </control> 
             </control>
             <control type="group">
-                <left>side</left>
-                <right>side</right>
+                <left>bigpad</left>
+                <right>bigpad</right>
                 <bottom>109</bottom>
-                <height>69</height>
+                <height>72</height>
                 <control type="button" id="20">
                     <align>center</align>
                     <width>100%</width>
                     <label>1024</label>
                     <ondown>8000</ondown>
                     <onup>17</onup>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
             </control>
             <!-- Ok Cancel Defaults -->
             <control type="grouplist" id="8000">
                 <centerleft>50%</centerleft>
                 <width>760</width>
-                <bottom>side</bottom>
-                <height>69</height>
+                <bottom>bigpad</bottom>
+                <height>72</height>
                 <align>center</align>
                 <itemgap>20</itemgap>
                 <onup>20</onup>
@@ -85,13 +85,13 @@
                     <align>center</align>
                     <width>370</width>
                     <label>186</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
                 <control type="button" id="19">
                     <align>center</align>
                     <width>370</width>
                     <label>222</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
             </control>
         </control>

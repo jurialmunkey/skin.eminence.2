@@ -112,6 +112,7 @@
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         <value>common/black.png</value>
+        <!-- <value>special://skin/extras/backgrounds/main.jpg</value> -->
     </variable>
 
     <variable name="Image_Indicator">

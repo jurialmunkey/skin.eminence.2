@@ -8,178 +8,238 @@
         <include>Furniture_RSS</include>
         <control type="group">
             <include>Animation_Hub</include>
+            <include>Defs_ViewBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="$VAR[Label_Hub_WidgetType]" />
+            </include>
             <control type="group">
-                <top>top</top>
-                <left>side</left>
-                <right>side</right>
-                <height>height</height>
-                <control type="group">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>1210</width>
+                <left>bigpad</left>
+                <top>bigpad</top>
+                <width>1280</width>
+                <height>posterh</height>
+                <include>Object_Background</include>
+                <control type="wraplist" id="9500">
+                    <width>100%</width>
                     <height>100%</height>
-                    <control type="group">
-                        <include name="Object_Line">
-                            <param name="width" value="1210" />
-                            <param name="label" value="$VAR[Label_Hub_WidgetType]" />
-                        </include>
-                    </control>
-                    <control type="image">
-                        <width>100%</width>
-                        <height>100%</height>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                        <visible>!Control.HasFocus(9500)</visible>
-                    </control>
-                    <control type="image">
-                        <width>100%</width>
-                        <height>100%</height>
-                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-                        <visible>Control.HasFocus(9500)</visible>
-                    </control>
-                    <control type="wraplist" id="9500">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <top>pad</top>
-                        <bottom>pad</bottom>
-                        <pagecontrol>60</pagecontrol>
-                        <preloaditems>2</preloaditems>
-                        <onleft>9501</onleft>
-                        <onright>9501</onright>
-                        <oninfo condition="IsEmpty(Container(9500).ListItem.TvShowTitle) + IsEmpty(Container(9500).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9500).ListItem.Title],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
-                        <oninfo condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9500).ListItem.TvShowTitle],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
-                        <orientation>vertical</orientation>
-                        <autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
-                        <scrolltime tween="quadratic">400</scrolltime>
-                        <itemlayout width="1190" height="670">
-                            <control type="image">
-                                <width>100%</width>
-                                <height>100%</height>
-                                <aspectratio>scale</aspectratio>
-                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
-                            </control>
-                        </itemlayout>
-                        <focusedlayout width="1190" height="670">
-                            <control type="image">
-                                <width>100%</width>
-                                <height>100%</height>
-                                <aspectratio>scale</aspectratio>
-                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
-                            </control>
-                        </focusedlayout>
-                        <content limit="10" target="video">$VAR[Defs_Hub_Widget]</content>
-                    </control>
-                    <control type="group">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <bottom>pad</bottom>
-                        <height>122</height>
-                        <visible>!Skin.HasSetting(furniture.hidehubplot)</visible>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <onleft>9501</onleft>
+                    <onright>9501</onright>
+                    <oninfo condition="IsEmpty(Container(9500).ListItem.TvShowTitle) + IsEmpty(Container(9500).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9500).ListItem.Title],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
+                    <oninfo condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9500).ListItem.TvShowTitle],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
+                    <orientation>vertical</orientation>
+                    <autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <itemlayout width="1280" height="720">
                         <control type="image">
                             <width>100%</width>
-                            <height>240</height>
-                            <bottom>0</bottom>
-                            <texture flipy="true" colordiffuse="bfffffff">common/gradient.png</texture>
+                            <height>100%</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
                         </control>
-                        <control type="group">
-                            <control type="label">
-                                <left>side</left>
-                                <right>side</right>
-                                <top>10</top>
-                                <height>32</height>
-                                <textcolor>HomeSubLabel</textcolor>
-                                <label>$VAR[Label_Hub_WidgetLabel]</label>
-                            </control>
-                            <control type="label">
-                                <left>side</left>
-                                <right>side</right>
-                                <top>10</top>
-                                <height>32</height>
-                                <align>right</align>
-                                <textcolor>HomeSubLabel</textcolor>
-                                <font>Font-ListInfo-Small-Bold</font>
-                                <label>$VAR[Label_Hub_WidgetLabel2]</label>
-                            </control>
+                    </itemlayout>
+                    <focusedlayout width="1280" height="720">
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
+                        </control>
+                    </focusedlayout>
+                    <content limit="10" target="video">$VAR[Defs_Hub_Widget]</content>
+                </control>
+                <control type="group">
+                    <left>0</left>
+                    <right>0</right>
+                    <bottom>0</bottom>
+                    <height>180</height>
+                    <visible>!Control.HasFocus(9500)</visible>
+                    <control type="image">
+                        <texture colordiffuse="ListBG">common/white.png</texture>
+                    </control>
+                    <visible>!Skin.HasSetting(furniture.hidehubplot)</visible>
+                    <control type="grouplist">
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>vertical</orientation>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <top>pad</top>
+                        <control type="label">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$VAR[Label_Hub_WidgetLabel]</label>
+                        </control>
+                        <control type="label">
+                            <top>-46</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
+                            <align>right</align>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$VAR[Label_Hub_WidgetLabel2]</label>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>24</height>
+                            <textcolor>$VAR[HighlightColor2]</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[Container(9500).ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                            <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         <control type="textbox">
-                            <left>side</left>
-                            <right>side</right>
-                            <bottom>14</bottom>
-                            <height>68</height>
-                            <align>left</align>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>70</height>
                             <font>Font-ListInfo-Small</font>
-                            <textcolor>HomeSubLabel</textcolor>
+                            <align>left</align>
                             <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+                            <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
+                        <control type="textbox">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>98</height>
+                            <font>Font-ListInfo-Small</font>
+                            <align>left</align>
+                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+                            <visible>IsEmpty(Container(9500).ListItem.Genre)</visible>
+                        </control>
+                        
                     </control>
                 </control>
-                <control type="group" description="hub side">
+                <control type="group">
+                    <left>0</left>
                     <right>0</right>
-                    <top>0</top>
-                    <width>660</width>
-                    <height>100%</height>
-                    <include name="Object_Line">
-                        <param name="width" value="660" />
-                        <param name="label" value="$LOCALIZE[31073]" />
-                    </include>
-                    <control type="panel" id="9501">  
-                        <onleft>9500</onleft>
-                        <onup>9501</onup>
-                        <ondown>9501</ondown>
-                        <height>700</height>
-                        <onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
-                        <pagecontrol>60</pagecontrol>
-                        <preloaditems>2</preloaditems>
-                        <orientation>vertical</orientation>
-                        <scrolltime tween="quadratic">400</scrolltime>
-                        <itemlayout width="660" height="100">
-                            <control type="image">
-                                <width>100%</width>
-                                <top>0</top>
-                                <bottom>pad</bottom>
-                                <texture colordiffuse="PosterBorder">common/white.png</texture>
-                            </control>
-                            <control type="image">
-                                <right>0</right>
-                                <top>0</top>
-                                <bottom>pad</bottom>
-                                <width>90</width>
-                                <aspectratio>keep</aspectratio>
-                                <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
-                            </control>
-                            <control type="label">
-                                <left>30</left>
-                                <right>80</right>
-                                <top>0</top>
-                                <bottom>pad</bottom>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                        </itemlayout>
-                        <focusedlayout width="660" height="100">
-                            <control type="image">
-                                <width>100%</width>
-                                <top>0</top>
-                                <bottom>pad</bottom>
-                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-                            </control>
-                            <control type="image">
-                                <right>0</right>
-                                <top>0</top>
-                                <bottom>pad</bottom>
-                                <width>90</width>
-                                <aspectratio>keep</aspectratio>
-                                <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-                            </control>
-                            <control type="label">
-                                <left>30</left>
-                                <right>80</right>
-                                <top>0</top>
-                                <bottom>pad</bottom>
-                                <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                        </focusedlayout>
-                        <content><include>$PARAM[categories]</include></content>
+                    <bottom>0</bottom>
+                    <height>180</height>
+                    <visible>Control.HasFocus(9500)</visible>
+                    <control type="image">
+                        <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
+                        <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                     </control>
+                    <visible>!Skin.HasSetting(furniture.hidehubplot)</visible>
+                    <control type="grouplist">
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>vertical</orientation>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <top>pad</top>
+                        <control type="label">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$VAR[Label_Hub_WidgetLabel]</label>
+                        </control>
+                        <control type="label">
+                            <top>-46</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
+                            <align>right</align>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$VAR[Label_Hub_WidgetLabel2]</label>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>24</height>
+                            <textcolor>$VAR[HighlightColor2]</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[Container(9500).ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                            <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
+                        </control>
+                        <control type="textbox">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>70</height>
+                            <font>Font-ListInfo-Small</font>
+                            <align>left</align>
+                            <textcolor>Selected</textcolor>
+                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+                            <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
+                        </control>
+                        <control type="textbox">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>98</height>
+                            <font>Font-ListInfo-Small</font>
+                            <align>left</align>
+                            <textcolor>Selected</textcolor>
+                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+                            <visible>IsEmpty(Container(9500).ListItem.Genre)</visible>
+                        </control>
+                        
+                    </control>
+                </control>
+            </control>
+            <control type="group" description="hub side">
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <width>452</width>
+                <height>posterh</height>
+                <include>Object_Background</include>
+                <control type="panel" id="9501">  
+                    <onleft>9500</onleft>
+                    <onup>9501</onup>
+                    <ondown>9501</ondown>
+                    <height>posterh</height>
+                    <onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <orientation>vertical</orientation>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <itemlayout width="452" height="90">
+                        <control type="image">
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <width>70</width>
+                            <aspectratio>keep</aspectratio>
+                            <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <left>30</left>
+                            <right>80</right>
+                            <top>0</top>
+                            <bottom>0</bottom>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="452" height="90">
+                        <control type="image">
+                            <width>100%</width>
+                            <top>0</top>
+                            <bottom>0</bottom>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <width>70</width>
+                            <aspectratio>keep</aspectratio>
+                            <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <left>30</left>
+                            <right>80</right>
+                            <top>0</top>
+                            <bottom>0</bottom>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </focusedlayout>
+                    <content><include>$PARAM[categories]</include></content>
                 </control>
             </control>
         </control>
@@ -408,7 +468,7 @@
                     </control>
                 </control>
                 <control type="image">
-                    <posx>side</posx>
+                    <posx>bigpad</posx>
                     <posy>380</posy>
                     <height>580</height>
                     <width>627</width>
@@ -416,7 +476,7 @@
                     <visible>Player.HasVideo</visible>
                 </control>
                 <control type="videowindow">
-                    <posx>side</posx>
+                    <posx>bigpad</posx>
                     <posy>380</posy>
                     <height>580</height>
                     <width>627</width>
@@ -1269,6 +1329,7 @@
     </include>
     <include name="Window_OSD">
         <control type="group">
+            <visible>![Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
             <!-- <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml) | !Window.IsVisible(MusicVisualisation.xml)</visible> -->
             <animation type="WindowOpen">
                 <effect type="slide" start="0,64" end="0" time="175" />

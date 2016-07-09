@@ -4,413 +4,402 @@
 
     <controls>
         <control type="group">
-            <top>210</top>
-            <height>780</height>
-            <centerleft>50%</centerleft>
-            <width>1920</width>
-            <include>Animation_Info</include>
-            <!-- <include>Dialog_Background</include> -->
+            <include>Defs_InfoBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="19033" />
+            </include>
             <control type="group">
-                <top>70</top>
-                <left>side</left>
+                <top>bigpad</top>
+                <left>bigpad</left>
+                <bottom>bigpad</bottom>
+                <right>bigpad</right>
                 <include name="Object_Poster">
-                    <param name="left" value="0" />
-                    <param name="width" value="690" />
+                    <param name="flipx" value="false" />
+                    <param name="width" value="posterh" />
                 </include>
-            </control>
-            <control type="group">
-                <top>70</top>
-                <left>720</left>
-                <right>side</right>
-                <control type="image">
-                    <width>100%</width>
-                    <height>height</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
                 <control type="group">
-                    <include name="Object_Line">
-                        <param name="width" value="1180" />
-                        <param name="label" value="207" />
-                    </include>
-                </control>
-
-                <!-- INFO -->
-                <control type="grouplist">
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>pad</itemgap>
-                    <orientation>vertical</orientation>
-                    <left>pad</left>
-                    <right>pad</right>
-                    <top>pad</top>
-                    <bottom>pad</bottom>
-                    <control type="label">
+                    <left>740</left>
+                    <width>1012</width>
+                    <include>Object_Background</include>
+ 
+                    <!-- INFO -->
+                    <control type="grouplist">
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>vertical</orientation>
+                        <left>pad</left>
+                        <right>pad</right>
                         <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>36</height>
-                        <font>Font-InfoBox-Title</font>
-                        <label>$INFO[ListItem.Artist]</label>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>32</height>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Album]$INFO[ListItem.Year, (,)][/COLOR][/UPPERCASE]</label>
-                    </control>
-                    <control type="textbox">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height max="228">auto</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</label>
-                    </control>
-                    <control type="group">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <top>-10</top>
-                        <control type="grouplist">
-                            <include>Info_DetailsGrouplist</include>
-                            <!-- Genre -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Genre)</visible>
-                                <control type="label">
-                                    <width>200</width>
+                        <bottom>pad</bottom>
+                        <control type="label">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[ListItem.Artist]</label>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>32</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Album]$INFO[ListItem.Year, (,)][/COLOR][/UPPERCASE]</label>
+                        </control>
+                        <control type="textbox">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height max="228">auto</height>
+                            <font>Font-ListInfo</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</label>
+                        </control>
+                        <control type="group">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>-10</top>
+                            <control type="grouplist">
+                                <include>Info_DetailsGrouplist</include>
+                                <!-- Genre -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>515</label>
-                                    <textcolor>ListLabel</textcolor>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Genre)</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>515</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Genre]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[ListItem.Genre]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
 
-                            <!-- Type -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Album_Type))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Type -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>146</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Album_Type))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>146</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo</font>
+                                        <label>$INFO[ListItem.Property(Album_Type)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo</font>
-                                    <label>$INFO[ListItem.Property(Album_Type)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Label -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Label -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>21899</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>21899</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo</font>
+                                        <label>$INFO[ListItem.Property(Album_Label)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo</font>
-                                    <label>$INFO[ListItem.Property(Album_Label)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Mood -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Album_Mood))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Mood -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>175</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Album_Mood))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>175</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo</font>
+                                        <label>$INFO[ListItem.Property(Album_Mood)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo</font>
-                                    <label>$INFO[ListItem.Property(Album_Mood)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Style -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Style -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>176</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>176</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo</font>
+                                        <label>$INFO[ListItem.Property(Album_Style)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo</font>
-                                    <label>$INFO[ListItem.Property(Album_Style)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Theme -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Album_Theme))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Theme -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>21895</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Album_Theme))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>21895</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <height>36</height>
+                                        <label>$INFO[ListItem.Property(Album_Theme)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <height>36</height>
-                                    <label>$INFO[ListItem.Property(Album_Theme)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Born -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Born -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>21893</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>21893</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <height>36</height>
+                                        <label>$INFO[ListItem.Property(Artist_Born)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <height>36</height>
-                                    <label>$INFO[ListItem.Property(Artist_Born)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Formed -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Formed -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>21894</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>21894</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <height>36</height>
+                                        <label>$INFO[ListItem.Property(Artist_Formed)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <height>36</height>
-                                    <label>$INFO[ListItem.Property(Artist_Formed)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Mood -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Mood -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>175</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>175</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <height>36</height>
+                                        <label>$INFO[ListItem.Property(Artist_Mood)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <height>36</height>
-                                    <label>$INFO[ListItem.Property(Artist_Mood)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Style -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Artist_Style))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Style -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>176</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Artist_Style))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>176</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <height>36</height>
+                                        <label>$INFO[ListItem.Property(Artist_Style)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <height>36</height>
-                                    <label>$INFO[ListItem.Property(Artist_Style)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Instrument -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Artist_Instrument))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Instrument -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>21892</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Artist_Instrument))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>21892</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <height>36</height>
+                                        <label>$INFO[ListItem.Property(Artist_Instrument)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <height>36</height>
-                                    <label>$INFO[ListItem.Property(Artist_Instrument)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Died -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Died -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>21897</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>21897</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <height>36</height>
+                                        <label>$INFO[ListItem.Property(Artist_Died)]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <height>36</height>
-                                    <label>$INFO[ListItem.Property(Artist_Died)]</label>
-                                </control>
-                            </control>
 
-                            <!-- Years active -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
+                                <!-- Years active -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <label>652</label>
-                                </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <textcolor>SubLabel</textcolor>
-                                    <height>36</height>
-                                    <label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <label>652</label>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <textcolor>SubLabel</textcolor>
+                                        <height>36</height>
+                                        <label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
+                                    </control>
                                 </control>
                             </control>
                         </control>
                     </control>
-                </control>
-                
-                <!-- BUTTONS -->
-                <control type="grouplist" id="9000">
-                    <left>pad</left>
-                    <width>1160</width>
-                    <bottom>30</bottom>
-                    <height>69</height>
-                    <align>center</align>
-                    <itemgap>pad</itemgap>
-                    <orientation>horizontal</orientation>
-                    <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
                     
-                    <!-- Youtube Button -->
-                    <control type="button" id="9001">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <label>31108</label>
-                        <onclick>RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Artist],header=Youtube - $INFO[ListItem.Artist])</onclick>
-                    </control>
-                    <!-- Refresh Button -->
-                    <control type="button" id="6">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <label>184</label>
-                    </control>
-                    <!-- Get Thumb Button -->
-                    <control type="button" id="10">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <label>13511</label>
-                    </control>
-                    <!-- Fanart Button -->
-                    <control type="button" id="12">
-                        <width>auto</width>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <label>20413</label>
+                    <!-- BUTTONS -->
+                    <control type="grouplist" id="9000">
+                        <left>pad</left>
+                        <width>100%</width>
+                        <bottom>30</bottom>
+                        <height>69</height>
+                        <align>center</align>
+                        <itemgap>pad</itemgap>
+                        <orientation>horizontal</orientation>
+                        <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                        
+                        <!-- Youtube Button -->
+                        <control type="button" id="9001">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <label>31108</label>
+                            <onclick>RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Artist],header=Youtube - $INFO[ListItem.Artist])</onclick>
+                        </control>
+                        <!-- Refresh Button -->
+                        <control type="button" id="6">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <label>184</label>
+                        </control>
+                        <!-- Get Thumb Button -->
+                        <control type="button" id="10">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <label>13511</label>
+                        </control>
+                        <!-- Fanart Button -->
+                        <control type="button" id="12">
+                            <width>auto</width>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <label>20413</label>
+                        </control>
                     </control>
                 </control>
 

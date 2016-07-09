@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+    <include name="Viewtype_BigIcon">
+        <control type="group">
+            <visible>Control.IsVisible(52)</visible>
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>bigpad</top>
+            <height>posterh</height>
+            <include>Object_Background</include>
+            <control type="wraplist" id="52">
+                <top>30</top>
+                <left>172</left>
+                <right>15</right>
+                <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)</visible>
+                <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
+                <ondown>60</ondown>
+                <onleft>52</onleft>
+                <onright>52</onright>
+                <focusposition>0</focusposition>
+                <preloaditems>0</preloaditems>
+                <pagecontrol>60</pagecontrol>
+                <orientation>horizontal</orientation>
+                <viewtype label="538">bigicon</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <itemlayout width="313" height="660">
+                    <control type="group">
+                        <centertop>30%</centertop>
+                        <left>15</left>
+                        <right>15</right>
+                        <height>424.5</height>
+                        
+                        <control type="image">
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>    
+                            <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="313" height="660">
+                    <control type="group">
+                        <centertop>30%</centertop>
+                        <left>15</left>
+                        <right>15</right>
+                        <height>424.5</height>
+                        
+                        <control type="image">
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>    
+                            <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="group">
+                <top>30</top>
+                <left>30</left>
+                <width>440</width>
+                <height>660</height>
+                <control type="image">
+                    <texture colordiffuse="ff181818">common/white.png</texture>
+                </control>
+                <control type="image">
+                    <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                    <texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
+                    <fadetime>300</fadetime>
+                </control>
+            </control>
+            <control type="group">
+                <right>pad</right>
+                <left>484</left>
+                <height>300</height>
+                <bottom>-30</bottom>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>6</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>60</bottom>
+                    <control type="textbox">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>auto</height>
+                        <align>left</align>
+                        <font>Font-InfoBox-Title</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>auto</height>
+                        <align>left</align>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>126</height>
+                        <font>Font-ListInfo</font>
+                        <align>left</align>
+                        <label>$VAR[Label_Plot]</label>
+                    </control>
+                    
+                    
+                </control>
+                <control type="label">
+                    <top>85</top>
+                    <left>30</left>
+                    <right>bigpad</right>
+                    <height>20</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
+                </control>
+            </control>
+        </control>
+    </include>
+
+</includes>
+ 

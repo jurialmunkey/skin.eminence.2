@@ -8,22 +8,23 @@
 
         <!-- Background -->
         <include>Furniture_Background</include>
-        <include>Furniture_RSS</include
+        <include>Furniture_RSS</include>
         <include>Furniture_TopBar</include>
             
         <!-- Main group -->
         <control type="group">
-
+            <left>sidepad</left>
+            <right>sidepad</right>
             <!-- Left group -->
             <control type="group">
-                <left>side</left>
-                <width>930</width>
+                <left>bigpad</left>
+                <width>866</width>
                 <top>top</top>
                 <include>Animation_Hub</include>
 
                 <include name="Dialog_FileManager_List">
-                    <param name="width" value="930" />
-                    <param name="labelwidth" value="930" />
+                    <param name="width" value="866" />
+                    <param name="labelwidth" value="866" />
                     <param name="id" value="50" />
                     <param name="onleft" value="9000" />
                     <param name="onright" value="100" />
@@ -35,14 +36,14 @@
 
             <!-- Right group -->
             <control type="group">
-                <right>side</right>
-                <width>930</width>
+                <right>bigpad</right>
+                <width>866</width>
                 <top>top</top>
                 <include>Animation_Common</include>
 
                 <include name="Dialog_FileManager_List">
-                    <param name="width" value="930" />
-                    <param name="labelwidth" value="930" />
+                    <param name="width" value="866" />
+                    <param name="labelwidth" value="866" />
                     <param name="id" value="100" />
                     <param name="onleft" value="50" />
                     <param name="onright" value="9000" />
@@ -72,19 +73,19 @@
                 <include>Dialog_Top_GroupList</include>
                 <!-- Open -->
                 <control type="button" id="6">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>502</label>
                     <visible>Control.IsEnabled(6)</visible>
                 </control>
                 <!-- Save -->
                 <control type="button" id="7">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>190</label>
                     <visible>Control.IsEnabled(7)</visible>
                 </control>
                 <!-- Clear -->
                 <control type="button" id="8">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>192</label>
                     <visible>Control.IsEnabled(8)</visible>
                 </control>

@@ -4,8 +4,8 @@
     <controls>
         <include>GlobalOverlay</include>
         <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
+            <top>dialogtop</top>
+            <height>686</height>
             <left>530</left>
             <right>530</right>
             <include>Animation_SlideIn</include>
@@ -15,9 +15,8 @@
             <include>Dialog_Background</include>
             <control type="group">
                 <top>70</top>
-                <left>side</left>
-                <right>side</right>
-                <height>height</height>
+                <left>bigpad</left>
+                <right>bigpad</right>
                 <control type="group">
                     <include name="Object_Line">
                         <param name="width" value="820" />
@@ -34,41 +33,41 @@
                             <label>1008</label>
                             <textoffsetx>30</textoffsetx>
                             <width>100%</width>
-                            <include>Defs_OptionButton</include>
+                            <include>Defs_OptionButton2</include>
                         </control>
                         <control type="edit" id="11">
                             <width>100%</width>
                             <textoffsetx>30</textoffsetx>
-                            <include>Defs_OptionButton</include>
+                            <include>Defs_OptionButton2</include>
                         </control>
                         <control type="button" id="12">
                             <label>1024</label>
                             <width>100%</width>
                             <textoffsetx>30</textoffsetx>
-                            <include>Defs_OptionButton</include>
+                            <include>Defs_OptionButton2</include>
                         </control>
                         <control type="edit" id="16">
                             <width>100%</width>
                             <textoffsetx>30</textoffsetx>
-                            <include>Defs_OptionButton</include>
+                            <include>Defs_OptionButton2</include>
                         </control>
                         <control type="edit" id="13">
                             <width>100%</width>
                             <textoffsetx>30</textoffsetx>
                             <label>1013</label>
-                            <include>Defs_OptionButton</include>
+                            <include>Defs_OptionButton2</include>
                         </control>
                         <control type="edit" id="14">
                             <width>100%</width>
                             <textoffsetx>30</textoffsetx>
                             <label>1014</label>
-                            <include>Defs_OptionButton</include>
+                            <include>Defs_OptionButton2</include>
                         </control>
                         <control type="edit" id="15">
                             <width>100%</width>
                             <textoffsetx>30</textoffsetx>
                             <label>15052</label>
-                            <include>Defs_OptionButton</include>
+                            <include>Defs_OptionButton2</include>
                         </control>
                     </control>
                 </control> 
@@ -76,8 +75,8 @@
             <control type="grouplist" id="8000">
                 <centerleft>50%</centerleft>
                 <width>1240</width>
-                <bottom>side</bottom>
-                <height>69</height>
+                <bottom>bigpad</bottom>
+                <height>72</height>
                 <align>center</align>
                 <itemgap>20</itemgap>
                 <onup>5</onup>
@@ -87,13 +86,13 @@
                     <align>center</align>
                     <width>400</width>
                     <label>186</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
                 <control type="button" id="19">
                     <align>center</align>
                     <width>400</width>
                     <label>222</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
             </control>
         </control>

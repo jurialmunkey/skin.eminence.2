@@ -5,8 +5,8 @@
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0">Hidden</animation>
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0">WindowOpen</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-500" start="0">WindowClose</animation>
-        <left>side</left>
-        <right>side</right>
+        <left>0</left>
+        <right>0</right>
         <top>0</top>
         <height>toppanel</height>
     </include>
@@ -26,14 +26,14 @@
     <include name="Dialog_Top_IconHeader">
         <control type="image">
             <top>0</top>
-            <left>0</left>
+            <left>10</left>
             <width>80</width>
             <height>80</height>
             <texture colordiffuse="ListLabel">$PARAM[icon]</texture>
         </control>
         <control type="label">
-            <left>80</left>
-            <right>side</right>
+            <left>90</left>
+            <right>bigpad</right>
             <top>10</top>
             <height>60</height>
             <aligny>center</aligny>
@@ -43,10 +43,10 @@
     </include>
 
     <include name="Dialog_Top_GroupList">
-        <left>pad</left>
-        <right>pad</right>
+        <left>30</left>
+        <right>30</right>
         <top>80</top>
-        <bottom>pad</bottom>
+        <bottom>30</bottom>
         <onup>50</onup>
         <ondown>50</ondown>
         <onleft>noop</onleft>
@@ -56,12 +56,12 @@
         <orientation>horizontal</orientation>
     </include>
     <include name="Dialog_Top_PowerMenu">
-        <left>pad</left>
-        <right>0</right>
+        <left>30</left>
+        <right>20</right>
         <onup>Close</onup>
         <ondown>Close</ondown>
         <top>80</top>
-        <bottom>pad</bottom>
+        <bottom>30</bottom>
         <onleft>SetFocus(9000)</onleft>
         <onright>SetFocus(9000)</onright>
         <scrolltime>200</scrolltime>
@@ -74,7 +74,7 @@
                 <texture colordiffuse="PosterBorder">common/white.png</texture>
             </control>
             <control type="label">
-                <left>side</left>
+                <left>bigpad</left>
                 <right>30</right>
                 <height>100%</height>
                 <font>Font-ListInfo-Small</font>
@@ -91,7 +91,7 @@
                 <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
             </control>
             <control type="label">
-                <left>side</left>
+                <left>bigpad</left>
                 <right>30</right>
                 <height>100%</height>
                 <font>Font-ListInfo-Small</font>
@@ -105,16 +105,16 @@
     <include name="Dialog_Top_Arrows">
         <control type="group">
             <control type="image">
-                <centertop>115</centertop>
-                <left>-12</left>
+                <centertop>117</centertop>
+                <left>5</left>
                 <width>16</width>
                 <height>16</height>
                 <texture colordiffuse="ListLabel">common/16-arrow-left.png</texture>
                 <visible>Container($PARAM[id]).HasPrevious</visible>
             </control>
             <control type="image">
-                <centertop>115</centertop>
-                <right>-12</right>
+                <centertop>117</centertop>
+                <right>5</right>
                 <width>16</width>
                 <height>16</height>
                 <texture colordiffuse="ListLabel" flipx="true">common/16-arrow-left.png</texture>
@@ -159,9 +159,9 @@
 
         <!-- Heading -->
         <control type="label" id="1">
-            <left>70</left>
-            <right>50</right>
-            <top>30</top>
+            <left>84</left>
+            <right>84</right>
+            <top>40</top>
             <height>60</height>
             <aligny>center</aligny>
             <align>left</align>
@@ -169,28 +169,28 @@
 
         <!-- Details -->
         <control type="textbox" id="9">
-            <left>70</left>
+            <left>84</left>
             <right>720</right>
-            <top>100</top>
+            <top>110</top>
             <bottom>25</bottom>
             <align>left</align>
             <font>Font-ListInfo-Small</font>
         </control>
     </include>
     <include name="Dialog_Bottom_Grouplist">
-        <right>70</right>
+        <right>84</right>
         <align>right</align>
-        <bottom>30</bottom>
-        <height>69</height>
+        <bottom>40</bottom>
+        <height>72</height>
         <orientation>horizontal</orientation>
-        <itemgap>side</itemgap>
+        <itemgap>bigpad</itemgap>
     </include>
     <include name="Dialog_Bottom_Yes">
         <control type="button" id="11">
             <align>center</align>
             <width>300</width>
             <label>186</label>
-            <include>Defs_OptionButton</include>
+            <include>Defs_OptionButton2</include>
             <onleft>10</onleft>
             <onright>noop</onright>
         </control>
@@ -200,7 +200,7 @@
             <align>center</align>
             <width>300</width>
             <label>222</label>
-            <include>Defs_OptionButton</include>
+            <include>Defs_OptionButton2</include>
             <onleft>noop</onleft>
             <onright>11</onright>
         </control>
@@ -255,11 +255,11 @@
         <param name="imagelist" default="false" />
         <param name="contentvisible" default="false" />
         <definition>
-            <control type="image">
+            <control type="group">
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
-                <texture colordiffuse="PosterBorder">common/white.png</texture>
                 <visible>$PARAM[backpanel]</visible>
+                <include>Object_Background</include>
             </control>
             <control type="$PARAM[type]" id="$PARAM[id]">
                 <top>0</top>
@@ -275,7 +275,7 @@
                 <onback>$PARAM[onback2]</onback>
                 <orientation>vertical</orientation>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <itemlayout height="69" width="$PARAM[width]" condition="!$PARAM[imagelist]">
+                <itemlayout height="72" width="$PARAM[width]" condition="!$PARAM[imagelist]">
                     <control type="label">
                         <left>30</left>
                         <right>30</right>
@@ -294,7 +294,7 @@
                     </control>
                 </itemlayout>
 
-                <focusedlayout height="69" width="$PARAM[width]" condition="!$PARAM[imagelist]">
+                <focusedlayout height="72" width="$PARAM[width]" condition="!$PARAM[imagelist]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -321,7 +321,7 @@
                 </focusedlayout>
 
                 <!-- Image List Style -->
-                <itemlayout height="138" width="$PARAM[width]" condition="$PARAM[imagelist]">
+                <itemlayout height="144" width="$PARAM[width]" condition="$PARAM[imagelist]">
                     <control type="image">
                         <left>pad</left>
                         <top>pad</top>
@@ -359,7 +359,7 @@
                     </control>
                 </itemlayout>
 
-                <focusedlayout height="138" width="$PARAM[width]" condition="$PARAM[imagelist]">
+                <focusedlayout height="144" width="$PARAM[width]" condition="$PARAM[imagelist]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -416,36 +416,39 @@
         <param name="top" default="80" />
         <param name="label2" default="false" />
         <definition>
+            <control type="group">
+                <left>$PARAM[left]</left>
+                <top>$PARAM[top]</top>
+                <bottom>bigpad</bottom>
+                <width>$PARAM[width]</width>
+                <include>Object_Background</include>
+                <visible>Control.IsVisible($PARAM[id])</visible>
+            </control>
             <control type="panel" id="$PARAM[id]">
                 <onup>$PARAM[id]</onup>
                 <ondown>$PARAM[id]</ondown>
-                <right>side</right>
+                <right>bigpad</right>
                 <left>$PARAM[left]</left>
                 <top>$PARAM[top]</top>
-                <bottom>side</bottom>
+                <bottom>bigpad</bottom>
                 <onleft>$PARAM[moveid]</onleft>
                 <onright>$PARAM[moveid]</onright>
                 <scrolltime>200</scrolltime>
                 <orientation>vertical</orientation>
-                <itemlayout width="$PARAM[width]" height="69">
-                    <control type="image">
-                        <width>100%</width>
-                        <height>69</height>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                    </control>
+                <itemlayout width="$PARAM[width]" height="72">
                     <control type="label">
-                        <left>side</left>
-                        <right>side</right>
-                        <height>69</height>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>72</height>
                         <textcolor>ListLabel</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
-                        <left>side</left>
-                        <right>side</right>
-                        <height>69</height>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>72</height>
                         <align>right</align>
                         <textcolor>ListLabel</textcolor>
                         <font>Font-ListInfo-Small</font>
@@ -454,25 +457,25 @@
                         <visible>$PARAM[label2]</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout width="$PARAM[width]" height="69">
+                <focusedlayout width="$PARAM[width]" height="72">
                     <control type="image">
                         <width>100%</width>
-                        <height>69</height>
+                        <height>72</height>
                         <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                     </control>
                     <control type="label">
-                        <left>side</left>
-                        <right>side</right>
-                        <height>69</height>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>72</height>
                         <textcolor>Selected</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
-                        <left>side</left>
-                        <right>side</right>
-                        <height>69</height>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>72</height>
                         <align>right</align>
                         <textcolor>Selected</textcolor>
                         <font>Font-ListInfo-Small</font>
@@ -489,8 +492,8 @@
         <param name="width" default="favitemw" />
         <param name="top" default="80" />
         <param name="pad" default="0" />
-        <param name="bottom" default="side" />
-        <param name="right" default="side" />
+        <param name="bottom" default="bigpad" />
+        <param name="right" default="bigpad" />
         <param name="visible" default="true" />
         <param name="backpanel" default="true" />
         <param name="type" default="panel" />
@@ -511,15 +514,7 @@
                 <orientation>vertical</orientation>
                 <visible allowhiddenfocus="true">$PARAM[visible]</visible>
                 <preloaditems>2</preloaditems>
-                <itemlayout width="$PARAM[width]" height="69" condition="$PARAM[noimage]">
-                    <control type="image">
-                        <left>5</left>
-                        <right>5</right>
-                        <bottom>pad</bottom>
-                        <top>0</top>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                        <visible>$PARAM[backpanel]</visible>
-                    </control>
+                <itemlayout width="$PARAM[width]" height="72" condition="$PARAM[noimage]">
                     <control type="group">
                         <control type="label">
                             <left>30</left>
@@ -534,13 +529,7 @@
                         </control>
                     </control>
                 </itemlayout>
-                <itemlayout width="$PARAM[width]" height="138" condition="!$PARAM[noimage] + ![[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)]  | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
-                    <control type="image">
-                        <width>100%</width>
-                        <height>100%</height>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                        <visible>$PARAM[backpanel]</visible>
-                    </control>
+                <itemlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)]  | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
                     <control type="group">
                         <left>$PARAM[pad]</left>
                         <control type="image">
@@ -588,13 +577,8 @@
                         </control>
                     </control>
                 </itemlayout>
-                <itemlayout width="139.75" height="138" condition="!$PARAM[noimage] + [[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)]  | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
-                    <control type="image">
-                        <width>100%</width>
-                        <height>100%</height>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                        <visible>$PARAM[backpanel]</visible>
-                    </control>
+                <itemlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)]  | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
+    
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <centertop>50%</centertop>
@@ -604,7 +588,7 @@
                         <texture background="true">$INFO[ListItem.Icon]</texture>
                     </control>
                 </itemlayout>
-                <focusedlayout width="$PARAM[width]" height="69" condition="$PARAM[noimage]">
+                <focusedlayout width="$PARAM[width]" height="72" condition="$PARAM[noimage]">
                     <control type="image">
                         <left>5</left>
                         <right>5</right>
@@ -626,7 +610,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="$PARAM[width]" height="138" condition="!$PARAM[noimage] + ![[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)] | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
+                <focusedlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)] | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -679,7 +663,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="139.75" height="138" condition="!$PARAM[noimage] + [[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)] | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
+                <focusedlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)] | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>

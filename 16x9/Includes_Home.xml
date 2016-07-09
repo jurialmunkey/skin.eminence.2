@@ -423,8 +423,8 @@
                 <onup>9000</onup>
                 <ondown>9000</ondown>
                 <onback>9000</onback>
-                <left>pad</left>
-                <right>0</right>
+                <left>30</left>
+                <right>20</right>
                 <top>80</top>
                 <bottom>pad</bottom>
                 <onleft>noop</onleft>
@@ -438,7 +438,7 @@
                         <texture colordiffuse="PosterBorder">common/white.png</texture>
                     </control>
                     <control type="label">
-                        <left>side</left>
+                        <left>bigpad</left>
                         <right>30</right>
                         <height>69</height>
                         <textcolor>ListLabel</textcolor>
@@ -454,7 +454,7 @@
                         <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
                     </control>
                     <control type="label">
-                        <left>side</left>
+                        <left>bigpad</left>
                         <right>30</right>
                         <height>69</height>
                         <textcolor>Selected</textcolor>
@@ -516,7 +516,7 @@
     <include name="Home_Widget_DiscArt">
         <control type="image">
             <left>620</left>
-            <top>side</top>
+            <top>bigpad</top>
             <width>300</width>
             <height>300</height>    
             <aspectratio>keep</aspectratio>

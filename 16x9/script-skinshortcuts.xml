@@ -8,9 +8,9 @@
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <centerleft>50%</centerleft>
-            <width>favdialogw</width>
-            <bottom>80</bottom>
-            <height>790</height>
+            <width>1720</width>
+            <bottom>44</bottom>
+            <height>820</height>
             <include>Dialog_Background</include>
             <include name="Dialog_Top_IconHeader">
                 <param name="label" value="$INFO[Control.GetLabel(500)]" />
@@ -18,21 +18,22 @@
             </include>
 
             
-            
-            <control type="list" id="211">
-                <right>side</right>
-                <left>side</left>
+            <control type="group">
+                <width>635</width>
+                <left>bigpad</left>
                 <top>80</top>
-                <bottom>side</bottom>
+                <bottom>bigpad</bottom>
+                <include>Object_Background</include>
+            </control>
+            <control type="list" id="211">
+                <right>bigpad</right>
+                <left>bigpad</left>
+                <top>80</top>
+                <bottom>bigpad</bottom>
                 <scrolltime>0</scrolltime>
                 <orientation>vertical</orientation>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <itemlayout height="69" width="635">
-                    <control type="image">
-                        <width>100%</width>
-                        <height>100%</height>
-                        <texture colordiffuse="PosterBorder">common/white.png</texture>
-                    </control>
+                <itemlayout height="72" width="635">
                     <control type="label">
                         <left>30</left>
                         <right>30</right>
@@ -62,7 +63,7 @@
                     </control>
                 </itemlayout>
 
-                <focusedlayout height="69" width="635">
+                <focusedlayout height="72" width="635">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -100,15 +101,22 @@
                 </focusedlayout>
             </control>
 
+            <control type="group">
+                <width>1025</width>
+                <right>bigpad</right>
+                <top>80</top>
+                <bottom>bigpad</bottom>
+                <include>Object_Background</include>
+            </control>
             <control type="grouplist" id="9100">
                 <onleft>304</onleft>
                 <onright>303</onright>
                 <onup>9100</onup>
                 <ondown>9100</ondown>
-                <right>side</right>
+                <right>bigpad</right>
                 <top>80</top>
-                <bottom>side</bottom>
-                <width>1035</width>
+                <bottom>bigpad</bottom>
+                <width>1025</width>
                 <orientation>vertical</orientation>
                 <itemgap>0</itemgap>
 
@@ -257,6 +265,7 @@
 
             <control type="label" id="500"><visible>false</visible><font>-</font></control>
             
+
             <control type="grouplist" id="9200">
                 <right>1085</right>
                 <top>97</top>
@@ -267,18 +276,18 @@
                 <onup>Control.Move(211,-1)</onup>
                 <ondown>Control.Move(211,1)</ondown>
                 <orientation>horizontal</orientation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,0)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,1)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,2)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,3)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,4)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,5)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,6)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,7)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,8)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,9)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,10)">Conditional</animation>
-                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,11)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,0)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,1)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,2)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,3)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,4)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,5)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,6)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,7)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,8)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,9)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,10)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,11)">Conditional</animation>
                 <control type="button" id="302" description="Delete">
                     <width>32</width>
                     <height>32</height>

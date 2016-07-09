@@ -5,7 +5,7 @@
 
     <controls>
         <control type="group">
-            <top>210</top>
+            <top>dialogtop</top>
             <bottom>133</bottom>
             <centerleft>50%</centerleft>
             <width>1190</width>
@@ -16,13 +16,14 @@
             <include>Dialog_Background</include>
             <control type="group">
                 <top>70</top>
-                <left>side</left>
+                <left>bigpad</left>
                 <right>0</right>
                 <height>572</height>
                 <control type="group">
                     <left>0</left>
-                    <right>side</right>
+                    <right>bigpad</right>
                     <height>552</height>
+                    <include>Object_Background</include>
                     <include name="Object_Line">
                         <param name="width" value="1150" />
                         <param name="label" value="$INFO[Control.GetLabel(2)]" />
@@ -42,7 +43,7 @@
             <control type="grouplist" id="8000">
                 <centerleft>50%</centerleft>
                 <width>1150</width>
-                <bottom>side</bottom>
+                <bottom>bigpad</bottom>
                 <height>69</height>
                 <align>center</align>
                 <itemgap>20</itemgap>
@@ -53,19 +54,19 @@
                     <align>center</align>
                     <width>370</width>
                     <label>294</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
                 <control type="button" id="3">
                     <align>center</align>
                     <width>370</width>
                     <label>296</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
                 <control type="button" id="4">
                     <align>center</align>
                     <width>370</width>
                     <label>20406</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                 </control>
             </control>
         </control>

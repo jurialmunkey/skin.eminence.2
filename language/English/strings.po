@@ -35,7 +35,7 @@ msgid "Next"
 msgstr ""
 
 msgctxt "#31004"
-msgid "Opaque panels"
+msgid "Show shadows on panels"
 msgstr ""
 
 msgctxt "#31005"

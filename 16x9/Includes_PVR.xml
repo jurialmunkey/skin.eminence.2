@@ -11,19 +11,16 @@
                 <visible>Control.IsVisible($PARAM[id])</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
-                <left>side</left>
-                <right>side</right>
-                <top>top</top>
-                <height>height</height>
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <height>posterh</height>
                 <control type="group">
-                    <width>1140</width>
-                    <include name="Object_Line">
-                        <param name="width" value="1130" />
-                        <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
-                    </include>
+                    <width>1012</width>
+                    
                     <control type="panel" id="$PARAM[id]">
-                        <width>1140</width>
-                        <height>700</height>
+                        <width>1012</width>
+                        <height>740</height>
                         <onup>$PARAM[id]</onup>
                         <ondown>$PARAM[id]</ondown>
                         <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
@@ -34,16 +31,12 @@
                         <viewtype label="$PARAM[label]">list</viewtype>
                         <scrolltime tween="quadratic">400</scrolltime>
                         <visible>$PARAM[visible]</visible>
-                        <itemlayout height="140" width="1140">
+                        <itemlayout height="148" width="1022">
                             <control type="group">
                                 <left>0</left>
                                 <right>pad</right>
-                                <bottom>pad</bottom>
-                                <control type="image">
-                                    <width>100%</width>
-                                    <height>100%</height>
-                                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                                </control>
+                                <bottom>bigpad</bottom>
+                                <include>Object_Background</include>
                                 <control type="image">
                                     <width>100%</width>
                                     <height>100%</height>
@@ -52,7 +45,7 @@
                                     <visible>ListItem.IsPlaying</visible>
                                 </control>
                                 <control type="image">
-                                    <left>side</left>
+                                    <left>bigpad</left>
                                     <width>110</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -61,7 +54,7 @@
                                 </control>
                                 <control type="progress">
                                     <left>160</left>
-                                    <right>side</right>
+                                    <right>bigpad</right>
                                     <bottom>16</bottom>
                                     <height>8</height>
                                     <reveal>true</reveal>
@@ -71,7 +64,7 @@
                                 </control>
                                 <control type="label">
                                     <left>160</left>
-                                    <right>side</right>
+                                    <right>bigpad</right>
                                     <top>15</top>
                                     <height>30</height>
                                     <selectedcolor>ListLabel</selectedcolor>
@@ -79,7 +72,7 @@
                                 </control>
                                 <control type="label">
                                     <left>160</left>
-                                    <right>side</right>
+                                    <right>bigpad</right>
                                     <bottom>45</bottom>
                                     <height>30</height>
                                     <font>Font-ListInfo</font>
@@ -88,7 +81,7 @@
                                 </control>
                                 <control type="label">
                                     <left>160</left>
-                                    <right>side</right>
+                                    <right>bigpad</right>
                                     <bottom>45</bottom>
                                     <height>30</height>
                                     <align>right</align>
@@ -99,12 +92,12 @@
                             </control>
                         </itemlayout>
 
-                        <focusedlayout height="140" width="1140">
+                        <focusedlayout height="148" width="1022">
                             <control type="group">
                                 <left>0</left>
                                 <right>pad</right>
-                                <bottom>pad</bottom>
-                                
+                                <bottom>bigpad</bottom>
+                                <include>Object_Background</include>
                                 <control type="image">
                                     <width>100%</width>
                                     <height>100%</height>
@@ -118,7 +111,7 @@
                                     <visible>ListItem.IsPlaying</visible>
                                 </control>
                                 <control type="image">
-                                    <left>side</left>
+                                    <left>bigpad</left>
                                     <width>110</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -127,7 +120,7 @@
                                 </control>
                                 <control type="progress">
                                     <left>160</left>
-                                    <right>side</right>
+                                    <right>bigpad</right>
                                     <bottom>16</bottom>
                                     <height>8</height>
                                     <reveal>true</reveal>
@@ -137,7 +130,7 @@
                                 </control>
                                 <control type="label">
                                     <left>160</left>
-                                    <right>side</right>
+                                    <right>bigpad</right>
                                     <top>15</top>
                                     <height>30</height>
                                     <textcolor>Selected</textcolor>
@@ -146,7 +139,7 @@
                                 </control>
                                 <control type="label">
                                     <left>160</left>
-                                    <right>side</right>
+                                    <right>bigpad</right>
                                     <bottom>45</bottom>
                                     <height>30</height>
                                     <textcolor>Selected</textcolor>
@@ -156,7 +149,7 @@
                                 </control>
                                 <control type="label">
                                     <left>160</left>
-                                    <right>side</right>
+                                    <right>bigpad</right>
                                     <bottom>45</bottom>
                                     <height>30</height>
                                     <align>right</align>
@@ -179,7 +172,7 @@
     <include name="PVR_SmallList_Progress_Item">
         <control type="progress">
             <width>80</width>
-            <right>side</right>
+            <right>bigpad</right>
             <centertop>60%</centertop>
             <height>8</height>
             <reveal>true</reveal>
@@ -191,7 +184,7 @@
     <include name="PVR_SmallList_Progress_Focus">
         <control type="progress">
             <width>80</width>
-            <right>side</right>
+            <right>bigpad</right>
             <centertop>60%</centertop>
             <height>8</height>
             <reveal>true</reveal>
@@ -203,7 +196,7 @@
     <include name="PVR_SmallList_StartTime_Item">
         <control type="label">
             <width>100</width>
-            <right>side</right>
+            <right>bigpad</right>
             <height>100%</height>
             <aligny>center</aligny>
             <align>right</align>
@@ -216,7 +209,7 @@
     <include name="PVR_SmallList_StartTime_Focus">
         <control type="label">
             <width>100</width>
-            <right>side</right>
+            <right>bigpad</right>
             <height>100%</height>
             <aligny>center</aligny>
             <align>right</align>
@@ -239,19 +232,16 @@
                 <visible>Control.IsVisible($PARAM[id])</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
-                <left>side</left>
-                <right>side</right>
-                <top>top</top>
-                <height>height</height>
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <height>posterh</height>
                 <control type="group">
-                    <width>1140</width>
-                    <include name="Object_Line">
-                        <param name="width" value="1130" />
-                        <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
-                    </include>
+                    <width>1012</width>
+                    <include>Object_Background</include>
                     <control type="panel" id="$PARAM[id]">
-                        <width>1140</width>
-                        <height>690</height>
+                        <width>1012</width>
+                        <height>posterh</height>
                         <onup>$PARAM[id]</onup>
                         <ondown>$PARAM[id]</ondown>
                         <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
@@ -262,16 +252,11 @@
                         <viewtype label="$PARAM[label]">list</viewtype>
                         <scrolltime tween="quadratic">400</scrolltime>
                         <visible>$PARAM[visible]</visible>
-                        <itemlayout height="69" width="1140">
+                        <itemlayout height="72" width="1022">
                             <control type="group">
                                 <left>0</left>
                                 <right>pad</right>
                                 <bottom>0</bottom>
-                                <control type="image">
-                                    <width>100%</width>
-                                    <height>100%</height>
-                                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                                </control>
                                 <control type="image">
                                     <width>100%</width>
                                     <height>100%</height>
@@ -280,15 +265,15 @@
                                     <visible>ListItem.IsPlaying</visible>
                                 </control>
                                 <control type="image">
-                                    <left>side</left>
-                                    <width>110</width>
+                                    <left>bigpad</left>
+                                    <width>50</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aspectratio>keep</aspectratio>
                                     <texture background="true">$INFO[ListItem.Icon]</texture>
                                 </control>
                                 <control type="label">
-                                    <left>150</left>
+                                    <left>100</left>
                                     <width>80</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -300,7 +285,7 @@
                                     <label>$INFO[ListItem.ChannelNumber]</label>
                                 </control>
                                 <control type="label">
-                                    <left>250</left>
+                                    <left>200</left>
                                     <width>370</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -311,7 +296,7 @@
                                     <label>$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
-                                    <left>630</left>
+                                    <left>580</left>
                                     <right>120</right>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -325,7 +310,7 @@
                             </control>
                         </itemlayout>
 
-                        <focusedlayout height="69" width="1140">
+                        <focusedlayout height="72" width="1022">
                             <control type="group">
                                 <left>0</left>
                                 <right>pad</right>
@@ -344,15 +329,15 @@
                                     <visible>ListItem.IsPlaying</visible>
                                 </control>
                                 <control type="image">
-                                    <left>side</left>
-                                    <width>110</width>
+                                    <left>bigpad</left>
+                                    <width>50</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
                                     <aspectratio>keep</aspectratio>
                                     <texture background="true">$INFO[ListItem.Icon]</texture>
                                 </control>
                                 <control type="label">
-                                    <left>150</left>
+                                    <left>100</left>
                                     <width>80</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -364,7 +349,7 @@
                                     <label>$INFO[ListItem.ChannelNumber]</label>
                                 </control>
                                 <control type="label">
-                                    <left>250</left>
+                                    <left>200</left>
                                     <width>370</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -375,7 +360,7 @@
                                     <label>$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
-                                    <left>630</left>
+                                    <left>580</left>
                                     <right>120</right>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -409,8 +394,8 @@
                 <visible>Control.IsVisible($PARAM[id])</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
-                <left>side</left>
-                <right>side</right>
+                <left>bigpad</left>
+                <right>bigpad</right>
                 <top>top</top>
                 <height>height</height>
                 <control type="group">
@@ -450,7 +435,7 @@
                                     <visible>ListItem.IsPlaying</visible>
                                 </control>
                                 <control type="image">
-                                    <left>side</left>
+                                    <left>bigpad</left>
                                     <width>110</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -525,7 +510,7 @@
                                     <visible>ListItem.IsPlaying</visible>
                                 </control>
                                 <control type="image">
-                                    <left>side</left>
+                                    <left>bigpad</left>
                                     <width>110</width>
                                     <top>pad</top>
                                     <bottom>pad</bottom>
@@ -601,9 +586,9 @@
                         <texture colordiffuse="PosterBorder">common/white.png</texture>
                     </control>
                     <control type="grouplist">
-                        <top>side</top>
-                        <left>side</left>
-                        <right>side</right>
+                        <top>bigpad</top>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
                         <orientation>vertical</orientation>
                         <itemgap>pad</itemgap>
                         <control type="label">
@@ -634,19 +619,15 @@
             <visible>Control.IsVisible(50)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-            <left>side</left>
-            <right>side</right>
-            <top>top</top>
-            <height>height</height>
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>bigpad</top>
+            <height>posterh</height>
             <control type="group">
-                <width>1140</width>
-                <include name="Object_Line">
-                    <param name="width" value="1130" />
-                    <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
-                </include>
+                <width>1012</width>
                 <control type="panel" id="50">
-                    <width>1140</width>
-                    <height>700</height>
+                    <width>1012</width>
+                    <height>740</height>
                     <onup>50</onup>
                     <ondown>50</ondown>
                     <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
@@ -656,18 +637,14 @@
                     <orientation>vertical</orientation>
                     <viewtype>list</viewtype>
                     <scrolltime tween="quadratic">400</scrolltime>
-                    <itemlayout height="140" width="1140">
+                    <itemlayout height="148" width="1022">
                         <control type="group">
                             <left>0</left>
                             <right>pad</right>
-                            <bottom>pad</bottom>
+                            <bottom>bigpad</bottom>
+                            <include>Object_Background</include>
                             <control type="image">
-                                <width>100%</width>
-                                <height>100%</height>
-                                <texture colordiffuse="PosterBorder">common/white.png</texture>
-                            </control>
-                            <control type="image">
-                                <left>side</left>
+                                <left>bigpad</left>
                                 <width>110</width>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
@@ -676,7 +653,7 @@
                             </control>
                             <control type="label">
                                 <left>160</left>
-                                <right>side</right>
+                                <right>bigpad</right>
                                 <top>30</top>
                                 <height>30</height>
                                 <selectedcolor>ListLabel</selectedcolor>
@@ -684,7 +661,7 @@
                             </control>
                             <control type="label">
                                 <left>160</left>
-                                <right>side</right>
+                                <right>bigpad</right>
                                 <bottom>30</bottom>
                                 <height>30</height>
                                 <font>Font-ListInfo</font>
@@ -702,19 +679,19 @@
                         </control>
                     </itemlayout>
 
-                    <focusedlayout height="140" width="1140">
+                    <focusedlayout height="148" width="1022">
                         <control type="group">
                             <left>0</left>
                             <right>pad</right>
-                            <bottom>pad</bottom>
-                            
+                            <bottom>bigpad</bottom>
+                            <include>Object_Background</include>
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>
                                 <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                             </control>
                             <control type="image">
-                                <left>side</left>
+                                <left>bigpad</left>
                                 <width>110</width>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
@@ -723,7 +700,7 @@
                             </control>
                             <control type="label">
                                 <left>160</left>
-                                <right>side</right>
+                                <right>bigpad</right>
                                 <top>30</top>
                                 <height>30</height>
                                 <selectedcolor>Selected</selectedcolor>
@@ -732,7 +709,7 @@
                             </control>
                             <control type="label">
                                 <left>160</left>
-                                <right>side</right>
+                                <right>bigpad</right>
                                 <bottom>30</bottom>
                                 <height>30</height>
                                 <font>Font-ListInfo</font>
@@ -760,83 +737,82 @@
 
     <include name="PVR_InfoBox">
         <control type="group">
-            <left>1140</left>
-            <width>740</width>
-            <height>height</height>
-            <include name="Object_Line">
-                <param name="width" value="740" />
-                <param name="label" value="19033" />
-            </include>
-            <control type="image">
+            <right>0</right>
+            <width>720</width>
+            <height>posterh</height>
+            <control type="group">
                 <width>100%</width>
-                <height>100%</height>
-                <texture colordiffuse="PosterBorder">common/white.png</texture>
-            </control>
-            <control type="grouplist">
-                <usecontrolcoords>true</usecontrolcoords>
-                <itemgap>pad</itemgap>
-                <orientation>vertical</orientation>
-                <left>pad</left>
-                <right>pad</right>
-                <top>pad</top>
-                <bottom>pad</bottom>
+                <height>405</height>
+                <include>Object_Background</include>
                 <control type="image">
-                    <width>100%</width>
-                    <height>405</height>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                     <fadetime>200</fadetime>
                     <texture background="true">$VAR[Image_PVRThumb]</texture>
                     <visible>!Player.HasVideo</visible>
                 </control>
                 <control type="videowindow">
-                    <!-- <top>-415</top> -->
-                    <width>100%</width>
-                    <height>405</height>
                     <visible>Player.HasVideo</visible>
                 </control>
-                <control type="label">
+            </control>
+            <control type="group">
+                <width>100%</width>
+                <top>425</top>
+                <include>Object_Background</include>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>15</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
                     <top>pad</top>
-                    <left>pad</left>
-                    <right>pad</right>
-                    <height>36</height>
-                    <font>Font-InfoBox-Title</font>
-                    <label>$INFO[ListItem.Title]</label>
-                </control>
-                <control type="label">
-                    <left>pad</left>
-                    <right>pad</right>
-                    <height>32</height>
-                    <font>Font-ListInfo-Small-Bold</font>
-                    <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]</label>
-                </control>
-                <control type="textbox">
-                    <left>pad</left>
-                    <right>pad</right>
-                    <height>114</height>
-                    <font>Font-ListInfo</font>
-                    <align>left</align>
-                    <label>$VAR[Label_Plot]</label>
-                    <visible>!IsEmpty(ListItem.Genre)</visible>
-                </control>
-                <control type="textbox">
-                    <left>pad</left>
-                    <right>pad</right>
-                    <height>154</height>
-                    <font>Font-ListInfo</font>
-                    <align>left</align>
-                    <label>$VAR[Label_Plot]</label>
-                    <visible>IsEmpty(ListItem.Genre)</visible>
-                </control>
-                <control type="label">
-                    <left>pad</left>
-                    <right>pad</right>
-                    <height>28</height>
-                    <align>right</align>
-                    <font>Font-OSD</font>
-                    <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,  -  ,]</label>
+                    <bottom>pad</bottom>
+                    <control type="label">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>36</height>
+                        <font>Font-InfoBox-Title</font>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>24</height>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                        <visible>!IsEmpty(ListItem.Genre)</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>120</height>
+                        <font>Font-ListInfo</font>
+                        <align>left</align>
+                        <label>$VAR[Label_Plot]</label>
+                        <visible>!IsEmpty(ListItem.Genre)</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>154</height>
+                        <font>Font-ListInfo</font>
+                        <align>left</align>
+                        <label>$VAR[Label_Plot]</label>
+                        <visible>IsEmpty(ListItem.Genre)</visible>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>20</height>
+                        <align>right</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime,  -  ,]</label>
+                    </control>
                 </control>
             </control>
         </control>
+
     </include>
     <include name="PVR_Menu">
         <!-- Menu -->
@@ -858,13 +834,13 @@
                 <include>Object_BasicViewList</include>
                 <!-- Groups -->
                 <control type="button" id="28">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>103</label>
                     <visible>Control.IsEnabled(28)</visible>
                 </control>
                 <!-- Filter -->
                 <control type="radiobutton" id="31">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>587</label>
                     <selected>Container.Filtered</selected>
                     <visible>Control.IsEnabled(31) + Window.IsVisible(MyPVRChannels.xml)</visible>

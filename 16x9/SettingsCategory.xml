@@ -7,21 +7,22 @@
         <include>Furniture_TopBar</include>
 
         <control type="group">
+            <include>Defs_ViewBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="$INFO[Control.GetLabel(20)]" />
+            </include>
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
             <!-- Main List -->
             <control type="group">
-                <left>side</left>
-                <top>top</top>
-                <height>height</height>
-                <width>475</width>
-                <include name="Object_Line">
-                    <param name="width" value="475" />
-                    <param name="label" value="$INFO[Control.GetLabel(20)]" />
-                </include>
+                <left>bigpad</left>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <width>465</width>
+                <include>Object_Background</include>
                 <control type="button" id="20">
-                    <top>-48</top>
+                    <top>-45</top>
                     <height>48</height>
                     <aligny>center</aligny>
                     <width>500</width>
@@ -46,13 +47,10 @@
             <!-- Sub List -->
             <control type="group">
                 <left>505</left>
-                <top>top</top>
-                <height>height</height>
-                <right>side</right>
-                <include name="Object_Line">
-                    <param name="width" value="1395" />
-                    <param name="label" value="$LOCALIZE[33063]" />
-                </include>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <right>bigpad</right>
+                <include>Object_Background</include>
                 <control type="grouplist" id="5">                
                     <itemgap>0</itemgap>
                     <onleft>3</onleft>
@@ -90,34 +88,41 @@
         <!-- Category Template -->
         <control type="togglebutton" id="10">
             <width>100%</width>
+            <height>72</height>
             <include>Defs_OptionButton</include>
         </control>
 
 		<!-- Default Templates -->
         <control type="button" id="7">
             <width>100%</width>
+            <height>72</height>
             <include>Defs_OptionButton</include>
         </control>
         <control type="radiobutton" id="8">
             <width>100%</width>
-            <radioposx>1350</radioposx>
+            <height>72</height>
+            <radioposx>1220</radioposx>
             <include>Defs_OptionButton</include>
         </control>
         <control type="spincontrolex" id="9">
             <width>100%</width>
+            <height>72</height>
             <include>Defs_OptionButton</include>
         </control>
         <control type="image" id="11">
             <width>100%</width>
+            <height>72</height>
             <visible>false</visible>
             <include>Defs_OptionButton</include>
         </control>
         <control type="edit" id="12">
             <width>100%</width>
+            <height>72</height>
             <include>Defs_OptionButton</include>
         </control>
         <control type="sliderex" id="13">
             <width>100%</width>
+            <height>72</height>
             <include>Defs_OptionButton</include>
         </control>
 

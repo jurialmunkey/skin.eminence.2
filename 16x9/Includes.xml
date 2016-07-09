@@ -16,7 +16,7 @@
     <include file="script-skinshortcuts-includes.xml"/>
     <include file="Viewtype_List.xml" />
     <include file="Viewtype_Icon.xml" />
-    <include file="Viewtype_Wide.xml" />
+    <include file="Viewtype_BigIcon.xml" />
 
     <!-- GLOBALS -->
     <include name="GlobalOverlay">

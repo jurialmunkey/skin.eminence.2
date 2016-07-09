@@ -9,29 +9,26 @@
             <centerleft>50%</centerleft>
             <width>favdialogw</width>
             <bottom>80</bottom>
-            <height>514</height>
+            <height>532</height>
             <include>Dialog_Background</include>
             <include name="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[1036]" />
                 <param name="icon" value="special://skin/extras/icons/favourites.png" />
             </include>
-            <control type="image">
-                <left>side</left>
-                <bottom>side</bottom>
-                <width>414</width>
-                <height>414</height>
-                <texture colordiffuse="PosterBorder">common/white.png</texture>
-            </control>
-            <control type="image">
-                <left>side</left>
-                <bottom>side</bottom>
-                <width>414</width>
-                <height>414</height>
-                <aspectratio>keep</aspectratio>
-                <texture background="true" fallback="DefaultAddon.png">$INFO[Container(450).ListItem.Icon]</texture>
+            <control type="group">
+                <left>bigpad</left>
+                <bottom>bigpad</bottom>
+                <width>432</width>
+                <height>432</height>
+                <include>Object_Background</include>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png">$INFO[Container(450).ListItem.Icon]</texture>
+                </control>
             </control>
             <include name="Dialog_FavouriteList">
                 <param name="id" value="450" />
+                <param name="left" value="472" />
                 <param name="moveid" value="noop" />
             </include>
 

@@ -14,7 +14,10 @@
 
         <!-- Main group -->
         <control type="group">
-            <include>Animation_Common</include>
+            <include>Defs_ViewBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
+            </include>
             <include>Viewtype_SquareList</include>
         </control>
 
@@ -36,18 +39,18 @@
                 <defaultcontrol always="true">3</defaultcontrol>
                 <!-- View by -->
                 <control type="button" id="2">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(2)</visible>
                 </control>
                 <!-- Sort by -->
                 <control type="button" id="3">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>103</label>
                     <visible>Control.IsEnabled(3)</visible>
                 </control>
                 <!-- Sort ascending/descending -->
                 <control type="togglebutton" id="4">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <label>584</label>
                     <altlabel>585</altlabel>
                     <usealttexture>Container.SortDirection(Descending)</usealttexture>
@@ -55,30 +58,30 @@
                 </control>
                 <!-- Auto Update -->
                 <control type="button" id="5">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(5)</visible>
                 </control>
                 <!-- Notifications -->
                 <control type="radiobutton" id="6">
                     <label>25000</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(6)</visible>
                 </control>
                 <!-- Language Filter -->
                 <control type="radiobutton" id="7">
                     <label>25001</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(7)</visible>
                 </control>
                 <!-- Hide Broken -->
                 <control type="radiobutton" id="8">
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(8)</visible>
                 </control>
                 <!-- Check Updates -->
                 <control type="button" id="9">
                     <label>24055</label>
-                    <include>Defs_OptionButton</include>
+                    <include>Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(9)</visible>
                 </control>
             </control>

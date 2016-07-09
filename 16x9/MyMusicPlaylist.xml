@@ -15,12 +15,12 @@
 
         <!-- Main group -->
         <control type="group">
-            <include>Animation_Common</include>
-            <include>Viewtype_List</include>
-            <include>Viewtype_BigList</include>
-            <include>Viewtype_PanelList</include>
+            <include>Defs_ViewBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
+            </include>
+            <include>Viewtype_SquareList</include>
         </control>
-
         
 
         <!-- Menu -->

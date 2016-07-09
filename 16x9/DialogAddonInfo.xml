@@ -5,256 +5,244 @@
 
     <controls>
         <control type="group">
-            <top>210</top>
-            <height>780</height>
-            <centerleft>50%</centerleft>
-            <width>1920</width>
-            <include>Animation_Info</include>
-            <!-- <include>Dialog_Background</include> -->
+            <include>Defs_InfoBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="19033" />
+            </include>
             <control type="group">
-                <top>70</top>
-                <left>side</left>
+                <top>bigpad</top>
+                <left>bigpad</left>
+                <bottom>bigpad</bottom>
+                <right>bigpad</right>
                 <include name="Object_Poster">
-                    <param name="left" value="0" />
-                    <param name="width" value="690" />
+                    <param name="flipx" value="false" />
+                    <param name="width" value="posterh" />
                 </include>
-            </control>
-            <control type="group">
-                <top>70</top>
-                <left>720</left>
-                <right>side</right>
-                <control type="image">
-                    <width>100%</width>
-                    <height>height</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
                 <control type="group">
-                    <include name="Object_Line">
-                        <param name="width" value="1180" />
-                        <param name="label" value="19033" />
-                    </include>
-                </control>
-
-                <!-- INFO -->
-                <control type="grouplist">
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>pad</itemgap>
-                    <orientation>vertical</orientation>
-                    <left>pad</left>
-                    <right>pad</right>
-                    <top>pad</top>
-                    <bottom>pad</bottom>
-                    <control type="label">
+                    <left>740</left>
+                    <width>1012</width>
+                    <include>Object_Background</include>
+                    <!-- INFO -->
+                    <control type="grouplist">
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>vertical</orientation>
+                        <left>pad</left>
+                        <right>pad</right>
                         <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>36</height>
-                        <font>Font-InfoBox-Title</font>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>32</height>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Property(Addon.Type)][/COLOR][/UPPERCASE]</label>
-                    </control>
-                    <control type="textbox">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height max="228">auto</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$INFO[ListItem.Property(Addon.Description)]</label>
-                    </control>
-                    <control type="group">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <top>-10</top>
-                        <control type="grouplist">
-                            <include>Info_DetailsGrouplist</include>
-                            <!-- Creator -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Addon.Creator))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>21863</label>
-                                    <textcolor>ListLabel</textcolor>
-                                </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[ListItem.Property(Addon.Creator)]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
-
-                            <!-- Summary -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>20037</label>
-                                    <textcolor>ListLabel</textcolor>
-                                </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[ListItem.Property(Addon.Summary)]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
-
-                            <!-- Studio -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(ListItem.Studio)</visible>
-                                <control type="label">
-                                    <width>200</width>
-                                    <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>572</label>
-                                    <textcolor>ListLabel</textcolor>
-                                </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[ListItem.Studio]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
-                        </control>
-                    </control>
-                </control>
-                <control type="grouplist">
-                    <bottom>74</bottom>
-                    <left>-20</left>
-                    <right>-20</right>
-                    <height>128</height>
-                    <itemgap>20</itemgap>
-                    <align>center</align>
-                    <orientation>horizontal</orientation>
-                    <control type="group">
-                        <visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
-                        <width>370</width>
-                        <height>100%</height>
+                        <bottom>pad</bottom>
                         <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>19114</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Property(Addon.Version)]</label>
+                            <label>$INFO[ListItem.Label]</label>
                         </control>
-                    </control>
-                    <control type="group">
-                        <width>370</width>
-                        <height>100%</height>
-                        <visible>!IsEmpty(ListItem.Property(Addon.Status))</visible>
                         <control type="label">
-                            <top>0</top>
+                            <left>pad</left>
+                            <right>pad</right>
                             <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>126</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Property(Addon.Type)][/COLOR][/UPPERCASE]</label>
                         </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Property(Addon.Status)]</label>
+                        <control type="textbox">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height max="228">auto</height>
+                            <font>Font-ListInfo</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Property(Addon.Description)]</label>
+                        </control>
+                        <control type="group">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>-10</top>
+                            <control type="grouplist">
+                                <include>Info_DetailsGrouplist</include>
+                                <!-- Creator -->
+                                <control type="group">
+                                    <height>36</height>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Addon.Creator))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>21863</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Property(Addon.Creator)]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
+                                </control>
+
+                                <!-- Summary -->
+                                <control type="group">
+                                    <height>36</height>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>20037</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Property(Addon.Summary)]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
+                                </control>
+
+                                <!-- Studio -->
+                                <control type="group">
+                                    <height>36</height>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(ListItem.Studio)</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>572</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Studio]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
+                                </control>
+                            </control>
                         </control>
                     </control>
-                    
-                </control>
-                <!-- BUTTONS -->
-                <control type="grouplist" id="9000">
-                    <left>pad</left>
-                    <width>1160</width>
-                    <bottom>30</bottom>
-                    <height>69</height>
-                    <align>center</align>
-                    <itemgap>pad</itemgap>
-                    <orientation>horizontal</orientation>
-                    
-                    <!-- Launch Addon Button -->
-                    <control type="button" id="12">
-                        <width>auto</width>
-                        <label>518</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <visible>Control.IsEnabled(12)</visible>
+                    <control type="grouplist">
+                        <bottom>74</bottom>
+                        <left>-20</left>
+                        <right>-20</right>
+                        <height>128</height>
+                        <itemgap>20</itemgap>
+                        <align>center</align>
+                        <orientation>horizontal</orientation>
+                        <control type="group">
+                            <visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
+                            <width>370</width>
+                            <height>100%</height>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>19114</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Property(Addon.Version)]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>370</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(ListItem.Property(Addon.Status))</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>126</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Property(Addon.Status)]</label>
+                            </control>
+                        </control>
+                        
                     </control>
-                    <!-- Configure Addon Button -->
-                    <control type="button" id="9">
-                        <width>auto</width>
-                        <label>24020</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <visible>Control.IsEnabled(9)</visible>
-                    </control>
-                    <!-- Update Addon Button -->
-                    <control type="button" id="8">
-                        <width>auto</width>
-                        <label>24069</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <visible>Control.IsEnabled(8)</visible>
-                    </control>
-                    <!-- Install/UnInstall Addon button -->
-                    <control type="button" id="6">
-                        <width>auto</width>
-                        <label>24022</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <visible>Control.IsEnabled(6)</visible>
-                    </control>
-                    <!-- Enable/Disable Addon button -->
-                    <control type="button" id="7">
-                        <width>auto</width>
-                        <label>24021</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <visible>Control.IsEnabled(7)</visible>
-                    </control>
-                    <!-- Changelog Button -->
-                    <control type="button" id="10">
-                        <width>auto</width>
-                        <label>24036</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <include>Defs_OptionButton</include>
-                        <visible>Control.IsEnabled(10)</visible>
+                    <!-- BUTTONS -->
+                    <control type="grouplist" id="9000">
+                        <left>pad</left>
+                        <width>100%</width>
+                        <bottom>30</bottom>
+                        <height>69</height>
+                        <align>center</align>
+                        <itemgap>pad</itemgap>
+                        <orientation>horizontal</orientation>
+                        
+                        <!-- Launch Addon Button -->
+                        <control type="button" id="12">
+                            <width>auto</width>
+                            <label>518</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <visible>Control.IsEnabled(12)</visible>
+                        </control>
+                        <!-- Configure Addon Button -->
+                        <control type="button" id="9">
+                            <width>auto</width>
+                            <label>24020</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <visible>Control.IsEnabled(9)</visible>
+                        </control>
+                        <!-- Update Addon Button -->
+                        <control type="button" id="8">
+                            <width>auto</width>
+                            <label>24069</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <visible>Control.IsEnabled(8)</visible>
+                        </control>
+                        <!-- Install/UnInstall Addon button -->
+                        <control type="button" id="6">
+                            <width>auto</width>
+                            <label>24022</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <visible>Control.IsEnabled(6)</visible>
+                        </control>
+                        <!-- Enable/Disable Addon button -->
+                        <control type="button" id="7">
+                            <width>auto</width>
+                            <label>24021</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <visible>Control.IsEnabled(7)</visible>
+                        </control>
+                        <!-- Changelog Button -->
+                        <control type="button" id="10">
+                            <width>auto</width>
+                            <label>24036</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton2</include>
+                            <visible>Control.IsEnabled(10)</visible>
+                        </control>
                     </control>
                 </control>
             </control>

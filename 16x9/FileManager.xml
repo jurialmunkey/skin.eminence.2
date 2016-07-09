@@ -13,17 +13,18 @@
 
         <!-- Main group -->
         <control type="group">
-
+            <left>sidepad</left>
+            <right>sidepad</right>
             <!-- Left group -->
             <control type="group">
-                <left>side</left>
-                <width>930</width>
+                <left>bigpad</left>
+                <width>866</width>
                 <top>top</top>
                 <include>Animation_Hub</include>
 
                 <include name="Dialog_FileManager_List">
-                    <param name="width" value="930" />
-                    <param name="labelwidth" value="825" />
+                    <param name="width" value="866" />
+                    <param name="labelwidth" value="761" />
                     <param name="id" value="20" />
                     <param name="onright" value="21" />
                     <param name="pathid" value="101" />
@@ -33,14 +34,14 @@
 
             <!-- Right group -->
             <control type="group">
-                <right>side</right>
-                <width>930</width>
+                <right>bigpad</right>
+                <width>866</width>
                 <top>top</top>
                 <include>Animation_Common</include>
 
                 <include name="Dialog_FileManager_List">
-                    <param name="width" value="930" />
-                    <param name="labelwidth" value="825" />
+                    <param name="width" value="866" />
+                    <param name="labelwidth" value="761" />
                     <param name="id" value="21" />
                     <param name="onleft" value="20" />
                     <param name="pathid" value="102" />

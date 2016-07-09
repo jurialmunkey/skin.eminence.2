@@ -2,21 +2,23 @@
 <includes>
 
     <constant name="pad">10</constant>
-    <constant name="side">20</constant>
-    <constant name="top">280</constant>
-    <constant name="height">690</constant>
-    <constant name="posterh">690</constant>
+    <constant name="bigpad">20</constant>
+    <constant name="sidepad">64</constant>
+    <constant name="top">260</constant>
+    <constant name="dialogtop">210</constant>
+    <constant name="height">760</constant>
+    <constant name="posterh">720</constant>
     <constant name="thumbh">251</constant>
-    <constant name="posterw">467</constant>
+    <constant name="posterw">480</constant>
     <constant name="posterlistw">487</constant>
     <constant name="infox">477</constant>
     <constant name="posterx">1413</constant>
-    <constant name="toppanel">160</constant>
-    <constant name="listw">1403</constant>
+    <constant name="toppanel">184</constant>
+    <constant name="listw">1252</constant>
     <constant name="listsqw">1180</constant>
     <constant name="sidearrowtop">625</constant>
     <constant name="favitemw">1256</constant>
-    <constant name="favdialogw">1720</constant>
+    <constant name="favdialogw">1748</constant>
 
     <default type="label">
         <textcolor>ListLabel</textcolor>

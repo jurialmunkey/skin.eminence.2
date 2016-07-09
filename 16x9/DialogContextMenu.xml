@@ -30,7 +30,7 @@
 
             <!-- Default Button -->
             <control type="button" id="1000">
-                <include>Defs_OptionButton</include>
+                <include>Defs_OptionButton2</include>
             </control>
         </control>
 

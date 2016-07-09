@@ -3,7 +3,7 @@
     <backgroundcolor>Background</backgroundcolor>
     <menucontrol>9000</menucontrol>
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,51,500,57,58</views>
+    <views>50,500</views>
     <onunload>SetProperty(NodeReturn,music,home)</onunload>
     <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
     <controls>
@@ -15,12 +15,12 @@
 
         <!-- Main group -->
         <control type="group">
-            <include>Animation_Common</include>
+            <include>Defs_ViewBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
+            </include>
             <include>Viewtype_SquareList</include>
-            <include>Viewtype_BigIcon</include>
-            <include>Viewtype_BigList</include>
-            <include>Viewtype_PanelList</include>
-            <include>Viewtype_Thumbs</include>
+            <include>Viewtype_Icon</include>
         </control>
 
         <!-- Menu -->

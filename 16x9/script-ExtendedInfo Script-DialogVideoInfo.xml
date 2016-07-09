@@ -15,412 +15,402 @@
     <onload>Dialog.Close(2003)</onload>
     <controls>
         <control type="group">
-            <top>210</top>
-            <height>780</height>
-            <centerleft>50%</centerleft>
-            <width>1920</width>
-            <include>Animation_Info</include>
+            <include>Defs_InfoBackground</include>
+            <include name="Object_Headline">
+                <param name="label" value="$VAR[Label_ExtendedInfo_InfoLine]" />
+            </include>
             <control type="group">
-                <top>70</top>
-                <left>side</left>
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <bottom>bigpad</bottom>
+                
                 <include name="Object_Poster">
-                    <param name="left" value="0" />
+                    <param name="flipx" value="false" />
                     <param name="width" value="posterw" />
                 </include>
-            </control>
-            <control type="group">
-                <top>70</top>
-                <left>497</left>
-                <right>side</right>
-                <control type="image">
-                    <width>100%</width>
-                    <height>height</height>
-                    <texture colordiffuse="PosterBorder">common/white.png</texture>
-                </control>
                 <control type="group">
-                    <include name="Object_Line">
-                        <param name="width" value="1404" />
-                        <param name="label" value="$VAR[Label_ExtendedInfo_InfoLine]" />
-                    </include>
-                </control>
+                    <left>500</left>
+                    <right>0</right>
+                    <include>Object_Background</include>
 
-                <!-- INFO -->
-                <control type="grouplist">
-                    <visible>ControlGroup(9000).HasFocus()</visible>
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>pad</itemgap>
-                    <orientation>vertical</orientation>
-                    <left>pad</left>
-                    <right>pad</right>
-                    <top>pad</top>
-                    <bottom>pad</bottom>
-                    <control type="label">
+
+                    <!-- INFO -->
+                    <control type="grouplist">
+                        <visible>ControlGroup(9000).HasFocus()</visible>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>vertical</orientation>
+                        <left>pad</left>
+                        <right>pad</right>
                         <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>36</height>
-                        <font>Font-InfoBox-Title</font>
-                        <label>$INFO[Window.Property(title)]</label>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>32</height>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(Genre)][/COLOR][/UPPERCASE]</label>
-                    </control>
-                    <control type="label">
-                        <top>-42</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[Window.Property(rating)]$INFO[Window.Property(votes), (,[LOWERCASE] $LOCALIZE[31017][/LOWERCASE])]</label>
-                    </control>
-                    <control type="textbox">
-                        <top>pad</top>
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height max="152">auto</height>
-                        <font>Font-ListInfo</font>
-                        <align>left</align>
-                        <label>$INFO[Window.Property(Plot)]</label>
-                    </control>
-                    <control type="group">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <top>-10</top>
-                        <control type="grouplist">
-                            <include>Info_DetailsGrouplist</include>
-                            <!-- Director -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(Director))</visible>
-                                <control type="label">
-                                    <width>200</width>
+                        <bottom>pad</bottom>
+                        <control type="label">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>36</height>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[Window.Property(title)]</label>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>32</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(Genre)][/COLOR][/UPPERCASE]</label>
+                        </control>
+                        <control type="label">
+                            <top>-42</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>28</height>
+                            <align>right</align>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[Window.Property(rating)]$INFO[Window.Property(votes), (,[LOWERCASE] $LOCALIZE[31017][/LOWERCASE])]</label>
+                        </control>
+                        <control type="textbox">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height max="152">auto</height>
+                            <font>Font-ListInfo</font>
+                            <align>left</align>
+                            <label>$INFO[Window.Property(Plot)]</label>
+                        </control>
+                        <control type="group">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>-10</top>
+                            <control type="grouplist">
+                                <include>Info_DetailsGrouplist</include>
+                                <!-- Director -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>20339</label>
-                                    <textcolor>ListLabel</textcolor>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(Window.Property(Director))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>20339</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[Window.Property(Director)]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(Director)]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
 
-                            <!-- Writer -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(Writer))</visible>
-                                <control type="label">
-                                    <width>200</width>
+                                <!-- Writer -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>20417</label>
-                                    <textcolor>ListLabel</textcolor>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(Window.Property(Writer))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>20417</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[Window.Property(Writer)]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(Writer)]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
 
-                            <!-- Studio -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(Studio))</visible>
-                                <control type="label">
-                                    <width>200</width>
+                                <!-- Studio -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>572</label>
-                                    <textcolor>ListLabel</textcolor>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(Window.Property(Studio))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>572</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[Window.Property(Studio)]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(Studio)]</label>
-                                    <textcolor>SubLabel</textcolor>
-                                </control>
-                            </control>
 
-                            <!-- Released -->
-                            <control type="group">
-                                <height>36</height>
-                                <width>100%</width>
-                                <visible>!IsEmpty(Window.Property(release_date))</visible>
-                                <control type="label">
-                                    <width>200</width>
+                                <!-- Released -->
+                                <control type="group">
                                     <height>36</height>
-                                    <align>left</align>
-                                    <font>Font-ListInfo-Small</font>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>$INFO[Window.Property(Status)]</label>
-                                    <textcolor>ListLabel</textcolor>
-                                </control>
-                                <control type="label">
-                                    <left>220</left>
-                                    <align>left</align>
-                                    <height>36</height>
-                                    <font>Font-ListInfo-Bold</font>
-                                    <label>$INFO[Window.Property(release_date)]</label>
-                                    <textcolor>SubLabel</textcolor>
+                                    <width>100%</width>
+                                    <visible>!IsEmpty(Window.Property(release_date))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>$INFO[Window.Property(Status)]</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[Window.Property(release_date)]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
                                 </control>
                             </control>
+                        </control>
+                    </control>
+                    <control type="grouplist">
+                        <visible>ControlGroup(9000).HasFocus()</visible>
+                        <bottom>74</bottom>
+                        <left>-20</left>
+                        <right>-20</right>
+                        <height>128</height>
+                        <itemgap>21</itemgap>
+                        <align>center</align>
+                        <orientation>horizontal</orientation>
+                        <control type="group">
+                            <visible>!IsEmpty(Window.Property(duration))</visible>
+                            <width>272</width>
+                            <height>100%</height>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>180</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[Window.Property(duration),, mins]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>272</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(Window.Property(mpaa))</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>563</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[Window.Property(mpaa)]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>272</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(Window.Property(Budget))</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$ADDON[script.extendedinfo 32109]</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[Window.Property(Budget),$,]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>272</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(Window.Property(Revenue))</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$ADDON[script.extendedinfo 32108]</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[Window.Property(Revenue),$,]</label>
+                            </control>
+                        </control>
+                        
+                    </control>
+                    <control type="grouplist" id="9000">
+                        <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+                        <width>100%</width>
+                        <bottom>30</bottom>
+                        <height>69</height>
+                        <align>center</align>
+                        <itemgap>pad</itemgap>
+                        <orientation>horizontal</orientation>
+                        <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                        <control type="button" id="9999">
+                            <visible allowhiddenfocus="true">false</visible>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>Right</onfocus>
+                            <onclick>Right</onclick>
+                            <ondown>Right</ondown>
+                            <onup>Right</onup>
+                            <onleft>Right</onleft>
+                        </control>
+                        
+                        <control type="button" id ="8">
+                            <description>Play</description>
+                            <label>208</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <width>auto</width>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton2</include>
+                            <visible>!IsEmpty(Window.Property(DBID)) + !Stringcompare(Window.Property(Type),tvshow)</visible>
+                            <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
+                            <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
+                        </control>
+
+                        <control type="button" id ="120">
+                            <description>Browse</description>
+                            <label>21385</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <width>auto</width>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton2</include>
+                            <visible>!IsEmpty(Window.Property(DBID)) + Stringcompare(Window.Property(Type),tvshow)</visible>
+                            <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
+                            <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
+                        </control>
+
+                        <control type="button" id ="9002">
+                            <description>Cast</description>
+                            <label>206</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <width>auto</width>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton2</include>
+                            <onclick>SetProperty(content,1000)</onclick>
+                            <onclick>SetFocus(1000)</onclick>
+                            <enable>IntegerGreaterThan(Container(1000).NumItems,0)</enable>
+                        </control>
+
+                        <control type="button" id ="9003">
+                            <description>Similar</description>
+                            <label>31107</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <width>auto</width>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton2</include>
+                            <onclick>SetProperty(content,150)</onclick>
+                            <onclick>SetFocus(150)</onclick>
+                            <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
+                        </control>
+                        <control type="button" id ="9004">
+                            <description>Youtube</description>
+                            <label>31108</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <width>auto</width>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton2</include>
+                            <onclick>SetProperty(content,350)</onclick>
+                            <onclick>SetFocus(350)</onclick>
+                            <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
+                        </control>
+                        <control type="button" id ="9005">
+                            <description>Crew</description>
+                            <label>$ADDON[script.extendedinfo 32115]</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <width>auto</width>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton2</include>
+                            <onclick>SetProperty(content,750)</onclick>
+                            <onclick>SetFocus(750)</onclick>
+                            <enable>IntegerGreaterThan(Container(750).NumItems,0)</enable>
+                        </control>
+                        <control type="button" id ="9006">
+                            <description>Genres</description>
+                            <label>135</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <width>auto</width>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton2</include>
+                            <onclick>SetProperty(content,850)</onclick>
+                            <onclick>SetFocus(850)</onclick>
+                            <enable>IntegerGreaterThan(Container(850).NumItems,0)</enable>
+                        </control>
+                        <control type="button" id ="9007">
+                            <description>Keywords</description>
+                            <label>$ADDON[script.extendedinfo 32114]</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <width>auto</width>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton2</include>
+                            <onclick>SetProperty(content,950)</onclick>
+                            <onclick>SetFocus(950)</onclick>
+                            <enable>IntegerGreaterThan(Container(950).NumItems,0)</enable>
+                        </control>
+                        <control type="button" id="9998">
+                            <visible allowhiddenfocus="true">false</visible>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>Left</onfocus>
+                            <onclick>Left</onclick>
+                            <ondown>Left</ondown>
+                            <onup>Left</onup>
+                            <onleft>Left</onleft>
                         </control>
                     </control>
                 </control>
-                <control type="grouplist">
-                    <visible>ControlGroup(9000).HasFocus()</visible>
-                    <bottom>74</bottom>
-                    <left>-20</left>
-                    <right>-20</right>
-                    <height>128</height>
-                    <itemgap>21</itemgap>
-                    <align>center</align>
-                    <orientation>horizontal</orientation>
-                    <control type="group">
-                        <visible>!IsEmpty(Window.Property(duration))</visible>
-                        <width>272</width>
-                        <height>100%</height>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>180</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(duration),, mins]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <width>272</width>
-                        <height>100%</height>
-                        <visible>!IsEmpty(Window.Property(mpaa))</visible>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>563</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(mpaa)]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <width>272</width>
-                        <height>100%</height>
-                        <visible>!IsEmpty(Window.Property(Budget))</visible>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>$ADDON[script.extendedinfo 32109]</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(Budget),$,]</label>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <width>272</width>
-                        <height>100%</height>
-                        <visible>!IsEmpty(Window.Property(Revenue))</visible>
-                        <control type="label">
-                            <top>0</top>
-                            <height>32</height>
-                            <align>center</align>
-                            <font>Font-ListInfo-Small</font>
-                            <label>$ADDON[script.extendedinfo 32108]</label>
-                        </control>
-                        <control type="label">
-                            <top>32</top>
-                            <height>48</height>
-                            <align>center</align>
-                            <textcolor>SubLabel</textcolor>
-                            <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(Revenue),$,]</label>
-                        </control>
-                    </control>
-                    
-                </control>
-                <control type="grouplist" id="9000">
-                    <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-                    <left>pad</left>
-                    <width>1384</width>
-                    <bottom>30</bottom>
-                    <height>69</height>
-                    <align>center</align>
-                    <itemgap>pad</itemgap>
-                    <orientation>horizontal</orientation>
-                    <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
-                    <control type="button" id="9999">
-                        <visible allowhiddenfocus="true">false</visible>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>Right</onfocus>
-                        <onclick>Right</onclick>
-                        <ondown>Right</ondown>
-                        <onup>Right</onup>
-                        <onleft>Right</onleft>
-                    </control>
-                    
-                    <control type="button" id ="8">
-                        <description>Play</description>
-                        <label>208</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <width>auto</width>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>ClearProperty(content)</onfocus>
-                        <include>Defs_OptionButton</include>
-                        <visible>!IsEmpty(Window.Property(DBID)) + !Stringcompare(Window.Property(Type),tvshow)</visible>
-                        <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
-                        <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
-                    </control>
-
-                    <control type="button" id ="120">
-                        <description>Browse</description>
-                        <label>21385</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <width>auto</width>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>ClearProperty(content)</onfocus>
-                        <include>Defs_OptionButton</include>
-                        <visible>!IsEmpty(Window.Property(DBID)) + Stringcompare(Window.Property(Type),tvshow)</visible>
-                        <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
-                        <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
-                    </control>
-
-                    <control type="button" id ="9002">
-                        <description>Cast</description>
-                        <label>206</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <width>auto</width>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>ClearProperty(content)</onfocus>
-                        <include>Defs_OptionButton</include>
-                        <onclick>SetProperty(content,1000)</onclick>
-                        <onclick>SetFocus(1000)</onclick>
-                        <enable>IntegerGreaterThan(Container(1000).NumItems,0)</enable>
-                    </control>
-
-                    <control type="button" id ="9003">
-                        <description>Similar</description>
-                        <label>31107</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <width>auto</width>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>ClearProperty(content)</onfocus>
-                        <include>Defs_OptionButton</include>
-                        <onclick>SetProperty(content,150)</onclick>
-                        <onclick>SetFocus(150)</onclick>
-                        <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
-                    </control>
-                    <control type="button" id ="9004">
-                        <description>Youtube</description>
-                        <label>31108</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <width>auto</width>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>ClearProperty(content)</onfocus>
-                        <include>Defs_OptionButton</include>
-                        <onclick>SetProperty(content,350)</onclick>
-                        <onclick>SetFocus(350)</onclick>
-                        <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
-                    </control>
-                    <control type="button" id ="9005">
-                        <description>Crew</description>
-                        <label>$ADDON[script.extendedinfo 32115]</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <width>auto</width>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>ClearProperty(content)</onfocus>
-                        <include>Defs_OptionButton</include>
-                        <onclick>SetProperty(content,750)</onclick>
-                        <onclick>SetFocus(750)</onclick>
-                        <enable>IntegerGreaterThan(Container(750).NumItems,0)</enable>
-                    </control>
-                    <control type="button" id ="9006">
-                        <description>Genres</description>
-                        <label>135</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <width>auto</width>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>ClearProperty(content)</onfocus>
-                        <include>Defs_OptionButton</include>
-                        <onclick>SetProperty(content,850)</onclick>
-                        <onclick>SetFocus(850)</onclick>
-                        <enable>IntegerGreaterThan(Container(850).NumItems,0)</enable>
-                    </control>
-                    <control type="button" id ="9007">
-                        <description>Keywords</description>
-                        <label>$ADDON[script.extendedinfo 32114]</label>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <width>auto</width>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>ClearProperty(content)</onfocus>
-                        <include>Defs_OptionButton</include>
-                        <onclick>SetProperty(content,950)</onclick>
-                        <onclick>SetFocus(950)</onclick>
-                        <enable>IntegerGreaterThan(Container(950).NumItems,0)</enable>
-                    </control>
-                    <control type="button" id="9998">
-                        <visible allowhiddenfocus="true">false</visible>
-                        <onback>SetProperty(extinfo,1,home)</onback>
-                        <onfocus>Left</onfocus>
-                        <onclick>Left</onclick>
-                        <ondown>Left</ondown>
-                        <onup>Left</onup>
-                        <onleft>Left</onleft>
-                    </control>
-                </control>
-
             </control>
             <include name="Dialog_ImageList">
                 <param name="id" value="150" />
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="497" />
-                <param name="width" value="1404" />
-                <param name="top" value="70" />
+                <param name="left" value="520" />
+                <param name="width" value="listw" />
+                <param name="top" value="bigpad" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
@@ -431,9 +421,9 @@
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="497" />
-                <param name="width" value="1404" />
-                <param name="top" value="70" />
+                <param name="left" value="520" />
+                <param name="width" value="listw" />
+                <param name="top" value="bigpad" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
@@ -444,10 +434,10 @@
                 <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="497" />
-                <param name="width" value="1404" />
+                <param name="left" value="520" />
+                <param name="width" value="listw" />
                 <param name="right" value="0" />
-                <param name="top" value="70" />
+                <param name="top" value="bigpad" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
@@ -458,10 +448,10 @@
                 <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="497" />
-                <param name="width" value="1404" />
+                <param name="left" value="520" />
+                <param name="width" value="listw" />
                 <param name="right" value="0" />
-                <param name="top" value="70" />
+                <param name="top" value="bigpad" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
@@ -472,9 +462,9 @@
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="497" />
-                <param name="width" value="1404" />
-                <param name="top" value="70" />
+                <param name="left" value="520" />
+                <param name="width" value="listw" />
+                <param name="top" value="bigpad" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
@@ -485,9 +475,9 @@
                 <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="507" />
+                <param name="left" value="530" />
                 <param name="width" value="346" />
-                <param name="top" value="100" />
+                <param name="top" value="40" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
                 <param name="backpanel" value="true" />
@@ -499,9 +489,9 @@
                 <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
                 <param name="moveid2" value="SetFocus(9000)" />
-                <param name="left" value="507" />
+                <param name="left" value="530" />
                 <param name="width" value="346" />
-                <param name="top" value="100" />
+                <param name="top" value="40" />
                 <param name="pad" value="pad" />
                 <param name="bottom" value="128" />
                 <param name="backpanel" value="true" />
