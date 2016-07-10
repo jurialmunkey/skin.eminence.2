@@ -62,9 +62,9 @@
                         <usecontrolcoords>true</usecontrolcoords>
                         <itemgap>pad</itemgap>
                         <orientation>vertical</orientation>
-                        <left>bigpad</left>
-                        <right>bigpad</right>
-                        <top>pad</top>
+                        <left>12</left>
+                        <right>12</right>
+                        <top>6</top>
                         <control type="label">
                             <top>pad</top>
                             <left>pad</left>
@@ -127,9 +127,9 @@
                         <usecontrolcoords>true</usecontrolcoords>
                         <itemgap>pad</itemgap>
                         <orientation>vertical</orientation>
-                        <left>bigpad</left>
-                        <right>bigpad</right>
-                        <top>pad</top>
+                        <left>12</left>
+                        <right>12</right>
+                        <top>6</top>
                         <control type="label">
                             <top>pad</top>
                             <left>pad</left>
