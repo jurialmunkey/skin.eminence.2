@@ -283,6 +283,17 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
+                    <!-- Show background music -->
+                    <control type="radiobutton" id="8204">
+                        <width>100%</width>
+                        <label>31028</label>
+                        <radioposx>settingsradioposx</radioposx>
+                        <selected>Skin.HasSetting(background.showvisualisation)</selected>
+                        <onclick>Skin.ToggleSetting(background.showvisualisation)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
                     <!-- Animate Fanart -->
                     <control type="radiobutton" id="8203">
                         <width>100%</width>
