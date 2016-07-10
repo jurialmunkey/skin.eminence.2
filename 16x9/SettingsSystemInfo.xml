@@ -85,7 +85,7 @@
                     </control>
                     <control type="label">
                         <description>CPU Text</description>
-                        <posy>-69</posy>
+                        <posy>-72</posy>
                         <align>right</align>
                         <left>20</left>
                         <width>960</width>
@@ -102,7 +102,7 @@
                     </control>
                     
                     <control type="label">
-                        <top>-79</top>
+                        <top>-82</top>
                         <left>960</left>
                         <description>Memory Text</description>
                         <label>RAM:</label>
@@ -110,7 +110,7 @@
                     </control>
                     <control type="label">
                         <description>Memory Text</description>
-                        <posy>-69</posy>
+                        <posy>-72</posy>
                         <align>right</align>
                         <right>5</right>
                         <label>$INFO[system.memory(used.percent)]</label>

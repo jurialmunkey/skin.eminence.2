@@ -483,56 +483,8 @@
             <top>bigpad</top>
             <include name="Object_Line">
                 <param name="label" value="$PARAM[label]" />
-                <param name="width" value="1752" />
+                <param name="width" value="headlinew" />
             </include>
-        </control>
-    </include>
-
-    <!-- Tab -->
-    <include name="Object_Tab">
-        <control type="grouplist">
-            <visible>!Skin.HasSetting(furniture.hidesortinfo)</visible>
-            <orientation>horizontal</orientation>
-            <top>-42</top>
-            <height>42</height>
-            <width>1792</width>
-            <usecontrolcoords>true</usecontrolcoords>
-            <control type="button">
-                <left>0</left>
-                <height>100%</height>
-                <textoffsetx>20</textoffsetx>
-                <width max="$PARAM[width]">auto</width>
-                <label fallback="19033">[CR]$PARAM[label] </label>
-                <font>Font-LineLabel</font>
-                <aligny>center</aligny>
-                <textcolor>LineLabel</textcolor>
-                <texturenofocus align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="ListBG">common/header.png</texturenofocus>
-                <texturefocus align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="ListBG">common/header.png</texturefocus>
-            </control>
-        </control>
-    </include>
-    <include name="Object_Tab_Right">
-        <control type="grouplist">
-            <visible>!Skin.HasSetting(furniture.hidesortinfo)</visible>
-            <orientation>horizontal</orientation>
-            <align>right</align>
-            <right>0</right>
-            <top>-42</top>
-            <height>42</height>
-            <width>1792</width>
-            <usecontrolcoords>true</usecontrolcoords>
-            <control type="button">
-                <left>0</left>
-                <height>100%</height>
-                <textoffsetx>20</textoffsetx>
-                <width max="$PARAM[width]">auto</width>
-                <label fallback="19033">[CR]  $PARAM[label]</label>
-                <font>Font-LineLabel</font>
-                <aligny>center</aligny>
-                <textcolor>LineLabel</textcolor>
-                <texturenofocus align="left" flipy="true" flipx="true" border="32,0,32,64" colordiffuse="ListBG">common/header.png</texturenofocus>
-                <texturefocus align="left" flipy="true" flipx="true" border="32,0,32,64" colordiffuse="ListBG">common/header.png</texturefocus>
-            </control>
         </control>
     </include>
 

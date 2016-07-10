@@ -185,7 +185,7 @@
             <control type="group" description="hub side">
                 <right>bigpad</right>
                 <top>bigpad</top>
-                <width>452</width>
+                <left>1320</left>
                 <height>posterh</height>
                 <include>Object_Background</include>
                 <control type="panel" id="9501">  
@@ -198,7 +198,7 @@
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
                     <scrolltime tween="quadratic">400</scrolltime>
-                    <itemlayout width="452" height="90">
+                    <itemlayout width="hubitemw" height="90">
                         <control type="image">
                             <right>pad</right>
                             <top>pad</top>
@@ -215,7 +215,7 @@
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </itemlayout>
-                    <focusedlayout width="452" height="90">
+                    <focusedlayout width="hubitemw" height="90">
                         <control type="image">
                             <width>100%</width>
                             <top>0</top>

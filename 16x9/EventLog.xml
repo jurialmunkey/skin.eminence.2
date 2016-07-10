@@ -12,7 +12,7 @@
             <top>dialogtop</top>
             <bottom>133</bottom>
             <centerleft>50%</centerleft>
-            <width>1792</width>
+            <width>totalpanelw</width>
             <visible>!Window.IsVisible(DialogAddonInfo.xml)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
@@ -31,7 +31,7 @@
                     <width>100%</width>
                     <height>posterh</height>
                     <include name="Object_Line">
-                        <param name="width" value="1752" />
+                        <param name="width" value="headlinew" />
                         <param name="label" value="$INFO[Control.GetLabel(2)]" />
                     </include>
                     <include name="Dialog_ImageList">

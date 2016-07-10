@@ -16,10 +16,10 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <control type="group">
-                    <width>1012</width>
+                    <width>listinfow</width>
                     
                     <control type="panel" id="$PARAM[id]">
-                        <width>1012</width>
+                        <width>listinfow</width>
                         <height>740</height>
                         <onup>$PARAM[id]</onup>
                         <ondown>$PARAM[id]</ondown>
@@ -31,10 +31,10 @@
                         <viewtype label="$PARAM[label]">list</viewtype>
                         <scrolltime tween="quadratic">400</scrolltime>
                         <visible>$PARAM[visible]</visible>
-                        <itemlayout height="148" width="1022">
+                        <itemlayout height="148" width="listinfow">
                             <control type="group">
                                 <left>0</left>
-                                <right>pad</right>
+                                <right>0</right>
                                 <bottom>bigpad</bottom>
                                 <include>Object_Background</include>
                                 <control type="image">
@@ -92,10 +92,10 @@
                             </control>
                         </itemlayout>
 
-                        <focusedlayout height="148" width="1022">
+                        <focusedlayout height="148" width="listinfow">
                             <control type="group">
                                 <left>0</left>
-                                <right>pad</right>
+                                <right>0</right>
                                 <bottom>bigpad</bottom>
                                 <include>Object_Background</include>
                                 <control type="image">
@@ -237,10 +237,10 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <control type="group">
-                    <width>1012</width>
+                    <width>listinfow</width>
                     <include>Object_Background</include>
                     <control type="panel" id="$PARAM[id]">
-                        <width>1012</width>
+                        <width>listinfow</width>
                         <height>posterh</height>
                         <onup>$PARAM[id]</onup>
                         <ondown>$PARAM[id]</ondown>
@@ -252,10 +252,10 @@
                         <viewtype label="$PARAM[label]">list</viewtype>
                         <scrolltime tween="quadratic">400</scrolltime>
                         <visible>$PARAM[visible]</visible>
-                        <itemlayout height="72" width="1022">
+                        <itemlayout height="72" width="listinfow">
                             <control type="group">
                                 <left>0</left>
-                                <right>pad</right>
+                                <right>0</right>
                                 <bottom>0</bottom>
                                 <control type="image">
                                     <width>100%</width>
@@ -310,10 +310,10 @@
                             </control>
                         </itemlayout>
 
-                        <focusedlayout height="72" width="1022">
+                        <focusedlayout height="72" width="listinfow">
                             <control type="group">
                                 <left>0</left>
-                                <right>pad</right>
+                                <right>0</right>
                                 <bottom>0</bottom>
                                 
                                 <control type="image">
@@ -624,9 +624,9 @@
             <top>bigpad</top>
             <height>posterh</height>
             <control type="group">
-                <width>1012</width>
+                <width>listinfow</width>
                 <control type="panel" id="50">
-                    <width>1012</width>
+                    <width>listinfow</width>
                     <height>740</height>
                     <onup>50</onup>
                     <ondown>50</ondown>
@@ -637,10 +637,10 @@
                     <orientation>vertical</orientation>
                     <viewtype>list</viewtype>
                     <scrolltime tween="quadratic">400</scrolltime>
-                    <itemlayout height="148" width="1022">
+                    <itemlayout height="148" width="listinfow">
                         <control type="group">
                             <left>0</left>
-                            <right>pad</right>
+                            <right>0</right>
                             <bottom>bigpad</bottom>
                             <include>Object_Background</include>
                             <control type="image">
@@ -679,10 +679,10 @@
                         </control>
                     </itemlayout>
 
-                    <focusedlayout height="148" width="1022">
+                    <focusedlayout height="148" width="listinfow">
                         <control type="group">
                             <left>0</left>
-                            <right>pad</right>
+                            <right>0</right>
                             <bottom>bigpad</bottom>
                             <include>Object_Background</include>
                             <control type="image">

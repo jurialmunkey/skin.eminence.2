@@ -4,7 +4,7 @@
     <controls>
         <control type="group">
             <top>dialogtop</top>
-            <bottom>sidepad</bottom>
+            <bottom>60</bottom>
             <left>sidepad</left>
             <right>sidepad</right>
             <include>Animation_SlideIn</include>

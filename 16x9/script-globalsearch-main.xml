@@ -3,7 +3,7 @@
         <control type="group" id="100">
             <control type="group">
                 <top>dialogtop</top>
-                <bottom>sidepad</bottom>
+                <bottom>60</bottom>
                 <left>sidepad</left>
                 <right>sidepad</right>
                 <include>Animation_SlideIn</include>
@@ -173,7 +173,7 @@
                             <include>Object_Background</include>
                         </control>
                         <include name="Object_Line">
-                            <param name="width" value="1272" />
+                            <param name="width" value="listlinew" />
                             <param name="label" value="$INFO[Container(8000).ListItem.Label2,, $LOCALIZE[31130]]" />
                         </include>
                         <control type="group" id="119">

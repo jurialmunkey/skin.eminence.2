@@ -21,7 +21,7 @@
                 <control type="group">
                     <top>144</top>
                     <include name="Object_Line">
-                        <param name="width" value="1752" />
+                        <param name="width" value="headlinew" />
                         <param name="label" value="$LOCALIZE[1021]" />
                     </include>
                     <include name="Dialog_BasicList">
@@ -80,7 +80,7 @@
                     <top>0</top>
                     <height>72</height>
                     <include name="Object_Line">
-                        <param name="width" value="1752" />
+                        <param name="width" value="headlinew" />
                         <param name="label" value="$LOCALIZE[1022]" />
                     </include>
                     <control type="edit" id="12">

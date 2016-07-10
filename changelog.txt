@@ -1,3 +1,7 @@
+[B]2.5.2[/B]
+Add option to remove padding from panel edges
+Clean up skin settings
+
 [B]2.5.1[/B]
 Fix overlap on now playing
 Enable weather widget

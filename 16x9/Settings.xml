@@ -22,7 +22,7 @@
                 <top>bigpad</top>
                 <height>730</height>
                 <orientation>vertical</orientation>
-                <itemlayout height="350" width="295.33">
+                <itemlayout height="350" width="settingsitemw">
                     <control type="group">
                         <top>0</top>
                         <bottom>bigpad</bottom>
@@ -49,7 +49,7 @@
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
-                <focusedlayout height="350" width="295.33">
+                <focusedlayout height="350" width="settingsitemw">
                     <control type="group">
                         <top>0</top>
                         <bottom>bigpad</bottom>

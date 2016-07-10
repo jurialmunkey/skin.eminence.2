@@ -1,6 +1,8 @@
 <includes>
 
     <include file="Defaults.xml" />
+    <include condition="!Skin.HasSetting(global.widescreen)" file="Constants_Padded.xml" />
+    <include condition="Skin.HasSetting(global.widescreen)" file="Constants_WideScreen.xml" />
     <include file="Includes_Animation.xml" />
     <include file="Includes_Colors.xml" />
     <include file="Includes_Defs.xml" />

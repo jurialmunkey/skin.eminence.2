@@ -18,7 +18,7 @@
                 <left>bigpad</left>
                 <right>bigpad</right>
                 <include name="Object_Line">
-                    <param name="width" value="1752" />
+                    <param name="width" value="headlinew" />
                     <param name="label" value="$INFO[Control.GetLabel(20)]" />
                 </include>
             </control>
@@ -69,7 +69,7 @@
             </control>
             <control type="radiobutton" id="4">
                 <width>100%</width>
-                <radioposx>1220</radioposx>
+                <radioposx>settingsradioposx</radioposx>
                 <include>Defs_OptionButton</include>
             </control>
             <control type="spincontrolex" id="5">

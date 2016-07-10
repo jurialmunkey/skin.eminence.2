@@ -13,7 +13,7 @@
         <!-- Content -->
         <control type="group">
             <top>dialogtop</top>
-            <bottom>sidepad</bottom>
+            <bottom>60</bottom>
             <left>sidepad</left>
             <right>sidepad</right>
             <include>Animation_SlideIn</include>
@@ -29,7 +29,7 @@
                     <include>Object_Background</include>
                 </control>
                 <include name="Object_Line">
-                    <param name="width" value="1752" />
+                    <param name="width" value="headlinew" />
                     <param name="label" value="$INFO[Control.GetLabel(2)]" />
                 </include>
                 <include name="Dialog_ImageList">
@@ -37,7 +37,7 @@
                     <param name="moveid" value="5" />
                     <param name="onup" value="5" />
                     <param name="left" value="0" />
-                    <param name="width" value="1752" />
+                    <param name="width" value="headlinew" />
                     <param name="top" value="0" />
                     <param name="pad" value="20" />
                 </include>

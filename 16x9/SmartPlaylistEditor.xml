@@ -5,7 +5,7 @@
 	<controls>
         <control type="group">
             <top>dialogtop</top>
-            <bottom>sidepad</bottom>
+            <bottom>60</bottom>
             <left>sidepad</left>
             <right>sidepad</right>
             <include>Animation_SlideIn</include>
@@ -22,7 +22,7 @@
                 <control type="group">
                     <height>72</height>
                     <include name="Object_Line">
-                        <param name="width" value="1752" />
+                        <param name="width" value="headlinew" />
                         <param name="label" value="$LOCALIZE[20333]" />
                     </include>
                     <control type="spincontrolex" id="22">
@@ -38,7 +38,7 @@
                     <top>130</top>
                     <height>216</height>
                     <include name="Object_Line">
-                        <param name="width" value="1752" />
+                        <param name="width" value="headlinew" />
                         <param name="label" value="$LOCALIZE[21421]" />
                     </include>
                     <include name="Dialog_BasicList">
@@ -85,19 +85,19 @@
                 
                 <control type="group">
                     <top>400</top>
-                    <width>1752</width>
+                    <width>headlinew</width>
                     <height>216</height>
                     <control type="group">
                         <left>0</left>
-                        <width>866</width>
+                        <width>settingshalfw</width>
                         <include>Object_Background</include>
                     </control>
                     <include name="Object_Line">
-                        <param name="width" value="1752" />
+                        <param name="width" value="headlinew" />
                         <param name="label" value="$LOCALIZE[10132]" />
                     </include>
                     <control type="grouplist" id="8200">
-                        <width>866</width>
+                        <width>settingshalfw</width>
                         <height>100%</height>
                         <itemgap>0</itemgap>
                         <onup>10</onup>
@@ -107,7 +107,7 @@
                         <control type="spincontrolex" id="16">
                             <align>left</align>
                             <textoffsetx>30</textoffsetx>
-                            <width>866</width>
+                            <width>settingshalfw</width>
                             <label>21424</label>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -115,7 +115,7 @@
                             <right>0</right>
                             <align>left</align>
                             <textoffsetx>30</textoffsetx>
-                            <width>866</width>
+                            <width>settingshalfw</width>
                             <label>21427</label>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -124,7 +124,7 @@
                             <left>0</left>
                             <align>left</align>
                             <textoffsetx>30</textoffsetx>
-                            <width>866</width>
+                            <width>settingshalfw</width>
                             <label>21429</label>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -132,13 +132,13 @@
                     
                     <control type="group">
                         <right>0</right>
-                        <width>866</width>
+                        <width>settingshalfw</width>
                         <include>Object_Background</include>
                     </control>
                     <control type="grouplist" id="8300">
                         <right>0</right>
                         <onright>20</onright>
-                        <width>866</width>
+                        <width>settingshalfw</width>
                         <height>100%</height>
                         <itemgap>0</itemgap>
                         <onup>10</onup>
@@ -150,7 +150,7 @@
                             <right>0</right>
                             <align>right</align>
                             <textoffsetx>30</textoffsetx>
-                            <width>866</width>
+                            <width>settingshalfw</width>
                             <label>584</label>
                             <altlabel>585</altlabel>
                             <include>Defs_OptionButton</include>
@@ -160,7 +160,7 @@
                             <right>0</right>
                             <align>left</align>
                             <textoffsetx>30</textoffsetx>
-                            <width>866</width>
+                            <width>settingshalfw</width>
                             <label>580</label>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -168,7 +168,7 @@
                             <left>0</left>
                             <align>left</align>
                             <textoffsetx>30</textoffsetx>
-                            <width>866</width>
+                            <width>settingshalfw</width>
                             <label>21458</label>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -177,7 +177,7 @@
                             <align>left</align>
                             <radioposx>880</radioposx>
                             <textoffsetx>30</textoffsetx>
-                            <width>866</width>
+                            <width>settingshalfw</width>
                             <label>20395</label>
                             <include>Defs_OptionButton</include>
                         </control>

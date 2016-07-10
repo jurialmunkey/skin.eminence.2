@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <constant name="pad">10</constant>
+    <constant name="bigpad">20</constant>
+    <constant name="top">260</constant>
+    <constant name="dialogtop">210</constant>
+    <constant name="height">760</constant>
+    <constant name="posterh">720</constant>
+    <constant name="posterw">480</constant>
+    <constant name="toppanel">184</constant>
+
+    <constant name="favitemw">1256</constant>
+    <constant name="favdialogw">1748</constant>
+   
+    <constant name="sidepad">64</constant>
+    <constant name="hubitemw">452</constant>
+    <constant name="headlinew">1752</constant>
+    <constant name="totalpanelw">1792</constant>
+    <constant name="totalradioposx">1700</constant>
+    <constant name="listlinew">1272</constant>
+    <constant name="listw">1252</constant>
+    <constant name="listinfow">1012</constant>
+    <constant name="listmediainfow">722</constant>
+    <constant name="iconpadw">5</constant>
+    <constant name="iconpanelpadw">15</constant>
+    <constant name="iconitemw">246</constant>
+    <constant name="iconextrapadw">5</constant>
+    <constant name="iconextrapanelpadw">15</constant>
+    <constant name="iconextraitemw">246</constant>
+    <constant name="iconwidepadw">5</constant>
+    <constant name="iconwidepanelpadw">15</constant>
+    <constant name="iconwideitemw">574</constant>
+    <constant name="settingsitemw">295.33</constant>
+    <constant name="settingsradioposx">1220</constant>
+    <constant name="settingshalfw">866</constant>
+    <constant name="bigiconw">313</constant>
+    <constant name="bigiconh">424.5</constant>
+    <constant name="bigiconpanelpadw">172</constant>
+
+</includes>

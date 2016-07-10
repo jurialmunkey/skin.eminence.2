@@ -19,7 +19,7 @@
                 </include>
                 <control type="group">
                     <left>740</left>
-                    <width>1012</width>
+                    <width>listinfow</width>
                     <include>Object_Background</include>
  
                     <!-- INFO -->

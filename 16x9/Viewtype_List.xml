@@ -43,12 +43,12 @@
             <include name="View_List">
                 <param name="viewlabel" value="535" />
                 <param name="posx" value="0" />
-                <param name="width" value="1012" />
+                <param name="width" value="listinfow" />
                 <param name="id" value="50" />
                 <param name="condition" value="true" />
             </include>
             <control type="group">
-                <width>1012</width>
+                <width>listinfow</width>
                 <include>Object_Arrows_Vertical</include>
             </control>
         </control>
@@ -69,15 +69,11 @@
             <include name="View_List">
                 <param name="viewlabel" value="544" />
                 <param name="posx" value="0" />
-                <param name="width" value="1012" />
+                <param name="width" value="listinfow" />
                 <param name="id" value="51" />
                 <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
             </include>
             <include>Object_ExtraInfo</include>
-            <control type="group">
-                <width>1130</width>
-                <include>Object_Arrows_Vertical</include>
-            </control>
         </control>
     </include>
 
@@ -94,17 +90,12 @@
             <include name="View_List">
                 <param name="viewlabel" value="31143" />
                 <param name="posx" value="0" />
-                <param name="width" value="722" />
+                <param name="width" value="listmediainfow" />
                 <param name="id" value="57" />
                 <param name="label3" value="false" />
                 <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
             </include>
             <include>Object_ExtraInfo2</include>
-            <control type="group">
-                <left>0</left>
-                <width>850</width>
-                <include>Object_Arrows_Vertical</include>
-            </control>
         </control>
     </include>
 
@@ -120,7 +111,7 @@
             <height>posterh</height>
             <include name="View_InfoList">
                 <param name="id" value="53" />
-                <param name="width" value="1752" />
+                <param name="width" value="headlinew" />
                 <param name="name" value="$LOCALIZE[31192]" />
                 <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
@@ -252,7 +243,7 @@
             <include name="View_List">
                 <param name="viewlabel" value="31164" />
                 <param name="posx" value="0" />
-                <param name="width" value="452" />
+                <param name="width" value="hubitemw" />
                 <param name="id" value="54" />
                 <param name="label3" value="false" />
                 <param name="label2" value="false" />

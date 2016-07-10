@@ -19,10 +19,17 @@
                 <right>bigpad</right>
                 <top>bigpad</top>
                 <bottom>bigpad</bottom>
+                <control type="group">
+                    <width>listinfow</width>
+                    <include>Object_Background</include>
+                </control>
                 <include name="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="31141" />
-                    <param name="width" value="1012" />
+                    <param name="width" value="listinfow" />
+                    <param name="iconitemw" value="iconextraitemw" />
+                    <param name="iconpadw" value="iconextrapadw" />
+                    <param name="iconpanelpadw" value="iconextrapanelpadw" />
                     <param name="condition" value="true" />
                     <param name="updownid" value="false" />
                     <param name="onup" value="700" />

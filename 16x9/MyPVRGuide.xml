@@ -59,7 +59,7 @@
                     <control type="epggrid" id="10" description="EPG">     
                         <left>0</left>
                         <top>-70</top>
-                        <width>1752</width>
+                        <width>headlinew</width>
                         <height>560</height>
                         <onback>9000</onback>
                         <viewtype label="19069">list</viewtype>

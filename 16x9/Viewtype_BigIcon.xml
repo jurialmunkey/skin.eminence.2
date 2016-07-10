@@ -11,7 +11,7 @@
             <include>Object_Background</include>
             <control type="wraplist" id="52">
                 <top>30</top>
-                <left>172</left>
+                <left>bigiconpanelpadw</left>
                 <right>15</right>
                 <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)</visible>
                 <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
@@ -24,12 +24,12 @@
                 <orientation>horizontal</orientation>
                 <viewtype label="538">bigicon</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <itemlayout width="313" height="660">
+                <itemlayout width="bigiconw" height="660">
                     <control type="group">
-                        <centertop>30%</centertop>
+                        <top>0</top>
                         <left>15</left>
                         <right>15</right>
-                        <height>424.5</height>
+                        <height>bigiconh</height>
                         
                         <control type="image">
                             <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>    
@@ -39,12 +39,12 @@
                     </control>
                 </itemlayout>
 
-                <focusedlayout width="313" height="660">
+                <focusedlayout width="bigiconw" height="660">
                     <control type="group">
-                        <centertop>30%</centertop>
+                        <top>0</top>
                         <left>15</left>
                         <right>15</right>
-                        <height>424.5</height>
+                        <height>bigiconh</height>
                         
                         <control type="image">
                             <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>    
@@ -72,7 +72,7 @@
             <control type="group">
                 <right>pad</right>
                 <left>484</left>
-                <height>300</height>
+                <top>bigiconh</top>
                 <bottom>-30</bottom>
                 <control type="grouplist">
                     <usecontrolcoords>true</usecontrolcoords>
@@ -80,7 +80,7 @@
                     <orientation>vertical</orientation>
                     <left>pad</left>
                     <right>pad</right>
-                    <top>pad</top>
+                    <top>34</top>
                     <bottom>60</bottom>
                     <control type="textbox">
                         <top>pad</top>
@@ -113,7 +113,7 @@
                     
                 </control>
                 <control type="label">
-                    <top>85</top>
+                    <top>109</top>
                     <left>30</left>
                     <right>bigpad</right>
                     <height>20</height>

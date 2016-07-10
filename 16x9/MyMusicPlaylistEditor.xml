@@ -18,13 +18,13 @@
             <!-- Left group -->
             <control type="group">
                 <left>bigpad</left>
-                <width>866</width>
+                <width>settingshalfw</width>
                 <top>top</top>
                 <include>Animation_Hub</include>
 
                 <include name="Dialog_FileManager_List">
-                    <param name="width" value="866" />
-                    <param name="labelwidth" value="866" />
+                    <param name="width" value="settingshalfw" />
+                    <param name="labelwidth" value="settingshalfw" />
                     <param name="id" value="50" />
                     <param name="onleft" value="9000" />
                     <param name="onright" value="100" />
@@ -37,13 +37,13 @@
             <!-- Right group -->
             <control type="group">
                 <right>bigpad</right>
-                <width>866</width>
+                <width>settingshalfw</width>
                 <top>top</top>
                 <include>Animation_Common</include>
 
                 <include name="Dialog_FileManager_List">
-                    <param name="width" value="866" />
-                    <param name="labelwidth" value="866" />
+                    <param name="width" value="settingshalfw" />
+                    <param name="labelwidth" value="settingshalfw" />
                     <param name="id" value="100" />
                     <param name="onleft" value="50" />
                     <param name="onright" value="9000" />

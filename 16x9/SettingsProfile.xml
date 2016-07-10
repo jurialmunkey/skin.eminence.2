@@ -30,14 +30,14 @@
                     <label>20096</label>
                     <onup>noop</onup>
                     <ondown>5</ondown>
-                    <radioposx>1700</radioposx>
+                    <radioposx>totalradioposx</radioposx>
                     <include>Defs_OptionButton</include>
                 </control>
                 <control type="button" id="5">
                     <top>72</top>
                     <align>left</align>
                     <textoffsetx>30</textoffsetx>
-                    <radioposx>1700</radioposx>
+                    <radioposx>totalradioposx</radioposx>
                     <width>100%</width>
                     <onup>4</onup>
                     <ondown>2</ondown>
@@ -58,7 +58,7 @@
                     <param name="moveid" value="5" />
                     <param name="onup" value="5" />
                     <param name="left" value="0" />
-                    <param name="width" value="1792" />
+                    <param name="width" value="totalpanelw" />
                     <param name="top" value="0" />
                     <param name="pad" value="20" />
                 </include>

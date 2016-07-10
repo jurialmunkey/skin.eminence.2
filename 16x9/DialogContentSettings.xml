@@ -5,7 +5,7 @@
 
         <control type="group">
             <top>dialogtop</top>
-            <bottom>sidepad</bottom>
+            <bottom>60</bottom>
             <left>sidepad</left>
             <right>sidepad</right>
             <include>Animation_SlideIn</include>
@@ -21,7 +21,7 @@
                 <control type="group">
                     <height>72</height>
                     <include name="Object_Line">
-                        <param name="width" value="1752" />
+                        <param name="width" value="headlinew" />
                         <param name="label" value="$LOCALIZE[20333]" />
                     </include>
                     <control type="spincontrolex" id="20">
@@ -37,11 +37,11 @@
                     <top>144</top>
                     <height>432</height>
                     <include name="Object_Line">
-                        <param name="width" value="866" />
+                        <param name="width" value="settingshalfw" />
                         <param name="label" value="$LOCALIZE[21412]" />
                     </include>
                     <include name="Dialog_BasicList">
-                        <param name="width" value="866" />
+                        <param name="width" value="settingshalfw" />
                         <param name="height" value="432" />
                         <param name="id" value="21" />
                         <param name="onright" value="5" />
@@ -54,11 +54,11 @@
                 <control type="group">
                     <right>0</right>
                     <top>144</top>
-                    <width>866</width>
+                    <width>settingshalfw</width>
                     <height>432</height>
                     <include>Object_Background</include>
                     <include name="Object_Line">
-                        <param name="width" value="866" />
+                        <param name="width" value="settingshalfw" />
                         <param name="label" value="$LOCALIZE[20407]" />
                     </include>
                     <control type="grouplist" id="5">

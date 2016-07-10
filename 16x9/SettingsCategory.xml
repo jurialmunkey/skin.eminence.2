@@ -101,7 +101,7 @@
         <control type="radiobutton" id="8">
             <width>100%</width>
             <height>72</height>
-            <radioposx>1220</radioposx>
+            <radioposx>settingsradioposx</radioposx>
             <include>Defs_OptionButton</include>
         </control>
         <control type="spincontrolex" id="9">
