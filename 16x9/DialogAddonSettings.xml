@@ -17,7 +17,7 @@
                 <top>70</top>
                 <left>bigpad</left>
                 <right>bigpad</right>
-                <include name="Object_Line">
+                <include content="Object_Line">
                     <param name="width" value="headlinew" />
                     <param name="label" value="$INFO[Control.GetLabel(20)]" />
                 </include>

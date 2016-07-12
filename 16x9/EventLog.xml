@@ -30,11 +30,11 @@
                 <control type="group">
                     <width>100%</width>
                     <height>posterh</height>
-                    <include name="Object_Line">
+                    <include content="Object_Line">
                         <param name="width" value="headlinew" />
                         <param name="label" value="$INFO[Control.GetLabel(2)]" />
                     </include>
-                    <include name="Dialog_ImageList">
+                    <include content="Dialog_ImageList">
                         <param name="id" value="50" />
                         <param name="type" value="panel" />
                         <param name="moveid" value="9000" />
@@ -53,11 +53,11 @@
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
             <include>Dialog_Top</include>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
+            <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31068]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-            <include name="Dialog_Top_Arrows">
+            <include content="Dialog_Top_Arrows">
                 <param name="id" value="9000" />
             </include>
 

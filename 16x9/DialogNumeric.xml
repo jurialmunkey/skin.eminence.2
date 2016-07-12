@@ -21,7 +21,7 @@
                 <right>bigpad</right>
                 <control type="group">
                     <height>70</height>
-                    <include name="Object_Line">
+                    <include content="Object_Line">
                         <param name="width" value="380" />
                         <param name="label" value="$INFO[Control.GetLabel(1)]" />
                     </include>

@@ -411,11 +411,11 @@
             <visible>Control.HasFocus(9000) | Control.HasFocus(9002)</visible>
             <include>Dialog_Top</include>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
+            <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$INFO[Container(9000).ListItem.Label,, ]$LOCALIZE[1034]" />
                 <param name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
             </include>
-            <include name="Dialog_Top_Arrows">
+            <include content="Dialog_Top_Arrows">
                 <param name="id" value="9002" />
             </include>
 
@@ -602,35 +602,35 @@
             <height>320</height>
             <orientation>horizontal</orientation>
             <itemgap>0</itemgap>
-            <include name="Object_HomeWidgetPoster">
+            <include content="Object_HomeWidgetPoster">
                 <param name="id" value="-2" />
                 <param name="focuseditem" value="false" />
             </include>
-            <include name="Object_HomeWidgetPoster">
+            <include content="Object_HomeWidgetPoster">
                 <param name="id" value="-1" />
                 <param name="focuseditem" value="false" />
             </include>
-            <include name="Object_HomeWidgetPoster">
+            <include content="Object_HomeWidgetPoster">
                 <param name="id" value="0" />
                 <param name="focuseditem" value="true" />
             </include>
-            <include name="Object_HomeWidgetPoster">
+            <include content="Object_HomeWidgetPoster">
                 <param name="id" value="1" />
                 <param name="focuseditem" value="false" />
             </include>
-            <include name="Object_HomeWidgetPoster">
+            <include content="Object_HomeWidgetPoster">
                 <param name="id" value="2" />
                 <param name="focuseditem" value="false" />
             </include>
-            <include name="Object_HomeWidgetPoster">
+            <include content="Object_HomeWidgetPoster">
                 <param name="id" value="3" />
                 <param name="focuseditem" value="false" />
             </include>
-            <include name="Object_HomeWidgetPoster">
+            <include content="Object_HomeWidgetPoster">
                 <param name="id" value="4" />
                 <param name="focuseditem" value="false" />
             </include>
-            <include name="Object_HomeWidgetPoster">
+            <include content="Object_HomeWidgetPoster">
                 <param name="id" value="5" />
                 <param name="focuseditem" value="false" />
             </include>     
@@ -645,19 +645,19 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <visible>[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))</visible>
-            <include name="Object_WeatherOutlook">
+            <include content="Object_WeatherOutlook">
                 <param name="day" value="Day0" />
                 <param name="dayname" value="$LOCALIZE[33006]" />
             </include>
-            <include name="Object_WeatherOutlook">
+            <include content="Object_WeatherOutlook">
                 <param name="day" value="Day1" />
                 <param name="dayname" value="$INFO[Window(weather).Property(Day1.Title)]" />
             </include>
-            <include name="Object_WeatherOutlook">
+            <include content="Object_WeatherOutlook">
                 <param name="day" value="Day2" />
                 <param name="dayname" value="$INFO[Window(weather).Property(Day2.Title)]" />
             </include>
-            <include name="Object_WeatherOutlook">
+            <include content="Object_WeatherOutlook">
                 <param name="day" value="Day3" />
                 <param name="dayname" value="$INFO[Window(weather).Property(Day3.Title)]" />
             </include>

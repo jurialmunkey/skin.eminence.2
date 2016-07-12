@@ -24,12 +24,12 @@
                     <right>bigpad</right>
                     <height>552</height>
                     <include>Object_Background</include>
-                    <include name="Object_Line">
+                    <include content="Object_Line">
                         <param name="width" value="1150" />
                         <param name="label" value="$INFO[Control.GetLabel(2)]" />
                     </include>
                 </control>
-                <include name="Dialog_ImageList">
+                <include content="Dialog_ImageList">
                     <param name="id" value="11" />
                     <param name="moveid" value="8000" />
                     <param name="ondown" value="8000" />

@@ -1,3 +1,27 @@
+[B]2.5.3[/B]
+Krypton Work Begins:
+Change includes name to includes content
+Change DialogProgress to DialogConfirm and add Yes button
+Remove DialogOK and DialogYesNo
+Change xbmc.gui to 5.12.0 (Krypton)
+Adjust ListItem.Property(Addon.INFO) labels to new syntax
+Rename DialogKaiToast to DialogNotification
+Remove MyMusicPlaylist
+Rename MyVideoPlaylist to MyPlaylist
+Remove DialogMuteBug
+Add DialogSettings
+Remove DialogAudioDSPSettings
+Remove DialogContentSettings
+Remove DialogMediaFilter
+Remove DialogNetworkSetup 
+Remove DialogPeripheralSettings
+Remove DialogPVRTimerSettings
+Remove LockSettings 
+Remove ProfileSettings 
+Remove VideoOSDSettings
+Fix DialogAudioDSPManager
+TODO: MyPVRTimers, DialogGameControllers, DefaultIcons 
+
 [B]2.5.2[/B]
 Add option to remove padding from panel edges
 Clean up skin settings

@@ -9,7 +9,7 @@
             <bottom>64</bottom>
             <height>504</height>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
+            <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$ADDON[script.skin.helper.service 32011]" />
                 <param name="icon" value="special://skin/extras/icons/filebox.png" />
             </include>

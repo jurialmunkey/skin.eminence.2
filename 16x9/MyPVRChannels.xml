@@ -11,11 +11,11 @@
         
         <control type="group">
             <include>Defs_ViewBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
             </include>
             <include>PVR_List</include>
-            <include name="PVR_SmallList">
+            <include content="PVR_SmallList">
                 <param name="id" value="51" />
             </include>
         </control>

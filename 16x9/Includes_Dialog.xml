@@ -205,35 +205,12 @@
             <onright>11</onright>
         </control>
     </include>
-    <!-- Yes No -->
-    <include name="Dialog_YesNo">
-        <include>GlobalOverlay</include>
-        <control type="group">
-            <include>Dialog_Bottom</include>
-            <control type="grouplist">
-                <include>Dialog_Bottom_Grouplist</include>
-                <include>Dialog_Bottom_Yes</include>
-                <include>Dialog_Bottom_No</include>
-            </control>
-        </control>
-    </include>
-    <!-- Ok -->
-    <include name="Dialog_Ok">
-        <include>GlobalOverlay</include>
-        <control type="group">
-            <include>Dialog_Bottom</include>
-            <control type="grouplist">
-                <include>Dialog_Bottom_Grouplist</include>
-                <include>Dialog_Bottom_No</include>
-            </control>
-        </control>
-    </include>
     <!-- Progress -->
     <include name="Dialog_Progress">
         <include>GlobalOverlay</include>
         <control type="group">
             <include>Dialog_Bottom</include>
-            <control type="progress">
+            <control type="progress" id="20">
                 <top>0</top>
                 <width>100%</width>
                 <height>16</height>
@@ -241,6 +218,7 @@
             </control>
             <control type="grouplist">
                 <include>Dialog_Bottom_Grouplist</include>
+                <include>Dialog_Bottom_Yes</include>
                 <include>Dialog_Bottom_No</include>
             </control>
         </control>
@@ -404,7 +382,7 @@
                         <textcolor>Selected</textcolor>
                     </control>
                 </focusedlayout>
-                <include condition="$PARAM[contentvisible]" name="Dialog_BasicList_Content">
+                <include condition="$PARAM[contentvisible]" content="Dialog_BasicList_Content">
                     <param name="content" value="$PARAM[content]" />
                 </include>
             </control>
@@ -548,12 +526,12 @@
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                            <visible>IsEmpty(ListItem.AddonSummary))</visible>
                             <visible>IsEmpty(ListItem.Property(character))</visible>
                             <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Property(Addon.Summary)) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
+                            <visible>!IsEmpty(ListItem.AddonSummary)) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">
@@ -634,12 +612,12 @@
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                            <visible>IsEmpty(ListItem.AddonSummary))</visible>
                             <visible>IsEmpty(ListItem.Property(character))</visible>
                             <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Property(Addon.Summary)) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
+                            <visible>!IsEmpty(ListItem.AddonSummary)) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">

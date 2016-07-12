@@ -10,7 +10,7 @@
             <bottom>80</bottom>
             <height>532</height>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
+            <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$INFO[ListItem.Label]" />
                 <param name="icon" value="special://skin/extras/icons/info.png" />
             </include>
@@ -25,7 +25,7 @@
                     <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
                 </control>
             </control>
-            <include name="Dialog_FavouriteList">
+            <include content="Dialog_FavouriteList">
                 <param name="id" value="5" />
                 <param name="moveid" value="noop" />
                 <param name="left" value="472" />

@@ -11,7 +11,7 @@
             <bottom>100</bottom>
             <height>676</height>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
+            <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$INFO[Control.GetLabel(411)]" />
                 <param name="icon" value="special://skin/extras/icons/filebox.png" />
             </include>
@@ -44,7 +44,7 @@
                 <height>576</height>
                 <include>Object_Background</include>
             </control>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="450" />
                 <param name="moveid" value="9000" />
                 <param name="onup" value="450" />
@@ -52,7 +52,7 @@
                 <param name="left" value="616" />
                 <param name="width" value="1156" />
             </include>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="451" />
                 <param name="moveid" value="9000" />
                 <param name="onup" value="450" />

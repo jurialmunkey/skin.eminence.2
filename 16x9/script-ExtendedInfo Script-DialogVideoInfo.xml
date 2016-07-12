@@ -16,7 +16,7 @@
     <controls>
         <control type="group">
             <include>Defs_InfoBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="$VAR[Label_ExtendedInfo_InfoLine]" />
             </include>
             <control type="group">
@@ -25,7 +25,7 @@
                 <top>bigpad</top>
                 <bottom>bigpad</bottom>
                 
-                <include name="Object_Poster">
+                <include content="Object_Poster">
                     <param name="flipx" value="false" />
                     <param name="width" value="posterw" />
                 </include>
@@ -403,7 +403,7 @@
                     </control>
                 </control>
             </control>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="150" />
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
@@ -416,7 +416,7 @@
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),150)" />
             </include>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="350" />
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
@@ -429,7 +429,7 @@
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),350)" />
             </include>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="750" />
                 <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
@@ -443,7 +443,7 @@
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),750)" />
             </include>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="1000" />
                 <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
@@ -457,7 +457,7 @@
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),1000)" />
             </include>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="1150" />
                 <param name="type" value="list" />
                 <param name="moveid" value="ClearProperty(content)" />
@@ -470,7 +470,7 @@
                 <param name="backpanel" value="false" />
                 <param name="visible" value="StringCompare(Window.Property(content),1150)" />
             </include>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="850" />
                 <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />
@@ -484,7 +484,7 @@
                 <param name="noimage" value="true" />
                 <param name="visible" value="StringCompare(Window.Property(content),850)" />
             </include>
-            <include name="Dialog_ImageList">
+            <include content="Dialog_ImageList">
                 <param name="id" value="950" />
                 <param name="type" value="panel" />
                 <param name="moveid" value="ClearProperty(content)" />

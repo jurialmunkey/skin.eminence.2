@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.eminence.2"
-    version="2.5.2"
+    version="2.5.3"
     name="Eminence 2.0"
     provider-name="jurialmunkey">
     <requires>
@@ -20,7 +20,7 @@
         <summary lang="en">Clean, clear, simple, modern.</summary>
         <disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
         <description lang="en">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <license>CC-NC-SA 3.0</license>
         <website></website>
         <email></email>
     </extension>

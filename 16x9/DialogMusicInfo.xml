@@ -5,7 +5,7 @@
     <controls>
         <control type="group">
             <include>Defs_InfoBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="19033" />
             </include>
             <control type="group">
@@ -13,7 +13,7 @@
                 <left>bigpad</left>
                 <bottom>bigpad</bottom>
                 <right>bigpad</right>
-                <include name="Object_Poster">
+                <include content="Object_Poster">
                     <param name="flipx" value="false" />
                     <param name="width" value="posterh" />
                 </include>

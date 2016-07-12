@@ -14,7 +14,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include name="View_Icon">
+                <include content="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
                     <param name="condition" value="true" />
@@ -38,7 +38,7 @@
                 <control type="group">
                 <include>Object_Background</include>
                     <width>listinfow</width>
-                    <include name="View_Icon">
+                    <include content="View_Icon">
                         <param name="id" value="59" />
                         <param name="name" value="31141" />
                         <param name="width" value="listinfow" />
@@ -67,7 +67,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include name="View_IconWide">
+                <include content="View_IconWide">
                     <param name="id" value="55" />
                     <param name="name" value="539" />
                     <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
@@ -90,7 +90,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include name="View_IconFanart">
+                <include content="View_IconFanart">
                     <param name="id" value="56" />
                     <param name="name" value="20445" />
                     <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)" />

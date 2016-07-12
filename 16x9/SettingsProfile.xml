@@ -12,7 +12,7 @@
         <!-- Content -->
         <control type="group">
             <include>Defs_ViewBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="$INFO[System.ProfileName]" />
             </include>
             <include>Animation_SlideIn</include>
@@ -53,7 +53,7 @@
                 <left>bigpad</left>
                 <right>0</right>
                 <height>604</height>
-                <include name="Dialog_ImageList">
+                <include content="Dialog_ImageList">
                     <param name="id" value="2" />
                     <param name="moveid" value="5" />
                     <param name="onup" value="5" />

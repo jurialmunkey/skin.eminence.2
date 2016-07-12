@@ -22,7 +22,7 @@
                     <control type="group">
                         <width>460</width>
                         <height>648</height>
-                        <include name="Object_Line">
+                        <include content="Object_Line">
                             <param name="width" value="460" />
                             <param name="label" value="$INFO[Control.GetLabel(190)]$INFO[Control.GetLabel(191)]$INFO[Control.GetLabel(199)]" />
                         </include>
@@ -172,12 +172,12 @@
                             <right>bigpad</right>
                             <include>Object_Background</include>
                         </control>
-                        <include name="Object_Line">
+                        <include content="Object_Line">
                             <param name="width" value="listlinew" />
                             <param name="label" value="$INFO[Container(8000).ListItem.Label2,, $LOCALIZE[31130]]" />
                         </include>
                         <control type="group" id="119">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -189,7 +189,7 @@
                             </include>
                         </control>
                         <control type="group" id="129">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -201,7 +201,7 @@
                             </include>
                         </control>
                         <control type="group" id="139">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -213,7 +213,7 @@
                             </include>
                         </control>
                         <control type="group" id="149">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -225,7 +225,7 @@
                             </include>
                         </control>
                         <control type="group" id="219">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -237,7 +237,7 @@
                             </include>
                         </control>
                         <control type="group" id="159">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -249,7 +249,7 @@
                             </include>
                         </control>
                         <control type="group" id="169">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -261,7 +261,7 @@
                             </include>
                         </control>
                         <control type="group" id="179">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -273,7 +273,7 @@
                             </include>
                         </control>
                         <control type="group" id="189">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />
@@ -285,7 +285,7 @@
                             </include>
                         </control>
                         <control type="group" id="229">
-                            <include name="Dialog_ImageList">
+                            <include content="Dialog_ImageList">
                                 <param name="pad" value="pad" />
                                 <param name="left" value="0" />
                                 <param name="width" value="1420" />

@@ -17,7 +17,7 @@
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <include>Defs_ViewBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="$LOCALIZE[5]" />
             </include>
             <!-- Left List -->

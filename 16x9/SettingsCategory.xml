@@ -8,7 +8,7 @@
 
         <control type="group">
             <include>Defs_ViewBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="$INFO[Control.GetLabel(20)]" />
             </include>
             <include>Animation_SlideIn</include>

@@ -11,7 +11,7 @@
         <!-- Settings -->
         <control type="group">
             <include>Defs_ViewBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="$LOCALIZE[5]" />
             </include>
             <include>Animation_SlideIn</include>

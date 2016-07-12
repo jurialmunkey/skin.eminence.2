@@ -20,7 +20,7 @@
                     <width>460</width>
                     <height>648</height>
                     <include>Object_Background</include>
-                    <include name="Object_Line">
+                    <include content="Object_Line">
                         <param name="width" value="460" />
                         <param name="label" value="$INFO[Control.GetLabel(100)]" />
                     </include>
@@ -78,7 +78,7 @@
                     <right>0</right>
                     <height>648</height>
                     <include>Object_Background</include>
-                    <include name="Object_Line">
+                    <include content="Object_Line">
                         <param name="width" value="listlinew" />
                         <param name="label" value="$INFO[Control.GetLabel(130)]$INFO[Control.GetLabel(140)]$INFO[Player.FileName, - ,]" />
                     </include>

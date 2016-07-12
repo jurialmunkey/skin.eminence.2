@@ -156,7 +156,7 @@
                 <right>260</right>
                 <top>70</top>
                 <height>70</height>
-                <include name="Object_Line">
+                <include content="Object_Line">
                     <param name="width" value="1780" />
                     <param name="label" value="$INFO[Control.GetLabel(311)]" />
                 </include>

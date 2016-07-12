@@ -20,7 +20,7 @@
                     <left>bigpad</left>
                     <right>bigpad</right>
                     <height>552</height>
-                    <include name="Object_Line">
+                    <include content="Object_Line">
                         <param name="width" value="1150" />
                         <param name="label" value="19033" />
                     </include>

@@ -17,7 +17,7 @@
                 <left>bigpad</left>
                 <right>bigpad</right>
                 <height>posterh</height>
-                <include name="Object_Line">
+                <include content="Object_Line">
                     <param name="width" value="headlinew" />
                     <param name="label" value="$LOCALIZE[19199]" />
                 </include>

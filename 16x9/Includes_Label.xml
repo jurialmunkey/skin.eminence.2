@@ -29,7 +29,7 @@
     <variable name="Label_ImageList">
         <value condition="!IsEmpty(ListItem.Property(job))">$INFO[ListItem.Property(job)]</value>
         <value condition="!IsEmpty(ListItem.Property(character))">$INFO[ListItem.Property(character)]</value>
-        <value>$INFO[ListItem.Property(Addon.Summary)]</value>
+        <value>$INFO[ListItem.AddonSummary)]</value>
     </variable>
 
     <variable name="Label_SeekStep">
@@ -43,7 +43,7 @@
         <value condition="!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
         <value condition="!IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
-        <value condition="!IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
+        <value condition="!IsEmpty(ListItem.AddonDescription))">$INFO[ListItem.AddonDescription)]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Album]$INFO[ListItem.Year,  (,)]</value>
         <value condition="Container.Content(episodes)">$INFO[ListItem.Title,[B],[/B][CR][CR],]$INFO[ListItem.Plot]</value>
         <value>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot]</value>
@@ -195,7 +195,7 @@
     </variable>
     <variable name="Label_HomeWidget_Plot">
         <value condition="[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ,]$INFO[System.TemperatureUnits]$INFO[Window(weather).Property(Current.WindSpeed),[CR], ]$INFO[Window(weather).Property(Current.WindDirection),, [LOWERCASE]$LOCALIZE[404][/LOWERCASE]]$INFO[Window(weather).Property(Current.Humidity),[CR], [LOWERCASE]$LOCALIZE[406][/LOWERCASE]]</value>
-        <value condition="!Container(9001).IsUpdating">$INFO[Container(9001).ListItem.Plot]$INFO[Container(9001).ListItem.Property(Album_Description)]$INFO[Container(9001).ListItem.Property(Addon.Description)]</value>
+        <value condition="!Container(9001).IsUpdating">$INFO[Container(9001).ListItem.Plot]$INFO[Container(9001).ListItem.Property(Album_Description)]$INFO[Container(9001).ListItem.AddonDescription)]</value>
     </variable>
     <variable name="Label_HomeWidget_Info">
         <value condition="[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Window(weather).Property(WeatherProvider)]</value>
@@ -214,7 +214,7 @@
         <value condition="!IsEmpty(Container(9500).ListItem.Artist) + !IsEmpty(Container(9500).ListItem.Year)">$INFO[Container(9500).ListItem.Title]$INFO[Container(9500).ListItem.Year, (,)]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Artist) + IsEmpty(Container(9500).ListItem.Year)">$INFO[Container(9500).ListItem.Title]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Album)">$INFO[Container(9500).ListItem.Year]</value>
-        <value condition="!IsEmpty(Container(9500).ListItem.Property(Addon.Version))">$INFO[Container(9500).ListItem.Property(Addon.Version)]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.AddonVersion))">$INFO[Container(9500).ListItem.AddonVersion)]</value>
         <value condition="IsEmpty(Container(9500).ListItem.TvShowTitle) + !IsEmpty(Container(9500).ListItem.Year)">$INFO[Container(9500).ListItem.Year,,  •  ]$INFO[Container(9500).ListItem.Rating]</value>
         <value>$INFO[Container(9500).ListItem.Rating]</value>
     </variable>

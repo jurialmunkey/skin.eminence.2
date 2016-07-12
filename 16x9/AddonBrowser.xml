@@ -15,7 +15,7 @@
         <!-- Main group -->
         <control type="group">
             <include>Defs_ViewBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
             </include>
             <include>Viewtype_SquareList</include>
@@ -26,11 +26,11 @@
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
             <include>Dialog_Top</include>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
+            <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31068]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-            <include name="Dialog_Top_Arrows">
+            <include content="Dialog_Top_Arrows">
                 <param name="id" value="9000" />
             </include>
 

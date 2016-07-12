@@ -6,7 +6,7 @@
     <onunload>SetProperty(HubReturn,1109,home)</onunload>
     
     <controls>
-        <include name="Window_Hub">
+        <include content="Window_Hub">
             <param name="categories" value="skinshortcuts-group-x1109" />
         </include>
     </controls>

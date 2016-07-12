@@ -8,19 +8,19 @@
 
             <control type="group">
                 <visible allowhiddenfocus="true">!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
-                <include name="Object_Headline">
+                <include content="Object_Headline">
                     <param name="label" value="207" />
                 </include>
             </control>
             <control type="group">
                 <visible allowhiddenfocus="true">StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
-                <include name="Object_Headline">
+                <include content="Object_Headline">
                     <param name="label" value="206" />
                 </include>
             </control>
             <control type="group">
                 <visible allowhiddenfocus="true">StringCompare(Window.Property(list),Director)</visible>
-                <include name="Object_Headline">
+                <include content="Object_Headline">
                     <param name="label" value="20339" />
                 </include>
             </control>
@@ -30,7 +30,7 @@
                 <right>bigpad</right>
                 <top>bigpad</top>
                 <bottom>bigpad</bottom>
-                <include name="Object_Poster">
+                <include content="Object_Poster">
                     <param name="flipx" value="false" />
                     <param name="width" value="posterw" />
                 </include>
@@ -394,7 +394,7 @@
                         <right>0</right>
                         <top>0</top>
                         <visible>StringCompare(Control.GetLabel(5),$LOCALIZE[207])</visible>
-                        <include name="Dialog_BasicList">
+                        <include content="Dialog_BasicList">
                             <param name="width" value="listw"/>
                             <param name="height" value="posterh" />
                             <param name="id" value="50" />
@@ -416,7 +416,7 @@
                         <right>0</right>
                         <top>0</top>
                         <visible>StringCompare(Window.Property(list),Director)</visible>
-                        <include name="Dialog_BasicList">
+                        <include content="Dialog_BasicList">
                             <param name="width" value="listw" />
                             <param name="height" value="posterh" />
                             <param name="id" value="9500" />

@@ -14,35 +14,35 @@
             <control type="group">
                 <visible>Control.IsVisible(11)</visible>
                 <include>Animation_Common</include>
-                <include name="Object_Headline">
+                <include content="Object_Headline">
                     <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
                 </include>
             </control>
             <control type="group">
                 <visible>Control.IsVisible(12)</visible>
                 <include>Animation_Common</include>
-                <include name="Object_Headline">
+                <include content="Object_Headline">
                     <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
                 </include>
             </control>
             <control type="group">
                 <visible>Control.IsVisible(13)</visible>
                 <include>Animation_Common</include>
-                <include name="Object_Headline">
+                <include content="Object_Headline">
                     <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
                 </include>
             </control>
             <control type="group" id="50">
-                <include name="PVR_SmallList">
+                <include content="PVR_SmallList">
                     <param name="id" value="11" />
                     <param name="label" value="19030" />
                 </include>
-                <include name="PVR_SmallList">
+                <include content="PVR_SmallList">
                     <param name="id" value="12" />
                     <param name="label" value="19031" />
                     <param name="include" value="PVR_SmallList_StartTime" />
                 </include>
-                <include name="PVR_SmallList">
+                <include content="PVR_SmallList">
                     <param name="id" value="13" />
                     <param name="visible" value="Player.HasVideo + VideoPlayer.Content(livetv)" />
                     <param name="label" value="19029" />

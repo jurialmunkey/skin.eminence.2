@@ -22,7 +22,7 @@
                 <top>top</top>
                 <include>Animation_Hub</include>
 
-                <include name="Dialog_FileManager_List">
+                <include content="Dialog_FileManager_List">
                     <param name="width" value="settingshalfw" />
                     <param name="labelwidth" value="settingshalfw" />
                     <param name="id" value="50" />
@@ -41,7 +41,7 @@
                 <top>top</top>
                 <include>Animation_Common</include>
 
-                <include name="Dialog_FileManager_List">
+                <include content="Dialog_FileManager_List">
                     <param name="width" value="settingshalfw" />
                     <param name="labelwidth" value="settingshalfw" />
                     <param name="id" value="100" />
@@ -61,11 +61,11 @@
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
             <include>Dialog_Top</include>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
+            <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31068]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-            <include name="Dialog_Top_Arrows">
+            <include content="Dialog_Top_Arrows">
                 <param name="id" value="9000" />
             </include>
 

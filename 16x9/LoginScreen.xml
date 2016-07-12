@@ -28,11 +28,11 @@
                     <right>bigpad</right>
                     <include>Object_Background</include>
                 </control>
-                <include name="Object_Line">
+                <include content="Object_Line">
                     <param name="width" value="headlinew" />
                     <param name="label" value="$INFO[Control.GetLabel(2)]" />
                 </include>
-                <include name="Dialog_ImageList">
+                <include content="Dialog_ImageList">
                     <param name="id" value="52" />
                     <param name="moveid" value="5" />
                     <param name="onup" value="5" />

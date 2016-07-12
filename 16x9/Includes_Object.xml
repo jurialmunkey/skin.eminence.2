@@ -481,7 +481,7 @@
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
-            <include name="Object_Line">
+            <include content="Object_Line">
                 <param name="label" value="$PARAM[label]" />
                 <param name="width" value="headlinew" />
             </include>

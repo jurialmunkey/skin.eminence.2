@@ -226,7 +226,7 @@
                 <control type="label">
                     <include>DialogID</include>
                     <label>DialogMuteBug.xml</label>
-                    <visible>Window.IsVisible(DialogMuteBug.xml)</visible>
+                    <visible>Player.Muted</visible>
                 </control>
 
                 <control type="label">

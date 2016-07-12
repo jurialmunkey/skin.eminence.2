@@ -6,7 +6,7 @@
     <controls>
         <control type="group">
             <include>Defs_InfoBackground</include>
-            <include name="Object_Headline">
+            <include content="Object_Headline">
                 <param name="label" value="19033" />
             </include>
             <control type="group">
@@ -14,7 +14,7 @@
                 <left>bigpad</left>
                 <bottom>bigpad</bottom>
                 <right>bigpad</right>
-                <include name="Object_Poster">
+                <include content="Object_Poster">
                     <param name="flipx" value="false" />
                     <param name="width" value="posterh" />
                 </include>
@@ -44,7 +44,7 @@
                             <right>pad</right>
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Property(Addon.Type)][/COLOR][/UPPERCASE]</label>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.AddonType)][/COLOR][/UPPERCASE]</label>
                         </control>
                         <control type="textbox">
                             <top>pad</top>
@@ -53,7 +53,7 @@
                             <height max="228">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
-                            <label>$INFO[ListItem.Property(Addon.Description)]</label>
+                            <label>$INFO[ListItem.AddonDescription)]</label>
                         </control>
                         <control type="group">
                             <left>pad</left>
@@ -65,7 +65,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Addon.Creator))</visible>
+                                    <visible>!IsEmpty(ListItem.AddonCreator))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -80,7 +80,7 @@
                                         <align>left</align>
                                         <height>36</height>
                                         <font>Font-ListInfo-Bold</font>
-                                        <label>$INFO[ListItem.Property(Addon.Creator)]</label>
+                                        <label>$INFO[ListItem.AddonCreator)]</label>
                                         <textcolor>SubLabel</textcolor>
                                     </control>
                                 </control>
@@ -89,7 +89,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+                                    <visible>!IsEmpty(ListItem.AddonSummary))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -104,7 +104,7 @@
                                         <align>left</align>
                                         <height>36</height>
                                         <font>Font-ListInfo-Bold</font>
-                                        <label>$INFO[ListItem.Property(Addon.Summary)]</label>
+                                        <label>$INFO[ListItem.AddonSummary)]</label>
                                         <textcolor>SubLabel</textcolor>
                                     </control>
                                 </control>
@@ -144,7 +144,7 @@
                         <align>center</align>
                         <orientation>horizontal</orientation>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
+                            <visible>!IsEmpty(ListItem.AddonVersion))</visible>
                             <width>370</width>
                             <height>100%</height>
                             <control type="label">
@@ -160,13 +160,13 @@
                                 <align>center</align>
                                 <textcolor>SubLabel</textcolor>
                                 <font>Font-InfoBox-Title</font>
-                                <label>$INFO[ListItem.Property(Addon.Version)]</label>
+                                <label>$INFO[ListItem.AddonVersion)]</label>
                             </control>
                         </control>
                         <control type="group">
                             <width>370</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(ListItem.Property(Addon.Status))</visible>
+                            <visible>!IsEmpty(ListItem.AddonStatus))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -180,7 +180,7 @@
                                 <align>center</align>
                                 <textcolor>SubLabel</textcolor>
                                 <font>Font-InfoBox-Title</font>
-                                <label>$INFO[ListItem.Property(Addon.Status)]</label>
+                                <label>$INFO[ListItem.AddonStatus)]</label>
                             </control>
                         </control>
                         
@@ -234,14 +234,6 @@
                             <font>Font-ListInfo-Small-Bold</font>
                             <include>Defs_OptionButton2</include>
                             <visible>Control.IsEnabled(7)</visible>
-                        </control>
-                        <!-- Changelog Button -->
-                        <control type="button" id="10">
-                            <width>auto</width>
-                            <label>24036</label>
-                            <font>Font-ListInfo-Small-Bold</font>
-                            <include>Defs_OptionButton2</include>
-                            <visible>Control.IsEnabled(10)</visible>
                         </control>
                     </control>
                 </control>
