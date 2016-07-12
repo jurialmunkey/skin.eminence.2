@@ -60,7 +60,7 @@
 
         <!-- Text Box RSS -->
         <control type="group">
-            <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
+            <visible>!Window.IsVisible(DialogNotification.xml)</visible>
             <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
             <animation effect="slide" start="0,64" end="0" time="125">VisibleChange</animation>
             <control type="image">

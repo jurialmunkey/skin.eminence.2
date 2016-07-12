@@ -189,8 +189,8 @@
 
                 <control type="label">
                     <include>DialogID</include>
-                    <label>DialogKaiToast.xml</label>
-                    <visible>Window.IsVisible(DialogKaiToast.xml)</visible>
+                    <label>DialogNotification.xml</label>
+                    <visible>Window.IsVisible(DialogNotification.xml)</visible>
                 </control>
 
                 <control type="label">
