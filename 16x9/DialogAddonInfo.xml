@@ -44,7 +44,7 @@
                             <right>pad</right>
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.AddonType)][/COLOR][/UPPERCASE]</label>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.AddonType][/COLOR][/UPPERCASE]</label>
                         </control>
                         <control type="textbox">
                             <top>pad</top>
@@ -53,7 +53,7 @@
                             <height max="228">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
-                            <label>$INFO[ListItem.AddonDescription)]</label>
+                            <label>$INFO[ListItem.AddonDescription]</label>
                         </control>
                         <control type="group">
                             <left>pad</left>
@@ -65,7 +65,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.AddonCreator))</visible>
+                                    <visible>!IsEmpty(ListItem.AddonCreator)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -80,7 +80,7 @@
                                         <align>left</align>
                                         <height>36</height>
                                         <font>Font-ListInfo-Bold</font>
-                                        <label>$INFO[ListItem.AddonCreator)]</label>
+                                        <label>$INFO[ListItem.AddonCreator]</label>
                                         <textcolor>SubLabel</textcolor>
                                     </control>
                                 </control>
@@ -144,7 +144,7 @@
                         <align>center</align>
                         <orientation>horizontal</orientation>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.AddonVersion))</visible>
+                            <visible>!IsEmpty(ListItem.AddonVersion)</visible>
                             <width>370</width>
                             <height>100%</height>
                             <control type="label">
@@ -160,13 +160,13 @@
                                 <align>center</align>
                                 <textcolor>SubLabel</textcolor>
                                 <font>Font-InfoBox-Title</font>
-                                <label>$INFO[ListItem.AddonVersion)]</label>
+                                <label>$INFO[ListItem.AddonVersion]</label>
                             </control>
                         </control>
                         <control type="group">
                             <width>370</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(ListItem.AddonStatus))</visible>
+                            <visible>!IsEmpty(ListItem.AddonStatus)</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -180,7 +180,7 @@
                                 <align>center</align>
                                 <textcolor>SubLabel</textcolor>
                                 <font>Font-InfoBox-Title</font>
-                                <label>$INFO[ListItem.AddonStatus)]</label>
+                                <label>$INFO[ListItem.AddonStatus]</label>
                             </control>
                         </control>
                         

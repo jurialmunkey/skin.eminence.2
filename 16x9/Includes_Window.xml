@@ -97,7 +97,7 @@
                             <height>70</height>
                             <font>Font-ListInfo-Small</font>
                             <align>left</align>
-                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription)]</label>
+                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
                             <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         <control type="textbox">
@@ -106,7 +106,7 @@
                             <height>98</height>
                             <font>Font-ListInfo-Small</font>
                             <align>left</align>
-                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription)]</label>
+                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
                             <visible>IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         
@@ -165,7 +165,7 @@
                             <font>Font-ListInfo-Small</font>
                             <align>left</align>
                             <textcolor>Selected</textcolor>
-                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription)]</label>
+                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
                             <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         <control type="textbox">
@@ -175,7 +175,7 @@
                             <font>Font-ListInfo-Small</font>
                             <align>left</align>
                             <textcolor>Selected</textcolor>
-                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription)]</label>
+                            <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
                             <visible>IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         
