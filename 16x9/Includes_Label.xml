@@ -78,8 +78,8 @@
     </variable>
 
     <variable name="Label_ExtendedInfo_InfoLine">
-        <value condition="StringCompare(Window.Property(content),150) + Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">$ADDON[script.extendedinfo 32010]</value>
-        <value condition="StringCompare(Window.Property(content),150) + Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)">$LOCALIZE[31107]</value>
+        <value condition="StringCompare(Window.Property(content),150) + Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$ADDON[script.extendedinfo 32010]</value>
+        <value condition="StringCompare(Window.Property(content),150) + Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)">$LOCALIZE[31107]</value>
         <value condition="StringCompare(Window.Property(content),1000)">$LOCALIZE[206]</value>
         <value condition="StringCompare(Window.Property(content),250)">$ADDON[script.extendedinfo 32031]</value>
         <value condition="StringCompare(Window.Property(content),350)">$ADDON[script.extendedinfo 32118]</value>
@@ -228,15 +228,11 @@
     </variable>
     <variable name="Label_SettingsHeader">
         <value condition="Control.HasFocus(111) | Window.IsActive(systeminfo)">$LOCALIZE[130]</value>
-        <value condition="Control.HasFocus(110) | Window.IsActive(weathersettings)">$LOCALIZE[8]</value>
         <value condition="Control.HasFocus(109) | Window.IsActive(systemsettings)">$LOCALIZE[13000]</value>
         <value condition="Control.HasFocus(108) | Window.IsActive(pvrsettings)">[CAPITALIZE]$LOCALIZE[19191][/CAPITALIZE]</value>
         <value condition="Control.HasFocus(107) | Window.IsActive(skinsettings)">$LOCALIZE[166]</value>
-        <value condition="Control.HasFocus(106) | Window.IsActive(picturessettings)">$LOCALIZE[1]</value>
         <value condition="Control.HasFocus(105) | Window.IsActive(addonbrowser)">$LOCALIZE[24001]</value>
-        <value condition="Control.HasFocus(104) | Window.IsActive(musicsettings)">$LOCALIZE[2]</value>
         <value condition="Control.HasFocus(103) | Window.IsActive(profiles)">$LOCALIZE[13200]</value>
-        <value condition="Control.HasFocus(102) | Window.IsActive(videossettings)">$LOCALIZE[157]</value>
         <value condition="Control.HasFocus(101) | Window.IsActive(servicesettings)">$LOCALIZE[705]</value>
         <value>$LOCALIZE[480]</value>
     </variable>

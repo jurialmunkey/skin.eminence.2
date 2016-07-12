@@ -47,7 +47,7 @@
                             <right>pad</right>
                             <height>36</height>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[Window.Property(title)]</label>
+                            <label>$INFO[Window.Property(label)]</label>
                         </control>
                         <control type="label">
                             <left>pad</left>

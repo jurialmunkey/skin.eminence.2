@@ -1,3 +1,7 @@
+[B]2.5.4[/B]
+Fix extended info
+Other fixes
+
 [B]2.5.3[/B]
 Krypton Work Begins:
 Change includes name to includes content

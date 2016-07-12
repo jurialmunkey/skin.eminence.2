@@ -19,7 +19,7 @@
             <visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
-            <visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+            <visible>!Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
             <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
             <include>Animation_FadeIn</include>
             <control type="image" description="Background">
@@ -38,7 +38,7 @@
             <visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
-            <visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+            <visible>!Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
             <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
             <include>Animation_SlideIn</include>
 
@@ -187,11 +187,11 @@
             <control type="visualisation">
                 <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)]] | [Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)] + IsEmpty(Player.Art(fanart))]</visible>
                 <description>visualisation</description>
-                <include>Dimensions_Fullscreen</include>
+                
             </control>
             <control type="image">
                 <aspectratio>scale</aspectratio>
-                <include>Dimensions_Fullscreen</include>
+                
                 <texture background="true">$INFO[Player.Art(fanart)]</texture>
                 <visible>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
                 <visible>Skin.HasSetting(musicvis.fanartfallback)</visible>
@@ -202,7 +202,7 @@
             </control>
             <control type="multiimage">
                 <aspectratio>scale</aspectratio>
-                <include>Dimensions_Fullscreen</include>
+                
                 <timeperimage>10000</timeperimage>
                 <randomize>true</randomize>
                 <fadetime>600</fadetime>
@@ -244,7 +244,7 @@
     <!-- TOP BAR -->
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
-        <value condition="VideoPlayer.IsFullscreen + [Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]">PosterBorder</value>
+        <value condition="VideoPlayer.IsFullscreen + [Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]">PosterBorder</value>
         <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeBarBG</value>
         <value>PosterBorder</value>
     </variable>
@@ -258,7 +258,7 @@
     </variable>
     <variable name="Furniture_TopBar_Header_MainLabel">
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$LOCALIZE[31145]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$LOCALIZE[31145]</value>
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31149]</value>
         <value condition="Window.IsVisible(filemanager)">$LOCALIZE[7]</value>
         <value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
@@ -306,7 +306,7 @@
     <variable name="Furniture_TopBar_Header_SubLabel">
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR] $LOCALIZE[31067]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR] $LOCALIZE[31067]</value>
         <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
         <value condition="!IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>
         <value condition="Pvr.IsRecording">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19158]...[/COLOR]$INFO[Pvr.NowRecordingTitle,  ,]$INFO[Pvr.NowRecordingChannel,  ,]</value>
@@ -316,7 +316,7 @@
     <variable name="Furniture_TopBar_Tile_Text">
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[503]</value>
         <value condition="Player.Muted">$LOCALIZE[31013]</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31070]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31070]</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]">$VAR[Label_PlayerStatus]</value>
         <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
@@ -329,7 +329,7 @@
     </variable>
     <variable name="Furniture_TopBar_Tile_Icon">
         <value condition="Player.Muted">special://skin/extras/icons/mute.png</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">special://skin/extras/icons/infobubble.png</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">special://skin/extras/icons/infobubble.png</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasAudio">special://skin/extras/icons/songs.png</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(movies)">special://skin/extras/icons/film.png</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(episodes)">special://skin/extras/icons/tv.png</value>
@@ -582,7 +582,7 @@
     <include name="Furniture_TopBar">
         <!-- <include>GlobalInfoOverlay</include> -->
         <control type="group">
-            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -602,7 +602,7 @@
             <include>Furniture_TopBar_Clock</include>
         </control>
         <control type="group">
-            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Player.Muted | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Player.Muted | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />

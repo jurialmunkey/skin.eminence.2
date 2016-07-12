@@ -89,7 +89,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.AddonSummary))</visible>
+                                    <visible>!IsEmpty(ListItem.AddonSummary)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>

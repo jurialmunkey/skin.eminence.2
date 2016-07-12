@@ -526,12 +526,12 @@
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>IsEmpty(ListItem.AddonSummary))</visible>
+                            <visible>IsEmpty(ListItem.AddonSummary)</visible>
                             <visible>IsEmpty(ListItem.Property(character))</visible>
                             <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.AddonSummary)) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
+                            <visible>!IsEmpty(ListItem.AddonSummary) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">
@@ -612,12 +612,12 @@
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>IsEmpty(ListItem.AddonSummary))</visible>
+                            <visible>IsEmpty(ListItem.AddonSummary)</visible>
                             <visible>IsEmpty(ListItem.Property(character))</visible>
                             <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.AddonSummary)) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
+                            <visible>!IsEmpty(ListItem.AddonSummary) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">

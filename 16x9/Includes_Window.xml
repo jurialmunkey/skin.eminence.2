@@ -1173,7 +1173,6 @@
         <control type="button" id="5">
             <description>Presets</description>
             <label>13388</label>
-            <onclick>ActivateWindow(musicsettings)</onclick>
             <onclick>XBMC.ActivateWindow(122)</onclick>
             <include>Defs_OSDButton</include>
         </control>
@@ -1329,7 +1328,7 @@
     </include>
     <include name="Window_OSD">
         <control type="group">
-            <visible>![Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)]</visible>
+            <visible>![Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]</visible>
             <!-- <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml) | !Window.IsVisible(MusicVisualisation.xml)</visible> -->
             <animation type="WindowOpen">
                 <effect type="slide" start="0,64" end="0" time="175" />

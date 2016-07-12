@@ -8,11 +8,11 @@
 		<control type="visualisation" id="2">
             <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)]] | [Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)] + IsEmpty(Player.Art(fanart))]</visible>
             <description>visualisation</description>
-            <include>Dimensions_Fullscreen</include>
+            
         </control>
         <control type="image">
             <aspectratio>scale</aspectratio>
-            <include>Dimensions_Fullscreen</include>
+            
             <texture background="true">$INFO[Player.Art(fanart)]</texture>
             <visible>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
             <visible>Skin.HasSetting(musicvis.fanartfallback)</visible>
@@ -23,7 +23,7 @@
         </control>
         <control type="multiimage">
             <aspectratio>scale</aspectratio>
-            <include>Dimensions_Fullscreen</include>
+            
             <timeperimage>10000</timeperimage>
             <randomize>true</randomize>
             <fadetime>600</fadetime>
