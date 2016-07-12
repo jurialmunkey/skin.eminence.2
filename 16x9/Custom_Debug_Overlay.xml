@@ -141,8 +141,8 @@
 
                 <control type="label">
                     <include>DialogID</include>
-                    <label>DialogAlbumInfo.xml</label>
-                    <visible>Window.IsVisible(DialogAlbumInfo.xml)</visible>
+                    <label>DialogMusicInfo.xml</label>
+                    <visible>Window.IsVisible(DialogMusicInfo.xml)</visible>
                 </control>
 
                 <control type="label">
