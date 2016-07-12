@@ -82,35 +82,28 @@
                 <content>
                     <!-- Row 1 -->
                     <item id="1">
-                        <description>Appearance</description>
-                        <label>480</label>
-                        <onclick>activatewindow(AppearanceSettings)</onclick>
+                        <description>Interface</description>
+                        <label>14206</label>
+                        <onclick>activatewindow(InterfaceSettings)</onclick>
                         <icon>special://skin/extras/icons/skinsettings.png</icon>
                     </item>
                     <item id="5">
-                        <description>Video</description>
-                        <label>157</label>
-                        <onclick>activatewindow(VideosSettings)</onclick>
-                        <icon>special://skin/extras/icons/film.png</icon>
+                        <description>Library</description>
+                        <label>14202</label>
+                        <onclick>activatewindow(LibrarySettings)</onclick>
+                        <icon>special://skin/extras/icons/tags.png</icon>
                     </item>
                     <item id="6">
-                        <description>Music</description>
-                        <label>2</label>
-                        <onclick>activatewindow(MusicSettings)</onclick>
-                        <icon>special://skin/extras/icons/songs.png</icon>
+                        <description>Player</description>
+                        <label>14200</label>
+                        <onclick>activatewindow(PlayerSettings)</onclick>
+                        <icon>special://skin/extras/icons/equalizer.png</icon>
                     </item>
-                    <item id="7">
-                        <description>Pictures</description>
-                        <label>1</label>
-                        <onclick>activatewindow(PicturesSettings)</onclick>
-                        <icon>special://skin/extras/icons/pictures.png</icon>
-                    </item>
-                    
-                    <item id="4">
-                        <description>Weather</description>
-                        <label>8</label>
-                        <onclick>activatewindow(WeatherSettings)</onclick>
-                        <icon>special://skin/extras/icons/sun.png</icon>
+                    <item id="9">
+                        <description>System</description>
+                        <label>13000</label>
+                        <onclick>activatewindow(SystemSettings)</onclick>
+                        <icon>special://skin/extras/icons/configure.png</icon>
                     </item>
                     <item id="2">
                         <description>Skin Settings</description>
@@ -121,12 +114,7 @@
                     </item>
 
                     <!-- Row 2 -->
-                    <item id="9">
-                        <description>System</description>
-                        <label>13000</label>
-                        <onclick>activatewindow(SystemSettings)</onclick>
-                        <icon>special://skin/extras/icons/configure.png</icon>
-                    </item>
+                    
                     <item id="10">
                         <description>Addons</description>
                         <label>24001</label>
