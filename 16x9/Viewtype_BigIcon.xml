@@ -104,7 +104,7 @@
                     <control type="textbox">
                         <left>pad</left>
                         <right>pad</right>
-                        <height>126</height>
+                        <height>122</height>
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$VAR[Label_Plot]</label>

@@ -183,7 +183,7 @@
                         <control type="textbox">
                             <left>pad</left>
                             <right>pad</right>
-                            <height>auto</height>
+                            <height max="450">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
                             <label>$VAR[Label_Plot]</label>
