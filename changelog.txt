@@ -1,6 +1,8 @@
 [B]2.5.4[/B]
 Fix extended info
-Other fixes
+Fix DialogSlider
+Fix DialogSettings
+Fix DialogConfirm
 
 [B]2.5.3[/B]
 Krypton Work Begins:

@@ -88,6 +88,7 @@
         <pulseonselect>false</pulseonselect>
         <sliderwidth>230</sliderwidth>
         <sliderheight>23</sliderheight>
+        <orientation>horizontal</orientation>
         <texturesliderbar>common/slider_bg.png</texturesliderbar>
         <textureslidernib border="2">common/SliderNibNF.png</textureslidernib>
         <textureslidernibfocus border="2">common/SliderNibFO.png</textureslidernibfocus>
@@ -101,6 +102,7 @@
         <texturesliderbar>common/slider_bg.png</texturesliderbar>
         <textureslidernib border="2">common/SliderNibNF.png</textureslidernib>
         <textureslidernibfocus border="2">common/SliderNibFO.png</textureslidernibfocus>
+        <orientation>horizontal</orientation>
         <textcolor>ListLabel</textcolor>
         <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
