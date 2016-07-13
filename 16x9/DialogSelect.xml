@@ -50,7 +50,7 @@
                 <param name="id" value="3" />
                 <param name="onup" value="3" />
                 <param name="ondown" value="3" />
-                <param name="moveid" value="5" />
+                <param name="moveid" value="8000" />
                 <param name="left" value="bigpad" />
                 <param name="top" value="80" />
                 <param name="width" value="1156" />
@@ -60,11 +60,12 @@
                 <param name="id" value="6" />
                 <param name="onup" value="6" />
                 <param name="ondown" value="6" />
-                <param name="moveid" value="5" />
+                <param name="moveid" value="8000" />
                 <param name="left" value="616" />
                 <param name="width" value="1180" />
             </include>
-            <control type="button" id="5">
+            <!-- Button grouplist -->
+            <control type="grouplist" id="8000">
                 <right>bigpad</right>
                 <top>pad</top>
                 <align>right</align>
@@ -73,10 +74,27 @@
                 <onright>3</onright>
                 <onup>3</onup>
                 <ondown>3</ondown>
-                <texturenofocus>noop</texturenofocus>
-                <texturefocus>noop</texturefocus>
-                <focusedcolor>$VAR[HighlightColor]</focusedcolor>
-                <include>Defs_OptionButton</include>
+                <orientation>horizontal</orientation>
+                <itemgap>pad</itemgap>
+                <control type="button" id="5">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="7">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+
             </control>
         </control>
 

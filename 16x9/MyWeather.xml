@@ -145,12 +145,6 @@
                     <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
                     <include>Defs_OptionButton2</include>
                 </control>
-                <!-- Settings -->
-                <control type="button" id="9004">
-                    <label>$LOCALIZE[5]</label>
-                    <onclick>activatewindow(WeatherSettings)</onclick>
-                    <include>Defs_OptionButton2</include>
-                </control>
             </control>
         </control>
     </controls>
