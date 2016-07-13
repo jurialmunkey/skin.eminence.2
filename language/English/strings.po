@@ -399,7 +399,7 @@ msgid "Reset colors to defaults"
 msgstr ""
 
 msgctxt "#31114"
-msgid "Weather fanart"
+msgid "Install weather fanart"
 msgstr ""
 
 msgctxt "#31115"
@@ -720,5 +720,9 @@ msgstr ""
 
 msgctxt "#31197"
 msgid "Panels"
+msgstr ""
+
+msgctxt "#31198"
+msgid "Install supported addons"
 msgstr ""
 

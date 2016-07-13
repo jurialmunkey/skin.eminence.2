@@ -136,8 +136,9 @@
                 <!-- Fanart -->
                 <control type="button" id="9002">
                     <label>31114</label>
-                    <onclick>RunScript(script.image.resource.select,property=weather.fanart&amp;type=resource.images.weatherfanart)</onclick>
+                    <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
                     <include>Defs_OptionButton2</include>
+                    <visible>!System.HasAddon(resource.images.weatherfanart.multi)</visible>
                 </control>
                 <!-- Icon -->
                 <control type="button" id="9003">

@@ -112,6 +112,16 @@
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                     </control>
+                    <!-- INSTALL ADDONS -->
+                    <control type="togglebutton" id="8006">
+                        <width>100%</width>
+                        <label>31198</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31198][/COLOR]</altlabel>
+                        <usealttexture>ControlGroup(8000).HasFocus(8006)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                    </control>
                     <!-- RESET SKIN -->
                     <control type="togglebutton" id="8099">
                         <width>100%</width>
@@ -324,16 +334,6 @@
                         <label2>$VAR[Label_SkinSetting_FallbackFanart]</label2>
                         <onclick condition="IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
                         <onclick condition="!IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
-                    </control>
-                    <!-- Weather Fanart -->
-                    <control type="button" id="8209">
-                        <width>100%</width>
-                        <label>31114</label>
-                        <onclick>RunScript(script.image.resource.select,property=weather.fanart&amp;type=resource.images.weatherfanart)</onclick>
-                        <label2>$VAR[Label_SkinSetting_WeatherFanart]</label2>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
@@ -636,6 +636,128 @@
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+
+                    <!-- INSTALL -->
+                    <control type="radiobutton" id="8601">
+                        <width>100%</width>
+                        <label>script.skin.helper.service</label>
+                        <label2>$INFO[System.AddonVersion(script.skin.helper.service)]        </label2>
+                        <onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+                        <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
+                        <selected>System.HasAddon(script.skin.helper.service)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8602">
+                        <width>100%</width>
+                        <label>script.extendedinfo</label>
+                        <label2>$INFO[System.AddonVersion(script.extendedinfo)]        </label2>
+                        <onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+                        <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
+                        <selected>System.HasAddon(script.extendedinfo)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8603">
+                        <width>100%</width>
+                        <label>script.skinshortcuts</label>
+                        <label2>$INFO[System.AddonVersion(script.skinshortcuts)]        </label2>
+                        <onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
+                        <onclick condition="System.HasAddon(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
+                        <selected>System.HasAddon(script.skinshortcuts)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8604">
+                        <width>100%</width>
+                        <label>script.image.resource.select</label>
+                        <label2>$INFO[System.AddonVersion(script.image.resource.select)]        </label2>
+                        <onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                        <onclick condition="System.HasAddon(script.image.resource.select)">Addon.OpenSettings(script.image.resource.select)</onclick>
+                        <selected>System.HasAddon(script.image.resource.select)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8605">
+                        <width>100%</width>
+                        <label>plugin.program.autocompletion</label>
+                        <label2>$INFO[System.AddonVersion(plugin.program.autocompletion)]        </label2>
+                        <onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
+                        <onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+                        <selected>System.HasAddon(plugin.program.autocompletion)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8606">
+                        <width>100%</width>
+                        <label>script.artistslideshow</label>
+                        <label2>$INFO[System.AddonVersion(script.artistslideshow)]        </label2>
+                        <onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
+                        <onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
+                        <selected>System.HasAddon(script.artistslideshow)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8607">
+                        <width>100%</width>
+                        <label>resource.images.weatherfanart.multi</label>
+                        <label2>$INFO[System.AddonVersion(resource.images.weatherfanart.multi)]        </label2>
+                        <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
+                        <onclick condition="System.HasAddon(resource.images.weatherfanart.multi)">Addon.OpenSettings(resource.images.weatherfanart.multi)</onclick>
+                        <selected>System.HasAddon(resource.images.weatherfanart.multi)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8608">
+                        <width>100%</width>
+                        <label>script.globalsearch</label>
+                        <label2>$INFO[System.AddonVersion(script.globalsearch)]        </label2>
+                        <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
+                        <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
+                        <selected>System.HasAddon(script.globalsearch)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8609">
+                        <width>100%</width>
+                        <label>service.nextup.notification</label>
+                        <label2>$INFO[System.AddonVersion(service.nextup.notification)]        </label2>
+                        <onclick condition="!System.HasAddon(service.nextup.notification)">InstallAddon(service.nextup.notification)</onclick>
+                        <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
+                        <selected>System.HasAddon(service.nextup.notification)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    <control type="radiobutton" id="8610">
+                        <width>100%</width>
+                        <label>script.artwork.downloader</label>
+                        <label2>$INFO[System.AddonVersion(script.artwork.downloader)]        </label2>
+                        <onclick condition="!System.HasAddon(script.artwork.downloader)">InstallAddon(script.artwork.downloader)</onclick>
+                        <onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
+                        <selected>System.HasAddon(script.artwork.downloader)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
                     </control>
 
                     <!-- RESET -->

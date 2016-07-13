@@ -119,10 +119,10 @@
     </include>
     <variable name="Defs_HomeWidget_Content">
         <value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</value>
         <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath)) + !Skin.HasSetting(widgets.persistent)">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
         <value condition="!IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
-        <value condition="StringCompare(Skin.String(home.fallbackwidget),Weather) + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+        <value condition="StringCompare(Skin.String(home.fallbackwidget),Weather) + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</value>
         <value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>

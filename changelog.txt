@@ -3,6 +3,8 @@ Fix extended info
 Fix DialogSlider
 Fix DialogSettings
 Fix DialogConfirm
+Fix Weather Fanart Download
+Add Install Support Addons section in Skin Settings
 
 [B]2.5.3[/B]
 Krypton Work Begins:
