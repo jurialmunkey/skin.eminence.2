@@ -723,6 +723,6 @@ msgid "Panels"
 msgstr ""
 
 msgctxt "#31198"
-msgid "Install supported addons"
+msgid "Manage Dependencies"
 msgstr ""
 
