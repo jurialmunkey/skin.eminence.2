@@ -430,7 +430,7 @@
                             <param name="backpanel" value="false" />
                             <param name="imagelist" value="true" />
                             <param name="contentvisible" value="true" />
-                            <param name="content" value="plugin://script.extendedinfo?info=directormovies&amp;&amp;director=$INFO[ListItem.Director]" />
+                            <param name="content" value="plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director]" />
                         </include>
                     </control>
                 </control>
