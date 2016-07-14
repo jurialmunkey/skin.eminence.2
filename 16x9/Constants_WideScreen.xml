@@ -32,7 +32,7 @@
     <constant name="iconwidepadw">21</constant>
     <constant name="iconwidepanelpadw">31</constant>
     <constant name="iconwideitemw">606</constant>
-    <constant name="settingsitemw">380</constant>
+    <constant name="settingsitemw">316.66</constant>
     <constant name="settingsradioposx">1348</constant>
     <constant name="settingshalfw">930</constant>
     <constant name="bigiconw">345</constant>
