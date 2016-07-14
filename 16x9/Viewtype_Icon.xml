@@ -296,7 +296,7 @@
                             <top>pad</top>
                             <bottom>pad</bottom>
                             <control type="image">
-                                <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                                <!-- <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include> -->
                                 <aspectratio aligny="center">scale</aspectratio>
                                 <texture background="true" colordiffuse="PosterBorder">common/white.png</texture>
                             </control>
