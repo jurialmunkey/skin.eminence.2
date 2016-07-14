@@ -25,13 +25,14 @@
     <constant name="iconpadw">13</constant>
     <constant name="iconpanelpadw">21</constant>
     <constant name="iconitemw">262</constant>
+    <constant name="icongenreitemw">458.5</constant>
     <constant name="iconextrapadw">17.8</constant>
     <constant name="iconextrapanelpadw">25.8</constant>
     <constant name="iconextraitemw">271.6</constant>
     <constant name="iconwidepadw">21</constant>
     <constant name="iconwidepanelpadw">31</constant>
     <constant name="iconwideitemw">606</constant>
-    <constant name="settingsitemw">316.66</constant>
+    <constant name="settingsitemw">380</constant>
     <constant name="settingsradioposx">1348</constant>
     <constant name="settingshalfw">930</constant>
     <constant name="bigiconw">345</constant>

@@ -14,10 +14,11 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include name="View_Icon">
+                <include>Object_Scrollbar</include>
+                <include content="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
-                    <param name="condition" value="true" />
+                    <param name="condition" value="Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(pictures) | Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)" />
                 </include>
                 <include>Object_Arrows_Vertical</include>
             </control>
@@ -36,9 +37,10 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <control type="group">
-                <include>Object_Background</include>
+                    <include>Object_Background</include>
+                    <include>Object_Scrollbar</include>
                     <width>listinfow</width>
-                    <include name="View_Icon">
+                    <include content="View_Icon">
                         <param name="id" value="59" />
                         <param name="name" value="31141" />
                         <param name="width" value="listinfow" />
@@ -67,7 +69,8 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include name="View_IconWide">
+                <include>Object_Scrollbar</include>
+                <include content="View_IconWide">
                     <param name="id" value="55" />
                     <param name="name" value="539" />
                     <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
@@ -90,7 +93,8 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include name="View_IconFanart">
+                <include>Object_Scrollbar</include>
+                <include content="View_IconFanart">
                     <param name="id" value="56" />
                     <param name="name" value="20445" />
                     <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)" />
@@ -113,6 +117,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
+                <include>Object_Scrollbar_Horizontal</include>
                 <control type="group">
                     <right>0</right>
                     <width>1280</width>
@@ -121,7 +126,7 @@
                     <control type="wraplist" id="58">
                         <width>100%</width>
                         <height>100%</height>
-                        <pagecontrol>60</pagecontrol>
+                        <pagecontrol>61</pagecontrol>
                         <preloaditems>2</preloaditems>
                         <onleft>58</onleft>
                         <onright>58</onright>
@@ -183,7 +188,7 @@
                         <control type="textbox">
                             <left>pad</left>
                             <right>pad</right>
-                            <height>auto</height>
+                            <height max="450">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
                             <label>$VAR[Label_Plot]</label>
@@ -209,6 +214,7 @@
         <param name="updownid" default="true" />
         <param name="width" default="headlinew" />
         <param name="iconitemw" default="iconitemw" />
+        <param name="icongenreitemw" default="icongenreitemw" />
         <param name="iconpadw" default="iconpadw" />
         <param name="iconpanelpadw" default="iconpanelpadw" />
         <definition>
@@ -222,14 +228,14 @@
                 <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                 <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
                 <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
-                <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <onleft>60</onleft>
                 <pagecontrol>60</pagecontrol>
                 <preloaditems>2</preloaditems>
                 <orientation>vertical</orientation>
                 <viewtype label="$PARAM[name]">icons</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
-                <itemlayout height="345" width="$PARAM[iconitemw]">
+                <itemlayout height="345" width="$PARAM[iconitemw]" condition="![Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
                     <control type="group">
                         <left>$PARAM[iconpadw]</left>
                         <right>$PARAM[iconpadw]</right>
@@ -278,7 +284,31 @@
                         </control>
                     </control>
                 </itemlayout>
-                <focusedlayout height="345" width="$PARAM[iconitemw]">
+                <itemlayout height="115" width="$PARAM[icongenreitemw]" condition="[Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
+                    <control type="group">
+                        <left>$PARAM[iconpadw]</left>
+                        <right>$PARAM[iconpadw]</right>
+                        <bottom>5</bottom>
+                        <top>5</top>
+                        <control type="group">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <control type="image">
+                                <aspectratio aligny="center">scale</aspectratio>
+                                <texture background="true" colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="label">
+                                <label>$INFO[ListItem.Label]</label>
+                                <align>center</align>
+                                <left>pad</left>
+                                <right>pad</right>
+                            </control>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="345" width="$PARAM[iconitemw]" condition="![Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
                     <control type="group">
                         <left>$PARAM[iconpadw]</left>
                         <right>$PARAM[iconpadw]</right>
@@ -327,6 +357,37 @@
                         </control>
                     </control>
                 </focusedlayout>
+                <focusedlayout height="115" width="$PARAM[icongenreitemw]" condition="[Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
+                    <control type="group">
+                        <left>$PARAM[iconpadw]</left>
+                        <right>$PARAM[iconpadw]</right>
+                        <bottom>5</bottom>
+                        <top>5</top>
+                        <control type="group">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <control type="image">
+                                <left>-10</left>
+                                <right>-10</right>
+                                <top>-10</top>
+                                <bottom>-10</bottom>
+                                <bordersize>10</bordersize>
+                                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                                <aspectratio aligny="center">scale</aspectratio>
+                                <texture background="true" colordiffuse="ListBG">common/white.png</texture>
+                            </control>
+                            <control type="label">
+                                <label>$INFO[ListItem.Label]</label>
+                                <align>center</align>
+                                <left>pad</left>
+                                <right>pad</right>
+                                <textcolor>Selected</textcolor>
+                            </control>
+                        </control>
+                    </control>
+                </focusedlayout>
             </control>
         </definition>
     </include>
@@ -347,7 +408,7 @@
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                     <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
                     <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
-                    <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                    <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
@@ -429,7 +490,7 @@
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                     <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
                     <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
-                    <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                    <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>

@@ -399,7 +399,7 @@ msgid "Reset colors to defaults"
 msgstr ""
 
 msgctxt "#31114"
-msgid "Weather fanart"
+msgid "Install weather fanart"
 msgstr ""
 
 msgctxt "#31115"
@@ -722,3 +722,10 @@ msgctxt "#31197"
 msgid "Panels"
 msgstr ""
 
+msgctxt "#31198"
+msgid "Manage Dependencies"
+msgstr ""
+
+msgctxt "#31199"
+msgid "Showcase"
+msgstr ""
