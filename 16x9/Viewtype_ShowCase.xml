@@ -10,6 +10,7 @@
             <top>bigpad</top>
             <height>posterh</height>
             <include>Object_Background</include>
+            <include>Object_Scrollbar_Horizontal</include>
             <control type="group">
                 <centerleft>50%</centerleft>
                 <width>1752</width>
@@ -330,7 +331,7 @@
                         <width>2058</width>
                         <height>525</height>
                         <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
-                        <ondown>60</ondown>
+                        <ondown>61</ondown>
                         <onleft>535</onleft>
                         <onright>535</onright>
                         <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(genres) | Container.Content(sets)</visible>

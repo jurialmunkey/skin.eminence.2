@@ -14,6 +14,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
+                <include>Object_Scrollbar</include>
                 <include content="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
@@ -36,7 +37,8 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <control type="group">
-                <include>Object_Background</include>
+                    <include>Object_Background</include>
+                    <include>Object_Scrollbar</include>
                     <width>listinfow</width>
                     <include content="View_Icon">
                         <param name="id" value="59" />
@@ -67,6 +69,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
+                <include>Object_Scrollbar</include>
                 <include content="View_IconWide">
                     <param name="id" value="55" />
                     <param name="name" value="539" />
@@ -90,6 +93,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
+                <include>Object_Scrollbar</include>
                 <include content="View_IconFanart">
                     <param name="id" value="56" />
                     <param name="name" value="20445" />
@@ -113,6 +117,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
+                <include>Object_Scrollbar_Horizontal</include>
                 <control type="group">
                     <right>0</right>
                     <width>1280</width>
@@ -121,7 +126,7 @@
                     <control type="wraplist" id="58">
                         <width>100%</width>
                         <height>100%</height>
-                        <pagecontrol>60</pagecontrol>
+                        <pagecontrol>61</pagecontrol>
                         <preloaditems>2</preloaditems>
                         <onleft>58</onleft>
                         <onright>58</onright>
@@ -222,7 +227,7 @@
                 <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                 <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
                 <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
-                <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <onleft>60</onleft>
                 <pagecontrol>60</pagecontrol>
                 <preloaditems>2</preloaditems>
                 <orientation>vertical</orientation>
@@ -347,7 +352,7 @@
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                     <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
                     <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
-                    <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                    <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
@@ -429,7 +434,7 @@
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                     <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
                     <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
-                    <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                    <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
