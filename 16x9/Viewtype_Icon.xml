@@ -18,7 +18,7 @@
                 <include content="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
-                    <param name="condition" value="true" />
+                    <param name="condition" value="!Container.Content(episodes)" />
                 </include>
                 <include>Object_Arrows_Vertical</include>
             </control>

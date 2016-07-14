@@ -47,6 +47,28 @@
                 <height>32</height>
                 <texture colordiffuse="LineLabel">common/rss.png</texture>
             </control>
+            <control type="group">
+                <visible>!Window.IsActive(DialogNotification.xml)</visible>
+                <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+                <visible>!Player.HasMedia</visible>
+
+                <control type="image">
+                    <left>16</left>
+                    <posy>16</posy>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="LineLabel">common/rss.png</texture>
+                </control>
+                <control type="rss">
+                    <posx>48</posx>
+                    <posy>16</posy>
+                    <width>1870</width>
+                    <font>Font-RSS</font>
+                    <textcolor>SideArrow</textcolor>
+                    <headlinecolor>SideArrow</headlinecolor>
+                    <titlecolor>LineLabel</titlecolor>
+                </control>
+            </control>
         </control>
     </include>
     <include name="Home_Menu_BG_Big">
@@ -722,6 +744,28 @@
                     <width>32</width>
                     <height>32</height>
                     <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
+                </control>
+                <control type="group">
+                    <visible>!Window.IsActive(DialogNotification.xml)</visible>
+                    <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+                    <visible>!Player.HasMedia</visible>
+                    <control type="image">
+                        <left>16</left>
+                        <posy>48r</posy>
+                        <width>32</width>
+                        <height>32</height>
+                        <texture colordiffuse="LineLabel">common/rss.png</texture>
+                    </control>
+                    <control type="rss">
+                        <posx>48</posx>
+                        <posy>48r</posy>
+                        <width>1040</width>
+                        <font>Font-RSS</font>
+                        <textcolor>SideArrow</textcolor>
+                        <headlinecolor>SideArrow</headlinecolor>
+                        <titlecolor>LineLabel</titlecolor>
+                        <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+                    </control>
                 </control>
             </control>
             <control type="group">
