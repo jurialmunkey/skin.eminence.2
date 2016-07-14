@@ -15,7 +15,7 @@
                 <width>1752</width>
                 <control type="group">
                     <visible>Control.IsVisible(535) + IntegerGreaterThan(Container.NumItems,1)</visible>
-                    <top>-540</top>
+                    <top>-545</top>
                     <left>-92.5</left>
                     <control type="group">
                         <camera x="960" y="810" />
@@ -383,7 +383,7 @@
                         <height>32</height>
                         <align>center</align>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
+                        <label>$VAR[Label_ExtraInfo_Icons]</label>
                     </control>
                     <control type="textbox">
                         <left>pad</left>
