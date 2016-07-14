@@ -334,7 +334,7 @@
                         <ondown>61</ondown>
                         <onleft>535</onleft>
                         <onright>535</onright>
-                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(genres) | Container.Content(sets)</visible>
+                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)</visible>
                         <viewtype label="31199">bigwrap</viewtype>
                         <pagecontrol>61</pagecontrol>
                         <scrolltime tween="quadratic">300</scrolltime>

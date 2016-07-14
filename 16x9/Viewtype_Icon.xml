@@ -18,7 +18,7 @@
                 <include content="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
-                    <param name="condition" value="!Container.Content(episodes)" />
+                    <param name="condition" value="Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(pictures) | Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)" />
                 </include>
                 <include>Object_Arrows_Vertical</include>
             </control>
@@ -214,6 +214,7 @@
         <param name="updownid" default="true" />
         <param name="width" default="headlinew" />
         <param name="iconitemw" default="iconitemw" />
+        <param name="icongenreitemw" default="icongenreitemw" />
         <param name="iconpadw" default="iconpadw" />
         <param name="iconpanelpadw" default="iconpanelpadw" />
         <definition>
@@ -234,7 +235,7 @@
                 <viewtype label="$PARAM[name]">icons</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
-                <itemlayout height="345" width="$PARAM[iconitemw]">
+                <itemlayout height="345" width="$PARAM[iconitemw]" condition="![Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
                     <control type="group">
                         <left>$PARAM[iconpadw]</left>
                         <right>$PARAM[iconpadw]</right>
@@ -283,7 +284,32 @@
                         </control>
                     </control>
                 </itemlayout>
-                <focusedlayout height="345" width="$PARAM[iconitemw]">
+                <itemlayout height="115" width="$PARAM[icongenreitemw]" condition="[Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
+                    <control type="group">
+                        <left>$PARAM[iconpadw]</left>
+                        <right>$PARAM[iconpadw]</right>
+                        <bottom>5</bottom>
+                        <top>5</top>
+                        <control type="group">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <control type="image">
+                                <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                                <aspectratio aligny="center">scale</aspectratio>
+                                <texture background="true" colordiffuse="PosterBorder">common/white.png</texture>
+                            </control>
+                            <control type="label">
+                                <label>$INFO[ListItem.Label]</label>
+                                <align>center</align>
+                                <left>pad</left>
+                                <right>pad</right>
+                            </control>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="345" width="$PARAM[iconitemw]" condition="![Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
                     <control type="group">
                         <left>$PARAM[iconpadw]</left>
                         <right>$PARAM[iconpadw]</right>
@@ -329,6 +355,37 @@
                             <width>32</width>
                             <texture>$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <focusedlayout height="115" width="$PARAM[icongenreitemw]" condition="[Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
+                    <control type="group">
+                        <left>$PARAM[iconpadw]</left>
+                        <right>$PARAM[iconpadw]</right>
+                        <bottom>5</bottom>
+                        <top>5</top>
+                        <control type="group">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <control type="image">
+                                <left>-10</left>
+                                <right>-10</right>
+                                <top>-10</top>
+                                <bottom>-10</bottom>
+                                <bordersize>10</bordersize>
+                                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                                <aspectratio aligny="center">scale</aspectratio>
+                                <texture background="true" colordiffuse="ListBG">common/white.png</texture>
+                            </control>
+                            <control type="label">
+                                <label>$INFO[ListItem.Label]</label>
+                                <align>center</align>
+                                <left>pad</left>
+                                <right>pad</right>
+                                <textcolor>Selected</textcolor>
+                            </control>
                         </control>
                     </control>
                 </focusedlayout>

@@ -25,6 +25,7 @@
     <constant name="iconpadw">13</constant>
     <constant name="iconpanelpadw">21</constant>
     <constant name="iconitemw">262</constant>
+    <constant name="icongenreitemw">458.5</constant>
     <constant name="iconextrapadw">17.8</constant>
     <constant name="iconextrapanelpadw">25.8</constant>
     <constant name="iconextraitemw">271.6</constant>
