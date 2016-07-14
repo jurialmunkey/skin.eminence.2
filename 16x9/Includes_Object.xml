@@ -194,10 +194,10 @@
         <control type="scrollbar" id="61">
             <ondown condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
             <onup>50</onup>
-            <top>710</top>
+            <bottom>-20</bottom>
             <orientation>horizontal</orientation>
             <left>0</left>
-            <width>1880</width>
+            <width>headlinew</width>
             <height>8</height>
             <animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
         </control>
