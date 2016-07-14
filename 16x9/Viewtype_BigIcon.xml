@@ -106,7 +106,7 @@
                     <orientation>vertical</orientation>
                     <left>pad</left>
                     <right>pad</right>
-                    <top>34</top>
+                    <top>40</top>
                     <bottom>60</bottom>
                     <control type="textbox">
                         <top>pad</top>
