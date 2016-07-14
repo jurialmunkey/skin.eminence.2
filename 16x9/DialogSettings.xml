@@ -94,7 +94,7 @@
         </control>
         <control type="label" id="14">
             <align>left</align>
-            <textoffsetx>0</textoffsetx>
+            <textoffsetx>10</textoffsetx>
             <width>100%</width>
             <include>Defs_OptionButton</include>
         </control>
