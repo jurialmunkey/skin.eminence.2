@@ -9,6 +9,8 @@
             <top>bigpad</top>
             <height>posterh</height>
             <include>Object_Background</include>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <control type="wraplist" id="52">
                 <top>30</top>
                 <left>bigiconpanelpadw</left>
@@ -36,6 +38,14 @@
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
+                        <control type="image">
+                            <right>15</right>
+                            <top>15</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture>$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
                     </control>
                 </itemlayout>
 
@@ -50,6 +60,14 @@
                             <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>    
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
+                        </control>
+                        <control type="image">
+                            <right>15</right>
+                            <top>15</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture>$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </control>
                 </focusedlayout>
@@ -67,6 +85,14 @@
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                     <texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
                     <fadetime>300</fadetime>
+                </control>
+                <control type="image">
+                    <right>15</right>
+                    <top>15</top>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture>$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
                 </control>
             </control>
             <control type="group">

@@ -726,3 +726,6 @@ msgctxt "#31198"
 msgid "Manage Dependencies"
 msgstr ""
 
+msgctxt "#31199"
+msgid "Showcase"
+msgstr ""
