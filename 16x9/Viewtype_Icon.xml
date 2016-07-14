@@ -210,7 +210,7 @@
         <param name="width" default="headlinew" />
         <param name="iconitemw" default="iconitemw" />
         <param name="iconpadw" default="iconpadw" />
-        <param name="iconpanelpadw" default="iconpadw" />
+        <param name="iconpanelpadw" default="iconpanelpadw" />
         <definition>
             <control type="panel" id="$PARAM[id]">
                 <top>15</top>
