@@ -15,7 +15,7 @@
                 <height>posterh</height>
                 <include>Object_Background</include>
                 <include>Object_Scrollbar</include>
-                <include content="View_Icon">
+                <include name="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
                     <param name="condition" value="Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(pictures) | Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)" />
@@ -40,7 +40,7 @@
                     <include>Object_Background</include>
                     <include>Object_Scrollbar</include>
                     <width>listinfow</width>
-                    <include content="View_Icon">
+                    <include name="View_Icon">
                         <param name="id" value="59" />
                         <param name="name" value="31141" />
                         <param name="width" value="listinfow" />
@@ -70,7 +70,7 @@
                 <height>posterh</height>
                 <include>Object_Background</include>
                 <include>Object_Scrollbar</include>
-                <include content="View_IconWide">
+                <include name="View_IconWide">
                     <param name="id" value="55" />
                     <param name="name" value="539" />
                     <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
@@ -94,7 +94,7 @@
                 <height>posterh</height>
                 <include>Object_Background</include>
                 <include>Object_Scrollbar</include>
-                <include content="View_IconFanart">
+                <include name="View_IconFanart">
                     <param name="id" value="56" />
                     <param name="name" value="20445" />
                     <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)" />
