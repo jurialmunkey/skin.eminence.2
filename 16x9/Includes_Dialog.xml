@@ -526,7 +526,7 @@
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>IsEmpty(ListItem.AddonSummary)</visible>
+                            <visible>IsEmpty(ListItem.Label2)</visible>
                             <visible>IsEmpty(ListItem.Property(character))</visible>
                             <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
@@ -536,8 +536,8 @@
                             <right>30</right>
                             <control type="label">
                                 <width>100%</width>
-                                <top>0</top>
-                                <bottom>30%</bottom>
+                                <height>20</height>
+                                <centertop>33%</centertop>
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Bold</font>
                                 <aligny>center</aligny>
@@ -545,8 +545,8 @@
                             </control>
                             <control type="label">
                                 <width>100%</width>
-                                <top>30%</top>
-                                <bottom>0</bottom>
+                                <height>20</height>
+                                <centertop>66%</centertop>
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Small</font>
                                 <aligny>center</aligny>
@@ -612,7 +612,7 @@
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>IsEmpty(ListItem.AddonSummary)</visible>
+                            <visible>IsEmpty(ListItem.Label2)</visible>
                             <visible>IsEmpty(ListItem.Property(character))</visible>
                             <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
@@ -622,8 +622,8 @@
                             <right>30</right>
                             <control type="label">
                                 <width>100%</width>
-                                <top>0</top>
-                                <bottom>30%</bottom>
+                                <centertop>33%</centertop>
+                                <height>20</height>
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Bold</font>
                                 <aligny>center</aligny>
@@ -631,8 +631,8 @@
                             </control>
                             <control type="label">
                                 <width>100%</width>
-                                <top>30%</top>
-                                <bottom>0</bottom>
+                                <height>20</height>
+                                <centertop>66%</centertop>
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small</font>
                                 <aligny>center</aligny>
