@@ -45,12 +45,13 @@
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Album]$INFO[ListItem.Year, (,)][/COLOR][/UPPERCASE]</label>
+                            <visible>!IsEmpty(ListItem.Album)</visible>
                         </control>
                         <control type="textbox">
                             <top>pad</top>
                             <left>pad</left>
                             <right>pad</right>
-                            <height max="228">auto</height>
+                            <height max="192">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
                             <label>$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</label>
@@ -394,12 +395,12 @@
                             <label>13511</label>
                         </control>
                         <!-- Fanart Button -->
-                        <control type="button" id="12">
+                       <!--  <control type="button" id="12">
                             <width>auto</width>
                             <font>Font-ListInfo-Small-Bold</font>
                             <include>Defs_OptionButton2</include>
                             <label>20413</label>
-                        </control>
+                        </control> -->
                     </control>
                 </control>
 
