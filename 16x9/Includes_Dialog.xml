@@ -531,7 +531,7 @@
                             <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.AddonSummary) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
+                            <visible>!IsEmpty(ListItem.Label2) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">
@@ -617,7 +617,7 @@
                             <visible>IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.AddonSummary) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
+                            <visible>!IsEmpty(ListItem.Label2) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">

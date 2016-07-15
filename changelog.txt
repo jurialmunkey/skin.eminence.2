@@ -2,6 +2,9 @@
 Add Showcase view
 Add indicators to BigIcon view
 Change Null networksettings icon to file manager in settings
+Add DialogGameControllers
+Fix Settings Headers
+Add new DefaultIcons
 
 [B]2.5.4[/B]
 Fix extended info

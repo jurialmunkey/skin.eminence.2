@@ -29,7 +29,7 @@
     <variable name="Label_ImageList">
         <value condition="!IsEmpty(ListItem.Property(job))">$INFO[ListItem.Property(job)]</value>
         <value condition="!IsEmpty(ListItem.Property(character))">$INFO[ListItem.Property(character)]</value>
-        <value>$INFO[ListItem.AddonSummary]</value>
+        <value>$INFO[ListItem.Label2]</value>
     </variable>
 
     <variable name="Label_SeekStep">
@@ -227,14 +227,17 @@
         <value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
     </variable>
     <variable name="Label_SettingsHeader">
-        <value condition="Control.HasFocus(111) | Window.IsActive(systeminfo)">$LOCALIZE[130]</value>
-        <value condition="Control.HasFocus(109) | Window.IsActive(systemsettings)">$LOCALIZE[13000]</value>
-        <value condition="Control.HasFocus(108) | Window.IsActive(pvrsettings)">[CAPITALIZE]$LOCALIZE[19191][/CAPITALIZE]</value>
-        <value condition="Control.HasFocus(107) | Window.IsActive(skinsettings)">$LOCALIZE[166]</value>
-        <value condition="Control.HasFocus(105) | Window.IsActive(addonbrowser)">$LOCALIZE[24001]</value>
-        <value condition="Control.HasFocus(103) | Window.IsActive(profiles)">$LOCALIZE[13200]</value>
-        <value condition="Control.HasFocus(101) | Window.IsActive(servicesettings)">$LOCALIZE[705]</value>
-        <value>$LOCALIZE[480]</value>
+        <value condition="Window.IsActive(systeminfo)">$LOCALIZE[130]</value>
+        <value condition="Window.IsActive(systemsettings)">$LOCALIZE[13000]</value>
+        <value condition="Window.IsActive(pvrsettings)">[CAPITALIZE]$LOCALIZE[19191][/CAPITALIZE]</value>
+        <value condition="Window.IsActive(skinsettings)">$LOCALIZE[166]</value>
+        <value condition="Window.IsActive(addonbrowser)">$LOCALIZE[24001]</value>
+        <value condition="Window.IsActive(profiles)">$LOCALIZE[13200]</value>
+        <value condition="Window.IsActive(servicesettings)">$LOCALIZE[705]</value>
+        <value condition="Window.IsActive(interfacesettings)">$LOCALIZE[14206]</value>
+        <value condition="Window.IsActive(librarysettings)">$LOCALIZE[14202]</value>
+        <value condition="Window.IsActive(playersettings)">$LOCALIZE[14200]</value>
+        <value>$LOCALIZE[5]</value>
     </variable>
 
     <!-- Skin Settings VARS -->
