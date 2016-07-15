@@ -1,6 +1,7 @@
 [B]2.5.5[/B]
 Add Showcase view
 Add indicators to BigIcon view
+Change Null networksettings icon to file manager in settings
 
 [B]2.5.4[/B]
 Fix extended info

@@ -134,10 +134,10 @@
                         <icon>special://skin/extras/icons/livetv.png</icon>
                     </item>
                     <item id="12">
-                        <description>Network</description>
-                        <label>705</label>
-                        <onclick>activatewindow(NetworkSettings)</onclick>
-                        <icon>special://skin/extras/icons/network.png</icon>
+                        <description>File Manager</description>
+                        <label>7</label>
+                        <onclick>activatewindow(filemanager)</onclick>
+                        <icon>special://skin/extras/icons/filebox.png</icon>
                     </item>
                     <item id="11">
                         <description>System Info</description>
