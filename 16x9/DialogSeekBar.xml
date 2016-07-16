@@ -135,7 +135,7 @@
                             <right>pad</right>
                             <height>36</height>
                             <font>Font-InfoBox-Title</font>
-                            <label>19033</label>
+                            <label fallback="19033">$INFO[Player.Title]</label>
                         </control>
                         <control type="label">
                             <left>pad</left>

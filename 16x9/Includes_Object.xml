@@ -117,6 +117,14 @@
         </control> -->
     </include>
     <include name="Object_BasicViewList">
+        <!-- Fullscreen -->
+        <control type="button" id="9099">
+            <include>Defs_OptionButton2</include>
+            <label>$VAR[Label_FullscreenButton]</label>
+            <visible>Player.HasMedia</visible>
+            <onclick>Fullscreen</onclick>
+            <visible>Control.IsEnabled(9099)</visible>
+        </control>
         <!-- View by -->
         <control type="button" id="2">
             <include>Defs_OptionButton2</include>

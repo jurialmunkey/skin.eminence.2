@@ -1,3 +1,10 @@
+[B]2.5.6[/B]
+Fix Livetv widget show channel and show name plus time
+Fix Header spacing etc.
+Show show name in information box
+Show record button for livetv in osd
+Show fullscreen button in view menu
+
 [B]2.5.5[/B]
 Add Showcase view
 Add indicators to BigIcon view

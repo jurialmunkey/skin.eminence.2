@@ -460,7 +460,7 @@
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$VAR[Label_HeaderDirector][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor2]]$VAR[Label_HeaderDirector,,  ][/COLOR]</label>
                     <visible>!VideoPlayer.Content(livetv)</visible>
                 </control>
                 <control type="label">
@@ -468,7 +468,7 @@
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName,,  ][/COLOR]</label>
                     <visible>VideoPlayer.Content(livetv)</visible>
                 </control>
                 <control type="label">
@@ -477,7 +477,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>$INFO[Player.FinishTime,  $LOCALIZE[31071] ,]</label>
+                    <label>$INFO[Player.FinishTime,$LOCALIZE[31071] ,]</label>
                 </control>
                 <control type="label">
                     <width>330</width>
@@ -501,7 +501,7 @@
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  </label>
                 </control>
                 <control type="label">
                     <width>320</width>
@@ -509,7 +509,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>$INFO[Player.Time(hh:mm:ss),  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
+                    <label>$INFO[Player.Time(hh:mm:ss)]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
                 </control>
             </control>
         </control>
