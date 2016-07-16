@@ -60,6 +60,9 @@
 
     <variable name="Label_Plot">
         <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.MovieSet.Title)]</value>
+        <value condition="!IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+        <value condition="!IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+        <value condition="!IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
         <value>$INFO[ListItem.Plot]</value>
     </variable>
 

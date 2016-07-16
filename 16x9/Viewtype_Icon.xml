@@ -97,7 +97,7 @@
                 <include content="View_IconFanart">
                     <param name="id" value="56" />
                     <param name="name" value="20445" />
-                    <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)" />
+                    <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(artists)" />
                 </include>
                 <include>Object_Arrows_Vertical</include>
             </control>
