@@ -1,3 +1,7 @@
+[B]2.5.7[/B]
+Some log error fixes
+Move weather icons in clock to resource file
+
 [B]2.5.6[/B]
 Fix Livetv widget show channel and show name plus time
 Fix Header spacing etc.

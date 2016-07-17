@@ -526,7 +526,7 @@
                 <height>100</height>
                 <fadetime>350</fadetime>
                 <aspectratio aligny="center" align="center">keep</aspectratio>
-                <texture colordiffuse="$VAR[Furniture_TopBar_MainLabel_Color]">$INFO[Weather.FanartCode,weather-icons/,.png]</texture>
+                <texture colordiffuse="$VAR[Furniture_TopBar_MainLabel_Color]">$INFO[Weather.FanartCode,resource://resource.images.weathericons.white/,.png]</texture>
                 <visible>!Skin.HasSetting(disable.weatherheader)</visible>
             </control>
             <control type="label">

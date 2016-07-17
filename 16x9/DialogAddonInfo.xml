@@ -104,7 +104,7 @@
                                         <align>left</align>
                                         <height>36</height>
                                         <font>Font-ListInfo-Bold</font>
-                                        <label>$INFO[ListItem.AddonSummary)]</label>
+                                        <label>$INFO[ListItem.AddonSummary]</label>
                                         <textcolor>SubLabel</textcolor>
                                     </control>
                                 </control>
