@@ -1,3 +1,8 @@
+[B]2.5.9[/B]
+Fix borders on some icon views
+Add scrollbar to infolist
+Fix focus highlight on infolist
+
 [B]2.5.8[/B]
 Fix a skinshortcuts build error
 

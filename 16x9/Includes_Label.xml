@@ -63,6 +63,7 @@
         <value condition="!IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
         <value condition="!IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
+        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.Music.Info))">$INFO[Window(Home).Property(SkinHelper.Music.Info)]</value>
         <value>$INFO[ListItem.Plot]</value>
     </variable>
 
@@ -77,7 +78,15 @@
         <value condition="!IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
     </variable>
 
+    <variable name="Label_Title">
+        <value condition="!IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
+
     <variable name="Label_ExtraInfo_Icons">
+        <value condition="Container.Content(songs)">$INFO[ListItem.Album,,  •  ]$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Duration]</value>
+        <value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_YearsActive)]</value>
+        <value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year,  •  ,]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Episode,, $LOCALIZE[20360]]</value>
         <value condition="!ListItem.IsCollection + Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Rating]</value>
         <value condition="!ListItem.IsCollection + !Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Premiered,,  •  ]$INFO[ListItem.Rating]</value>

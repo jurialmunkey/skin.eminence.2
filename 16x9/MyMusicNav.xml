@@ -3,7 +3,7 @@
     <backgroundcolor>Background</backgroundcolor>
     <menucontrol>9000</menucontrol>
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,500,51,53,56,58</views>
+    <views>50,500,59,51,53,54,56,58</views>
     <onunload>SetProperty(NodeReturn,music,home)</onunload>
     <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
     <controls>
@@ -22,7 +22,9 @@
             <include>Viewtype_SquareList</include>
             <include>Viewtype_MediaInfo</include>
             <include>Viewtype_InfoList</include>
+            <include>Viewtype_FanartList</include>
             <include>Viewtype_Icon</include>
+            <include>Viewtype_IconExtra</include>
             <include>Viewtype_IconFanart</include>
             <include>Viewtype_Lovefilm</include>
         </control>

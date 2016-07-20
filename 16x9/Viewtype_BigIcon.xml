@@ -87,6 +87,14 @@
                     <texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
                     <fadetime>300</fadetime>
                 </control>
+                <!-- <control type="image">
+                    <left>-10</left>
+                    <right>-10</right>
+                    <top>-10</top>
+                    <bottom>-10</bottom>
+                    <texture colordiffuse="$VAR[HighlightColor]" border="12">common/border.png</texture>
+                    <visible>Control.HasFocus(52)</visible>
+                </control> -->
                 <control type="image">
                     <right>15</right>
                     <top>15</top>

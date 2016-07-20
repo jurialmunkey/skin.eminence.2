@@ -18,7 +18,7 @@
                 <include content="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
-                    <param name="condition" value="Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(pictures) | Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)" />
+                    <param name="condition" value="Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsVisible(MyPics.xml)" />
                 </include>
                 <include>Object_Arrows_Vertical</include>
             </control>
@@ -47,7 +47,7 @@
                         <param name="iconitemw" value="iconextraitemw" />
                         <param name="iconpadw" value="iconextrapadw" />
                         <param name="iconpanelpadw" value="iconextrapanelpadw" />
-                        <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+                        <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(addons)" />
                     </include>
                 </control>
                 <include>Object_ExtraInfo</include>
@@ -334,7 +334,7 @@
                                 <top>-10</top>
                                 <bottom>-10</bottom>
                                 <bordersize>10</bordersize>
-                                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                                <bordertexture colordiffuse="$VAR[HighlightColor]" border="10">common/border.png</bordertexture>
                                 <aspectratio aligny="center">keep</aspectratio>
                                 <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
                                 <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
@@ -343,7 +343,7 @@
                         </control>
                         <control type="image">
                             <bordersize>10</bordersize>
-                            <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                            <bordertexture colordiffuse="$VAR[HighlightColor]" border="10">common/border.png</bordertexture>
                             <aspectratio>scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                             <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
@@ -370,14 +370,7 @@
                             <top>pad</top>
                             <bottom>pad</bottom>
                             <control type="image">
-                                <left>-10</left>
-                                <right>-10</right>
-                                <top>-10</top>
-                                <bottom>-10</bottom>
-                                <bordersize>10</bordersize>
-                                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
-                                <aspectratio aligny="center">scale</aspectratio>
-                                <texture background="true" colordiffuse="ListBG">common/white.png</texture>
+                                <texture background="true" colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                             </control>
                             <control type="label">
                                 <label>$INFO[ListItem.Label]</label>

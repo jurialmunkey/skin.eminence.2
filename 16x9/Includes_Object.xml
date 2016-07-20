@@ -190,7 +190,7 @@
             <control type="scrollbar" id="60">
                 <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
                 <left>$PARAM[left]</left>
-                <height>posterh</height>
+                <height>100%</height>
                 <onright>50</onright>
                 <width>8</width>
                 <orientation>vertical</orientation>
@@ -335,7 +335,7 @@
             <right>pad</right>
             <height>36</height>
             <font>Font-InfoBox-Title</font>
-            <label>$INFO[ListItem.Label]</label>
+            <label>$VAR[Label_Title]</label>
         </control>
         <control type="label">
             <left>pad</left>
@@ -415,7 +415,7 @@
                         <right>pad</right>
                         <height>36</height>
                         <font>Font-InfoBox-Title</font>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Label_Title]</label>
                     </control>
                     <control type="label">
                         <top>-36</top>
