@@ -166,7 +166,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <animation effect="slide" start="0" end="-118" condition="!Container(525).OnNext" reversible="false" time="400" tween="quadratic">Conditional</animation>
-                <animation effect="slide" start="0" end="118" condition="!Container(525).OnPrevious" reversible="false" time="400" tween="quadratic">Conditional</animation>
+            <animation effect="slide" start="0" end="118" condition="!Container(525).OnPrevious" reversible="false" time="400" tween="quadratic">Conditional</animation>
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -224,7 +224,7 @@
                 <orientation>horizontal</orientation>
                 <viewtype label="540">bigwide</viewtype>
                 <scrolltime tween="quadratic">500</scrolltime>
-                <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
                 <itemlayout height="posterh" width="118" />
                 <focusedlayout height="posterh" width="1290">
                     
