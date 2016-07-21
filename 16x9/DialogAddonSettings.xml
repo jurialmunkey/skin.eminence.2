@@ -79,9 +79,8 @@
             <control type="image" id="6">
                 <width>100%</width>
                 <height>72</height>
-                <texture colordiffuse="PosterBorder">common/white.png</texture>
+                <texture border="30">common/div.png</texture>
                 <include>Defs_OptionButton</include>
-                <visible>false</visible>
             </control>
             <control type="label" id="7">
                 <width>100%</width>

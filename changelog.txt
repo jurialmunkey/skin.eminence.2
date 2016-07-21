@@ -4,6 +4,7 @@ Add scrollbar to infolist
 Fix focus highlight on infolist
 Update some view types for music
 Add BigWide view
+Fix dividers and header labels in settings
 
 [B]2.5.8[/B]
 Fix a skinshortcuts build error

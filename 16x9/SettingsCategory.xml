@@ -109,10 +109,17 @@
             <height>72</height>
             <include>Defs_OptionButton</include>
         </control>
+        <control type="label" id="14">
+            <width>100%</width>
+            <height>72</height>
+            <align>left</align>
+            <font>Font-ListInfo-Small-Bold</font>
+            <include>Defs_OptionButton</include>
+        </control>
         <control type="image" id="11">
             <width>100%</width>
             <height>72</height>
-            <visible>false</visible>
+            <texture border="30">common/div.png</texture>
             <include>Defs_OptionButton</include>
         </control>
         <control type="edit" id="12">
