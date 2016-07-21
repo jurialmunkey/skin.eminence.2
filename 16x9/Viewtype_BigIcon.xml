@@ -160,5 +160,214 @@
         </control>
     </include>
 
+    <include name="Viewtype_Gallery">
+        <control type="group">
+            <visible>Control.IsVisible(525)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <animation effect="slide" start="0" end="-118" condition="!Container(525).OnNext" reversible="false" time="400" tween="quadratic">Conditional</animation>
+                <animation effect="slide" start="0" end="118" condition="!Container(525).OnPrevious" reversible="false" time="400" tween="quadratic">Conditional</animation>
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>bigpad</top>
+            <height>posterh</height>
+            <include>Object_Scrollbar_Horizontal</include>
+            <control type="grouplist">
+                <left>gallerypanelpadw</left>
+                <usecontrolcoords>true</usecontrolcoords>
+                <orientation>horizontal</orientation>
+                <width>3000</width>
+                <top>-20</top>
+                <bottom>-20</bottom>
+                <itemgap>pad</itemgap>
+                <include content="View_Gallery_Item">
+                    <param name="position" value="-3" />
+                </include>
+                <include content="View_Gallery_Item">
+                    <param name="position" value="-2" />
+                </include>
+                <include content="View_Gallery_Item">
+                    <param name="position" value="-1" />
+                </include>
+                <control type="group">
+                    <top>bigpad</top>
+                    <bottom>bigpad</bottom>
+                    <width>1280</width>
+                    <include>Object_Background</include>
+                    <control type="image"><texture colordiffuse="ff181818">common/white.png</texture></control>
+                    <include content="Object_BigFanart">
+                        <param name="fadetime" value="0" />
+                    </include>
+                </control>
+                <include content="View_Gallery_Item">
+                    <param name="position" value="1" />
+                </include>
+                <include content="View_Gallery_Item">
+                    <param name="position" value="2" />
+                </include>
+                <include content="View_Gallery_Item">
+                    <param name="position" value="3" />
+                </include>
+            </control>
+            <control type="wraplist" id="525">
+                <top>0</top>
+                <left>0</left>
+                <width>100%</width>
+                <height>posterh</height>
+                <onleft>525</onleft>
+                <onright>525</onright>
+                <ondown>61</ondown>
+                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <pagecontrol>61</pagecontrol>
+                <focusposition>2</focusposition>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="540">bigwide</viewtype>
+                <scrolltime tween="quadratic">500</scrolltime>
+                <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                <itemlayout height="posterh" width="118" />
+                <focusedlayout height="posterh" width="1290">
+                    
+                </focusedlayout>
+            </control>
+        </control>
+        
+    </include>
+
+    <include name="View_Gallery_Item">
+        <control type="group">
+            <left>0</left>
+            <width>galleryitemw</width>
+            <top>bigpad</top>
+            <bottom>bigpad</bottom>
+            <animation effect="fade" time="200" start="100" end="0" reversible="false" condition="stringcompare(Container(525).ListItem(-3).Label,Container(525).ListItem($PARAM[position]).Label) + !Container(525).OnNext">Conditional</animation>
+            <animation effect="fade" time="200" start="100" end="0" reversible="false" condition="stringcompare(Container(525).ListItem(3).Label,Container(525).ListItem($PARAM[position]).Label) + !Container(525).OnPrevious">Conditional</animation>
+            <include>Object_Background</include>
+
+            <control type="label">
+                <left>galleryitempadw</left>
+                <top>640</top>
+                <height>95</height>
+                <width>620</width>
+                <angle>90</angle>
+                <label>$INFO[Container(525).ListItem($PARAM[position]).Label]</label>
+            </control>
+            <!-- <control type="image">
+                <centerleft>50%</centerleft>
+                <top>bigpad</top>
+                <height>32</height>
+                <width>32</width>
+                <texture>$VAR[Image_Indicator]</texture>
+                <visible>!IsEmpty(ListItem.Overlay)</visible>
+            </control> -->
+        </control>
+    </include>
+
+    <!-- BIG WIDE FANART -->
+    <include name="Viewtype_Lovefilm">
+        <control type="group">
+            <visible>Control.IsVisible(58)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+
+            <control type="group">
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <include>Object_Background</include>
+                <include>Object_Scrollbar_Horizontal</include>
+                <control type="group">
+                    <right>0</right>
+                    <width>1280</width>
+                    <height>100%</height>
+                    
+                    <control type="wraplist" id="58">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <pagecontrol>61</pagecontrol>
+                        <preloaditems>2</preloaditems>
+                        <onleft>58</onleft>
+                        <onright>58</onright>
+                        <viewtype label="31163">bigwide</viewtype>
+                        <orientation>horizontal</orientation>
+                        <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                        <scrolltime tween="quadratic">400</scrolltime>
+                        <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(artists)</visible>
+                        <itemlayout width="1280" height="720">
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="1280" height="720">
+                            <control type="image">
+                                <width>100%</width>
+                                <height>100%</height>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
+                            </control>
+                        </focusedlayout>
+                    </control>
+                </control>
+                <control type="group">
+                    <right>1280</right>
+                    <left>0</left>
+                    <height>100%</height>
+                    <control type="grouplist">
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>pad</itemgap>
+                        <orientation>vertical</orientation>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <top>pad</top>
+                        <bottom>60</bottom>
+                        <control type="textbox">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>auto</height>
+                            <align>left</align>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        
+                        <control type="textbox">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>auto</height>
+                            <align>left</align>
+                            <textcolor>$VAR[HighlightColor2]</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                            <visible>!IsEmpty(ListItem.Genre)</visible>
+                        </control>
+                        <control type="textbox">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height max="450">auto</height>
+                            <font>Font-ListInfo</font>
+                            <align>left</align>
+                            <label>$VAR[Label_Plot]</label>
+                        </control>
+                        
+                        
+                    </control>
+                    <control type="label">
+                        <bottom>bigpad</bottom>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <height>20</height>
+                        <align>right</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+
 </includes>
  

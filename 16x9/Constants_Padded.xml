@@ -38,5 +38,8 @@
     <constant name="bigiconw">313</constant>
     <constant name="bigiconh">424.5</constant>
     <constant name="bigiconpanelpadw">172</constant>
+    <constant name="galleryitempadw">50</constant>
+    <constant name="galleryitemw">108</constant>
+    <constant name="gallerypanelpadw">-118</constant>
 
 </includes>
