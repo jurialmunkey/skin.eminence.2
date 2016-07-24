@@ -1,6 +1,7 @@
 [B]2.5.10[/B]
 Fix mutebug
 Fix widget targets
+Fix dialogselect stuck issue
 
 [B]2.5.9[/B]
 Fix borders on some icon views

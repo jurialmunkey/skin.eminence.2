@@ -70,10 +70,10 @@
                 <top>pad</top>
                 <align>right</align>
                 <height>60</height>
-                <onleft>3</onleft>
-                <onright>3</onright>
-                <onup>3</onup>
-                <ondown>3</ondown>
+                <onleft>6</onleft>
+                <onright>6</onright>
+                <onup>6</onup>
+                <ondown>6</ondown>
                 <orientation>horizontal</orientation>
                 <itemgap>pad</itemgap>
                 <control type="button" id="5">
