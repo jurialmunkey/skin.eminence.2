@@ -612,7 +612,7 @@
             </animation>
             <include>Furniture_TopBar_Tile</include>
             <control type="group">
-                <visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
+                <visible>!Window.IsVisible(DialogVolumeBar.xml) | Player.Muted</visible>
                 <include>Furniture_TopBar_Tile_Content</include>
             </control>
         </control>
