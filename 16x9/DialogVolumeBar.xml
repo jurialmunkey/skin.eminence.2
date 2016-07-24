@@ -11,6 +11,7 @@
             <animation type="WindowClose">
                 <effect type="fade" end="0" start="100" time="200" />
             </animation>
+            <visible>!Player.Muted</visible>
             <control type="image">
                 <posx>44</posx>
                 <posy>26</posy>
