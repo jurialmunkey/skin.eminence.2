@@ -1,5 +1,6 @@
 [B]2.5.10[/B]
 Fix mutebug
+Fix widget targets
 
 [B]2.5.9[/B]
 Fix borders on some icon views

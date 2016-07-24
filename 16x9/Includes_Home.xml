@@ -513,7 +513,7 @@
             <scrolltime tween="sine" easing="out">240</scrolltime>
             <itemlayout />
             <focusedlayout width="1920" height="1080" />
-            <content target="video">$VAR[Defs_HomeWidget_Content]</content>
+            <content target="$VAR[Defs_HomeWidget_Target]">$VAR[Defs_HomeWidget_Content]</content>
         </control>
     </include>
     <include name="Home_Widget_Control">

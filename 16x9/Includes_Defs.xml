@@ -126,4 +126,8 @@
         <value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
+    <variable name="Defs_HomeWidget_Target">
+        <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetTarget))">$INFO[Container(9000).ListItem.Property(widgetTarget)]</value>
+        <value>videos</value>
+    </variable>
 </includes>
