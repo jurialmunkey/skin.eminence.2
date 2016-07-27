@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Label_IconLine">
+        <value condition="Control.IsVisible(500) + Control.HasFocus(500)">$INFO[ListItem.Label,-  ,  ]$INFO[ListItem.Year,(,)  ]</value>
+    </variable>
+
+    <variable name="Label_GenreLine">
+        <value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
+        <value condition="ListItem.IsCollection + !IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Genre))">$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</value>
+    </variable>
+
     <variable name="Label_FullscreenButton">
         <value condition="Player.HasVideo">$LOCALIZE[12005]</value>
         <value condition="Player.HasAudio">$LOCALIZE[12006]</value>
@@ -73,8 +82,8 @@
     </variable>
 
     <variable name="Label_ExtraInfo">
-        <value condition="!IsEmpty(ListItem.MPAA) + !IsEmpty(ListItem.Duration) + !Control.IsVisible(51)">$INFO[ListItem.MPAA,,  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
-        <value condition="!IsEmpty(ListItem.MPAA) + !Control.IsVisible(51)">$INFO[ListItem.MPAA]</value>
+        <value condition="!IsEmpty(ListItem.MPAA) + !IsEmpty(ListItem.Duration) + [Control.IsVisible(57) | Control.IsVisible(53) | Control.IsVisible(535)]">$INFO[ListItem.MPAA,,  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
+        <value condition="!IsEmpty(ListItem.MPAA) + [Control.IsVisible(57) | Control.IsVisible(53) | Control.IsVisible(535)]">$INFO[ListItem.MPAA]</value>
         <value condition="!IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
     </variable>
 

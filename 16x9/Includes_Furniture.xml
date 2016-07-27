@@ -178,6 +178,7 @@
             <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
             <visible>![Player.HasVideo | Player.HasAudio] | [Player.HasAudio + !Skin.HasSetting(background.showvisualisation)] | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
         </control>
+        
         <control type="group">
             <visible>Skin.HasSetting(background.showvisualisation)</visible>
             <visible>Player.HasAudio</visible>

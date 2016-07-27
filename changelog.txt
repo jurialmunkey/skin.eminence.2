@@ -2,6 +2,9 @@
 Fix mutebug
 Fix widget targets
 Fix dialogselect stuck issue
+Fix some info for movie sets
+Add title on icons view
+Consolidate extrainfo bylines
 
 [B]2.5.9[/B]
 Fix borders on some icon views

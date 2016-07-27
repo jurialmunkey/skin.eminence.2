@@ -153,7 +153,7 @@
                     <height>24</height>
                     <textcolor>$VAR[HighlightColor2]</textcolor>
                     <font>Font-ListInfo-Small-Bold</font>
-                    <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                    <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
                 </control>
                 <control type="textbox">
                     <top>7</top>

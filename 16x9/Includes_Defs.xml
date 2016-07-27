@@ -90,6 +90,7 @@
         <top>top</top>
         <height>height</height>
         <include>Animation_Common</include>
+        
     </include>
     <include name="Defs_InfoBackground">
         <left>sidepad</left>

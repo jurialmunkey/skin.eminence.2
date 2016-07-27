@@ -343,8 +343,7 @@
             <height>24</height>
             <textcolor>$VAR[HighlightColor2]</textcolor>
             <font>Font-ListInfo-Small-Bold</font>
-            <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
-            <visible>!IsEmpty(ListItem.Genre)</visible>
+            <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
         </control>
         <control type="textbox">
             <left>pad</left>
@@ -353,9 +352,9 @@
             <font>Font-ListInfo</font>
             <align>left</align>
             <label>$VAR[Label_Plot]</label>
-            <visible>!IsEmpty(ListItem.Genre)</visible>
         </control>
-        <control type="textbox">
+        <!-- <control type="textbox">
+            <top>6</top>
             <left>pad</left>
             <right>pad</right>
             <height>154</height>
@@ -363,7 +362,7 @@
             <align>left</align>
             <label>$VAR[Label_Plot]</label>
             <visible>IsEmpty(ListItem.Genre)</visible>
-        </control>
+        </control> -->
         <control type="label">
             <left>pad</left>
             <right>pad</right>
@@ -426,7 +425,7 @@
                             <height>20</height>
                             <align>right</align>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>$VAR[Label_Label3]$INFO[ListItem.Rating,  •  ,]</label>
+                            <label>$VAR[Label_ExtraInfo_Icons]</label>
                         </control>
                         <control type="label">
                             <left>pad</left>
@@ -434,8 +433,7 @@
                             <height>24</height>
                             <textcolor>$VAR[HighlightColor2]</textcolor>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
-                            <visible>!IsEmpty(ListItem.Genre)</visible>
+                            <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
                         </control>
                         <control type="textbox">
                             <left>pad</left>
@@ -444,16 +442,6 @@
                             <font>Font-ListInfo</font>
                             <align>left</align>
                             <label>$VAR[Label_Plot]</label>
-                            <visible>!IsEmpty(ListItem.Genre)</visible>
-                        </control>
-                        <control type="textbox">
-                            <left>pad</left>
-                            <right>pad</right>
-                            <height>120</height>
-                            <font>Font-ListInfo</font>
-                            <align>left</align>
-                            <label>$VAR[Label_Plot]</label>
-                            <visible>IsEmpty(ListItem.Genre)</visible>
                         </control>
                         
                     </control>

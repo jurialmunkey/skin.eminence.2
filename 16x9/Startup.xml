@@ -2,6 +2,12 @@
 <window>
     <!-- startup -->
     <onload>Skin.Reset(HideSettings)</onload>
+
+    <!-- <onload condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True,pixels=10,bits=1,radius=10,delta_x=40,delta_y=90)</onload>
+    <onload>SetProperty(cfa_daemon_set,Blur,home)</onload>
+    <onload>SetProperty(cpa_daemon_set,Blur,home)</onload>
+    <onload>SetProperty(cpa_daemon_fallback,special://skin/extras/backgrounds/home.jpg,home)</onload> -->
+
     <onload condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
     <onload>ReplaceWindow($INFO[System.StartupWindow])</onload>

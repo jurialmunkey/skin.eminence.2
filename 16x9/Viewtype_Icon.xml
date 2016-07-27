@@ -7,7 +7,6 @@
             <visible>Control.IsVisible(500)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-
             <control type="group">
                 <left>bigpad</left>
                 <right>bigpad</right>
@@ -20,6 +19,7 @@
                     <param name="name" value="536" />
                     <param name="condition" value="Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsVisible(MyPics.xml)" />
                 </include>
+
                 <include>Object_Arrows_Vertical</include>
             </control>
         </control>

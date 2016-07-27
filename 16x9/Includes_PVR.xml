@@ -780,7 +780,7 @@
                         <height>24</height>
                         <textcolor>$VAR[HighlightColor2]</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
-                        <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                        <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
                         <visible>!IsEmpty(ListItem.Genre)</visible>
                     </control>
                     <control type="textbox">
