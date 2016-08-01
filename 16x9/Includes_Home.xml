@@ -122,7 +122,7 @@
                         <width>196</width>
                         <height>170</height>
                         <texture colordiffuse="HomeBarTile">common/tile.png</texture>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                         <visible>IsEmpty(ListItem.Property(tilecolor)) | !Skin.HasSetting(home.tilecolor.nofocus) | !Skin.HasSetting(home.tilecolor)</visible>
                     </control>
                     <control type="image">
@@ -131,7 +131,7 @@
                         <height>170</height>
                         <texture colordiffuse="$VAR[HighlightColor]">common/tile.png</texture>
                         <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                         <visible>IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
                     </control>
                     <control type="image">
@@ -140,7 +140,7 @@
                         <height>170</height>
                         <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
                         <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">special://skin/extras/colors/$INFO[ListItem.Property(tilecolor)].png</texture>
-                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <aspectratio scalediffuse="false">stretch</aspectratio>
                         <visible>!IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
                     </control>
                     <control type="image">
@@ -169,7 +169,7 @@
                         <width>196</width>
                         <height>170</height>
                         <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/tile.png</texture>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                     </control>
                     <control type="image">
                         <top>16</top>
@@ -215,7 +215,7 @@
                         <width>196</width>
                         <height>170</height>
                         <texture colordiffuse="HomeBarTile">common/tile.png</texture>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                         <visible>IsEmpty(ListItem.Property(tilecolor)) | !Skin.HasSetting(home.tilecolor.nofocus) | !Skin.HasSetting(home.tilecolor)</visible>
                     </control>
                     <control type="image">
@@ -224,7 +224,7 @@
                         <height>170</height>
                         <texture colordiffuse="$VAR[HighlightColor]">common/tile.png</texture>
                         <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                         <visible>IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
                     </control>
                     <control type="image">
@@ -233,7 +233,7 @@
                         <height>170</height>
                         <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
                         <texture colordiffuse="HomeBarFG" diffuse="common/tile.png" aligny="center" align="center">special://skin/extras/colors/$INFO[ListItem.Property(tilecolor)].png</texture>
-                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <aspectratio scalediffuse="false">stretch</aspectratio>
                         <visible>!IsEmpty(ListItem.Property(tilecolor)) + Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
                     </control>
                     <control type="image">
@@ -273,7 +273,7 @@
                         <width>196</width>
                         <height>170</height>
                         <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/tile.png</texture>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                     </control>
                     <control type="image">
                         <top>-6</top>
@@ -355,7 +355,7 @@
                         <width>170</width>
                         <height>6</height>
                         <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>strech</aspectratio>
                     </control>
                 </focusedlayout>
                 <content>
@@ -378,7 +378,7 @@
                     <width>196</width>
                     <height>170</height>
                     <texture colordiffuse="HomeBarBG">common/tile.png</texture>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="image">
                     <top>16</top>
@@ -386,7 +386,7 @@
                     <width>196</width>
                     <height>170</height>
                     <texture colordiffuse="HomeBarBG">common/tile.png</texture>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="image">
                     <bottom>0</bottom>
@@ -394,7 +394,7 @@
                     <width>196</width>
                     <height>70</height>
                     <texture colordiffuse="HomeBarBG">common/white.png</texture>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>stretch</aspectratio>
                 </control>
             </control>
 
