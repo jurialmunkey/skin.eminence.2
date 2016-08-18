@@ -1,3 +1,8 @@
+[B]2.5.12[/B]
+Rename window librarysettings to mediasettings
+Fix okCancel in DialogSelect for skipsteps hidden off screen
+Fix RT percentage rating change.
+
 [B]2.5.11[/B]
 Fix homescreen scaling issue
 

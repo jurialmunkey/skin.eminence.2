@@ -91,7 +91,7 @@
                             <height>28</height>
                             <align>right</align>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesRating),Rotten Tomatoes ,%  •  ]$INFO[ListItem.RatingAndVotes]</label>
+                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesRating),Rotten Tomatoes ,  •  ]$INFO[ListItem.RatingAndVotes]</label>
                             <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
                         </control>
                         <control type="label">

@@ -262,7 +262,7 @@
         <value condition="Window.IsActive(profiles)">$LOCALIZE[13200]</value>
         <value condition="Window.IsActive(servicesettings)">$LOCALIZE[14036]</value>
         <value condition="Window.IsActive(interfacesettings)">$LOCALIZE[14206]</value>
-        <value condition="Window.IsActive(librarysettings)">$LOCALIZE[14202]</value>
+        <value condition="Window.IsActive(mediasettings)">$LOCALIZE[14202]</value>
         <value condition="Window.IsActive(playersettings)">$LOCALIZE[14200]</value>
         <value>$LOCALIZE[5]</value>
     </variable>
