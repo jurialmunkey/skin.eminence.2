@@ -91,8 +91,8 @@
                             <height>28</height>
                             <align>right</align>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesRating),Rotten Tomatoes ,  •  ]$INFO[ListItem.RatingAndVotes]</label>
-                            <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
+                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesMeter),Rotten Tomatoes ,%  •  ]$INFO[ListItem.RatingAndVotes]</label>
+                            <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesMeter),N/A)</visible>
                         </control>
                         <control type="label">
                             <top>-40</top>
@@ -102,7 +102,7 @@
                             <align>right</align>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>$INFO[ListItem.RatingAndVotes]</label>
-                            <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesRating),N/A)</visible>
+                            <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesMeter),N/A)</visible>
                         </control>
                         <control type="textbox">
                             <top>pad</top>
