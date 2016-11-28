@@ -3,7 +3,7 @@
     <backgroundcolor>Background</backgroundcolor>
     <menucontrol>9000</menucontrol>
     <defaultcontrol>10</defaultcontrol>
-    <views>10,11,12,13</views>
+    <views>10</views>
 
     <controls>
         <include>Furniture_Background</include>
@@ -11,43 +11,7 @@
         <include>Furniture_TopBar</include>
         <control type="group">
             <include>Defs_ViewBackground</include>
-            <control type="group">
-                <visible>Control.IsVisible(11)</visible>
-                <include>Animation_Common</include>
-                <include content="Object_Headline">
-                    <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
-                </include>
-            </control>
-            <control type="group">
-                <visible>Control.IsVisible(12)</visible>
-                <include>Animation_Common</include>
-                <include content="Object_Headline">
-                    <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
-                </include>
-            </control>
-            <control type="group">
-                <visible>Control.IsVisible(13)</visible>
-                <include>Animation_Common</include>
-                <include content="Object_Headline">
-                    <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
-                </include>
-            </control>
             <control type="group" id="50">
-                <include content="PVR_SmallList">
-                    <param name="id" value="11" />
-                    <param name="label" value="19030" />
-                </include>
-                <include content="PVR_SmallList">
-                    <param name="id" value="12" />
-                    <param name="label" value="19031" />
-                    <param name="include" value="PVR_SmallList_StartTime" />
-                </include>
-                <include content="PVR_SmallList">
-                    <param name="id" value="13" />
-                    <param name="visible" value="Player.HasVideo + VideoPlayer.Content(livetv)" />
-                    <param name="label" value="19029" />
-                    <param name="include" value="PVR_SmallList_StartTime" />
-                </include>
                 <control type="group">
                     <visible>Control.IsVisible(10)</visible>
                     <left>bigpad</left>
@@ -61,7 +25,6 @@
                         <top>-70</top>
                         <width>headlinew</width>
                         <height>560</height>
-                        <onback>9000</onback>
                         <viewtype label="19069">list</viewtype>
                         <progresstexture border="5" colordiffuse="bf777777">pvr/progressline.png</progresstexture>
                         <scrolltime tween="quadratic">300</scrolltime>

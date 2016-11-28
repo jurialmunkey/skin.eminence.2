@@ -4,6 +4,10 @@
         <value condition="Control.IsVisible(500) + Control.HasFocus(500)">$INFO[ListItem.Label,-  ,  ]$INFO[ListItem.Year,(,)  ]</value>
     </variable>
 
+    <variable name="Label_IsRecording">
+        <value condition="ListItem.IsRecording">[REC] </value>
+    </variable>
+
     <variable name="Label_GenreLine">
         <value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
         <value condition="ListItem.IsCollection + !IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Genre))">$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</value>

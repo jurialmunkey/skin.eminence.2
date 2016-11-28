@@ -1,3 +1,11 @@
+[B]2.5.13[/B]
+Add recording labels to PVR
+Fix ExtendedProgress
+Fix SkinShortcuts Customisation not accepting mouse input
+Fix guide on back no longer goes to menu - use menu key from now on
+Add DialogPlayerProcessInfo
+Add PrivacyPolicy to SystemInfo
+
 [B]2.5.12[/B]
 Rename window librarysettings to mediasettings
 Fix okCancel in DialogSelect for skipsteps hidden off screen

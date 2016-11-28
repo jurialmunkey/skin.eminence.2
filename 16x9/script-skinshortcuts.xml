@@ -263,7 +263,7 @@
                 </control>
             </control>
 
-            <control type="label" id="500"><visible>false</visible><font>-</font></control>
+            <control type="label" id="500"><visible>false</visible><font/></control>
             
 
             <control type="grouplist" id="9200">
@@ -291,28 +291,28 @@
                 <control type="button" id="302" description="Delete">
                     <width>32</width>
                     <height>32</height>
-                    <font>-</font>
+                    <font/>
                     <texturenofocus colordiffuse="Disabled">common/delete.png</texturenofocus>
                     <texturefocus colordiffuse="Selected">common/delete.png</texturefocus>
                 </control>
                 <control type="button" id="301" description="Add">
                     <width>32</width>
                     <height>32</height>
-                    <font>-</font>
+                    <font/>
                     <texturenofocus colordiffuse="Disabled">common/add.png</texturenofocus>
                     <texturefocus colordiffuse="Selected">common/add.png</texturefocus>
                 </control>
                 <control type="button" id="303" description="Up">
                     <width>32</width>
                     <height>32</height>
-                    <font>-</font>
+                    <font/>
                     <texturenofocus colordiffuse="Disabled" flipy="true">common/spin-down.png</texturenofocus>
                     <texturefocus colordiffuse="Selected" flipy="true">common/spin-down.png</texturefocus>
                 </control>
                 <control type="button" id="304" description="Down">
                     <width>32</width>
                     <height>32</height>
-                    <font>-</font>
+                    <font/>
                     <texturenofocus colordiffuse="Disabled" flipy="false">common/spin-down.png</texturenofocus>
                     <texturefocus colordiffuse="Selected" flipy="false">common/spin-down.png</texturefocus>
                 </control>
@@ -320,6 +320,6 @@
             </control>
         </control>
 
-        <control type="button" id="404"><visible allowhiddenfocus="true">false</visible></control>
+        <control type="button" id="404"><visible allowhiddenfocus="true">false</visible><width>1</width><height>1</height></control>
     </controls>
 </window>

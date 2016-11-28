@@ -56,6 +56,11 @@
                         <label>19166</label>
                         <include>Defs_OptionButton</include>
                     </control>
+                    <control type="button" id="100">
+                        <width>100%</width>
+                        <label>12389</label>
+                        <include>Defs_OptionButton</include>
+                    </control>
                 </control>
             </control>
 
@@ -125,6 +130,14 @@
                         <info>system.memory(used)</info>
                         <include>Defs_OptionButton</include>
                     </control>
+                    <control type="textbox" id="30">
+                    	<top>48</top>
+                        <left>20</left>
+                        <width>97%</width>
+                        <height>500</height>
+                        <align>left</align>
+                        <include>Defs_OptionButton</include>
+                    </control>
 
                     <control type="label" id="2">
                         <top>48</top>
@@ -177,6 +190,7 @@
                         <height>48</height>
                         <include>Defs_OptionButton</include>
                     </control>
+
                 </control>
             </control>
         </control>

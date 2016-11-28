@@ -123,11 +123,19 @@
                     <include>Defs_OptionButton2</include>
                     <visible>Window.IsActive(PVRGuideInfo)</visible>
                 </control>
+
                 <control type="button" id="7">
                     <align>center</align>
                     <width>272.5</width>
                     <label>186</label>
                     <include>Defs_OptionButton2</include>
+                </control>
+                <control type="button" id="9">
+                    <label>19061</label>
+                    <align>center</align>
+                    <width>272.5</width>
+                    <include>Defs_OptionButton2</include>
+                    <visible>Window.IsActive(PVRGuideInfo)</visible>
                 </control>
             </control>
         </control>

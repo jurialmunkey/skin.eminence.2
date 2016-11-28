@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.eminence.2"
-    version="2.5.12"
+    version="2.5.13"
     name="Eminence 2.0"
     provider-name="jurialmunkey">
     <requires>
