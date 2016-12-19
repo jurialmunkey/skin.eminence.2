@@ -729,3 +729,11 @@ msgstr ""
 msgctxt "#31199"
 msgid "Showcase"
 msgstr ""
+
+msgctxt "#31200"
+msgid "by"
+msgstr ""
+
+msgctxt "#31201"
+msgid "on"
+msgstr ""

@@ -1,10 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<!-- musicosd -->
-	<defaultcontrol always="true">14</defaultcontrol>
+    <!-- musicosd -->
+    <defaultcontrol always="true">14</defaultcontrol>
 
-	<controls>
-        <include>Window_OSD</include>
-	</controls>
+    <controls>
+        <!-- <include>Window_OSD</include> -->
+        <control type="group">
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <include>Defs_ViewBackground</include>
+            <control type="group">
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <control type="group">
+                    <left>posterh</left>
+                    <control type="grouplist">
+                        <bottom>-16</bottom>
+                        <left>36</left>
+                        <right>-32</right>
+                        <height>64</height>
+                        <itemgap>20</itemgap>
+                        <orientation>horizontal</orientation>
+                        <align>left</align>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <control type="button" id="1">
+                            <description>Repeat</description>
+                            <onclick>XBMC.PlayerControl(Repeat)</onclick>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus>noop</texturefocus>
+                            <texturenofocus>noop</texturenofocus>
+                        </control>
+
+                        <control type="group" id="501">
+                            <left>-64</left>
+                            <width>48</width>
+                            <height>48</height>
+                            <control type="image" description="repeat-one-nf">
+                                <width>48</width>
+                                <height>48</height>
+                                <texture colordiffuse="ListLabel">osd/repeat-one.png</texture>
+                                <visible>Playlist.IsRepeatOne</visible>
+                                <visible>!Control.HasFocus(1)</visible>
+                            </control>
+                            <control type="image" description="repeat-one-fo">
+                                <width>48</width>
+                                <height>48</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">osd/repeat-one.png</texture>
+                                <visible>Playlist.IsRepeatOne</visible>
+                                <visible>Control.HasFocus(1)</visible>
+                            </control>
+                            <control type="image" description="repeat-all-nf">
+                                <width>48</width>
+                                <height>48</height>
+                                <texture colordiffuse="ListLabel">osd/repeat-all.png</texture>
+                                <visible>Playlist.IsRepeat</visible>
+                                <visible>!Control.HasFocus(1)</visible>
+                            </control>
+                            <control type="image" description="repeat-all-fo">
+                                <width>48</width>
+                                <height>48</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">osd/repeat-all.png</texture>
+                                <visible>Playlist.IsRepeat</visible>
+                                <visible>Control.HasFocus(1)</visible>
+                            </control>
+                            <control type="image" description="repeat-off-nf">
+                                <width>48</width>
+                                <height>48</height>
+                                <texture colordiffuse="ListLabel">osd/repeat-off.png</texture>
+                                <visible>!Playlist.IsRepeatOne + !Playlist.IsRepeat</visible>
+                                <visible>!Control.HasFocus(1)</visible>
+                            </control>
+                            <control type="image" description="repeat-off-fo">
+                                <width>48</width>
+                                <height>48</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">osd/repeat-off.png</texture>
+                                <visible>!Playlist.IsRepeatOne + !Playlist.IsRepeat</visible>
+                                <visible>Control.HasFocus(1)</visible>
+                            </control>
+                            <control type="image" description="repeat-check-fo">
+                                <top>42</top>
+                                <left>42</left>
+                                <width>16</width>
+                                <height>16</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">osd/minicheck.png</texture>
+                                <visible>Playlist.IsRepeat | Playlist.IsRepeatOne</visible>
+                                <visible>Control.HasFocus(1)</visible>
+                            </control>
+                            <control type="image" description="repeat-check-fo">
+                                <top>42</top>
+                                <left>42</left>
+                                <width>16</width>
+                                <height>16</height>
+                                <texture colordiffuse="ListLabel">osd/minicheck.png</texture>
+                                <visible>Playlist.IsRepeat | Playlist.IsRepeatOne</visible>
+                                <visible>!Control.HasFocus(1)</visible>
+                            </control>
+                        </control>
+
+                        <control type="button" id="6">
+                            <description>Random</description>
+                            <onclick>XBMC.PlayerControl(Random)</onclick>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">noop</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">noop</texturenofocus>
+                        </control>
+
+
+                        <control type="group" id="507" description="shuffle-check">
+                            <left>-70</left>
+                            <width>48</width>
+                            <height>48</height>
+                            <control type="image" description="shuffle-fo">
+                                <width>48</width>
+                                <height>48</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">osd/shuffle.png</texture>
+                                <visible>Control.HasFocus(6)</visible>
+                            </control>
+                            <control type="image" description="shuffle-nf">
+                                <width>48</width>
+                                <height>48</height>
+                                <texture colordiffuse="ListLabel">osd/shuffle.png</texture>
+                                <visible>!Control.HasFocus(6)</visible>
+                            </control>
+                            <control type="image" description="shuffle-check-fo">
+                                <top>42</top>
+                                <left>42</left>
+                                <width>16</width>
+                                <height>16</height>
+                                <texture colordiffuse="$VAR[HighlightColor]">osd/minicheck.png</texture>
+                                <visible>Playlist.IsRandom</visible>
+                                <visible>Control.HasFocus(6)</visible>
+                            </control>
+                            <control type="image" description="shuffle-check-fo">
+                                <top>42</top>
+                                <left>42</left>
+                                <width>16</width>
+                                <height>16</height>
+                                <texture colordiffuse="ListLabel">osd/minicheck.png</texture>
+                                <visible>Playlist.IsRandom</visible>
+                                <visible>!Control.HasFocus(6)</visible>
+                            </control>
+                        </control>
+                        
+                        <control type="button" id="3">
+                            <description>Playlist</description>
+                            <onclick>Close</onclick>
+                            <onclick>ActivateWindow(musicplaylist)</onclick>
+                            <width>48</width>
+                            <height>48</height>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">osd/playlist.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">osd/playlist.png</texturenofocus>
+                        </control>
+
+                        <control type="group" id="505"><width>musicosdbuttonpad</width></control>
+
+                        <control type="button" id="12">
+                            <description>Skip Back</description>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel" flipx="true">osd/next.png</texturenofocus>
+                            <onclick>PlayerControl(Previous)</onclick>
+                        </control>
+
+                        <control type="button" id="13">
+                            <description>Rewind</description>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel" flipx="true">osd/ff.png</texturenofocus>
+                            <onclick>PlayerControl(Rewind)</onclick>
+                            <enable>Player.SeekEnabled</enable>
+                            <animation effect="fade" start="100" end="33" time="100" condition="!Player.SeekEnabled">Conditional</animation>
+                        </control>
+
+                        <control type="togglebutton" id="14">
+                            <description>Play/Pause</description>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <altlabel></altlabel>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">osd/pause.png</texturenofocus>
+                            <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="ListLabel">osd/play.png</alttexturenofocus>
+                            <onclick>PlayerControl(Play)</onclick>
+                            <enable>Player.PauseEnabled</enable>
+                            <animation effect="fade" start="100" end="33" time="100" condition="!Player.PauseEnabled">Conditional</animation>
+                        </control>
+
+                        <control type="button" id="15">
+                            <description>Stop</description>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">osd/stop.png</texturenofocus>
+                            <onclick>PlayerControl(Stop)</onclick>
+                        </control>
+
+                        <control type="button" id="16">
+                            <description>Fast Forward</description>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">osd/ff.png</texturenofocus>
+                            <onclick>PlayerControl(Forward)</onclick>
+                            <enable>Player.SeekEnabled</enable>
+                            <animation effect="fade" start="100" end="33" time="100" condition="!Player.SeekEnabled">Conditional</animation>
+                        </control>
+
+                        <control type="button" id="17">
+                            <description>Next</description>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">osd/next.png</texturenofocus>
+                            <onclick>PlayerControl(Next)</onclick>
+                        </control>
+
+                        <control type="group" id="504"><width>musicosdbuttonpad</width></control>
+
+                        <control type="button" id="2">
+                            <description>Lyrics</description>
+                            <onclick>RunScript(script.cu.lrclyrics)</onclick>
+                            <enable>System.HasAddon(script.cu.lrclyrics)</enable>
+                            <animation effect="fade" start="100" end="50" condition="!System.HasAddon(script.cu.lrclyrics)">Conditional</animation>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">osd/lyrics.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">osd/lyrics.png</texturenofocus>
+                        </control>
+
+                        <control type="button" id="500">
+                            <description>Vis</description>
+                            <width>48</width>
+                            <height>48</height>
+                            <label></label>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">osd/visualisation.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">osd/visualisation.png</texturenofocus>
+                            <!-- <onclick>Addon.Default.Set(xbmc.player.musicviz)</onclick> -->
+                        </control>
+
+                        <control type="button" id="502">
+                            <description>Presets</description>
+                            <onclick>XBMC.ActivateWindow(122)</onclick>
+                            <width>48</width>
+                            <height>48</height>
+                            <font>noop</font>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]">osd/preset.png</texturefocus>
+                            <texturenofocus colordiffuse="ListLabel">osd/preset.png</texturenofocus>
+                        </control>
+
+                        
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
 
 </window>

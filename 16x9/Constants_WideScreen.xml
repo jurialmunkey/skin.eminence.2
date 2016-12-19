@@ -41,5 +41,6 @@
     <constant name="galleryitempadw">65</constant>
     <constant name="galleryitemw">140</constant>
     <constant name="gallerypanelpadw">-150</constant>
+    <constant name="musicosdbuttonpad">144</constant>
    
 </includes>

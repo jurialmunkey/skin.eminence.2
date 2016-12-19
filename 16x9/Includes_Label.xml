@@ -191,6 +191,7 @@
         <value condition="Player.Rewinding2x">RW 2x</value>
         <value condition="Player.Rewinding">RW</value>
         <value condition="Player.Seeking">$LOCALIZE[773]</value>
+        <value condition="Window.IsVisible(MusicVisualisation.xml)">$LOCALIZE[31072]...</value>
         <value>$LOCALIZE[31072]</value>
     </variable>
 

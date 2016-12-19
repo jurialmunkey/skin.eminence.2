@@ -11,38 +11,47 @@
             <animation type="WindowClose">
                 <effect type="fade" end="0" start="100" time="200" />
             </animation>
-            <visible>!Player.Muted</visible>
-            <control type="image">
-                <posx>44</posx>
-                <posy>26</posy>
-                <width>100</width>
-                <height>100</height>
-                <texture>progress/volume-back.png</texture>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
+            <control type="group">
+                <visible>Window.IsVisible(MusicVisualisation.xml)</visible>
+                <include>Furniture_TopBar_Tile</include>
+                <control type="group">
+                    <visible>Player.Muted</visible>
+                    <include>Furniture_TopBar_Tile_Content</include>
+                </control>
             </control>
-            <control type="image">
-                <posx>44</posx>
-                <posy>26</posy>
-                <width>100</width>
-                <height>100</height>    
-                <texture>$INFO[Control.GetLabel(1),progress/circle/p,.png]</texture>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
+            <control type="group">
+                <visible>!Player.Muted</visible>
+                <control type="image">
+                    <posx>44</posx>
+                    <posy>26</posy>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>progress/volume-back.png</texture>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                </control>
+                <control type="image">
+                    <posx>44</posx>
+                    <posy>26</posy>
+                    <width>100</width>
+                    <height>100</height>    
+                    <texture>$INFO[Control.GetLabel(1),progress/circle/p,.png]</texture>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                </control>
+                <control type="label">
+                    <posx>0</posx>
+                    <posy>115</posy>
+                    <width>184</width>
+                    <aligny>top</aligny>
+                    <font>Font-Sublabel</font>
+                    <align>center</align>
+                    <textcolor>HomeBarFG</textcolor>
+                    <label>$INFO[Player.Volume]</label>
+                </control>
+                <control type="progress" id="1">
+                    <info>Player.Volume</info>
+                    <animation effect="fade" end="0" condition="true">Conditional</animation>
+                </control>
             </control>
-            <control type="label">
-                <posx>0</posx>
-                <posy>115</posy>
-                <width>184</width>
-                <aligny>top</aligny>
-                <font>Font-Sublabel</font>
-                <align>center</align>
-                <textcolor>HomeBarFG</textcolor>
-                <label>$INFO[Player.Volume]</label>
-            </control>
-            <control type="progress" id="1">
-                <info>Player.Volume</info>
-                <animation effect="fade" end="0" condition="true">Conditional</animation>
-            </control>
-
         </control>
 
     </controls>

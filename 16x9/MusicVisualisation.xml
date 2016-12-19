@@ -35,6 +35,19 @@
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
         </control>
 
+        <control type="image">
+            <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd)</visible>
+            <animation type="Visible">
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="Hidden">
+                <effect type="fade" end="0" start="100" time="200" />
+            </animation>
+            <texture colordiffuse="bf000000">common/white.png</texture>
+            <width>100%</width>
+            <height>100%</height>
+        </control>
+
 	</controls>
 
 </window>
