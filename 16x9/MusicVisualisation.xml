@@ -43,7 +43,7 @@
             <animation type="Hidden">
                 <effect type="fade" end="0" start="100" time="200" />
             </animation>
-            <texture colordiffuse="bf000000">common/white.png</texture>
+            <texture colordiffuse="9f000000">common/white.png</texture>
             <width>100%</width>
             <height>100%</height>
         </control>

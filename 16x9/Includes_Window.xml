@@ -1480,6 +1480,7 @@
                     <control type="label">
                         <top>-84</top>
                         <height>84</height>
+                        <textcolor>HomeSubLabel</textcolor>
                         <label>$VAR[Label_PlayerStatus]</label>
                     </control>
                     <control type="group" description="artwork">
@@ -1504,6 +1505,7 @@
                                 <aligny>top</aligny>
                                 <height>105</height>
                                 <width>100%</width>
+                                <textcolor>HomeSubLabel</textcolor>
                                 <font>Font-MusicVis-Title</font>
                                 <label>$INFO[Player.Title]</label>
                             </control>
@@ -1514,6 +1516,7 @@
                                 <control type="label">
                                     <aligny>top</aligny>
                                     <width>80</width>
+                                    <textcolor>HomeSubLabel</textcolor>
                                     <font>Font-MusicVis-Info</font>
                                     <label>31200</label>
                                     <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
@@ -1521,6 +1524,7 @@
                                 <control type="label">
                                     <aligny>top</aligny>
                                     <width>auto</width>
+                                    <textcolor>HomeSubLabel</textcolor>
                                     <font>Font-MusicVis-Info</font>
                                     <label>$INFO[MusicPlayer.Artist]</label>
                                 </control>
@@ -1532,6 +1536,7 @@
                                 <control type="label">
                                     <aligny>top</aligny>
                                     <width>80</width>
+                                    <textcolor>HomeSubLabel</textcolor>
                                     <font>Font-MusicVis-Info</font>
                                     <label>31201</label>
                                     <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
@@ -1539,6 +1544,7 @@
                                 <control type="label">
                                     <aligny>top</aligny>
                                     <width>auto</width>
+                                    <textcolor>HomeSubLabel</textcolor>
                                     <font>Font-MusicVis-Info</font>
                                     <label>$INFO[MusicPlayer.Album]</label>
                                 </control>
@@ -1549,6 +1555,7 @@
                                     <aligny>center</aligny>
                                     <left>0</left>
                                     <align>left</align>
+                                    <textcolor>HomeSubLabel</textcolor>
                                     <font>Font-ListInfo-Small-Bold</font>
                                     <label>$INFO[Player.Time]</label>
                                     <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
@@ -1557,6 +1564,7 @@
                                     <aligny>center</aligny>
                                     <right>0</right>
                                     <align>right</align>
+                                    <textcolor>HomeSubLabel</textcolor>
                                     <font>Font-ListInfo-Small-Bold</font>
                                     <label>$INFO[Player.Duration]</label>
                                     <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>

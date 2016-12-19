@@ -43,7 +43,7 @@
                             <control type="image" description="repeat-one-nf">
                                 <width>48</width>
                                 <height>48</height>
-                                <texture colordiffuse="ListLabel">osd/repeat-one.png</texture>
+                                <texture colordiffuse="HomeSubLabel">osd/repeat-one.png</texture>
                                 <visible>Playlist.IsRepeatOne</visible>
                                 <visible>!Control.HasFocus(1)</visible>
                             </control>
@@ -57,7 +57,7 @@
                             <control type="image" description="repeat-all-nf">
                                 <width>48</width>
                                 <height>48</height>
-                                <texture colordiffuse="ListLabel">osd/repeat-all.png</texture>
+                                <texture colordiffuse="HomeSubLabel">osd/repeat-all.png</texture>
                                 <visible>Playlist.IsRepeat</visible>
                                 <visible>!Control.HasFocus(1)</visible>
                             </control>
@@ -71,7 +71,7 @@
                             <control type="image" description="repeat-off-nf">
                                 <width>48</width>
                                 <height>48</height>
-                                <texture colordiffuse="ListLabel">osd/repeat-off.png</texture>
+                                <texture colordiffuse="HomeSubLabel">osd/repeat-off.png</texture>
                                 <visible>!Playlist.IsRepeatOne + !Playlist.IsRepeat</visible>
                                 <visible>!Control.HasFocus(1)</visible>
                             </control>
@@ -96,7 +96,7 @@
                                 <left>42</left>
                                 <width>16</width>
                                 <height>16</height>
-                                <texture colordiffuse="ListLabel">osd/minicheck.png</texture>
+                                <texture colordiffuse="HomeSubLabel">osd/minicheck.png</texture>
                                 <visible>Playlist.IsRepeat | Playlist.IsRepeatOne</visible>
                                 <visible>!Control.HasFocus(1)</visible>
                             </control>
@@ -110,7 +110,7 @@
                             <label></label>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">noop</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">noop</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">noop</texturenofocus>
                         </control>
 
 
@@ -127,7 +127,7 @@
                             <control type="image" description="shuffle-nf">
                                 <width>48</width>
                                 <height>48</height>
-                                <texture colordiffuse="ListLabel">osd/shuffle.png</texture>
+                                <texture colordiffuse="HomeSubLabel">osd/shuffle.png</texture>
                                 <visible>!Control.HasFocus(6)</visible>
                             </control>
                             <control type="image" description="shuffle-check-fo">
@@ -144,7 +144,7 @@
                                 <left>42</left>
                                 <width>16</width>
                                 <height>16</height>
-                                <texture colordiffuse="ListLabel">osd/minicheck.png</texture>
+                                <texture colordiffuse="HomeSubLabel">osd/minicheck.png</texture>
                                 <visible>Playlist.IsRandom</visible>
                                 <visible>!Control.HasFocus(6)</visible>
                             </control>
@@ -158,7 +158,7 @@
                             <height>48</height>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/playlist.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">osd/playlist.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">osd/playlist.png</texturenofocus>
                         </control>
 
                         <control type="group" id="505"><width>musicosdbuttonpad</width></control>
@@ -170,7 +170,7 @@
                             <label></label>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel" flipx="true">osd/next.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel" flipx="true">osd/next.png</texturenofocus>
                             <onclick>PlayerControl(Previous)</onclick>
                         </control>
 
@@ -181,7 +181,7 @@
                             <label></label>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel" flipx="true">osd/ff.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel" flipx="true">osd/ff.png</texturenofocus>
                             <onclick>PlayerControl(Rewind)</onclick>
                             <enable>Player.SeekEnabled</enable>
                             <animation effect="fade" start="100" end="33" time="100" condition="!Player.SeekEnabled">Conditional</animation>
@@ -195,10 +195,10 @@
                             <altlabel></altlabel>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">osd/pause.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">osd/pause.png</texturenofocus>
                             <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                             <alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
-                            <alttexturenofocus colordiffuse="ListLabel">osd/play.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="HomeSubLabel">osd/play.png</alttexturenofocus>
                             <onclick>PlayerControl(Play)</onclick>
                             <enable>Player.PauseEnabled</enable>
                             <animation effect="fade" start="100" end="33" time="100" condition="!Player.PauseEnabled">Conditional</animation>
@@ -211,7 +211,7 @@
                             <label></label>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">osd/stop.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">osd/stop.png</texturenofocus>
                             <onclick>PlayerControl(Stop)</onclick>
                         </control>
 
@@ -222,7 +222,7 @@
                             <label></label>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">osd/ff.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">osd/ff.png</texturenofocus>
                             <onclick>PlayerControl(Forward)</onclick>
                             <enable>Player.SeekEnabled</enable>
                             <animation effect="fade" start="100" end="33" time="100" condition="!Player.SeekEnabled">Conditional</animation>
@@ -235,7 +235,7 @@
                             <label></label>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">osd/next.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">osd/next.png</texturenofocus>
                             <onclick>PlayerControl(Next)</onclick>
                         </control>
 
@@ -251,7 +251,7 @@
                             <label></label>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/lyrics.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">osd/lyrics.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">osd/lyrics.png</texturenofocus>
                         </control>
 
                         <control type="button" id="500">
@@ -261,7 +261,7 @@
                             <label></label>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/visualisation.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">osd/visualisation.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">osd/visualisation.png</texturenofocus>
                             <!-- <onclick>Addon.Default.Set(xbmc.player.musicviz)</onclick> -->
                         </control>
 
@@ -272,7 +272,7 @@
                             <height>48</height>
                             <font>noop</font>
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/preset.png</texturefocus>
-                            <texturenofocus colordiffuse="ListLabel">osd/preset.png</texturenofocus>
+                            <texturenofocus colordiffuse="HomeSubLabel">osd/preset.png</texturenofocus>
                         </control>
 
                         
