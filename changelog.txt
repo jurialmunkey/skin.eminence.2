@@ -1,5 +1,6 @@
 [B]2.5.14[/B]
 New Music Vis screen
+Fix Lyrics
 
 [B]2.5.13[/B]
 Add recording labels to PVR

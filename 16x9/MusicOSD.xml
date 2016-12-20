@@ -4,11 +4,11 @@
     <defaultcontrol always="true">14</defaultcontrol>
 
     <controls>
-        <!-- <include>Window_OSD</include> -->
         <control type="group">
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <include>Defs_ViewBackground</include>
+            <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
             <control type="group">
                 <left>bigpad</left>
                 <right>bigpad</right>
@@ -243,6 +243,7 @@
 
                         <control type="button" id="2">
                             <description>Lyrics</description>
+                            <onclick>Close</onclick>
                             <onclick>RunScript(script.cu.lrclyrics)</onclick>
                             <enable>System.HasAddon(script.cu.lrclyrics)</enable>
                             <animation effect="fade" start="100" end="50" condition="!System.HasAddon(script.cu.lrclyrics)">Conditional</animation>
