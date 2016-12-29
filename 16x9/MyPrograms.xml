@@ -17,7 +17,7 @@
         <control type="group">
             <include>Defs_ViewBackground</include>
             <include content="Object_Headline">
-                <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
+                <param name="label" value="$VAR[Label_SortLine]" />
             </include>
             <include>Viewtype_SquareList</include>
             <include>Viewtype_Icon</include>
