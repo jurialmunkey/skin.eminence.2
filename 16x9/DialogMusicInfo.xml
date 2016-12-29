@@ -162,7 +162,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
+                                    <visible>!IsEmpty(ListItem.Property(Album_Style)) + Container.Content(albums)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -274,7 +274,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Artist_Style))</visible>
+                                    <visible>!IsEmpty(ListItem.Property(Artist_Style)) + !Container.Content(albums)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>

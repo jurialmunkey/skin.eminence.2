@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<variable name="Label_SortLine">
+		<value condition="Control.IsEnabled(3) + Control.IsEnabled(4)">$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]</value>
+		<value>$LOCALIZE[31202]</value>
+	</variable>
+
     <variable name="Label_IconLine">
         <value condition="Control.IsVisible(500) + Control.HasFocus(500)">$INFO[ListItem.Label,-  ,  ]$INFO[ListItem.Year,(,)  ]</value>
     </variable>

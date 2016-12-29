@@ -17,7 +17,8 @@
             <include content="Object_Headline">
                 <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
             </include>
-            <include>Viewtype_List</include>
+            <include condition="Window.IsVisible(musicplaylist)">Viewtype_SquareList</include>
+            <include condition="Window.IsVisible(videoplaylist)">Viewtype_List</include>
         </control>
 
         <include>Furniture_TopBar</include>

@@ -142,7 +142,7 @@
             <label>584</label>
             <altlabel>585</altlabel>
             <usealttexture>Container.SortDirection(Descending)</usealttexture>
-            <visible>Control.IsEnabled(4)</visible>
+            <visible>Control.IsEnabled(3)</visible>
         </control>
     </include>
     <include name="Object_WeatherOutlook">

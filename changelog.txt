@@ -1,3 +1,6 @@
+[B]2.5.15[/B]
+Fix sorting labels when no sorting active
+
 [B]2.5.14[/B]
 New Music Vis screen
 Fix Lyrics
