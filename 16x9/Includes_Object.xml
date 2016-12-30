@@ -343,7 +343,7 @@
             <height>24</height>
             <textcolor>$VAR[HighlightColor2]</textcolor>
             <font>Font-ListInfo-Small-Bold</font>
-            <label fallback="19499">$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
+            <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
         </control>
         <control type="textbox">
             <left>pad</left>

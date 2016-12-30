@@ -16,6 +16,7 @@
     <variable name="Label_GenreLine">
         <value condition="!IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
         <value condition="ListItem.IsCollection + !IsEmpty(Window(Home).Property(SkinHelper.MovieSet.Genre))">$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</value>
+        <value>$LOCALIZE[19499]</value>
     </variable>
 
     <variable name="Label_FullscreenButton">
@@ -105,7 +106,7 @@
 
     <variable name="Label_ExtraInfo_Icons">
         <value condition="Container.Content(songs)">$INFO[ListItem.Album,,  •  ]$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Duration]</value>
-        <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_YearsActive))">$INFO[ListItem.Property(Artist_YearsActive)]$INFO[Window(Home).Property(SkinHelper.Music.AlbumCount),  •  , $LOCALIZE[132]]$INFO[Window(Home).Property(SkinHelper.Music.SongCount),  •  , $LOCALIZE[134]]</value>
+        <value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_YearsActive)) + !Control.IsVisible(58)">$INFO[ListItem.Property(Artist_YearsActive)]$INFO[Window(Home).Property(SkinHelper.Music.AlbumCount),  •  , $LOCALIZE[132]]$INFO[Window(Home).Property(SkinHelper.Music.SongCount),  •  , $LOCALIZE[134]]</value>
         <value condition="Container.Content(albums) + [!IsEmpty(ListItem.Artist) | !IsEmpty(ListItem.Year)]">$INFO[ListItem.Artist]$INFO[ListItem.Year,  •  ,]$INFO[Window(Home).Property(SkinHelper.Music.SongCount),  •  , $LOCALIZE[134]]</value>
         <value condition="Container.Content(artists) + !IsEmpty(Window(Home).Property(SkinHelper.Music.AlbumCount))">$INFO[Window(Home).Property(SkinHelper.Music.AlbumCount),, $LOCALIZE[132]]$INFO[Window(Home).Property(SkinHelper.Music.SongCount),  •  , $LOCALIZE[134]]</value>
         <value condition="[Container.Content(artists) | Container.Content(albums)] + !IsEmpty(Window(Home).Property(SkinHelper.Music.SongCount))">$INFO[Window(Home).Property(SkinHelper.Music.SongCount),, $LOCALIZE[134]]</value>
