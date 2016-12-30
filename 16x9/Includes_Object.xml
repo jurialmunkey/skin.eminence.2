@@ -285,7 +285,7 @@
                     <height>405</height>
                     <include>Object_Background</include>
                     <control type="image">
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>keep</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
                     </control>
@@ -307,7 +307,7 @@
                     <height>405</height>
                     <include>Object_Background</include>
                     <control type="image">
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>keep</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
                     </control>
@@ -343,7 +343,7 @@
             <height>24</height>
             <textcolor>$VAR[HighlightColor2]</textcolor>
             <font>Font-ListInfo-Small-Bold</font>
-            <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
+            <label fallback="19499">$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
         </control>
         <control type="textbox">
             <left>pad</left>
@@ -351,25 +351,15 @@
             <height>120</height>
             <font>Font-ListInfo</font>
             <align>left</align>
-            <label>$VAR[Label_Plot]</label>
+            <label fallback="31092">$VAR[Label_Plot]</label>
         </control>
-        <!-- <control type="textbox">
-            <top>6</top>
-            <left>pad</left>
-            <right>pad</right>
-            <height>154</height>
-            <font>Font-ListInfo</font>
-            <align>left</align>
-            <label>$VAR[Label_Plot]</label>
-            <visible>IsEmpty(ListItem.Genre)</visible>
-        </control> -->
         <control type="label">
             <left>pad</left>
             <right>pad</right>
             <height>20</height>
             <align>right</align>
             <font>Font-ListInfo-Small-Bold</font>
-            <label>$VAR[Label_ExtraInfo_Icons]</label>
+            <label fallback="31203">$VAR[Label_ExtraInfo_Icons]</label>
         </control>
     </include>
 
@@ -384,7 +374,7 @@
                 <include>Object_Background</include>
                 <control type="image">
                     <fadetime>$PARAM[fadetime]</fadetime>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <texture background="true">$VAR[Image_Thumb]</texture>
                 </control>
                 <control type="image">

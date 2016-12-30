@@ -190,7 +190,7 @@
                     <include>Object_Background</include>
                     <control type="image">
                         <fadetime>200</fadetime>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>keep</aspectratio>
                         <texture>$VAR[Image_Thumb]</texture>
                     </control>
                 </control>

@@ -398,6 +398,10 @@
                                 <bottom>pad</bottom>
                                 <include>Object_Background</include>
                                 <control type="image">
+                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                                </control>
+                                <control type="image">
                                     <aspectratio>scale</aspectratio>
                                     <texture background="true">$VAR[Image_Thumb]</texture>
                                 </control>
@@ -443,15 +447,21 @@
                             <bottom>5</bottom>
                             <top>5</top>
                             <control type="image">
-                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                <texture colordiffuse="$VAR[HighlightColor]" border="12">common/border.png</texture>
                             </control>
-                            <control type="image">
+                            <control type="group">
                                 <left>pad</left>
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <aspectratio>scale</aspectratio>
-                                <texture background="true">$VAR[Image_Thumb]</texture>
+                                <control type="image">
+                                    <aspectratio>keep</aspectratio>
+                                    <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                                </control>
+                                <control type="image">
+                                    <aspectratio>scale</aspectratio>
+                                    <texture background="true">$VAR[Image_Thumb]</texture>
+                                </control>
                             </control>
                             <control type="image">
                                 <right>15</right>

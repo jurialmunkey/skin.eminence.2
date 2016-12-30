@@ -1,3 +1,9 @@
+[B]2.5.16[/B]
+Fix up Music Library display
+Add additional Skin Helper lookups
+Tweaks to a number of views
+Fix up cut off Default Icons
+
 [B]2.5.15[/B]
 Fix sorting labels when no sorting active
 

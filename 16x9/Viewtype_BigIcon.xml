@@ -298,7 +298,7 @@
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>
-                                <aspectratio>scale</aspectratio>
+                                <aspectratio>keep</aspectratio>
                                 <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
                             </control>
                         </itemlayout>
@@ -306,7 +306,7 @@
                             <control type="image">
                                 <width>100%</width>
                                 <height>100%</height>
-                                <aspectratio>scale</aspectratio>
+                                <aspectratio>keep</aspectratio>
                                 <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
                             </control>
                         </focusedlayout>

@@ -31,7 +31,8 @@
     <variable name="Image_Thumb">
         <value condition="Container.Content(episodes) | Window.IsVisible(MyPics.xml)">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value>$INFO[ListItem.Icon]</value>
+        <value condition="!IsEmpty(Window(home).Property(SkinHelper.Music.FanArt)) + !Control.IsVisible(58)">$INFO[Window(home).Property(SkinHelper.Music.FanArt)]</value>
+        <value condition="!Control.IsVisible(56)">$INFO[ListItem.Icon]</value>
     </variable>
 
     <variable name="Image_PVRThumb">
@@ -110,6 +111,7 @@
         <value condition="Skin.HasSetting(background.hidefanart) + !IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!IsEmpty(Window(home).Property(SkinHelper.Music.Fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Window(home).Property(SkinHelper.Music.Fanart)]</value>
         <value condition="!IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         <value>common/black.png</value>
         <!-- <value>special://skin/extras/backgrounds/main.jpg</value> -->

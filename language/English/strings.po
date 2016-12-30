@@ -741,3 +741,7 @@ msgstr ""
 msgctxt "#31202"
 msgid "Sort by: Default"
 msgstr ""
+
+msgctxt "#31203"
+msgid "No Additional Details Available"
+msgstr ""
