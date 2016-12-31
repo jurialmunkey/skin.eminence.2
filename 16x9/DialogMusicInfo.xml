@@ -395,12 +395,12 @@
                             <label>13511</label>
                         </control>
                         <!-- Fanart Button -->
-                       <!--  <control type="button" id="12">
+                        <control type="button" id="12">
                             <width>auto</width>
                             <font>Font-ListInfo-Small-Bold</font>
                             <include>Defs_OptionButton2</include>
                             <label>20413</label>
-                        </control> -->
+                        </control>
                     </control>
                 </control>
 
