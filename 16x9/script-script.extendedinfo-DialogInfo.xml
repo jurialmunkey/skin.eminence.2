@@ -266,7 +266,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),150)" />
+                <param name="visible" value="Control.HasFocus(150)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="250" />
@@ -279,7 +279,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),250)" />
+                <param name="visible" value="Control.HasFocus(250)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="350" />
@@ -292,7 +292,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),350)" />
+                <param name="visible" value="Control.HasFocus(350)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="550" />
@@ -305,7 +305,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),550)" />
+                <param name="visible" value="Control.HasFocus(550)" />
             </include>
                   
             <control type="list" id="450"><visible>false</visible></control>

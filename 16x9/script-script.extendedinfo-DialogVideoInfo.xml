@@ -193,7 +193,7 @@
                         <orientation>horizontal</orientation>
                         <control type="group">
                             <visible>!IsEmpty(Window.Property(duration))</visible>
-                            <width>272</width>
+                            <width>193.4</width>
                             <height>100%</height>
                             <control type="label">
                                 <top>0</top>
@@ -212,7 +212,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <width>272</width>
+                            <width>203.4</width>
                             <height>100%</height>
                             <visible>!IsEmpty(Window.Property(mpaa))</visible>
                             <control type="label">
@@ -232,7 +232,27 @@
                             </control>
                         </control>
                         <control type="group">
-                            <width>272</width>
+                            <width>163.4</width>
+                            <height>100%</height>
+                            <visible>!IsEmpty(Window.Property(year))</visible>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>562</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[Window.Property(year)]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <width>253.4</width>
                             <height>100%</height>
                             <visible>!IsEmpty(Window.Property(Budget))</visible>
                             <control type="label">
@@ -252,7 +272,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <width>272</width>
+                            <width>253.4</width>
                             <height>100%</height>
                             <visible>!IsEmpty(Window.Property(Revenue))</visible>
                             <control type="label">
@@ -414,7 +434,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),150)" />
+                <param name="visible" value="Control.HasFocus(150)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="350" />
@@ -427,7 +447,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),350)" />
+                <param name="visible" value="Control.HasFocus(350)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="750" />
@@ -441,7 +461,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),750)" />
+                <param name="visible" value="Control.HasFocus(750)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="1000" />
@@ -455,7 +475,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),1000)" />
+                <param name="visible" value="Control.HasFocus(1000)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="1150" />
@@ -468,7 +488,7 @@
                 <param name="pad" value="pad" />
                 <param name="bottom" value="20" />
                 <param name="backpanel" value="false" />
-                <param name="visible" value="StringCompare(Window.Property(content),1150)" />
+                <param name="visible" value="Control.HasFocus(1150)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="850" />
@@ -482,7 +502,7 @@
                 <param name="bottom" value="128" />
                 <param name="backpanel" value="true" />
                 <param name="noimage" value="true" />
-                <param name="visible" value="StringCompare(Window.Property(content),850)" />
+                <param name="visible" value="Control.HasFocus(850)" />
             </include>
             <include content="Dialog_ImageList">
                 <param name="id" value="950" />
@@ -496,7 +516,7 @@
                 <param name="bottom" value="128" />
                 <param name="backpanel" value="true" />
                 <param name="noimage" value="true" />
-                <param name="visible" value="StringCompare(Window.Property(content),950)" />
+                <param name="visible" value="Control.HasFocus(950)" />
             </include>
        
             <control type="list" id="250"><visible>false</visible></control>

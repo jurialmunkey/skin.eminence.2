@@ -1,3 +1,7 @@
+[B]2.5.17[B]
+Add Year to Extendinfo Video screens
+Fix Some extended info navigation issues (still bugs with mouse for extendedinfo)
+
 [B]2.5.16[/B]
 Fix up Music Library display
 Add additional Skin Helper lookups

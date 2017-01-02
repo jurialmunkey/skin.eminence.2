@@ -415,23 +415,49 @@
                         <left>0</left>
                         <right>0</right>
                         <top>0</top>
+                        <control type="group">
+                            <visible>Container(9500).IsUpdating</visible>
+                            <control type="multiimage">
+                                <centerleft>50%</centerleft>
+                                <centertop>42%</centertop>
+                                <width>64</width>
+                                <height>64</height> 
+                                <aspectratio>keep</aspectratio>
+                                <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
+                                <timeperimage>75</timeperimage>
+                                <fadetime>0</fadetime>
+                                <colordiffuse>HomeBarFG</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <centerleft>50%</centerleft>
+                                <centertop>52%</centertop>
+                                <height>64</height>
+                                <width>300</width>
+                                <label>$LOCALIZE[20186]</label>
+                                <align>center</align>
+                                <aligny>center</aligny>
+                            </control>
+                        </control>
                         <visible>StringCompare(Window.Property(list),Director)</visible>
-                        <include content="Dialog_BasicList">
-                            <param name="width" value="listw" />
-                            <param name="height" value="posterh" />
-                            <param name="id" value="9500" />
-                            <param name="type" value="list" />
-                            <param name="onleft" value="9000" />
-                            <param name="onright" value="9000" />
-                            <param name="onback" value="9000" />
-                            <param name="onback2" value="ClearProperty(list)" />
-                            <param name="ondown" value="9500" />
-                            <param name="onup" value="9500" />
-                            <param name="backpanel" value="false" />
-                            <param name="imagelist" value="true" />
-                            <param name="contentvisible" value="true" />
-                            <param name="content" value="plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director]" />
-                        </include>
+                        <control type="group">
+                            <animation effect="fade" start="100" end="0" condition="Container(9500).IsUpdating">Conditional</animation>
+                            <include content="Dialog_BasicList">
+                                <param name="width" value="listw" />
+                                <param name="height" value="posterh" />
+                                <param name="id" value="9500" />
+                                <param name="type" value="list" />
+                                <param name="onleft" value="9000" />
+                                <param name="onright" value="9000" />
+                                <param name="onback" value="9000" />
+                                <param name="onback2" value="ClearProperty(list)" />
+                                <param name="ondown" value="9500" />
+                                <param name="onup" value="9500" />
+                                <param name="backpanel" value="false" />
+                                <param name="imagelist" value="true" />
+                                <param name="contentvisible" value="true" />
+                                <param name="content" value="plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director]" />
+                            </include>
+                        </control>
                     </control>
                 </control>
             </control>
