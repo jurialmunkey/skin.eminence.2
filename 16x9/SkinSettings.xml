@@ -446,12 +446,23 @@
                         <visible>ControlGroup(8000).HasFocus(8007)</visible>
                     </control>
                     <!-- Match header tile to highlight color -->
-                    <control type="radiobutton" id="8709">
+                    <control type="radiobutton" id="8705">
                         <width>100%</width>
                         <label>31122</label>
                         <radioposx>settingsradioposx</radioposx>
                         <onclick>Skin.ToggleSetting(header.colormatch)</onclick>
                         <selected>Skin.HasSetting(header.colormatch)</selected>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                    </control>
+                    <!-- Header tile follows library location -->
+                    <control type="radiobutton" id="8706">
+                        <width>100%</width>
+                        <label>31204</label>
+                        <radioposx>settingsradioposx</radioposx>
+                        <onclick>Skin.ToggleSetting(header.tilefollowsnode)</onclick>
+                        <selected>Skin.HasSetting(header.tilefollowsnode)</selected>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8007)</visible>

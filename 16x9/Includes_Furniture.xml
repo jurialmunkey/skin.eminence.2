@@ -308,6 +308,9 @@
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR] $LOCALIZE[31067]</value>
+        
+        <value condition="!IsEmpty(Container.NumItems) + !IsEmpty(Control.GetLabel(28)) + [Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)]">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]  •  $INFO[Control.GetLabel(28)]</value>
+
         <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
         <value condition="!IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>
         <value condition="Pvr.IsRecording">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19158]...[/COLOR]$INFO[Pvr.NowRecordingTitle,  ,]$INFO[Pvr.NowRecordingChannel,  ,]</value>
@@ -325,7 +328,17 @@
         <value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
-        <value condition="!IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+
+        <value condition="!Skin.HasSetting(header.tilefollowsnode) + !IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(movies) | Container.Content(sets) | substring(Container.FolderPath,/movies/)]">$LOCALIZE[20342]</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | substring(Container.FolderPath,/tvshows/)]">$LOCALIZE[20343]</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml)">$LOCALIZE[3]</value>
+        <value condition="Window.IsVisible(MyMusicNav.xml)">$LOCALIZE[2]</value>
+        <value condition="Window.IsVisible(MyPics.xml)">$LOCALIZE[1]</value>
+        <value condition="Window.IsVisible(MyPrograms.xml)">$LOCALIZE[0]</value>
+        <value condition="Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[31015]</value>
+
         <value>$LOCALIZE[10000]</value>
     </variable>
     <variable name="Furniture_TopBar_Tile_Icon">
@@ -342,7 +355,17 @@
         <value condition="Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addons.png</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
         <value condition="Window.IsVisible(FileManager.xml)">special://skin/extras/icons/database.png</value>
-        <value condition="!IsEmpty(Window(home).Property(Header.Icon)) + substring(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
+
+        <value condition="!Skin.HasSetting(header.tilefollowsnode) + !IsEmpty(Window(home).Property(Header.Icon)) + substring(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
+
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(movies) | Container.Content(sets) | substring(Container.FolderPath,/movies/)]">special://skin/extras/icons/film.png</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | substring(Container.FolderPath,/tvshows/)]">special://skin/extras/icons/tv.png</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml)">special://skin/extras/icons/video-addons.png</value>
+        <value condition="Window.IsVisible(MyMusicNav.xml)">special://skin/extras/icons/songs.png</value>
+        <value condition="Window.IsVisible(MyPics.xml)">special://skin/extras/icons/pictures.png</value>
+        <value condition="Window.IsVisible(MyPrograms.xml)">special://skin/extras/icons/addons.png</value>
+        <value condition="Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)">special://skin/extras/icons/livetv.png</value>
+
         <value>special://skin/extras/icons/home.png</value>
     </variable>
     <include name="Furniture_TopBar_Tile">

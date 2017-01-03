@@ -1,3 +1,7 @@
+[B]2.5.18[/B]
+Add option to get header tile to follow library node location rather than home tile selection
+Add group to pvr timeline subheader
+
 [B]2.5.17[B]
 Add Year to Extendinfo Video screens
 Fix Some extended info navigation issues (still bugs with mouse for extendedinfo)
