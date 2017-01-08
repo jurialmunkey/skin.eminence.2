@@ -252,7 +252,7 @@
         <value condition="!IsEmpty(Container(9500).ListItem.Label)">$INFO[Container(9500).ListItem.Label]</value>
     </variable>
     <variable name="Label_Hub_WidgetLabel2">
-        <value condition="!IsEmpty(Container(9500).ListItem.Episode)">$INFO[Container(9500).ListItem.Season,,x]$INFO[Container(9500).ListItem.Episode,,. ]$INFO[Container(9500).ListItem.Title]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Episode) + !StringCompare(Container(9500).ListItem.Title,Container(9500).ListItem.TvShowTitle)">$INFO[Container(9500).ListItem.Season,,x]$INFO[Container(9500).ListItem.Episode,,. ]$INFO[Container(9500).ListItem.Title]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Artist) + !IsEmpty(Container(9500).ListItem.Year)">$INFO[Container(9500).ListItem.Title]$INFO[Container(9500).ListItem.Year, (,)]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Artist) + IsEmpty(Container(9500).ListItem.Year)">$INFO[Container(9500).ListItem.Title]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Album)">$INFO[Container(9500).ListItem.Year]</value>
