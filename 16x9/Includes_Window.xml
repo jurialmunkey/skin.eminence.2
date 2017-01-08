@@ -46,7 +46,7 @@
                             <texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
                         </control>
                     </focusedlayout>
-                    <content limit="10" target="video">$VAR[Defs_Hub_Widget]</content>
+                    <content limit="10" target="$VAR[Defs_Hub_Widget_Target]">$VAR[Defs_Hub_Widget]</content>
                 </control>
                 <control type="group">
                     <left>0</left>

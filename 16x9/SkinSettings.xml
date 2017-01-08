@@ -734,6 +734,18 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8006)</visible>
                     </control>
+                    <control type="radiobutton" id="8611">
+                        <width>100%</width>
+                        <label>resource.images.moviegenreicons.transparent</label>
+                        <label2>$INFO[System.AddonVersion(resource.images.moviegenreicons.transparent)]        </label2>
+                        <onclick condition="!System.HasAddon(resource.images.moviegenreicons.transparent)">InstallAddon(resource.images.moviegenreicons.transparent)</onclick>
+                        <onclick condition="System.HasAddon(resource.images.moviegenreicons.transparent)">Addon.OpenSettings(resource.images.moviegenreicons.transparent)</onclick>
+                        <selected>System.HasAddon(resource.images.moviegenreicons.transparent)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
                     <control type="radiobutton" id="8608">
                         <width>100%</width>
                         <label>script.globalsearch</label>
@@ -741,18 +753,6 @@
                         <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
                         <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
                         <selected>System.HasAddon(script.globalsearch)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8609">
-                        <width>100%</width>
-                        <label>service.nextup.notification</label>
-                        <label2>$INFO[System.AddonVersion(service.nextup.notification)]        </label2>
-                        <onclick condition="!System.HasAddon(service.nextup.notification)">InstallAddon(service.nextup.notification)</onclick>
-                        <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
-                        <selected>System.HasAddon(service.nextup.notification)</selected>
                         <radioposx>settingsradioposx</radioposx>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
@@ -770,6 +770,19 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8006)</visible>
                     </control>
+                    <control type="radiobutton" id="8609">
+                        <width>100%</width>
+                        <label>service.nextup.notification</label>
+                        <label2>$INFO[System.AddonVersion(service.nextup.notification)]        </label2>
+                        <onclick condition="!System.HasAddon(service.nextup.notification)">InstallAddon(service.nextup.notification)</onclick>
+                        <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
+                        <selected>System.HasAddon(service.nextup.notification)</selected>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                    </control>
+                    
 
                     <!-- RESET -->
                     <!-- Backup -->

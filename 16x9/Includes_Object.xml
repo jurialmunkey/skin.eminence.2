@@ -237,20 +237,33 @@
                 <height>posterh</height>
                 <include>Object_Background</include>
                 <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
+                    <centerleft>50%</centerleft>
+                    <centertop>50%</centertop>
+                    <width>75%</width>
+                    <height>75%</height>
                     <aspectratio>keep</aspectratio>
                     <fadetime>200</fadetime>
                     <texture background="true">$VAR[Image_Poster]</texture>
-                    <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                    <visible>Window.IsVisible(MyVideoNav.xml) + Container.Content(genres) + System.HasAddon(resource.images.moviegenreicons.transparent)</visible>
                 </control>
-                <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <aspectratio>scale</aspectratio>
-                    <fadetime>200</fadetime>
-                    <texture background="true">$VAR[Image_Poster]</texture>
-                    <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                <control type="group">
+                    <visible>!Window.IsVisible(MyVideoNav.xml) | !Container.Content(genres) | !System.HasAddon(resource.images.moviegenreicons.transparent)</visible>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$VAR[Image_Poster]</texture>
+                        <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                    </control>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$VAR[Image_Poster]</texture>
+                        <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                    </control>
                 </control>
             </control>
         </definition>
