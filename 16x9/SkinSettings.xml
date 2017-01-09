@@ -27,7 +27,7 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <right>bigpad</right>
-                <include>Dialog_Background</include>
+                <include>Object_Background</include>
                 <!-- Categories List -->
                 <control type="group">
                     <left>bigpad</left>

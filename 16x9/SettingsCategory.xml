@@ -41,7 +41,7 @@
                 <height>posterh</height>
                 <right>bigpad</right>
 
-                <include>Dialog_Background</include>
+                <include>Object_Background</include>
 
                 <!-- MainList -->
                 <control type="group">
