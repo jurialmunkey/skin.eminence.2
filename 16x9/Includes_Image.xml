@@ -114,7 +114,7 @@
         <value condition="!IsEmpty(Window(home).Property(SkinHelper.Music.Fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Window(home).Property(SkinHelper.Music.Fanart)]</value>
 
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SettingsProfile.xml)">special://skin/extras/backgrounds/settings.jpg</value>
-        <!-- <value condition="Window.IsVisible(Settings.xml)">special://skin/extras/backgrounds/bg1.jpg</value> -->
+        <value condition="Window.IsVisible(Settings.xml)">special://skin/extras/backgrounds/settings-main.jpg</value>
 
         <value condition="!IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         <value>common/black.png</value>
