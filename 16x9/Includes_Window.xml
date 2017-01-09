@@ -1190,11 +1190,13 @@
             <description>Audio Settings</description>
             <label>292</label>
             <onclick>ActivateWindow(124)</onclick>
+			<onup>9312</onup>
             <include>Defs_OSDButton</include>
         </control>
         <control type="button" id="2">
             <label>291</label>
             <onclick>ActivateWindow(123)</onclick>
+			<onup>9321</onup>
             <include>Defs_OSDButton</include>
         </control>
         <control type="button" id="3">
@@ -1408,7 +1410,7 @@
                 <bottom>64</bottom>
                 <centerleft>572</centerleft>
                 <width>320</width>
-                <height>138</height>
+                <height>207</height>
                 <control type="image">
                     <description>background image</description>
                     <left>-24</left>
@@ -1431,6 +1433,16 @@
                     <itemgap>0</itemgap>
                     <orientation>vertical</orientation>
                     <scrolltime>200</scrolltime>
+                    <control type="button" id="9303" description="Subtitle Offset">
+                        <width>100%</width>
+                        <height>69</height>
+                        <include>Defs_OSDButton</include>
+                        <label>22006</label>
+                        <onclick condition="IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
+						<onclick condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
+						<onclick>subtitledelay</onclick>
+						<enable>VideoPlayer.SubtitlesEnabled</enable>
+					</control>
                     <control type="button" id="9301" description="Download">
                         <width>100%</width>
                         <height>69</height>
@@ -1449,6 +1461,94 @@
                     </control>
                 </control>
             </control>
+            <control type="group">
+                <visible allowhiddenfocus="true">ControlGroup(9310).HasFocus() | Control.HasFocus(1)</visible>
+                <visible>Window.IsVisible(videoosd)</visible>
+                <bottom>64</bottom>
+                <centerleft>170</centerleft>
+                <width>320</width>
+                <height>138</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>-24</left>
+                    <right>-24</right>
+                    <top>-24</top>
+                    <bottom>-24</bottom>
+                    <bordersize>24</bordersize>
+                    <bordertexture border="24">common/24-shadow.png</bordertexture>
+                    <texture colordiffuse="DialogBG">common/white.png</texture>
+                </control>
+                <control type="grouplist" id="9310">
+                    <left>0</left>
+                    <right>0</right>
+                    <top>0</top>
+                    <bottom>0</bottom>
+                    <onup>noop</onup>
+                    <ondown>1</ondown>
+                    <onleft>1</onleft>
+                    <onright>1</onright>
+                    <itemgap>0</itemgap>
+                    <orientation>vertical</orientation>
+                    <scrolltime>200</scrolltime>
+                    <control type="button" id="9311" description="Audio Offset">
+                        <width>100%</width>
+                        <height>69</height>
+                        <include>Defs_OSDButton</include>
+                        <label>297</label>
+                        <onclick condition="IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
+						<onclick condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
+                        <onclick>audiodelay</onclick>
+                    </control>
+                    <control type="togglebutton" id="9312" description="Audio Language">
+                        <width>100%</width>
+                        <height>69</height>
+                        <include>Defs_OSDButton</include>
+                        <label>$INFO[VideoPlayer.AudioCodec,[UPPERCASE],[/UPPERCASE]] $INFO[VideoPlayer.AudioChannels]ch $INFO[VideoPlayer.AudioLanguage,[UPPERCASE],[/UPPERCASE]]</label>
+                        <onclick>AudioNextLanguage</onclick>
+                    </control>
+                </control>
+			</control>
+            <control type="group">
+                <visible allowhiddenfocus="true">ControlGroup(9320).HasFocus() | Control.HasFocus(2)</visible>
+                <visible>Window.IsVisible(videoosd)</visible>
+                <bottom>64</bottom>
+                <centerleft>340</centerleft>
+                <width>320</width>
+                <height>69</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>-24</left>
+                    <right>-24</right>
+                    <top>-24</top>
+                    <bottom>-24</bottom>
+                    <bordersize>24</bordersize>
+                    <bordertexture border="24">common/24-shadow.png</bordertexture>
+                    <texture colordiffuse="DialogBG">common/white.png</texture>
+                </control>
+                <control type="grouplist" id="9320">
+                    <left>0</left>
+                    <right>0</right>
+                    <top>0</top>
+                    <bottom>0</bottom>
+                    <onup>noop</onup>
+                    <ondown>2</ondown>
+                    <onleft>2</onleft>
+                    <onright>2</onright>
+                    <itemgap>0</itemgap>
+                    <orientation>vertical</orientation>
+                    <scrolltime>200</scrolltime>
+                    <control type="button" id="9321" description="View Mode">
+                        <width>100%</width>
+                        <height>69</height>
+                        <include>Defs_OSDButton</include>
+                        <label>$LOCALIZE[629]</label>
+                        <onclick condition="IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
+						<onclick condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
+						<onclick>aspectratio</onclick>
+						<onclick>aspectratio</onclick>
+                    </control>
+                </control>
+			</control>
         </control>
     </include>
 
