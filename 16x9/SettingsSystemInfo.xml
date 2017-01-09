@@ -14,185 +14,253 @@
             <include content="Object_Headline">
                 <param name="label" value="19033" />
             </include>
-            <!-- Main List -->
             <control type="group">
                 <left>bigpad</left>
                 <top>bigpad</top>
                 <height>posterh</height>
-                <width>465</width>
+                <right>bigpad</right>
                 <include>Object_Background</include>
-                <control type="grouplist" id="9000">                
-                    <itemgap>0</itemgap>
-                    <onright>9100</onright>
+                <!-- Arrows -->
+                <control type="group">
+                    <left>bigpad</left>
+                    <right>bigpad</right>
+                    <control type="image">
+                        <width>16</width>
+                        <height>16</height>
+                        <left>-48</left>
+                        <top>32</top>
+                        <texture colordiffuse="ListLabel">common/16-arrow-left.png</texture>
+                        <animation effect="fade" start="100" end="5" time="100" condition="!Container(9000).HasPrevious">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <width>16</width>
+                        <height>16</height>
+                        <right>-48</right>
+                        <top>32</top>
+                        <texture colordiffuse="ListLabel" flipx="true">common/16-arrow-left.png</texture>
+                        <animation effect="fade" start="100" end="5" time="100" condition="!Container(9000).HasNext">Conditional</animation>
+                    </control>
+                </control>
+                <!-- Categories -->
+                <control type="grouplist" id="9000">
+                    <itemgap>bigpad</itemgap>
+                    <onright>noop</onright>
                     <onup>noop</onup>
                     <ondown>noop</ondown>
+                    <onleft>noop</onleft>
+                    <left>bigpad</left>
+                    <right>bigpad</right>
+                    <orientation>horizontal</orientation>
                     <control type="button" id="95">
-                        <width>100%</width>
                         <label>20154</label>
+                        <width>settingscategoryw</width>
+                        <height>72</height>
+                        <align>center</align>
+                        <textcolor>Disabled</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
                         <include>Defs_OptionButton</include>
                     </control>
                     <control type="button" id="94">
-                        <width>100%</width>
                         <label>20155</label>
+                        <width>settingscategoryw</width>
+                        <height>72</height>
+                        <align>center</align>
+                        <textcolor>Disabled</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
                         <include>Defs_OptionButton</include>
                     </control>
                     <control type="button" id="96">
-                        <width>100%</width>
                         <label>20158</label>
+                        <width>settingscategoryw</width>
+                        <height>72</height>
+                        <align>center</align>
+                        <textcolor>Disabled</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
                         <include>Defs_OptionButton</include>
                     </control>
                     <control type="button" id="97">
-                        <width>100%</width>
                         <label>20159</label>
+                        <width>settingscategoryw</width>
+                        <height>72</height>
+                        <align>center</align>
+                        <textcolor>Disabled</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
                         <include>Defs_OptionButton</include>
                     </control>
                     <control type="button" id="98">
-                        <width>100%</width>
                         <label>20160</label>
+                        <width>settingscategoryw</width>
+                        <height>72</height>
+                        <align>center</align>
+                        <textcolor>Disabled</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
                         <include>Defs_OptionButton</include>
                     </control>
                     <control type="button" id="99">
-                        <width>100%</width>
                         <label>19166</label>
+                        <width>settingscategoryw</width>
+                        <height>72</height>
+                        <align>center</align>
+                        <textcolor>Disabled</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
                         <include>Defs_OptionButton</include>
                     </control>
                     <control type="button" id="100">
-                        <width>100%</width>
                         <label>12389</label>
+                        <width>settingscategoryw</width>
+                        <height>72</height>
+                        <align>center</align>
+                        <textcolor>Disabled</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
                         <include>Defs_OptionButton</include>
+                    </control>
+                </control>
+                <!-- Sub List -->
+                <control type="group">
+                    <left>bigpad</left>
+                    <top>82</top>
+                    <bottom>bigpad</bottom>
+                    <right>bigpad</right>
+                    <include>Object_Background</include>
+                    <control type="grouplist" id="9100">                
+                        <itemgap>-8</itemgap>
+                        <onleft>9000</onleft>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <control type="label">
+                            <top>16</top>
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                            <label>$INFO[Control.GetLabel(52)]</label>
+                            <visible>!Control.IsVisible(30)</visible>
+                        </control>
+                        <control type="label">
+                            <description>CPU Text</description>
+                            <label>$LOCALIZE[13271]</label>
+                            <width>100%</width>
+                            <include>Defs_OptionButton</include>
+                            <visible>!Control.IsVisible(30)</visible>
+                        </control>
+                        <control type="label">
+                            <description>CPU Text</description>
+                            <posy>-60</posy>
+                            <align>right</align>
+                            <left>20</left>
+                            <width>960</width>
+                            <label>$INFO[System.CPUUsage]</label>
+                            <include>Defs_OptionButton</include>
+                            <visible>!Control.IsVisible(30)</visible>
+                        </control>
+                        <control type="progress" id="22">
+                            <description>CPU BAR</description>
+                            <height>10</height>
+                            <left>20</left>
+                            <width>940</width>
+                            <info>System.CPUUsage</info>
+                            <include>Defs_OptionButton</include>
+                            <visible>!Control.IsVisible(30)</visible>
+                        </control>
+                        
+                        <control type="label">
+                            <top>-66</top>
+                            <left>960</left>
+                            <description>Memory Text</description>
+                            <label>RAM:</label>
+                            <include>Defs_OptionButton</include>
+                            <visible>!Control.IsVisible(30)</visible>
+                        </control>
+                        <control type="label">
+                            <description>Memory Text</description>
+                            <posy>-64</posy>
+                            <align>right</align>
+                            <right>5</right>
+                            <label>$INFO[system.memory(used.percent)]</label>
+                            <include>Defs_OptionButton</include>
+                            <visible>!Control.IsVisible(30)</visible>
+                        </control>
+
+                        <control type="progress" id="24">
+                            <description>Memory BAR</description>
+                            <height>10</height>
+                            <left>980</left>
+                            <width>710</width>
+                            <info>system.memory(used)</info>
+                            <include>Defs_OptionButton</include>
+                            <visible>!Control.IsVisible(30)</visible>
+                        </control>
+                        <control type="textbox" id="30">
+                            <top>16</top>
+                            <left>20</left>
+                            <width>97%</width>
+                            <height>590</height>
+                            <align>left</align>
+                            <include>Defs_OptionButton</include>
+                        </control>
+
+                        <control type="label" id="2">
+                            <top>48</top>
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="3">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="4">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="5">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="6">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="7">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="8">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="9">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="10">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="11">
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+
                     </control>
                 </control>
             </control>
 
-            <!-- Sub List -->
-            <control type="group">
-                <left>505</left>
-                <top>bigpad</top>
-                <height>posterh</height>
-                <right>bigpad</right>
-                <include>Object_Background</include>
-                <control type="grouplist" id="9100">                
-                    <itemgap>0</itemgap>
-                    <onleft>9000</onleft>
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <control type="label">
-                        <top>16</top>
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                        <label>$INFO[Control.GetLabel(52)]</label>
-                    </control>
-                    <control type="label">
-                        <description>CPU Text</description>
-                        <label>$LOCALIZE[13271]</label>
-                        <width>100%</width>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label">
-                        <description>CPU Text</description>
-                        <posy>-72</posy>
-                        <align>right</align>
-                        <left>20</left>
-                        <width>960</width>
-                        <label>$INFO[System.CPUUsage]</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="progress" id="22">
-                        <description>CPU BAR</description>
-                        <height>10</height>
-                        <left>20</left>
-                        <width>940</width>
-                        <info>System.CPUUsage</info>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    
-                    <control type="label">
-                        <top>-82</top>
-                        <left>960</left>
-                        <description>Memory Text</description>
-                        <label>RAM:</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label">
-                        <description>Memory Text</description>
-                        <posy>-72</posy>
-                        <align>right</align>
-                        <right>5</right>
-                        <label>$INFO[system.memory(used.percent)]</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-
-                    <control type="progress" id="24">
-                        <description>Memory BAR</description>
-                        <height>10</height>
-                        <left>980</left>
-                        <width>265</width>
-                        <info>system.memory(used)</info>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="textbox" id="30">
-                    	<top>48</top>
-                        <left>20</left>
-                        <width>97%</width>
-                        <height>500</height>
-                        <align>left</align>
-                        <include>Defs_OptionButton</include>
-                    </control>
-
-                    <control type="label" id="2">
-                        <top>48</top>
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="3">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="4">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="5">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="6">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="7">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="8">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="9">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="10">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="11">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-
-                </control>
-            </control>
+            
         </control>
         <control type="label" id="52"><visible>false</visible></control>
     </controls>
