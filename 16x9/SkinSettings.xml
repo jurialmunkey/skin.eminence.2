@@ -12,809 +12,912 @@
         <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
 
+
         <control type="group">
             
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <include>Defs_ViewBackground</include>
             <include content="Object_Headline">
-                <param name="label" value="$LOCALIZE[5]" />
+                <param name="label" value="$LOCALIZE[20077] " />
             </include>
-            <!-- Left List -->
+            
             <control type="group">
                 <left>bigpad</left>
                 <top>bigpad</top>
                 <height>posterh</height>
-                <width>465</width>
-                <include>Object_Background</include>
-                <control type="grouplist" id="8000">                
-                    <itemgap>0</itemgap>
-                    <onright>9000</onright>
-                    <onup>noop</onup>
-                    <ondown>noop</ondown>
-                    <!-- HOME -->
-                    <control type="togglebutton" id="8001">
-                        <width>100%</width>
-                        <label>10000</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[10000][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8001)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
+                <right>bigpad</right>
+                <include>Dialog_Background</include>
+                <!-- Categories List -->
+                <control type="group">
+                    <left>bigpad</left>
+                    <top>0</top>
+                    <height>72</height>
+                    <right>bigpad</right>
+                    <control type="image">
+                        <width>16</width>
+                        <height>16</height>
+                        <left>-40</left>
+                        <top>32</top>
+                        <texture colordiffuse="ListLabel">common/16-arrow-left.png</texture>
+                        <animation effect="fade" start="100" end="5" time="100" condition="!Container(8000).HasPrevious">Conditional</animation>
                     </control>
-                    <!-- BACKGROUND -->
-                    <control type="togglebutton" id="8002">
-                        <width>100%</width>
-                        <label>31020</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31020][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8002)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
+                    <control type="image">
+                        <width>16</width>
+                        <height>16</height>
+                        <right>-40</right>
+                        <top>32</top>
+                        <texture colordiffuse="ListLabel" flipx="true">common/16-arrow-left.png</texture>
+                        <animation effect="fade" start="100" end="5" time="100" condition="!Container(8000).HasNext">Conditional</animation>
                     </control>
-                    <!-- PANEL -->
-                    <control type="togglebutton" id="8005">
-                        <width>100%</width>
-                        <label>31197</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31197][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8005)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <!-- HEADER -->
-                    <control type="togglebutton" id="8007">
-                        <width>100%</width>
-                        <label>31127</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31127][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8007)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <!-- COLORS -->
-                    <control type="togglebutton" id="8008">
-                        <width>100%</width>
-                        <label>31126</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31126][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8008)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <!-- MUSIC OSD -->
-                    <control type="togglebutton" id="8003">
-                        <width>100%</width>
-                        <label>31121</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31121][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8003)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <!-- VIDEO OSD -->
-                    <control type="togglebutton" id="8004">
-                        <width>100%</width>
-                        <label>31005</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31005][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8004)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <!-- EXTRAS -->
-                    <control type="togglebutton" id="8009">
-                        <width>100%</width>
-                        <label>31110</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31110][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8009)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <!-- INSTALL ADDONS -->
-                    <control type="togglebutton" id="8006">
-                        <width>100%</width>
-                        <label>31198</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31198][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8006)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <!-- RESET SKIN -->
-                    <control type="togglebutton" id="8099">
-                        <width>100%</width>
-                        <label>31170</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31170][/COLOR]</altlabel>
-                        <usealttexture>ControlGroup(8000).HasFocus(8099)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
+                    <control type="grouplist" id="8000">                
+                        <itemgap>20</itemgap>
+                        <onleft>noop</onleft>
+                        <onright>noop</onright>
+                        <onup>noop</onup>
+                        <ondown>9000</ondown>
+                        <orientation>horizontal</orientation>
+                        <!-- HOME -->
+                        <control type="togglebutton" id="8001">
+                            <width>settingscategoryw</width>
+                            <label>10000</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[10000][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8001)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- BACKGROUND -->
+                        <control type="togglebutton" id="8002">
+                            <width>settingscategoryw</width>
+                            <label>31020</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31020][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8002)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- PANEL -->
+                        <control type="togglebutton" id="8005">
+                            <width>settingscategoryw</width>
+                            <label>31197</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31197][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8005)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- HEADER -->
+                        <control type="togglebutton" id="8007">
+                            <width>settingscategoryw</width>
+                            <label>31127</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31127][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8007)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- COLORS -->
+                        <control type="togglebutton" id="8008">
+                            <width>settingscategoryw</width>
+                            <label>31126</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31126][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8008)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- MUSIC OSD -->
+                        <control type="togglebutton" id="8003">
+                            <width>settingscategoryw</width>
+                            <label>31121</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31121][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8003)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- VIDEO OSD -->
+                        <control type="togglebutton" id="8004">
+                            <width>settingscategoryw</width>
+                            <label>31005</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31005][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8004)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- EXTRAS -->
+                        <control type="togglebutton" id="8009">
+                            <width>settingscategoryw</width>
+                            <label>31110</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31110][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8009)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- INSTALL ADDONS -->
+                        <control type="togglebutton" id="8006">
+                            <width>settingscategoryw</width>
+                            <label>31198</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31198][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8006)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <!-- RESET SKIN -->
+                        <control type="togglebutton" id="8099">
+                            <width>settingscategoryw</width>
+                            <label>31170</label>
+                            <altlabel>[COLOR=Selected]$LOCALIZE[31170][/COLOR]</altlabel>
+                            <align>center</align>
+                            <usealttexture>!ControlGroup(8000).HasFocus() + ControlGroup(8000).HasFocus(8099)</usealttexture>
+                            <texturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</texturefocus>
+                            <alttexturefocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline.png</alttexturefocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]" border="10">common/underline-fade.png</alttexturenofocus>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <textcolor>Disabled</textcolor>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
                     </control>
                 </control>
-            </control>
-            <!-- Right List -->
-            <control type="group">
-                <left>505</left>
-                <top>bigpad</top>
-                <height>posterh</height>
-                <right>bigpad</right>
-                <include>Object_Background</include>
-                <control type="grouplist" id="9000">                
-                    <itemgap>0</itemgap>
-                    <onleft>8000</onleft>
-                    <!-- HOME -->
-                    <!-- Customise Home Menu -->
-                    <control type="button" id="8101">
-                        <width>100%</width>
-                        <label>31049</label>
-                        <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Fallback Widget -->
-                    <control type="button" id="8102">
-                        <width>100%</width>
-                        <label>31147</label>
-                        <label2>$VAR[Label_SkinSetting_FallbackWidget]</label2>
-                        <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name&amp;skinType=home.fallbackwidget.type)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Persistent Widgets-->
-                    <control type="radiobutton" id="8103">
-                        <width>100%</width>
-                        <label>31195</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <selected>!Skin.HasSetting(widgets.persistent)</selected>
-                        <onclick>Skin.ToggleSetting(widgets.persistent)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Widget Info Box -->
-                    <control type="radiobutton" id="8104">
-                        <width>100%</width>
-                        <label>31016</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <selected>!Skin.HasSetting(home.hidewidgetbox)</selected>
-                        <onclick condition="!Skin.HasSetting(home.hidewidgetbox) + stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
-                        <onclick>Skin.ToggleSetting(home.hidewidgetbox)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Widget Posters -->
-                    <control type="button" id="8105">
-                        <width>100%</width>
-                        <label>31150</label>
-                        <label2>$INFO[Skin.String(home.widgetposters)]</label2>
-                        <radioposx>settingsradioposx</radioposx>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31166])</onclick>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Widget DiscArt -->
-                    <control type="radiobutton" id="8106">
-                        <width>100%</width>
-                        <label>31156</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])</enable>
-                        <selected>Skin.HasSetting(home.showdiscart)</selected>
-                        <onclick>Skin.ToggleSetting(home.showdiscart)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Header Icon -->
-                    <control type="button" id="8107">
-                        <width>100%</width>
-                        <label>31151</label>
-                        <onclick condition="IsEmpty(Skin.String(home.headericon))">Skin.SetImage(home.headericon,special://skin/extras/icons/)</onclick>
-                        <label2>$VAR[Label_SkinSetting_HeaderIcon]</label2>
-                        <onclick condition="!IsEmpty(Skin.String(home.headericon))">Skin.Reset(home.headericon)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Header Icon Text -->
-                    <control type="button" id="8108">
-                        <width>100%</width>
-                        <label>31152</label>
-                        <label2>$INFO[Skin.String(home.headertext)]</label2>
-                        <onclick>Skin.SetString(home.headertext)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Main Header Text -->
-                    <control type="button" id="8109">
-                        <width>100%</width>
-                        <label>31157</label>
-                        <label2>$INFO[Skin.String(home.mainheadertext)]</label2>
-                        <onclick>Skin.SetString(home.mainheadertext)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Transparent Home Bar -->
-                    <control type="radiobutton" id="8110">
-                        <width>100%</width>
-                        <label>31172</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <selected>Skin.HasSetting(home.transparent)</selected>
-                        <onclick>Skin.ToggleSetting(home.transparent)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
-                    <!-- Home Style -->
-                    <control type="button" id="8111">
-                        <width>100%</width>
-                        <label>31173</label>
-                        <label2>$INFO[Skin.String(home.style)]</label2>
-                        <onclick condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
-                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31180])">Skin.SetString(home.style,$LOCALIZE[31181])</onclick>
-                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31181])">Skin.SetString(home.style,$LOCALIZE[31182])</onclick>
-                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31182])">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
+                <!-- Sub List -->
+                <control type="group">
+                    <left>bigpad</left>
+                    <top>82</top>
+                    <bottom>62</bottom>
+                    <right>bigpad</right>
+                    <include>Object_Background</include>
+                    <control type="grouplist" id="9000">                
+                        <itemgap>0</itemgap>
+                        <onleft>8000</onleft>
+                        <onright>8000</onright>
+                        <ondown>noop</ondown>
+                        <onup>8000</onup>
+                        <!-- HOME -->
+                        <!-- Customise Home Menu -->
+                        <control type="button" id="8101">
+                            <width>100%</width>
+                            <label>31049</label>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Fallback Widget -->
+                        <control type="button" id="8102">
+                            <width>100%</width>
+                            <label>31147</label>
+                            <label2>$VAR[Label_SkinSetting_FallbackWidget]</label2>
+                            <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name&amp;skinType=home.fallbackwidget.type)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Persistent Widgets-->
+                        <control type="radiobutton" id="8103">
+                            <width>100%</width>
+                            <label>31195</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <selected>!Skin.HasSetting(widgets.persistent)</selected>
+                            <onclick>Skin.ToggleSetting(widgets.persistent)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Widget Info Box -->
+                        <control type="radiobutton" id="8104">
+                            <width>100%</width>
+                            <label>31016</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <selected>!Skin.HasSetting(home.hidewidgetbox)</selected>
+                            <onclick condition="!Skin.HasSetting(home.hidewidgetbox) + stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                            <onclick>Skin.ToggleSetting(home.hidewidgetbox)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Widget Posters -->
+                        <control type="button" id="8105">
+                            <width>100%</width>
+                            <label>31150</label>
+                            <label2>$INFO[Skin.String(home.widgetposters)]</label2>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31166])</onclick>
+                            <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
+                            <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                            <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
+                            <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Widget DiscArt -->
+                        <control type="radiobutton" id="8106">
+                            <width>100%</width>
+                            <label>31156</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])</enable>
+                            <selected>Skin.HasSetting(home.showdiscart)</selected>
+                            <onclick>Skin.ToggleSetting(home.showdiscart)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Header Icon -->
+                        <control type="button" id="8107">
+                            <width>100%</width>
+                            <label>31151</label>
+                            <onclick condition="IsEmpty(Skin.String(home.headericon))">Skin.SetImage(home.headericon,special://skin/extras/icons/)</onclick>
+                            <label2>$VAR[Label_SkinSetting_HeaderIcon]</label2>
+                            <onclick condition="!IsEmpty(Skin.String(home.headericon))">Skin.Reset(home.headericon)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Header Icon Text -->
+                        <control type="button" id="8108">
+                            <width>100%</width>
+                            <label>31152</label>
+                            <label2>$INFO[Skin.String(home.headertext)]</label2>
+                            <onclick>Skin.SetString(home.headertext)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Main Header Text -->
+                        <control type="button" id="8109">
+                            <width>100%</width>
+                            <label>31157</label>
+                            <label2>$INFO[Skin.String(home.mainheadertext)]</label2>
+                            <onclick>Skin.SetString(home.mainheadertext)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Transparent Home Bar -->
+                        <control type="radiobutton" id="8110">
+                            <width>100%</width>
+                            <label>31172</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <selected>Skin.HasSetting(home.transparent)</selected>
+                            <onclick>Skin.ToggleSetting(home.transparent)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+                        <!-- Home Style -->
+                        <control type="button" id="8111">
+                            <width>100%</width>
+                            <label>31173</label>
+                            <label2>$INFO[Skin.String(home.style)]</label2>
+                            <onclick condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
+                            <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31180])">Skin.SetString(home.style,$LOCALIZE[31181])</onclick>
+                            <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31181])">Skin.SetString(home.style,$LOCALIZE[31182])</onclick>
+                            <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31182])">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
 
-                    <!-- BACKGROUND -->
-                    <!-- Fanart -->
-                    <control type="radiobutton" id="8201">
-                        <width>100%</width>
-                        <label>31021</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <selected>!Skin.HasSetting(background.hidefanart)</selected>
-                        <onclick>Skin.ToggleSetting(background.hidefanart)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
-                    </control>
-                    <!-- Show background video -->
-                    <control type="radiobutton" id="8202">
-                        <width>100%</width>
-                        <label>31027</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <selected>Skin.HasSetting(background.showvideo)</selected>
-                        <onclick>Skin.ToggleSetting(background.showvideo)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
-                    </control>
-                    <!-- Show background music -->
-                    <control type="radiobutton" id="8204">
-                        <width>100%</width>
-                        <label>31028</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <selected>Skin.HasSetting(background.showvisualisation)</selected>
-                        <onclick>Skin.ToggleSetting(background.showvisualisation)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
-                    </control>
-                    <!-- Animate Fanart -->
-                    <control type="radiobutton" id="8203">
-                        <width>100%</width>
-                        <label>31116</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <selected>Skin.HasSetting(background.animate)</selected>
-                        <onclick>Skin.ToggleSetting(background.animate)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
-                    </control>
-                    
-                    <!-- Overlay -->
-                    <control type="button" id="8207">
-                        <width>100%</width>
-                        <label>31159</label>
-                        <label2>$VAR[Label_SkinSetting_GlobalOverlay]</label2>
-                        <onclick condition="IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
-                    </control>
-                    <!-- Fallback Fanart -->
-                    <control type="button" id="8208">
-                        <width>100%</width>
-                        <label>31146</label>
-                        <label2>$VAR[Label_SkinSetting_FallbackFanart]</label2>
-                        <onclick condition="IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
-                    </control>
+                        <!-- BACKGROUND -->
+                        <!-- Fanart -->
+                        <control type="radiobutton" id="8201">
+                            <width>100%</width>
+                            <label>31021</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <selected>!Skin.HasSetting(background.hidefanart)</selected>
+                            <onclick>Skin.ToggleSetting(background.hidefanart)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                        </control>
+                        <!-- Show background video -->
+                        <control type="radiobutton" id="8202">
+                            <width>100%</width>
+                            <label>31027</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <selected>Skin.HasSetting(background.showvideo)</selected>
+                            <onclick>Skin.ToggleSetting(background.showvideo)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                        </control>
+                        <!-- Show background music -->
+                        <control type="radiobutton" id="8204">
+                            <width>100%</width>
+                            <label>31028</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <selected>Skin.HasSetting(background.showvisualisation)</selected>
+                            <onclick>Skin.ToggleSetting(background.showvisualisation)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                        </control>
+                        <!-- Animate Fanart -->
+                        <control type="radiobutton" id="8203">
+                            <width>100%</width>
+                            <label>31116</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <selected>Skin.HasSetting(background.animate)</selected>
+                            <onclick>Skin.ToggleSetting(background.animate)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                        </control>
+                        
+                        <!-- Overlay -->
+                        <control type="button" id="8207">
+                            <width>100%</width>
+                            <label>31159</label>
+                            <label2>$VAR[Label_SkinSetting_GlobalOverlay]</label2>
+                            <onclick condition="IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background)</onclick>
+                            <onclick condition="!IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                        </control>
+                        <!-- Fallback Fanart -->
+                        <control type="button" id="8208">
+                            <width>100%</width>
+                            <label>31146</label>
+                            <label2>$VAR[Label_SkinSetting_FallbackFanart]</label2>
+                            <onclick condition="IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
+                            <onclick condition="!IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                        </control>
 
-                    <!-- MUSIC OSD -->
-                    <control type="radiobutton" id="8301" description="Show Fanart">
-                        <visible>ControlGroup(8000).HasFocus(8003)</visible>
-                        <width>100%</width>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <label>31021</label>
-                        <selected>Skin.HasSetting(musicvis.fanartfallback)</selected>
-                        <enable>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
-                        <onclick>Skin.ToggleSetting(musicvis.fanartfallback)</onclick>
-                    </control>
-                    <control type="radiobutton" id="8302" description="Use artist slideshow">
-                        <visible>ControlGroup(8000).HasFocus(8003)</visible>
-                        <width>100%</width>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <label>31120</label>
-                        <enable>System.HasAddon(script.artistslideshow)</enable>
-                        <selected>Skin.HasSetting(ArtistSlideShow.Enabled)</selected>
-                        <onclick>Skin.ToggleSetting(ArtistSlideShow.Enabled)</onclick>
-                    </control>
-                    <control type="radiobutton" id="8303" description="Show visualisation with slideshow">
-                        <visible>ControlGroup(8000).HasFocus(8003)</visible>
-                        <width>100%</width>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <label>31119</label>
-                        <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
-                        <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
-                        <enable>Skin.HasSetting(musicvis.fanartfallback) | [Skin.HasSetting(ArtistSlideShow.Enabled) + System.HasAddon(script.artistslideshow)]</enable>
-                    </control>
-                    <control type="radiobutton" id="8304" description="Animate Artist slideshow">
-                        <visible>ControlGroup(8000).HasFocus(8003)</visible>
-                        <width>100%</width>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <label>31118</label>
-                        <selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
-                        <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
-                        <enable>Skin.HasSetting(musicvis.fanartfallback) | [Skin.HasSetting(ArtistSlideShow.Enabled) + System.HasAddon(script.artistslideshow)]</enable>
-                    </control>
+                        <!-- MUSIC OSD -->
+                        <control type="radiobutton" id="8301" description="Show Fanart">
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                            <width>100%</width>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>31021</label>
+                            <selected>Skin.HasSetting(musicvis.fanartfallback)</selected>
+                            <enable>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
+                            <onclick>Skin.ToggleSetting(musicvis.fanartfallback)</onclick>
+                        </control>
+                        <control type="radiobutton" id="8302" description="Use artist slideshow">
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                            <width>100%</width>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>31120</label>
+                            <enable>System.HasAddon(script.artistslideshow)</enable>
+                            <selected>Skin.HasSetting(ArtistSlideShow.Enabled)</selected>
+                            <onclick>Skin.ToggleSetting(ArtistSlideShow.Enabled)</onclick>
+                        </control>
+                        <control type="radiobutton" id="8303" description="Show visualisation with slideshow">
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                            <width>100%</width>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>31119</label>
+                            <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
+                            <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
+                            <enable>Skin.HasSetting(musicvis.fanartfallback) | [Skin.HasSetting(ArtistSlideShow.Enabled) + System.HasAddon(script.artistslideshow)]</enable>
+                        </control>
+                        <control type="radiobutton" id="8304" description="Animate Artist slideshow">
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                            <width>100%</width>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>31118</label>
+                            <selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
+                            <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
+                            <enable>Skin.HasSetting(musicvis.fanartfallback) | [Skin.HasSetting(ArtistSlideShow.Enabled) + System.HasAddon(script.artistslideshow)]</enable>
+                        </control>
 
-                    <!-- VIDEO OSD -->
-                    <!-- Show Info -->
-                    <control type="radiobutton" id="8401" description="Show Info">
-                        <visible>ControlGroup(8000).HasFocus(8004)</visible>
-                        <width>100%</width>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <label>31006</label>
-                        <selected>Skin.HasSetting(videoosd.showinfo)</selected>
-                        <onclick>Skin.ToggleSetting(videoosd.showinfo)</onclick>
-                    </control>
+                        <!-- VIDEO OSD -->
+                        <!-- Show Info -->
+                        <control type="radiobutton" id="8401" description="Show Info">
+                            <visible>ControlGroup(8000).HasFocus(8004)</visible>
+                            <width>100%</width>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>31006</label>
+                            <selected>Skin.HasSetting(videoosd.showinfo)</selected>
+                            <onclick>Skin.ToggleSetting(videoosd.showinfo)</onclick>
+                        </control>
 
-                    <!-- HEADER -->
-                    <!-- Disable Clock -->
-                    <control type="radiobutton" id="8701">
-                        <width>100%</width>
-                        <label>31138</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <onclick>Skin.ToggleSetting(disable.clockheader)</onclick>
-                        <selected>!Skin.HasSetting(disable.clockheader)</selected>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
-                    </control>
-                    <!-- Disable Weather -->
-                    <control type="radiobutton" id="8702">
-                        <width>100%</width>
-                        <label>31115</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <onclick>Skin.ToggleSetting(disable.weatherheader)</onclick>
-                        <selected>!Skin.HasSetting(disable.weatherheader)</selected>
-                        <enable>!Skin.HasSetting(disable.clockheader)</enable>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
-                    </control>
-                    <!-- Disable Header -->
-                    <control type="radiobutton" id="8703">
-                        <width>100%</width>
-                        <label>31014</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <onclick>Skin.ToggleSetting(disable.mainheader)</onclick>
-                        <selected>!Skin.HasSetting(disable.mainheader)</selected>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
-                    </control>
-                    <!-- Switch between All/Unwatched media counter -->
-                    <control type="radiobutton" id="8704">
-                        <width>100%</width>
-                        <radioposx>settingsradioposx</radioposx>
-                        <label>31167</label>
-                        <enable>!Skin.HasSetting(disable.mainheader)</enable>
-                        <onclick>Skin.ToggleSetting(header.mainheadercount)</onclick>
-                        <selected>Skin.HasSetting(header.mainheadercount)</selected>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
-                    </control>
-                    <!-- Match header tile to highlight color -->
-                    <control type="radiobutton" id="8705">
-                        <width>100%</width>
-                        <label>31122</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <onclick>Skin.ToggleSetting(header.colormatch)</onclick>
-                        <selected>Skin.HasSetting(header.colormatch)</selected>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
-                    </control>
-                    <!-- Header tile follows library location -->
-                    <control type="radiobutton" id="8706">
-                        <width>100%</width>
-                        <label>31204</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <onclick>Skin.ToggleSetting(header.tilefollowsnode)</onclick>
-                        <selected>Skin.HasSetting(header.tilefollowsnode)</selected>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8007)</visible>
-                    </control>
+                        <!-- HEADER -->
+                        <!-- Disable Clock -->
+                        <control type="radiobutton" id="8701">
+                            <width>100%</width>
+                            <label>31138</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <onclick>Skin.ToggleSetting(disable.clockheader)</onclick>
+                            <selected>!Skin.HasSetting(disable.clockheader)</selected>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                        </control>
+                        <!-- Disable Weather -->
+                        <control type="radiobutton" id="8702">
+                            <width>100%</width>
+                            <label>31115</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <onclick>Skin.ToggleSetting(disable.weatherheader)</onclick>
+                            <selected>!Skin.HasSetting(disable.weatherheader)</selected>
+                            <enable>!Skin.HasSetting(disable.clockheader)</enable>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                        </control>
+                        <!-- Disable Header -->
+                        <control type="radiobutton" id="8703">
+                            <width>100%</width>
+                            <label>31014</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <onclick>Skin.ToggleSetting(disable.mainheader)</onclick>
+                            <selected>!Skin.HasSetting(disable.mainheader)</selected>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                        </control>
+                        <!-- Switch between All/Unwatched media counter -->
+                        <control type="radiobutton" id="8704">
+                            <width>100%</width>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <label>31167</label>
+                            <enable>!Skin.HasSetting(disable.mainheader)</enable>
+                            <onclick>Skin.ToggleSetting(header.mainheadercount)</onclick>
+                            <selected>Skin.HasSetting(header.mainheadercount)</selected>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                        </control>
+                        <!-- Match header tile to highlight color -->
+                        <control type="radiobutton" id="8705">
+                            <width>100%</width>
+                            <label>31122</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <onclick>Skin.ToggleSetting(header.colormatch)</onclick>
+                            <selected>Skin.HasSetting(header.colormatch)</selected>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                        </control>
+                        <!-- Header tile follows library location -->
+                        <control type="radiobutton" id="8706">
+                            <width>100%</width>
+                            <label>31204</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <onclick>Skin.ToggleSetting(header.tilefollowsnode)</onclick>
+                            <selected>Skin.HasSetting(header.tilefollowsnode)</selected>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8007)</visible>
+                        </control>
 
-                    <!-- COLORS -->
-                    <!-- Main Color -->
-                    <control type="button" id="8801">
-                        <width>100%</width>
-                        <label>31111</label>
-                        <label2>$VAR[Label_SkinSetting_HighlightColor]</label2>
-                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
-                    </control>
-                    <!-- Second Color -->
-                    <control type="button" id="8802">
-                        <width>100%</width>
-                        <label>31112</label>
-                        <label2>$VAR[Label_SkinSetting_HighlightColor2]</label2>
-                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor2)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
-                    </control>
-                    <!-- Reset Colors -->
-                    <control type="button" id="8803">
-                        <width>100%</width>
-                        <label>31113</label>
-                        <onclick>Skin.Reset(HighlightColor)</onclick>
-                        <onclick>Skin.Reset(HighlightColor2)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
-                    </control>
-                    <!-- Tile Colors -->
-                    <control type="radiobutton" id="8804">
-                        <width>100%</width>
-                        <label>31129</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <onclick>Skin.ToggleSetting(home.tilecolor)</onclick>
-                        <selected>Skin.HasSetting(home.tilecolor)</selected>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
-                    </control>
-                    <control type="radiobutton" id="8805">
-                        <width>100%</width>
-                        <label>31140</label>
-                        <radioposx>settingsradioposx</radioposx>
-                        <onclick>Skin.ToggleSetting(home.tilecolor.nofocus)</onclick>
-                        <selected>Skin.HasSetting(home.tilecolor.nofocus)</selected>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <enable>Skin.HasSetting(home.tilecolor)</enable>
-                        <visible>ControlGroup(8000).HasFocus(8008)</visible>
-                    </control>
+                        <!-- COLORS -->
+                        <!-- Main Color -->
+                        <control type="button" id="8801">
+                            <width>100%</width>
+                            <label>31111</label>
+                            <label2>$VAR[Label_SkinSetting_HighlightColor]</label2>
+                            <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                        </control>
+                        <!-- Second Color -->
+                        <control type="button" id="8802">
+                            <width>100%</width>
+                            <label>31112</label>
+                            <label2>$VAR[Label_SkinSetting_HighlightColor2]</label2>
+                            <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor2)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                        </control>
+                        <!-- Reset Colors -->
+                        <control type="button" id="8803">
+                            <width>100%</width>
+                            <label>31113</label>
+                            <onclick>Skin.Reset(HighlightColor)</onclick>
+                            <onclick>Skin.Reset(HighlightColor2)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                        </control>
+                        <!-- Tile Colors -->
+                        <control type="radiobutton" id="8804">
+                            <width>100%</width>
+                            <label>31129</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <onclick>Skin.ToggleSetting(home.tilecolor)</onclick>
+                            <selected>Skin.HasSetting(home.tilecolor)</selected>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                        </control>
+                        <control type="radiobutton" id="8805">
+                            <width>100%</width>
+                            <label>31140</label>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <onclick>Skin.ToggleSetting(home.tilecolor.nofocus)</onclick>
+                            <selected>Skin.HasSetting(home.tilecolor.nofocus)</selected>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <enable>Skin.HasSetting(home.tilecolor)</enable>
+                            <visible>ControlGroup(8000).HasFocus(8008)</visible>
+                        </control>
 
-                    <!-- EXTRAS -->
-                    <!-- Kiosk -->
-                    <control type="radiobutton" id="8901">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31057</label>
-                        <selected>Skin.HasSetting(KioskMode)</selected>
-                        <onclick>Skin.ToggleSetting(KioskMode)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
-                    <!-- Hub Plot -->
-                    <control type="radiobutton" id="8903">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31194</label>
-                        <selected>!Skin.HasSetting(furniture.hidehubplot)</selected>
-                        <onclick>Skin.ToggleSetting(furniture.hidehubplot)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
-                    <!-- Overlay Plot -->
-                    <control type="radiobutton" id="8904">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31008</label>
-                        <selected>Skin.HasSetting(furniture.overlayinfo)</selected>
-                        <onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
-                    <!-- Busy Spinner -->
-                    <control type="button" id="8905">
-                        <width>100%</width>
-                        <label>31160</label>
-                        <label2>$VAR[Label_SkinSetting_BusyTexture]</label2>
-                        <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
-                    
-                    <!-- Customise Shutdown Menu -->
-                    <control type="button" id="8908">
-                        <width>100%</width>
-                        <label>31183</label>
-                        <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
+                        <!-- EXTRAS -->
+                        <!-- Kiosk -->
+                        <control type="radiobutton" id="8901">
+                            <radioposx>settingswideradioposx</radioposx>
+                            <width>100%</width>
+                            <label>31057</label>
+                            <selected>Skin.HasSetting(KioskMode)</selected>
+                            <onclick>Skin.ToggleSetting(KioskMode)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        </control>
+                        <!-- Hub Plot -->
+                        <control type="radiobutton" id="8903">
+                            <radioposx>settingswideradioposx</radioposx>
+                            <width>100%</width>
+                            <label>31194</label>
+                            <selected>!Skin.HasSetting(furniture.hidehubplot)</selected>
+                            <onclick>Skin.ToggleSetting(furniture.hidehubplot)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        </control>
+                        <!-- Overlay Plot -->
+                        <control type="radiobutton" id="8904">
+                            <radioposx>settingswideradioposx</radioposx>
+                            <width>100%</width>
+                            <label>31008</label>
+                            <selected>Skin.HasSetting(furniture.overlayinfo)</selected>
+                            <onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        </control>
+                        <!-- Busy Spinner -->
+                        <control type="button" id="8905">
+                            <width>100%</width>
+                            <label>31160</label>
+                            <label2>$VAR[Label_SkinSetting_BusyTexture]</label2>
+                            <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        </control>
+                        
+                        <!-- Customise Shutdown Menu -->
+                        <control type="button" id="8908">
+                            <width>100%</width>
+                            <label>31183</label>
+                            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        </control>
 
-                    <!-- Set genre icons -->
-                    <!-- <control type="button" id="8909">
-                        <width>100%</width>
-                        <label>31176</label>
-                        <label2>$INFO[Skin.String(genre.icons.name)]</label2>
-                        <onclick>RunScript(script.image.resource.select,property=genre.icons&amp;type=resource.images.moviegenreicons)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control> -->
+                        <!-- Set genre icons -->
+                        <!-- <control type="button" id="8909">
+                            <width>100%</width>
+                            <label>31176</label>
+                            <label2>$INFO[Skin.String(genre.icons.name)]</label2>
+                            <onclick>RunScript(script.image.resource.select,property=genre.icons&amp;type=resource.images.moviegenreicons)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        </control> -->
 
-                    <!-- Startup Video -->
-                    <control type="button" id="8910">
-                        <width>100%</width>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <label>31184</label>
-                        <label2>$VAR[Label_SkinSetting_StartupVideo]</label2>
-                        <onclick condition="IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
-                    </control>
-                    
+                        <!-- Startup Video -->
+                        <control type="button" id="8910">
+                            <width>100%</width>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>31184</label>
+                            <label2>$VAR[Label_SkinSetting_StartupVideo]</label2>
+                            <onclick condition="IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
+                            <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
+                        </control>
+                        
 
-                    <!-- PANEL -->
-                    <!-- Info Line -->
-                    <control type="radiobutton" id="8501">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31165</label>
-                        <selected>!Skin.HasSetting(furniture.hidesortinfo)</selected>
-                        <onclick>Skin.ToggleSetting(furniture.hidesortinfo)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
-                    </control>
-                    <!-- Media Flags -->
-                    <control type="radiobutton" id="8502">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31007</label>
-                        <selected>Skin.HasSetting(furniture.showflags)</selected>
-                        <onclick>Skin.ToggleSetting(furniture.showflags)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
-                    </control>
-                    <!-- Object Shadows -->
-                    <control type="radiobutton" id="8503">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31004</label>
-                        <selected>!Skin.HasSetting(global.hideobjectshadows)</selected>
-                        <onclick>Skin.ToggleSetting(global.hideobjectshadows)</onclick>
-                        <onclick>ReloadSkin()</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
-                    </control>
-                    <!-- Wide Screen -->
-                    <control type="radiobutton" id="8504">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31196</label>
-                        <selected>!Skin.HasSetting(global.widescreen)</selected>
-                        <onclick>Skin.ToggleSetting(global.widescreen)</onclick>
-                        <onclick>ReloadSkin()</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
-                    </control>
+                        <!-- PANEL -->
+                        <!-- Info Line -->
+                        <control type="radiobutton" id="8501">
+                            <radioposx>settingswideradioposx</radioposx>
+                            <width>100%</width>
+                            <label>31165</label>
+                            <selected>!Skin.HasSetting(furniture.hidesortinfo)</selected>
+                            <onclick>Skin.ToggleSetting(furniture.hidesortinfo)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                        </control>
+                        <!-- Media Flags -->
+                        <control type="radiobutton" id="8502">
+                            <radioposx>settingswideradioposx</radioposx>
+                            <width>100%</width>
+                            <label>31007</label>
+                            <selected>Skin.HasSetting(furniture.showflags)</selected>
+                            <onclick>Skin.ToggleSetting(furniture.showflags)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                        </control>
+                        <!-- Object Shadows -->
+                        <control type="radiobutton" id="8503">
+                            <radioposx>settingswideradioposx</radioposx>
+                            <width>100%</width>
+                            <label>31004</label>
+                            <selected>!Skin.HasSetting(global.hideobjectshadows)</selected>
+                            <onclick>Skin.ToggleSetting(global.hideobjectshadows)</onclick>
+                            <onclick>ReloadSkin()</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                        </control>
+                        <!-- Wide Screen -->
+                        <control type="radiobutton" id="8504">
+                            <radioposx>settingswideradioposx</radioposx>
+                            <width>100%</width>
+                            <label>31196</label>
+                            <selected>!Skin.HasSetting(global.widescreen)</selected>
+                            <onclick>Skin.ToggleSetting(global.widescreen)</onclick>
+                            <onclick>ReloadSkin()</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                        </control>
 
-                    <!-- INSTALL -->
-                    <control type="radiobutton" id="8601">
-                        <width>100%</width>
-                        <label>script.skin.helper.service</label>
-                        <label2>$INFO[System.AddonVersion(script.skin.helper.service)]        </label2>
-                        <onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-                        <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
-                        <selected>System.HasAddon(script.skin.helper.service)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8602">
-                        <width>100%</width>
-                        <label>script.extendedinfo</label>
-                        <label2>$INFO[System.AddonVersion(script.extendedinfo)]        </label2>
-                        <onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
-                        <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
-                        <selected>System.HasAddon(script.extendedinfo)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8603">
-                        <width>100%</width>
-                        <label>script.skinshortcuts</label>
-                        <label2>$INFO[System.AddonVersion(script.skinshortcuts)]        </label2>
-                        <onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
-                        <onclick condition="System.HasAddon(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
-                        <selected>System.HasAddon(script.skinshortcuts)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8604">
-                        <width>100%</width>
-                        <label>script.image.resource.select</label>
-                        <label2>$INFO[System.AddonVersion(script.image.resource.select)]        </label2>
-                        <onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                        <onclick condition="System.HasAddon(script.image.resource.select)">Addon.OpenSettings(script.image.resource.select)</onclick>
-                        <selected>System.HasAddon(script.image.resource.select)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8605">
-                        <width>100%</width>
-                        <label>plugin.program.autocompletion</label>
-                        <label2>$INFO[System.AddonVersion(plugin.program.autocompletion)]        </label2>
-                        <onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
-                        <onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
-                        <selected>System.HasAddon(plugin.program.autocompletion)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8606">
-                        <width>100%</width>
-                        <label>script.artistslideshow</label>
-                        <label2>$INFO[System.AddonVersion(script.artistslideshow)]        </label2>
-                        <onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
-                        <onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
-                        <selected>System.HasAddon(script.artistslideshow)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8607">
-                        <width>100%</width>
-                        <label>resource.images.weatherfanart.multi</label>
-                        <label2>$INFO[System.AddonVersion(resource.images.weatherfanart.multi)]        </label2>
-                        <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
-                        <onclick condition="System.HasAddon(resource.images.weatherfanart.multi)">Addon.OpenSettings(resource.images.weatherfanart.multi)</onclick>
-                        <selected>System.HasAddon(resource.images.weatherfanart.multi)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8611">
-                        <width>100%</width>
-                        <label>resource.images.moviegenreicons.transparent</label>
-                        <label2>$INFO[System.AddonVersion(resource.images.moviegenreicons.transparent)]        </label2>
-                        <onclick condition="!System.HasAddon(resource.images.moviegenreicons.transparent)">InstallAddon(resource.images.moviegenreicons.transparent)</onclick>
-                        <onclick condition="System.HasAddon(resource.images.moviegenreicons.transparent)">Addon.OpenSettings(resource.images.moviegenreicons.transparent)</onclick>
-                        <selected>System.HasAddon(resource.images.moviegenreicons.transparent)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8608">
-                        <width>100%</width>
-                        <label>script.globalsearch</label>
-                        <label2>$INFO[System.AddonVersion(script.globalsearch)]        </label2>
-                        <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
-                        <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
-                        <selected>System.HasAddon(script.globalsearch)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8610">
-                        <width>100%</width>
-                        <label>script.artwork.downloader</label>
-                        <label2>$INFO[System.AddonVersion(script.artwork.downloader)]        </label2>
-                        <onclick condition="!System.HasAddon(script.artwork.downloader)">InstallAddon(script.artwork.downloader)</onclick>
-                        <onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
-                        <selected>System.HasAddon(script.artwork.downloader)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    <control type="radiobutton" id="8609">
-                        <width>100%</width>
-                        <label>service.nextup.notification</label>
-                        <label2>$INFO[System.AddonVersion(service.nextup.notification)]        </label2>
-                        <onclick condition="!System.HasAddon(service.nextup.notification)">InstallAddon(service.nextup.notification)</onclick>
-                        <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
-                        <selected>System.HasAddon(service.nextup.notification)</selected>
-                        <radioposx>settingsradioposx</radioposx>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                    </control>
-                    
+                        <!-- INSTALL -->
+                        <control type="radiobutton" id="8601">
+                            <width>100%</width>
+                            <label>script.skin.helper.service</label>
+                            <label2>$INFO[System.AddonVersion(script.skin.helper.service)]        </label2>
+                            <onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+                            <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
+                            <selected>System.HasAddon(script.skin.helper.service)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8602">
+                            <width>100%</width>
+                            <label>script.extendedinfo</label>
+                            <label2>$INFO[System.AddonVersion(script.extendedinfo)]        </label2>
+                            <onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+                            <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
+                            <selected>System.HasAddon(script.extendedinfo)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8603">
+                            <width>100%</width>
+                            <label>script.skinshortcuts</label>
+                            <label2>$INFO[System.AddonVersion(script.skinshortcuts)]        </label2>
+                            <onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
+                            <onclick condition="System.HasAddon(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
+                            <selected>System.HasAddon(script.skinshortcuts)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8604">
+                            <width>100%</width>
+                            <label>script.image.resource.select</label>
+                            <label2>$INFO[System.AddonVersion(script.image.resource.select)]        </label2>
+                            <onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                            <onclick condition="System.HasAddon(script.image.resource.select)">Addon.OpenSettings(script.image.resource.select)</onclick>
+                            <selected>System.HasAddon(script.image.resource.select)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8605">
+                            <width>100%</width>
+                            <label>plugin.program.autocompletion</label>
+                            <label2>$INFO[System.AddonVersion(plugin.program.autocompletion)]        </label2>
+                            <onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
+                            <onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+                            <selected>System.HasAddon(plugin.program.autocompletion)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8606">
+                            <width>100%</width>
+                            <label>script.artistslideshow</label>
+                            <label2>$INFO[System.AddonVersion(script.artistslideshow)]        </label2>
+                            <onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
+                            <onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
+                            <selected>System.HasAddon(script.artistslideshow)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8607">
+                            <width>100%</width>
+                            <label>resource.images.weatherfanart.multi</label>
+                            <label2>$INFO[System.AddonVersion(resource.images.weatherfanart.multi)]        </label2>
+                            <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
+                            <onclick condition="System.HasAddon(resource.images.weatherfanart.multi)">Addon.OpenSettings(resource.images.weatherfanart.multi)</onclick>
+                            <selected>System.HasAddon(resource.images.weatherfanart.multi)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8611">
+                            <width>100%</width>
+                            <label>resource.images.moviegenreicons.transparent</label>
+                            <label2>$INFO[System.AddonVersion(resource.images.moviegenreicons.transparent)]        </label2>
+                            <onclick condition="!System.HasAddon(resource.images.moviegenreicons.transparent)">InstallAddon(resource.images.moviegenreicons.transparent)</onclick>
+                            <onclick condition="System.HasAddon(resource.images.moviegenreicons.transparent)">Addon.OpenSettings(resource.images.moviegenreicons.transparent)</onclick>
+                            <selected>System.HasAddon(resource.images.moviegenreicons.transparent)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8608">
+                            <width>100%</width>
+                            <label>script.globalsearch</label>
+                            <label2>$INFO[System.AddonVersion(script.globalsearch)]        </label2>
+                            <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
+                            <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
+                            <selected>System.HasAddon(script.globalsearch)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8610">
+                            <width>100%</width>
+                            <label>script.artwork.downloader</label>
+                            <label2>$INFO[System.AddonVersion(script.artwork.downloader)]        </label2>
+                            <onclick condition="!System.HasAddon(script.artwork.downloader)">InstallAddon(script.artwork.downloader)</onclick>
+                            <onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
+                            <selected>System.HasAddon(script.artwork.downloader)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        <control type="radiobutton" id="8609">
+                            <width>100%</width>
+                            <label>service.nextup.notification</label>
+                            <label2>$INFO[System.AddonVersion(service.nextup.notification)]        </label2>
+                            <onclick condition="!System.HasAddon(service.nextup.notification)">InstallAddon(service.nextup.notification)</onclick>
+                            <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
+                            <selected>System.HasAddon(service.nextup.notification)</selected>
+                            <radioposx>settingswideradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
+                        </control>
+                        
 
-                    <!-- RESET -->
-                    <!-- Backup -->
-                    <control type="button" id="8997">
-                        <width>100%</width>
-                        <label>31161</label>
-                        <onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8099)</visible>
+                        <!-- RESET -->
+                        <!-- Backup -->
+                        <control type="button" id="8997">
+                            <width>100%</width>
+                            <label>31161</label>
+                            <onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8099)</visible>
+                        </control>
+                        <!-- Restore -->
+                        <control type="button" id="8998">
+                            <width>100%</width>
+                            <label>31162</label>
+                            <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8099)</visible>
+                        </control>
+                        <!-- Reset Skin to Defaults -->
+                        <control type="button" id="8999">
+                            <width>100%</width>
+                            <label>31169</label>
+                            <onclick>Skin.ResetSettings</onclick>
+                            <onclick>Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onclick>
+                            <onclick>Skin.SetString(home.headertext,$LOCALIZE[10000])</onclick>
+                            <onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
+                            <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8099)</visible>
+                        </control>
                     </control>
-                    <!-- Restore -->
-                    <control type="button" id="8998">
-                        <width>100%</width>
-                        <label>31162</label>
-                        <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8099)</visible>
+                </control>
+                <!-- Text Box RSS -->
+                <control type="group">
+                    <bottom>-2</bottom>
+                    <height>64</height>
+                    <control type="image">
+                        <posx>16</posx>
+                        <posy>16</posy>
+                        <width>32</width>
+                        <height>32</height>
+                        <texture colordiffuse="ListLabel">common/rss.png</texture>
                     </control>
-                    <!-- Reset Skin to Defaults -->
-                    <control type="button" id="8999">
-                        <width>100%</width>
-                        <label>31169</label>
-                        <onclick>Skin.ResetSettings</onclick>
-                        <onclick>Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onclick>
-                        <onclick>Skin.SetString(home.headertext,$LOCALIZE[10000])</onclick>
-                        <onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
-                        <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8099)</visible>
+                    <control type="label">
+                        <left>64</left>
+                        <right>bigpad</right>
+                        <centerbottom>50%</centerbottom>
+                        <height>20</height>
+                        <aligny>center</aligny>
+                        <font>Font-RSS</font>
+                        <label fallback="19055">$LOCALIZE[19055]</label>
+                        <scroll>true</scroll>
+                        <textcolor>ListLabel</textcolor>
+                        <wrapmultiline>false</wrapmultiline>
                     </control>
                 </control>
             </control>

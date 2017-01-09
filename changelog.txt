@@ -1,3 +1,6 @@
+[B]2.5.20[/B]
+New settings menu style
+
 [B]2.5.19[/B]
 Fix hub widgets target selection
 

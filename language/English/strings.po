@@ -749,3 +749,7 @@ msgstr ""
 msgctxt "#31204"
 msgid "Header tile icon and label follows library content type"
 msgstr ""
+
+msgctxt "#31205"
+msgid "Settings Level"
+msgstr ""
