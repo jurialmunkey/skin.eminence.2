@@ -33,6 +33,9 @@
                 <texturefocus>noop</texturefocus>
                 <texturenofocus>noop</texturenofocus>
                 <font>-</font>
+                <top>-25</top>
+                <width>300</width>
+                <height>50</height>
             </control>
 
             <control type="group">
@@ -83,7 +86,7 @@
                     <left>bigpad</left>
                     <right>bigpad</right>
                     <bottom>62</bottom>
-                    <include>Object_Background</include>
+                    <control type="image"><texture colordiffuse="PosterBorder">common/white.png</texture></control>
                     <control type="grouplist" id="5">                
                         <itemgap>0</itemgap>
                         <onup>3</onup>

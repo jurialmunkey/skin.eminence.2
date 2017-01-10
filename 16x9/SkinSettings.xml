@@ -215,7 +215,7 @@
                     <top>82</top>
                     <bottom>62</bottom>
                     <right>bigpad</right>
-                    <include>Object_Background</include>
+                    <control type="image"><texture colordiffuse="PosterBorder">common/white.png</texture></control>
                     <control type="grouplist" id="9000">                
                         <itemgap>0</itemgap>
                         <onleft>8000</onleft>
