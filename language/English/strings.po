@@ -753,3 +753,27 @@ msgstr ""
 msgctxt "#31205"
 msgid "Settings Level"
 msgstr ""
+
+msgctxt "#31206"
+msgid "Home Shortcuts and Widgets"
+msgstr ""
+
+msgctxt "#31207"
+msgid "Home Header"
+msgstr ""
+
+msgctxt "#31208"
+msgid "Home Bar Style"
+msgstr ""
+
+msgctxt "#31209"
+msgid "Music Visualisation"
+msgstr ""
+
+msgctxt "#31210"
+msgid "On Screen Display (OSD)"
+msgstr ""
+
+msgctxt "#31211"
+msgid "Video Information"
+msgstr ""
