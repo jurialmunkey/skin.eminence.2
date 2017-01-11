@@ -7,6 +7,8 @@
         <include>Furniture_TopBar</include>
 
         <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
             <include>Defs_ViewBackground</include>
             <control type="group">
                 <visible>!Control.HasFocus(20)</visible>
@@ -20,8 +22,7 @@
                     <param name="label" value="[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(20),$LOCALIZE[31205]: ,][/COLOR]" />
                 </include>
             </control>
-            <include>Animation_SlideIn</include>
-            <include>Animation_FadeOut</include>
+            
             <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
             <!-- Main List -->
             <control type="group">

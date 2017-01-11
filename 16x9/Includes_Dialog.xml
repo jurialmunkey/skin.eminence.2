@@ -150,17 +150,18 @@
  
     <!-- Bottom Dialogs -->
     <include name="Dialog_Bottom">
-        <left>0</left>
-        <right>0</right>
-        <bottom>0</bottom>
-        <height>280</height>
+        <left>400</left>
+        <right>400</right>
+        <centertop>50%</centertop>
+        <height>390</height>
         <include>Dialog_Background</include>
-        <include>Animation_Bottom</include>
+        <include>Animation_SlideIn_Bounce</include>
+        <include>Animation_FadeOut</include>
 
         <!-- Heading -->
         <control type="label" id="1">
-            <left>84</left>
-            <right>84</right>
+            <left>64</left>
+            <right>64</right>
             <top>40</top>
             <height>60</height>
             <aligny>center</aligny>
@@ -169,21 +170,21 @@
 
         <!-- Details -->
         <control type="textbox" id="9">
-            <left>84</left>
-            <right>720</right>
-            <top>110</top>
-            <bottom>25</bottom>
+            <left>64</left>
+            <right>64</right>
+            <top>105</top>
+            <bottom>186</bottom>
             <align>left</align>
             <font>Font-ListInfo-Small</font>
         </control>
     </include>
     <include name="Dialog_Bottom_Grouplist">
-        <right>84</right>
-        <align>right</align>
+        <align>center</align>
         <bottom>40</bottom>
         <height>72</height>
         <orientation>horizontal</orientation>
         <itemgap>bigpad</itemgap>
+
     </include>
     <include name="Dialog_Bottom_Yes">
         <control type="button" id="11">
@@ -211,8 +212,9 @@
         <control type="group">
             <include>Dialog_Bottom</include>
             <control type="progress" id="20">
-                <top>0</top>
-                <width>100%</width>
+                <bottom>152</bottom>
+                <left>64</left>
+                <right>64</right>
                 <height>16</height>
                 <info>System.Progressbar</info>
             </control>
