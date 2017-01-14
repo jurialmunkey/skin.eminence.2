@@ -153,7 +153,7 @@
         <left>400</left>
         <right>400</right>
         <centertop>50%</centertop>
-        <height>390</height>
+        <height>400</height>
         <include>Dialog_Background</include>
         <include>Animation_SlideIn_Bounce</include>
         <include>Animation_FadeOut</include>
