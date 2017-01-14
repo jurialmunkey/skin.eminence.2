@@ -215,6 +215,7 @@
     </variable>
 
     <variable name="Label_Hub_WidgetType">
+        <value condition="!IntegerGreaterThan(Container(9500).NumItems,0)">$LOCALIZE[31212]</value>
         <value condition="Skin.HasSetting(furniture.hidehubplot)">$VAR[Label_Hub_WidgetLabel]$VAR[Label_Hub_WidgetLabel2,  •  ,]</value>
         <value condition="Window.IsVisible(1101) + !IsEmpty(Skin.String(Widget.1101.Label))">$INFO[Skin.String(Widget.1101.Label)]</value>
         <value condition="Window.IsVisible(1102) + !IsEmpty(Skin.String(Widget.1102.Label))">$INFO[Skin.String(Widget.1102.Label)]</value>

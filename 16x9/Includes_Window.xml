@@ -181,6 +181,10 @@
                         
                     </control>
                 </control>
+                <control type="image">
+                	<visible>!IntegerGreaterThan(Container(9500).NumItems,0)</visible>
+                	<texture>special://skin/extras/backgrounds/home.jpg</texture>
+                </control>
             </control>
             <control type="group" description="hub side">
                 <right>bigpad</right>

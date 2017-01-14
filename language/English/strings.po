@@ -777,3 +777,7 @@ msgstr ""
 msgctxt "#31211"
 msgid "Video Information"
 msgstr ""
+
+msgctxt "#31212"
+msgid "No Content Currently Available"
+msgstr ""
