@@ -153,26 +153,32 @@
         <left>400</left>
         <right>400</right>
         <centertop>50%</centertop>
-        <height>410</height>
+        <height>390</height>
         <include>Dialog_Background</include>
         <include>Animation_SlideIn_Bounce</include>
         <include>Animation_FadeOut</include>
 
         <!-- Heading -->
-        <control type="label" id="1">
+        <!-- <control type="label" id="1">
             <left>64</left>
             <right>64</right>
             <top>40</top>
             <height>60</height>
             <aligny>center</aligny>
             <align>left</align>
-        </control>
+        </control> -->
+
+        <include content="Dialog_Top_IconHeader">
+            <param name="label" value="$INFO[Control.GetLabel(1)]" />
+            <param name="icon" value="special://skin/extras/icons/kodi.png" />
+        </include>
+        <control type="label" id="1"><visible>false</visible><font>-</font></control>
 
         <!-- Details -->
         <control type="textbox" id="9">
-            <left>64</left>
-            <right>64</right>
-            <top>105</top>
+            <left>90</left>
+            <right>90</right>
+            <top>90</top>
             <bottom>186</bottom>
             <align>left</align>
             <font>Font-ListInfo-Small</font>
@@ -213,8 +219,8 @@
             <include>Dialog_Bottom</include>
             <control type="progress" id="20">
                 <bottom>152</bottom>
-                <left>64</left>
-                <right>64</right>
+                <left>90</left>
+                <right>90</right>
                 <height>16</height>
                 <info>System.Progressbar</info>
             </control>
