@@ -25,8 +25,9 @@
                     <preloaditems>0</preloaditems>
                     <onleft>9501</onleft>
                     <onright>9501</onright>
-                    <oninfo condition="IsEmpty(Container(9500).ListItem.TvShowTitle) + IsEmpty(Container(9500).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9500).ListItem.Title],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
-                    <oninfo condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9500).ListItem.TvShowTitle],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
+                    <!-- Not necessary with new Krypton oninfo for containers -->
+                    <!-- <oninfo condition="IsEmpty(Container(9500).ListItem.TvShowTitle) + IsEmpty(Container(9500).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9500).ListItem.Title],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
+                    <oninfo condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9500).ListItem.TvShowTitle],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo> -->
                     <orientation>vertical</orientation>
                     <autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
                     <scrolltime tween="quadratic">400</scrolltime>

@@ -76,6 +76,33 @@
         <value>star0</value>
     </variable>
 
+
+    <variable name="Image_UserRatingStar5">
+        <value condition="IntegerGreaterThan(ListItem.UserRating,9)">star10</value>
+        <value condition="IntegerGreaterThan(ListItem.UserRating,8)">star5</value>
+        <value>star0</value>
+    </variable>
+    <variable name="Image_UserRatingStar4">
+        <value condition="IntegerGreaterThan(ListItem.UserRating,7)">star10</value>
+        <value condition="IntegerGreaterThan(ListItem.UserRating,6)">star5</value>
+        <value>star0</value>
+    </variable>
+    <variable name="Image_UserRatingStar3">
+        <value condition="IntegerGreaterThan(ListItem.UserRating,5)">star10</value>
+        <value condition="IntegerGreaterThan(ListItem.UserRating,4)">star5</value>
+        <value>star0</value>
+    </variable>
+    <variable name="Image_UserRatingStar2">
+        <value condition="IntegerGreaterThan(ListItem.UserRating,3)">star10</value>
+        <value condition="IntegerGreaterThan(ListItem.UserRating,2)">star5</value>
+        <value>star0</value>
+    </variable>
+    <variable name="Image_UserRatingStar1">
+        <value condition="IntegerGreaterThan(ListItem.UserRating,1)">star10</value>
+        <value condition="IntegerGreaterThan(ListItem.UserRating,0)">star5</value>
+        <value>star0</value>
+    </variable>
+
     <variable name="Image_Fanart">
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
     </variable>

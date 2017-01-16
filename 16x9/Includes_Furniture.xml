@@ -153,6 +153,42 @@
                 <visible>ListItem.IsStereoscopic</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
             </control>
+            <control type="group">
+                <visible>!IsEmpty(ListItem.UserRating) + [Container.Content(songs) | Container.Content(albums)]</visible>
+                <width>220</width>
+                <height>64</height>
+                <centertop>50%</centertop>
+                <control type="image">
+                    <right>0</right>
+                    <width>64</width>
+                    <height>64</height>
+                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar5,indicator/,.png]</texture>
+                </control>
+                <control type="image">
+                    <right>40</right>
+                    <width>64</width>
+                    <height>64</height>
+                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar4,indicator/,.png]</texture>
+                </control>
+                <control type="image">
+                    <right>80</right>
+                    <width>64</width>
+                    <height>64</height>
+                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar3,indicator/,.png]</texture>
+                </control>
+                <control type="image">
+                    <right>120</right>
+                    <width>64</width>
+                    <height>64</height>
+                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar2,indicator/,.png]</texture>
+                </control>
+                <control type="image">
+                    <right>160</right>
+                    <width>64</width>
+                    <height>64</height>
+                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar1,indicator/,.png]</texture>
+                </control>
+            </control>
         </control>
         
     </include>
