@@ -781,3 +781,7 @@ msgstr ""
 msgctxt "#31212"
 msgid "No Content Currently Available"
 msgstr ""
+
+msgctxt "#31213"
+msgid "Show user ratings for music albums / songs"
+msgstr ""

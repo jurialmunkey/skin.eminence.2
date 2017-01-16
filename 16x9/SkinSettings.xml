@@ -825,6 +825,17 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Show User Ratings -->
+                    <control type="radiobutton" id="8906">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31213</label>
+                        <selected>Skin.HasSetting(music.showuserratings)</selected>
+                        <onclick>Skin.ToggleSetting(music.showuserratings)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                     <!-- Hub Plot -->
                     <control type="radiobutton" id="8903">
                         <radioposx>settingsradioposx</radioposx>
