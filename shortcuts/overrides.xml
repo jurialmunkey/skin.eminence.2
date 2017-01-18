@@ -15,10 +15,7 @@
     <!-- ADDITIONAL ON CLICK -->
     <!-- Hack for Kaitoast and ExtendedProgress -->
     <groupoverride group="mainmenu" condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogFavourites) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</groupoverride>
-
-    <!-- Need to Fix this -->
-    <groupoverride group="submenu" condition="SubString(Container(9002).ListItem.Property(path),ActivateWindow,left)">SetProperty(FO9001,2,home)</groupoverride>
-
+    
     <!-- For Player Controls -->
     <groupoverride group="mainmenu" condition="Window.IsActive(PlayerControls.xml)">Close</groupoverride>
 

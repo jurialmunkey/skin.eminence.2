@@ -1,3 +1,7 @@
+[B]2.5.22[/B]
+Fix submenu onclick to move notifications down when changing windows from home
+Close submenu onclick
+
 [B]2.5.21[/B]
 No content available label and fallback iamge for hubs with no items
 Add userrating control to musicinfo

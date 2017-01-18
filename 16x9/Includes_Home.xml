@@ -453,6 +453,10 @@
                 <onright>noop</onright>
                 <scrolltime>200</scrolltime>
                 <orientation>horizontal</orientation>
+                <!-- Hack for Extended Info and Notification property setting -->
+                <onclick>SetFocus(9000)</onclick>
+                <onclick condition="SubString(ListItem.Property(path),ActivateWindow,left) + !SubString(ListItem.Property(path),DialogFavourites) + !SubString(ListItem.Property(path),DialogButtonMenu) + !SubString(ListItem.Property(path),shutdownmenu) + !SubString(ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
+                <onclick>$INFO[ListItem.Property(path)]</onclick>
                 <itemlayout width="374" height="69">
                     <control type="image">
                         <width>364</width>
