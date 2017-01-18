@@ -215,7 +215,7 @@
                         <orientation>horizontal</orientation>
                         <control type="group">
                             <visible>!IsEmpty(ListItem.Duration)</visible>
-                            <width>330</width>
+                            <width>270</width>
                             <height>100%</height>
                             <control type="label">
                                 <top>0</top>
@@ -234,7 +234,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <width>330</width>
+                            <width>270</width>
                             <height>100%</height>
                             <visible>!IsEmpty(ListItem.MPAA)</visible>
                             <control type="label">
@@ -254,7 +254,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <width>330</width>
+                            <width>270</width>
                             <height>100%</height>
                             <visible>!IsEmpty(ListItem.Year)</visible>
                             <control type="label">

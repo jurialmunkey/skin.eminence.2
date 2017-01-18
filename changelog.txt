@@ -2,6 +2,7 @@
 No content available label and fallback iamge for hubs with no items
 Add userrating control to musicinfo
 Add userrating stars to media flags for albums / songs
+Fix for rotten tomatoes box office in info dialog
 
 [B]2.5.20[/B]
 New home wallpaper (Thanks Tinwarble - http://kodi.wiki/view/File:Wallpaper_by_Tinwarble_6.png)
