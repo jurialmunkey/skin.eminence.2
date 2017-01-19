@@ -4,6 +4,7 @@ Close submenu onclick
 Fix PVR to not show videowindow if show video in background is enabled to prevent bugs
 Fix RSS feed not showing for text only
 Fix DialogSettings to hide when dialogslider visible so doesn't obscure audio offset
+Fix DialogBusy vanishing icon from header when opening addon plugins from home
 
 [B]2.5.21[/B]
 No content available label and fallback iamge for hubs with no items
