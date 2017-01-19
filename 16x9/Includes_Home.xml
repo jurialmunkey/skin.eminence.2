@@ -731,7 +731,7 @@
                 <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
                 <visible>!Player.HasMedia</visible>
                 <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-                <visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31181]) + !stringcompare(Skin.String(home.style),$LOCALIZE[31182])</visible>
+                <visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31181])</visible>
                 <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
                 <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
                 <control type="image">

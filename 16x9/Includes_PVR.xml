@@ -748,10 +748,10 @@
                     <aspectratio>scale</aspectratio>
                     <fadetime>200</fadetime>
                     <texture background="true">$VAR[Image_PVRThumb]</texture>
-                    <visible>!Player.HasVideo</visible>
+                    <visible>!Player.HasVideo | Skin.HasSetting(background.showvideo)</visible>
                 </control>
                 <control type="videowindow">
-                    <visible>Player.HasVideo</visible>
+                    <visible>Player.HasVideo + !Skin.HasSetting(background.showvideo)</visible>
                 </control>
             </control>
             <control type="group">

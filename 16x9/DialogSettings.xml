@@ -3,6 +3,7 @@
     <controls>
         <include>GlobalOverlay</include>
         <control type="group">
+            <visible>!Window.IsVisible(DialogSlider.xml)</visible>
             <top>dialogtop</top>
             <height>830</height>
             <left>320</left>
