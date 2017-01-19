@@ -10,7 +10,7 @@
         <include>Furniture_Background</include>
         <include>Furniture_RSS</include>
         <include>Furniture_TopBar</include>
-            
+
         <!-- Main group -->
         <control type="group">
             <left>sidepad</left>
@@ -54,7 +54,7 @@
 
         </control>
 
-        
+
 
         <!-- Menu -->
         <control type="group">

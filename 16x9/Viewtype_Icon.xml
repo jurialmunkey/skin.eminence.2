@@ -161,7 +161,7 @@
                             <top>pad</top>
                             <bottom>pad</bottom>
                             <control type="image">
-                                
+
                                 <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                                 <aspectratio>scale</aspectratio>
                                 <texture background="true">$VAR[Image_Poster]</texture>
@@ -233,7 +233,7 @@
                                 <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
                                 <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
                             </control>
-                            
+
                         </control>
                         <control type="image">
                             <bordersize>10</bordersize>

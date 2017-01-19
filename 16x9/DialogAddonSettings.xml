@@ -41,7 +41,7 @@
                         <orientation>vertical</orientation>
                         <itemgap>0</itemgap>
                     </control>
-                </control> 
+                </control>
 
                 <control type="group">
                     <left>485</left>
@@ -58,8 +58,8 @@
                         <orientation>vertical</orientation>
                         <itemgap>0</itemgap>
                     </control>
-                </control> 
-                
+                </control>
+
             </control>
 
             <!-- Default Templates -->

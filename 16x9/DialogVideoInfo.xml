@@ -38,8 +38,8 @@
                     <left>500</left>
                     <right>0</right>
                     <include>Object_Background</include>
-                    
-                    
+
+
                     <!-- LANGUAGE -->
                     <control type="grouplist">
                         <visible>!StringCompare(Control.GetLabel(5),$LOCALIZE[207]) + IsEmpty(Window.Property(list))</visible>
@@ -293,7 +293,7 @@
                                 <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice)]</label>
                             </control>
                         </control>
-                        
+
                     </control>
                     <control type="grouplist" id="9000">
                         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
@@ -307,7 +307,7 @@
                         <onright>noop</onright>
                         <orientation>horizontal</orientation>
                         <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
-                        
+
                         <!-- Play/Browse Button -->
                         <control type="togglebutton" id="8">
                             <label>208</label>
@@ -374,7 +374,7 @@
                             <include>Defs_OptionButton2</include>
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
-                        
+
                         <!-- Cinema Experience Button -->
                         <control type="button" id="21">
                             <width>auto</width>
@@ -421,7 +421,7 @@
                                 <centerleft>50%</centerleft>
                                 <centertop>42%</centertop>
                                 <width>64</width>
-                                <height>64</height> 
+                                <height>64</height>
                                 <aspectratio>keep</aspectratio>
                                 <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
                                 <timeperimage>75</timeperimage>

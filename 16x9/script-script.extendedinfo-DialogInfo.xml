@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
-    
+
     <onload>SetProperty(150_onback,SetFocus(9000))</onload>
     <onload>SetProperty(250_onback,SetFocus(9000))</onload>
     <onload>SetProperty(350_onback,SetFocus(9000))</onload>
@@ -21,7 +21,7 @@
                 <right>bigpad</right>
                 <top>bigpad</top>
                 <bottom>bigpad</bottom>
-                
+
                 <include content="Object_Poster">
                     <param name="flipx" value="false" />
                     <param name="width" value="posterw" />
@@ -71,7 +71,7 @@
                             <top>-10</top>
                             <control type="grouplist">
                                 <include>Info_DetailsGrouplist</include>
-                                
+
 
                                 <!-- Place of Birth -->
                                 <control type="group">
@@ -168,7 +168,7 @@
                                 <label>$INFO[Window.Property(Age)]</label>
                             </control>
                         </control>
-                        
+
                     </control>
                     <!-- BUTTONS -->
                     <control type="grouplist" id="9000">
@@ -192,7 +192,7 @@
                             <onup>Right</onup>
                             <onleft>Right</onleft>
                         </control>
-                        
+
                         <!-- Movies -->
                         <control type="button" id="9001">
                             <width>auto</width>
@@ -307,7 +307,7 @@
                 <param name="backpanel" value="false" />
                 <param name="visible" value="Control.HasFocus(550)" />
             </include>
-                  
+
             <control type="list" id="450"><visible>false</visible></control>
             <control type="list" id="650"><visible>false</visible></control>
             <control type="list" id="750"><visible>false</visible></control>

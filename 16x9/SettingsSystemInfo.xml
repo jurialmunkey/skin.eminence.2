@@ -21,7 +21,7 @@
                 <height>posterh</height>
                 <width>465</width>
                 <include>Object_Background</include>
-                <control type="grouplist" id="9000">                
+                <control type="grouplist" id="9000">
                     <itemgap>0</itemgap>
                     <onright>9100</onright>
                     <onup>noop</onup>
@@ -71,7 +71,7 @@
                 <height>posterh</height>
                 <right>bigpad</right>
                 <include>Object_Background</include>
-                <control type="grouplist" id="9100">                
+                <control type="grouplist" id="9100">
                     <itemgap>0</itemgap>
                     <onleft>9000</onleft>
                     <usecontrolcoords>true</usecontrolcoords>
@@ -105,7 +105,7 @@
                         <info>System.CPUUsage</info>
                         <include>Defs_OptionButton</include>
                     </control>
-                    
+
                     <control type="label">
                         <top>-82</top>
                         <left>960</left>

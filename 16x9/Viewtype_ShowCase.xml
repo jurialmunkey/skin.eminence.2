@@ -368,7 +368,7 @@
                         <align>center</align>
                         <font>Font-InfoBox-Title</font>
                         <label>$INFO[ListItem.Label]</label>
-                    </control>   
+                    </control>
                     <control type="label">
                         <left>pad</left>
                         <right>pad</right>

@@ -71,7 +71,7 @@
                             </control>
                         </focusedlayout>
                     </control>
-                </control> 
+                </control>
 
                 <control type="group">
                     <left>480</left>
@@ -216,8 +216,8 @@
                             </control>
                         </focusedlayout>
                     </control>
-                </control> 
-                
+                </control>
+
             </control>
         </control>
         <control type="label" id="100"><visible>false</visible></control>

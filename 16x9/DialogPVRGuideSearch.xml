@@ -213,7 +213,7 @@
                         <onleft>24</onleft>
                         <label>19125</label>
                     </control>
-                </control> 
+                </control>
             </control>
             <control type="grouplist" id="8000">
                 <centerleft>50%</centerleft>

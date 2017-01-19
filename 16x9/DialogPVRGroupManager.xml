@@ -35,7 +35,7 @@
                         <orientation>vertical</orientation>
                         <preloaditems>2</preloaditems>
                         <itemlayout width="570" height="72">
-                 
+
                             <control type="label">
                                 <left>bigpad</left>
                                 <right>bigpad</right>
@@ -84,7 +84,7 @@
                         <orientation>vertical</orientation>
                         <preloaditems>2</preloaditems>
                         <itemlayout width="570" height="72">
-                        
+
                             <control type="label">
                                 <left>bigpad</left>
                                 <right>bigpad</right>
@@ -139,7 +139,7 @@
                         <orientation>vertical</orientation>
                         <preloaditems>2</preloaditems>
                         <itemlayout width="570" height="72">
-                        
+
                             <control type="label">
                                 <left>bigpad</left>
                                 <right>bigpad</right>

@@ -190,7 +190,7 @@
                 </control>
             </control>
         </control>
-        
+
     </include>
 
     <!-- BACKGROUND -->
@@ -214,7 +214,7 @@
             <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
             <visible>![Player.HasVideo | Player.HasAudio] | [Player.HasAudio + !Skin.HasSetting(background.showvisualisation)] | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
         </control>
-        
+
         <control type="group">
             <visible>Skin.HasSetting(background.showvisualisation)</visible>
             <visible>Player.HasAudio</visible>
@@ -224,11 +224,11 @@
             <control type="visualisation">
                 <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)]] | [Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)] + IsEmpty(Player.Art(fanart))]</visible>
                 <description>visualisation</description>
-                
+
             </control>
             <control type="image">
                 <aspectratio>scale</aspectratio>
-                
+
                 <texture background="true">$INFO[Player.Art(fanart)]</texture>
                 <visible>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
                 <visible>Skin.HasSetting(musicvis.fanartfallback)</visible>
@@ -239,7 +239,7 @@
             </control>
             <control type="multiimage">
                 <aspectratio>scale</aspectratio>
-                
+
                 <timeperimage>10000</timeperimage>
                 <randomize>true</randomize>
                 <fadetime>600</fadetime>
@@ -344,7 +344,7 @@
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR] $LOCALIZE[31067]</value>
-        
+
         <value condition="!IsEmpty(Container.NumItems) + !IsEmpty(Control.GetLabel(28)) + [Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)]">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]  •  $INFO[Control.GetLabel(28)]</value>
 
         <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
@@ -413,19 +413,19 @@
             <posy>18</posy>
             <posx>-88</posx>
             <width>300</width>
-            <height>164</height>    
+            <height>164</height>
             <texture align="left" border="75">common/header.png</texture>
             <colordiffuse>$VAR[Furniture_TopBar_Tile_BGCOLOR]</colordiffuse>
             <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [Window.IsVisible(home) | Window.IsVisible(weather)]">Conditional</animation>
         </control>
     </include>
     <include name="Furniture_TopBar_Tile_Content">
-        
+
         <control type="image">
             <posy>10</posy>
             <posx>30</posx>
             <width>128</width>
-            <height>128</height>    
+            <height>128</height>
             <texture>$VAR[Furniture_TopBar_Tile_Icon]</texture>
             <aspectratio>keep</aspectratio>
             <colordiffuse>HomeBarFG</colordiffuse>
@@ -655,7 +655,7 @@
                 <align>right</align>
                 <label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
             </control>
-        </control>   
+        </control>
     </include>
     <include name="Furniture_TopBar">
         <!-- <include>GlobalInfoOverlay</include> -->
@@ -695,5 +695,5 @@
             </control>
         </control>
     </include>
-    
+
 </includes>

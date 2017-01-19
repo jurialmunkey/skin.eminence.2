@@ -147,7 +147,7 @@
             </control>
         </control>
     </include>
- 
+
     <!-- Bottom Dialogs -->
     <include name="Dialog_Bottom">
         <left>400</left>
@@ -564,7 +564,7 @@
                     </control>
                 </itemlayout>
                 <itemlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)]  | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
-    
+
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <centertop>50%</centertop>

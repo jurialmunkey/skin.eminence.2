@@ -149,7 +149,7 @@
                                 <visible>!Control.HasFocus(6)</visible>
                             </control>
                         </control>
-                        
+
                         <control type="button" id="3">
                             <description>Playlist</description>
                             <onclick>Close</onclick>
@@ -276,7 +276,7 @@
                             <texturenofocus colordiffuse="HomeSubLabel">osd/preset.png</texturenofocus>
                         </control>
 
-                        
+
                     </control>
                 </control>
             </control>

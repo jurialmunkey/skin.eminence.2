@@ -2,9 +2,9 @@
 <!-- Foundation -->
 <window>
     <defaultcontrol always="true">11</defaultcontrol>
-    
+
     <controls>
-    
+
         <control type="group">
             <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
             <animation effect="slide" start="-668" end="0" time="150" tween="quadratic">Visible</animation>
@@ -22,7 +22,7 @@
             </control>
             <control type="image">
                 <left>530</left>
-                <top>-4</top>  
+                <top>-4</top>
                 <width>128</width>
                 <height>128</height>
                 <texture colordiffuse="ListLabel">special://skin/extras/icons/livetv.png</texture>
@@ -64,7 +64,7 @@
                     </control>
                     <control type="image">
                         <left>22</left>
-                        <top>12</top>  
+                        <top>12</top>
                         <width>85</width>
                         <height>85</height>
                         <texture>$INFO[ListItem.Thumb]</texture>
@@ -124,7 +124,7 @@
                     </control>
                     <control type="image">
                         <left>22</left>
-                        <top>12</top>  
+                        <top>12</top>
                         <width>85</width>
                         <height>85</height>
                         <texture>$INFO[ListItem.Thumb]</texture>
@@ -170,7 +170,7 @@
                         <selectedcolor>Selected</selectedcolor>
                     </control>
                 </focusedlayout>
-            
+
             </control>
         </control>
     </controls>

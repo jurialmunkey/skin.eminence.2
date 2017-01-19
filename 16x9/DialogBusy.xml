@@ -5,7 +5,7 @@
             <posy>42</posy>
             <posx>62</posx>
             <width>64</width>
-            <height>64</height> 
+            <height>64</height>
             <aspectratio>keep</aspectratio>
             <imagepath>$VAR[Defs_SpinnerTexture]</imagepath>
             <timeperimage>75</timeperimage>

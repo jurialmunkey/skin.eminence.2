@@ -10,7 +10,7 @@
             <right>bigpad</right>
             <top>bigpad</top>
             <height>posterh</height>
-            
+
             <include content="Object_Poster">
                 <param name="width" value="posterw" />
             </include>
@@ -54,7 +54,7 @@
         </control>
     </include>
 
-    
+
 
     <!-- MEDIA INFO -->
     <include name="Viewtype_MediaInfo">
@@ -261,7 +261,7 @@
                 </focusedlayout>
             </control>
         </control>
-        
+
     </include>
 
     <!-- FANART LIST -->

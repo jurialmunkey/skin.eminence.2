@@ -33,9 +33,9 @@
                         <left>15</left>
                         <right>15</right>
                         <height>bigiconh</height>
-                        
+
                         <control type="image">
-                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>    
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
@@ -56,9 +56,9 @@
                         <left>15</left>
                         <right>15</right>
                         <height>bigiconh</height>
-                        
+
                         <control type="image">
-                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>    
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
@@ -126,7 +126,7 @@
                         <font>Font-InfoBox-Title</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    
+
                     <control type="label">
                         <left>pad</left>
                         <right>pad</right>
@@ -144,8 +144,8 @@
                         <align>left</align>
                         <label>$VAR[Label_Plot]</label>
                     </control>
-                    
-                    
+
+
                 </control>
                 <control type="label">
                     <top>109</top>
@@ -227,11 +227,11 @@
                 <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
                 <itemlayout height="posterh" width="118" />
                 <focusedlayout height="posterh" width="1290">
-                    
+
                 </focusedlayout>
             </control>
         </control>
-        
+
     </include>
 
     <include name="View_Gallery_Item">
@@ -281,7 +281,7 @@
                     <right>0</right>
                     <width>1280</width>
                     <height>100%</height>
-                    
+
                     <control type="wraplist" id="58">
                         <width>100%</width>
                         <height>100%</height>
@@ -333,7 +333,7 @@
                             <font>Font-InfoBox-Title</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
-                        
+
                         <control type="textbox">
                             <left>pad</left>
                             <right>pad</right>
@@ -351,8 +351,8 @@
                             <align>left</align>
                             <label>$VAR[Label_Plot]</label>
                         </control>
-                        
-                        
+
+
                     </control>
                     <control type="label">
                         <bottom>bigpad</bottom>
@@ -369,4 +369,4 @@
     </include>
 
 </includes>
- 
+

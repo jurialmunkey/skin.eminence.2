@@ -17,7 +17,7 @@
                 <height>posterh</height>
                 <control type="group">
                     <width>listinfow</width>
-                    
+
                     <control type="panel" id="$PARAM[id]">
                         <width>listinfow</width>
                         <height>740</height>
@@ -315,7 +315,7 @@
                                 <left>0</left>
                                 <right>0</right>
                                 <bottom>0</bottom>
-                                
+
                                 <control type="image">
                                     <width>100%</width>
                                     <height>100%</height>
@@ -496,7 +496,7 @@
                                 <left>0</left>
                                 <right>pad</right>
                                 <bottom>0</bottom>
-                                
+
                                 <control type="image">
                                     <width>100%</width>
                                     <height>100%</height>

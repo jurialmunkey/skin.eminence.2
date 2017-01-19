@@ -4,18 +4,18 @@
     <!-- WIDGET DEFAULTS -->
     <widget label="8">Weather</widget>
     <widgetPlaylists>True</widgetPlaylists>
-        
+
     <!-- BACKGROUND SETTINGS -->
     <backgroundBrowse>True</backgroundBrowse>
     <background label="::PLAYLIST::">playlistBackground</background>
-    
+
     <!-- REMOVE SETTINGS WARNING -->
     <warn heading="31103" message="31104">ActivateWindow(Settings)</warn>
 
     <!-- ADDITIONAL ON CLICK -->
     <!-- Hack for Kaitoast and ExtendedProgress -->
     <groupoverride group="mainmenu" condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogFavourites) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</groupoverride>
-    
+
     <!-- For Player Controls -->
     <groupoverride group="mainmenu" condition="Window.IsActive(PlayerControls.xml)">Close</groupoverride>
 
@@ -107,7 +107,7 @@
     <!-- GROUPINGS -->
     <!-- Main Grouping -->
     <groupings>
-        
+
         <node label="31139">
             <shortcut label="31093" type="Hub 1101" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
             <shortcut label="31094" type="Hub 1102" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
@@ -203,5 +203,5 @@
             <content>commands</content>
         </node>
     </groupings>
-    
+
 </overrides>

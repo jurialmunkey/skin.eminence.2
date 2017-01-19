@@ -110,7 +110,7 @@
                             <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
                             <visible>IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
-                        
+
                     </control>
                 </control>
                 <control type="group">
@@ -179,7 +179,7 @@
                             <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
                             <visible>IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
-                        
+
                     </control>
                 </control>
                 <control type="image">
@@ -193,7 +193,7 @@
                 <left>1320</left>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <control type="panel" id="9501">  
+                <control type="panel" id="9501">
                     <onleft>9500</onleft>
                     <onup>9501</onup>
                     <ondown>9501</ondown>
@@ -248,7 +248,7 @@
                 </control>
             </control>
         </control>
-        
+
     </include>
 
 
@@ -320,9 +320,9 @@
                         <aspectratio align="center">keep</aspectratio>
                         <visible>!IsEmpty(Player.Duration)</visible>
                     </control>
-                  
+
                 </control>
-        
+
                 <control type="label">
                     <left>30</left>
                     <right>30</right>
@@ -389,7 +389,7 @@
                     <itemgap>12</itemgap>
                     <visible>true</visible>
                     <usecontrolcoords>true</usecontrolcoords>
-                    
+
                     <control type="label" description="Artist">
                         <top>0</top>
                         <width>100%</width>
@@ -399,7 +399,7 @@
                         <textcolor>ListLabel</textcolor>
                         <label>$VAR[Label_PlayerControl_Header]</label>
                     </control>
-                    
+
                     <control type="label" description="Song">
                         <width>100%</width>
                         <height>40</height>
@@ -454,7 +454,7 @@
                             <texture>indicator/$VAR[Image_OSDMusicFlagstar5].png</texture>
                         </control>
                     </control>
-                    
+
                     <control type="label" description="AlbumYear">
                         <width>100%</width>
                         <height>40</height>
@@ -744,7 +744,7 @@
                             <onclick>Playlist.PlayOffset(-1)</onclick>
                             <visible>MusicPlayer.offset(-1).Exists</visible>
                         </item>
-                        
+
                         <item id="21">
                             <label>$INFO[MusicPlayer.offset(0).Title]</label>
                             <label2>$INFO[MusicPlayer.offset(0).Duration]</label2>
@@ -898,7 +898,7 @@
                 </control>
             </control>
 
-            
+
             <control type="group">
                 <height>64</height>
                 <bottom>64</bottom>
@@ -1137,14 +1137,14 @@
                         </control>
                     </control>
 
-                    
+
                 </control>
 
-                
+
             </control>
         </control>
     </include>
-    
+
 
 
     <!-- OSD Controls -->
@@ -1174,7 +1174,7 @@
             <label>250</label>
             <onclick>Addon.Default.Set(xbmc.player.musicviz)</onclick>
             <include>Defs_OSDButton</include>
-        </control>           
+        </control>
         <control type="button" id="5">
             <description>Presets</description>
             <label>13388</label>
@@ -1223,7 +1223,7 @@
             <onclick condition="VideoPlayer.Content(movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title],imdb_id=$INFO[VideoPlayer.IMDBNumber])</onclick>
             <onclick condition="VideoPlayer.Content(episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[VideoPlayer.TvShowTitle],imdb_id=$INFO[VideoPlayer.IMDBNumber])</onclick>
             <include>Defs_OSDButton</include>
-        </control>           
+        </control>
         <control type="button" id="5">
             <description>3d Mode</description>
             <label>31106</label>
@@ -1263,7 +1263,7 @@
         </control>
     </include>
     <include name="Window_OSD_Controls">
-  
+
         <control type="togglebutton" id="11">
             <description>Skip Back</description>
             <width>48</width>
@@ -1389,7 +1389,7 @@
                 <ondown condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
 
                 <include>Window_OSD_Controls</include>
-            
+
             </control>
             <control type="grouplist" id="102">
                 <right>0</right>
@@ -1863,7 +1863,7 @@
                             <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre,,  -  ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] , ][/COLOR][/UPPERCASE]</label>
                             <visible>!IsEmpty(VideoPlayer.Season)</visible>
                         </control>
-                        
+
                         <control type="textbox">
                             <left>pad</left>
                             <right>pad</right>

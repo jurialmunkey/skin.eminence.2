@@ -22,7 +22,7 @@
                     <param name="label" value="[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(20),$LOCALIZE[31205]: ,][/COLOR]" />
                 </include>
             </control>
-            
+
             <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
             <!-- Main List -->
             <control type="group">
@@ -70,7 +70,7 @@
                 <height>posterh</height>
                 <right>bigpad</right>
                 <include>Object_Background</include>
-                <control type="grouplist" id="5">                
+                <control type="grouplist" id="5">
                     <itemgap>0</itemgap>
                     <onleft>3</onleft>
                 </control>

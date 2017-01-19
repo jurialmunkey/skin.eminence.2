@@ -17,7 +17,7 @@
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
 
-            
+
             <control type="group">
                 <width>635</width>
                 <left>bigpad</left>
@@ -124,7 +124,7 @@
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
                 </control>
-                
+
                 <control type="button" id="307" description="Custom">
                     <width>100%</width>
                     <label>31186</label>
@@ -256,7 +256,7 @@
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
                 </control> -->
-                
+
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <include>Defs_OptionButton</include>
@@ -264,7 +264,7 @@
             </control>
 
             <control type="label" id="500"><visible>false</visible><font/></control>
-            
+
 
             <control type="grouplist" id="9200">
                 <right>1085</right>
@@ -316,7 +316,7 @@
                     <texturenofocus colordiffuse="Disabled" flipy="false">common/spin-down.png</texturenofocus>
                     <texturefocus colordiffuse="Selected" flipy="false">common/spin-down.png</texturefocus>
                 </control>
-                
+
             </control>
         </control>
 

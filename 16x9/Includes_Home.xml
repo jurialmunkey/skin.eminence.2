@@ -36,7 +36,7 @@
             <control type="image">
                 <top>0</top>
                 <width>1920</width>
-                <height>64</height>  
+                <height>64</height>
                 <texture colordiffuse="HomeBarBG">common/white.png</texture>
                 <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
             </control>
@@ -87,7 +87,7 @@
             <!-- Backing Bar -->
             <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31181])">Home_Menu_BG_Big</include>
             <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31181])">Home_Menu_BG_Small</include>
-        
+
             <!-- Main list -->
             <control type="panel" id="9000">
                 <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
@@ -116,7 +116,7 @@
                 <scrolltime tween="sine" easing="out">240</scrolltime>
                 <!-- Default Home -->
                 <itemlayout width="188" height="266" condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31181]) + !stringcompare(Skin.String(home.style),$LOCALIZE[31182])">
-                    
+
                     <control type="image">
                         <top>16</top>
                         <width>196</width>
@@ -424,7 +424,7 @@
 
         </control>
     </include>
-    
+
     <!-- SubMenu -->
     <include name="Home_SubMenu">
         <control type="group">
@@ -544,7 +544,7 @@
             <left>620</left>
             <top>bigpad</top>
             <width>300</width>
-            <height>300</height>    
+            <height>300</height>
             <aspectratio>keep</aspectratio>
             <animation type="VisibleChange">
                 <effect type="slide" start="-300" end="0" time="300" />
@@ -567,7 +567,7 @@
             <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + ![!IsEmpty(Container(9000).ListItem.Property(PosterWidget)) + stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166])] | [stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]]]">Conditional</animation>
             <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
         </control>
-        <control type="grouplist">     
+        <control type="grouplist">
             <posx>64</posx>
             <posy>20</posy>
             <width>650</width>
@@ -611,7 +611,7 @@
         <control type="image">
             <posx>305</posx>
             <width>2000</width>
-            <height>340</height>    
+            <height>340</height>
             <texture colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
             <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
         </control>
@@ -659,7 +659,7 @@
             <include content="Object_HomeWidgetPoster">
                 <param name="id" value="5" />
                 <param name="focuseditem" value="false" />
-            </include>     
+            </include>
         </control>
         <control type="grouplist">
             <left>850</left>
@@ -738,7 +738,7 @@
                     <left>0</left>
                     <posy>64r</posy>
                     <width>1100</width>
-                    <height>64</height>  
+                    <height>64</height>
                     <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
                     <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
                 </control>
@@ -783,7 +783,7 @@
                     <left>0</left>
                     <posy>64r</posy>
                     <width>1100</width>
-                    <height>64</height>  
+                    <height>64</height>
                     <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
                     <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
                 </control>
@@ -984,7 +984,7 @@
                     <left>0</left>
                     <posy>64r</posy>
                     <width>1100</width>
-                    <height>64</height>  
+                    <height>64</height>
                     <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
                     <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
                 </control>
@@ -998,7 +998,7 @@
                     <left>0</left>
                     <posy>64r</posy>
                     <width>1100</width>
-                    <height>64</height>  
+                    <height>64</height>
                     <texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
                     <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
                 </control>

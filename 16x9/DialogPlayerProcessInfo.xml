@@ -26,7 +26,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamServiceName,[COLOR Selected]$LOCALIZE[19099]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>1200</width>
@@ -34,7 +34,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamProviderName,[COLOR Selected]$LOCALIZE[19101]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>1200</width>
@@ -42,7 +42,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamClient,[COLOR Selected]$LOCALIZE[19012]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>1200</width>
@@ -50,7 +50,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamDevice,[COLOR Selected]$LOCALIZE[19006]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>1200</width>
@@ -58,7 +58,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamStatus,[COLOR Selected]$LOCALIZE[19007]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>1200</width>
@@ -66,7 +66,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamEncryptionName,[COLOR Selected]$LOCALIZE[19015]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
             </control>
             <control type="grouplist">
@@ -80,7 +80,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamBer,[COLOR Selected]$LOCALIZE[19010]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>600</width>
@@ -88,7 +88,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamUnc,[COLOR Selected]$LOCALIZE[19011]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>600</width>
@@ -96,7 +96,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamMux,[COLOR Selected]$LOCALIZE[19100]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>600</width>
@@ -104,7 +104,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamSignal,[COLOR Selected]$LOCALIZE[19008]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="progress">
                     <top>5</top>
@@ -119,7 +119,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[PVR.ActStreamSNR,[COLOR Selected]$LOCALIZE[19009]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="progress">
                     <top>0</top>
@@ -138,7 +138,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[Player.Process(videodecoder),[COLOR Selected]$LOCALIZE[31139]:[/COLOR] ]$VAR[VideoHWDecoder, (,)]</label>
                     <font>Font-ListInfo</font>
-                    
+
                     <visible>Player.HasVideo</visible>
                 </control>
                 <control type="label">
@@ -147,7 +147,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[Player.Process(pixformat),[COLOR Selected]$LOCALIZE[31140]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                     <visible>Player.HasVideo</visible>
                 </control>
                 <control type="label">
@@ -156,7 +156,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[Player.Process(deintmethod),[COLOR Selected]$LOCALIZE[16038]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                     <visible>Player.HasVideo</visible>
                 </control>
                 <control type="label">
@@ -165,7 +165,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[Player.Process(videowidth),[COLOR Selected]$LOCALIZE[38031]:[/COLOR] ,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
                     <font>Font-ListInfo</font>
-                    
+
                     <visible>Player.HasVideo</visible>
                 </control>
                 <control type="label">
@@ -174,7 +174,7 @@
                     <aligny>bottom</aligny>
                     <label>[COLOR Selected]$LOCALIZE[460]:[/COLOR] $INFO[Player.Process(audiochannels),,$COMMA ]$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bits]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
                 <control type="label">
                     <width>1600</width>
@@ -182,7 +182,7 @@
                     <aligny>bottom</aligny>
                     <label>$INFO[System.Memory(used.percent),[COLOR Selected]RAM:[/COLOR] ,       ]$INFO[System.CpuUsage,[COLOR Selected]$LOCALIZE[13271][/COLOR] ]</label>
                     <font>Font-ListInfo</font>
-                    
+
                 </control>
             </control>
 

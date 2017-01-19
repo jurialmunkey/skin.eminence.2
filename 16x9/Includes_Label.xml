@@ -28,7 +28,7 @@
         <value condition="!IsEmpty(MusicPlayer.Artist)">$INFO[MusicPlayer.Artist]</value>
         <value>$INFO[VideoPlayer.Title]</value>
     </variable>
-    
+
     <variable name="Label_PlayerControl_SubHeader">
         <value condition="!IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
         <value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</value>
@@ -42,7 +42,7 @@
         <value condition="!IsEmpty(VideoPlayer.Episode)">$INFO[VideoPlayer.Season,Season ,  ]$INFO[VideoPlayer.Episode,Episode ,]</value>
         <value>$INFO[VideoPlayer.Director]</value>
     </variable>
-    
+
     <variable name="Label_ShortcutsWidget">
         <value condition="!IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
         <value condition="!IsEmpty(Container(211).ListItem.Property(background))">$LOCALIZE[31188]</value>
@@ -140,7 +140,7 @@
 
         <!-- Recently Added -->
         <value condition="!ListItem.IsCollection + substring(Container.FolderPath,recentlyadded)">$INFO[ListItem.DateAdded]</value>
-        
+
         <!-- Last Played -->
         <value condition="!ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[568])">$INFO[ListItem.LastPlayed]</value>
 
@@ -152,7 +152,7 @@
 
         <!-- Tv Shows -->
         <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(UnWatchedEpisodes),, [LOWERCASE]$LOCALIZE[16101][/LOWERCASE]]</value>
-        
+
         <!-- Others -->
         <value condition="!Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
         <value condition="!Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Year]</value>
@@ -160,10 +160,10 @@
         <value condition="Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
         <value condition="Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
         <value condition="Container.Content(movies) + !ListItem.IsCollection + stringcompare(Container.SortMethod,$LOCALIZE[562])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
-        
+
         <!-- Fallback -->
         <value condition="!ListItem.IsCollection">$INFO[ListItem.Label2]</value>
-        
+
     </variable>
 
     <variable name="Label_AudioChannels">

@@ -32,7 +32,7 @@
                     <preloaditems>2</preloaditems>
                     <onright>9000</onright>
                     <itemlayout width="690" height="144">
-                
+
                         <control type="group">
                             <control type="image">
                                 <top>pad</top>

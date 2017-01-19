@@ -11,7 +11,7 @@
             <right>bigpad</right>
             <top>top</top>
             <height>height</height>
-        
+
             <control type="group">
                 <include content="Object_Line">
                     <param name="width" value="1880" />
@@ -177,7 +177,7 @@
                         <height>100%</height>
                         <texture colordiffuse="PosterBorder">common/white.png</texture>
                     </control>
-                    
+
                     <control type="panel" id="21">
                         <description>available modes list</description>
                         <width>100%</width>
@@ -329,7 +329,7 @@
             </control>
         </control>
 
-        
-        
+
+
     </controls>
 </window>

@@ -24,7 +24,7 @@
                         <param name="width" value="1360" />
                         <param name="label" value="$LOCALIZE[21421]" />
                     </include>
-                </control> 
+                </control>
                 <control type="group">
                     <width>100%</width>
                     <control type="spincontrolex" id="15">
@@ -54,7 +54,7 @@
                         <include>Defs_OptionButton2</include>
                     </control>
 
-                </control> 
+                </control>
             </control>
             <control type="group">
                 <left>bigpad</left>

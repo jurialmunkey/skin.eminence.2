@@ -20,7 +20,7 @@
                     <height>posterh</height>
                     <include>Animation_Common</include>
                     <include>Object_Background</include>
-                    <control type="epggrid" id="10" description="EPG">     
+                    <control type="epggrid" id="10" description="EPG">
                         <left>0</left>
                         <top>-70</top>
                         <width>headlinew</width>
@@ -83,7 +83,7 @@
                             </control>
                         </channellayout>
                         <focusedchannellayout height="70" width="460">
-                            
+
                             <control type="image">
                                 <width>100%</width>
                                 <height>67</height>
@@ -123,22 +123,22 @@
                                 <texture>$INFO[ListItem.Icon]</texture>
                                 <aspectratio aligny="center" align="right">keep</aspectratio>
                             </control>
-                        </focusedchannellayout>    
+                        </focusedchannellayout>
                         <itemlayout height="70" width="284">
-                            
+
                             <control type="image" id="2">
                                 <width>280</width>
                                 <height>67</height>
                                 <texture border="5">common/white.png</texture>
                                 <colordiffuse>PosterBorder</colordiffuse>
-                            </control> 
+                            </control>
                             <control type="image" id="2">
                                 <width>280</width>
                                 <height>67</height>
                                 <texture>pvrgenre/$INFO[ListItem.Property(GenreType)].png</texture>
                                 <aspectratio>scale</aspectratio>
                                 <colordiffuse>5fffffff</colordiffuse>
-                            </control> 
+                            </control>
                             <control type="image">
                                 <posy>17</posy>
                                 <posx>8</posx>
@@ -177,14 +177,14 @@
                             </control>
                         </itemlayout>
                         <focusedlayout height="70" width="284">
-            
+
                             <control type="image" id="2">
                                 <width>280</width>
                                 <height>67</height>
                                 <texture border="5">common/white.png</texture>
                                 <colordiffuse>$VAR[HighlightColor]</colordiffuse>
-                            </control> 
-                            
+                            </control>
+
                             <control type="image">
                                 <posy>17</posy>
                                 <posx>8</posx>
@@ -222,7 +222,7 @@
                                 <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
                             </control>
                         </focusedlayout>
-                    
+
                     </control>
                     <control type="group">
                         <bottom>bigpad</bottom>
@@ -253,7 +253,7 @@
             </control>
         </control>
 
-        
+
         <include>PVR_Menu</include>
     </controls>
 

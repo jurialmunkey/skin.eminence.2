@@ -32,7 +32,7 @@
                         <ondown>10</ondown>
                         <include>Defs_OptionButton2</include>
                     </control>
-                </control> 
+                </control>
                 <!-- Rule List -->
                 <control type="group">
                     <top>130</top>
@@ -82,7 +82,7 @@
                         </control>
                     </control>
                 </control>
-                
+
                 <control type="group">
                     <top>400</top>
                     <width>headlinew</width>
@@ -129,7 +129,7 @@
                             <include>Defs_OptionButton</include>
                         </control>
                     </control>
-                    
+
                     <control type="group">
                         <right>0</right>
                         <width>settingshalfw</width>

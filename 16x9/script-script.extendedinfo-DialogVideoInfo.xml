@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
-    
+
     <onload>SetProperty(150_onback,SetFocus(9000))</onload>
     <onload>SetProperty(350_onback,SetFocus(9000))</onload>
     <onload>SetProperty(750_onback,SetFocus(9000))</onload>
@@ -24,7 +24,7 @@
                 <right>bigpad</right>
                 <top>bigpad</top>
                 <bottom>bigpad</bottom>
-                
+
                 <include content="Object_Poster">
                     <param name="flipx" value="false" />
                     <param name="width" value="posterw" />
@@ -291,7 +291,7 @@
                                 <label>$INFO[Window.Property(Revenue),$,]</label>
                             </control>
                         </control>
-                        
+
                     </control>
                     <control type="grouplist" id="9000">
                         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
@@ -311,7 +311,7 @@
                             <onup>Right</onup>
                             <onleft>Right</onleft>
                         </control>
-                        
+
                         <control type="button" id ="8">
                             <description>Play</description>
                             <label>208</label>
@@ -518,7 +518,7 @@
                 <param name="noimage" value="true" />
                 <param name="visible" value="Control.HasFocus(950)" />
             </include>
-       
+
             <control type="list" id="250"><visible>false</visible></control>
             <control type="list" id="450"><visible>false</visible></control>
             <control type="list" id="550"><visible>false</visible></control>

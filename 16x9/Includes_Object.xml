@@ -446,7 +446,7 @@
                             <align>left</align>
                             <label>$VAR[Label_Plot]</label>
                         </control>
-                        
+
                     </control>
                 </control>
             </control>
@@ -606,5 +606,5 @@
             </control>
         </control>
     </include>
-    
+
 </includes>

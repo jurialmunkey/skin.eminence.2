@@ -12,7 +12,7 @@
 
     <constant name="favitemw">1256</constant>
     <constant name="favdialogw">1748</constant>
-   
+
     <constant name="sidepad">64</constant>
     <constant name="hubitemw">452</constant>
     <constant name="headlinew">1752</constant>

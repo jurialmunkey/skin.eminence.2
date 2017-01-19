@@ -32,7 +32,7 @@
             <control type="image">
                 <posx>0</posx>
                 <width>2000</width>
-                <height>340</height>    
+                <height>340</height>
                 <texture colordiffuse="HomeWidgetBG">common/white.png</texture>
                 <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
             </control>
@@ -44,7 +44,7 @@
             </control>
 
             <control type="grouplist">
-                
+
                 <posx>64</posx>
                 <posy>20</posy>
                 <width>650</width>

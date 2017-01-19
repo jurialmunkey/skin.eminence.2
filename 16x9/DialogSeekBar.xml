@@ -7,7 +7,7 @@
 
     <controls>
 
-        
+
         <include condition="Player.HasVideo">Window_Seekbar_Video</include>
         <include condition="Player.HasAudio">Window_Seekbar_Music</include>
     </controls>

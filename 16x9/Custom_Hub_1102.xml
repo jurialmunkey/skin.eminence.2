@@ -4,7 +4,7 @@
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">9501</defaultcontrol>
     <onunload>SetProperty(HubReturn,1102,home)</onunload>
-    
+
     <controls>
         <include content="Window_Hub">
             <param name="categories" value="skinshortcuts-group-x1102" />

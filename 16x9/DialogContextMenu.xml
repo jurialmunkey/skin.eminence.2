@@ -18,7 +18,7 @@
             <include content="Dialog_Top_Arrows">
                 <param name="id" value="996" />
             </include>
-            
+
             <control type="image" id="999" />
 
             <!-- Default GroupList -->

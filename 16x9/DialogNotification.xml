@@ -9,7 +9,7 @@
                 <left>0</left>
                 <posy>64r</posy>
                 <width>100%</width>
-                <height>64</height>  
+                <height>64</height>
                 <aspectratio>scale</aspectratio>
                 <texture colordiffuse="DialogBG">common/white.png</texture>
                 <visible>Window.IsVisible(fullscreenvideo)</visible>
@@ -41,7 +41,7 @@
             <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
             <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_TextOnly_Animate</include>
             <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_Icons_Animate</include>
-         
+
             <control type="image">
                 <left>16</left>
                 <bottom>16</bottom>

@@ -161,8 +161,8 @@
                                 </item>
                             </content>
                         </control>
-                        
-                    </control> 
+
+                    </control>
 
                     <control type="group" id="9000">
                         <left>480</left>
@@ -299,8 +299,8 @@
 
 
 
-                    </control> 
-                    
+                    </control>
+
                 </control>
             </control>
         </control>

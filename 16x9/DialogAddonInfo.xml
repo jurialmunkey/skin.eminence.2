@@ -183,7 +183,7 @@
                                 <label>$INFO[ListItem.AddonStatus]</label>
                             </control>
                         </control>
-                        
+
                     </control>
                     <!-- BUTTONS -->
                     <control type="grouplist" id="9000">
@@ -194,7 +194,7 @@
                         <align>center</align>
                         <itemgap>pad</itemgap>
                         <orientation>horizontal</orientation>
-                        
+
                         <!-- Launch Addon Button -->
                         <control type="button" id="12">
                             <width>auto</width>
@@ -238,7 +238,7 @@
                     </control>
                 </control>
             </control>
-            
+
         </control>
     </controls>
 

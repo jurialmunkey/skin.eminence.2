@@ -22,7 +22,7 @@
         <include>Home_Widget_Control</include>
         <include>Furniture_TopBar</include>
 
-        <control type="list" id="9988">           
+        <control type="list" id="9988">
             <description>hidden container for playlist background</description>
             <posx>-20</posx>
             <posy>-20</posy>
@@ -40,15 +40,15 @@
             </focusedlayout>
             <content>$INFO[Container(9000).ListItem.Property(backgroundPlaylist)]</content>
         </control>
-        
+
         <include condition="Skin.HasSetting(home.hidewidgetbox)">Home_Widget_Hidden</include>
 
         <control type="group">
             <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_TextOnly_Animate</include>
             <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Icons_Animate</include>
-            
+
             <include condition="!Skin.HasSetting(home.hidewidgetbox)">Home_Widget</include>
-            
+
             <control type="group">
                 <animation effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>
                 <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
@@ -71,9 +71,9 @@
             <include>Furniture_TopBar</include>
         </control>
 
-        
 
-        
+
+
     </controls>
 
 </window>

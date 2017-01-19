@@ -21,7 +21,7 @@
                     <left>740</left>
                     <width>listinfow</width>
                     <include>Object_Background</include>
- 
+
                     <!-- INFO -->
                     <control type="grouplist">
                         <usecontrolcoords>true</usecontrolcoords>
@@ -370,7 +370,7 @@
                             </control>
                         </control>
                     </control>
-                    
+
                     <!-- BUTTONS -->
                     <control type="grouplist" id="9000">
                         <left>pad</left>
@@ -381,7 +381,7 @@
                         <itemgap>pad</itemgap>
                         <orientation>horizontal</orientation>
                         <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
-                        
+
                         <!-- Youtube Button -->
                         <control type="button" id="9001">
                             <width>auto</width>
@@ -422,9 +422,9 @@
                     </control>
                 </control>
 
-               
+
             </control>
-            
+
         </control>
 
     </controls>

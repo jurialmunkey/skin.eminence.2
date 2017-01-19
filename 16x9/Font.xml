@@ -84,7 +84,7 @@
             <filename>Roboto-Black.ttf</filename>
             <size>48</size>
         </font>
-        
+
         <font>
             <name>Font-MusicVis-Title</name>
             <filename>Roboto-Black.ttf</filename>
@@ -95,7 +95,7 @@
             <filename>Roboto-Bold.ttf</filename>
             <size>42</size>
         </font>
-        
+
 
         <!-- Required for system -->
         <font>

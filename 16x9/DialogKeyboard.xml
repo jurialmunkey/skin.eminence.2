@@ -4,7 +4,7 @@
     <defaultcontrol always="true">300</defaultcontrol>
     <controls>
         <include>GlobalOverlay</include>
-        
+
         <control type="group">
             <height>580</height>
             <left>50</left>
@@ -559,12 +559,12 @@
 
                 </control>
 
-                
+
 
             </control>
 
 
-            
+
             <!-- Button grouplist -->
             <control type="grouplist" id="9001">
                 <right>bigpad</right>

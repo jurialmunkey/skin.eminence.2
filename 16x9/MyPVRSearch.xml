@@ -8,7 +8,7 @@
         <include>Furniture_Background</include>
         <include>Furniture_RSS</include>
         <include>Furniture_TopBar</include>
-        
+
         <control type="group">
             <include>Defs_ViewBackground</include>
             <include content="Object_Headline">
@@ -16,7 +16,7 @@
             </include>
             <include>PVR_SimpleList</include>
         </control>
-        
+
         <include>PVR_Menu</include>
     </controls>
 
