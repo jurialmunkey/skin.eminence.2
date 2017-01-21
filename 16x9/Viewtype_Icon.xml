@@ -5,8 +5,8 @@
     <include name="Viewtype_Icon">
         <control type="group">
             <visible>Control.IsVisible(500)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <control type="group">
                 <left>bigpad</left>
                 <right>bigpad</right>
@@ -28,8 +28,8 @@
     <include name="Viewtype_IconExtra">
         <control type="group">
             <visible>Control.IsVisible(59)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
 
             <control type="group">
                 <left>bigpad</left>
@@ -60,8 +60,8 @@
     <include name="Viewtype_IconWide">
         <control type="group">
             <visible>Control.IsVisible(55)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
 
             <control type="group">
                 <left>bigpad</left>
@@ -84,8 +84,8 @@
     <include name="Viewtype_IconFanart">
         <control type="group">
             <visible>Control.IsVisible(56)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
 
             <control type="group">
                 <left>bigpad</left>

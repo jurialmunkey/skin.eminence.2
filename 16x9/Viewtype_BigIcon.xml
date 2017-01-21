@@ -10,8 +10,8 @@
             <height>posterh</height>
             <include>Object_Background</include>
             <include>Object_Scrollbar_Horizontal</include>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <control type="wraplist" id="52">
                 <top>30</top>
                 <left>bigiconpanelpadw</left>
@@ -163,8 +163,8 @@
     <include name="Viewtype_Gallery">
         <control type="group">
             <visible>Control.IsVisible(525)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <animation effect="slide" start="0" end="-118" condition="!Container(525).OnNext" reversible="false" time="400" tween="quadratic">Conditional</animation>
             <animation effect="slide" start="0" end="118" condition="!Container(525).OnPrevious" reversible="false" time="400" tween="quadratic">Conditional</animation>
             <left>bigpad</left>
@@ -267,8 +267,8 @@
     <include name="Viewtype_Lovefilm">
         <control type="group">
             <visible>Control.IsVisible(58)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
 
             <control type="group">
                 <left>bigpad</left>

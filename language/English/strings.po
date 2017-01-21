@@ -789,3 +789,7 @@ msgstr ""
 msgctxt "#31214"
 msgid "Show additional info labels in lists (e.g. ratings and year)"
 msgstr ""
+
+msgctxt "#31215"
+msgid "Plain list"
+msgstr ""

@@ -3,7 +3,7 @@
     <backgroundcolor>Background</backgroundcolor>
     <menucontrol>9000</menucontrol>
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,57</views>
+    <views>50,550,551,57,552</views>
     <onunload>SetProperty(NodeReturn,videos,home)</onunload>
     <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
     <controls>
@@ -17,8 +17,7 @@
             <include content="Object_Headline">
                 <param name="label" value="$VAR[Label_SortLine]" />
             </include>
-            <include condition="Window.IsVisible(musicplaylist)">Viewtype_SquareList</include>
-            <include condition="Window.IsVisible(videoplaylist)">Viewtype_List</include>
+            <include>Viewtype_List</include>
         </control>
 
         <include>Furniture_TopBar</include>

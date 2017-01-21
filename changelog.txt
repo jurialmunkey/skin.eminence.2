@@ -1,3 +1,7 @@
+[B]2.5.23[/B]
+Add Plain list for views that have no artwork
+Add option in Skin Settings > Panels to disable additional info labels in lists
+
 [B]2.5.22[/B]
 Fix submenu onclick to move notifications down when changing windows from home
 Close submenu onclick
@@ -5,7 +9,6 @@ Fix PVR to not show videowindow if show video in background is enabled to preven
 Fix RSS feed not showing for text only
 Fix DialogSettings to hide when dialogslider visible so doesn't obscure audio offset
 Fix DialogBusy vanishing icon from header when opening addon plugins from home
-Add option in Skin Settings > Panels to disable additional info labels in lists
 
 [B]2.5.21[/B]
 No content available label and fallback iamge for hubs with no items

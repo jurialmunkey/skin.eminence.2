@@ -4,8 +4,8 @@
     <include name="Viewtype_List">
         <control type="group">
             <visible>Control.IsVisible(50)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -19,20 +19,37 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listw" />
                 <param name="id" value="50" />
-                <param name="condition" value="true" />
+                <param name="condition" value="![Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(musicplaylist) | Window.IsVisible(MyPics.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPrograms.xml)] + ![Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
             </include>
             <control type="group">
                 <width>listw</width>
                 <include>Object_Arrows_Vertical</include>
             </control>
         </control>
-    </include>
-
-    <include name="Viewtype_SquareList">
         <control type="group">
-            <visible>Control.IsVisible(50)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <visible>Control.IsVisible(550)</visible>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>bigpad</top>
+            <height>posterh</height>
+            <include content="View_List">
+                <param name="viewlabel" value="31215" />
+                <param name="posx" value="0" />
+                <param name="width" value="headlinew" />
+                <param name="id" value="550" />
+                <param name="condition" value="[Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
+            </include>
+            <control type="group">
+                <width>listw</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+        <control type="group">
+            <visible>Control.IsVisible(551)</visible>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <left>20</left>
             <right>20</right>
             <top>20</top>
@@ -44,24 +61,42 @@
                 <param name="viewlabel" value="535" />
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
-                <param name="id" value="50" />
-                <param name="condition" value="true" />
+                <param name="id" value="551" />
+                <param name="condition" value="[Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(musicplaylist) | Window.IsVisible(MyPics.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPrograms.xml)] + ![Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
             </include>
             <control type="group">
                 <width>listinfow</width>
                 <include>Object_Arrows_Vertical</include>
             </control>
         </control>
+        <control type="group">
+            <visible>Control.IsVisible(552)</visible>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>bigpad</top>
+            <height>posterh</height>
+            <include content="View_List">
+                <param name="viewlabel" value="31215" />
+                <param name="posx" value="0" />
+                <param name="width" value="headlinew" />
+                <param name="id" value="552" />
+                <param name="condition" value="![Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
+            </include>
+            <control type="group">
+                <width>listw</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
     </include>
-
-
 
     <!-- MEDIA INFO -->
     <include name="Viewtype_MediaInfo">
         <control type="group">
             <visible>Control.IsVisible(51)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -81,8 +116,8 @@
     <include name="Viewtype_MediaInfo2">
         <control type="group">
             <visible>Control.IsVisible(57)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -103,8 +138,8 @@
     <include name="Viewtype_InfoList">
         <control type="group">
             <visible>Control.IsVisible(53)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -268,8 +303,8 @@
     <include name="Viewtype_FanartList">
         <control type="group">
             <visible>Control.IsVisible(54)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
