@@ -785,3 +785,7 @@ msgstr ""
 msgctxt "#31213"
 msgid "Show user ratings for music albums / songs"
 msgstr ""
+
+msgctxt "#31214"
+msgid "Show additional info labels in lists (e.g. ratings and year)"
+msgstr ""

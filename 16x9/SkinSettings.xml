@@ -638,8 +638,19 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
-                    <!-- Object Shadows -->
+                    <!-- Show Additional Labels in Lists-->
                     <control type="radiobutton" id="8503">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31214</label>
+                        <selected>!Skin.HasSetting(lists.dontshowextralabels)</selected>
+                        <onclick>Skin.ToggleSetting(lists.dontshowextralabels)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    <!-- Object Shadows -->
+                    <control type="radiobutton" id="8504">
                         <radioposx>settingsradioposx</radioposx>
                         <width>100%</width>
                         <label>31004</label>
@@ -651,7 +662,7 @@
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
                     <!-- Wide Screen -->
-                    <control type="radiobutton" id="8504">
+                    <control type="radiobutton" id="8505">
                         <radioposx>settingsradioposx</radioposx>
                         <width>100%</width>
                         <label>31196</label>
@@ -662,6 +673,7 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
+                    
 
                     <!-- INSTALL -->
                     <control type="label" id="8699">
