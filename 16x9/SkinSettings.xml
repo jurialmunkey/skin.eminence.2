@@ -649,6 +649,7 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
+                    
                     <!-- Object Shadows -->
                     <control type="radiobutton" id="8504">
                         <radioposx>settingsradioposx</radioposx>
