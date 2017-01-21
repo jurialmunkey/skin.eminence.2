@@ -19,17 +19,15 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listw" />
                 <param name="id" value="50" />
-                <param name="condition" value="![Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(musicplaylist) | Window.IsVisible(MyPics.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPrograms.xml) | Container.Content(addons)] + ![Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
+                <param name="condition" value="![Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(musicplaylist) | Window.IsVisible(MyPics.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPrograms.xml) | Container.Content(addons) | Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
             </include>
             <control type="group">
                 <width>listw</width>
                 <include>Object_Arrows_Vertical</include>
             </control>
         </control>
-        <control type="group">
+        <!-- <control type="group">
             <visible>Control.IsVisible(550)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -45,7 +43,7 @@
                 <width>listw</width>
                 <include>Object_Arrows_Vertical</include>
             </control>
-        </control>
+        </control> -->
         <control type="group">
             <visible>Control.IsVisible(551)</visible>
             <!-- <include>Animation_FadeIn</include> -->
@@ -62,7 +60,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
                 <param name="id" value="551" />
-                <param name="condition" value="[Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(musicplaylist) | Window.IsVisible(MyPics.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPrograms.xml) | Container.Content(addons)] + ![Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
+                <param name="condition" value="[Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(musicplaylist) | Window.IsVisible(MyPics.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPrograms.xml) | Container.Content(addons) | Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
             </include>
             <control type="group">
                 <width>listinfow</width>
@@ -82,7 +80,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="headlinew" />
                 <param name="id" value="552" />
-                <param name="condition" value="![Container.Content() | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | Container.Content(genres)]" />
+                <param name="condition" value="true" />
             </include>
             <control type="group">
                 <width>listw</width>
