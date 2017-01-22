@@ -81,7 +81,7 @@
 
             <control type="group">
                 <left>sidepad</left>
-                <top>sidepad</top>
+                <top>top</top>
                 <bottom>sidepad</bottom>
                 <right>sidepad</right>
                 <control type="scrollbar" id="9601">
@@ -103,8 +103,8 @@
             <control type="group">
                 <left>sidepad</left>
                 <right>sidepad</right>
-                <top>sidepad</top>
-                <bottom>sidepad</bottom>
+                <top>top</top>
+                <height>height</height>
                 <visible>Control.HasFocus(9601)</visible>
                 <include>Animation_SlideIn</include>
 
@@ -137,14 +137,14 @@
                         <height>16</height>
                         <texture colordiffuse="ListLabel" flipy="false">common/16-arrow-down.png</texture>
                         <centerleft>50%</centerleft>
-                        <bottom>-50</bottom>
+                        <bottom>0</bottom>
                     </control>
                     <control type="image">
                         <width>16</width>
                         <height>16</height>
                         <texture colordiffuse="ListLabel" flipy="false">common/16-arrow-down.png</texture>
                         <centerleft>50%</centerleft>
-                        <bottom>-40</bottom>
+                        <bottom>10</bottom>
                     </control>
                 </control>
 
@@ -162,10 +162,10 @@
                     <left>bigpad</left>
                     <right>bigpad</right>
                     <top>90</top>
-                    <bottom>-20</bottom>
+                    <bottom>30</bottom>
                     <align>left</align>
                     <font>Font-ListInfo-Big</font>
-                    <label>$VAR[Label_OverlayPlot]</label>
+                    <label>$VAR[Label_OverlayPlot]$VAR[Label_OverlayPlot]$VAR[Label_OverlayPlot]$VAR[Label_OverlayPlot]</label>
                     <pagecontrol>9601</pagecontrol>
                     <autoscroll delay="8000" time="4000" repeat="12000">false</autoscroll>
                 </control>
