@@ -53,7 +53,7 @@
                             <height max="228">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
-                            <label>$INFO[ListItem.AddonDescription]</label>
+                            <label>$VAR[Label_Plot]</label>
                         </control>
                         <control type="group">
                             <left>pad</left>
@@ -194,6 +194,7 @@
                         <align>center</align>
                         <itemgap>pad</itemgap>
                         <orientation>horizontal</orientation>
+                        <onup>9601</onup>
 
                         <!-- Launch Addon Button -->
                         <control type="button" id="12">
@@ -240,6 +241,7 @@
             </control>
 
         </control>
+        <include>Furniture_DialogInfoOverlay</include>
     </controls>
 
 </window>

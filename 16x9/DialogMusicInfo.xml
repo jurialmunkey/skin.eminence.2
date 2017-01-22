@@ -64,7 +64,7 @@
                             <height max="192">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
-                            <label>$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</label>
+                            <label>$VAR[Label_Plot]</label>
                         </control>
                         <control type="group">
                             <left>pad</left>
@@ -381,6 +381,7 @@
                         <itemgap>pad</itemgap>
                         <orientation>horizontal</orientation>
                         <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                        <onup condition="!StringCompare(Control.GetLabel(5),$LOCALIZE[207])">9601</onup>
 
                         <!-- Youtube Button -->
                         <control type="button" id="9001">
@@ -426,6 +427,8 @@
             </control>
 
         </control>
+
+        <include>Furniture_DialogInfoOverlay</include>
 
     </controls>
 

@@ -3,6 +3,9 @@
     <defaultcontrol always="true">9000</defaultcontrol>
     <onload>ClearProperty(extinfo,home)</onload>
     <controls>
+        
+
+        <!-- INFO DIALOG -->
         <control type="group">
             <include>Defs_InfoBackground</include>
 
@@ -307,6 +310,7 @@
                         <onright>noop</onright>
                         <orientation>horizontal</orientation>
                         <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                        <onup condition="!StringCompare(Control.GetLabel(5),$LOCALIZE[207])">9601</onup>
 
                         <!-- Play/Browse Button -->
                         <control type="togglebutton" id="8">
@@ -481,6 +485,8 @@
             <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
         </control>
 
+        <!-- INFO OVERLAY -->
+        <include>Furniture_DialogInfoOverlay</include>
 
 
 

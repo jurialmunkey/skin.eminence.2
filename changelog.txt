@@ -1,6 +1,7 @@
 [B]2.5.23[/B]
 Add Plain list for views that have no artwork
 Add option in Skin Settings > Panels to disable additional info labels in lists
+Add info overlay on up from dialoginfo
 
 [B]2.5.22[/B]
 Fix submenu onclick to move notifications down when changing windows from home
