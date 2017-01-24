@@ -4,15 +4,17 @@
     <!-- OVERLAY -->
     <include name="Furniture_OverlayInfo">
 
-        <control type="button" id="9601">
+        <control type="scrollbar" id="9601">
             <width>1</width>
-            <height>1</height>
+            <height>10</height>
             <visible allowhiddenfocus="true">false</visible>
             <onback>50</onback>
-            <onup>50</onup>
-            <ondown>50</ondown>
             <onleft>50</onleft>
             <onright>50</onright>
+            <onclick>50</onclick>
+            <ondown>50</ondown>
+            <orientation>vertical</orientation>
+            <animation effect="fade" condition="true" time="0" start="100" end="0">Conditional</animation>
         </control>
 
         <control type="group">
@@ -31,10 +33,10 @@
         </control>
 
         <control type="group">
-            <left>bigpad</left>
-            <right>bigpad</right>
-            <top>dialogtop</top>
-            <height>690</height>
+            <left>sidepad</left>
+            <right>sidepad</right>
+            <top>top</top>
+            <height>height</height>
             <visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
@@ -42,24 +44,72 @@
             <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
             <include>Animation_SlideIn</include>
 
-            <control type="label">
-                <description>header label</description>
-                <left>60</left>
-                <right>60</right>
-                <font>Font-Header</font>
-                <height>45</height>
-                <label>$VAR[Label_OverlayTitle]</label>
-            </control>
+            <control type="group">
+                <left>40</left>
+                <right>40</right>
+                <top>60</top>
+                <bottom>35</bottom>
+                <control type="group">
+                    <visible>Container(9602).HasPrevious</visible>
+                    <include>Animation_FadeIn</include>
+                    <include>Animation_FadeOut</include>
+                    <control type="image">
+                        <width>16</width>
+                        <height>16</height>
+                        <texture colordiffuse="ListLabel" flipy="true">common/16-arrow-down.png</texture>
+                        <centerleft>50%</centerleft>
+                        <top>70</top>
+                    </control>
+                    <control type="image">
+                        <width>16</width>
+                        <height>16</height>
+                        <texture colordiffuse="ListLabel" flipy="true">common/16-arrow-down.png</texture>
+                        <centerleft>50%</centerleft>
+                        <top>60</top>
+                    </control>
+                </control>
 
-            <control type="textbox">
-                <description>textarea</description>
-                <left>60</left>
-                <right>60</right>
-                <top>90</top>
-                <bottom>0</bottom>
-                <align>left</align>
-                <font>Font-ListInfo-Big</font>
-                <label>$VAR[Label_OverlayPlot]</label>
+                <control type="group">
+                    <visible>Container(9602).HasNext</visible>
+                    <include>Animation_FadeIn</include>
+                    <include>Animation_FadeOut</include>
+                    <control type="image">
+                        <width>16</width>
+                        <height>16</height>
+                        <texture colordiffuse="ListLabel" flipy="false">common/16-arrow-down.png</texture>
+                        <centerleft>50%</centerleft>
+                        <bottom>0</bottom>
+                    </control>
+                    <control type="image">
+                        <width>16</width>
+                        <height>16</height>
+                        <texture colordiffuse="ListLabel" flipy="false">common/16-arrow-down.png</texture>
+                        <centerleft>50%</centerleft>
+                        <bottom>10</bottom>
+                    </control>
+                </control>
+
+                <control type="label">
+                    <description>header label</description>
+                    <left>bigpad</left>
+                    <right>bigpad</right>
+                    <font>Font-Header</font>
+                    <height>45</height>
+                    <label>$VAR[Label_OverlayTitle]</label>
+                </control>
+
+                <control type="textbox" id="9602">
+                    <description>textarea</description>
+                    <left>bigpad</left>
+                    <right>bigpad</right>
+                    <top>90</top>
+                    <bottom>30</bottom>
+                    <align>left</align>
+                    <font>Font-ListInfo-Big</font>
+                    <label>$VAR[Label_OverlayPlot]</label>
+                    <pagecontrol>9601</pagecontrol>
+                    <autoscroll delay="8000" time="4000" repeat="12000">false</autoscroll>
+                </control>
             </control>
         </control>
     </include>
