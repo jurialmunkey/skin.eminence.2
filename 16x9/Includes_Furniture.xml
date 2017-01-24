@@ -79,25 +79,18 @@
                 </control>
             </control>
 
-            <control type="group">
-                <left>sidepad</left>
-                <top>top</top>
-                <bottom>sidepad</bottom>
-                <right>sidepad</right>
-                <control type="scrollbar" id="9601">
-                    <top>100</top>
-                    <left>-1000</left>
-                    <bottom>-10</bottom>
-                    <onback>9000</onback>
-                    <onleft>9000</onleft>
-                    <onright>9000</onright>
-                    <onclick>9000</onclick>
-                    <ondown>9000</ondown>
-                    <width>8</width>
-                    <orientation>vertical</orientation>
-                    <animation effect="fade" condition="!Control.HasFocus(9601) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
-                </control>
-                
+            <control type="scrollbar" id="9601">
+                <top>100</top>
+                <left>-1000</left>
+                <bottom>100</bottom>
+                <onback>9000</onback>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <onclick>9000</onclick>
+                <ondown>9000</ondown>
+                <width>8</width>
+                <orientation>vertical</orientation>
+                <animation effect="fade" condition="true" time="0" start="100" end="0">Conditional</animation>
             </control>
 
             <control type="group">
@@ -107,67 +100,72 @@
                 <height>height</height>
                 <visible>Control.HasFocus(9601)</visible>
                 <include>Animation_SlideIn</include>
-
                 <control type="group">
-                    <visible>Container(9602).HasPrevious</visible>
-                    <include>Animation_FadeIn</include>
-                    <include>Animation_FadeOut</include>
-                    <control type="image">
-                        <width>16</width>
-                        <height>16</height>
-                        <texture colordiffuse="ListLabel" flipy="true">common/16-arrow-down.png</texture>
-                        <centerleft>50%</centerleft>
-                        <top>70</top>
+                    <left>40</left>
+                    <right>40</right>
+                    <top>60</top>
+                    <bottom>35</bottom>
+                    <control type="group">
+                        <visible>Container(9602).HasPrevious</visible>
+                        <include>Animation_FadeIn</include>
+                        <include>Animation_FadeOut</include>
+                        <control type="image">
+                            <width>16</width>
+                            <height>16</height>
+                            <texture colordiffuse="ListLabel" flipy="true">common/16-arrow-down.png</texture>
+                            <centerleft>50%</centerleft>
+                            <top>70</top>
+                        </control>
+                        <control type="image">
+                            <width>16</width>
+                            <height>16</height>
+                            <texture colordiffuse="ListLabel" flipy="true">common/16-arrow-down.png</texture>
+                            <centerleft>50%</centerleft>
+                            <top>60</top>
+                        </control>
                     </control>
-                    <control type="image">
-                        <width>16</width>
-                        <height>16</height>
-                        <texture colordiffuse="ListLabel" flipy="true">common/16-arrow-down.png</texture>
-                        <centerleft>50%</centerleft>
-                        <top>60</top>
-                    </control>
-                </control>
 
-                <control type="group">
-                    <visible>Container(9602).HasNext</visible>
-                    <include>Animation_FadeIn</include>
-                    <include>Animation_FadeOut</include>
-                    <control type="image">
-                        <width>16</width>
-                        <height>16</height>
-                        <texture colordiffuse="ListLabel" flipy="false">common/16-arrow-down.png</texture>
-                        <centerleft>50%</centerleft>
-                        <bottom>0</bottom>
+                    <control type="group">
+                        <visible>Container(9602).HasNext</visible>
+                        <include>Animation_FadeIn</include>
+                        <include>Animation_FadeOut</include>
+                        <control type="image">
+                            <width>16</width>
+                            <height>16</height>
+                            <texture colordiffuse="ListLabel" flipy="false">common/16-arrow-down.png</texture>
+                            <centerleft>50%</centerleft>
+                            <bottom>0</bottom>
+                        </control>
+                        <control type="image">
+                            <width>16</width>
+                            <height>16</height>
+                            <texture colordiffuse="ListLabel" flipy="false">common/16-arrow-down.png</texture>
+                            <centerleft>50%</centerleft>
+                            <bottom>10</bottom>
+                        </control>
                     </control>
-                    <control type="image">
-                        <width>16</width>
-                        <height>16</height>
-                        <texture colordiffuse="ListLabel" flipy="false">common/16-arrow-down.png</texture>
-                        <centerleft>50%</centerleft>
-                        <bottom>10</bottom>
+
+                    <control type="label">
+                        <description>header label</description>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <font>Font-Header</font>
+                        <height>45</height>
+                        <label>$VAR[Label_OverlayTitle]</label>
                     </control>
-                </control>
 
-                <control type="label">
-                    <description>header label</description>
-                    <left>bigpad</left>
-                    <right>bigpad</right>
-                    <font>Font-Header</font>
-                    <height>45</height>
-                    <label>$VAR[Label_OverlayTitle]</label>
-                </control>
-
-                <control type="textbox" id="9602">
-                    <description>textarea</description>
-                    <left>bigpad</left>
-                    <right>bigpad</right>
-                    <top>90</top>
-                    <bottom>30</bottom>
-                    <align>left</align>
-                    <font>Font-ListInfo-Big</font>
-                    <label>$VAR[Label_OverlayPlot]$VAR[Label_OverlayPlot]$VAR[Label_OverlayPlot]$VAR[Label_OverlayPlot]</label>
-                    <pagecontrol>9601</pagecontrol>
-                    <autoscroll delay="8000" time="4000" repeat="12000">false</autoscroll>
+                    <control type="textbox" id="9602">
+                        <description>textarea</description>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
+                        <top>90</top>
+                        <bottom>30</bottom>
+                        <align>left</align>
+                        <font>Font-ListInfo-Big</font>
+                        <label>$VAR[Label_OverlayPlot]</label>
+                        <pagecontrol>9601</pagecontrol>
+                        <autoscroll delay="8000" time="4000" repeat="12000">false</autoscroll>
+                    </control>
                 </control>
             </control>
         </control>
