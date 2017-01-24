@@ -680,17 +680,26 @@
                         <include>View_List_Focusedlayout</include>
                     </focusedlayout>
                     <itemlayout height="72" width="$PARAM[width]" condition="!$PARAM[label3]">
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <font>Font-Button</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!$PARAM[label2]</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture>$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <visible>$PARAM[label2]</visible>
+                        </control>
                         <control type="group">
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <control type="label">
-                                <left>80</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>!$PARAM[label2]</visible>
-                            </control>
                             <control type="label">
                                 <left>80</left>
                                 <right>30</right>
@@ -707,26 +716,9 @@
                                 <right>30</right>
                                 <top>0</top>
                                 <height>100%</height>
-                                <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>!$PARAM[label2]</visible>
-                            </control>
-                            <control type="label">
-                                <left>30</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
                                 <label>$INFO[ListItem.Label]</label>
                                 <visible>$PARAM[label2]</visible>
                             </control>
-                        </control>
-                        <control type="image">
-                            <centerleft>40</centerleft>
-                            <centertop>50%</centertop>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture>$VAR[Image_Indicator]</texture>
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                         <control type="label">
                             <left>30</left>
@@ -746,49 +738,15 @@
                             <height>100%</height>
                             <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                         </control>
-                        <control type="group">
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <control type="label">
-                                <left>80</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <textcolor>Selected</textcolor>
-                                <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>!$PARAM[label2]</visible>
-                            </control>
-                            <control type="label">
-                                <left>80</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>$PARAM[label2]</visible>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>IsEmpty(ListItem.Overlay)</visible>
-                            <control type="label">
-                                <left>30</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <textcolor>Selected</textcolor>
-                                <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>!$PARAM[label2]</visible>
-                            </control>
-                            <control type="label">
-                                <left>30</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>$PARAM[label2]</visible>
-                            </control>
+                        <control type="label">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <font>Font-Button</font>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!$PARAM[label2]</visible>
                         </control>
                         <control type="image">
                             <centerleft>40</centerleft>
@@ -797,6 +755,32 @@
                             <width>32</width>
                             <texture>$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <visible>$PARAM[label2]</visible>
+                        </control>
+                        <control type="group">
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <control type="label">
+                                <left>80</left>
+                                <right>30</right>
+                                <top>0</top>
+                                <height>100%</height>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                                <visible>$PARAM[label2]</visible>
+                            </control>
+                        </control>
+                        <control type="group">
+                            
+                            <control type="label">
+                                <left>30</left>
+                                <right>30</right>
+                                <top>0</top>
+                                <height>100%</height>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                                <visible>$PARAM[label2]</visible>
+                                <visible>IsEmpty(ListItem.Overlay)</visible>
+                            </control>
                         </control>
                         <control type="label">
                             <left>30</left>
