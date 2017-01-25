@@ -96,13 +96,31 @@
         <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Container(211).ListItem.Property(tilecolor))">$INFO[Container(211).ListItem.Property(tilecolor)]</value>
         <value>$VAR[HighlightColor]</value>
     </variable>
+    <include name="Defs_SideLabel">
+        <param name="Label" default="$VAR[Label_SideLabel]" />
+        <definition>
+            <!-- <control type="label">
+                <right>-726</right>
+                <top>-10</top>
+                <height>64</height>
+                <width>700</width>
+                <align>left</align>
+                <angle>270</angle>
+                <font>Font-WidgetInfoTitle</font>
+                <label>[UPPERCASE]$PARAM[Label][/UPPERCASE]</label>
+                <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
+            </control> -->
+        </definition>
+    </include>
     <include name="Defs_ViewBackground">
         <left>sidepad</left>
         <right>sidepad</right>
         <top>top</top>
         <height>height</height>
         <include>Animation_Common</include>
-
+        <include content="Defs_SideLabel">
+            <param name="Label" value="$VAR[Label_SideLabel]" />
+        </include>
     </include>
     <include name="Defs_InfoBackground">
         <left>sidepad</left>
@@ -110,6 +128,9 @@
         <top>top</top>
         <height>height</height>
         <include>Animation_Info</include>
+        <include content="Defs_SideLabel">
+            <param name="Label" value="$LOCALIZE[19033]" />
+        </include>
     </include>
     <include name="Defs_Shortcuts_SetHub">
         <control type="button" id="$PARAM[buttonid2]" description="Set HUB WIDGET">

@@ -5,7 +5,7 @@
     <defaultcontrol always="true">8001</defaultcontrol>
     <onload condition="IsEmpty(Skin.String(home.mainheadertext))">Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onload>
     <onload condition="IsEmpty(Skin.String(home.headertext))">Skin.SetString(home.headertext,$LOCALIZE[10000])</onload>
-    <onload condition="IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onload>
+    <onload condition="IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onload>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|powermenu)</onunload>
     <controls>
         <include>Furniture_Background</include>
@@ -937,7 +937,7 @@
                         <onclick>Skin.ResetSettings</onclick>
                         <onclick>Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onclick>
                         <onclick>Skin.SetString(home.headertext,$LOCALIZE[10000])</onclick>
-                        <onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
+                        <onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
                         <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>

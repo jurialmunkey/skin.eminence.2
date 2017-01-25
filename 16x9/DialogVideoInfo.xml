@@ -349,6 +349,7 @@
                             <onclick>SetFocus(9500)</onclick>
                             <include>Defs_OptionButton2</include>
                             <onfocus>ClearProperty(list)</onfocus>
+                            <visible>!IsEmpty(ListItem.Director)</visible>
                         </control>
                         <!-- Refresh Button -->
                         <control type="button" id="6">
