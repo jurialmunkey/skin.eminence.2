@@ -269,8 +269,22 @@
                 <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
+                <texture colordiffuse="LineLabel"  fallback="indicator/fallback.png">$INFO[ListItem.VideoCodec,indicator/source/,.png]</texture>
+                <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+            </control>
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
                 <visible>!IsEmpty(ListItem.AudioChannels)</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
+            </control>
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioCodec,indicator/audio/,.png]</texture>
             </control>
             <!-- <control type="image">
                 <width>95</width>
