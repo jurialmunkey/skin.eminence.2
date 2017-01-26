@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <controls>
-        <include>GlobalOverlay</include>
+        <control type="group">
+            <visible>!Window.IsVisible(DialogSlider.xml)</visible>
+            <include>GlobalOverlay</include>
+        </control>
         <control type="group">
             <visible>!Window.IsVisible(DialogSlider.xml)</visible>
             <top>dialogtop</top>
