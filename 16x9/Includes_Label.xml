@@ -70,6 +70,8 @@
     </variable>
 
     <variable name="Label_OverlayPlot">
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)">$INFO[Window.Property(Plot)]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$INFO[Window.Property(Biography)]</value>
         <value condition="!IsEmpty(ListItem.Property(Artist_Description))">$VAR[Label_Plot]</value>
         <value condition="!IsEmpty(ListItem.Property(Album_Description))">$VAR[Label_Plot]</value>
         <value condition="!IsEmpty(ListItem.AddonDescription)">$VAR[Label_Plot]</value>
@@ -80,6 +82,8 @@
     </variable>
 
     <variable name="Label_OverlayTitle">
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)">$INFO[Window.Property(Title)]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$INFO[Window.Property(Label)]</value>
         <value condition="[Container.Content(episodes) | Container.Content(seasons)] + !IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]</value>
         <value condition="!IsEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
         <value condition="!IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>

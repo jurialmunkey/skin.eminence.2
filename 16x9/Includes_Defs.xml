@@ -4,7 +4,7 @@
         <value condition="!IsEmpty(Skin.String(SkinHelper.SpinnerTexturePath)) + !IsEmpty(Skin.String(SkinHelper.SpinnerTexture)) + !StringCompare(Skin.String(SkinHelper.SpinnerTexturePath),None)">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</value>
         <value>special://skin/extras/busy_spinners/Default</value>
     </variable>
-    <include name="Defs_OptionButton">
+    <include name="Defs_OptionButton_Basic">
         <width>364</width>
         <height>72</height>
         <textcolor>ListLabel</textcolor>
@@ -15,26 +15,33 @@
         <aligny>center</aligny>
         <textoffsetx>bigpad</textoffsetx>
         <radioposx>320</radioposx>
+    </include>
+    <include name="Defs_OptionButton">
+        <include>Defs_OptionButton_Basic</include>
         <!-- <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus> -->
         <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
         <!-- <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus> -->
         <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
     </include>
     <include name="Defs_OptionButton2">
-        <width>364</width>
-        <height>72</height>
-        <textcolor>ListLabel</textcolor>
-        <alttextcolor>Selected</alttextcolor>
-        <selectedcolor>Selected</selectedcolor>
-        <focusedcolor>Selected</focusedcolor>
-        <font>Font-ListInfo-Small</font>
-        <aligny>center</aligny>
-        <textoffsetx>bigpad</textoffsetx>
-        <radioposx>320</radioposx>
+        <include>Defs_OptionButton_Basic</include>
         <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
         <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
         <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
         <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+    </include>
+    <include name="Defs_OptionButton_Circle">
+        <height>64</height>
+        <width>64</width>
+        <textcolor>00ffffff</textcolor>
+        <alttextcolor>00ffffff</alttextcolor>
+        <selectedcolor>00ffffff</selectedcolor>
+        <focusedcolor>00ffffff</focusedcolor>
+        <include>Defs_OptionButton_Basic</include>
+        <texturenofocus colordiffuse="PosterBorder">common/circle.png</texturenofocus>
+        <texturefocus colordiffuse="$VAR[HighlightColor]">common/circle.png</texturefocus>
+        <alttexturenofocus colordiffuse="PosterBorder">common/circle.png</alttexturenofocus>
+        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/circle.png</alttexturefocus>
     </include>
     <include name="Defs_OSDButton">
         <width>230</width>

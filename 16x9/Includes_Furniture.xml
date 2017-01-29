@@ -249,6 +249,7 @@
         </control>
         <control type="grouplist">
             <visible>Skin.HasSetting(furniture.showflags)</visible>
+            <visible>![Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)]</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <bottom>6</bottom>

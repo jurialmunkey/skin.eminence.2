@@ -184,7 +184,7 @@
                     </control>
                     <control type="grouplist">
                         <visible>ControlGroup(9000).HasFocus()</visible>
-                        <bottom>74</bottom>
+                        <bottom>-25</bottom>
                         <left>-20</left>
                         <right>-20</right>
                         <height>128</height>
@@ -212,7 +212,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <width>203.4</width>
+                            <width>223.4</width>
                             <height>100%</height>
                             <visible>!IsEmpty(Window.Property(mpaa))</visible>
                             <control type="label">
@@ -296,12 +296,13 @@
                     <control type="grouplist" id="9000">
                         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
                         <width>100%</width>
-                        <bottom>30</bottom>
-                        <height>69</height>
+                        <bottom>128</bottom>
+                        <height>64</height>
+                        <usecontrolcoords>true</usecontrolcoords>
                         <align>center</align>
                         <itemgap>pad</itemgap>
                         <orientation>horizontal</orientation>
-                        <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                        <onup>9601</onup>
                         <control type="button" id="9999">
                             <visible allowhiddenfocus="true">false</visible>
                             <onback>SetProperty(extinfo,1,home)</onback>
@@ -316,101 +317,218 @@
                             <description>Play</description>
                             <label>208</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <visible>!IsEmpty(Window.Property(DBID)) + !Stringcompare(Window.Property(Type),tvshow)</visible>
                             <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
                             <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
+                        </control>
+                        <control type="image" id="9901">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/play.png</texture>
+                            <visible>Control.IsVisible(8)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(8)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9902">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(8), ,     ]</label>
+                            <visible>Control.IsVisible(8)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(8)" time="0" start="100" end="25">Conditional</animation>
                         </control>
 
                         <control type="button" id ="120">
                             <description>Browse</description>
                             <label>21385</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <visible>!IsEmpty(Window.Property(DBID)) + Stringcompare(Window.Property(Type),tvshow)</visible>
                             <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
                             <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
+                        </control>
+                        <control type="image" id="9903">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/filebox.png</texture>
+                            <visible>Control.IsVisible(120)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(120)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9904">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(120), ,     ]</label>
+                            <visible>Control.IsVisible(120)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(120)" time="0" start="100" end="25">Conditional</animation>
                         </control>
 
                         <control type="button" id ="9002">
                             <description>Cast</description>
                             <label>206</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <onclick>SetProperty(content,1000)</onclick>
                             <onclick>SetFocus(1000)</onclick>
                             <enable>IntegerGreaterThan(Container(1000).NumItems,0)</enable>
+                        </control>
+                        <control type="image" id="9905">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/actor.png</texture>
+                            <visible>Control.IsVisible(9002)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9002)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9906">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9002), ,     ]</label>
+                            <visible>Control.IsVisible(9002)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9002)" time="0" start="100" end="25">Conditional</animation>
                         </control>
 
                         <control type="button" id ="9003">
                             <description>Similar</description>
                             <label>31107</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <onclick>SetProperty(content,150)</onclick>
                             <onclick>SetFocus(150)</onclick>
                             <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
                         </control>
+                        <control type="image" id="9907">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/diamond.png</texture>
+                            <visible>Control.IsVisible(9003)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9003)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9908">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9003), ,     ]</label>
+                            <visible>Control.IsVisible(9003)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9003)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+
                         <control type="button" id ="9004">
                             <description>Youtube</description>
                             <label>31108</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <onclick>SetProperty(content,350)</onclick>
                             <onclick>SetFocus(350)</onclick>
                             <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
                         </control>
+                        <control type="image" id="9909">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/youtube.png</texture>
+                            <visible>Control.IsVisible(9004)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9004)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9910">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9004), ,     ]</label>
+                            <visible>Control.IsVisible(9004)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9004)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+
                         <control type="button" id ="9005">
                             <description>Crew</description>
                             <label>$ADDON[script.extendedinfo 32115]</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <onclick>SetProperty(content,750)</onclick>
                             <onclick>SetFocus(750)</onclick>
                             <enable>IntegerGreaterThan(Container(750).NumItems,0)</enable>
                         </control>
+                        <control type="image" id="9911">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/artist.png</texture>
+                            <visible>Control.IsVisible(9005)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9005)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9912">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9005), ,     ]</label>
+                            <visible>Control.IsVisible(9005)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9005)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+
                         <control type="button" id ="9006">
                             <description>Genres</description>
                             <label>135</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <onclick>SetProperty(content,850)</onclick>
                             <onclick>SetFocus(850)</onclick>
                             <enable>IntegerGreaterThan(Container(850).NumItems,0)</enable>
                         </control>
-                        <control type="button" id ="9007">
+                        <control type="image" id="9913">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/genre.png</texture>
+                            <visible>Control.IsVisible(9006)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9006)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9914">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9006), ,     ]</label>
+                            <visible>Control.IsVisible(9006)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9006)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+
+                        <!-- <control type="button" id ="9007">
                             <description>Keywords</description>
                             <label>$ADDON[script.extendedinfo 32114]</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <onclick>SetProperty(content,950)</onclick>
                             <onclick>SetFocus(950)</onclick>
                             <enable>IntegerGreaterThan(Container(950).NumItems,0)</enable>
                         </control>
+                        <control type="image" id="9915">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/tags.png</texture>
+                            <visible>Control.IsVisible(9007)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9007)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9916">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9007), ,     ]</label>
+                            <visible>Control.IsVisible(9007)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9007)" time="0" start="100" end="25">Conditional</animation>
+                        </control> -->
+
                         <control type="button" id="9998">
                             <visible allowhiddenfocus="true">false</visible>
                             <onback>SetProperty(extinfo,1,home)</onback>
@@ -530,6 +648,7 @@
             <control type="list" id="1350"><visible>false</visible></control>
             <control type="list" id="1450"><visible>false</visible></control>
         </control>
+        <include>Furniture_DialogInfoOverlay</include>
     </controls>
 
 </window>

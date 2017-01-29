@@ -1,3 +1,6 @@
+[B]2.5.24[/B]
+Tweaks to buttons in info dialogs
+
 [B]2.5.23[/B]
 Add Plain list for views that have no artwork
 Add option in Skin Settings > Panels to disable additional info labels in lists

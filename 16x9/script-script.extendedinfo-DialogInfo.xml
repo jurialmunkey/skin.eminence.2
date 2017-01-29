@@ -101,7 +101,7 @@
                     </control>
                     <control type="grouplist">
                         <visible>ControlGroup(9000).HasFocus()</visible>
-                        <bottom>74</bottom>
+                        <bottom>-25</bottom>
                         <left>-20</left>
                         <right>-20</right>
                         <height>128</height>
@@ -175,13 +175,14 @@
                         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
                         <left>pad</left>
                         <width>100%</width>
-                        <bottom>30</bottom>
-                        <height>69</height>
+                        <bottom>128</bottom>
+                        <height>64</height>
                         <align>center</align>
                         <itemgap>pad</itemgap>
                         <onright>noop</onright>
                         <orientation>horizontal</orientation>
-                        <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <onup>9601</onup>
 
                         <control type="button" id="9999">
                             <visible allowhiddenfocus="true">false</visible>
@@ -195,51 +196,110 @@
 
                         <!-- Movies -->
                         <control type="button" id="9001">
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <label>$ADDON[script.extendedinfo 32010]</label>
                             <onclick>SetProperty(content,150)</onclick>
                             <onclick>SetFocus(150)</onclick>
                             <font>Font-ListInfo-Small-Bold</font>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
                         </control>
+                        <control type="image" id="9901">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/film.png</texture>
+                            <visible>Control.IsVisible(9001)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9001)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9902">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9001), ,     ]</label>
+                            <visible>Control.IsVisible(9001)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9001)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        
                         <!-- TvShows -->
                         <control type="button" id="9002">
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <label>20343</label>
                             <onclick>SetProperty(content,250)</onclick>
                             <onclick>SetFocus(250)</onclick>
                             <font>Font-ListInfo-Small-Bold</font>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <enable>IntegerGreaterThan(Container(250).NumItems,0)</enable>
                         </control>
+                        <control type="image" id="9903">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/tv.png</texture>
+                            <visible>Control.IsVisible(9002)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9002)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9904">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9002), ,     ]</label>
+                            <visible>Control.IsVisible(9002)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9002)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+
                         <!-- YouTube -->
                         <control type="button" id="9003">
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <label>$ADDON[script.extendedinfo 32118]</label>
                             <onclick>SetProperty(content,350)</onclick>
                             <onclick>SetFocus(350)</onclick>
                             <font>Font-ListInfo-Small-Bold</font>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
                         </control>
+                        <control type="image" id="9905">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/youtube.png</texture>
+                            <visible>Control.IsVisible(9003)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9003)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9906">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9003), ,     ]</label>
+                            <visible>Control.IsVisible(9003)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9003)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+
                         <!-- As Crew -->
                         <control type="button" id="9004">
-                            <width>auto</width>
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <label>$ADDON[script.extendedinfo 32115]</label>
                             <onclick>SetProperty(content,550)</onclick>
                             <onclick>SetFocus(550)</onclick>
                             <font>Font-ListInfo-Small-Bold</font>
                             <onfocus>ClearProperty(content)</onfocus>
-                            <include>Defs_OptionButton2</include>
+                            <include>Defs_OptionButton_Circle</include>
                             <enable>IntegerGreaterThan(Container(550).NumItems,0)</enable>
+                        </control>
+                        <control type="image" id="9907">
+                            <width>64</width>
+                            <height>64</height>
+                            <left>-74</left>
+                            <texture colordiffuse="Selected">special://skin/extras/icons/actor.png</texture>
+                            <visible>Control.IsVisible(9004)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9004)" time="0" start="100" end="25">Conditional</animation>
+                        </control>
+                        <control type="label" id="9908">
+                            <width>auto</width>
+                            <font>Font-LineLabel</font>
+                            <label>$INFO[Control.GetLabel(9004), ,     ]</label>
+                            <visible>Control.IsVisible(9004)</visible>
+                            <animation effect="fade" condition="!Control.IsEnabled(9004)" time="0" start="100" end="25">Conditional</animation>
                         </control>
 
                         <control type="button" id="9998">
@@ -312,6 +372,7 @@
             <control type="list" id="650"><visible>false</visible></control>
             <control type="list" id="750"><visible>false</visible></control>
         </control>
+        <include>Furniture_DialogInfoOverlay</include>
     </controls>
 
 </window>
