@@ -101,7 +101,7 @@
                     </control>
                     <control type="grouplist">
                         <visible>ControlGroup(9000).HasFocus()</visible>
-                        <bottom>-25</bottom>
+                        <bottom>74</bottom>
                         <left>-20</left>
                         <right>-20</right>
                         <height>128</height>
@@ -175,7 +175,7 @@
                         <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
                         <left>pad</left>
                         <width>100%</width>
-                        <bottom>128</bottom>
+                        <bottom>30</bottom>
                         <height>64</height>
                         <align>center</align>
                         <itemgap>pad</itemgap>
