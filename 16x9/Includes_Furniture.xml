@@ -321,6 +321,20 @@
             </control>
             <control type="image">
                 <width>64</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <texture colordiffuse="LineLabel">indicator/tv.png</texture>
+                <visible>substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr) | substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,satrip) | substring(ListItem.FilenameAndPath,dthrip) | substring(ListItem.FilenameAndPath,dvbrip) | substring(ListItem.FilenameAndPath,tvrip)</visible>
+            </control>
+            <control type="image">
+                <width>64</width>
+                <centertop>50%</centertop>
+                <height>64</height>
+                <texture colordiffuse="LineLabel">indicator/web-dl.png</texture>
+                <visible>substring(ListItem.FilenameAndPath,web-dl) | substring(ListItem.FilenameAndPath,webdl) | substring(ListItem.FilenameAndPath,web-rip) | substring(ListItem.FilenameAndPath,webrip) | substring(ListItem.FilenameAndPath,web dl) | substring(ListItem.FilenameAndPath,web rip)</visible>
+            </control>
+            <control type="image">
+                <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <visible>ListItem.IsStereoscopic</visible>

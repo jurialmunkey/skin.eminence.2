@@ -1,5 +1,6 @@
 [B]2.5.24[/B]
 Tweaks to buttons in info dialogs
+Add additional web-dl and tv source flags
 
 [B]2.5.23[/B]
 Add Plain list for views that have no artwork

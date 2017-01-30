@@ -328,4 +328,9 @@
         <value condition="!IsEmpty(Skin.String(StartupPlaylist))">$INFO[Skin.String(StartupPlaylist)]</value>
         <value>$LOCALIZE[31189]</value>
     </variable>
+    
+    <variable name="Label_VideoHWDecoder">
+        <value condition="Player.Process(videohwdecoder)">HW</value>
+        <value>SW</value>
+    </variable>
 </includes>

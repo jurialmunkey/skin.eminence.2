@@ -793,3 +793,11 @@ msgstr ""
 msgctxt "#31215"
 msgid "Plain list"
 msgstr ""
+
+msgctxt "#31216"
+msgid "Video decoder"
+msgstr ""
+
+msgctxt "#31217"
+msgid "Pixel format"
+msgstr ""

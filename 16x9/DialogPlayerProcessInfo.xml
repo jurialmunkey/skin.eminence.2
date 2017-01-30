@@ -136,7 +136,7 @@
                     <width>1600</width>
                     <height>50</height>
                     <aligny>bottom</aligny>
-                    <label>$INFO[Player.Process(videodecoder),[COLOR Selected]$LOCALIZE[31139]:[/COLOR] ]$VAR[VideoHWDecoder, (,)]</label>
+                    <label>$INFO[Player.Process(videodecoder),[COLOR Selected]$LOCALIZE[31216]:[/COLOR] ]$VAR[Label_VideoHWDecoder, (,)]</label>
                     <font>Font-ListInfo</font>
 
                     <visible>Player.HasVideo</visible>
@@ -145,7 +145,7 @@
                     <width>1600</width>
                     <height>50</height>
                     <aligny>bottom</aligny>
-                    <label>$INFO[Player.Process(pixformat),[COLOR Selected]$LOCALIZE[31140]:[/COLOR] ]</label>
+                    <label>$INFO[Player.Process(pixformat),[COLOR Selected]$LOCALIZE[31217]:[/COLOR] ]</label>
                     <font>Font-ListInfo</font>
 
                     <visible>Player.HasVideo</visible>
