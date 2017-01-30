@@ -201,125 +201,43 @@
                         <control type="button" id="12">
                             <label>518</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(12)</visible>
                         </control>
-                        <control type="image" id="9901">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/rocket.png</texture>
-                            <visible>Control.IsVisible(12)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(12)">Conditional</animation>
-                        </control>
-                        <control type="label" id="9902">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(12), ,     ]</label>
-                            <visible>Control.IsVisible(12)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(12)">Conditional</animation>
-                        </control>
+                    
 
                         <!-- Configure Addon Button -->
                         <control type="button" id="9">
                             <label>24020</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(9)</visible>
                         </control>
-                        <control type="image" id="9903">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/wand.png</texture>
-                            <visible>Control.IsVisible(9)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(9)">Conditional</animation>
-                        </control>
-                        <control type="label" id="9904">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(9), ,     ]</label>
-                            <visible>Control.IsVisible(9)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(9)">Conditional</animation>
-                        </control>
+                    
 
                         <!-- Update Addon Button -->
                         <control type="button" id="8">
                             <label>24069</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(8)</visible>
                         </control>
-                        <control type="image" id="9905">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/update.png</texture>
-                            <visible>Control.IsVisible(8)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(8)">Conditional</animation>
-                        </control>
-                        <control type="label" id="9906">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(8), ,     ]</label>
-                            <visible>Control.IsVisible(8)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(8)">Conditional</animation>
-                        </control>
+                    
 
                         <!-- Install/UnInstall Addon button -->
                         <control type="button" id="6">
                             <label>24022</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(6)</visible>
-                        </control>
-                        <control type="image" id="9907">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/uninstall.png</texture>
-                            <visible>Control.IsVisible(6)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(6)">Conditional</animation>
-                        </control>
-                        <control type="label" id="9908">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(6), ,     ]</label>
-                            <visible>Control.IsVisible(6)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(6)">Conditional</animation>
                         </control>
 
                         <!-- Enable/Disable Addon button -->
                         <control type="button" id="7">
                             <label>24021</label>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(7)</visible>
-                        </control>
-                        <control type="image" id="9909">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/forbidden.png</texture>
-                            <visible>Control.IsVisible(7)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(7)">Conditional</animation>
-                            <visible>StringCompare(Control.GetLabel(7),$LOCALIZE[24021])</visible>
-                        </control>
-                        <control type="image" id="9910">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/enabled.png</texture>
-                            <visible>Control.IsVisible(7)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(7)">Conditional</animation>
-                            <visible>StringCompare(Control.GetLabel(7),$LOCALIZE[24022])</visible>
-                        </control>
-                        <control type="label" id="9911">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(7), ,     ]</label>
-                            <visible>Control.IsVisible(7)</visible>
-                            <animation effect="fade" start="100" end="25" condition="!Control.IsEnabled(7)">Conditional</animation>
                         </control>
                     </control>
                 </control>

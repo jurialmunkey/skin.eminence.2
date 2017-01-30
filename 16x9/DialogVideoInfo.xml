@@ -317,127 +317,55 @@
                             <label>208</label>
                             <altlabel>1024</altlabel>
                             <usealttexture>Container.Content(TVShows)</usealttexture>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
-                        <control type="image" id="9901">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/play.png</texture>
-                            <visible>Control.IsVisible(8)</visible>
-                        </control>
-                        <control type="label" id="9902">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(8), ,     ]</label>
-                            <visible>Control.IsVisible(8)</visible>
-                        </control>
+
 
                         <!-- Trailer Button -->
                         <control type="button" id="11">
                             <label>20410</label>
                             <visible>!IsEmpty(ListItem.Trailer)</visible>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
-                        <control type="image" id="9903">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/video.png</texture>
-                            <visible>Control.IsVisible(11)</visible>
-                        </control>
-                        <control type="label" id="9904">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(11), ,     ]</label>
-                            <visible>Control.IsVisible(11)</visible>
-                        </control>
+                        
 
                         <!-- Cast Button -->
                         <control type="button" id="5">
                             <label>206</label>
                             <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(51)</onclick>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
-                        <control type="image" id="9905">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/actor.png</texture>
-                            <visible>Control.IsVisible(5)</visible>
-                        </control>
-                        <control type="label" id="9906">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(5), ,     ]</label>
-                            <visible>Control.IsVisible(5)</visible>
-                        </control>
+                        
 
                         <!-- Director Button -->
                         <control type="button" id="9001">
                             <label>20339</label>
                             <onclick>SetProperty(list,Director)</onclick>
                             <onclick>SetFocus(9500)</onclick>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                             <visible>!IsEmpty(ListItem.Director)</visible>
                         </control>
-                        <control type="image" id="9907">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/artist.png</texture>
-                            <visible>Control.IsVisible(9001)</visible>
-                        </control>
-                        <control type="label" id="9908">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(9001), ,     ]</label>
-                            <visible>Control.IsVisible(9001)</visible>
-                        </control>
+                        
 
                         <!-- Get Thumb Button -->
                         <control type="button" id="10">
                             <label>13511</label>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
-                        <control type="image" id="9915">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/paintbrush.png</texture>
-                            <visible>Control.IsVisible(10)</visible>
-                        </control>
-                        <control type="label" id="9916">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(10), ,     ]</label>
-                            <visible>Control.IsVisible(10)</visible>
-                        </control>
+                        
 
                         <!-- Refresh Button -->
                         <control type="button" id="6">
                             <label>184</label>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
-                        <control type="image" id="9909">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/update.png</texture>
-                            <visible>Control.IsVisible(6)</visible>
-                        </control>
-                        <control type="label" id="9910">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(6), ,     ]</label>
-                            <visible>Control.IsVisible(6)</visible>
-                        </control>
+                        
 
                         <!-- Artwork Downloader Button -->
                         <!-- <control type="button" id="20">
@@ -445,22 +373,10 @@
                             <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                             <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
                             <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
-                        <control type="image" id="9911">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/paintbucket2.png</texture>
-                            <visible>Control.IsVisible(20)</visible>
-                        </control>
-                        <control type="label" id="9912">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(20), ,     ]</label>
-                            <visible>Control.IsVisible(20)</visible>
-                        </control> -->
+                        -->
 
                         <!-- Cinema Experience Button -->
                         <!-- <control type="button" id="21">
@@ -468,22 +384,10 @@
                             <onclick>Dialog.Close(MovieInformation)</onclick>
                             <onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
                             <visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
-                            <include>Defs_OptionButton_Circle</include>
+                            <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
-                        <control type="image" id="9913">
-                            <width>64</width>
-                            <height>64</height>
-                            <left>-74</left>
-                            <texture colordiffuse="Selected">special://skin/extras/icons/film.png</texture>
-                            <visible>Control.IsVisible(21)</visible>
-                        </control>
-                        <control type="label" id="9914">
-                            <width>auto</width>
-                            <font>Font-LineLabel</font>
-                            <label>$INFO[Control.GetLabel(21), ,     ]</label>
-                            <visible>Control.IsVisible(21)</visible>
-                        </control> -->
+                        -->
                     </control>
 
                     <!-- CAST -->
