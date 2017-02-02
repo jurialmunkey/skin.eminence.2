@@ -361,10 +361,20 @@
         <control type="textbox">
             <left>pad</left>
             <right>pad</right>
+            <height>158</height>
+            <font>Font-ListInfo</font>
+            <align>left</align>
+            <label fallback="31092">$VAR[Label_Plot]</label>
+            <visible>Skin.HasSetting(furniture.showflags)</visible>
+        </control>
+        <control type="textbox">
+            <left>pad</left>
+            <right>pad</right>
             <height>120</height>
             <font>Font-ListInfo</font>
             <align>left</align>
             <label fallback="31092">$VAR[Label_Plot]</label>
+            <visible>!Skin.HasSetting(furniture.showflags)</visible>
         </control>
         <control type="label">
             <left>pad</left>
@@ -372,6 +382,7 @@
             <height>20</height>
             <align>right</align>
             <font>Font-ListInfo-Small-Bold</font>
+            <visible>!Skin.HasSetting(furniture.showflags)</visible>
             <label fallback="31203">$VAR[Label_ExtraInfo_Icons]</label>
         </control>
     </include>
@@ -429,6 +440,7 @@
                             <align>right</align>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>$VAR[Label_ExtraInfo_Icons]</label>
+                            <visible>!Skin.HasSetting(furniture.showflags)</visible>
                         </control>
                         <control type="label">
                             <left>pad</left>

@@ -1,3 +1,7 @@
+[B]2.5.26[/B]
+Add additional media flags
+Hide extrainfo in info boxes if media flags enabled
+
 [B]2.5.25[/B]
 Revert info dialog buttons
 

@@ -171,6 +171,16 @@
                     <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
                 </control>
                 <control type="textbox">
+                    <top>16</top>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <height>190</height>
+                    <font>Font-ListInfo</font>
+                    <align>left</align>
+                    <label>$VAR[Label_Plot]</label>
+                    <visible>Skin.HasSetting(furniture.showflags)</visible>
+                </control>
+                <control type="textbox">
                     <top>7</top>
                     <left>pad</left>
                     <right>pad</right>
@@ -178,6 +188,7 @@
                     <font>Font-ListInfo</font>
                     <align>left</align>
                     <label>$VAR[Label_Plot]</label>
+                    <visible>!Skin.HasSetting(furniture.showflags)</visible>
                 </control>
                 <control type="label">
                     <top>13</top>
@@ -187,6 +198,7 @@
                     <align>right</align>
                     <font>Font-ListInfo-Small-Bold</font>
                     <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    <visible>!Skin.HasSetting(furniture.showflags)</visible>
                 </control>
             </control>
         </control>
