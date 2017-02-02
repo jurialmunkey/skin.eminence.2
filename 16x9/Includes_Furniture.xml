@@ -352,9 +352,9 @@
                 <visible>!IsEmpty(ListItem.MPAA)</visible>
                 <control type="image">
                     <centerleft>50%</centerleft>
-                    <centertop>53%</centertop>
+                    <top>20</top>
                     <width>90</width>
-                    <height>28</height>
+                    <height>29</height>
                     <texture colordiffuse="LineLabel" border="8">indicator/rating.png</texture>
                 </control>
                 <control type="label">
