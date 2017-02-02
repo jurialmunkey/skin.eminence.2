@@ -354,7 +354,7 @@
                     <width>100%</width>
                     <height>100%</height>
                     <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="LineLabel" fallback="indicator/mpaa/rated.png">[LOWERCASE]$INFO[ListItem.MPAA,indicator/mpaa/,.png][/LOWERCASE]</texture>
+                    <texture colordiffuse="LineLabel" fallback="indicator/mpaa/Rated.png">$INFO[ListItem.MPAA,indicator/mpaa/,.png]</texture>
                 </control>
             </control>
             <control type="group">
