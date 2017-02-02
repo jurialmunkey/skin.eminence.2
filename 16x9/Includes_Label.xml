@@ -333,4 +333,41 @@
         <value condition="Player.Process(videohwdecoder)">HW</value>
         <value>SW</value>
     </variable>
+
+    <variable name="Label_MPAA">
+        <value condition="stringcompare(ListItem.MPAA,0)">FSK-0</value>
+        <value condition="stringcompare(ListItem.MPAA,6)">FSK-6</value>
+        <value condition="stringcompare(ListItem.MPAA,12A)">12A</value>
+        <value condition="stringcompare(ListItem.MPAA,12)">12</value>
+        <value condition="stringcompare(ListItem.MPAA,15)">15</value>
+        <value condition="stringcompare(ListItem.MPAA,16)">FSK-16</value>
+        <value condition="stringcompare(ListItem.MPAA,18)">18</value>
+        <value condition="stringcompare(ListItem.MPAA,t)">T</value>
+        <value condition="stringcompare(ListItem.MPAA,u)">U</value>
+        <value condition="stringcompare(ListItem.MPAA,uc)">UC</value>
+        <value condition="stringcompare(ListItem.MPAA,vm14)">VM14</value>
+        <value condition="stringcompare(ListItem.MPAA,pg-13)">PG-13</value>
+        <value condition="stringcompare(ListItem.MPAA,pg)">PG</value>
+        <value condition="stringcompare(ListItem.MPAA,g)">G</value>
+        <value condition="stringcompare(ListItem.MPAA,ma)">MA15+</value>
+        <value condition="stringcompare(ListItem.MPAA,m)">M</value>
+        <value condition="stringcompare(ListItem.MPAA,nc)">NC-17</value>
+        <value condition="stringcompare(ListItem.MPAA,r)">R</value>
+        <value condition="stringcompare(ListItem.MPAA,r18)">R18</value>
+        <value condition="substring(ListItem.MPAA,rated pg-13)">PG-13</value>
+        <value condition="substring(ListItem.MPAA,rated pg)">PG</value>
+        <value condition="substring(ListItem.MPAA,rated g)">G</value>
+        <value condition="substring(ListItem.MPAA,rated ma)">MA15+</value>
+        <value condition="substring(ListItem.MPAA,rated m)">M</value>
+        <value condition="substring(ListItem.MPAA,rated nc)">NC-17</value>
+        <value condition="substring(ListItem.MPAA,rated r18)">R18</value>
+        <value condition="substring(ListItem.MPAA,rated r)">R</value>
+        <value condition="substring(ListItem.MPAA,tv-14)">TV-14</value>
+        <value condition="substring(ListItem.MPAA,tv-g)">TV-G</value>
+        <value condition="substring(ListItem.MPAA,tv-ma)">TV-MA</value>
+        <value condition="substring(ListItem.MPAA,tv-pg)">TV-PG</value>
+        <value condition="substring(ListItem.MPAA,tv-y7)">TV-Y7</value>
+        <value condition="substring(ListItem.MPAA,tv-y)">TV-Y</value>
+        <value>NR</value>
+    </variable>
 </includes>
