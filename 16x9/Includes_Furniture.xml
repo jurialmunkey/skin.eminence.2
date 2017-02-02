@@ -346,18 +346,28 @@
                 <visible>ListItem.IsStereoscopic</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
             </control>
-            <control type="button">
-                <centertop>52%</centertop>
-                <width>90</width>
-                <height>28</height>
-                <texturefocus colordiffuse="LineLabel" border="8">indicator/rating.png</texturefocus>
-                <texturenofocus colordiffuse="LineLabel" border="8">indicator/rating.png</texturenofocus>
-                <textcolor>LineLabel</textcolor>
-                <font>Font-LineLabel</font>
-                <aligny>center</aligny>
-                <align>center</align>
-                <label fallback="NR">$VAR[Label_MPAA]</label>
+            <control type="group">
+                <width>100</width>
+                <height>64</height>
                 <visible>!IsEmpty(ListItem.MPAA)</visible>
+                <control type="image">
+                    <centerleft>50%</centerleft>
+                    <centertop>53%</centertop>
+                    <width>90</width>
+                    <height>28</height>
+                    <texture colordiffuse="LineLabel" border="8">indicator/rating.png</texture>
+                </control>
+                <control type="label">
+                    <centerleft>50%</centerleft>
+                    <width>90</width>
+                    <height>64</height>
+                    <top>2</top>
+                    <textcolor>LineLabel</textcolor>
+                    <font>Font-LineLabel</font>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <label fallback="NR">$VAR[Label_MPAA]</label>
+                </control>
             </control>
             <control type="group">
                 <width>32</width>
@@ -465,6 +475,7 @@
                 </control>
             </control>
             <control type="group">
+                <left>-8</left>
                 <width>80</width>
                 <height>64</height>
                 <visible>!IsEmpty(ListItem.Rating)</visible>
