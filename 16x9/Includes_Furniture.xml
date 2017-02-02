@@ -299,18 +299,6 @@
                 <visible>!IsEmpty(ListItem.AudioCodec)</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioCodec,indicator/audio/,.png]</texture>
             </control>
-            <control type="group">
-                <width>87</width>
-                <height>40</height>
-                <visible>!IsEmpty(ListItem.MPAA)</visible>
-                <control type="image">
-                    <top>14</top>
-                    <width>100%</width>
-                    <height>100%</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="LineLabel" fallback="indicator/mpaa/Rated.png">$INFO[ListItem.MPAA,indicator/mpaa/,.png]</texture>
-                </control>
-            </control>
             <control type="image">
                 <width>64</width>
                 <height>64</height>
@@ -356,6 +344,18 @@
                 <aspectratio>keep</aspectratio>
                 <visible>ListItem.IsStereoscopic</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
+            </control>
+            <control type="group">
+                <width>87</width>
+                <height>40</height>
+                <visible>!IsEmpty(ListItem.MPAA)</visible>
+                <control type="image">
+                    <top>14</top>
+                    <width>100%</width>
+                    <height>100%</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="LineLabel" fallback="indicator/mpaa/Rated.png">$INFO[ListItem.MPAA,indicator/mpaa/,.png]</texture>
+                </control>
             </control>
             <control type="group">
                 <width>32</width>
