@@ -410,15 +410,16 @@
         </control>
     </include>
     <include name="MovieShowcaseThumb">
-        <left>-4</left>
-        <top>-16</top>
-        <width>320</width>
-        <height>440</height>
+        <left>-6</left>
+        <top>-18</top>
+        <width>324</width>
+        <height>444</height>
         <align>center</align>
         <aspectratio scalediffuse="false">scale</aspectratio>
-        <fadetime>100</fadetime>
-        <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-        <bordersize>20</bordersize>
+        <fadetime>0</fadetime>
+        <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+        <bordersize>24</bordersize>
+        <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows_BorderTexture</include>
         <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
     </include>
     <include name="WatchedOverlayShowCase">

@@ -1,6 +1,8 @@
 [B]2.5.26[/B]
 Add additional media flags
 Hide extrainfo in info boxes if media flags enabled
+Fix showcase flicker bug
+Add missing shadows to showcase posters
 
 [B]2.5.25[/B]
 Revert info dialog buttons

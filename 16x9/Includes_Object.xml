@@ -210,6 +210,9 @@
             <animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
         </control>
     </include>
+    <include name="Object_Background_Shadows_BorderTexture">
+        <bordertexture border="32">common/24-shadow.png</bordertexture>
+    </include>
     <include name="Object_Background_Shadows">
         <top>-24</top>
         <bottom>-24</bottom>
@@ -259,7 +262,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>stretch</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Poster]</texture>
                         <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
