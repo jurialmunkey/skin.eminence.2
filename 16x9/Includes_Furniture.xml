@@ -265,58 +265,13 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <bottom>6</bottom>
-            <left>860</left>
+            <left>800</left>
             <right>bigpad</right>
             <align>right</align>
             <height>64</height>
             <orientation>horizontal</orientation>
             <itemgap>bigpad</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
-
-            <!-- Resolution -->
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
-                <visible>!IsEmpty(ListItem.VideoResolution)</visible>
-            </control>
-
-            <!-- Video Codec -->
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <texture colordiffuse="LineLabel"  fallback="indicator/fallback.png">$INFO[ListItem.VideoCodec,indicator/source/,.png]</texture>
-                <visible>!IsEmpty(ListItem.VideoCodec)</visible>
-            </control>
-
-            <!-- Audio Channels -->
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(ListItem.AudioChannels)</visible>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
-            </control>
-
-            <!-- Audio Codec -->
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(ListItem.AudioCodec)</visible>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioCodec,indicator/audio/,.png]</texture>
-            </control>
-
-            <!-- IMDB Top 250 -->
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(ListItem.Top250)</visible>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
-            </control>
 
             <!-- Bluray -->
             <control type="image">
@@ -369,6 +324,53 @@
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
             </control>
 
+            <!-- IMDB Top 250 -->
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!IsEmpty(ListItem.Top250)</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
+            </control>
+
+            <!-- Resolution -->
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
+                <visible>!IsEmpty(ListItem.VideoResolution)</visible>
+            </control>
+
+            <!-- Video Codec -->
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <texture colordiffuse="LineLabel"  fallback="indicator/fallback.png">$INFO[ListItem.VideoCodec,indicator/source/,.png]</texture>
+                <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+            </control>
+
+            <!-- Audio Channels -->
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
+            </control>
+
+            <!-- Audio Codec -->
+            <control type="image">
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioCodec,indicator/audio/,.png]</texture>
+            </control>
+
+            
+
             <!-- MPAA -->
             <control type="group">
                 <width>100</width>
@@ -397,25 +399,13 @@
             <!-- Album Artist -->
             <control type="image">
                 <left>-12</left>
-                <top>0</top>
+                <top>1</top>
                 <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="LineLabel">indicator/music.png</texture>
-                <visible>!IsEmpty(ListItem.Artist) | !IsEmpty(ListItem.Album)</visible>
+                <texture colordiffuse="LineLabel">indicator/artist.png</texture>
+                <visible>!IsEmpty(ListItem.AlbumArtist)</visible>
                 <visible>Container.Content(songs) | Container.Content(albums)</visible>
-            </control>
-            <control type="label">
-                <top>2</top>
-                <left>-20</left>
-                <height>64</height>
-                <width>auto</width>
-                <label>$INFO[ListItem.AlbumArtist]$INFO[ListItem.Album, - ,]  </label>
-                <textcolor>LineLabel</textcolor>
-                <font>Font-LineLabel</font>
-                <aligny>center</aligny>
-                <visible>!IsEmpty(ListItem.AlbumArtist) | !IsEmpty(ListItem.Album)</visible>
-                <visible>Container.Content(songs)</visible>
             </control>
             <control type="label">
                 <top>2</top>
@@ -427,8 +417,31 @@
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
                 <visible>!IsEmpty(ListItem.AlbumArtist)</visible>
-                <visible>Container.Content(albums)</visible>
+                <visible>Container.Content(songs) | Container.Content(albums)</visible>
             </control>
+            <control type="image">
+                <left>-12</left>
+                <top>1</top>
+                <width>64</width>
+                <height>64</height>
+                <aspectratio>keep</aspectratio>
+                <texture colordiffuse="LineLabel">indicator/album.png</texture>
+                <visible>!IsEmpty(ListItem.AlbumArtist) | !IsEmpty(ListItem.Album)</visible>
+                <visible>Container.Content(songs)</visible>
+            </control>
+            <control type="label">
+                <top>2</top>
+                <left>-20</left>
+                <height>64</height>
+                <width>auto</width>
+                <label>$INFO[ListItem.Album]  </label>
+                <textcolor>LineLabel</textcolor>
+                <font>Font-LineLabel</font>
+                <aligny>center</aligny>
+                <visible>!IsEmpty(ListItem.AlbumArtist) | !IsEmpty(ListItem.Album)</visible>
+                <visible>Container.Content(songs)</visible>
+            </control>
+            
 
             <!-- Duration -->
             <control type="image">
@@ -444,11 +457,12 @@
                 <top>2</top>
                 <left>-24</left>
                 <height>64</height>
-                <width>auto</width>
-                <label>$INFO[ListItem.Duration,, $LOCALIZE[31117]]  </label>
+                <width>88</width>
+                <label>$INFO[ListItem.Duration,, $LOCALIZE[31117]]</label>
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
+                <visible>!IsEmpty(ListItem.Duration)</visible>
                 <visible>!substring(ListItem.Duration,:)</visible>
             </control>
             <control type="label">
@@ -460,6 +474,7 @@
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
+                <visible>!IsEmpty(ListItem.Duration)</visible>
                 <visible>substring(ListItem.Duration,:)</visible>
             </control>
 
