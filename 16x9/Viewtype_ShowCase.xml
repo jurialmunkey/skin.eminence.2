@@ -19,7 +19,7 @@
                     <top>-545</top>
                     <left>-92.5</left>
                     <control type="group">
-                        <camera x="960" y="810" />
+                        <camera x="900" y="810" />
                         <control type="group" id="6001">
                             <left>55</left>
                             <top>570</top>
@@ -319,7 +319,7 @@
                             <control type="group">
                                 <left>758</left>
                                 <!-- Workaround for camera bug. As soon as the camera tag is applied to the group, label will be invisible -->
-                                <animation effect="rotatey" center="0" start="1" end="1" time="0" condition="true">Conditional</animation>
+                                <!-- <animation effect="rotatey" center="0" start="1" end="1" time="0" condition="true">Conditional</animation> -->
                                 <visible>!IsEmpty(Container(535).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
                                 <include>MovieShowCaseItem0</include>
                             </control>
