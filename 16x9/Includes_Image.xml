@@ -31,12 +31,12 @@
     <variable name="Image_Thumb">
         <value condition="Container.Content(episodes) | Window.IsVisible(MyPics.xml)">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!IsEmpty(Window(home).Property(SkinHelper.Music.FanArt)) + !Control.IsVisible(58)">$INFO[Window(home).Property(SkinHelper.Music.FanArt)]</value>
+        <value condition="!IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.FanArt)) + !Control.IsVisible(58)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
         <value condition="!Control.IsVisible(56)">$INFO[ListItem.Icon]</value>
     </variable>
 
     <variable name="Image_PVRThumb">
-        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
+        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.FanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
         <value>special://skin/extras/backgrounds/home.jpg</value>
     </variable>
 
@@ -145,7 +145,7 @@
         <value condition="Skin.HasSetting(background.hidefanart) + !IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!IsEmpty(Window(home).Property(SkinHelper.Music.Fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Window(home).Property(SkinHelper.Music.Fanart)]</value>
+        <value condition="!IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.FanArt)) + !Skin.HasSetting(global.fanart)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
 
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SettingsProfile.xml)">special://skin/extras/backgrounds/settings.jpg</value>
 

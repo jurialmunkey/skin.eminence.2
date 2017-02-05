@@ -94,8 +94,8 @@
                             <height>28</height>
                             <align>right</align>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesMeter),Rotten Tomatoes ,%  •  ]$INFO[ListItem.RatingAndVotes]</label>
-                            <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesMeter),N/A)</visible>
+                            <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),Rotten Tomatoes ,%  •  ]$INFO[ListItem.RatingAndVotes]</label>
+                            <visible>!StringCompare(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),N/A)</visible>
                         </control>
                         <control type="label">
                             <top>-40</top>
@@ -105,7 +105,7 @@
                             <align>right</align>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>$INFO[ListItem.RatingAndVotes]</label>
-                            <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesMeter),N/A)</visible>
+                            <visible>StringCompare(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),N/A)</visible>
                         </control>
                         <control type="textbox">
                             <top>pad</top>
@@ -114,8 +114,8 @@
                             <height max="228">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
-                            <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesConsensus),, ]$VAR[Label_Plot]</label>
-                            <visible>!StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
+                            <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),, ]$VAR[Label_Plot]</label>
+                            <visible>!StringCompare(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),N/A)</visible>
                         </control>
                         <control type="textbox">
                             <top>pad</top>
@@ -125,7 +125,7 @@
                             <font>Font-ListInfo</font>
                             <align>left</align>
                             <label>$VAR[Label_Plot]</label>
-                            <visible>StringCompare(Window(Home).Property(SkinHelper.RottenTomatoesConsensus),N/A)</visible>
+                            <visible>StringCompare(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),N/A)</visible>
                         </control>
                         <control type="group">
                             <left>pad</left>
@@ -279,7 +279,7 @@
                         <control type="group">
                             <width>330</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice))</visible>
+                            <visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Revenue.formatted))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -293,7 +293,7 @@
                                 <align>center</align>
                                 <textcolor>SubLabel</textcolor>
                                 <font>Font-InfoBox-Title</font>
-                                <label>$INFO[Window(Home).Property(SkinHelper.RottenTomatoesBoxOffice)]</label>
+                                <label>$INFO[Window(Home).Property(SkinHelper.ListItem.Revenue.formatted),$,]</label>
                             </control>
                         </control>
 

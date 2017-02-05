@@ -1,3 +1,6 @@
+[B]2.5.27[/B]
+Update to new skinhelper properties
+
 [B]2.5.26[/B]
 Add additional media flags
 Hide extrainfo in info boxes if media flags enabled
