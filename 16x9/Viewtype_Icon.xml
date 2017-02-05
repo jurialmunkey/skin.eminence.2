@@ -47,7 +47,7 @@
                         <param name="iconitemw" value="iconextraitemw" />
                         <param name="iconpadw" value="iconextrapadw" />
                         <param name="iconpanelpadw" value="iconextrapanelpadw" />
-                        <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(addons)" />
+                        <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(addons) | Container.Content(artists)" />
                     </include>
                 </control>
                 <include>Object_ExtraInfo</include>

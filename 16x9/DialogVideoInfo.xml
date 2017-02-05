@@ -168,18 +168,7 @@
                             <height max="228">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
-                            <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),, ]$VAR[Label_Plot]</label>
-                            <visible>!StringCompare(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),N/A)</visible>
-                        </control>
-                        <control type="textbox">
-                            <top>pad</top>
-                            <left>pad</left>
-                            <right>pad</right>
-                            <height max="228">auto</height>
-                            <font>Font-ListInfo</font>
-                            <align>left</align>
-                            <label>$VAR[Label_Plot]</label>
-                            <visible>StringCompare(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),N/A)</visible>
+                            <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),, ]$VAR[Label_Plot]$INFO[Window(Home).Property(SkinHelper.ListItem.Awards), ,]</label>
                         </control>
                         <control type="group">
                             <left>pad</left>
@@ -287,7 +276,7 @@
                                 <align>center</align>
                                 <textcolor>SubLabel</textcolor>
                                 <font>Font-InfoBox-Title</font>
-                                <label>$INFO[ListItem.Duration,, mins]</label>
+                                <label>$VAR[Label_Duration]</label>
                             </control>
                         </control>
                         <control type="group">

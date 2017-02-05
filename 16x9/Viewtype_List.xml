@@ -27,7 +27,7 @@
             </control>
         </control>
         <control type="group">
-            <visible>Control.IsVisible(551)</visible>
+            <visible>Control.IsVisible(550)</visible>
             <!-- <include>Animation_FadeIn</include> -->
             <!-- <include>Animation_FadeOut</include> -->
             <left>20</left>
@@ -41,7 +41,7 @@
                 <param name="viewlabel" value="535" />
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
-                <param name="id" value="551" />
+                <param name="id" value="550" />
                 <param name="condition" value="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(genres) | Container.Content(images) | Container.Content(videos) | Container.Content()" />
             </include>
             <control type="group">
