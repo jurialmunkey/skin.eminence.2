@@ -30,7 +30,7 @@
                 <textcolor>LineLabel</textcolor>
                 <scroll>true</scroll>
                 <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
-                <visible>!Skin.HasSetting(furniture.showflags)</visible>
+                <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
                 <bottom>16</bottom>
@@ -41,7 +41,7 @@
                 <textcolor>LineLabel</textcolor>
                 <scroll>true</scroll>
                 <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
-                <visible>Skin.HasSetting(furniture.showflags)</visible>
+                <visible>Skin.HasSetting(furniture.showflags) + Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
         </control>
         <control type="group">

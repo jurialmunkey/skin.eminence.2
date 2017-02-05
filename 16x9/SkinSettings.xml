@@ -638,6 +638,18 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
+                    <!-- Media Flags -->
+                    <control type="radiobutton" id="8506">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31218</label>
+                        <selected>Skin.HasSetting(furniture.flags.extradetail) + Skin.HasSetting(furniture.showflags)</selected>
+                        <onclick>Skin.ToggleSetting(furniture.flags.extradetail)</onclick>
+                        <enable>Skin.HasSetting(furniture.showflags)</enable>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
                     <!-- Show Additional Labels in Lists-->
                     <control type="radiobutton" id="8503">
                         <radioposx>settingsradioposx</radioposx>

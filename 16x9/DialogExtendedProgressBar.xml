@@ -28,12 +28,12 @@
                 <control type="label">
                     <bottom>16</bottom>
                     <left>48</left>
-                    <right>bigpad</right>
+                    <right>300</right>
                     <height>32</height>
                     <font>Font-RSS</font>
                     <textcolor>LineLabel</textcolor>
                     <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(30),   ,]$INFO[Control.GetLabel(32),   ,%][/COLOR]$INFO[Control.GetLabel(31),   ,]</label>
-                    <visible>!Skin.HasSetting(furniture.showflags)</visible>
+                    <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
                 </control>
                 <control type="label">
                     <bottom>16</bottom>
@@ -43,7 +43,7 @@
                     <font>Font-RSS</font>
                     <textcolor>LineLabel</textcolor>
                     <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(30),   ,]$INFO[Control.GetLabel(32),   ,%][/COLOR]$INFO[Control.GetLabel(31),   ,]</label>
-                    <visible>Skin.HasSetting(furniture.showflags)</visible>
+                    <visible>Skin.HasSetting(furniture.showflags) + Skin.HasSetting(furniture.flags.extradetail)</visible>
                 </control>
             </control>
             <control type="group">

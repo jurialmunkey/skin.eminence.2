@@ -87,26 +87,80 @@
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]</label>
                         </control>
-                        <control type="label">
-                            <top>-40</top>
+                        <control type="grouplist">
+                            <orientation>horizontal</orientation>
+                            <top>-42</top>
                             <left>pad</left>
                             <right>pad</right>
-                            <height>28</height>
+                            <height>34</height>
                             <align>right</align>
-                            <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),Rotten Tomatoes ,%  •  ]$INFO[ListItem.RatingAndVotes]</label>
-                            <visible>!StringCompare(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),N/A)</visible>
+                            <usecontrolcoords>true</usecontrolcoords>
+                            <control type="image">
+                                <top>1</top>
+                                <width>32</width>
+                                <height>32</height>
+                                <texture>indicator/metacritic.png</texture>
+                                <visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                            </control>
+                            <control type="label">
+                                <top>2</top>
+                                <width>auto</width>
+                                <height>28</height>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating), ,%   ]</label>
+                                <visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                            </control>
+                            <control type="image">
+                                <width>32</width>
+                                <height>32</height>
+                                <texture>indicator/rtrotten.png</texture>
+                                <visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                                <visible>!IntegerGreaterThan(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
+                            </control>
+                            <control type="image">
+                                <width>32</width>
+                                <height>32</height>
+                                <texture>indicator/rtfresh.png</texture>
+                                <visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                                <visible>IntegerGreaterThan(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
+                            </control>
+                            <control type="label">
+                                <top>2</top>
+                                <width>auto</width>
+                                <height>28</height>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter), ,%   ]</label>
+                                <visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                            </control>
+                            <control type="image">
+                                <top>2</top>
+                                <width>40</width>
+                                <height>32</height>
+                                <texture>indicator/imdbicon.png</texture>
+                                <visible>!IsEmpty(ListItem.RatingAndVotes) | !IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+                            </control>
+                            <control type="label">
+                                <top>2</top>
+                                <width>auto</width>
+                                <height>28</height>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[Window(home).Property(SkinHelper.ListItem.Rating.IMDB), ,]$INFO[Window(home).Property(SkinHelper.ListItem.Votes.IMDB), (, $LOCALIZE[205])]</label>
+                                <visible>!IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+                            </control>
+                            <control type="label">
+                                <top>2</top>
+                                <width>auto</width>
+                                <height>28</height>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[ListItem.RatingAndVotes, ,]</label>
+                                <visible>IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !IsEmpty(ListItem.RatingAndVotes)</visible>
+                            </control>
                         </control>
-                        <control type="label">
-                            <top>-40</top>
-                            <left>pad</left>
-                            <right>pad</right>
-                            <height>28</height>
-                            <align>right</align>
-                            <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[ListItem.RatingAndVotes]</label>
-                            <visible>StringCompare(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),N/A)</visible>
-                        </control>
+                        
                         <control type="textbox">
                             <top>pad</top>
                             <left>pad</left>

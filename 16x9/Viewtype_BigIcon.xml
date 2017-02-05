@@ -155,7 +155,7 @@
                     <align>right</align>
                     <font>Font-ListInfo-Small-Bold</font>
                     <label>$VAR[Label_ExtraInfo_Icons]</label>
-                    <visible>!Skin.HasSetting(furniture.showflags)</visible>
+                    <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
                 </control>
             </control>
         </control>
@@ -363,7 +363,7 @@
                         <align>right</align>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>$VAR[Label_ExtraInfo_Icons]</label>
-                        <visible>!Skin.HasSetting(furniture.showflags)</visible>
+                        <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
                     </control>
                 </control>
             </control>

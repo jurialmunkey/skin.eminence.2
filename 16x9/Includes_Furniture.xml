@@ -239,13 +239,13 @@
             <control type="label">
                 <bottom>16</bottom>
                 <left>48</left>
-                <right>bigpad</right>
+                <right>300</right>
                 <height>32</height>
                 <font>Font-ListInfo-Small-Bold</font>
                 <textcolor>LineLabel</textcolor>
                 <label>$VAR[Label_RSS,   ,]</label>
                 <!-- <visible>Player.HasMedia</visible> -->
-                <visible>!Skin.HasSetting(furniture.showflags)</visible>
+                <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
                 <bottom>16</bottom>
@@ -256,7 +256,7 @@
                 <textcolor>LineLabel</textcolor>
                 <label>$VAR[Label_RSS,   ,]</label>
                 <!-- <visible>Player.HasMedia</visible> -->
-                <visible>Skin.HasSetting(furniture.showflags)</visible>
+                <visible>Skin.HasSetting(furniture.showflags) + Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
         </control>
         <control type="grouplist">
@@ -330,7 +330,29 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <visible>!IsEmpty(ListItem.Top250)</visible>
+                <visible>IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
+            </control>
+            <control type="group">
+                <width>64</width>
+                <height>64</height>
+                <visible>!IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
+                <control type="image">
+                    <width>64</width>
+                    <height>64</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture colordiffuse="LineLabel">indicator/imdbtop.png</texture>
+                </control>
+                <control type="label">
+                    <centerbottom>33%</centerbottom>
+                    <width>64</width>
+                    <height>32</height>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <textcolor>LineLabel</textcolor>
+                    <font>Font-LineLabel</font>
+                    <label>$INFO[Window(home).Property(SkinHelper.ListItem.IMDB.Top250)]</label>
+                </control>
             </control>
 
             <!-- Resolution -->
@@ -376,6 +398,7 @@
                 <width>100</width>
                 <height>64</height>
                 <visible>!IsEmpty(ListItem.MPAA)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
                 <control type="image">
                     <centerleft>50%</centerleft>
                     <top>20</top>
@@ -405,6 +428,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel">indicator/artist.png</texture>
                 <visible>!IsEmpty(ListItem.AlbumArtist)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
                 <visible>Container.Content(songs) | Container.Content(albums)</visible>
             </control>
             <control type="label">
@@ -417,6 +441,7 @@
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
                 <visible>!IsEmpty(ListItem.AlbumArtist)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
                 <visible>Container.Content(songs) | Container.Content(albums)</visible>
             </control>
             <control type="image">
@@ -426,6 +451,7 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel">indicator/album.png</texture>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
                 <visible>!IsEmpty(ListItem.AlbumArtist) | !IsEmpty(ListItem.Album)</visible>
                 <visible>Container.Content(songs)</visible>
             </control>
@@ -438,6 +464,7 @@
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
                 <visible>!IsEmpty(ListItem.AlbumArtist) | !IsEmpty(ListItem.Album)</visible>
                 <visible>Container.Content(songs)</visible>
             </control>
@@ -452,6 +479,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel">indicator/clock.png</texture>
                 <visible>!IsEmpty(ListItem.Duration)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
                 <top>2</top>
@@ -464,6 +492,7 @@
                 <aligny>center</aligny>
                 <visible>!IsEmpty(ListItem.Duration)</visible>
                 <visible>!substring(ListItem.Duration,:)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
                 <top>2</top>
@@ -476,6 +505,7 @@
                 <aligny>center</aligny>
                 <visible>!IsEmpty(ListItem.Duration)</visible>
                 <visible>substring(ListItem.Duration,:)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
 
             <!-- Year / Premiered -->
@@ -487,6 +517,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel">indicator/calendar.png</texture>
                 <visible>[!IsEmpty(ListItem.Year) + !container.Content(episodes)] | [!IsEmpty(ListItem.Premiered) + Container.Content(episodes)]</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
                 <top>2</top>
@@ -498,6 +529,7 @@
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
                 <visible>!IsEmpty(ListItem.Year) + !container.Content(episodes)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
                 <top>2</top>
@@ -509,6 +541,7 @@
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
                 <visible>!IsEmpty(ListItem.Premiered) + Container.Content(episodes)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
 
             <!-- Rating -->
@@ -519,6 +552,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/star10.png</texture>
                 <visible>!IsEmpty(ListItem.Rating)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
                 <top>2</top>
@@ -530,6 +564,7 @@
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
                 <visible>!IsEmpty(ListItem.Rating)</visible>
+                <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
 
         </control>

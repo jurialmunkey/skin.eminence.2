@@ -801,3 +801,7 @@ msgstr ""
 msgctxt "#31217"
 msgid "Pixel format"
 msgstr ""
+
+msgctxt "#31218"
+msgid "Show additional info labels with media flags (e.g. ratings and year)"
+msgstr ""
