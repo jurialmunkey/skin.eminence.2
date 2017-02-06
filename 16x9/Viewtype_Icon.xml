@@ -173,7 +173,7 @@
                             <top>15</top>
                             <height>32</height>
                             <width>32</width>
-                            <texture>$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </control>
@@ -247,7 +247,7 @@
                             <top>15</top>
                             <height>32</height>
                             <width>32</width>
-                            <texture>$VAR[Image_Indicator]</texture>
+                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </control>
@@ -325,7 +325,7 @@
                                 <top>15</top>
                                 <height>32</height>
                                 <width>32</width>
-                                <texture>$VAR[Image_Indicator]</texture>
+                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
@@ -352,7 +352,7 @@
                                 <top>15</top>
                                 <height>32</height>
                                 <width>32</width>
-                                <texture>$VAR[Image_Indicator]</texture>
+                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
@@ -411,7 +411,7 @@
                                 <top>15</top>
                                 <height>32</height>
                                 <width>32</width>
-                                <texture>$VAR[Image_Indicator]</texture>
+                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                             <control type="image">
@@ -468,7 +468,7 @@
                                 <top>15</top>
                                 <height>32</height>
                                 <width>32</width>
-                                <texture>$VAR[Image_Indicator]</texture>
+                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
                                 <visible>!IsEmpty(ListItem.Overlay)</visible>
                             </control>
                             <control type="image">

@@ -273,17 +273,26 @@
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="72" width="$PARAM[width]">
-                    <include>View_List_Itemlayout</include>
+                    <include content="View_List_Itemlayout">
+                        <param name="label3" value="$PARAM[label3]" />
+                        <param name="label2" value="$PARAM[label2]" />
+                    </include>
                 </itemlayout>
 
                 <focusedlayout height="72" width="$PARAM[width]">
                     <control type="group">
                         <visible>!Control.HasFocus($PARAM[id])</visible>
-                        <include>View_List_Itemlayout</include>
+                        <include content="View_List_Itemlayout">
+                            <param name="label3" value="$PARAM[label3]" />
+                            <param name="label2" value="$PARAM[label2]" />
+                        </include>
                     </control>
                     <control type="group">
                         <visible>Control.HasFocus($PARAM[id])</visible>
-                        <include>View_List_Focusedlayout</include>
+                        <include content="View_List_Focusedlayout">
+                            <param name="label3" value="$PARAM[label3]" />
+                            <param name="label2" value="$PARAM[label2]" />
+                        </include>
                     </control>
                 </focusedlayout>
             </control>
@@ -320,329 +329,350 @@
 
     <!-- LIST INCLUDE -->
     <include name="View_List_Itemlayout">
-        <control type="group">
-            <visible>!Skin.HasSetting(lists.dontshowextralabels)</visible>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>left</align>
-                <font>Font-ListInfo</font>
-                <label>$INFO[ListItem.Year]</label>
-                <visible>Container.Content(movies)</visible>
-            </control>
-            <control type="label">
-                <left>130</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>Container.Content(movies)</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>!Container.Content(movies)</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>150</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>right</align>
-                <font>Font-ListInfo</font>
-                <label>$VAR[Label_Label3]</label>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-            </control>
-            <control type="image">
-                <right>95</right>
-                <centertop>50%</centertop>
-                <height>32</height>
-                <width>32</width>
-                <texture>$VAR[Image_Indicator]</texture>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-            </control>
-            <control type="image">
-                <right>30</right>
-                <centertop>50%</centertop>
-                <height>32</height>
-                <width>32</width>
-                <texture>$VAR[Image_Indicator]</texture>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                <visible>Container.Content(seasons) | Container.Content(sets)</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>right</align>
-                <font>Font-ListInfo</font>
-                <label fallback="0.0">$INFO[ListItem.Rating]</label>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>190</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>right</align>
-                <font>Font-ListInfo</font>
-                <textcolor>ListLabel</textcolor>
-                <label>$INFO[ListItem.Label2]</label>
-                <visible>Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(songs) | Container.Content(albums)]</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>right</align>
-                <textcolor>ListLabel</textcolor>
-                <font>Font-ListInfo</font>
-                <label>$INFO[ListItem.Label2]</label>
-                <visible>IsEmpty(ListItem.Overlay) + [!Skin.HasSetting(music.showuserratings) | ![Container.Content(songs) | Container.Content(albums)]]</visible>
-            </control>
+        <param name="label2" default="true" />
+        <param name="label3" default="true" />
+        <definition>
+            <!-- Detailed List -->
             <control type="group">
-                <visible>Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(songs) | Container.Content(albums)]</visible>
-                <right>10</right>
-                <height>48</height>
-                <centertop>50%</centertop>
-                <control type="image">
-                    <right>0</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar5,indicator/,.png]</texture>
-                </control>
-                <control type="image">
+                <visible>!Skin.HasSetting(lists.dontshowextralabels) + $PARAM[label3]</visible>
+
+                <!-- Left Column -->
+                <control type="label">
+                    <left>30</left>
                     <right>30</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar4,indicator/,.png]</texture>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>left</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$INFO[ListItem.Year]</label>
+                    <visible>Container.Content(movies)</visible>
+                </control>
+
+                <!-- Indicator Column -->
+                <control type="image">
+                    <left>115</left>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <visible>Container.Content(movies)</visible>
                 </control>
                 <control type="image">
-                    <right>60</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar3,indicator/,.png]</texture>
+                    <left>30</left>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(movies)</visible>
                 </control>
+
+                <!-- Main Label Column -->
+                <control type="label">
+                    <left>165</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>Container.Content(movies)</visible>
+                </control>
+                <control type="label">
+                    <left>90</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(movies)</visible>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(movies)</visible>
+                </control>
+
+                <!-- Adaptive Label Column -->
+                <control type="label">
+                    <left>30</left>
+                    <right>130</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$VAR[Label_Label3]</label>
+                    <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$VAR[Label_Label3]</label>
+                    <visible>IsEmpty(ListItem.Overlay) + ![Skin.HasSetting(music.showuserratings) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+                </control>
+
+                <!-- Rating Column -->
+                <control type="group">
+                    <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+                    <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <right>30</right>
+                    <control type="image">
+                        <right>35</right>
+                        <width>48</width>
+                        <height>48</height>
+                        <centertop>50%</centertop>
+                        <texture colordiffuse="ListLabel">indicator/star5.png</texture>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <font>Font-ListInfo-Small</font>
+                        <textcolor>ListLabel</textcolor>
+                        <label>$VAR[Label_Rating]</label>
+                    </control>
+                </control>
+            </control>
+
+            <!-- Simplified List -->
+            <control type="group">
+                <visible>Skin.HasSetting(lists.dontshowextralabels) | !$PARAM[label3]</visible>
+                <!-- Indicator -->
                 <control type="image">
-                    <right>90</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar2,indicator/,.png]</texture>
+                    <left>30</left>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <textcolor>ListLabel</textcolor>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
-                <control type="image">
-                    <right>120</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="ListLabel">$VAR[Image_UserRatingStar1,indicator/,.png]</texture>
+
+                <!-- Main Label -->
+                <control type="label">
+                    <left>90</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>IsEmpty(ListItem.Overlay) | Container.Content(seasons) | Container.Content(sets) | !$PARAM[label2]</visible>
+                </control>
+
+                <!-- Label 2 -->
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$INFO[ListItem.Label2]</label>
+                    <visible>!$PARAM[label3] + !Skin.HasSetting(lists.dontshowextralabels)</visible>
+                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
             </control>
-        </control>
-        <control type="group">
-            <visible>Skin.HasSetting(lists.dontshowextralabels)</visible>
-            <control type="image">
-                <centerleft>40</centerleft>
-                <centertop>50%</centertop>
-                <height>32</height>
-                <width>32</width>
-                <texture>$VAR[Image_Indicator]</texture>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-            </control>
-            <control type="label">
-                <left>80</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>IsEmpty(ListItem.Overlay)</visible>
-            </control>
-        </control>
+        </definition>
     </include>
     <include name="View_List_Focusedlayout">
-        <control type="group">
-            <visible>!Skin.HasSetting(lists.dontshowextralabels)</visible>
+        <param name="label2" default="true" />
+        <param name="label3" default="true" />
+        <definition>
             <control type="image">
                 <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
             </control>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>left</align>
-                <font>Font-ListInfo</font>
-                <textcolor>Selected</textcolor>
-                <label>$INFO[ListItem.Year]</label>
-                <visible>Container.Content(movies)</visible>
-            </control>
-            <control type="label">
-                <left>130</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <label>$INFO[ListItem.Label]</label>
-                <textcolor>Selected</textcolor>
-                <visible>Container.Content(movies)</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <label>$INFO[ListItem.Label]</label>
-                <textcolor>Selected</textcolor>
-                <visible>!Container.Content(movies)</visible>
-            </control>
-            <control type="label">
-                <textcolor>Selected</textcolor>
-                <left>30</left>
-                <right>150</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>right</align>
-                <font>Font-ListInfo</font>
-                <label>$VAR[Label_Label3]</label>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-            </control>
-            <control type="image">
-                <right>95</right>
-                <centertop>50%</centertop>
-                <height>32</height>
-                <width>32</width>
-                <texture>$VAR[Image_Indicator]</texture>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-            </control>
-            <control type="image">
-                <right>30</right>
-                <centertop>50%</centertop>
-                <height>32</height>
-                <width>32</width>
-                <texture>$VAR[Image_Indicator]</texture>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                <visible>Container.Content(seasons) | Container.Content(sets)</visible>
-            </control>
-            <control type="label">
-                <textcolor>Selected</textcolor>
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>right</align>
-                <font>Font-ListInfo</font>
-                <label fallback="0.0">$INFO[ListItem.Rating]</label>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-                <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>190</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>right</align>
-                <font>Font-ListInfo</font>
-                <textcolor>Selected</textcolor>
-                <label>$INFO[ListItem.Label2]</label>
-                <visible>Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(songs) | Container.Content(albums)]</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <align>right</align>
-                <textcolor>Selected</textcolor>
-                <font>Font-ListInfo</font>
-                <label>$INFO[ListItem.Label2]</label>
-                <visible>IsEmpty(ListItem.Overlay) + [!Skin.HasSetting(music.showuserratings) | ![Container.Content(songs) | Container.Content(albums)]]</visible>
-            </control>
+            
+            <!-- Detailed List -->
             <control type="group">
-                <visible>Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(songs) | Container.Content(albums)]</visible>
-                <right>10</right>
-                <height>48</height>
-                <centertop>50%</centertop>
-                <control type="image">
-                    <right>0</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="Selected">$VAR[Image_UserRatingStar5,indicator/,.png]</texture>
-                </control>
-                <control type="image">
+                <visible>!Skin.HasSetting(lists.dontshowextralabels) + $PARAM[label3]</visible>
+
+                <!-- Left Column -->
+                <control type="label">
+                    <left>30</left>
                     <right>30</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="Selected">$VAR[Image_UserRatingStar4,indicator/,.png]</texture>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>left</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>Selected</textcolor>
+                    <label>$INFO[ListItem.Year]</label>
+                    <visible>Container.Content(movies)</visible>
+                </control>
+
+                <!-- Indicator Column -->
+                <control type="image">
+                    <left>115</left>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                    <visible>Container.Content(movies)</visible>
                 </control>
                 <control type="image">
-                    <right>60</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="Selected">$VAR[Image_UserRatingStar3,indicator/,.png]</texture>
+                    <left>30</left>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(movies)</visible>
                 </control>
+
+                <!-- Main Label Column -->
+                <control type="label">
+                    <left>165</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>Selected</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>Container.Content(movies)</visible>
+                </control>
+                <control type="label">
+                    <left>90</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>Selected</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(movies)</visible>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>Selected</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(movies)</visible>
+                </control>
+
+                <!-- Adaptive Label Column -->
+                <control type="label">
+                    <left>30</left>
+                    <right>130</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>Selected</textcolor>
+                    <label>$VAR[Label_Label3]</label>
+                    <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>Selected</textcolor>
+                    <label>$VAR[Label_Label3]</label>
+                    <visible>IsEmpty(ListItem.Overlay) + ![Skin.HasSetting(music.showuserratings) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+                </control>
+
+                <!-- Rating Column -->
+                <control type="group">
+                    <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+                    <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <right>30</right>
+                    <control type="image">
+                        <right>35</right>
+                        <width>48</width>
+                        <height>48</height>
+                        <centertop>50%</centertop>
+                        <texture colordiffuse="Selected">indicator/star5.png</texture>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <font>Font-ListInfo-Small</font>
+                        <textcolor>Selected</textcolor>
+                        <label>$VAR[Label_Rating]</label>
+                    </control>
+                </control>
+            </control>
+
+            <!-- Simplified List -->
+            <control type="group">
+                <visible>Skin.HasSetting(lists.dontshowextralabels) | !$PARAM[label3]</visible>
+                <!-- Indicator -->
                 <control type="image">
-                    <right>90</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="Selected">$VAR[Image_UserRatingStar2,indicator/,.png]</texture>
+                    <left>30</left>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <textcolor>Selected</textcolor>
+                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
-                <control type="image">
-                    <right>120</right>
-                    <width>48</width>
-                    <height>48</height>
-                    <texture colordiffuse="Selected">$VAR[Image_UserRatingStar1,indicator/,.png]</texture>
+
+                <!-- Main Label -->
+                <control type="label">
+                    <left>90</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>Selected</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <textcolor>Selected</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                    <visible>IsEmpty(ListItem.Overlay) | Container.Content(seasons) | Container.Content(sets) | !$PARAM[label2]</visible>
+                </control>
+
+                <!-- Label 2 -->
+                <control type="label">
+                    <left>30</left>
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>Selected</textcolor>
+                    <label>$INFO[ListItem.Label2]</label>
+                    <visible>!$PARAM[label3] + !Skin.HasSetting(lists.dontshowextralabels)</visible>
+                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
             </control>
-        </control>
-        <control type="group">
-            <visible>Skin.HasSetting(lists.dontshowextralabels)</visible>
-            <control type="image">
-                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-            </control>
-            <control type="image">
-                <centerleft>40</centerleft>
-                <centertop>50%</centertop>
-                <height>32</height>
-                <width>32</width>
-                <texture>$VAR[Image_Indicator]</texture>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-            </control>
-            <control type="label">
-                <left>80</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <textcolor>Selected</textcolor>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-            </control>
-            <control type="label">
-                <left>30</left>
-                <right>30</right>
-                <top>0</top>
-                <height>100%</height>
-                <textcolor>Selected</textcolor>
-                <label>$INFO[ListItem.Label]</label>
-                <visible>IsEmpty(ListItem.Overlay)</visible>
-            </control>
-        </control>
+        </definition>
     </include>
     <include name="View_List">
         <param name="label3" default="true" />
@@ -667,127 +697,17 @@
                     <viewtype label="$PARAM[viewlabel]">list</viewtype>
                     <scrolltime tween="quadratic">400</scrolltime>
                     <visible>$PARAM[condition]</visible>
-                    <itemlayout height="72" width="$PARAM[width]" condition="$PARAM[label3]">
-                        <include>View_List_Itemlayout</include>
+                    <itemlayout height="72" width="$PARAM[width]">
+                        <include content="View_List_Itemlayout">
+                            <param name="label3" value="$PARAM[label3]" />
+                            <param name="label2" value="$PARAM[label2]" />
+                        </include>
                     </itemlayout>
-                    <focusedlayout height="72" width="$PARAM[width]" condition="$PARAM[label3]">
-                        <include>View_List_Focusedlayout</include>
-                    </focusedlayout>
-                    <itemlayout height="72" width="$PARAM[width]" condition="!$PARAM[label3]">
-                        <control type="label">
-                            <left>30</left>
-                            <right>30</right>
-                            <top>0</top>
-                            <height>100%</height>
-                            <font>Font-Button</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <visible>!$PARAM[label2]</visible>
-                        </control>
-                        <control type="image">
-                            <centerleft>40</centerleft>
-                            <centertop>50%</centertop>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture>$VAR[Image_Indicator]</texture>
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <visible>$PARAM[label2]</visible>
-                        </control>
-                        <control type="group">
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <control type="label">
-                                <left>80</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>$PARAM[label2]</visible>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>IsEmpty(ListItem.Overlay)</visible>
-                            <control type="label">
-                                <left>30</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>$PARAM[label2]</visible>
-                            </control>
-                        </control>
-                        <control type="label">
-                            <left>30</left>
-                            <right>30</right>
-                            <top>0</top>
-                            <height>100%</height>
-                            <align>right</align>
-                            <font>Font-ListInfo</font>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <visible>$PARAM[label2]</visible>
-                            <visible>!Skin.HasSetting(lists.dontshowextralabels)</visible>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout height="72" width="$PARAM[width]" condition="!$PARAM[label3]">
-                        <control type="image">
-                            <width>100%</width>
-                            <height>100%</height>
-                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-                        </control>
-                        <control type="label">
-                            <left>30</left>
-                            <right>30</right>
-                            <top>0</top>
-                            <height>100%</height>
-                            <font>Font-Button</font>
-                            <textcolor>Selected</textcolor>
-                            <label>$INFO[ListItem.Label]</label>
-                            <visible>!$PARAM[label2]</visible>
-                        </control>
-                        <control type="image">
-                            <centerleft>40</centerleft>
-                            <centertop>50%</centertop>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture>$VAR[Image_Indicator]</texture>
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <visible>$PARAM[label2]</visible>
-                        </control>
-                        <control type="group">
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
-                            <control type="label">
-                                <left>80</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>$PARAM[label2]</visible>
-                            </control>
-                        </control>
-                        <control type="group">
-                            
-                            <control type="label">
-                                <left>30</left>
-                                <right>30</right>
-                                <top>0</top>
-                                <height>100%</height>
-                                <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                                <visible>$PARAM[label2]</visible>
-                                <visible>IsEmpty(ListItem.Overlay)</visible>
-                            </control>
-                        </control>
-                        <control type="label">
-                            <left>30</left>
-                            <right>30</right>
-                            <top>0</top>
-                            <height>100%</height>
-                            <align>right</align>
-                            <font>Font-ListInfo</font>
-                            <textcolor>Selected</textcolor>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <visible>$PARAM[label2]</visible>
-                            <visible>!Skin.HasSetting(lists.dontshowextralabels)</visible>
-                        </control>
+                    <focusedlayout height="72" width="$PARAM[width]">
+                        <include content="View_List_Focusedlayout">
+                            <param name="label3" value="$PARAM[label3]" />
+                            <param name="label2" value="$PARAM[label2]" />
+                        </include>
                     </focusedlayout>
                 </control>
             </control>

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Label_Rating">
+        <value condition="Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)] + !IsEmpty(ListItem.UserRating) + StringCompare(ListItem.UserRating,10)">9.9</value>
+        <value condition="Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)] + !IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating,,.0]</value>
+        <value condition="StringCompare(ListItem.Rating,10.0)">9.9</value>
+        <value condition="!IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]</value>
+        <value>0.0</value>
+    </variable>
+
     <variable name="Label_Duration">
         <value condition="!IsEmpty(Window(home).Property(SkinHelper.ListItem.Duration.Minutes)) + IntegerGreaterThan(ListItem.Duration,59)">$INFO[Window(home).Property(SkinHelper.ListItem.Duration.Hours),, hr ]$INFO[Window(home).Property(SkinHelper.ListItem.Duration.Minutes),, mins]</value>
         <value condition="!IsEmpty(Window(home).Property(SkinHelper.ListItem.Duration.Minutes)) + !IntegerGreaterThan(ListItem.Duration,59)">$INFO[Window(home).Property(SkinHelper.ListItem.Duration.Minutes),, mins]</value>
