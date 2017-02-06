@@ -375,28 +375,9 @@
                     <visible>Container.Content(movies)</visible>
                 </control>
 
-                <!-- Indicator Column -->
-                <control type="image">
-                    <left>115</left>
-                    <centertop>50%</centertop>
-                    <height>32</height>
-                    <width>32</width>
-                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                    <visible>Container.Content(movies)</visible>
-                </control>
-                <control type="image">
-                    <left>30</left>
-                    <centertop>50%</centertop>
-                    <height>32</height>
-                    <width>32</width>
-                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>!Container.Content(movies)</visible>
-                </control>
-
                 <!-- Main Label Column -->
                 <control type="label">
-                    <left>165</left>
+                    <left>120</left>
                     <right>30</right>
                     <top>0</top>
                     <height>100%</height>
@@ -405,30 +386,19 @@
                     <visible>Container.Content(movies)</visible>
                 </control>
                 <control type="label">
-                    <left>90</left>
-                    <right>30</right>
-                    <top>0</top>
-                    <height>100%</height>
-                    <textcolor>ListLabel</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>!Container.Content(movies)</visible>
-                </control>
-                <control type="label">
                     <left>30</left>
                     <right>30</right>
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>IsEmpty(ListItem.Overlay)</visible>
                     <visible>!Container.Content(movies)</visible>
                 </control>
 
                 <!-- Adaptive Label Column -->
                 <control type="label">
                     <left>30</left>
-                    <right>110</right>
+                    <right>140</right>
                     <top>0</top>
                     <height>100%</height>
                     <align>right</align>
@@ -451,6 +421,26 @@
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                 </control>
 
+                <!-- Indicator -->
+                <control type="image">
+                    <right>90</right>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets) + ![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                </control>
+                <control type="image">
+                    <right>30</right>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                </control>
+
                 <!-- Rating Column -->
                 <control type="label">
                     <right>30</right>
@@ -460,7 +450,7 @@
                     <aligny>center</aligny>
                     <font>Font-ListInfo</font>
                     <textcolor>ListLabel</textcolor>
-                    <label>$VAR[Label_SpacerDot]$VAR[Label_Rating]</label>
+                    <label>$VAR[Label_Rating]</label>
                     <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                     <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
@@ -542,28 +532,9 @@
                     <visible>Container.Content(movies)</visible>
                 </control>
 
-                <!-- Indicator Column -->
-                <control type="image">
-                    <left>115</left>
-                    <centertop>50%</centertop>
-                    <height>32</height>
-                    <width>32</width>
-                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
-                    <visible>Container.Content(movies)</visible>
-                </control>
-                <control type="image">
-                    <left>30</left>
-                    <centertop>50%</centertop>
-                    <height>32</height>
-                    <width>32</width>
-                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>!Container.Content(movies)</visible>
-                </control>
-
                 <!-- Main Label Column -->
                 <control type="label">
-                    <left>165</left>
+                    <left>120</left>
                     <right>30</right>
                     <top>0</top>
                     <height>100%</height>
@@ -572,30 +543,19 @@
                     <visible>Container.Content(movies)</visible>
                 </control>
                 <control type="label">
-                    <left>90</left>
-                    <right>30</right>
-                    <top>0</top>
-                    <height>100%</height>
-                    <textcolor>Selected</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>!Container.Content(movies)</visible>
-                </control>
-                <control type="label">
                     <left>30</left>
                     <right>30</right>
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>IsEmpty(ListItem.Overlay)</visible>
                     <visible>!Container.Content(movies)</visible>
                 </control>
 
                 <!-- Adaptive Label Column -->
                 <control type="label">
                     <left>30</left>
-                    <right>110</right>
+                    <right>140</right>
                     <top>0</top>
                     <height>100%</height>
                     <align>right</align>
@@ -618,6 +578,26 @@
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                 </control>
 
+                <!-- Indicator -->
+                <control type="image">
+                    <right>90</right>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets) + ![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                </control>
+                <control type="image">
+                    <right>30</right>
+                    <centertop>50%</centertop>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                </control>
+
                 <!-- Rating Column -->
                 <control type="label">
                     <right>30</right>
@@ -627,7 +607,7 @@
                     <aligny>center</aligny>
                     <font>Font-ListInfo</font>
                     <textcolor>Selected</textcolor>
-                    <label>$VAR[Label_SpacerDot]$VAR[Label_Rating]</label>
+                    <label>$VAR[Label_Rating]</label>
                     <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                     <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>

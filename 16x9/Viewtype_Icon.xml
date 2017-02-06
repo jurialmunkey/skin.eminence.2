@@ -529,7 +529,7 @@
                                     <control type="label">
                                         <top>20</top>
                                         <left>30</left>
-                                        <right>30</right>
+                                        <right>70</right>
                                         <height>36</height>
                                         <textcolor>ListLabel</textcolor>
                                         <font>Font-InfoBox-Title</font>
@@ -622,7 +622,7 @@
                                     <control type="label">
                                         <top>20</top>
                                         <left>30</left>
-                                        <right>30</right>
+                                        <right>70</right>
                                         <height>36</height>
                                         <textcolor>Selected</textcolor>
                                         <font>Font-InfoBox-Title</font>
