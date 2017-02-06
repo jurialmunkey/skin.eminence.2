@@ -1,10 +1,12 @@
+[B]2.5.28[/B]
+Fix list indicators
+Add more obvious unwatched indicator
+Rearrange list items
+
 [B]2.5.27[/B]
 Update to new skinhelper properties
 Add Metacritic ratings and pull imdb ratings from web in info dialog
 Add rotten/fresh indicator for rt
-Fix list indicators
-Add more obvious unwatched indicator
-Rearrange list items
 
 [B]2.5.26[/B]
 Add additional media flags
