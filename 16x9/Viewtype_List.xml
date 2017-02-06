@@ -300,6 +300,32 @@
 
     </include>
 
+    <!-- INFO LIST 2 -->
+    <include name="Viewtype_InfoList2">
+        <control type="group">
+            <visible>Control.IsVisible(553)</visible>
+            <!-- <include>Animation_FadeIn</include> -->
+            <!-- <include>Animation_FadeOut</include> -->
+
+            <control type="group">
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <include>Object_Background</include>
+                <include>Object_Scrollbar</include>
+                <include content="View_IconFanart">
+                    <param name="id" value="553" />
+                    <param name="uselist" value="true" />
+                    <param name="posx" value="15" />
+                    <param name="name" value="$LOCALIZE[31192] $NUMBER[2]" />
+                    <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(artists)" />
+                </include>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
     <!-- FANART LIST -->
     <include name="Viewtype_FanartList">
         <control type="group">
@@ -402,7 +428,7 @@
                 <!-- Adaptive Label Column -->
                 <control type="label">
                     <left>30</left>
-                    <right>130</right>
+                    <right>110</right>
                     <top>0</top>
                     <height>100%</height>
                     <align>right</align>
@@ -426,26 +452,18 @@
                 </control>
 
                 <!-- Rating Column -->
-                <control type="group">
+                <control type="label">
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>Font-ListInfo</font>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$VAR[Label_SpacerDot]$VAR[Label_Rating]</label>
                     <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                     <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
-                    <right>30</right>
-                    <control type="image">
-                        <right>35</right>
-                        <width>48</width>
-                        <height>48</height>
-                        <centertop>50%</centertop>
-                        <texture colordiffuse="ListLabel">indicator/star5.png</texture>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>Font-ListInfo-Small</font>
-                        <textcolor>ListLabel</textcolor>
-                        <label>$VAR[Label_Rating]</label>
-                    </control>
                 </control>
             </control>
 
@@ -577,7 +595,7 @@
                 <!-- Adaptive Label Column -->
                 <control type="label">
                     <left>30</left>
-                    <right>130</right>
+                    <right>110</right>
                     <top>0</top>
                     <height>100%</height>
                     <align>right</align>
@@ -601,26 +619,18 @@
                 </control>
 
                 <!-- Rating Column -->
-                <control type="group">
+                <control type="label">
+                    <right>30</right>
+                    <top>0</top>
+                    <height>100%</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>Font-ListInfo</font>
+                    <textcolor>Selected</textcolor>
+                    <label>$VAR[Label_SpacerDot]$VAR[Label_Rating]</label>
                     <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                     <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
-                    <right>30</right>
-                    <control type="image">
-                        <right>35</right>
-                        <width>48</width>
-                        <height>48</height>
-                        <centertop>50%</centertop>
-                        <texture colordiffuse="Selected">indicator/star5.png</texture>
-                    </control>
-                    <control type="label">
-                        <height>100%</height>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <font>Font-ListInfo-Small</font>
-                        <textcolor>Selected</textcolor>
-                        <label>$VAR[Label_Rating]</label>
-                    </control>
                 </control>
             </control>
 

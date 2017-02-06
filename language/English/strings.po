@@ -51,7 +51,7 @@ msgid "Show media flags"
 msgstr ""
 
 msgctxt "#31008"
-msgid "Show plot overlay in video library after delay"
+msgid "Show plot overlay in after delay"
 msgstr ""
 
 msgctxt "#31009"
@@ -804,4 +804,8 @@ msgstr ""
 
 msgctxt "#31218"
 msgid "Show additional info labels with media flags (e.g. ratings and year)"
+msgstr ""
+
+msgctxt "#31219"
+msgid "Miscellaneous"
 msgstr ""

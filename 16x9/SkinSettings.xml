@@ -61,11 +61,11 @@
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                     </control>
-                    <!-- PANEL -->
+                    <!-- LIBRARY -->
                     <control type="togglebutton" id="8005">
                         <width>100%</width>
-                        <label>31197</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31197][/COLOR]</altlabel>
+                        <label>15100</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[15100][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8005)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <height>72</height>
@@ -104,8 +104,8 @@
                     <!-- EXTRAS -->
                     <control type="togglebutton" id="8009">
                         <width>100%</width>
-                        <label>$LOCALIZE[31110]</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31110][/COLOR]</altlabel>
+                        <label>$LOCALIZE[31219]</label>
+                        <altlabel>[COLOR=Selected]$LOCALIZE[31219][/COLOR]</altlabel>
                         <usealttexture>ControlGroup(8000).HasFocus(8009)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
                         <height>72</height>
@@ -607,10 +607,10 @@
                         <visible>ControlGroup(8000).HasFocus(8008)</visible>
                     </control>
 
-                    <!-- PANEL -->
+                    <!-- LIBRARY -->
                     <control type="label" id="8599">
                         <width>100%</width>
-                        <label>31197</label>
+                        <label>15100</label>
                         <height>72</height>
                         <font>Font-ListInfo-Small-Bold</font>
                         <include>Defs_OptionButton</include>
@@ -639,7 +639,7 @@
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
                     <!-- Media Flags -->
-                    <control type="radiobutton" id="8506">
+                    <control type="radiobutton" id="8503">
                         <radioposx>settingsradioposx</radioposx>
                         <width>100%</width>
                         <label>31218</label>
@@ -651,7 +651,7 @@
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
                     <!-- Show Additional Labels in Lists-->
-                    <control type="radiobutton" id="8503">
+                    <control type="radiobutton" id="8504">
                         <radioposx>settingsradioposx</radioposx>
                         <width>100%</width>
                         <label>31214</label>
@@ -661,30 +661,40 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
-                    <!-- Object Shadows -->
-                    <control type="radiobutton" id="8504">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31004</label>
-                        <selected>!Skin.HasSetting(global.hideobjectshadows)</selected>
-                        <onclick>Skin.ToggleSetting(global.hideobjectshadows)</onclick>
-                        <onclick>ReloadSkin()</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
-                    </control>
-                    <!-- Wide Screen -->
+                    <!-- Show User Ratings -->
                     <control type="radiobutton" id="8505">
                         <radioposx>settingsradioposx</radioposx>
                         <width>100%</width>
-                        <label>31196</label>
-                        <selected>!Skin.HasSetting(global.widescreen)</selected>
-                        <onclick>Skin.ToggleSetting(global.widescreen)</onclick>
-                        <onclick>ReloadSkin()</onclick>
+                        <label>31213</label>
+                        <selected>Skin.HasSetting(music.showuserratings)</selected>
+                        <onclick>Skin.ToggleSetting(music.showuserratings)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
+                    <!-- Hub Plot -->
+                    <control type="radiobutton" id="8506">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31194</label>
+                        <selected>!Skin.HasSetting(furniture.hidehubplot)</selected>
+                        <onclick>Skin.ToggleSetting(furniture.hidehubplot)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    <!-- Overlay Plot -->
+                    <control type="radiobutton" id="8507">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31008</label>
+                        <selected>Skin.HasSetting(furniture.overlayinfo)</selected>
+                        <onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    
                     
 
                     <!-- INSTALL -->
@@ -829,8 +839,48 @@
                         <visible>ControlGroup(8000).HasFocus(8006)</visible>
                     </control>
 
-                    <!-- EXTRAS -->
-                    <control type="label" id="8959">
+                    <!-- EXTRAS / PANELS -->
+                    <control type="label" id="8901">
+                        <width>100%</width>
+                        <label>31197</label>
+                        <height>72</height>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Object Shadows -->
+                    <control type="radiobutton" id="8902">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31004</label>
+                        <selected>!Skin.HasSetting(global.hideobjectshadows)</selected>
+                        <onclick>Skin.ToggleSetting(global.hideobjectshadows)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Wide Screen -->
+                    <control type="radiobutton" id="8903">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31196</label>
+                        <selected>!Skin.HasSetting(global.widescreen)</selected>
+                        <onclick>Skin.ToggleSetting(global.widescreen)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <!-- Div Extras Label -->
+                    <control type="image" id="8904">
+                        <width>100%</width>
+                        <height>72</height>
+                        <texture border="30">common/div.png</texture>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
+                    <control type="label" id="8905">
                         <width>100%</width>
                         <label>31110</label>
                         <height>72</height>
@@ -839,7 +889,7 @@
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
                     <!-- Kiosk -->
-                    <control type="radiobutton" id="8901">
+                    <control type="radiobutton" id="8906">
                         <radioposx>settingsradioposx</radioposx>
                         <width>100%</width>
                         <label>31057</label>
@@ -849,41 +899,8 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
-                    <!-- Show User Ratings -->
-                    <control type="radiobutton" id="8906">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31213</label>
-                        <selected>Skin.HasSetting(music.showuserratings)</selected>
-                        <onclick>Skin.ToggleSetting(music.showuserratings)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
-                    <!-- Hub Plot -->
-                    <control type="radiobutton" id="8903">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31194</label>
-                        <selected>!Skin.HasSetting(furniture.hidehubplot)</selected>
-                        <onclick>Skin.ToggleSetting(furniture.hidehubplot)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
-                    <!-- Overlay Plot -->
-                    <control type="radiobutton" id="8904">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31008</label>
-                        <selected>Skin.HasSetting(furniture.overlayinfo)</selected>
-                        <onclick>Skin.ToggleSetting(furniture.overlayinfo)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
                     <!-- Busy Spinner -->
-                    <control type="button" id="8905">
+                    <control type="button" id="8907">
                         <width>100%</width>
                         <label>31160</label>
                         <label2>$VAR[Label_SkinSetting_BusyTexture]</label2>
@@ -892,7 +909,6 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
-
                     <!-- Customise Shutdown Menu -->
                     <control type="button" id="8908">
                         <width>100%</width>
@@ -902,9 +918,8 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
-
                     <!-- Startup Video -->
-                    <control type="button" id="8910">
+                    <control type="button" id="8909">
                         <width>100%</width>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                         <height>72</height>
