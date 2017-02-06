@@ -666,8 +666,9 @@
                         <radioposx>settingsradioposx</radioposx>
                         <width>100%</width>
                         <label>31213</label>
-                        <selected>Skin.HasSetting(music.showuserratings)</selected>
+                        <selected>Skin.HasSetting(music.showuserratings) + !Skin.HasSetting(lists.dontshowextralabels)</selected>
                         <onclick>Skin.ToggleSetting(music.showuserratings)</onclick>
+                        <enable>!Skin.HasSetting(lists.dontshowextralabels)</enable>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>

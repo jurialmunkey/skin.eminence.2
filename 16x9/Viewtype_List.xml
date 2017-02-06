@@ -440,6 +440,16 @@
                     <visible>!IsEmpty(ListItem.Overlay)</visible>
                     <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
+                <control type="image">
+                    <right>75</right>
+                    <centertop>51%</centertop>
+                    <height>48</height>
+                    <width>48</width>
+                    <texture colordiffuse="ListLabel">indicator/star5.png</texture>
+                    <visible>[Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+                    <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                </control>
 
                 <!-- Rating Column -->
                 <control type="label">
@@ -596,6 +606,16 @@
                     <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
                     <visible>!IsEmpty(ListItem.Overlay)</visible>
                     <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                </control>
+                <control type="image">
+                    <right>75</right>
+                    <centertop>51%</centertop>
+                    <height>48</height>
+                    <width>48</width>
+                    <texture colordiffuse="Selected">indicator/star5.png</texture>
+                    <visible>[Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+                    <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
 
                 <!-- Rating Column -->
