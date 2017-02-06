@@ -18,7 +18,9 @@
             <include content="Object_Headline">
                 <param name="label" value="$INFO[Control.GetLabel(3),,  ]$INFO[Control.GetLabel(4),,  ]" />
             </include>
-            <include>Viewtype_List</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.550)">Viewtype_List</include>
+            <include>Viewtype_SquareList</include>
+            <include>Viewtype_PlainList</include>
         </control>
 
         <!-- Menu -->

@@ -3,9 +3,7 @@
     <!-- LIST -->
     <include name="Viewtype_List">
         <control type="group">
-            <visible>Control.IsVisible(50)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
+            <visible>Control.IsVisible(550)</visible>
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -15,21 +13,21 @@
                 <param name="width" value="posterw" />
             </include>
             <include content="View_List">
-                <param name="viewlabel" value="535" />
+                <param name="viewlabel" value="31223" />
                 <param name="posx" value="0" />
                 <param name="width" value="listw" />
-                <param name="id" value="50" />
-                <param name="condition" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors)" />
+                <param name="id" value="550" />
+                <param name="condition" value="[Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors)] + [StringCompare(SkinHelper.ForcedView),50) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
             <control type="group">
                 <width>listw</width>
                 <include>Object_Arrows_Vertical</include>
             </control>
         </control>
+    </include>
+    <include name="Viewtype_SquareList">
         <control type="group">
-            <visible>Control.IsVisible(550)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
+            <visible>Control.IsVisible(50)</visible>
             <left>20</left>
             <right>20</right>
             <top>20</top>
@@ -38,21 +36,21 @@
                 <param name="width" value="posterh" />
             </include>
             <include content="View_List">
-                <param name="viewlabel" value="535" />
+                <param name="viewlabel" value="31221" />
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
-                <param name="id" value="550" />
-                <param name="condition" value="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(genres) | Container.Content(images) | Container.Content(videos) | Container.Content()" />
+                <param name="id" value="50" />
+                <param name="condition" value="[Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(genres) | Container.Content(images) | Container.Content(videos) | Container.Content()] + [StringCompare(SkinHelper.ForcedView),550) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
             <control type="group">
                 <width>listinfow</width>
                 <include>Object_Arrows_Vertical</include>
             </control>
         </control>
+    </include>
+    <include name="Viewtype_PlainList">
         <control type="group">
             <visible>Control.IsVisible(552)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -62,7 +60,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="headlinew" />
                 <param name="id" value="552" />
-                <param name="condition" value="true" />
+                <param name="condition" value="[StringCompare(SkinHelper.ForcedView),552) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
             <control type="group">
                 <width>listw</width>
@@ -75,8 +73,6 @@
     <include name="Viewtype_MediaInfo">
         <control type="group">
             <visible>Control.IsVisible(51)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -86,7 +82,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
                 <param name="id" value="51" />
-                <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets) | Container.Content(artists) | Container.Content(songs)" />
+                <param name="condition" value="[Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets) | Container.Content(artists) | Container.Content(songs)] + [StringCompare(SkinHelper.ForcedView),51) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
             <include>Object_ExtraInfo</include>
         </control>
@@ -96,8 +92,6 @@
     <include name="Viewtype_MediaInfo2">
         <control type="group">
             <visible>Control.IsVisible(57)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -108,7 +102,7 @@
                 <param name="width" value="listmediainfow" />
                 <param name="id" value="57" />
                 <param name="label3" value="false" />
-                <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
+                <param name="condition" value="[Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)] + [StringCompare(SkinHelper.ForcedView),57) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
             <include>Object_ExtraInfo2</include>
         </control>
@@ -118,8 +112,6 @@
     <include name="Viewtype_InfoList">
         <control type="group">
             <visible>Control.IsVisible(53)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -128,7 +120,7 @@
                 <param name="id" value="53" />
                 <param name="width" value="headlinew" />
                 <param name="name" value="$LOCALIZE[31192]" />
-                <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)" />
+                <param name="condition" value="[Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + [StringCompare(SkinHelper.ForcedView),53) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
         </control>
     </include>
@@ -304,8 +296,6 @@
     <include name="Viewtype_InfoList2">
         <control type="group">
             <visible>Control.IsVisible(553)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
 
             <control type="group">
                 <left>bigpad</left>
@@ -319,7 +309,7 @@
                     <param name="uselist" value="true" />
                     <param name="posx" value="15" />
                     <param name="name" value="$LOCALIZE[31192] $NUMBER[2]" />
-                    <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(artists)" />
+                    <param name="condition" value="[Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(artists)] + [StringCompare(SkinHelper.ForcedView),553) | IsEmpty(SkinHelper.ForcedView)]" />
                 </include>
                 <include>Object_Arrows_Vertical</include>
             </control>
@@ -330,8 +320,6 @@
     <include name="Viewtype_FanartList">
         <control type="group">
             <visible>Control.IsVisible(54)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -344,7 +332,7 @@
                 <param name="id" value="54" />
                 <param name="label3" value="false" />
                 <param name="label2" value="false" />
-                <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets) | Container.Content(artists)" />
+                <param name="condition" value="[Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets) | Container.Content(artists)] + [StringCompare(SkinHelper.ForcedView),54) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
             <control type="group">
                 <width>659</width>
@@ -422,6 +410,17 @@
                 </control>
 
                 <!-- Indicator -->
+                <control type="label" description="invisibledelimiter">
+                    <right>90</right>
+                    <width>32</width>
+                    <height>100%</height>
+                    <label>|  </label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <textcolor>00FFFFFF</textcolor>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                </control>
                 <control type="image">
                     <right>90</right>
                     <centertop>50%</centertop>

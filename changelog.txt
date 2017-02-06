@@ -2,6 +2,8 @@
 Fix list indicators
 Add more obvious unwatched indicator
 Rearrange list items
+Add ability to disable views via skin helper
+Add skin helper view selection
 
 [B]2.5.27[/B]
 Update to new skinhelper properties

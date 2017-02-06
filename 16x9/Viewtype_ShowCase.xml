@@ -3,8 +3,6 @@
     <include name="Viewtype_ShowCase">
         <control type="group">
             <visible>Control.IsVisible(535)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
@@ -334,7 +332,7 @@
                         <ondown>61</ondown>
                         <onleft>535</onleft>
                         <onright>535</onright>
-                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)</visible>
+                        <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)] + [StringCompare(SkinHelper.ForcedView),535) | IsEmpty(SkinHelper.ForcedView)]</visible>
                         <viewtype label="31199">bigwrap</viewtype>
                         <pagecontrol>61</pagecontrol>
                         <scrolltime tween="quadratic">300</scrolltime>

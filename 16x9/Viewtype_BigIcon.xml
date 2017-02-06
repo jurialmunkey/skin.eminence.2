@@ -10,13 +10,11 @@
             <height>posterh</height>
             <include>Object_Background</include>
             <include>Object_Scrollbar_Horizontal</include>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <control type="wraplist" id="52">
                 <top>30</top>
                 <left>bigiconpanelpadw</left>
                 <right>15</right>
-                <visible>substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)</visible>
+                <visible>[substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)] + [StringCompare(SkinHelper.ForcedView),52) | IsEmpty(SkinHelper.ForcedView)]</visible>
                 <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
                 <ondown>61</ondown>
                 <onleft>52</onleft>
@@ -164,8 +162,6 @@
     <include name="Viewtype_Gallery">
         <control type="group">
             <visible>Control.IsVisible(525)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
             <animation effect="slide" start="0" end="-118" condition="!Container(525).OnNext" reversible="false" time="400" tween="quadratic">Conditional</animation>
             <animation effect="slide" start="0" end="118" condition="!Container(525).OnPrevious" reversible="false" time="400" tween="quadratic">Conditional</animation>
             <left>bigpad</left>
@@ -268,9 +264,6 @@
     <include name="Viewtype_Lovefilm">
         <control type="group">
             <visible>Control.IsVisible(58)</visible>
-            <!-- <include>Animation_FadeIn</include> -->
-            <!-- <include>Animation_FadeOut</include> -->
-
             <control type="group">
                 <left>bigpad</left>
                 <right>bigpad</right>
@@ -294,7 +287,7 @@
                         <orientation>horizontal</orientation>
                         <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
                         <scrolltime tween="quadratic">400</scrolltime>
-                        <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(artists)</visible>
+                        <visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(artists)] + [StringCompare(SkinHelper.ForcedView),58) | IsEmpty(SkinHelper.ForcedView)]</visible>
                         <itemlayout width="1280" height="720">
                             <control type="image">
                                 <width>100%</width>
