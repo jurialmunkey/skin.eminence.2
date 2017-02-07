@@ -1,424 +1,459 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="Viewtype_ShowCase_MovieLeft"><left>-92.5</left></include>
+    <include name="Viewtype_ShowCase_MusicLeft"><left>-92.5</left></include>
     <include name="Viewtype_ShowCase">
-        <control type="group">
-            <visible>Control.IsVisible(535)</visible>
-            <left>bigpad</left>
-            <right>bigpad</right>
-            <top>bigpad</top>
-            <height>posterh</height>
-            <include>Object_Background</include>
-            <include>Object_Scrollbar_Horizontal</include>
+        <param name="left" default="-92.5" />
+        <definition>
             <control type="group">
-                <centerleft>50%</centerleft>
-                <width>1752</width>
+                <visible>Control.IsVisible(535)</visible>
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <include>Object_Background</include>
+                <include>Object_Scrollbar_Horizontal</include>
                 <control type="group">
-                    <visible>Control.IsVisible(535) + IntegerGreaterThan(Container.NumItems,1)</visible>
-                    <top>-545</top>
-                    <left>-92.5</left>
+                    <centerleft>50%</centerleft>
+                    <width>1752</width>
                     <control type="group">
-                        <camera x="900" y="810" />
-                        <control type="group" id="6001">
-                            <left>55</left>
-                            <top>570</top>
-                            <visible>Container.OnNext</visible>
-                            <animation effect="slide" end="-135,0" time="200" reversible="false">Hidden</animation>
-                            <control type="group">
-                                <left>15</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-7).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                        <visible>Control.IsVisible(535) + IntegerGreaterThan(Container.NumItems,1)</visible>
+                        <top>-545</top>
+                        <include condition="Window.IsVisible(MyVideoNav.xml)">Viewtype_ShowCase_MovieLeft</include>
+                        <include condition="Window.IsVisible(MyMusicNav.xml)">Viewtype_ShowCase_MusicLeft</include>
+                        <control type="group">
+                            <camera x="900" y="810" />
+                            <control type="group" id="6001">
+                                <left>55</left>
+                                <top>570</top>
                                 <visible>Container.OnNext</visible>
-                                <scale>true</scale>
-                                <animation effect="fade" start="100" end="0" time="70" reversible="false">Hidden</animation>
-                                <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-7</include>
-                            </control>
-                            <control type="group">
-                                <left>150</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-6</include>
-                            </control>
-                            <control type="group">
-                                <left>285</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-5</include>
-                            </control>
-                            <control type="group">
-                                <left>420</left>
-                                <visible>!IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-4</include>
-                            </control>
-                            <control type="group">
-                                <left>555</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-3</include>
-                            </control>
-                            <control type="group">
-                                <left>690</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-2</include>
-                            </control>
-                            <control type="group">
-                                <left>1635</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <visible>!Container.OnNext</visible>
-                                <animation effect="fade" end="100" delay="100" time="200" reversible="false">Visible</animation>
-                                <animation effect="rotatey" center="2100" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem6</include>
-                            </control>
-                            <control type="group">
-                                <left>1500</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem5</include>
-                            </control>
-                            <control type="group">
-                                <left>1365</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem4</include>
-                            </control>
-                            <control type="group">
-                                <left>1230</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem3</include>
-                            </control>
-                            <control type="group">
-                                <left>1095</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem2</include>
-                            </control>
-                            <control type="group">
-                                <left>960</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem1</include>
-                            </control>
-                            <control type="group">
-                                <visible>Container.OnNext</visible>
-                                <animation effect="slide" end="75,0" time="200" reversible="false">Hidden</animation>
+                                <animation effect="slide" end="-135,0" time="200" reversible="false">Hidden</animation>
                                 <control type="group">
-                                    <left>825</left>
+                                    <left>15</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-7).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <visible>!Window.IsVisible(MyMusicNav.xml)</visible>
                                     <visible>Container.OnNext</visible>
-                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                    <animation effect="rotatey" center="1290" end="-55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
-                                    <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                    <include>MovieShowCaseItem0</include>
+                                    <scale>true</scale>
+                                    <animation effect="fade" start="100" end="0" time="70" reversible="false">Hidden</animation>
+                                    <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-7</include>
                                 </control>
                                 <control type="group">
-                                    <left>758</left>
-                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                    <visible>Container.OnNext</visible>
-                                    <animation effect="rotatey" center="608" end="-55" time="200" reversible="false" tween="quadratic">Hidden</animation>
-                                    <control type="image">
-                                        <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
-                                        <include>MovieShowcaseThumb</include>
-                                    </control>
-                                    <control type="image">
-                                        <include>WatchedOverlayShowCase</include>
-                                        <texture>$VAR[IconOverlay-1Var]</texture>
-                                    </control>
+                                    <left>150</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <visible>[Container.OnNext + Window.IsVisible(MyMusicNav.xml)] | !Window.IsVisible(MyMusicNav.xml)</visible>
+                                    <animation effect="fade" start="100" end="0" time="70" reversible="false" condition="Window.IsVisible(MyMusicNav.xml)">Hidden</animation>
+                                    <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-6</include>
                                 </control>
-                            </control>
-                        </control>
-                        <control type="group" id="6002">
-                            <left>55</left>
-                            <top>570</top>
-                            <visible>Control.IsVisible(535) + IntegerGreaterThan(Container.NumItems,0)</visible>
-
-                            <visible>Container.OnPrevious</visible>
-                            <animation effect="slide" end="135,0" time="200" reversible="false">Hidden</animation>
-                            <control type="group">
-                                <left>1500</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(7).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <visible>Container.OnPrevious</visible>
-                                <animation effect="fade" start="100" end="0" time="70" reversible="false">Hidden</animation>
-                                <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem7</include>
-                            </control>
-                            <control type="group">
-                                <left>1365</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem6</include>
-                            </control>
-                            <control type="group">
-                                <left>1230</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem5</include>
-                            </control>
-                            <control type="group">
-                                <left>1095</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem4</include>
-                            </control>
-                            <control type="group">
-                                <left>960</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem3</include>
-                            </control>
-                            <control type="group">
-                                <left>825</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem2</include>
-                            </control>
-                            <control type="group">
-                                <left>-120</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <visible>!Container.OnPrevious</visible>
-                                <animation effect="fade" end="100" delay="100" time="200" reversible="false">Visible</animation>
-                                <animation effect="rotatey" center="-270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-6</include>
-                            </control>
-                            <control type="group">
-                                <left>15</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-5</include>
-                            </control>
-                            <control type="group">
-                                <left>150</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-4</include>
-                            </control>
-                            <control type="group">
-                                <left>285</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-3</include>
-                            </control>
-                            <control type="group">
-                                <left>420</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-2</include>
-                            </control>
-                            <control type="group">
-                                <left>555</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-1</include>
-                            </control>
-                            <control type="group">
-                                <visible>Container.OnPrevious</visible>
-                                <animation effect="slide" end="-75,0" time="200" reversible="false">Hidden</animation>
+                                <control type="group">
+                                    <left>285</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-5</include>
+                                </control>
+                                <control type="group">
+                                    <left>420</left>
+                                    <visible>!IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-4</include>
+                                </control>
+                                <control type="group">
+                                    <left>555</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-3</include>
+                                </control>
                                 <control type="group">
                                     <left>690</left>
-                                    <visible>Container.OnPrevious</visible>
-                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                    <animation effect="rotatey" center="540" end="55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
                                     <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                    <include>MovieShowCaseItem0</include>
+                                    <include>MovieShowCaseItem-2</include>
+                                </control>
+                                <control type="group">
+                                    <left>1635</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <visible>!Container.OnNext</visible>
+                                    <animation effect="fade" end="100" delay="100" time="200" reversible="false">Visible</animation>
+                                    <animation effect="rotatey" center="2100" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem6</include>
+                                    <visible>!Window.IsVisible(MyMusicNav.xml)</visible>
+                                </control>
+                                <control type="group">
+                                    <left>1500</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <animation effect="fade" end="100" delay="100" time="200" reversible="false" condition="Window.IsVisible(MyMusicNav.xml)">Visible</animation>
+                                    <include>MovieShowCaseItem5</include>
+                                    <visible>[!Container.OnNext + Window.IsVisible(MyMusicNav.xml)] | !Window.IsVisible(MyMusicNav.xml)</visible>
+                                </control>
+                                <control type="group">
+                                    <left>1365</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem4</include>
+                                </control>
+                                <control type="group">
+                                    <left>1230</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem3</include>
+                                </control>
+                                <control type="group">
+                                    <left>1095</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem2</include>
+                                </control>
+                                <control type="group">
+                                    <left>960</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem1</include>
+                                </control>
+                                <control type="group">
+                                    <visible>Container.OnNext</visible>
+                                    <animation effect="slide" end="75,0" time="200" reversible="false">Hidden</animation>
+                                    <control type="group">
+                                        <left>825</left>
+                                        <visible>Container.OnNext</visible>
+                                        <visible>!IsEmpty(Container(535).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                        <animation effect="rotatey" center="1290" end="-55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                                        <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                        <include>MovieShowCaseItem0</include>
+                                    </control>
+                                    <control type="group">
+                                        <left>758</left>
+                                        <visible>!IsEmpty(Container(535).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                        <visible>Container.OnNext</visible>
+                                        <animation effect="rotatey" center="608" end="-55" time="200" reversible="false" tween="quadratic">Hidden</animation>
+                                        <control type="image">
+                                            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
+                                            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+                                            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
+                                        </control>
+                                        <control type="image">
+                                            <include>WatchedOverlayShowCase</include>
+                                            <texture>$VAR[IconOverlay-1Var]</texture>
+                                        </control>
+                                    </control>
+                                </control>
+                            </control>
+                            <control type="group" id="6002">
+                                <left>55</left>
+                                <top>570</top>
+                                <visible>Control.IsVisible(535) + IntegerGreaterThan(Container.NumItems,0)</visible>
+
+                                <visible>Container.OnPrevious</visible>
+                                <animation effect="slide" end="135,0" time="200" reversible="false">Hidden</animation>
+                                <control type="group">
+                                    <left>1500</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(7).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <visible>Container.OnPrevious</visible>
+                                    <visible>!Window.IsVisible(MyMusicNav.xml)</visible>
+                                    <animation effect="fade" start="100" end="0" time="70" reversible="false">Hidden</animation>
+                                    <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem7</include>
+                                </control>
+                                <control type="group">
+                                    <left>1365</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="0" time="70" reversible="false" condition="Window.IsVisible(MyMusicNav.xml)">Hidden</animation>
+                                    <include>MovieShowCaseItem6</include>
+                                    <visible>[Container.OnPrevious + Window.IsVisible(MyMusicNav.xml)] | !Window.IsVisible(MyMusicNav.xml)</visible>
+                                </control>
+                                <control type="group">
+                                    <left>1230</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem5</include>
+                                </control>
+                                <control type="group">
+                                    <left>1095</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem4</include>
+                                </control>
+                                <control type="group">
+                                    <left>960</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem3</include>
+                                </control>
+                                <control type="group">
+                                    <left>825</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem2</include>
+                                </control>
+                                <control type="group">
+                                    <left>-120</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <visible>!Container.OnPrevious</visible>
+                                    <animation effect="fade" end="100" delay="100" time="200" reversible="false">Visible</animation>
+                                    <animation effect="rotatey" center="-270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <visible>!Window.IsVisible(MyMusicNav.xml)</visible>
+                                    <include>MovieShowCaseItem-6</include>
+                                </control>
+                                <control type="group">
+                                    <left>15</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <animation effect="fade" end="100" delay="100" time="200" reversible="false" condition="Window.IsVisible(MyMusicNav.xml)">Visible</animation>
+                                    <visible>[!Container.OnPrevious + Window.IsVisible(MyMusicNav.xml)] | !Window.IsVisible(MyMusicNav.xml)</visible>
+                                    <include>MovieShowCaseItem-5</include>
+                                </control>
+                                <control type="group">
+                                    <left>150</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-4</include>
+                                </control>
+                                <control type="group">
+                                    <left>285</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-3</include>
+                                </control>
+                                <control type="group">
+                                    <left>420</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-2</include>
+                                </control>
+                                <control type="group">
+                                    <left>555</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-1</include>
+                                </control>
+                                <control type="group">
+                                    <visible>Container.OnPrevious</visible>
+                                    <animation effect="slide" end="-75,0" time="200" reversible="false">Hidden</animation>
+                                    <control type="group">
+                                        <left>690</left>
+                                        <visible>Container.OnPrevious</visible>
+                                        <visible>!IsEmpty(Container(535).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                        <animation effect="rotatey" center="540" end="55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                                        <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                        <include>MovieShowCaseItem0</include>
+                                    </control>
+                                    <control type="group">
+                                        <left>758</left>
+                                        <visible>!IsEmpty(Container(535).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                        <visible>Container.OnPrevious</visible>
+                                        <animation effect="rotatey" center="1223" end="55" time="200" reversible="false" tween="quadratic">Hidden</animation>
+                                        <control type="image">
+                                            <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
+                                            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+                                            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
+                                        </control>
+                                        <control type="image">
+                                            <include>WatchedOverlayShowCase</include>
+                                            <texture>$VAR[IconOverlay1Var]</texture>
+                                        </control>
+                                    </control>
+                                </control>
+                            </control>
+                            <control type="group" id="6000">
+                                <left>55</left>
+                                <top>570</top>
+                                <visible>Control.IsVisible(535) + IntegerGreaterThan(Container.NumItems,1)</visible>
+                                <visible>!Control.IsVisible(6001) + !Control.IsVisible(6002)</visible>
+                                <control type="group">
+                                    <left>15</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-6</include>
+                                    <visible>!Window.IsVisible(MyMusicNav.xml)</visible>
+                                </control>
+                                <control type="group">
+                                    <left>150</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-5</include>
+                                </control>
+                                <control type="group">
+                                    <left>285</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-4</include>
+                                </control>
+                                <control type="group">
+                                    <left>420</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-3</include>
+                                </control>
+                                <control type="group">
+                                    <left>555</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-2</include>
+                                </control>
+                                <control type="group">
+                                    <left>690</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem-1</include>
+                                </control>
+                                <control type="group">
+                                    <left>1500</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <visible>!Window.IsVisible(MyMusicNav.xml)</visible>
+                                    <include>MovieShowCaseItem6</include>
+                                </control>
+                                <control type="group">
+                                    <left>1365</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem5</include>
+                                </control>
+                                <control type="group">
+                                    <left>1230</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem4</include>
+                                </control>
+                                <control type="group">
+                                    <left>1095</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem3</include>
+                                </control>
+                                <control type="group">
+                                    <left>960</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem2</include>
+                                </control>
+                                <control type="group">
+                                    <left>825</left>
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+                                    <include>MovieShowCaseItem1</include>
                                 </control>
                                 <control type="group">
                                     <left>758</left>
-                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                    <visible>Container.OnPrevious</visible>
-                                    <animation effect="rotatey" center="1223" end="55" time="200" reversible="false" tween="quadratic">Hidden</animation>
-                                    <control type="image">
-                                        <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
-                                        <include>MovieShowcaseThumb</include>
-                                    </control>
-                                    <control type="image">
-                                        <include>WatchedOverlayShowCase</include>
-                                        <texture>$VAR[IconOverlay1Var]</texture>
-                                    </control>
+                                    <!-- Workaround for camera bug. As soon as the camera tag is applied to the group, label will be invisible -->
+                                    <!-- <animation effect="rotatey" center="0" start="1" end="1" time="0" condition="true">Conditional</animation> -->
+                                    <visible>!IsEmpty(Container(535).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
+                                    <include>MovieShowCaseItem0</include>
                                 </control>
                             </control>
                         </control>
-                        <control type="group" id="6000">
-                            <left>55</left>
-                            <top>570</top>
-                            <visible>Control.IsVisible(535) + IntegerGreaterThan(Container.NumItems,1)</visible>
-                            <visible>!Control.IsVisible(6001) + !Control.IsVisible(6002)</visible>
-                            <control type="group">
-                                <left>15</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-6</include>
-                            </control>
-                            <control type="group">
-                                <left>150</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-5</include>
-                            </control>
-                            <control type="group">
-                                <left>285</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-4</include>
-                            </control>
-                            <control type="group">
-                                <left>420</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-3</include>
-                            </control>
-                            <control type="group">
-                                <left>555</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-2</include>
-                            </control>
-                            <control type="group">
-                                <left>690</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(-1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem-1</include>
-                            </control>
-                            <control type="group">
-                                <left>1500</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(6).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1965" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem6</include>
-                            </control>
-                            <control type="group">
-                                <left>1365</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(5).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1830" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem5</include>
-                            </control>
-                            <control type="group">
-                                <left>1230</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(4).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1695" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem4</include>
-                            </control>
-                            <control type="group">
-                                <left>1095</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(3).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1560" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem3</include>
-                            </control>
-                            <control type="group">
-                                <left>960</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(2).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1425" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem2</include>
-                            </control>
-                            <control type="group">
-                                <left>825</left>
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(1).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
-                                <include>MovieShowCaseItem1</include>
-                            </control>
-                            <control type="group">
-                                <left>758</left>
-                                <!-- Workaround for camera bug. As soon as the camera tag is applied to the group, label will be invisible -->
-                                <!-- <animation effect="rotatey" center="0" start="1" end="1" time="0" condition="true">Conditional</animation> -->
-                                <visible>!IsEmpty(Container(535).ListItemNoWrap(0).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
-                                <include>MovieShowCaseItem0</include>
-                            </control>
+                        <control type="wraplist" id="535">
+                            <left>0</left>
+                            <top>540</top>
+                            <width>2058</width>
+                            <height>525</height>
+                            <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
+                            <ondown>61</ondown>
+                            <onleft>535</onleft>
+                            <onright>535</onright>
+                            <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets) | Container.Content(albums) | Container.Content(artists)] + [StringCompare(SkinHelper.ForcedView),535) | IsEmpty(SkinHelper.ForcedView)]</visible>
+                            <viewtype label="31199">bigwrap</viewtype>
+                            <pagecontrol>61</pagecontrol>
+                            <scrolltime tween="quadratic">300</scrolltime>
+                            <focusposition>3</focusposition>
+                            <orientation>horizontal</orientation>
+                            <preloaditems>2</preloaditems>
+                            <itemlayout height="525" width="260" />
+                            <focusedlayout height="525" width="260" />
                         </control>
                     </control>
-                    <control type="wraplist" id="535">
-                        <left>0</left>
-                        <top>540</top>
-                        <width>2058</width>
-                        <height>525</height>
-                        <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
-                        <ondown>61</ondown>
-                        <onleft>535</onleft>
-                        <onright>535</onright>
-                        <visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(sets)] + [StringCompare(SkinHelper.ForcedView),535) | IsEmpty(SkinHelper.ForcedView)]</visible>
-                        <viewtype label="31199">bigwrap</viewtype>
-                        <pagecontrol>61</pagecontrol>
-                        <scrolltime tween="quadratic">300</scrolltime>
-                        <focusposition>3</focusposition>
-                        <orientation>horizontal</orientation>
-                        <preloaditems>2</preloaditems>
-                        <itemlayout height="525" width="260" />
-                        <focusedlayout height="525" width="260" />
-                    </control>
                 </control>
-            </control>
-            <!-- Info Box -->
-            <control type="group">
-                <right>pad</right>
-                <left>pad</left>
-                <top>425</top>
-                <bottom>0</bottom>
-                <control type="grouplist">
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <itemgap>6</itemgap>
-                    <orientation>vertical</orientation>
-                    <left>pad</left>
+                <!-- Info Box -->
+                <control type="group">
                     <right>pad</right>
-                    <top>20</top>
+                    <left>pad</left>
+                    <top>425</top>
                     <bottom>0</bottom>
-                    <control type="label">
-                        <top>pad</top>
+                    <control type="grouplist">
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <itemgap>6</itemgap>
+                        <orientation>vertical</orientation>
                         <left>pad</left>
                         <right>pad</right>
-                        <height>44</height>
-                        <align>center</align>
-                        <font>Font-InfoBox-Title</font>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>32</height>
-                        <align>center</align>
-                        <textcolor>$VAR[HighlightColor2]</textcolor>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
-                    </control>
-                    <control type="label">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>32</height>
-                        <align>center</align>
-                        <font>Font-ListInfo-Small-Bold</font>
-                        <label>$VAR[Label_ExtraInfo_Icons]</label>
-                        <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
-                    </control>
-                    <control type="textbox">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>120</height>
-                        <font>Font-ListInfo</font>
-                        <align>center</align>
-                        <label>$VAR[Label_Plot]</label>
-                        <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
-                    </control>
-                    <control type="textbox">
-                        <left>pad</left>
-                        <right>pad</right>
-                        <height>158</height>
-                        <font>Font-ListInfo</font>
-                        <align>center</align>
-                        <label>$VAR[Label_Plot]</label>
-                        <visible>Skin.HasSetting(furniture.showflags) + Skin.HasSetting(furniture.flags.extradetail)</visible>
+                        <top>20</top>
+                        <bottom>0</bottom>
+                        <control type="label">
+                            <top>pad</top>
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>44</height>
+                            <align>center</align>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>32</height>
+                            <align>center</align>
+                            <textcolor>$VAR[HighlightColor2]</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
+                        </control>
+                        <control type="label">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>32</height>
+                            <align>center</align>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$VAR[Label_ExtraInfo_Icons]</label>
+                            <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
+                        </control>
+                        <control type="textbox">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>120</height>
+                            <font>Font-ListInfo</font>
+                            <align>center</align>
+                            <label>$VAR[Label_Plot]</label>
+                            <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
+                        </control>
+                        <control type="textbox">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <height>158</height>
+                            <font>Font-ListInfo</font>
+                            <align>center</align>
+                            <label>$VAR[Label_Plot]</label>
+                            <visible>Skin.HasSetting(furniture.showflags) + Skin.HasSetting(furniture.flags.extradetail)</visible>
+                        </control>
                     </control>
                 </control>
             </control>
-        </control>
+        </definition>
     </include>
     <include name="MovieShowcaseThumb">
-        <left>-6</left>
-        <top>-18</top>
-        <width>324</width>
-        <height>444</height>
-        <align>center</align>
-        <aspectratio scalediffuse="false">scale</aspectratio>
-        <fadetime>0</fadetime>
-        <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-        <bordersize>24</bordersize>
-        <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows_BorderTexture</include>
-        <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+            <left>-6</left>
+            <top>-18</top>
+            <width>324</width>
+            <height>444</height>
+            <align>center</align>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <fadetime>0</fadetime>
+            <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+            <bordersize>24</bordersize>
+            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows_BorderTexture</include>
+            <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+    </include>
+    <include name="MusicShowcaseThumb">
+            <left>-66</left>
+            <top>-18</top>
+            <width>444</width>
+            <height>444</height>
+            <align>center</align>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <fadetime>0</fadetime>
+            <aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
+            <bordersize>24</bordersize>
+            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows_BorderTexture</include>
+            <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
     </include>
     <include name="WatchedOverlayShowCase">
         <left>230</left>
@@ -432,49 +467,56 @@
         <visible>Control.IsVisible(535) + IntegerGreaterThan(Container.NumItems,0)</visible>
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-7Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
     </include>
     <include name="MovieShowCaseItem-6">
         <control type="image">
             <texture background="true" diffuse="diffuse/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-6Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
     </include>
     <include name="MovieShowCaseItem-5">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-5Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
     </include>
     <include name="MovieShowCaseItem-4">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-4Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
     </include>
     <include name="MovieShowCaseItem-3">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-3Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
     </include>
     <include name="MovieShowCaseItem-2">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-2Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
     </include>
     <include name="MovieShowCaseItem-1">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem-1Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
@@ -485,7 +527,8 @@
     <include name="MovieShowCaseItem0">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem0Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
@@ -497,7 +540,8 @@
     <include name="MovieShowCaseItem1">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem1Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
@@ -509,7 +553,8 @@
     <include name="MovieShowCaseItem2">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem2Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
@@ -521,7 +566,8 @@
     <include name="MovieShowCaseItem3">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem3Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
@@ -533,7 +579,8 @@
     <include name="MovieShowCaseItem4">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem4Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
@@ -545,7 +592,8 @@
     <include name="MovieShowCaseItem5">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem5Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
@@ -557,7 +605,8 @@
     <include name="MovieShowCaseItem6">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem6Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
@@ -569,7 +618,8 @@
     <include name="MovieShowCaseItem7">
         <control type="image">
             <texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideo.png">$VAR[ShowcaseItem7Var]</texture>
-            <include>MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
+            <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>IntegerGreaterThan(Container.NumItems,0)</visible>
         </control>
         <control type="image">
