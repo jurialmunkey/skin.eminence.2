@@ -1,3 +1,13 @@
+[B]2.5.29[/B]
+Add new color scheme for Solid Panels
+Flatten internal dialog shadows (option to reapply in Skin Settings > Misc > Panels > Show additional shadows on dialogs)
+Add Showcase for Music
+Add skinhelper view selector
+Add skinhelper view disabler
+Tweak DialogVideoInfo for addons without Posters
+Fix DialogVideoInfo issue with no titles in some addons
+Tweak actualicon in lists so no scaling (use center instead of keep)
+
 [B]2.5.28[/B]
 Fix list indicators
 Add more obvious unwatched indicator

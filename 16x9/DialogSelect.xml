@@ -30,7 +30,7 @@
                 <bottom>bigpad</bottom>
                 <width>576</width>
                 <height>576</height>
-                <include>Object_Background</include>
+                <include>Object_FlatBackground</include>
                 <visible>Control.IsVisible(6)</visible>
 
                 <control type="image">
@@ -43,7 +43,7 @@
                 <bottom>bigpad</bottom>
                 <width>1156</width>
                 <height>576</height>
-                <include>Object_Background</include>
+                <include>Object_FlatBackground</include>
                 <visible>Control.IsVisible(6)</visible>
             </control>
             <include content="Dialog_FavouriteList">

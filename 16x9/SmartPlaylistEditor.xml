@@ -90,7 +90,7 @@
                     <control type="group">
                         <left>0</left>
                         <width>settingshalfw</width>
-                        <include>Object_Background</include>
+                        <include>Object_FlatBackground</include>
                     </control>
                     <include content="Object_Line">
                         <param name="width" value="headlinew" />
@@ -133,7 +133,7 @@
                     <control type="group">
                         <right>0</right>
                         <width>settingshalfw</width>
-                        <include>Object_Background</include>
+                        <include>Object_FlatBackground</include>
                     </control>
                     <control type="grouplist" id="8300">
                         <right>0</right>

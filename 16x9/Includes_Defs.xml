@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="Defs_DialogInfo_PosterLeft"><left>500</left></include>
+    <include name="Defs_DialogInfo_SquareLeft"><left>740</left></include>
     <variable name="Defs_SpinnerTexture">
         <value condition="!IsEmpty(Skin.String(SkinHelper.SpinnerTexturePath)) + !IsEmpty(Skin.String(SkinHelper.SpinnerTexture)) + !StringCompare(Skin.String(SkinHelper.SpinnerTexturePath),None)">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</value>
         <value>special://skin/extras/busy_spinners/Default</value>

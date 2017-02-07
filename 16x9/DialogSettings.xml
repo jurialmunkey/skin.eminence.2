@@ -19,7 +19,7 @@
                 <left>bigpad</left>
                 <right>bigpad</right>
                 <bottom>112</bottom>
-                <include>Object_Background</include>
+                <include>Object_FlatBackground</include>
                 <include content="Object_Line">
                     <param name="width" value="1240" />
                     <param name="label" value="$INFO[Control.GetLabel(2)]" />

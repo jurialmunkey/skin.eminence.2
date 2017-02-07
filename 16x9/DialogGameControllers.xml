@@ -20,7 +20,7 @@
                 <bottom>bigpad</bottom>
                 <control type="group">
                     <bottom>148</bottom>
-                    <include>Object_Background</include>
+                    <include>Object_FlatBackground</include>
                 </control>
                 <include content="Object_Line">
                     <param name="width" value="headlinew" />

@@ -14,6 +14,7 @@
     <color name="LineLabel">9F181818</color>
     <color name="SideArrow">5F181818</color>
     <color name="PosterBorder">3e555555</color>
+    <color name="ObjectBackground">3e555555</color>
     <color name="ListLabel">bf181818</color>
     <color name="Disabled">2f181818</color>
     <color name="ListBG">bfdfdfdf</color>

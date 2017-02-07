@@ -658,9 +658,9 @@
     <!-- TOP BAR -->
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
         <value condition="Skin.HasSetting(header.colormatch)">$VAR[HighlightColor]</value>
-        <value condition="VideoPlayer.IsFullscreen + [Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]">PosterBorder</value>
+        <value condition="VideoPlayer.IsFullscreen + [Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]">ObjectBackground</value>
         <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeBarBG</value>
-        <value>PosterBorder</value>
+        <value>ObjectBackground</value>
     </variable>
     <variable name="Furniture_TopBar_MainLabel_Color">
         <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather)">HomeMainLabel</value>

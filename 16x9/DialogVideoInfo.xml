@@ -33,12 +33,17 @@
                 <right>bigpad</right>
                 <top>bigpad</top>
                 <bottom>bigpad</bottom>
-                <include content="Object_Poster">
+                <include content="Object_Poster" condition="!IsEmpty(ListItem.Art(poster)) | !IsEmpty(ListItem.Art(tvshow.poster))">
                     <param name="flipx" value="false" />
                     <param name="width" value="posterw" />
                 </include>
+                <include content="Object_Poster" condition="IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster))">
+                    <param name="flipx" value="false" />
+                    <param name="width" value="posterh" />
+                </include>
                 <control type="group">
-                    <left>500</left>
+                    <include condition="!IsEmpty(ListItem.Art(poster)) | !IsEmpty(ListItem.Art(tvshow.poster))">Defs_DialogInfo_PosterLeft</include>
+                    <include condition="IsEmpty(ListItem.Art(poster)) + IsEmpty(ListItem.Art(tvshow.poster))">Defs_DialogInfo_SquareLeft</include>
                     <right>0</right>
                     <include>Object_Background</include>
 
@@ -78,14 +83,15 @@
                             <right>pad</right>
                             <height>36</height>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Title]</label>
+                            <label>$VAR[Label_Title]</label>
                         </control>
                         <control type="label">
                             <left>pad</left>
                             <right>550</right>
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]</label>
+                            <textcolor>$VAR[HighlightColor2]</textcolor>
+                            <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
                         </control>
                         <control type="grouplist">
                             <orientation>horizontal</orientation>
@@ -323,6 +329,7 @@
                             <width>330</width>
                             <height>100%</height>
                             <visible>!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Revenue.formatted))</visible>
+                            <visible>!IsEmpty(ListItem.Art(poster)) | !IsEmpty(ListItem.Art(tvshow.poster))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -380,6 +387,7 @@
                             <onclick condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">SetFocus(51)</onclick>
                             <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
+                            <enable>IntegerGreaterThan(Container(50).NumItems,0)</enable>
                         </control>
                         
 

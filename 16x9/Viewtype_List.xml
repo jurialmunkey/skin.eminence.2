@@ -17,7 +17,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listw" />
                 <param name="id" value="550" />
-                <param name="condition" value="[Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors)] + [StringCompare(SkinHelper.ForcedView),50) | IsEmpty(SkinHelper.ForcedView)]" />
+                <param name="condition" value="[Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors)] + [StringCompare(SkinHelper.ForcedView),550) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
             <control type="group">
                 <width>listw</width>
@@ -40,7 +40,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
                 <param name="id" value="50" />
-                <param name="condition" value="[Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(genres) | Container.Content(images) | Container.Content(videos) | Container.Content()] + [StringCompare(SkinHelper.ForcedView),550) | IsEmpty(SkinHelper.ForcedView)]" />
+                <param name="condition" value="[Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(genres) | Container.Content(images) | Container.Content(videos) | Container.Content()] + [StringCompare(SkinHelper.ForcedView),50) | IsEmpty(SkinHelper.ForcedView)]" />
             </include>
             <control type="group">
                 <width>listinfow</width>

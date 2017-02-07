@@ -20,7 +20,7 @@
                 <bottom>bigpad</bottom>
                 <width>576</width>
                 <height>576</height>
-                <include>Object_Background</include>
+                <include>Object_FlatBackground</include>
                 <control type="image">
                     <aspectratio>keep</aspectratio>
                     <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
@@ -42,7 +42,7 @@
                 <bottom>bigpad</bottom>
                 <width>1156</width>
                 <height>576</height>
-                <include>Object_Background</include>
+                <include>Object_FlatBackground</include>
             </control>
             <include content="Dialog_ImageList">
                 <param name="id" value="450" />

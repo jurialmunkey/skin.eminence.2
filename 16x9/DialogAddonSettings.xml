@@ -30,7 +30,7 @@
                 <control type="group">
                     <width>465</width>
                     <height>576</height>
-                    <include>Object_Background</include>
+                    <include>Object_FlatBackground</include>
                     <control type="grouplist" id="9">
                         <ondown>8000</ondown>
                         <onup>noop</onup>
@@ -47,7 +47,7 @@
                     <left>485</left>
                     <right>0</right>
                     <height>576</height>
-                    <include>Object_Background</include>
+                    <include>Object_FlatBackground</include>
                     <control type="grouplist" id="2">
                         <width>100%</width>
                         <height>576</height>

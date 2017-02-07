@@ -23,7 +23,7 @@
                 <left>bigpad</left>
                 <top>80</top>
                 <bottom>bigpad</bottom>
-                <include>Object_Background</include>
+                <include>Object_FlatBackground</include>
             </control>
             <control type="list" id="211">
                 <right>bigpad</right>
@@ -106,7 +106,7 @@
                 <right>bigpad</right>
                 <top>80</top>
                 <bottom>bigpad</bottom>
-                <include>Object_Background</include>
+                <include>Object_FlatBackground</include>
             </control>
             <control type="grouplist" id="9100">
                 <onleft>304</onleft>

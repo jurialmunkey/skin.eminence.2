@@ -48,7 +48,7 @@
                 <control type="group">
                     <left>0</left>
                     <width>610</width>
-                    <include>Object_Background</include>
+                    <include>Object_FlatBackground</include>
                 </control>
                 <control type="grouplist" id="9000">
                     <left>0</left>
@@ -134,7 +134,7 @@
                 <control type="group">
                     <right>0</right>
                     <width>610</width>
-                    <include>Object_Background</include>
+                    <include>Object_FlatBackground</include>
                 </control>
                 <control type="grouplist" id="9100">
                     <right>0</right>

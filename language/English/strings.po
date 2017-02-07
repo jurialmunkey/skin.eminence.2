@@ -825,3 +825,7 @@ msgstr ""
 msgctxt "#31223"
 msgid "Poster List"
 msgstr ""
+
+msgctxt "#31224"
+msgid "Show additional dialog shadows"
+msgstr ""

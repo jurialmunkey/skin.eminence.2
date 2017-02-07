@@ -16,6 +16,7 @@
     <color name="LineLabel">9Fededed</color>
     <color name="SideArrow">5Fededed</color>
     <color name="PosterBorder">3e555555</color>
+    <color name="ObjectBackground">3e555555</color>
     <color name="ListLabel">bfededed</color>
     <color name="Disabled">2fededed</color>
     <color name="ListBG">bf2a2a2a</color>

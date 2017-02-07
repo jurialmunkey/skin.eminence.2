@@ -255,6 +255,12 @@
     <include name="Object_Background">
         <control type="image">
             <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+            <texture colordiffuse="ObjectBackground">common/white.png</texture>
+        </control>
+    </include>
+    <include name="Object_FlatBackground">
+        <control type="image">
+            <include condition="Skin.HasSetting(global.showdialogshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
             <texture colordiffuse="PosterBorder">common/white.png</texture>
         </control>
     </include>
@@ -273,8 +279,8 @@
                 <control type="image">
                     <centerleft>50%</centerleft>
                     <centertop>50%</centertop>
-                    <width>75%</width>
-                    <height>75%</height>
+                    <width>50%</width>
+                    <height>50%</height>
                     <aspectratio>keep</aspectratio>
                     <fadetime>200</fadetime>
                     <texture background="true">$VAR[Image_Poster]</texture>
@@ -285,9 +291,19 @@
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
+                        <aspectratio>center</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <visible>substring(ListItem.Icon,Default,left)</visible>
+                        <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                    </control>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
                         <aspectratio>keep</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Poster]</texture>
+                        <visible>!substring(ListItem.Icon,Default,left)</visible>
                         <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
                     </control>
                     <control type="image">

@@ -135,8 +135,8 @@
         <value condition="Container.Content(artists) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.AlbumCount))">$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),, $LOCALIZE[132]]$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount),  •  , $LOCALIZE[134]]</value>
         <value condition="[Container.Content(artists) | Container.Content(albums)] + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.SongCount))">$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount),, $LOCALIZE[134]]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Episode,, $LOCALIZE[20360]]</value>
-        <value condition="!ListItem.IsCollection + Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Rating]</value>
-        <value condition="!ListItem.IsCollection + !Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Premiered,,  •  ]$INFO[ListItem.Rating]</value>
+        <value condition="!ListItem.IsCollection + Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Year,,  •  ]$VAR[Label_Rating]</value>
+        <value condition="!ListItem.IsCollection + !Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Premiered,,  •  ]$VAR[Label_Rating]</value>
         <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Count),, $LOCALIZE[20342]  •  ]$INFO[Window(Home).Property(SkinHelper.ListItem.Year)]</value>
     </variable>
 

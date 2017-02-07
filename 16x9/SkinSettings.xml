@@ -861,6 +861,17 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Dialog Shadows -->
+                    <control type="radiobutton" id="8910">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31224</label>
+                        <selected>Skin.HasSetting(global.showdialogshadows)</selected>
+                        <onclick>Skin.ToggleSetting(global.showdialogshadows)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                     <!-- Wide Screen -->
                     <control type="radiobutton" id="8903">
                         <radioposx>settingsradioposx</radioposx>

@@ -20,7 +20,7 @@
                 <bottom>bigpad</bottom>
                 <width>432</width>
                 <height>432</height>
-                <include>Object_Background</include>
+                <include>Object_FlatBackground</include>
                 <control type="image">
                     <aspectratio>keep</aspectratio>
                     <texture background="true" fallback="DefaultAddon.png">$INFO[Container(450).ListItem.Icon]</texture>
