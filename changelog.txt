@@ -1,3 +1,7 @@
+[B]2.5.30[/B]
+Add videos container content for youtube etc
+Tweaks to InfoList2
+
 [B]2.5.29[/B]
 Add new color scheme for Solid Panels
 Flatten internal dialog shadows (option to reapply in Skin Settings > Misc > Panels > Show additional shadows on dialogs)
