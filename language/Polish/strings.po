@@ -820,7 +820,7 @@ msgstr "Kafelki"
 
 msgctxt "#31222"
 msgid "Enable / Disable Views"
-msgstr "Widoczność widoków"
+msgstr "Zarządzanie widokami"
 
 msgctxt "#31223"
 msgid "Poster List"
