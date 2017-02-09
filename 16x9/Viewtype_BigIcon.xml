@@ -287,7 +287,7 @@
                         <orientation>horizontal</orientation>
                         <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
                         <scrolltime tween="quadratic">400</scrolltime>
-                        <visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(artists)] + [StringCompare(SkinHelper.ForcedView),58) | IsEmpty(SkinHelper.ForcedView)]</visible>
+                        <visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(artists) | Container.Content(videos)] + [StringCompare(SkinHelper.ForcedView),58) | IsEmpty(SkinHelper.ForcedView)]</visible>
                         <itemlayout width="1280" height="720">
                             <control type="image">
                                 <width>100%</width>
