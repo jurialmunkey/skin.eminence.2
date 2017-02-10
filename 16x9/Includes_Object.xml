@@ -220,7 +220,7 @@
             <onclick condition="[Container.Content(unknown) + IsEmpty(Skin.String(Skin.ForcedView.unknown))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
             <onclick condition="[Container.Content(videos) + IsEmpty(Skin.String(Skin.ForcedView.videos))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
 
-            <visible>Skin.HasSetting(Skin.ForcedView)</visible>
+            <visible>!Skin.HasSetting(Skin.ForcedViews)</visible>
         </control>
 
         <!-- Disable Views -->

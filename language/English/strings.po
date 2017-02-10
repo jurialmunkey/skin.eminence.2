@@ -839,5 +839,5 @@ msgid "Lock view"
 msgstr ""
 
 msgctxt "#31227"
-msgid "Force viewtype locking to content type (experimental)"
+msgid "Enable viewtype locking to content type"
 msgstr ""

@@ -700,10 +700,8 @@
                         <radioposx>settingsradioposx</radioposx>
                         <width>100%</width>
                         <label>31227</label>
-                        <onclick>Skin.ToggleSetting(Skin.ForcedView)</onclick>
-                        <selected>Skin.HasSetting(Skin.ForcedView)</selected>
-                        <!-- <onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick> -->
-                        <!-- <selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected> -->
+                        <onclick>Skin.ToggleSetting(Skin.ForcedViews)</onclick>
+                        <selected>!Skin.HasSetting(Skin.ForcedViews)</selected>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
