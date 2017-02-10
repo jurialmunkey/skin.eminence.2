@@ -15,7 +15,7 @@
                 <include content="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
-                    <param name="condition" value="[Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsVisible(MyPics.xml)] + [StringCompare(SkinHelper.ForcedView),500) | IsEmpty(SkinHelper.ForcedView)]" />
+                    <param name="condition" value="[Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors) | Container.Content(files) | Container.Content(addons) | Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(images)] + [StringCompare(SkinHelper.ForcedView),500) | IsEmpty(SkinHelper.ForcedView)]" />
                 </include>
 
                 <include>Object_Arrows_Vertical</include>

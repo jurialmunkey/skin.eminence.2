@@ -819,7 +819,7 @@ msgid "Square List"
 msgstr ""
 
 msgctxt "#31222"
-msgid "Enable / Disable Views"
+msgid "Enable / disable views"
 msgstr ""
 
 msgctxt "#31223"
@@ -832,4 +832,12 @@ msgstr ""
 
 msgctxt "#31225"
 msgid "Use original Eminence v1 style side labels and arrows"
+msgstr ""
+
+msgctxt "#31226"
+msgid "Lock view"
+msgstr ""
+
+msgctxt "#31227"
+msgid "Force viewtype locking to content type"
 msgstr ""

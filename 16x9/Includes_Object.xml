@@ -131,37 +131,30 @@
             <include>Defs_OptionButton2</include>
             <visible>Control.IsEnabled(2)</visible>
             <visible>!Control.IsVisible(9978)</visible>
+            <visible>!Control.IsVisible(9975)</visible>
         </control>
         <control type="button" id="9978">
             <label>$INFO[Control.GetLabel(2)]</label>
             <include>Defs_OptionButton2</include>
             <onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
-            <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(pictures)</visible>
+            <visible>Container.Content(videos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(episodes) | Container.Content(addons) | Container.Content(images)</visible>
+            <visible>!Control.IsVisible(9975)</visible>
+        </control>
+        <!-- Lock View -->
+        <control type="button" id="9975">
+            <label>$INFO[Container.ViewMode,$LOCALIZE[31226]: ,]</label>
+            <include>Defs_OptionButton2</include>
+            <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=$INFO[Container.Content])</onclick>
+            <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
+            <visible>Container.Content(videos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(episodes) | Container.Content(addons) | Container.Content(images)</visible>
         </control>
         <!-- Disable Views -->
         <control type="button" id="9976">
             <label>31222</label>
             <include>Defs_OptionButton2</include>
             <onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
+            <visible>!IsEmpty(Container.Content)</visible>
         </control>
-        <!-- Force View -->
-        <!-- <control type="button" id="9977">
-            <include>Defs_OptionButton2</include>
-            <label>Lock View</label>
-            <onclick>Skin.SetBool(SkinHelper.ForcedViews.Enabled)</onclick>
-            <onclick condition="Container.Content(movies)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=movies)</onclick>
-            <onclick condition="Container.Content(sets)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=sets)</onclick>
-            <onclick condition="Container.Content(tvshows)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=tvshows)</onclick>
-            <onclick condition="Container.Content(musicvideos)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=musicvideos)</onclick>
-            <onclick condition="Container.Content(seasons)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=seasons)</onclick>
-            <onclick condition="Container.Content(episodes)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=episodes)</onclick>
-            <onclick condition="Container.Content(artists)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=artists)</onclick>
-            <onclick condition="Container.Content(albums)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=albums)</onclick>
-            <onclick condition="Container.Content(songs)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=songs)</onclick>
-            <onclick condition="Container.Content(programs)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=programs)</onclick>
-            <onclick condition="Container.Content(pictures)">RunScript(script.skin.helper.service,action=setforcedview,contenttype=pictures)</onclick>
-            <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(programs) | Container.Content(pictures)</visible>
-        </control> -->
         <!-- Sort by -->
         <control type="button" id="3">
             <include>Defs_OptionButton2</include>

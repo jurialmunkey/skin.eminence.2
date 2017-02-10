@@ -616,6 +616,17 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
+                    <!-- Lock Library -->
+                    <control type="radiobutton" id="8509">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31227</label>
+                        <onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
+                        <selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
                     <!-- Info Line -->
                     <control type="radiobutton" id="8501">
                         <radioposx>settingsradioposx</radioposx>

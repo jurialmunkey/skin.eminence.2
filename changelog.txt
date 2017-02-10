@@ -1,6 +1,7 @@
 [B]2.5.30[/B]
 Add videos container content for youtube etc
 Tweaks to InfoList2
+Add Force Views
 
 [B]2.5.29[/B]
 Add new color scheme for Solid Panels
