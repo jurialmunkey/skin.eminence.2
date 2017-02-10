@@ -829,3 +829,7 @@ msgstr ""
 msgctxt "#31224"
 msgid "Show additional dialog shadows"
 msgstr ""
+
+msgctxt "#31225"
+msgid "Use original Eminence v1 style side labels and arrows"
+msgstr ""

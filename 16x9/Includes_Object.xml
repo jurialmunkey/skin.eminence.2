@@ -94,6 +94,7 @@
         </control>
     </include>
     <include name="Object_Arrows_Vertical">
+        
         <!-- <control type="group">
             <visible>![Window.IsVisible(DialogPVRRecordingInfo.xml) | Window.IsVisible(DialogPVRGuideInfo.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]</visible>
             <include>Animation_FadeIn</include>

@@ -884,6 +884,18 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Side Labels -->
+                    <control type="radiobutton" id="8911">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31225</label>
+                        <selected>Skin.HasSetting(global.eminenceonestyle)</selected>
+                        <onclick>Skin.ToggleSetting(global.eminenceonestyle)</onclick>
+                        <enable>!Skin.HasSetting(global.widescreen)</enable>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                     <!-- Div Extras Label -->
                     <control type="image" id="8904">
                         <width>100%</width>
@@ -911,18 +923,8 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
-                    <!-- Busy Spinner -->
-                    <control type="button" id="8907">
-                        <width>100%</width>
-                        <label>31160</label>
-                        <label2>$VAR[Label_SkinSetting_BusyTexture]</label2>
-                        <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control>
                     <!-- Customise Shutdown Menu -->
-                    <control type="button" id="8908">
+                    <control type="button" id="8907">
                         <width>100%</width>
                         <label>31183</label>
                         <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
@@ -931,7 +933,7 @@
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
                     <!-- Startup Video -->
-                    <control type="button" id="8909">
+                    <control type="button" id="8908">
                         <width>100%</width>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                         <height>72</height>
@@ -940,6 +942,16 @@
                         <label2>$VAR[Label_SkinSetting_StartupVideo]</label2>
                         <onclick condition="IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
                         <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
+                    </control>
+                    <!-- Busy Spinner -->
+                    <control type="button" id="8909">
+                        <width>100%</width>
+                        <label>31160</label>
+                        <label2>$VAR[Label_SkinSetting_BusyTexture]</label2>
+                        <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
 
                     <!-- RESET -->

@@ -116,7 +116,7 @@
     <include name="Defs_SideLabel">
         <param name="Label" default="$VAR[Label_SideLabel]" />
         <definition>
-            <!-- <control type="label">
+            <control type="label">
                 <right>-726</right>
                 <top>-10</top>
                 <height>64</height>
@@ -125,9 +125,34 @@
                 <angle>270</angle>
                 <font>Font-WidgetInfoTitle</font>
                 <label>[UPPERCASE]$PARAM[Label][/UPPERCASE]</label>
-                <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-            </control> -->
+                <animation effect="fade" start="100" end="33" condition="true">Conditional</animation>
+            </control>
         </definition>
+    </include>
+    <include name="Defs_SideArrows">
+        <control type="image">
+            <centerleft>-24</centerleft>
+            <width>48</width>
+            <height>48</height>
+            <texture colordiffuse="ListLabel">common/48-arrow-left.png</texture>
+            <centertop>50%</centertop>
+            <animation effect="fade" start="100" end="33" condition="true">Conditional</animation>
+            <visible>!StringCompare(Window(home).Property(HubReturn),Home)</visible>
+            <visible>substring(Window(home).Property(HubReturn),110,left)</visible>
+            <visible>![Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)]</visible>
+        </control>
+        <control type="image">
+            <centerright>-24</centerright>
+            <width>48</width>
+            <height>48</height>
+            <texture colordiffuse="ListLabel" flipx="true">common/48-arrow-left.png</texture>
+            <centertop>50%</centertop>
+            <animation effect="fade" start="100" end="33" condition="true">Conditional</animation>
+            <visible>!StringCompare(Window(home).Property(HubReturn),Home)</visible>
+            <visible>!substring(Window(home).Property(HubReturn),110,left)</visible>
+            <visible>!IsEmpty(Window(home).Property(NodeReturn))</visible>
+            <visible>Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)</visible>
+        </control>
     </include>
     <include name="Defs_ViewBackground">
         <left>sidepad</left>
@@ -135,9 +160,11 @@
         <top>top</top>
         <height>height</height>
         <include>Animation_Common</include>
-        <include content="Defs_SideLabel">
-            <param name="Label" value="$VAR[Label_SideLabel]" />
-        </include>
+        <control type="group">
+            <visible>Skin.HasSetting(global.eminenceonestyle)</visible>
+            <include condition="!Skin.HasSetting(global.widescreen)">Defs_SideLabel</include>
+            <include condition="!Skin.HasSetting(global.widescreen)">Defs_SideArrows</include>
+        </control>
     </include>
     <include name="Defs_InfoBackground">
         <left>sidepad</left>

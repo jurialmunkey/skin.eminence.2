@@ -15,8 +15,9 @@
         <value condition="Window.IsVisible(Settings.xml) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
         <value condition="Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)">$INFO[Window(home).Property(Header.Label)]</value>
         <value condition="Window.IsVisible(SettingsSystemInfo.xml)">$LOCALIZE[19033]</value>
-
-        <value>$INFO[Container.Content]</value>
+        <value condition="!IsEmpty(Container.Content)">$INFO[Container.Content]</value>
+        <value condition="!IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+        <value>$LOCALIZE[15100]</value>
     </variable>
 
     <variable name="Label_IconLine">
