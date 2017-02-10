@@ -14,7 +14,7 @@
                 <top>30</top>
                 <left>bigiconpanelpadw</left>
                 <right>15</right>
-                <visible>[Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)] + [StringCompare(SkinHelper.ForcedView),52) | IsEmpty(SkinHelper.ForcedView)]</visible>
+                <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) | !Skin.HasSetting(Skin.ForcedView)]]</visible>
                 <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
                 <ondown>61</ondown>
                 <onleft>52</onleft>
@@ -287,7 +287,7 @@
                         <orientation>horizontal</orientation>
                         <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
                         <scrolltime tween="quadratic">400</scrolltime>
-                        <visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(artists) | Container.Content(videos)] + [StringCompare(SkinHelper.ForcedView),58) | IsEmpty(SkinHelper.ForcedView)]</visible>
+                        <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) | !Skin.HasSetting(Skin.ForcedView)]] | [Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) | !Skin.HasSetting(Skin.ForcedView)]]</visible>
                         <itemlayout width="1280" height="720">
                             <control type="image">
                                 <width>100%</width>
