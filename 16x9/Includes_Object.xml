@@ -349,7 +349,7 @@
                     <height>405</height>
                     <include>Object_Background</include>
                     <control type="image">
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>scale</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
                     </control>
@@ -371,7 +371,7 @@
                     <height>405</height>
                     <include>Object_Background</include>
                     <control type="image">
-                        <aspectratio>keep</aspectratio>
+                        <aspectratio>scale</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
                     </control>
@@ -449,7 +449,7 @@
                 <include>Object_Background</include>
                 <control type="image">
                     <fadetime>$PARAM[fadetime]</fadetime>
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                     <texture background="true">$VAR[Image_Thumb]</texture>
                 </control>
                 <control type="image">
