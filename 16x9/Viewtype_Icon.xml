@@ -388,10 +388,6 @@
                                 <bottom>pad</bottom>
                                 <include>Object_Background</include>
                                 <control type="image">
-                                    <aspectratio>keep</aspectratio>
-                                    <texture background="true">$INFO[ListItem.ActualIcon]</texture>
-                                </control>
-                                <control type="image">
                                     <aspectratio>scale</aspectratio>
                                     <texture background="true">$VAR[Image_Thumb]</texture>
                                 </control>
@@ -444,10 +440,6 @@
                                 <right>pad</right>
                                 <top>pad</top>
                                 <bottom>pad</bottom>
-                                <control type="image">
-                                    <aspectratio>keep</aspectratio>
-                                    <texture background="true">$INFO[ListItem.ActualIcon]</texture>
-                                </control>
                                 <control type="image">
                                     <aspectratio>scale</aspectratio>
                                     <texture background="true">$VAR[Image_Thumb]</texture>

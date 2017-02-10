@@ -208,8 +208,11 @@
                     <height>100%</height>
                     <include>Object_Background</include>
                     <control type="image">
+                        <texture colordiffuse="FF000000">common/white.png</texture>
+                    </control>
+                    <control type="image">
                         <fadetime>200</fadetime>
-                        <aspectratio>scale</aspectratio>
+                        <aspectratio>keep</aspectratio>
                         <texture>$VAR[Image_Thumb]</texture>
                     </control>
                 </control>
@@ -318,11 +321,94 @@
             </control>
         </control>
     </include>
+    <include name="View_InfoList2_ItemLayout">
+        <control type="group">
+            <left>pad</left>
+            <right>pad</right>
+            <top>pad</top>
+            <bottom>pad</bottom>
+            <include>Object_Background</include>
+            <control type="group">
+                <width>622</width>
+                <control type="image">
+                    <texture colordiffuse="FF000000">common/white.png</texture>
+                </control>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$VAR[Image_Thumb]</texture>
+                </control>
+            </control>
+            <control type="group">
+                <left>622</left>
+                <control type="label">
+                    <top>20</top>
+                    <left>30</left>
+                    <right>70</right>
+                    <height>36</height>
+                    <textcolor>ListLabel</textcolor>
+                    <font>Font-InfoBox-Title</font>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <top>70</top>
+                    <left>30</left>
+                    <right>30</right>
+                    <height>24</height>
+                    <textcolor>$VAR[HighlightColor2]</textcolor>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
+                </control>
+                <control type="textbox">
+                    <top>115</top>
+                    <left>30</left>
+                    <right>30</right>
+                    <height>190</height>
+                    <font>Font-ListInfo</font>
+                    <align>left</align>
+                    <autoscroll>false</autoscroll>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$VAR[Label_ListPlot]</label>
+                    <visible>Skin.HasSetting(furniture.showflags) + Skin.HasSetting(furniture.flags.extradetail)</visible>
+                </control>
+                <control type="textbox">
+                    <top>115</top>
+                    <left>30</left>
+                    <right>30</right>
+                    <height>154</height>
+                    <font>Font-ListInfo</font>
+                    <align>left</align>
+                    <autoscroll>false</autoscroll>
+                    <textcolor>ListLabel</textcolor>
+                    <label>$VAR[Label_ListPlot]</label>
+                    <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
+                </control>
+                <control type="label">
+                    <bottom>25</bottom>
+                    <left>30</left>
+                    <right>30</right>
+                    <height>20</height>
+                    <align>right</align>
+                    <textcolor>ListLabel</textcolor>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
+                </control>
+                <control type="image">
+                    <right>20</right>
+                    <top>20</top>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                </control>
+            </control>
+        </control> 
+    </include>
     <include name="View_InfoList2">
         <param name="updownid" default="true" />
         <definition>
             <control type="group">
-                <control type="panel" id="$PARAM[id]">  
+                <control type="list" id="$PARAM[id]">  
                     <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
                     <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
@@ -336,91 +422,15 @@
                     <scrolltime tween="quadratic">400</scrolltime>
                     <visible>$PARAM[condition]</visible>
                     <itemlayout height="370" width="iconlistwideitemw">
-                        <control type="group">
-                            <left>pad</left>
-                            <right>pad</right>
-                            <top>pad</top>
-                            <bottom>pad</bottom>
-                            <include>Object_Background</include>
-                            <control type="group">
-                                <width>622</width>
-                                <control type="image">
-                                    <aspectratio>keep</aspectratio>
-                                    <texture background="true">$INFO[ListItem.ActualIcon]</texture>
-                                </control>
-                                <control type="image">
-                                    <aspectratio>scale</aspectratio>
-                                    <texture background="true">$VAR[Image_Thumb]</texture>
-                                </control>
-                            </control>
-                            <control type="group">
-                                <left>622</left>
-                                <control type="label">
-                                    <top>20</top>
-                                    <left>30</left>
-                                    <right>70</right>
-                                    <height>36</height>
-                                    <textcolor>ListLabel</textcolor>
-                                    <font>Font-InfoBox-Title</font>
-                                    <label>$INFO[ListItem.Label]</label>
-                                </control>
-                                <control type="label">
-                                    <top>70</top>
-                                    <left>30</left>
-                                    <right>30</right>
-                                    <height>24</height>
-                                    <textcolor>$VAR[HighlightColor2]</textcolor>
-                                    <font>Font-ListInfo-Small-Bold</font>
-                                    <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
-                                </control>
-                                <control type="textbox">
-                                    <top>115</top>
-                                    <left>30</left>
-                                    <right>30</right>
-                                    <height>190</height>
-                                    <font>Font-ListInfo</font>
-                                    <align>left</align>
-                                    <autoscroll>false</autoscroll>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>$VAR[Label_ListPlot]</label>
-                                    <visible>Skin.HasSetting(furniture.showflags) + Skin.HasSetting(furniture.flags.extradetail)</visible>
-                                </control>
-                                <control type="textbox">
-                                    <top>115</top>
-                                    <left>30</left>
-                                    <right>30</right>
-                                    <height>154</height>
-                                    <font>Font-ListInfo</font>
-                                    <align>left</align>
-                                    <autoscroll>false</autoscroll>
-                                    <textcolor>ListLabel</textcolor>
-                                    <label>$VAR[Label_ListPlot]</label>
-                                    <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
-                                </control>
-                                <control type="label">
-                                    <bottom>25</bottom>
-                                    <left>30</left>
-                                    <right>30</right>
-                                    <height>20</height>
-                                    <align>right</align>
-                                    <textcolor>ListLabel</textcolor>
-                                    <font>Font-ListInfo-Small-Bold</font>
-                                    <label>$VAR[Label_ExtraInfo_Icons]</label>
-                                    <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
-                                </control>
-                                <control type="image">
-                                    <right>20</right>
-                                    <top>20</top>
-                                    <height>32</height>
-                                    <width>32</width>
-                                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                                </control>
-                            </control>
-                        </control>                            
+                        <include>View_InfoList2_ItemLayout</include>
                     </itemlayout>
                     <focusedlayout height="370" width="iconlistwideitemw">
                         <control type="group">
+                            <visible>!Control.HasFocus($PARAM[id])</visible>
+                            <include>View_InfoList2_ItemLayout</include>
+                        </control>
+                        <control type="group">
+                            <visible>Control.HasFocus($PARAM[id])</visible>
                             <left>pad</left>
                             <right>pad</right>
                             <top>pad</top>
@@ -432,11 +442,10 @@
                             <control type="group">
                                 <width>622</width>
                                 <control type="image">
-                                    <aspectratio>keep</aspectratio>
-                                    <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+                                    <texture colordiffuse="FF000000">common/white.png</texture>
                                 </control>
                                 <control type="image">
-                                    <aspectratio>scale</aspectratio>
+                                    <aspectratio>keep</aspectratio>
                                     <texture background="true">$VAR[Image_Thumb]</texture>
                                 </control>
                             </control>

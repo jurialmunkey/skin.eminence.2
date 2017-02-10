@@ -137,7 +137,8 @@
             <label>$INFO[Control.GetLabel(2)]</label>
             <include>Defs_OptionButton2</include>
             <onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
-            <visible>Container.Content(videos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(episodes) | Container.Content(addons) | Container.Content(images)</visible>
+            <visible>!IsEmpty(Container.Content)</visible>
+            <!-- <visible>Container.Content(videos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(episodes) | Container.Content(addons) | Container.Content(images)</visible> -->
             <visible>!Control.IsVisible(9975)</visible>
         </control>
         <!-- Lock View -->
@@ -146,7 +147,7 @@
             <include>Defs_OptionButton2</include>
             <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=$INFO[Container.Content])</onclick>
             <visible>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</visible>
-            <visible>Container.Content(videos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(episodes) | Container.Content(addons) | Container.Content(images)</visible>
+            <visible>Container.Content(videos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(episodes)</visible>
         </control>
         <!-- Disable Views -->
         <control type="button" id="9976">
@@ -342,7 +343,10 @@
                     <height>405</height>
                     <include>Object_Background</include>
                     <control type="image">
-                        <aspectratio>scale</aspectratio>
+                        <texture colordiffuse="FF000000">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <aspectratio>keep</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
                     </control>
@@ -364,7 +368,10 @@
                     <height>405</height>
                     <include>Object_Background</include>
                     <control type="image">
-                        <aspectratio>scale</aspectratio>
+                        <texture colordiffuse="FF000000">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <aspectratio>keep</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Thumb]</texture>
                     </control>
@@ -441,8 +448,11 @@
                 <width>1280</width>
                 <include>Object_Background</include>
                 <control type="image">
+                    <texture colordiffuse="FF000000">common/white.png</texture>
+                </control>
+                <control type="image">
                     <fadetime>$PARAM[fadetime]</fadetime>
-                    <aspectratio>scale</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <texture background="true">$VAR[Image_Thumb]</texture>
                 </control>
                 <control type="image">
