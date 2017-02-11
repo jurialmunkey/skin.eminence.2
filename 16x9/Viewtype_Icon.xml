@@ -65,7 +65,7 @@
                 <include content="View_IconWide">
                     <param name="id" value="55" />
                     <param name="name" value="539" />
-                    <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[539]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[539]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[539]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[539]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | Skin.HasSetting(Skin.ForcedViews)]]" />
+                    <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[539]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[539]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[539]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | Skin.HasSetting(Skin.ForcedViews)]]" />
                 </include>
                 <include>Object_Arrows_Vertical</include>
             </control>

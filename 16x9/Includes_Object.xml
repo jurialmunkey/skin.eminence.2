@@ -147,6 +147,34 @@
         <onclick condition="[Container.Content(videos) + !IsEmpty(Skin.String(Skin.ForcedView.videos))]">Skin.Reset(Skin.ForcedView.videos)</onclick>
     </include>
 
+    <include name="Object_SetViewLock">
+        <onclick condition="[Container.Content() + IsEmpty(Skin.String(Skin.ForcedView.))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(tags) + IsEmpty(Skin.String(Skin.ForcedView.tags))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(years) + IsEmpty(Skin.String(Skin.ForcedView.years))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(genres) + IsEmpty(Skin.String(Skin.ForcedView.genres))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(countries) + IsEmpty(Skin.String(Skin.ForcedView.countries))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(studios) + IsEmpty(Skin.String(Skin.ForcedView.studios))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(playlists) + IsEmpty(Skin.String(Skin.ForcedView.playlists))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(movies) + IsEmpty(Skin.String(Skin.ForcedView.movies))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(sets) + IsEmpty(Skin.String(Skin.ForcedView.sets))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(tvshows) + IsEmpty(Skin.String(Skin.ForcedView.tvshows))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(seasons) + IsEmpty(Skin.String(Skin.ForcedView.seasons))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(episodes) + IsEmpty(Skin.String(Skin.ForcedView.episodes))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(artists) + IsEmpty(Skin.String(Skin.ForcedView.artists))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(albums) + IsEmpty(Skin.String(Skin.ForcedView.albums))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(songs) + IsEmpty(Skin.String(Skin.ForcedView.songs))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(musicvideos) + IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(addons) + IsEmpty(Skin.String(Skin.ForcedView.addons))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(actors) + IsEmpty(Skin.String(Skin.ForcedView.actors))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(directors) + IsEmpty(Skin.String(Skin.ForcedView.directors))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(files) + IsEmpty(Skin.String(Skin.ForcedView.files))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(mixed) + IsEmpty(Skin.String(Skin.ForcedView.mixed))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(images) + IsEmpty(Skin.String(Skin.ForcedView.images))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(games) + IsEmpty(Skin.String(Skin.ForcedView.games))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(unknown) + IsEmpty(Skin.String(Skin.ForcedView.unknown))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+        <onclick condition="[Container.Content(videos) + IsEmpty(Skin.String(Skin.ForcedView.videos))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
+    </include>
+
     <include name="Object_BasicViewList">
         <!-- Fullscreen -->
         <control type="button" id="9099">
@@ -163,73 +191,25 @@
             <visible>false</visible>
         </control>
 
-        <!-- Change Viewmode Fallback -->
-        <control type="button" id="9974">
-            <label>$INFO[Control.GetLabel(2)]</label>
-            <include>Defs_OptionButton2</include>
-            <include>Object_ClearViewLock</include>
-            <onclick>Container.NextViewMode</onclick>
-            <visible>Control.IsEnabled(2)</visible>
-            <visible>!Control.IsVisible(9978)</visible>
-        </control>
-
         <!-- Skin Helper View Mode Selector -->
         <control type="button" id="9978">
             <label>$INFO[Control.GetLabel(2)]</label>
             <include>Defs_OptionButton2</include>
             <include>Object_ClearViewLock</include>
-            <onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
-            <visible>!IsEmpty(Container.Content)</visible>
-            <visible>Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(episodes) | Container.Content(addons) | Container.Content(videos)</visible>
+            <onclick>ActivateWindow(1110)</onclick>
         </control>
 
         <!-- Lock View -->
-        <control type="radiobutton" id="9975">
+        <!-- <control type="radiobutton" id="9975">
             <label>$LOCALIZE[31226]$INFO[Container.Content, (,)]</label>
             <include>Defs_OptionButton2</include>
 
-            <!-- Check to see if its locked -->
             <selected>[Container.Content() + !IsEmpty(Skin.String(Skin.ForcedView.))] | [Container.Content(tags) + !IsEmpty(Skin.String(Skin.ForcedView.tags))] | [Container.Content(years) + !IsEmpty(Skin.String(Skin.ForcedView.years))] | [Container.Content(genres) + !IsEmpty(Skin.String(Skin.ForcedView.genres))] | [Container.Content(countries) + !IsEmpty(Skin.String(Skin.ForcedView.countries))] | [Container.Content(studios) + !IsEmpty(Skin.String(Skin.ForcedView.studios))] | [Container.Content(playlists) + !IsEmpty(Skin.String(Skin.ForcedView.playlists))] | [Container.Content(movies) + !IsEmpty(Skin.String(Skin.ForcedView.movies))] | [Container.Content(sets) + !IsEmpty(Skin.String(Skin.ForcedView.sets))] | [Container.Content(tvshows) + !IsEmpty(Skin.String(Skin.ForcedView.tvshows))] | [Container.Content(seasons) + !IsEmpty(Skin.String(Skin.ForcedView.seasons))] | [Container.Content(episodes) + !IsEmpty(Skin.String(Skin.ForcedView.episodes))] | [Container.Content(artists) + !IsEmpty(Skin.String(Skin.ForcedView.artists))] | [Container.Content(albums) + !IsEmpty(Skin.String(Skin.ForcedView.albums))] | [Container.Content(songs) + !IsEmpty(Skin.String(Skin.ForcedView.songs))] | [Container.Content(musicvideos) + !IsEmpty(Skin.String(Skin.ForcedView.musicvideos))] | [Container.Content(addons) + !IsEmpty(Skin.String(Skin.ForcedView.addons))] | [Container.Content(actors) + !IsEmpty(Skin.String(Skin.ForcedView.actors))] | [Container.Content(directors) + !IsEmpty(Skin.String(Skin.ForcedView.directors))] | [Container.Content(files) + !IsEmpty(Skin.String(Skin.ForcedView.files))] | [Container.Content(mixed) + !IsEmpty(Skin.String(Skin.ForcedView.mixed))] | [Container.Content(images) + !IsEmpty(Skin.String(Skin.ForcedView.images))] | [Container.Content(games) + !IsEmpty(Skin.String(Skin.ForcedView.games))] | [Container.Content(unknown) + !IsEmpty(Skin.String(Skin.ForcedView.unknown))] | [Container.Content(videos) + !IsEmpty(Skin.String(Skin.ForcedView.videos))]</selected>
 
             <include>Object_ClearViewLock</include>
-
-            <!-- If Empty Set The Viewmode to the Content Lock -->
-            <onclick condition="[Container.Content() + IsEmpty(Skin.String(Skin.ForcedView.))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(tags) + IsEmpty(Skin.String(Skin.ForcedView.tags))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(years) + IsEmpty(Skin.String(Skin.ForcedView.years))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(genres) + IsEmpty(Skin.String(Skin.ForcedView.genres))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(countries) + IsEmpty(Skin.String(Skin.ForcedView.countries))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(studios) + IsEmpty(Skin.String(Skin.ForcedView.studios))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(playlists) + IsEmpty(Skin.String(Skin.ForcedView.playlists))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(movies) + IsEmpty(Skin.String(Skin.ForcedView.movies))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(sets) + IsEmpty(Skin.String(Skin.ForcedView.sets))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(tvshows) + IsEmpty(Skin.String(Skin.ForcedView.tvshows))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(seasons) + IsEmpty(Skin.String(Skin.ForcedView.seasons))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(episodes) + IsEmpty(Skin.String(Skin.ForcedView.episodes))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(artists) + IsEmpty(Skin.String(Skin.ForcedView.artists))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(albums) + IsEmpty(Skin.String(Skin.ForcedView.albums))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(songs) + IsEmpty(Skin.String(Skin.ForcedView.songs))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(musicvideos) + IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(addons) + IsEmpty(Skin.String(Skin.ForcedView.addons))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(actors) + IsEmpty(Skin.String(Skin.ForcedView.actors))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(directors) + IsEmpty(Skin.String(Skin.ForcedView.directors))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(files) + IsEmpty(Skin.String(Skin.ForcedView.files))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(mixed) + IsEmpty(Skin.String(Skin.ForcedView.mixed))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(images) + IsEmpty(Skin.String(Skin.ForcedView.images))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(games) + IsEmpty(Skin.String(Skin.ForcedView.games))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(unknown) + IsEmpty(Skin.String(Skin.ForcedView.unknown))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-            <onclick condition="[Container.Content(videos) + IsEmpty(Skin.String(Skin.ForcedView.videos))]">Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode])</onclick>
-
+            <include>Object_SetViewLock</include>
             <visible>!Skin.HasSetting(Skin.ForcedViews)</visible>
-        </control>
-
-        <!-- Disable Views -->
-        <control type="button" id="9976">
-            <label>31222</label>
-            <include>Defs_OptionButton2</include>
-            <onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
-            <visible>!IsEmpty(Container.Content)</visible>
-        </control>
+        </control> -->
 
         <!-- Sort by -->
         <control type="button" id="3">

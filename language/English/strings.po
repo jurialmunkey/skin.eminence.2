@@ -841,3 +841,11 @@ msgstr ""
 msgctxt "#31227"
 msgid "Enable viewtype locking to content type"
 msgstr ""
+
+msgctxt "#31228"
+msgid "Select view mode"
+msgstr ""
+
+msgctxt "#31229"
+msgid "Lock this viewtype to content type"
+msgstr ""

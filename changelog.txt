@@ -1,3 +1,6 @@
+[B]2.5.32[/B]
+Update viewmode selector to use my own custom built custom dialog
+
 [B]2.5.31[/B]
 Add my own ridiculously convoluted view locking code for every content type!
 -- (skin helper lock was too buggy and didnt work for all content types)

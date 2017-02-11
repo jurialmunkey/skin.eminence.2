@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="dialog" id="1110">
+    <backgroundcolor>Background</backgroundcolor>
+    <defaultcontrol always="true">9000</defaultcontrol>
+
+    <controls>
+        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>1792</width>
+            <bottom>100</bottom>
+            <height>676</height>
+            <include>Dialog_Background</include>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31228]" />
+                <param name="icon" value="special://skin/extras/icons/paintbrush.png" />
+            </include>
+            <control type="group">
+                <right>bigpad</right>
+                <bottom>bigpad</bottom>
+                <width>1024</width>
+                <height>576</height>
+                <include>Object_FlatBackground</include>
+                <control type="image">
+                    <aspectratio>stretch</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png">$INFO[Container(9000).ListItem.Icon]</texture>
+                </control>
+            </control>
+
+            <control type="group">
+                <left>bigpad</left>
+                <bottom>bigpad</bottom>
+                <width>708</width>
+                <height>576</height>
+                <include>Object_FlatBackground</include>
+            </control>
+            <control type="list" id="9000">
+                <bottom>bigpad</bottom>
+                <onleft>8000</onleft>
+                <onright>8000</onright>
+                <left>pad</left>
+                <width>728</width>
+                <height>576</height>
+                <orientation>vertical</orientation>
+                <itemlayout height="96" width="728">
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <control type="image">
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <left>pad</left>
+                            <width>300</width>
+                            <aspectratio align="left">keep</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <height>100%</height>
+                            <left>170</left>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="96" width="728">
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <control type="image">
+                            <visible>!Control.HasFocus(9000)</visible>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>!Control.HasFocus(9000)</visible>
+                            <aspectratio>center</aspectratio>
+                            <texture colordiffuse="PosterBorder">common/selected.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>Control.HasFocus(9000)</visible>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                        </control>
+
+                        <control type="image">
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <left>pad</left>
+                            <width>300</width>
+                            <aspectratio align="left">keep</aspectratio>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="label">
+                            <height>100%</height>
+                            <left>170</left>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <!-- Plain List -->
+                    <item>
+                        <label>31215</label>
+                        <icon>special://skin/extras/viewthumbs/552.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(552)</onclick>
+                    </item>
+                    <!-- Square List -->
+                    <item>
+                        <label>535</label>
+                        <icon>special://skin/extras/viewthumbs/50.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | Container.Content(genres) | Container.Content(images) | Container.Content(videos) | Container.Content()</visible>
+                    </item>
+                    <!-- Poster List -->
+                    <item>
+                        <label>31223</label>
+                        <icon>special://skin/extras/viewthumbs/550.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(550)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.550)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors)</visible>
+                    </item>
+                    <!-- Media Info -->
+                    <item>
+                        <label>544</label>
+                        <icon>special://skin/extras/viewthumbs/51.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(51)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.51)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(songs) | Container.Content(videos)</visible>
+                    </item>
+                    <!-- Media Info 2 -->
+                    <item>
+                        <label>31143</label>
+                        <icon>special://skin/extras/viewthumbs/57.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(57)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.57)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+                    </item>
+                    <!-- Info List -->
+                    <item>
+                        <label>31192</label>
+                        <icon>special://skin/extras/viewthumbs/53.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(53)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.53)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+                    </item>
+                    <!-- Info List 2 -->
+                    <item>
+                        <label>31220</label>
+                        <icon>special://skin/extras/viewthumbs/553.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(553)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.553)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(artists)</visible>
+                    </item>
+                    <!-- Fanart List -->
+                    <item>
+                        <label>31164</label>
+                        <icon>special://skin/extras/viewthumbs/54.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(54)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.54)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(artists)</visible>
+                    </item>
+                    <!-- Lovefilm / Gallery -->
+                    <item>
+                        <label>31163</label>
+                        <icon>special://skin/extras/viewthumbs/58.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(58)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.58)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(videos) | Container.Content(artists) | Container.Content(episodes)</visible>
+                    </item>
+                    <!-- Big Icon -->
+                    <item>
+                        <label>538</label>
+                        <icon>special://skin/extras/viewthumbs/52.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(52)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.52)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)</visible>
+                    </item>
+                    <!-- Showcase -->
+                    <item>
+                        <label>31199</label>
+                        <icon>special://skin/extras/viewthumbs/535.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(535)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.535)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+                    </item>
+                    <!-- Icon -->
+                    <item>
+                        <label>536</label>
+                        <icon>special://skin/extras/viewthumbs/500.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(500)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.500)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(images) | Container.Content(addons) | Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(files) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors)</visible>
+                    </item>
+                    <!-- Icons + Info -->
+                    <item>
+                        <label>31141</label>
+                        <icon>special://skin/extras/viewthumbs/59.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(59)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.59)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(addons)</visible>
+                    </item>
+                    <!-- Banners -->
+                    <item>
+                        <label>539</label>
+                        <icon>special://skin/extras/viewthumbs/55.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(55)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.55)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
+                    </item>
+                    <!-- Fanart -->
+                    <item>
+                        <label>20445</label>
+                        <icon>special://skin/extras/viewthumbs/56.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(56)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.56)</visible>
+                        <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(artists)</visible>
+                    </item>
+                </content>
+            </control>
+            <!-- Button grouplist -->
+            <control type="grouplist" id="8000">
+                <animation effect="slide" start="0" end="-586" time="0" condition="Control.IsVisible(3)">Conditional</animation>
+                <right>bigpad</right>
+                <top>pad</top>
+                <align>right</align>
+                <height>60</height>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <orientation>horizontal</orientation>
+                <itemgap>pad</itemgap>
+                <!-- Lock to View -->
+                <control type="button" id="8003">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <label>[CAPITALIZE]$LOCALIZE[31226] $INFO[Container.Content,(,)][/CAPITALIZE]</label>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                    <onclick>SetFocus(9000)</onclick>
+                    <onclick>Action(Select)</onclick>
+                    <onclick condition="[Container.Content() + IsEmpty(Skin.String(Skin.ForcedView.))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(tags) + IsEmpty(Skin.String(Skin.ForcedView.tags))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(years) + IsEmpty(Skin.String(Skin.ForcedView.years))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(genres) + IsEmpty(Skin.String(Skin.ForcedView.genres))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(countries) + IsEmpty(Skin.String(Skin.ForcedView.countries))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(studios) + IsEmpty(Skin.String(Skin.ForcedView.studios))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(playlists) + IsEmpty(Skin.String(Skin.ForcedView.playlists))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(movies) + IsEmpty(Skin.String(Skin.ForcedView.movies))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(sets) + IsEmpty(Skin.String(Skin.ForcedView.sets))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(tvshows) + IsEmpty(Skin.String(Skin.ForcedView.tvshows))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(seasons) + IsEmpty(Skin.String(Skin.ForcedView.seasons))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(episodes) + IsEmpty(Skin.String(Skin.ForcedView.episodes))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(artists) + IsEmpty(Skin.String(Skin.ForcedView.artists))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(albums) + IsEmpty(Skin.String(Skin.ForcedView.albums))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(songs) + IsEmpty(Skin.String(Skin.ForcedView.songs))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(musicvideos) + IsEmpty(Skin.String(Skin.ForcedView.musicvideos))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(addons) + IsEmpty(Skin.String(Skin.ForcedView.addons))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(actors) + IsEmpty(Skin.String(Skin.ForcedView.actors))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(directors) + IsEmpty(Skin.String(Skin.ForcedView.directors))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(files) + IsEmpty(Skin.String(Skin.ForcedView.files))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(mixed) + IsEmpty(Skin.String(Skin.ForcedView.mixed))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(images) + IsEmpty(Skin.String(Skin.ForcedView.images))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(games) + IsEmpty(Skin.String(Skin.ForcedView.games))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(unknown) + IsEmpty(Skin.String(Skin.ForcedView.unknown))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                    <onclick condition="[Container.Content(videos) + IsEmpty(Skin.String(Skin.ForcedView.videos))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
+                </control>
+                <!-- Disable / Enable Views -->
+                <control type="button" id="8002">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <label>[CAPITALIZE]$LOCALIZE[31222][/CAPITALIZE]</label>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                    <onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
+                </control>
+                <!-- Cancel -->
+                <control type="button" id="8001">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <label>222</label>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                    <onclick>Close</onclick>
+                </control>
+                
+            </control>
+        </control>
+    </controls>
+</window>
