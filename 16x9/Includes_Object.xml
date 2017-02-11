@@ -176,15 +176,6 @@
     </include>
 
     <include name="Object_BasicViewList">
-        <!-- Fullscreen -->
-        <control type="button" id="9099">
-            <include>Defs_OptionButton2</include>
-            <label>$VAR[Label_FullscreenButton]</label>
-            <visible>Player.HasMedia</visible>
-            <onclick>Fullscreen</onclick>
-            <visible>Control.IsEnabled(9099)</visible>
-        </control>
-
         <!-- View by (Hidden) -->
         <control type="button" id="2">
             <include>Defs_OptionButton2</include>
@@ -197,6 +188,7 @@
             <include>Defs_OptionButton2</include>
             <include>Object_ClearViewLock</include>
             <onclick>ActivateWindow(1110)</onclick>
+            <!-- <visible>Control.IsEnabled(2)</visible> -->
         </control>
 
         <!-- Lock View -->
@@ -225,6 +217,15 @@
             <altlabel>585</altlabel>
             <usealttexture>Container.SortDirection(Descending)</usealttexture>
             <visible>Control.IsEnabled(3)</visible>
+        </control>
+
+        <!-- Fullscreen -->
+        <control type="button" id="9099">
+            <include>Defs_OptionButton2</include>
+            <label>$VAR[Label_FullscreenButton]</label>
+            <visible>Player.HasMedia</visible>
+            <onclick>Fullscreen</onclick>
+            <visible>Control.IsEnabled(9099)</visible>
         </control>
     </include>
     <include name="Object_WeatherOutlook">

@@ -159,104 +159,118 @@
         </control>
     </include>
 
-    <include name="Viewtype_Gallery">
+    <include name="Viewtype_BigIcon_Alt">
         <control type="group">
             <visible>Control.IsVisible(525)</visible>
-            <animation effect="slide" start="0" end="-118" condition="!Container(525).OnNext" reversible="false" time="400" tween="quadratic">Conditional</animation>
-            <animation effect="slide" start="0" end="118" condition="!Container(525).OnPrevious" reversible="false" time="400" tween="quadratic">Conditional</animation>
             <left>bigpad</left>
             <right>bigpad</right>
             <top>bigpad</top>
             <height>posterh</height>
+            <include>Object_Background</include>
             <include>Object_Scrollbar_Horizontal</include>
-            <control type="grouplist">
-                <left>gallerypanelpadw</left>
-                <usecontrolcoords>true</usecontrolcoords>
-                <orientation>horizontal</orientation>
-                <width>3000</width>
-                <top>-20</top>
-                <bottom>-20</bottom>
-                <itemgap>pad</itemgap>
-                <include content="View_Gallery_Item">
-                    <param name="position" value="-3" />
-                </include>
-                <include content="View_Gallery_Item">
-                    <param name="position" value="-2" />
-                </include>
-                <include content="View_Gallery_Item">
-                    <param name="position" value="-1" />
-                </include>
-                <control type="group">
-                    <top>bigpad</top>
-                    <bottom>bigpad</bottom>
-                    <width>1280</width>
-                    <include>Object_Background</include>
-                    <control type="image"><texture colordiffuse="ff181818">common/white.png</texture></control>
-                    <include content="Object_BigFanart">
-                        <param name="fadetime" value="0" />
-                    </include>
-                </control>
-                <include content="View_Gallery_Item">
-                    <param name="position" value="1" />
-                </include>
-                <include content="View_Gallery_Item">
-                    <param name="position" value="2" />
-                </include>
-                <include content="View_Gallery_Item">
-                    <param name="position" value="3" />
-                </include>
-            </control>
-            <control type="wraplist" id="525">
-                <top>0</top>
-                <left>0</left>
-                <width>100%</width>
-                <height>posterh</height>
+            <control type="list" id="525">
+                <top>10</top>
+                <centerleft>50%</centerleft>
+                <width>1722</width>
+                <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) | Skin.HasSetting(Skin.ForcedViews)]]</visible>
+                <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
+                <ondown>61</ondown>
                 <onleft>525</onleft>
                 <onright>525</onright>
-                <ondown>61</ondown>
-                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <focusposition>0</focusposition>
+                <movement>3</movement>
+                <preloaditems>0</preloaditems>
                 <pagecontrol>61</pagecontrol>
-                <focusposition>2</focusposition>
-                <preloaditems>2</preloaditems>
                 <orientation>horizontal</orientation>
-                <viewtype label="540">bigwide</viewtype>
-                <scrolltime tween="quadratic">500</scrolltime>
-                <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
-                <itemlayout height="posterh" width="118" />
-                <focusedlayout height="posterh" width="1290">
+                <viewtype label="31230">bigicon</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <itemlayout width="430.5" height="700">
+                    <control type="group">
+                        <top>bigpad</top>
+                        <left>15</left>
+                        <right>15</right>
+                        <height>608.25</height>
 
+                        <control type="image">
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                        </control>
+                        <control type="image">
+                            <right>15</right>
+                            <top>15</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="430.5" height="700">
+                    <control type="group">
+                        <top>bigpad</top>
+                        <left>15</left>
+                        <right>15</right>
+                        <height>608.25</height>
+
+                        <control type="image">
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                        </control>
+                        <control type="image">
+                            <right>15</right>
+                            <top>15</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+
+                        <control type="image">
+                            <left>-10</left>
+                            <right>-10</right>
+                            <top>-10</top>
+                            <bottom>-10</bottom>
+                            <texture colordiffuse="$VAR[HighlightColor]" border="12">common/border.png</texture>
+                            <visible>Control.HasFocus(525)</visible>
+                        </control>
+                    </control>
                 </focusedlayout>
             </control>
-        </control>
-
-    </include>
-
-    <include name="View_Gallery_Item">
-        <control type="group">
-            <left>0</left>
-            <width>galleryitemw</width>
-            <top>bigpad</top>
-            <bottom>bigpad</bottom>
-            <animation effect="fade" time="200" start="100" end="0" reversible="false" condition="stringcompare(Container(525).ListItem(-3).Label,Container(525).ListItem($PARAM[position]).Label) + !Container(525).OnNext">Conditional</animation>
-            <animation effect="fade" time="200" start="100" end="0" reversible="false" condition="stringcompare(Container(525).ListItem(3).Label,Container(525).ListItem($PARAM[position]).Label) + !Container(525).OnPrevious">Conditional</animation>
-            <include>Object_Background</include>
-
-            <control type="label">
-                <left>galleryitempadw</left>
-                <top>640</top>
-                <height>95</height>
-                <width>620</width>
-                <angle>90</angle>
-                <label>$INFO[Container(525).ListItem($PARAM[position]).Label]</label>
+            <control type="group">
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <bottom>0</bottom>
+                <height>posterh</height>
+                <control type="grouplist">
+                    <itemgap>bigpad</itemgap>
+                    <orientation>horizontal</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <bottom>0</bottom>
+                    <height>70</height>
+                    <align>center</align>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>60</height>
+                        <aligny>center</aligny>
+                        <align>left</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>60</height>
+                        <aligny>center</aligny>
+                        <align>right</align>
+                        <font>Font-ListInfo-Small</font>
+                        <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    </control>
+                </control>
+                
             </control>
-            <!-- <control type="image">
-                <centerleft>50%</centerleft>
-                <top>bigpad</top>
-                <height>32</height>
-                <width>32</width>
-                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
-            </control> -->
         </control>
     </include>
 
@@ -285,7 +299,7 @@
                         <onright>58</onright>
                         <viewtype label="31163">bigwide</viewtype>
                         <orientation>horizontal</orientation>
-                        <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                        <onup condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onup>
                         <scrolltime tween="quadratic">400</scrolltime>
                         <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) | Skin.HasSetting(Skin.ForcedViews)]]</visible>
                         <itemlayout width="1280" height="720">

@@ -10,10 +10,10 @@
         <!-- Hidden button -->
         <control type="button" id="50">
             <onclick condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onclick>
-            <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
-            <ondown condition="!Skin.HasSetting(KioskMode)">9000</ondown>
-            <onleft condition="!Skin.HasSetting(KioskMode)">9000</onleft>
-            <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+            <onup condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onup>
+            <ondown condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</ondown>
+            <onleft condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onleft>
+            <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
         </control>
 
         <!-- Background -->

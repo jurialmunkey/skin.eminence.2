@@ -110,7 +110,7 @@
                 <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                 <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                 <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
-                <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
                 <onleft>60</onleft>
                 <pagecontrol>60</pagecontrol>
                 <preloaditems>2</preloaditems>
@@ -284,7 +284,7 @@
                     <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                     <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
-                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
                     <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
@@ -367,7 +367,7 @@
                     <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                     <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
-                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
                     <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>

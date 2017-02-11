@@ -9,6 +9,7 @@
     <view id="Fanart List" value="54" languageid="31164" type="seasons,movies,tvshows,episodes,sets,artists,videos" />
     <view id="Lovefilm" value="58" languageid="31163" type="movies,episodes,tvshows,seasons,sets,artists,videos" />
     <view id="Big Icon" value="52" languageid="538" type="musicvideos,movies,tvshows,sets,seasons" />
+    <view id="Medium Icon" value="525" languageid="31230" type="musicvideos,movies,tvshows,sets,seasons" />
     <view id="Showcase" value="535" languageid="31199" type="movies,tvshows,seasons,sets,musicvideos,albums,artists" />
     <view id="Icon" value="500" languageid="536" type="genres,years,tags,studios,countries,directors,actors,files,addons,artists,albums,sets,movies,tvshows,seasons,images" />
     <view id="Icon Extra" value="59" languageid="31141" type="seasons,sets,tvshows,movies,albums,addons,artists" />

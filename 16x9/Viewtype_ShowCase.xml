@@ -349,7 +349,7 @@
                             <top>540</top>
                             <width>2058</width>
                             <height>525</height>
-                            <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
+                            <onup condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onup>
                             <ondown>61</ondown>
                             <onleft>535</onleft>
                             <onright>535</onright>

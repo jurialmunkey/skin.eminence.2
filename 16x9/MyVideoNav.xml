@@ -4,7 +4,7 @@
     <backgroundcolor>Background</backgroundcolor>
     <menucontrol>9000</menucontrol>
     <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,550,51,57,53,553,54,58,52,535,500,59,55,56,552</views>
+    <views>50,550,51,57,53,553,54,58,52,525,535,500,59,55,56,552</views>
     <!-- <onload>Skin.Reset(SkinHelper.ForcedViews.Enabled)</onload> -->
     <onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
     <onunload>SetProperty(NodeReturn,videos,home)</onunload>
@@ -36,6 +36,7 @@
             <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.55)">Viewtype_IconWide</include>
             <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.56)">Viewtype_IconFanart</include>
             <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.52)">Viewtype_BigIcon</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.525) + !Skin.HasSetting(global.widescreen)">Viewtype_BigIcon_Alt</include>
             <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.58)">Viewtype_Lovefilm</include>
             <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.535)">Viewtype_ShowCase</include>
         </control>
