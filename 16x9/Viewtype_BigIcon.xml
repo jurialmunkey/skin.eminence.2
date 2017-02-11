@@ -168,7 +168,7 @@
             <height>posterh</height>
             <include>Object_Background</include>
             <include>Object_Scrollbar_Horizontal</include>
-            <control type="list" id="525">
+            <control type="fixedlist" id="525">
                 <top>10</top>
                 <centerleft>50%</centerleft>
                 <width>1722</width>
@@ -177,8 +177,8 @@
                 <ondown>61</ondown>
                 <onleft>525</onleft>
                 <onright>525</onright>
-                <focusposition>0</focusposition>
-                <movement>3</movement>
+                <focusposition>1</focusposition>
+                <movement>2</movement>
                 <preloaditems>0</preloaditems>
                 <pagecontrol>61</pagecontrol>
                 <orientation>horizontal</orientation>
