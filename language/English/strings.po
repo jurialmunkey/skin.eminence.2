@@ -853,3 +853,7 @@ msgstr ""
 msgctxt "#31230"
 msgid "Medium icons"
 msgstr ""
+
+msgctxt "#31231"
+msgid "Use extra fanart if available"
+msgstr ""
