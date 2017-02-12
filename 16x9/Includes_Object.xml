@@ -57,6 +57,7 @@
             <width>220</width>
             <height>320</height>
             <visible>IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)) + IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster))</visible>
+            <visible>[!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(widgetTarget),pictures)] | [IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Skin.String(home.fallbackwidget.target),pictures)]</visible>
             <control type="image">
                 <centerleft>50%</centerleft>
                 <width>220</width>
