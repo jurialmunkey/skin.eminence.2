@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-    <include name="Viewtype_MediumIcon">
+    <include name="Viewtype_BigIcon">
         <control type="group">
             <visible>Control.IsVisible(52)</visible>
             <left>bigpad</left>
@@ -14,7 +14,7 @@
                 <top>30</top>
                 <left>bigiconpanelpadw</left>
                 <right>15</right>
-                <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) | Skin.HasSetting(Skin.ForcedViews)]]</visible>
+                <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) | Skin.HasSetting(Skin.ForcedViews)]]</visible>
                 <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
                 <ondown>61</ondown>
                 <onleft>52</onleft>
@@ -23,7 +23,7 @@
                 <preloaditems>0</preloaditems>
                 <pagecontrol>61</pagecontrol>
                 <orientation>horizontal</orientation>
-                <viewtype label="31230">bigicon</viewtype>
+                <viewtype label="538">bigicon</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <itemlayout width="bigiconw" height="660">
                     <control type="group">
@@ -159,7 +159,7 @@
         </control>
     </include>
 
-    <include name="Viewtype_BigIcon">
+    <include name="Viewtype_MediumIcon">
         <control type="group">
             <visible>Control.IsVisible(525)</visible>
             <left>bigpad</left>
@@ -172,24 +172,24 @@
                 <top>10</top>
                 <centerleft>50%</centerleft>
                 <width>1722</width>
-                <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) | Skin.HasSetting(Skin.ForcedViews)]]</visible>
+                <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) | Skin.HasSetting(Skin.ForcedViews)]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) | Skin.HasSetting(Skin.ForcedViews)]]</visible>
                 <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
                 <ondown>61</ondown>
                 <onleft>525</onleft>
                 <onright>525</onright>
-                <focusposition>1</focusposition>
+                <focusposition>2</focusposition>
                 <movement>2</movement>
                 <preloaditems>0</preloaditems>
                 <pagecontrol>61</pagecontrol>
                 <orientation>horizontal</orientation>
-                <viewtype label="538">bigicon</viewtype>
+                <viewtype label="31230">bigicon</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <itemlayout width="430.5" height="700">
+                <itemlayout width="344.4" height="700">
                     <control type="group">
                         <top>bigpad</top>
                         <left>15</left>
                         <right>15</right>
-                        <height>608.25</height>
+                        <height>456.6</height>
 
                         <control type="image">
                             <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
@@ -207,12 +207,12 @@
                     </control>
                 </itemlayout>
 
-                <focusedlayout width="430.5" height="700">
+                <focusedlayout width="344.4" height="700">
                     <control type="group">
                         <top>bigpad</top>
                         <left>15</left>
                         <right>15</right>
-                        <height>608.25</height>
+                        <height>456.6</height>
 
                         <control type="image">
                             <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
@@ -242,31 +242,46 @@
             <control type="group">
                 <left>bigpad</left>
                 <right>bigpad</right>
-                <bottom>0</bottom>
-                <height>posterh</height>
                 <control type="grouplist">
-                    <itemgap>bigpad</itemgap>
-                    <orientation>horizontal</orientation>
+                    <itemgap>0</itemgap>
+                    <orientation>vertical</orientation>
                     <left>pad</left>
                     <right>pad</right>
-                    <bottom>0</bottom>
-                    <height>70</height>
-                    <align>center</align>
+                    <top>510</top>
+                    <bottom>pad</bottom>
                     <control type="label">
-                        <width>auto</width>
-                        <height>60</height>
-                        <aligny>center</aligny>
-                        <align>left</align>
-                        <font>Font-ListInfo-Small-Bold</font>
+                        <height>44</height>
+                        <align>center</align>
+                        <font>Font-InfoBox-Title</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
-                        <width>auto</width>
-                        <height>60</height>
-                        <aligny>center</aligny>
-                        <align>right</align>
-                        <font>Font-ListInfo-Small</font>
+                        <height>32</height>
+                        <align>center</align>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
+                    </control>
+                    <control type="label">
+                        <height>40</height>
+                        <align>center</align>
+                        <font>Font-ListInfo-Small-Bold</font>
                         <label>$VAR[Label_ExtraInfo_Icons]</label>
+                        <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
+                    </control>
+                    <control type="textbox">
+                        <height>auto</height>
+                        <font>Font-ListInfo</font>
+                        <align>center</align>
+                        <label>$VAR[Label_Plot]</label>
+                        <visible>!Skin.HasSetting(furniture.showflags) | !Skin.HasSetting(furniture.flags.extradetail)</visible>
+                    </control>
+                    <control type="textbox">
+                        <height>auto</height>
+                        <font>Font-ListInfo</font>
+                        <align>center</align>
+                        <label>$VAR[Label_Plot]</label>
+                        <visible>Skin.HasSetting(furniture.showflags) + Skin.HasSetting(furniture.flags.extradetail)</visible>
                     </control>
                 </control>
                 

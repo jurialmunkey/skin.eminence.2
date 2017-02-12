@@ -195,22 +195,22 @@
                     <!-- Big Icon -->
                     <item>
                         <label>538</label>
-                        <icon>special://skin/extras/viewthumbs/525.jpg</icon>
+                        <icon>special://skin/extras/viewthumbs/52.jpg</icon>
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
-                        <onclick>Container.SetViewMode(525)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.525)</visible>
+                        <onclick>Container.SetViewMode(52)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.52)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)</visible>
                         <visible>!Skin.HasSetting(global.widescreen)</visible>
                     </item>
                     <!-- Medium Icon -->
                     <item>
                         <label>31230</label>
-                        <icon>special://skin/extras/viewthumbs/52.jpg</icon>
+                        <icon>special://skin/extras/viewthumbs/525.jpg</icon>
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
-                        <onclick>Container.SetViewMode(52)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.52)</visible>
+                        <onclick>Container.SetViewMode(525)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.525)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)</visible>
                     </item>
                     
