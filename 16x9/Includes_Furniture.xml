@@ -880,11 +880,11 @@
                 <aligny>top</aligny>
                 <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
             </control>
-            <control type="label">
+            <control type="textbox">
                 <posx>245</posx>
                 <posy>115</posy>
                 <width>1050</width>
-                <font>Font-Sublabel</font>
+                <font>Font-SubLabel</font>
                 <aligny>top</aligny>
                 <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <label>$VAR[Furniture_TopBar_Header_SubLabel]</label>

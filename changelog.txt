@@ -1,3 +1,8 @@
+[B]2.5.33[/B]
+Add a hackish workaround for plugins that don't use return property properly.
+Remove the need for setting force view lock (enabled in viewmode)
+Add warning to unlock views
+
 [B]2.5.32[/B]
 Update viewmode selector to use my own custom built custom dialog
 

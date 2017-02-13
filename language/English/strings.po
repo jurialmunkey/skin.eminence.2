@@ -857,3 +857,15 @@ msgstr ""
 msgctxt "#31231"
 msgid "Use extra fanart if available"
 msgstr ""
+
+msgctxt "#31232"
+msgid "Unlock View"
+msgstr ""
+
+msgctxt "#31233"
+msgid "This view mode is currently locked to the content type"
+msgstr ""
+
+msgctxt "#31234"
+msgid "Do you wish to unlock it and set a new view mode?"
+msgstr ""
