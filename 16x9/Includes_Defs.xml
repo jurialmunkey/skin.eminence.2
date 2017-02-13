@@ -3,7 +3,7 @@
     <include name="Defs_DialogInfo_PosterLeft"><left>500</left></include>
     <include name="Defs_DialogInfo_SquareLeft"><left>740</left></include>
     <variable name="Defs_SpinnerTexture">
-        <value condition="!IsEmpty(Skin.String(SkinHelper.SpinnerTexturePath)) + !IsEmpty(Skin.String(SkinHelper.SpinnerTexture)) + !StringCompare(Skin.String(SkinHelper.SpinnerTexturePath),None)">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</value>
+        <value condition="!String.IsEmpty(Skin.String(SkinHelper.SpinnerTexturePath)) + !String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture)) + !String.IsEqual(Skin.String(SkinHelper.SpinnerTexturePath),None)">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</value>
         <value>special://skin/extras/busy_spinners/Default</value>
     </variable>
     <include name="Defs_OptionButton_Basic">
@@ -84,33 +84,33 @@
         <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
     </include>
     <variable name="Defs_Hub_Widget">
-        <value condition="Window.IsVisible(1101) + !IsEmpty(Skin.String(Widget.1101))">$INFO[Skin.String(Widget.1101)]</value>
-        <value condition="Window.IsVisible(1102) + !IsEmpty(Skin.String(Widget.1102))">$INFO[Skin.String(Widget.1102)]</value>
-        <value condition="Window.IsVisible(1103) + !IsEmpty(Skin.String(Widget.1103))">$INFO[Skin.String(Widget.1103)]</value>
-        <value condition="Window.IsVisible(1104) + !IsEmpty(Skin.String(Widget.1104))">$INFO[Skin.String(Widget.1104)]</value>
-        <value condition="Window.IsVisible(1105) + !IsEmpty(Skin.String(Widget.1105))">$INFO[Skin.String(Widget.1105)]</value>
-        <value condition="Window.IsVisible(1106) + !IsEmpty(Skin.String(Widget.1106))">$INFO[Skin.String(Widget.1106)]</value>
-        <value condition="Window.IsVisible(1107) + !IsEmpty(Skin.String(Widget.1107))">$INFO[Skin.String(Widget.1107)]</value>
-        <value condition="Window.IsVisible(1108) + !IsEmpty(Skin.String(Widget.1108))">$INFO[Skin.String(Widget.1108)]</value>
-        <value condition="Window.IsVisible(1109) + !IsEmpty(Skin.String(Widget.1109))">$INFO[Skin.String(Widget.1109)]</value>
+        <value condition="Window.IsVisible(1101) + !String.IsEmpty(Skin.String(Widget.1101))">$INFO[Skin.String(Widget.1101)]</value>
+        <value condition="Window.IsVisible(1102) + !String.IsEmpty(Skin.String(Widget.1102))">$INFO[Skin.String(Widget.1102)]</value>
+        <value condition="Window.IsVisible(1103) + !String.IsEmpty(Skin.String(Widget.1103))">$INFO[Skin.String(Widget.1103)]</value>
+        <value condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.String(Widget.1104))">$INFO[Skin.String(Widget.1104)]</value>
+        <value condition="Window.IsVisible(1105) + !String.IsEmpty(Skin.String(Widget.1105))">$INFO[Skin.String(Widget.1105)]</value>
+        <value condition="Window.IsVisible(1106) + !String.IsEmpty(Skin.String(Widget.1106))">$INFO[Skin.String(Widget.1106)]</value>
+        <value condition="Window.IsVisible(1107) + !String.IsEmpty(Skin.String(Widget.1107))">$INFO[Skin.String(Widget.1107)]</value>
+        <value condition="Window.IsVisible(1108) + !String.IsEmpty(Skin.String(Widget.1108))">$INFO[Skin.String(Widget.1108)]</value>
+        <value condition="Window.IsVisible(1109) + !String.IsEmpty(Skin.String(Widget.1109))">$INFO[Skin.String(Widget.1109)]</value>
         <value condition="Window.IsVisible(1102)">special://skin/extras/playlists/RandomEpisodes.xsp</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
     <variable name="Defs_Hub_Widget_Target">
-        <value condition="Window.IsVisible(1101) + !IsEmpty(Skin.String(Widget.1101.Type))">$INFO[Skin.String(Widget.1101.Type)]</value>
-        <value condition="Window.IsVisible(1102) + !IsEmpty(Skin.String(Widget.1102.Type))">$INFO[Skin.String(Widget.1102.Type)]</value>
-        <value condition="Window.IsVisible(1103) + !IsEmpty(Skin.String(Widget.1103.Type))">$INFO[Skin.String(Widget.1103.Type)]</value>
-        <value condition="Window.IsVisible(1104) + !IsEmpty(Skin.String(Widget.1104.Type))">$INFO[Skin.String(Widget.1104.Type)]</value>
-        <value condition="Window.IsVisible(1105) + !IsEmpty(Skin.String(Widget.1105.Type))">$INFO[Skin.String(Widget.1105.Type)]</value>
-        <value condition="Window.IsVisible(1106) + !IsEmpty(Skin.String(Widget.1106.Type))">$INFO[Skin.String(Widget.1106.Type)]</value>
-        <value condition="Window.IsVisible(1107) + !IsEmpty(Skin.String(Widget.1107.Type))">$INFO[Skin.String(Widget.1107.Type)]</value>
-        <value condition="Window.IsVisible(1108) + !IsEmpty(Skin.String(Widget.1108.Type))">$INFO[Skin.String(Widget.1108.Type)]</value>
-        <value condition="Window.IsVisible(1109) + !IsEmpty(Skin.String(Widget.1109.Type))">$INFO[Skin.String(Widget.1109.Type)]</value>
+        <value condition="Window.IsVisible(1101) + !String.IsEmpty(Skin.String(Widget.1101.Type))">$INFO[Skin.String(Widget.1101.Type)]</value>
+        <value condition="Window.IsVisible(1102) + !String.IsEmpty(Skin.String(Widget.1102.Type))">$INFO[Skin.String(Widget.1102.Type)]</value>
+        <value condition="Window.IsVisible(1103) + !String.IsEmpty(Skin.String(Widget.1103.Type))">$INFO[Skin.String(Widget.1103.Type)]</value>
+        <value condition="Window.IsVisible(1104) + !String.IsEmpty(Skin.String(Widget.1104.Type))">$INFO[Skin.String(Widget.1104.Type)]</value>
+        <value condition="Window.IsVisible(1105) + !String.IsEmpty(Skin.String(Widget.1105.Type))">$INFO[Skin.String(Widget.1105.Type)]</value>
+        <value condition="Window.IsVisible(1106) + !String.IsEmpty(Skin.String(Widget.1106.Type))">$INFO[Skin.String(Widget.1106.Type)]</value>
+        <value condition="Window.IsVisible(1107) + !String.IsEmpty(Skin.String(Widget.1107.Type))">$INFO[Skin.String(Widget.1107.Type)]</value>
+        <value condition="Window.IsVisible(1108) + !String.IsEmpty(Skin.String(Widget.1108.Type))">$INFO[Skin.String(Widget.1108.Type)]</value>
+        <value condition="Window.IsVisible(1109) + !String.IsEmpty(Skin.String(Widget.1109.Type))">$INFO[Skin.String(Widget.1109.Type)]</value>
         <value>videos</value>
     </variable>
     <variable name="Defs_HomeTileColor">
-        <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Container(9000).ListItem.Property(tilecolor))">$INFO[Container(9000).ListItem.Property(tilecolor)]</value>
-        <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Container(211).ListItem.Property(tilecolor))">$INFO[Container(211).ListItem.Property(tilecolor)]</value>
+        <value condition="Skin.HasSetting(home.tilecolor) + !String.IsEmpty(Container(9000).ListItem.Property(tilecolor))">$INFO[Container(9000).ListItem.Property(tilecolor)]</value>
+        <value condition="Skin.HasSetting(home.tilecolor) + !String.IsEmpty(Container(211).ListItem.Property(tilecolor))">$INFO[Container(211).ListItem.Property(tilecolor)]</value>
         <value>$VAR[HighlightColor]</value>
     </variable>
     <include name="Defs_SideLabel">
@@ -138,8 +138,8 @@
             <texture colordiffuse="ListLabel">common/48-arrow-left.png</texture>
             <centertop>50%</centertop>
             <animation effect="fade" start="100" end="33" condition="true">Conditional</animation>
-            <visible>!StringCompare(Window(home).Property(HubReturn),Home)</visible>
-            <visible>substring(Window(home).Property(HubReturn),110,left)</visible>
+            <visible>!String.IsEqual(Window(home).Property(HubReturn),Home)</visible>
+            <visible>String.StartsWith(Window(home).Property(HubReturn),110)</visible>
             <visible>![Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)]</visible>
             <visible>Skin.HasSetting(global.eminenceonestyle)</visible>
         </control>
@@ -150,9 +150,9 @@
             <texture colordiffuse="ListLabel" flipx="true">common/48-arrow-left.png</texture>
             <centertop>50%</centertop>
             <animation effect="fade" start="100" end="33" condition="true">Conditional</animation>
-            <visible>!StringCompare(Window(home).Property(HubReturn),Home)</visible>
-            <visible>!substring(Window(home).Property(HubReturn),110,left)</visible>
-            <visible>!IsEmpty(Window(home).Property(NodeReturn))</visible>
+            <visible>!String.IsEqual(Window(home).Property(HubReturn),Home)</visible>
+            <visible>!String.StartsWith(Window(home).Property(HubReturn),110)</visible>
+            <visible>!String.IsEmpty(Window(home).Property(NodeReturn))</visible>
             <visible>Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)</visible>
             <visible>Skin.HasSetting(global.eminenceonestyle)</visible>
         </control>
@@ -181,31 +181,31 @@
             <width>100%</width>
             <label>31097</label>
             <label2>$INFO[Skin.String(Widget.$PARAM[hubid].Label)]</label2>
-            <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
-            <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
+            <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+            <visible>String.IsEqual(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | String.IsEqual(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <include>Defs_OptionButton</include>
             <onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=widget&amp;skinWidgetPath=Widget.$PARAM[hubid]&amp;skinWidgetName=Widget.$PARAM[hubid].Label&amp;skinWidgetTarget=Widget.$PARAM[hubid].Type)</onclick>
         </control>
         <control type="button" id="$PARAM[buttonid1]" description="Set HUB">
             <width>100%</width>
             <label>31096</label>
-            <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+            <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
             <include>Defs_OptionButton</include>
-            <visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
+            <visible>String.IsEqual(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | String.IsEqual(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
         </control>
     </include>
     <variable name="Defs_HomeWidget_Content">
         <value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
-        <value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</value>
-        <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath)) + !Skin.HasSetting(widgets.persistent)">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
-        <value condition="!IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
-        <value condition="[StringCompare(Skin.String(home.fallbackwidget),Weather) | StringCompare(Skin.String(home.fallbackwidget.node),Weather)] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</value>
-        <value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
+        <value condition="String.IsEqual(Container(9000).ListItem.Property(widget),Weather) + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</value>
+        <value condition="!String.IsEmpty(Container(9000).ListItem.Property(widgetPath)) + !Skin.HasSetting(widgets.persistent)">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
+        <value condition="!String.IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
+        <value condition="[String.IsEqual(Skin.String(home.fallbackwidget),Weather) | String.IsEqual(Skin.String(home.fallbackwidget.node),Weather)] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</value>
+        <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
     <variable name="Defs_HomeWidget_Target">
-        <value condition="!IsEmpty(Container(9000).ListItem.Property(widgetTarget))">$INFO[Container(9000).ListItem.Property(widgetTarget)]</value>
+        <value condition="!String.IsEmpty(Container(9000).ListItem.Property(widgetTarget))">$INFO[Container(9000).ListItem.Property(widgetTarget)]</value>
         <value>videos</value>
     </variable>
 </includes>

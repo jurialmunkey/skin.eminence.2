@@ -7,11 +7,11 @@
     <onload>SetProperty(cfa_daemon_set,blur,home)</onload>
     <onload>SetProperty(cfa_daemon_fallback,special://skin/extras/backgrounds/home.jpg,home)</onload> -->
 
-    <onload condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onload>
+    <onload condition="String.IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
     <!-- <onload condition="!Skin.HasSetting(SkinHelper.EnableExtraFanart)">Skin.SetBool(SkinHelper.EnableExtraFanart)</onload> -->
     <!-- <onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload> -->
     <onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-    <onload condition="!IsEmpty(Skin.String(StartupPlaylist))">PlayMedia($ESCINFO[Skin.String(StartupPlaylist)])</onload>
+    <onload condition="!String.IsEmpty(Skin.String(StartupPlaylist))">PlayMedia($ESCINFO[Skin.String(StartupPlaylist)])</onload>
 </window>

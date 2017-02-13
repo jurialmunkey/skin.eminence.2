@@ -22,7 +22,7 @@
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
             <visible>!Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
-            <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot) | !IsEmpty(ListItem.Property(Artist_Description)) | !IsEmpty(ListItem.Property(Album_Description)) | !IsEmpty(ListItem.AddonDescription) | !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) | !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)) | !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2)) | Control.HasFocus(9601)</visible>
+            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]] | !String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.Property(Artist_Description)) | !String.IsEmpty(ListItem.Property(Album_Description)) | !String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2)) | Control.HasFocus(9601)</visible>
             <include>Animation_FadeIn</include>
             <control type="image" description="Background">
                 <width>100%</width>
@@ -41,7 +41,7 @@
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
             <visible>!Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
-            <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot) | !IsEmpty(ListItem.Property(Artist_Description)) | !IsEmpty(ListItem.Property(Album_Description)) | !IsEmpty(ListItem.AddonDescription) | !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) | !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)) | !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2)) | Control.HasFocus(9601)</visible>
+            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]] | !String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.Property(Artist_Description)) | !String.IsEmpty(ListItem.Property(Album_Description)) | !String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2)) | Control.HasFocus(9601)</visible>
             <include>Animation_SlideIn</include>
 
             <control type="group">
@@ -278,7 +278,7 @@
                 <width>64</width>
                 <height>64</height>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/bluray.png</texture>
-                <visible>[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]</visible>
+                <visible>[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50)]</visible>
             </control>
 
             <!-- HDDVD -->
@@ -286,7 +286,7 @@
                 <width>95</width>
                 <height>64</height>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/hddvd.png</texture>
-                <visible>substring(ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
             </control>
 
             <!-- DVD -->
@@ -294,7 +294,7 @@
                 <width>64</width>
                 <height>64</height>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/dvd.png</texture>
-                <visible>substring(ListItem.FilenameAndPath,dvd) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>String.Contains(ListItem.FilenameAndPath,dvd) + !String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
             </control>
 
             <!-- TV -->
@@ -303,7 +303,7 @@
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="LineLabel">indicator/tv.png</texture>
-                <visible>substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr) | substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,satrip) | substring(ListItem.FilenameAndPath,dthrip) | substring(ListItem.FilenameAndPath,dvbrip) | substring(ListItem.FilenameAndPath,tvrip)</visible>
+                <visible>String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,dsr) | String.Contains(ListItem.FilenameAndPath,pdtv) | String.Contains(ListItem.FilenameAndPath,satrip) | String.Contains(ListItem.FilenameAndPath,dthrip) | String.Contains(ListItem.FilenameAndPath,dvbrip) | String.Contains(ListItem.FilenameAndPath,tvrip)</visible>
             </control>
 
             <!-- WEB DL -->
@@ -312,7 +312,7 @@
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="LineLabel">indicator/web-dl.png</texture>
-                <visible>substring(ListItem.FilenameAndPath,web-dl) | substring(ListItem.FilenameAndPath,webdl) | substring(ListItem.FilenameAndPath,web-rip) | substring(ListItem.FilenameAndPath,webrip) | substring(ListItem.FilenameAndPath,web dl) | substring(ListItem.FilenameAndPath,web rip)</visible>
+                <visible>String.Contains(ListItem.FilenameAndPath,web-dl) | String.Contains(ListItem.FilenameAndPath,webdl) | String.Contains(ListItem.FilenameAndPath,web-rip) | String.Contains(ListItem.FilenameAndPath,webrip) | String.Contains(ListItem.FilenameAndPath,web dl) | String.Contains(ListItem.FilenameAndPath,web rip)</visible>
             </control>
 
             <!-- 3d Enabled -->
@@ -329,14 +329,14 @@
                 <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(ListItem.Top250)</visible>
-                <visible>IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
+                <visible>!String.IsEmpty(ListItem.Top250)</visible>
+                <visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
             </control>
             <control type="group">
                 <width>64</width>
                 <height>64</height>
-                <visible>!IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
+                <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
@@ -361,7 +361,7 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
-                <visible>!IsEmpty(ListItem.VideoResolution)</visible>
+                <visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
             </control>
 
             <!-- Video Codec -->
@@ -370,7 +370,7 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel"  fallback="indicator/fallback.png">$INFO[ListItem.VideoCodec,indicator/source/,.png]</texture>
-                <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+                <visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
             </control>
 
             <!-- Audio Channels -->
@@ -378,7 +378,7 @@
                 <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(ListItem.AudioChannels)</visible>
+                <visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
             </control>
 
@@ -387,7 +387,7 @@
                 <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                <visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioCodec,indicator/audio/,.png]</texture>
             </control>
 
@@ -397,7 +397,7 @@
             <control type="group">
                 <width>100</width>
                 <height>64</height>
-                <visible>!IsEmpty(ListItem.MPAA)</visible>
+                <visible>!String.IsEmpty(ListItem.MPAA)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
                 <control type="image">
                     <centerleft>50%</centerleft>
@@ -427,7 +427,7 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel">indicator/artist.png</texture>
-                <visible>!IsEmpty(ListItem.AlbumArtist)</visible>
+                <visible>!String.IsEmpty(ListItem.AlbumArtist)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
                 <visible>Container.Content(songs) | Container.Content(albums)</visible>
             </control>
@@ -440,7 +440,7 @@
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
-                <visible>!IsEmpty(ListItem.AlbumArtist)</visible>
+                <visible>!String.IsEmpty(ListItem.AlbumArtist)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
                 <visible>Container.Content(songs) | Container.Content(albums)</visible>
             </control>
@@ -452,7 +452,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel">indicator/album.png</texture>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
-                <visible>!IsEmpty(ListItem.AlbumArtist) | !IsEmpty(ListItem.Album)</visible>
+                <visible>!String.IsEmpty(ListItem.AlbumArtist) | !String.IsEmpty(ListItem.Album)</visible>
                 <visible>Container.Content(songs)</visible>
             </control>
             <control type="label">
@@ -465,7 +465,7 @@
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
-                <visible>!IsEmpty(ListItem.AlbumArtist) | !IsEmpty(ListItem.Album)</visible>
+                <visible>!String.IsEmpty(ListItem.AlbumArtist) | !String.IsEmpty(ListItem.Album)</visible>
                 <visible>Container.Content(songs)</visible>
             </control>
             
@@ -478,7 +478,7 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel">indicator/clock.png</texture>
-                <visible>!IsEmpty(ListItem.Duration)</visible>
+                <visible>!String.IsEmpty(ListItem.Duration)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
@@ -490,8 +490,8 @@
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
-                <visible>!IsEmpty(ListItem.Duration)</visible>
-                <visible>!substring(ListItem.Duration,:)</visible>
+                <visible>!String.IsEmpty(ListItem.Duration)</visible>
+                <visible>!String.Contains(ListItem.Duration,:)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
@@ -503,8 +503,8 @@
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
-                <visible>!IsEmpty(ListItem.Duration)</visible>
-                <visible>substring(ListItem.Duration,:)</visible>
+                <visible>!String.IsEmpty(ListItem.Duration)</visible>
+                <visible>String.Contains(ListItem.Duration,:)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
 
@@ -516,7 +516,7 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel">indicator/calendar.png</texture>
-                <visible>[!IsEmpty(ListItem.Year) + !container.Content(episodes)] | [!IsEmpty(ListItem.Premiered) + Container.Content(episodes)]</visible>
+                <visible>[!String.IsEmpty(ListItem.Year) + !container.Content(episodes)] | [!String.IsEmpty(ListItem.Premiered) + Container.Content(episodes)]</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
@@ -528,7 +528,7 @@
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
-                <visible>!IsEmpty(ListItem.Year) + !container.Content(episodes)</visible>
+                <visible>!String.IsEmpty(ListItem.Year) + !container.Content(episodes)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
@@ -540,7 +540,7 @@
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
-                <visible>!IsEmpty(ListItem.Premiered) + Container.Content(episodes)</visible>
+                <visible>!String.IsEmpty(ListItem.Premiered) + Container.Content(episodes)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
 
@@ -551,7 +551,7 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/star10.png</texture>
-                <visible>!IsEmpty(ListItem.Rating)</visible>
+                <visible>!String.IsEmpty(ListItem.Rating)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
             <control type="label">
@@ -563,7 +563,7 @@
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
-                <visible>!IsEmpty(ListItem.Rating)</visible>
+                <visible>!String.IsEmpty(ListItem.Rating)</visible>
                 <visible>Skin.HasSetting(furniture.flags.extradetail)</visible>
             </control>
 
@@ -599,7 +599,7 @@
             <width>100%</width>
             <height>100%</height>
             <control type="visualisation">
-                <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)]] | [Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)] + IsEmpty(Player.Art(fanart))]</visible>
+                <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)]] | [Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)] + String.IsEmpty(Player.Art(fanart))]</visible>
                 <description>visualisation</description>
 
             </control>
@@ -609,7 +609,7 @@
                 <texture background="true">$INFO[Player.Art(fanart)]</texture>
                 <visible>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
                 <visible>Skin.HasSetting(musicvis.fanartfallback)</visible>
-                <visible>!IsEmpty(Player.Art(fanart))</visible>
+                <visible>!String.IsEmpty(Player.Art(fanart))</visible>
                 <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
@@ -648,7 +648,7 @@
             <height>100%</height>
             <fadetime>1000</fadetime>
             <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background))</visible>
+            <visible>!String.IsEmpty(Skin.String(global.background))</visible>
             <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
             <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
             <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
@@ -684,48 +684,48 @@
         <value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
         <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
         <value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>
-        <value condition="stringcompare(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]</value>
-        <value condition="stringcompare(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
-        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle) + substring(Container.FolderPath,videodb://tvshows/titles/)">[CAPITALIZE]$INFO[ListItem.TvShowTitle][/CAPITALIZE]</value>
-        <value condition="!IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
-        <value condition="Window.IsVisible(home) + IsEmpty(Skin.String(home.mainheadertext))">$LOCALIZE[31158]</value>
-        <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(home.mainheadertext))">$INFO[Skin.String(home.mainheadertext)]</value>
+        <value condition="String.IsEqual(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]</value>
+        <value condition="String.IsEqual(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
+        <value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.TvShowTitle) + String.Contains(Container.FolderPath,videodb://tvshows/titles/)">[CAPITALIZE]$INFO[ListItem.TvShowTitle][/CAPITALIZE]</value>
+        <value condition="!String.IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
+        <value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(home.mainheadertext))">$LOCALIZE[31158]</value>
+        <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(home.mainheadertext))">$INFO[Skin.String(home.mainheadertext)]</value>
         <value condition="Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
         <value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
         <value condition="Window.IsVisible(EventLog.xml)">$LOCALIZE[14111]</value>
         <value>$LOCALIZE[15100]</value>
     </variable>
     <variable name="Furniture_Counter_Movies">
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.UnWatched)][/COLOR] $LOCALIZE[20342]</value>
+        <value condition="!Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.UnWatched)][/COLOR] $LOCALIZE[20342]</value>
     </variable>
     <variable name="Furniture_Counter_Episodes">
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + IntegerGreaterThan(Window(home).Property(Movies.Count),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0) + IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.UnWatched)][/COLOR] $LOCALIZE[20360]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0) + IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.UnWatched)][/COLOR] $LOCALIZE[20360]</value>
+        <value condition="!Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Episodes.Count),0) + Integer.IsGreater(Window(home).Property(Movies.Count),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
+        <value condition="!Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Episodes.Count),0) + !Integer.IsGreater(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Movies.UnWatched),0) + Integer.IsGreater(Window(home).Property(Episodes.UnWatched),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.UnWatched)][/COLOR] $LOCALIZE[20360]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Movies.UnWatched),0) + Integer.IsGreater(Window(home).Property(Episodes.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.UnWatched)][/COLOR] $LOCALIZE[20360]</value>
     </variable>
     <variable name="Furniture_Counter_Songs">
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + [IntegerGreaterThan(Window(home).Property(Episodes.Count),0) | IntegerGreaterThan(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + [IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) | IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) + !IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+        <value condition="!Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Music.SongsCount),0) + [Integer.IsGreater(Window(home).Property(Episodes.Count),0) | Integer.IsGreater(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+        <value condition="!Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Music.SongsCount),0) + !Integer.IsGreater(Window(home).Property(Episodes.Count),0) + !Integer.IsGreater(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Music.SongsCount),0) + [Integer.IsGreater(Window(home).Property(Episodes.UnWatched),0) | Integer.IsGreater(Window(home).Property(Movies.UnWatched),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Window(home).Property(Music.SongsCount),0) + !Integer.IsGreater(Window(home).Property(Episodes.UnWatched),0) + !Integer.IsGreater(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
     </variable>
     <variable name="Furniture_Counter_Channels">
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + [IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) | IntegerGreaterThan(Window(home).Property(Episodes.Count),0) | IntegerGreaterThan(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + !IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + [IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) | IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) | IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + !IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) + !IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+        <value condition="!Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Pvr.BackendChannels,0) + [Integer.IsGreater(Window(home).Property(Music.SongsCount),0) | Integer.IsGreater(Window(home).Property(Episodes.Count),0) | Integer.IsGreater(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+        <value condition="!Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Pvr.BackendChannels,0) + !Integer.IsGreater(Window(home).Property(Music.SongsCount),0) + !Integer.IsGreater(Window(home).Property(Episodes.Count),0) + !Integer.IsGreater(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Pvr.BackendChannels,0) + [Integer.IsGreater(Window(home).Property(Music.SongsCount),0) | Integer.IsGreater(Window(home).Property(Episodes.UnWatched),0) | Integer.IsGreater(Window(home).Property(Movies.UnWatched),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+        <value condition="Skin.HasSetting(header.mainheadercount) + Integer.IsGreater(Pvr.BackendChannels,0) + !Integer.IsGreater(Window(home).Property(Music.SongsCount),0) + !Integer.IsGreater(Window(home).Property(Episodes.UnWatched),0) + !Integer.IsGreater(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
     </variable>
     <variable name="Furniture_TopBar_Header_SubLabel">
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR] $LOCALIZE[31067]</value>
 
-        <value condition="!IsEmpty(Container.NumItems) + !IsEmpty(Control.GetLabel(28)) + [Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)]">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]  •  $INFO[Control.GetLabel(28)]</value>
+        <value condition="!String.IsEmpty(Container.NumItems) + !String.IsEmpty(Control.GetLabel(28)) + [Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)]">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]  •  $INFO[Control.GetLabel(28)]</value>
 
-        <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
-        <value condition="!IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>
+        <value condition="!String.IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
+        <value condition="!String.IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>
         <value condition="Pvr.IsRecording">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19158]...[/COLOR]$INFO[Pvr.NowRecordingTitle,  ,]$INFO[Pvr.NowRecordingChannel,  ,]</value>
         <value condition="Pvr.HasTimer">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19157]...[/COLOR]$INFO[Pvr.NextRecordingTitle,  ,]$INFO[Pvr.NextRecordingDateTime,  ,]$INFO[Pvr.NextRecordingChannel,  ,]</value>
         <value>$VAR[Furniture_Counter_Movies]$VAR[Furniture_Counter_Episodes]$VAR[Furniture_Counter_Songs]$VAR[Furniture_Counter_Channels]</value>
@@ -742,17 +742,17 @@
         <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
 
-        <value condition="!Skin.HasSetting(header.tilefollowsnode) + !IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+        <value condition="!Skin.HasSetting(header.tilefollowsnode) + !String.IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
 
-        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(movies) | Container.Content(sets) | substring(Container.FolderPath,/movies/)]">$LOCALIZE[20342]</value>
-        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | substring(Container.FolderPath,/tvshows/)]">$LOCALIZE[20343]</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(movies) | Container.Content(sets) | String.Contains(Container.FolderPath,/movies/)]">$LOCALIZE[20342]</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | String.Contains(Container.FolderPath,/tvshows/)]">$LOCALIZE[20343]</value>
         <value condition="Window.IsVisible(MyVideoNav.xml)">$LOCALIZE[3]</value>
         <value condition="Window.IsVisible(MyMusicNav.xml)">$LOCALIZE[2]</value>
         <value condition="Window.IsVisible(MyPics.xml)">$LOCALIZE[1]</value>
         <value condition="Window.IsVisible(MyPrograms.xml)">$LOCALIZE[0]</value>
         <value condition="Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[31015]</value>
 
-        <value condition="!IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
 
         <value>$LOCALIZE[10000]</value>
     </variable>
@@ -771,17 +771,17 @@
         <value condition="Window.IsVisible(MyPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
         <value condition="Window.IsVisible(FileManager.xml)">special://skin/extras/icons/database.png</value>
 
-        <value condition="!Skin.HasSetting(header.tilefollowsnode) + !IsEmpty(Window(home).Property(Header.Icon)) + substring(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
+        <value condition="!Skin.HasSetting(header.tilefollowsnode) + !String.IsEmpty(Window(home).Property(Header.Icon)) + String.Contains(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
 
-        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(movies) | Container.Content(sets) | substring(Container.FolderPath,/movies/)]">special://skin/extras/icons/film.png</value>
-        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | substring(Container.FolderPath,/tvshows/)]">special://skin/extras/icons/tv.png</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(movies) | Container.Content(sets) | String.Contains(Container.FolderPath,/movies/)]">special://skin/extras/icons/film.png</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | String.Contains(Container.FolderPath,/tvshows/)]">special://skin/extras/icons/tv.png</value>
         <value condition="Window.IsVisible(MyVideoNav.xml)">special://skin/extras/icons/video-addons.png</value>
         <value condition="Window.IsVisible(MyMusicNav.xml)">special://skin/extras/icons/songs.png</value>
         <value condition="Window.IsVisible(MyPics.xml)">special://skin/extras/icons/pictures.png</value>
         <value condition="Window.IsVisible(MyPrograms.xml)">special://skin/extras/icons/addons.png</value>
         <value condition="Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)">special://skin/extras/icons/livetv.png</value>
 
-        <value condition="!IsEmpty(Window(home).Property(Header.Icon)) + substring(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(Header.Icon)) + String.Contains(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
 
         <value>special://skin/extras/icons/home.png</value>
     </variable>
@@ -909,7 +909,7 @@
                 <width>1050</width>
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
-                <visible>!IsEmpty(Player.Duration) + Player.HasVideo</visible>
+                <visible>!String.IsEmpty(Player.Duration) + Player.HasVideo</visible>
                 <control type="label">
                     <width max="400">auto</width>
                     <font>Font-Sublabel</font>
@@ -950,7 +950,7 @@
                 <width>1050</width>
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
-                <visible>!IsEmpty(Player.Duration) + !Player.HasVideo</visible>
+                <visible>!String.IsEmpty(Player.Duration) + !Player.HasVideo</visible>
                 <control type="label">
                     <width max="830">auto</width>
                     <font>Font-Sublabel</font>
@@ -1007,7 +1007,7 @@
                 <aligny>top</aligny>
                 <label>$INFO[System.Time(hh:mm)]</label>
                 <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
-                <animation effect="slide" start="0" end="-58" condition="!IsEmpty(System.Time(xx))">Conditional</animation>
+                <animation effect="slide" start="0" end="-58" condition="!String.IsEmpty(System.Time(xx))">Conditional</animation>
             </control>
             <control type="label">
                 <posx>270</posx>
@@ -1019,7 +1019,7 @@
                 <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <align>right</align>
                 <label>$INFO[System.Time(xx)]</label>
-                <visible>!IsEmpty(System.Time(xx))</visible>
+                <visible>!String.IsEmpty(System.Time(xx))</visible>
             </control>
             <control type="label">
                 <posx>270</posx>

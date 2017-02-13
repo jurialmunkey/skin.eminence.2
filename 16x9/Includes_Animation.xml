@@ -36,20 +36,21 @@
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0" delay="300">Visible</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0">Hidden</animation>
         <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
+        <animation effect="fade" start="100" end="0" time="200" condition="[Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(MyPics.xml)] + !Integer.IsGreater(Container.NumItems,0)">Conditional</animation>
         <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]</visible>
     </include>
     <include name="Animation_Info">
         <!-- No Property Set (From Library) -->
-        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="1920" end="0" condition="IsEmpty(Window(home).Property(extinfo))">WindowOpen</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="IsEmpty(Window(home).Property(extinfo))">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="1920" end="0" condition="String.IsEmpty(Window(home).Property(extinfo))">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="String.IsEmpty(Window(home).Property(extinfo))">WindowClose</animation>
 
         <!-- Property 1 Set (Move Left) -->
-        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="-1920" end="0" condition="stringcompare(Window(home).Property(extinfo),1)">WindowOpen</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="stringcompare(Window(home).Property(extinfo),1)">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="-1920" end="0" condition="String.IsEqual(Window(home).Property(extinfo),1)">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="String.IsEqual(Window(home).Property(extinfo),1)">WindowClose</animation>
 
         <!-- Property 2 Set (Move Right) -->
-        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="1920" end="0" condition="stringcompare(Window(home).Property(extinfo),2)">WindowOpen</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="stringcompare(Window(home).Property(extinfo),2)">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="1920" end="0" condition="String.IsEqual(Window(home).Property(extinfo),2)">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0" condition="String.IsEqual(Window(home).Property(extinfo),2)">WindowClose</animation>
 
         <animation effect="slide" tween="quadratic" easing="out" time="200" delay="200" start="1920" end="0">Visible</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0">Hidden</animation>

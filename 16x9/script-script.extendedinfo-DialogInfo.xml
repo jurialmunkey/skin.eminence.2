@@ -77,7 +77,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(Window.Property(PlaceOfBirth))</visible>
+                                    <visible>!String.IsEmpty(Window.Property(PlaceOfBirth))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -109,7 +109,7 @@
                         <align>center</align>
                         <orientation>horizontal</orientation>
                         <control type="group">
-                            <visible>!IsEmpty(Window.Property(Birthday))</visible>
+                            <visible>!String.IsEmpty(Window.Property(Birthday))</visible>
                             <width>370</width>
                             <height>100%</height>
                             <control type="label">
@@ -131,7 +131,7 @@
                         <control type="group">
                             <width>370</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(Window.Property(DeathDay))</visible>
+                            <visible>!String.IsEmpty(Window.Property(DeathDay))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -151,7 +151,7 @@
                         <control type="group">
                             <width>370</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(Window.Property(Age))</visible>
+                            <visible>!String.IsEmpty(Window.Property(Age))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -203,7 +203,7 @@
                             <font>Font-ListInfo-Small-Bold</font>
                             <onfocus>ClearProperty(content)</onfocus>
                             <include>Defs_OptionButton3</include>
-                            <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(150).NumItems,0)</enable>
                         </control>
                         
                         <!-- TvShows -->
@@ -215,7 +215,7 @@
                             <font>Font-ListInfo-Small-Bold</font>
                             <onfocus>ClearProperty(content)</onfocus>
                             <include>Defs_OptionButton3</include>
-                            <enable>IntegerGreaterThan(Container(250).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(250).NumItems,0)</enable>
                         </control>
 
                         <!-- YouTube -->
@@ -227,7 +227,7 @@
                             <font>Font-ListInfo-Small-Bold</font>
                             <onfocus>ClearProperty(content)</onfocus>
                             <include>Defs_OptionButton3</include>
-                            <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(350).NumItems,0)</enable>
                         </control>
 
                         <!-- As Crew -->
@@ -239,7 +239,7 @@
                             <font>Font-ListInfo-Small-Bold</font>
                             <onfocus>ClearProperty(content)</onfocus>
                             <include>Defs_OptionButton3</include>
-                            <enable>IntegerGreaterThan(Container(550).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(550).NumItems,0)</enable>
                         </control>
 
                         <control type="button" id="9998">

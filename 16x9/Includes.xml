@@ -50,14 +50,14 @@
 
     <!-- VARS -->
     <variable name="HighlightColor">
-        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)] + !IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
+        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)] + !String.IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)]">Highlight</value>
-        <value condition="Skin.HasSetting(home.tilecolor) + !IsEmpty(Window(home).Property(HighlightColor))">$INFO[Window(home).Property(HighlightColor)]</value>
-        <value condition="!IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
+        <value condition="Skin.HasSetting(home.tilecolor) + !String.IsEmpty(Window(home).Property(HighlightColor))">$INFO[Window(home).Property(HighlightColor)]</value>
+        <value condition="!String.IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
         <value>Highlight</value>
     </variable>
     <variable name="HighlightColor2">
-        <value condition="!IsEmpty(Skin.String(HighlightColor2))">$INFO[Skin.String(HighlightColor2)]</value>
+        <value condition="!String.IsEmpty(Skin.String(HighlightColor2))">$INFO[Skin.String(HighlightColor2)]</value>
         <value>Highlight2</value>
     </variable>
 

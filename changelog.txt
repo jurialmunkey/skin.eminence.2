@@ -1,3 +1,6 @@
+[B]2.5.34[/B]
+Change String and Integer conditions to Krypton standard.
+
 [B]2.5.33[/B]
 Add a hackish workaround for plugins that don't use return property properly.
 Remove the need for setting force view lock (enabled in viewmode)

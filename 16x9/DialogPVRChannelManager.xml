@@ -225,7 +225,7 @@
                         <include>Defs_OptionButton</include>
                         <label>19024</label>
                         <altlabel>19023</altlabel>
-                        <usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
+                        <usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
                     </control>
 
                     <!-- Group Manager Button -->

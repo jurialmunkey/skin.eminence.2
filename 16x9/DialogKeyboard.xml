@@ -16,7 +16,7 @@
                 <top>-99</top>
                 <bottom>-10</bottom>
                 <include>Dialog_Background</include>
-                <visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+                <visible>Integer.IsGreater(Container(8000).NumItems,0)</visible>
             </control>
             <control type="group">
                 <left>-10</left>
@@ -24,7 +24,7 @@
                 <top>-10</top>
                 <bottom>-10</bottom>
                 <include>Dialog_Background</include>
-                <visible>!IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+                <visible>!Integer.IsGreater(Container(8000).NumItems,0)</visible>
             </control>
             <control type="panel" id="8000">
                 <height>69</height>

@@ -3,9 +3,9 @@
     <!-- skinsettings -->
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">8001</defaultcontrol>
-    <onload condition="IsEmpty(Skin.String(home.mainheadertext))">Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onload>
-    <onload condition="IsEmpty(Skin.String(home.headertext))">Skin.SetString(home.headertext,$LOCALIZE[10000])</onload>
-    <onload condition="IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onload>
+    <onload condition="String.IsEmpty(Skin.String(home.mainheadertext))">Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onload>
+    <onload condition="String.IsEmpty(Skin.String(home.headertext))">Skin.SetString(home.headertext,$LOCALIZE[10000])</onload>
+    <onload condition="String.IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onload>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|powermenu)</onunload>
     <controls>
         <include>Furniture_Background</include>
@@ -189,7 +189,7 @@
                         <label>31016</label>
                         <radioposx>settingsradioposx</radioposx>
                         <selected>!Skin.HasSetting(home.hidewidgetbox)</selected>
-                        <onclick condition="!Skin.HasSetting(home.hidewidgetbox) + stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                        <onclick condition="!Skin.HasSetting(home.hidewidgetbox) + String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
                         <onclick>Skin.ToggleSetting(home.hidewidgetbox)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
@@ -201,11 +201,11 @@
                         <label>31150</label>
                         <label2>$INFO[Skin.String(home.widgetposters)]</label2>
                         <radioposx>settingsradioposx</radioposx>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31166])</onclick>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
-                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                        <onclick condition="!String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31166])</onclick>
+                        <onclick condition="!String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
+                        <onclick condition="!String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                        <onclick condition="!String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
+                        <onclick condition="!String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
@@ -215,7 +215,7 @@
                         <width>100%</width>
                         <label>31156</label>
                         <radioposx>settingsradioposx</radioposx>
-                        <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])</enable>
+                        <enable>!String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31154])</enable>
                         <selected>Skin.HasSetting(home.showdiscart)</selected>
                         <onclick>Skin.ToggleSetting(home.showdiscart)</onclick>
                         <height>72</height>
@@ -242,9 +242,9 @@
                     <control type="button" id="8110">
                         <width>100%</width>
                         <label>31151</label>
-                        <onclick condition="IsEmpty(Skin.String(home.headericon))">Skin.SetImage(home.headericon,special://skin/extras/icons/)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(home.headericon))">Skin.SetImage(home.headericon,special://skin/extras/icons/)</onclick>
                         <label2>$VAR[Label_SkinSetting_HeaderIcon]</label2>
-                        <onclick condition="!IsEmpty(Skin.String(home.headericon))">Skin.Reset(home.headericon)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(home.headericon))">Skin.Reset(home.headericon)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
@@ -301,10 +301,10 @@
                         <width>100%</width>
                         <label>31173</label>
                         <label2>$INFO[Skin.String(home.style)]</label2>
-                        <onclick condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
-                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31180])">Skin.SetString(home.style,$LOCALIZE[31181])</onclick>
-                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31181])">Skin.SetString(home.style,$LOCALIZE[31182])</onclick>
-                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31182])">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31180])">Skin.SetString(home.style,$LOCALIZE[31181])</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31181])">Skin.SetString(home.style,$LOCALIZE[31182])</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
@@ -368,8 +368,8 @@
                         <width>100%</width>
                         <label>31159</label>
                         <label2>$VAR[Label_SkinSetting_GlobalOverlay]</label2>
-                        <onclick condition="IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
@@ -379,8 +379,8 @@
                         <width>100%</width>
                         <label>31146</label>
                         <label2>$VAR[Label_SkinSetting_FallbackFanart]</label2>
-                        <onclick condition="IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
@@ -951,8 +951,8 @@
                         <include>Defs_OptionButton</include>
                         <label>31184</label>
                         <label2>$VAR[Label_SkinSetting_StartupVideo]</label2>
-                        <onclick condition="IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
                     </control>
                     <!-- Busy Spinner -->
                     <control type="button" id="8909">

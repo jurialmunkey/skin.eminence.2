@@ -26,8 +26,8 @@
                     <onleft>9501</onleft>
                     <onright>9501</onright>
                     <!-- Not necessary with new Krypton oninfo for containers -->
-                    <!-- <oninfo condition="IsEmpty(Container(9500).ListItem.TvShowTitle) + IsEmpty(Container(9500).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9500).ListItem.Title],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
-                    <oninfo condition="!IsEmpty(Container(9500).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9500).ListItem.TvShowTitle],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo> -->
+                    <!-- <oninfo condition="String.IsEmpty(Container(9500).ListItem.TvShowTitle) + String.IsEmpty(Container(9500).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(9500).ListItem.Title],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo>
+                    <oninfo condition="!String.IsEmpty(Container(9500).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(9500).ListItem.TvShowTitle],imdb_id=$INFO[Container(9500).ListItem.IMDBNumber])</oninfo> -->
                     <orientation>vertical</orientation>
                     <autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
                     <scrolltime tween="quadratic">400</scrolltime>
@@ -90,7 +90,7 @@
                             <textcolor>$VAR[HighlightColor2]</textcolor>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>$INFO[Container(9500).ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
-                            <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
+                            <visible>!String.IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         <control type="textbox">
                             <left>pad</left>
@@ -99,7 +99,7 @@
                             <font>Font-ListInfo-Small</font>
                             <align>left</align>
                             <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
-                            <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
+                            <visible>!String.IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         <control type="textbox">
                             <left>pad</left>
@@ -108,7 +108,7 @@
                             <font>Font-ListInfo-Small</font>
                             <align>left</align>
                             <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
-                            <visible>IsEmpty(Container(9500).ListItem.Genre)</visible>
+                            <visible>String.IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
 
                     </control>
@@ -157,7 +157,7 @@
                             <textcolor>$VAR[HighlightColor2]</textcolor>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>$INFO[Container(9500).ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
-                            <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
+                            <visible>!String.IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         <control type="textbox">
                             <left>pad</left>
@@ -167,7 +167,7 @@
                             <align>left</align>
                             <textcolor>Selected</textcolor>
                             <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
-                            <visible>!IsEmpty(Container(9500).ListItem.Genre)</visible>
+                            <visible>!String.IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
                         <control type="textbox">
                             <left>pad</left>
@@ -177,13 +177,13 @@
                             <align>left</align>
                             <textcolor>Selected</textcolor>
                             <label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.AddonDescription]</label>
-                            <visible>IsEmpty(Container(9500).ListItem.Genre)</visible>
+                            <visible>String.IsEmpty(Container(9500).ListItem.Genre)</visible>
                         </control>
 
                     </control>
                 </control>
                 <control type="image">
-                	<visible>!IntegerGreaterThan(Container(9500).NumItems,0)</visible>
+                	<visible>!Integer.IsGreater(Container(9500).NumItems,0)</visible>
                 	<texture>special://skin/extras/backgrounds/home.jpg</texture>
                 </control>
             </control>
@@ -198,7 +198,7 @@
                     <onup>9501</onup>
                     <ondown>9501</ondown>
                     <height>posterh</height>
-                    <onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
+                    <onright condition="!String.IsEqual(Window(home).Property(HubReturn),Home) + !String.IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
@@ -318,7 +318,7 @@
                         <height>100</height>
                         <texture>$INFO[Control.GetLabel(933),progress/circle/p,.png]</texture>
                         <aspectratio align="center">keep</aspectratio>
-                        <visible>!IsEmpty(Player.Duration)</visible>
+                        <visible>!String.IsEmpty(Player.Duration)</visible>
                     </control>
 
                 </control>
@@ -505,7 +505,7 @@
                             <height>32</height>
                             <width>32</width>
                             <texture colordiffuse="ListLabel">indicator/playwhite.png</texture>
-                            <visible>!IsEmpty(ListItem.Property(IsPlaying))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(IsPlaying))</visible>
                         </control>
                         <control type="label">
                             <left>30</left>
@@ -539,7 +539,7 @@
                                 <height>32</height>
                                 <width>32</width>
                                 <texture colordiffuse="ListLabel">indicator/playwhite.png</texture>
-                                <visible>!IsEmpty(ListItem.Property(IsPlaying))</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(IsPlaying))</visible>
                             </control>
                             <control type="label">
                                 <left>30</left>
@@ -577,7 +577,7 @@
                                 <height>32</height>
                                 <width>32</width>
                                 <texture colordiffuse="Selected">indicator/playwhite.png</texture>
-                                <visible>!IsEmpty(ListItem.Property(IsPlaying))</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(IsPlaying))</visible>
                             </control>
                             <control type="label">
                                 <left>30</left>
@@ -1370,8 +1370,8 @@
                 <onleft>6</onleft>
                 <onright>12</onright>
                 <onup>SetProperty(osdinfo,1,home)</onup>
-                <ondown condition="IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
-                <ondown condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
+                <ondown condition="String.IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
+                <ondown condition="!String.IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
                 <include condition="Window.IsVisible(visualisation)">Window_OSD_Left_Music</include>
                 <include condition="Window.IsVisible(fullscreenvideo)">Window_OSD_Left_Video</include>
             </control>
@@ -1385,8 +1385,8 @@
                 <onleft>3</onleft>
                 <onright>4</onright>
                 <onup>SetProperty(osdinfo,1,home)</onup>
-                <ondown condition="IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
-                <ondown condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
+                <ondown condition="String.IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
+                <ondown condition="!String.IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
 
                 <include>Window_OSD_Controls</include>
 
@@ -1402,8 +1402,8 @@
                 <onleft>17</onleft>
                 <onright>1</onright>
                 <onup>SetProperty(osdinfo,1,home)</onup>
-                <ondown condition="IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
-                <ondown condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
+                <ondown condition="String.IsEmpty(Window(home).Property(osdinfo))">Close</ondown>
+                <ondown condition="!String.IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</ondown>
                 <include condition="Window.IsVisible(visualisation)">Window_OSD_Right_Music</include>
                 <include condition="Window.IsVisible(fullscreenvideo) + !VideoPlayer.Content(LiveTV)">Window_OSD_Right_Video</include>
                 <include condition="Window.IsVisible(fullscreenvideo) + VideoPlayer.Content(LiveTV)">Window_OSD_Right_LiveTV</include>
@@ -1443,8 +1443,8 @@
                         <height>69</height>
                         <include>Defs_OSDButton</include>
                         <label>22006</label>
-                        <onclick condition="IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
-						<onclick condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
+                        <onclick condition="String.IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
+						<onclick condition="!String.IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
 						<onclick>subtitledelay</onclick>
 						<enable>VideoPlayer.SubtitlesEnabled</enable>
 					</control>
@@ -1500,8 +1500,8 @@
                         <height>69</height>
                         <include>Defs_OSDButton</include>
                         <label>297</label>
-                        <onclick condition="IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
-						<onclick condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
+                        <onclick condition="String.IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
+						<onclick condition="!String.IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
                         <onclick>audiodelay</onclick>
                     </control>
                     <control type="togglebutton" id="9312" description="Audio Language">
@@ -1547,8 +1547,8 @@
                         <height>69</height>
                         <include>Defs_OSDButton</include>
                         <label>$LOCALIZE[629]</label>
-                        <onclick condition="IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
-						<onclick condition="!IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
+                        <onclick condition="String.IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
+						<onclick condition="!String.IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
 						<onclick>aspectratio</onclick>
 						<onclick>aspectratio</onclick>
                     </control>
@@ -1730,7 +1730,7 @@
         <control type="group">
             <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsActive(musicosd) | Window.IsActive(videoosd)</visible>
             <animation effect="slide" start="0" end="0,-64" time="200" condition="[Window.IsVisible(musicosd) | Window.IsActive(videoosd)] + ![Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]">Conditional</animation>
-            <animation effect="slide" start="0" end="0,-260" time="200" tween="quadratic" condition="[Window.IsVisible(DialogFullScreenInfo.xml) + Skin.HasSetting(videoosd.showinfo)] | [!IsEmpty(Window(home).Property(osdinfo)) + !Window.IsVisible(visualisation)]">Conditional</animation>
+            <animation effect="slide" start="0" end="0,-260" time="200" tween="quadratic" condition="[Window.IsVisible(DialogFullScreenInfo.xml) + Skin.HasSetting(videoosd.showinfo)] | [!String.IsEmpty(Window(home).Property(osdinfo)) + !Window.IsVisible(visualisation)]">Conditional</animation>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <control type="image">
@@ -1740,7 +1740,7 @@
                 <texture colordiffuse="DialogBG">common/white.png</texture>
             </control>
             <control type="group">
-                <visible>[Window.IsVisible(DialogFullScreenInfo.xml) + Skin.HasSetting(videoosd.showinfo)] | [!IsEmpty(Window(home).Property(osdinfo)) + !Window.IsVisible(visualisation)]</visible>
+                <visible>[Window.IsVisible(DialogFullScreenInfo.xml) + Skin.HasSetting(videoosd.showinfo)] | [!String.IsEmpty(Window(home).Property(osdinfo)) + !Window.IsVisible(visualisation)]</visible>
                 <animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false">Visible</animation>
                 <bottom>-310</bottom>
                 <left>bigpad</left>
@@ -1753,7 +1753,7 @@
                     <bottom>70</bottom>
                     <aspectratio>keep</aspectratio>
                     <texture>$INFO[Player.Art(tvshow.poster)]</texture>
-                    <visible>!IsEmpty(Player.Art(tvshow.poster))</visible>
+                    <visible>!String.IsEmpty(Player.Art(tvshow.poster))</visible>
                 </control>
                 <control type="image">
                     <top>pad</top>
@@ -1762,7 +1762,7 @@
                     <bottom>70</bottom>
                     <aspectratio>keep</aspectratio>
                     <texture fallback="DefaultAddonVideo.png">$INFO[Player.Art(thumb)]</texture>
-                    <visible>IsEmpty(Player.Art(tvshow.poster))</visible>
+                    <visible>String.IsEmpty(Player.Art(tvshow.poster))</visible>
                 </control>
                 <control type="group">
                     <left>157</left>
@@ -1782,39 +1782,39 @@
                             <height>64</height>
                             <aspectratio>keep</aspectratio>
                             <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[VideoPlayer.VideoResolution,indicator/resolution/,.png]</texture>
-                            <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+                            <visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
                         </control>
                         <control type="image">
                             <width>64</width>
                             <height>64</height>
                             <aspectratio>keep</aspectratio>
-                            <visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+                            <visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
                             <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[VideoPlayer.AudioChannels,indicator/channels/,.png]</texture>
                         </control>
                         <control type="image">
                             <width>64</width>
                             <height>64</height>
                             <aspectratio>keep</aspectratio>
-                            <visible>!IsEmpty(VideoPlayer.Top250)</visible>
+                            <visible>!String.IsEmpty(VideoPlayer.Top250)</visible>
                             <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
                         </control>
                         <control type="image">
                             <width>64</width>
                             <height>64</height>
                             <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/bluray.png</texture>
-                            <visible>[substring(VideoPlayer.FilenameAndPath,bluray) | substring(VideoPlayer.FilenameAndPath,bdrip) | substring(VideoPlayer.FilenameAndPath,bd25) | substring(VideoPlayer.FilenameAndPath,bd50)]</visible>
+                            <visible>[String.Contains(VideoPlayer.FilenameAndPath,bluray) | String.Contains(VideoPlayer.FilenameAndPath,bdrip) | String.Contains(VideoPlayer.FilenameAndPath,bd25) | String.Contains(VideoPlayer.FilenameAndPath,bd50)]</visible>
                         </control>
                         <control type="image">
                             <width>95</width>
                             <height>64</height>
                             <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/hddvd.png</texture>
-                            <visible>substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+                            <visible>String.Contains(VideoPlayer.FilenameAndPath,hddvd)</visible>
                         </control>
                         <control type="image">
                             <width>64</width>
                             <height>64</height>
                             <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/dvd.png</texture>
-                            <visible>substring(VideoPlayer.FilenameAndPath,dvd) + !substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+                            <visible>String.Contains(VideoPlayer.FilenameAndPath,dvd) + !String.Contains(VideoPlayer.FilenameAndPath,hddvd)</visible>
                         </control>
                         <control type="image">
                             <width>64</width>
@@ -1853,7 +1853,7 @@
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre][/COLOR][/UPPERCASE]</label>
-                            <visible>IsEmpty(VideoPlayer.Season)</visible>
+                            <visible>String.IsEmpty(VideoPlayer.Season)</visible>
                         </control>
                         <control type="label">
                             <left>pad</left>
@@ -1861,7 +1861,7 @@
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre,,  -  ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] , ][/COLOR][/UPPERCASE]</label>
-                            <visible>!IsEmpty(VideoPlayer.Season)</visible>
+                            <visible>!String.IsEmpty(VideoPlayer.Season)</visible>
                         </control>
 
                         <control type="textbox">
@@ -1900,98 +1900,98 @@
                 <visible>Player.Seeking</visible>
             </control>
             <control type="group">
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),1)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),2)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),3)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),4)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),5)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),6)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),7)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),8)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),9)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),10)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),11)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),12)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),13)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),14)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),15)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),16)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),17)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),18)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),19)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),20)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),21)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),22)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),23)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),24)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),25)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),26)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),27)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),28)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),29)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),30)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),31)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),32)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),33)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),34)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),35)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),36)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),37)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),38)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),39)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),40)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),41)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),42)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),43)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),44)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),45)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),46)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),47)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),48)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),49)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),50)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),51)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),52)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),53)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),54)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),55)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),56)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),57)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),58)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),59)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),60)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),61)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),62)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),63)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),64)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),65)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),66)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),67)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),68)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),69)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),70)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),71)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),72)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),73)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),74)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),75)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),76)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),77)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),78)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),79)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),80)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),81)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),82)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),83)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),84)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),85)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),86)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),87)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),88)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),89)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),90)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),91)">Conditional</animation>
-                <animation effect="slide" end="19" condition="IntegerGreaterThan(Control.GetLabel(401),92)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),1)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),2)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),3)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),4)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),5)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),6)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),7)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),8)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),9)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),10)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),11)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),12)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),13)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),14)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),15)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),16)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),17)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),18)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),19)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),20)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),21)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),22)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),23)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),24)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),25)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),26)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),27)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),28)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),29)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),30)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),31)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),32)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),33)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),34)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),35)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),36)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),37)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),38)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),39)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),40)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),41)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),42)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),43)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),44)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),45)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),46)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),47)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),48)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),49)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),50)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),51)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),52)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),53)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),54)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),55)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),56)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),57)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),58)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),59)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),60)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),61)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),62)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),63)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),64)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),65)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),66)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),67)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),68)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),69)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),70)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),71)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),72)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),73)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),74)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),75)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),76)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),77)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),78)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),79)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),80)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),81)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),82)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),83)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),84)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),85)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),86)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),87)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),88)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),89)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),90)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),91)">Conditional</animation>
+                <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),92)">Conditional</animation>
                 <left>20</left>
                 <bottom>16</bottom>
                 <height>64</height>

@@ -317,7 +317,7 @@
                         <texture>$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="group">
-                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                        <visible>!String.IsEmpty(ListItem.Label2)</visible>
                         <control type="label">
                             <left>148</left>
                             <right>30</right>
@@ -341,7 +341,7 @@
                         <top>0</top>
                         <height>100%</height>
                         <label>$INFO[ListItem.Label]</label>
-                        <visible>IsEmpty(ListItem.Label2)</visible>
+                        <visible>String.IsEmpty(ListItem.Label2)</visible>
                     </control>
                 </itemlayout>
 
@@ -360,7 +360,7 @@
                         <texture>$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="group">
-                        <visible>!IsEmpty(ListItem.Label2)</visible>
+                        <visible>!String.IsEmpty(ListItem.Label2)</visible>
                         <control type="label">
                             <left>148</left>
                             <right>30</right>
@@ -386,7 +386,7 @@
                         <top>0</top>
                         <height>100%</height>
                         <label>$INFO[ListItem.Label]</label>
-                        <visible>IsEmpty(ListItem.Label2)</visible>
+                        <visible>String.IsEmpty(ListItem.Label2)</visible>
                         <textcolor>Selected</textcolor>
                     </control>
                 </focusedlayout>
@@ -515,7 +515,7 @@
                         </control>
                     </control>
                 </itemlayout>
-                <itemlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)]  | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
+                <itemlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)]  | [String.StartsWith(ListItem.FolderPath,special://skin/extras/) + String.IsEqual(ListItem.Label,..)]]">
                     <control type="group">
                         <left>$PARAM[pad]</left>
                         <control type="image">
@@ -534,12 +534,12 @@
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>IsEmpty(ListItem.Label2)</visible>
-                            <visible>IsEmpty(ListItem.Property(character))</visible>
-                            <visible>IsEmpty(ListItem.Property(job))</visible>
+                            <visible>String.IsEmpty(ListItem.Label2)</visible>
+                            <visible>String.IsEmpty(ListItem.Property(character))</visible>
+                            <visible>String.IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Label2) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
+                            <visible>!String.IsEmpty(ListItem.Label2) | !String.IsEmpty(ListItem.Property(character)) | !String.IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">
@@ -563,7 +563,7 @@
                         </control>
                     </control>
                 </itemlayout>
-                <itemlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)]  | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
+                <itemlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)]  | [String.StartsWith(ListItem.FolderPath,special://skin/extras/) + String.IsEqual(ListItem.Label,..)]]">
 
                     <control type="image">
                         <centerleft>50%</centerleft>
@@ -596,7 +596,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)] | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
+                <focusedlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)] | [String.StartsWith(ListItem.FolderPath,special://skin/extras/) + String.IsEqual(ListItem.Label,..)]]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -620,12 +620,12 @@
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
-                            <visible>IsEmpty(ListItem.Label2)</visible>
-                            <visible>IsEmpty(ListItem.Property(character))</visible>
-                            <visible>IsEmpty(ListItem.Property(job))</visible>
+                            <visible>String.IsEmpty(ListItem.Label2)</visible>
+                            <visible>String.IsEmpty(ListItem.Property(character))</visible>
+                            <visible>String.IsEmpty(ListItem.Property(job))</visible>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Label2) | !IsEmpty(ListItem.Property(character)) | !IsEmpty(ListItem.Property(job))</visible>
+                            <visible>!String.IsEmpty(ListItem.Label2) | !String.IsEmpty(ListItem.Property(character)) | !String.IsEmpty(ListItem.Property(job))</visible>
                             <left>148</left>
                             <right>30</right>
                             <control type="label">
@@ -649,7 +649,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[substring(ListItem.FolderPath,special://skin/extras/icons/,left) + !stringcompare(ListItem.Label,icons)] | [substring(ListItem.FolderPath,special://skin/extras/,left) + stringcompare(ListItem.Label,..)]]">
+                <focusedlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)] | [String.StartsWith(ListItem.FolderPath,special://skin/extras/) + String.IsEqual(ListItem.Label,..)]]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>

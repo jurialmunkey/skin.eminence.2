@@ -50,9 +50,9 @@
             <!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
             <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
             <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-            <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_TextOnly_Animate</include>
-            <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_Icons_Animate</include>
+            <animation effect="slide" end="0,160" condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
+            <include condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_TextOnly_Animate</include>
+            <include condition="!String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_Icons_Animate</include>
 
             <control type="image">
                 <left>16</left>

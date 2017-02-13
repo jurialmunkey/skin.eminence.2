@@ -24,17 +24,17 @@
                 <control type="image">
                     <aspectratio>keep</aspectratio>
                     <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
-                    <visible>SubString(ListItem.Icon,Default)</visible>
+                    <visible>String.Contains(ListItem.Icon,Default)</visible>
                 </control>
                 <control type="image">
                     <aspectratio>keep</aspectratio>
                     <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
-                    <visible>!SubString(ListItem.Icon,Default) + !SubString(Control.GetLabel(416),*)</visible>
+                    <visible>!String.Contains(ListItem.Icon,Default) + !String.Contains(Control.GetLabel(416),*)</visible>
                 </control>
                 <control type="image">
                     <aspectratio>keep</aspectratio>
                     <texture background="true" fallback="DefaultAddon.png" flipx="true">$INFO[ListItem.Icon]</texture>
-                    <visible>!SubString(ListItem.Icon,Default) + SubString(Control.GetLabel(416),*)</visible>
+                    <visible>!String.Contains(ListItem.Icon,Default) + String.Contains(Control.GetLabel(416),*)</visible>
                 </control>
             </control>
             <control type="group">

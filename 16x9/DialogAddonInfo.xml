@@ -65,7 +65,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.AddonCreator)</visible>
+                                    <visible>!String.IsEmpty(ListItem.AddonCreator)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -89,7 +89,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.AddonSummary)</visible>
+                                    <visible>!String.IsEmpty(ListItem.AddonSummary)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -113,7 +113,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Studio)</visible>
+                                    <visible>!String.IsEmpty(ListItem.Studio)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -144,7 +144,7 @@
                         <align>center</align>
                         <orientation>horizontal</orientation>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.AddonVersion)</visible>
+                            <visible>!String.IsEmpty(ListItem.AddonVersion)</visible>
                             <width>370</width>
                             <height>100%</height>
                             <control type="label">
@@ -166,7 +166,7 @@
                         <control type="group">
                             <width>370</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(ListItem.AddonStatus)</visible>
+                            <visible>!String.IsEmpty(ListItem.AddonStatus)</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>

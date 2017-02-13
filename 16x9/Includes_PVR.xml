@@ -567,7 +567,7 @@
                         </focusedlayout>
                     </control>
                     <control type="scrollbar" id="60">
-                        <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                        <onleft condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
                         <left>0</left>
                         <height>483</height>
                         <onright>50</onright>
@@ -674,7 +674,7 @@
                                 <height>32</height>
                                 <width>32</width>
                                 <texture>$VAR[Image_Indicator]</texture>
-                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
                     </itemlayout>
@@ -723,7 +723,7 @@
                                 <height>32</height>
                                 <width>32</width>
                                 <texture>$VAR[Image_Indicator]</texture>
-                                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                             </control>
                         </control>
                     </focusedlayout>
@@ -781,7 +781,7 @@
                         <textcolor>$VAR[HighlightColor2]</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
-                        <visible>!IsEmpty(ListItem.Genre)</visible>
+                        <visible>!String.IsEmpty(ListItem.Genre)</visible>
                     </control>
                     <control type="textbox">
                         <left>pad</left>
@@ -790,7 +790,7 @@
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$VAR[Label_Plot]</label>
-                        <visible>!IsEmpty(ListItem.Genre)</visible>
+                        <visible>!String.IsEmpty(ListItem.Genre)</visible>
                     </control>
                     <control type="textbox">
                         <left>pad</left>
@@ -799,7 +799,7 @@
                         <font>Font-ListInfo</font>
                         <align>left</align>
                         <label>$VAR[Label_Plot]</label>
-                        <visible>IsEmpty(ListItem.Genre)</visible>
+                        <visible>String.IsEmpty(ListItem.Genre)</visible>
                     </control>
                     <control type="label">
                         <left>pad</left>

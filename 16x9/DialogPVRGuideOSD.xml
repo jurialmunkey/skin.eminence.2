@@ -60,7 +60,7 @@
                         <height>100%</height>
                         <texture colordiffuse="0fffffff">common/selected.png</texture>
                         <aspectratio>scale</aspectratio>
-                        <visible>StringCompare(ListItem.Title,VideoPlayer.Title) + StringCompare(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + StringCompare(ListItem.EndTime,VideoPlayer.EndTime)</visible>
+                        <visible>String.IsEqual(ListItem.Title,VideoPlayer.Title) + String.IsEqual(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + String.IsEqual(ListItem.EndTime,VideoPlayer.EndTime)</visible>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -92,7 +92,7 @@
                         <height>100%</height>
                         <texture colordiffuse="1fffffff">common/selected.png</texture>
                         <aspectratio>scale</aspectratio>
-                        <visible>StringCompare(ListItem.Title,VideoPlayer.Title) + StringCompare(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + StringCompare(ListItem.EndTime,VideoPlayer.EndTime)</visible>
+                        <visible>String.IsEqual(ListItem.Title,VideoPlayer.Title) + String.IsEqual(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + String.IsEqual(ListItem.EndTime,VideoPlayer.EndTime)</visible>
                     </control>
                     <control type="label">
                         <left>30</left>

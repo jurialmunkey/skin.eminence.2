@@ -55,7 +55,7 @@
                     <include>Defs_OptionButton2</include>
                     <label>13350</label>
                     <onclick>ActivateWindow(MusicPlaylist)</onclick>
-                    <visible>IntegerGreaterThan(Playlist.Length(music),0)</visible>
+                    <visible>Integer.IsGreater(Playlist.Length(music),0)</visible>
                 </control>
                 <!-- Party Mode -->
                 <control type="radiobutton" id="16">

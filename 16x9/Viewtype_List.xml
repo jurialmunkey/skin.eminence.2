@@ -17,7 +17,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listw" />
                 <param name="id" value="550" />
-                <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31223]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31223]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31223]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31223]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31223]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [StringCompare(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31223]) | IsEmpty(Skin.String(Skin.ForcedView.actors)) ]]" />
+                <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31223]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31223]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31223]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31223]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31223]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31223]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]]" />
             </include>
             <control type="group">
                 <width>listw</width>
@@ -40,7 +40,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
                 <param name="id" value="50" />
-                <param name="condition" value="[Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31221]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [StringCompare(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31221]) | IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [StringCompare(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31221]) | IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [StringCompare(Skin.String(Skin.ForcedView.addons),$LOCALIZE[31221]) | IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(genres) + [StringCompare(Skin.String(Skin.ForcedView.genres),$LOCALIZE[31221]) | IsEmpty(Skin.String(Skin.ForcedView.genres)) ]] | [Container.Content(images) + [StringCompare(Skin.String(Skin.ForcedView.images),$LOCALIZE[31221]) | IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31221]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content() + [StringCompare(Skin.String(Skin.ForcedView.),$LOCALIZE[31221]) | IsEmpty(Skin.String(Skin.ForcedView.)) ]]" />
+                <param name="condition" value="[Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31221]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31221]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31221]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$LOCALIZE[31221]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$LOCALIZE[31221]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres)) ]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$LOCALIZE[31221]) | String.IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31221]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content() + [String.IsEqual(Skin.String(Skin.ForcedView.),$LOCALIZE[31221]) | String.IsEmpty(Skin.String(Skin.ForcedView.)) ]]" />
             </include>
             <control type="group">
                 <width>listinfow</width>
@@ -60,7 +60,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="headlinew" />
                 <param name="id" value="552" />
-                <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [StringCompare(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [StringCompare(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [StringCompare(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [StringCompare(Skin.String(Skin.ForcedView.addons),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(genres) + [StringCompare(Skin.String(Skin.ForcedView.genres),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.genres)) ]] | [Container.Content(images) + [StringCompare(Skin.String(Skin.ForcedView.images),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content() + [StringCompare(Skin.String(Skin.ForcedView.),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.)) ]] | [Container.Content(tags) + [StringCompare(Skin.String(Skin.ForcedView.tags),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.tags)) ]] | [Container.Content(years) + [StringCompare(Skin.String(Skin.ForcedView.years),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.years)) ]] | [Container.Content(countries) + [StringCompare(Skin.String(Skin.ForcedView.countries),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(studios) + [StringCompare(Skin.String(Skin.ForcedView.studios),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.studios)) ]] | [Container.Content(playlists) + [StringCompare(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]] | [Container.Content(directors) + [StringCompare(Skin.String(Skin.ForcedView.directors),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [StringCompare(Skin.String(Skin.ForcedView.files),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.files)) ]] | [Container.Content(mixed) + [StringCompare(Skin.String(Skin.ForcedView.mixed),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.mixed)) ]] | [Container.Content(unknown) + [StringCompare(Skin.String(Skin.ForcedView.unknown),$LOCALIZE[31215]) | IsEmpty(Skin.String(Skin.ForcedView.unknown)) ]]" />
+                <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(actors) + [String.IsEqual(Skin.String(Skin.ForcedView.actors),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.actors)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(genres) + [String.IsEqual(Skin.String(Skin.ForcedView.genres),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.genres)) ]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content() + [String.IsEqual(Skin.String(Skin.ForcedView.),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.)) ]] | [Container.Content(tags) + [String.IsEqual(Skin.String(Skin.ForcedView.tags),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.tags)) ]] | [Container.Content(years) + [String.IsEqual(Skin.String(Skin.ForcedView.years),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.years)) ]] | [Container.Content(countries) + [String.IsEqual(Skin.String(Skin.ForcedView.countries),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.countries)) ]] | [Container.Content(studios) + [String.IsEqual(Skin.String(Skin.ForcedView.studios),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.studios)) ]] | [Container.Content(playlists) + [String.IsEqual(Skin.String(Skin.ForcedView.playlists),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.playlists)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]] | [Container.Content(directors) + [String.IsEqual(Skin.String(Skin.ForcedView.directors),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.directors)) ]] | [Container.Content(files) + [String.IsEqual(Skin.String(Skin.ForcedView.files),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.files)) ]] | [Container.Content(mixed) + [String.IsEqual(Skin.String(Skin.ForcedView.mixed),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.mixed)) ]] | [Container.Content(unknown) + [String.IsEqual(Skin.String(Skin.ForcedView.unknown),$LOCALIZE[31215]) | String.IsEmpty(Skin.String(Skin.ForcedView.unknown)) ]]" />
             </include>
             <control type="group">
                 <width>listw</width>
@@ -82,7 +82,7 @@
                 <param name="posx" value="0" />
                 <param name="width" value="listinfow" />
                 <param name="id" value="51" />
-                <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[544]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[544]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[544]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[544]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[544]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] |[Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[544]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(songs) + [StringCompare(Skin.String(Skin.ForcedView.songs),$LOCALIZE[544]) | IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[544]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) ]]" />
+                <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[544]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[544]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[544]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[544]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[544]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] |[Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[544]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[544]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[544]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]]" />
             </include>
             <include>Object_ExtraInfo</include>
         </control>
@@ -102,7 +102,7 @@
                 <param name="width" value="listmediainfow" />
                 <param name="id" value="57" />
                 <param name="label3" value="false" />
-                <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31143]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31143]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31143]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31143]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31143]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]]" />
+                <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]]" />
             </include>
             <include>Object_ExtraInfo2</include>
         </control>
@@ -120,7 +120,7 @@
                 <param name="id" value="53" />
                 <param name="width" value="headlinew" />
                 <param name="name" value="$LOCALIZE[31192]" />
-                <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [StringCompare(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [StringCompare(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31192]) | IsEmpty(Skin.String(Skin.ForcedView.songs)) ]]" />
+                <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[31192]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]]" />
             </include>
         </control>
     </include>
@@ -136,7 +136,7 @@
                 <height>32</height>
                 <width>32</width>
                 <texture>$VAR[Image_Indicator]</texture>
-                <visible>!IsEmpty(ListItem.Overlay)</visible>
+                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
             </control>
             <control type="grouplist">
                 <usecontrolcoords>true</usecontrolcoords>
@@ -313,7 +313,7 @@
                     <include content="View_InfoList2">
                         <param name="id" value="553" />
                         <param name="name" value="$LOCALIZE[31220]" />
-                        <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31220]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31220]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31220]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31220]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31220]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31220]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) ]]" />
+                        <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]]" />
                     </include>
                 </control>
                 <include>Object_Scrollbar</include>
@@ -399,7 +399,7 @@
                     <height>32</height>
                     <width>32</width>
                     <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                 </control>
             </control>
         </control> 
@@ -414,7 +414,7 @@
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                     <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
                     <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
-                    <onback condition="!IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
+                    <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                     <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
@@ -509,7 +509,7 @@
                                     <height>32</height>
                                     <width>32</width>
                                     <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
-                                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                                 </control>
                             </control>
                         </control>
@@ -535,7 +535,7 @@
                 <param name="id" value="54" />
                 <param name="label3" value="false" />
                 <param name="label2" value="false" />
-                <param name="condition" value="[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31164]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31164]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31164]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31164]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31164]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31164]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31164]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) ]]" />
+                <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31164]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]]" />
             </include>
             <control type="group">
                 <width>659</width>
@@ -596,7 +596,7 @@
                     <font>Font-ListInfo</font>
                     <textcolor>ListLabel</textcolor>
                     <label>$VAR[Label_Label3]</label>
-                    <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                 </control>
                 <control type="label">
@@ -608,7 +608,7 @@
                     <font>Font-ListInfo</font>
                     <textcolor>ListLabel</textcolor>
                     <label>$VAR[Label_Label3]</label>
-                    <visible>IsEmpty(ListItem.Overlay) + ![Skin.HasSetting(music.showuserratings) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>String.IsEmpty(ListItem.Overlay) + ![Skin.HasSetting(music.showuserratings) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                 </control>
 
@@ -621,8 +621,8 @@
                     <align>right</align>
                     <font>Font-ListInfo</font>
                     <textcolor>00FFFFFF</textcolor>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
                 <control type="image">
                     <right>90</right>
@@ -630,8 +630,8 @@
                     <height>32</height>
                     <width>32</width>
                     <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>!Container.Content(seasons) + !Container.Content(sets) + ![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets) + ![ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
                 <control type="image">
                     <right>30</right>
@@ -639,8 +639,8 @@
                     <height>32</height>
                     <width>32</width>
                     <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
                 <control type="image">
                     <right>75</right>
@@ -648,9 +648,9 @@
                     <height>48</height>
                     <width>48</width>
                     <texture colordiffuse="ListLabel">indicator/star5.png</texture>
-                    <visible>[Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>[Skin.HasSetting(music.showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-                    <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>![ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
 
                 <!-- Rating Column -->
@@ -663,9 +663,9 @@
                     <font>Font-ListInfo</font>
                     <textcolor>ListLabel</textcolor>
                     <label>$VAR[Label_Rating]</label>
-                    <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-                    <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>![ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
             </control>
 
@@ -680,7 +680,7 @@
                     <width>32</width>
                     <textcolor>ListLabel</textcolor>
                     <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
 
                 <!-- Main Label -->
@@ -691,7 +691,7 @@
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
                 <control type="label">
                     <left>30</left>
@@ -700,7 +700,7 @@
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>IsEmpty(ListItem.Overlay) | Container.Content(seasons) | Container.Content(sets) | !$PARAM[label2]</visible>
+                    <visible>String.IsEmpty(ListItem.Overlay) | Container.Content(seasons) | Container.Content(sets) | !$PARAM[label2]</visible>
                 </control>
 
                 <!-- Label 2 -->
@@ -714,7 +714,7 @@
                     <textcolor>ListLabel</textcolor>
                     <label>$INFO[ListItem.Label2]</label>
                     <visible>!$PARAM[label3] + !Skin.HasSetting(lists.dontshowextralabels)</visible>
-                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
             </control>
         </definition>
@@ -774,7 +774,7 @@
                     <font>Font-ListInfo</font>
                     <textcolor>Selected</textcolor>
                     <label>$VAR[Label_Label3]</label>
-                    <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                 </control>
                 <control type="label">
@@ -786,7 +786,7 @@
                     <font>Font-ListInfo</font>
                     <textcolor>Selected</textcolor>
                     <label>$VAR[Label_Label3]</label>
-                    <visible>IsEmpty(ListItem.Overlay) + ![Skin.HasSetting(music.showuserratings) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>String.IsEmpty(ListItem.Overlay) + ![Skin.HasSetting(music.showuserratings) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
                 </control>
 
@@ -797,8 +797,8 @@
                     <height>32</height>
                     <width>32</width>
                     <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>!Container.Content(seasons) + !Container.Content(sets) + ![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!Container.Content(seasons) + !Container.Content(sets) + ![ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
                 <control type="image">
                     <right>30</right>
@@ -806,8 +806,8 @@
                     <height>32</height>
                     <width>32</width>
                     <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
-                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                    <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
                 <control type="image">
                     <right>75</right>
@@ -815,9 +815,9 @@
                     <height>48</height>
                     <width>48</width>
                     <texture colordiffuse="Selected">indicator/star5.png</texture>
-                    <visible>[Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>[Skin.HasSetting(music.showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-                    <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>![ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
 
                 <!-- Rating Column -->
@@ -830,9 +830,9 @@
                     <font>Font-ListInfo</font>
                     <textcolor>Selected</textcolor>
                     <label>$VAR[Label_Rating]</label>
-                    <visible>!IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) | [Skin.HasSetting(music.showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)]]</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
-                    <visible>![ListItem.IsFolder + String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
+                    <visible>![ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
             </control>
 
@@ -847,7 +847,7 @@
                     <width>32</width>
                     <textcolor>Selected</textcolor>
                     <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
 
                 <!-- Main Label -->
@@ -858,7 +858,7 @@
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
                 <control type="label">
                     <left>30</left>
@@ -867,7 +867,7 @@
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>IsEmpty(ListItem.Overlay) | Container.Content(seasons) | Container.Content(sets) | !$PARAM[label2]</visible>
+                    <visible>String.IsEmpty(ListItem.Overlay) | Container.Content(seasons) | Container.Content(sets) | !$PARAM[label2]</visible>
                 </control>
 
                 <!-- Label 2 -->
@@ -881,7 +881,7 @@
                     <textcolor>Selected</textcolor>
                     <label>$INFO[ListItem.Label2]</label>
                     <visible>!$PARAM[label3] + !Skin.HasSetting(lists.dontshowextralabels)</visible>
-                    <visible>!IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
             </control>
         </definition>
@@ -904,7 +904,7 @@
                     <ondown>$PARAM[id]</ondown>
                     <onleft>60</onleft>
                     <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
-                    <onback condition="!IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
+                    <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                     <pagecontrol>60</pagecontrol>
                     <orientation>vertical</orientation>
                     <viewtype label="$PARAM[viewlabel]">list</viewtype>

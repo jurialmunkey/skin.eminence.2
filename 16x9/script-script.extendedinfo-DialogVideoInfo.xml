@@ -88,7 +88,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(Window.Property(Director))</visible>
+                                    <visible>!String.IsEmpty(Window.Property(Director))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -112,7 +112,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(Window.Property(Writer))</visible>
+                                    <visible>!String.IsEmpty(Window.Property(Writer))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -136,7 +136,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(Window.Property(Studio))</visible>
+                                    <visible>!String.IsEmpty(Window.Property(Studio))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -160,7 +160,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(Window.Property(release_date))</visible>
+                                    <visible>!String.IsEmpty(Window.Property(release_date))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -192,7 +192,7 @@
                         <align>center</align>
                         <orientation>horizontal</orientation>
                         <control type="group">
-                            <visible>!IsEmpty(Window.Property(duration))</visible>
+                            <visible>!String.IsEmpty(Window.Property(duration))</visible>
                             <width>193.4</width>
                             <height>100%</height>
                             <control type="label">
@@ -214,7 +214,7 @@
                         <control type="group">
                             <width>223.4</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(Window.Property(mpaa))</visible>
+                            <visible>!String.IsEmpty(Window.Property(mpaa))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -234,7 +234,7 @@
                         <control type="group">
                             <width>163.4</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(Window.Property(year))</visible>
+                            <visible>!String.IsEmpty(Window.Property(year))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -254,7 +254,7 @@
                         <control type="group">
                             <width>253.4</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(Window.Property(Budget))</visible>
+                            <visible>!String.IsEmpty(Window.Property(Budget))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -274,7 +274,7 @@
                         <control type="group">
                             <width>253.4</width>
                             <height>100%</height>
-                            <visible>!IsEmpty(Window.Property(Revenue))</visible>
+                            <visible>!String.IsEmpty(Window.Property(Revenue))</visible>
                             <control type="label">
                                 <top>0</top>
                                 <height>32</height>
@@ -320,8 +320,8 @@
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
                             <include>Defs_OptionButton3</include>
-                            <visible>!IsEmpty(Window.Property(DBID)) + !Stringcompare(Window.Property(Type),tvshow)</visible>
-                            <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
+                            <visible>!String.IsEmpty(Window.Property(DBID)) + !String.IsEqual(Window.Property(Type),tvshow)</visible>
+                            <visible>String.IsEmpty(Window(home).Property(globalsearch))</visible>
                             <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
                         </control>
 
@@ -333,8 +333,8 @@
                             <onback>SetProperty(extinfo,1,home)</onback>
                             <onfocus>ClearProperty(content)</onfocus>
                             <include>Defs_OptionButton3</include>
-                            <visible>!IsEmpty(Window.Property(DBID)) + Stringcompare(Window.Property(Type),tvshow)</visible>
-                            <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
+                            <visible>!String.IsEmpty(Window.Property(DBID)) + String.IsEqual(Window.Property(Type),tvshow)</visible>
+                            <visible>String.IsEmpty(Window(home).Property(globalsearch))</visible>
                             <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
                         </control>
                         
@@ -348,7 +348,7 @@
                             <include>Defs_OptionButton3</include>
                             <onclick>SetProperty(content,1000)</onclick>
                             <onclick>SetFocus(1000)</onclick>
-                            <enable>IntegerGreaterThan(Container(1000).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(1000).NumItems,0)</enable>
                         </control>
                         
 
@@ -361,7 +361,7 @@
                             <include>Defs_OptionButton3</include>
                             <onclick>SetProperty(content,150)</onclick>
                             <onclick>SetFocus(150)</onclick>
-                            <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(150).NumItems,0)</enable>
                         </control>
                         
 
@@ -374,7 +374,7 @@
                             <include>Defs_OptionButton3</include>
                             <onclick>SetProperty(content,350)</onclick>
                             <onclick>SetFocus(350)</onclick>
-                            <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(350).NumItems,0)</enable>
                         </control>
                         
 
@@ -387,7 +387,7 @@
                             <include>Defs_OptionButton3</include>
                             <onclick>SetProperty(content,750)</onclick>
                             <onclick>SetFocus(750)</onclick>
-                            <enable>IntegerGreaterThan(Container(750).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(750).NumItems,0)</enable>
                         </control>
                         
 
@@ -400,7 +400,7 @@
                             <include>Defs_OptionButton3</include>
                             <onclick>SetProperty(content,850)</onclick>
                             <onclick>SetFocus(850)</onclick>
-                            <enable>IntegerGreaterThan(Container(850).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(850).NumItems,0)</enable>
                         </control>
                         
 
@@ -413,7 +413,7 @@
                             <include>Defs_OptionButton3</include>
                             <onclick>SetProperty(content,950)</onclick>
                             <onclick>SetFocus(950)</onclick>
-                            <enable>IntegerGreaterThan(Container(950).NumItems,0)</enable>
+                            <enable>Integer.IsGreater(Container(950).NumItems,0)</enable>
                         </control>
                         
 

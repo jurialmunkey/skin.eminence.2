@@ -11,13 +11,13 @@
     <onload>ClearProperty(extinfo,home)</onload>
     <onload>SetProperty(HubReturn,Home)</onload>
     <onunload>SetProperty(HubReturn,Home)</onunload>
-    <onload condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onload>
-    <onload condition="IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onload>
-    <onload condition="!IsEmpty(Skin.String(home.headericon))">SetProperty(Header.Icon,$INFO[Skin.String(home.headericon)])</onload>
-    <onload condition="!IsEmpty(Skin.String(home.headertext))">SetProperty(Header.Label,$INFO[Skin.String(home.headertext)])</onload>
+    <onload condition="String.IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onload>
+    <onload condition="String.IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onload>
+    <onload condition="!String.IsEmpty(Skin.String(home.headericon))">SetProperty(Header.Icon,$INFO[Skin.String(home.headericon)])</onload>
+    <onload condition="!String.IsEmpty(Skin.String(home.headertext))">SetProperty(Header.Label,$INFO[Skin.String(home.headertext)])</onload>
     <onunload>SetProperty(Header.Label,$INFO[Container(9000).ListItem.Label],home)</onunload>
     <onunload>SetProperty(Header.Icon,$INFO[Container(9000).ListItem.Icon],home)</onunload>
-    <onunload condition="!IsEmpty(Container(9000).ListItem.Property(TileColor))">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
+    <onunload condition="!String.IsEmpty(Container(9000).ListItem.Property(TileColor))">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
     <controls>
 
         <include>Furniture_Background</include>
@@ -46,8 +46,8 @@
         <include condition="Skin.HasSetting(home.hidewidgetbox)">Home_Widget_Hidden</include>
 
         <control type="group">
-            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_TextOnly_Animate</include>
-            <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Icons_Animate</include>
+            <include condition="String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Home_TextOnly_Animate</include>
+            <include condition="!String.IsEqual(Skin.String(home.style),$LOCALIZE[31182])">Home_Icons_Animate</include>
 
             <include condition="!Skin.HasSetting(home.hidewidgetbox)">Home_Widget</include>
 

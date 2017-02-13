@@ -55,7 +55,7 @@
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
                             <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[ListItem.Album]$INFO[ListItem.Year, (,)][/COLOR][/UPPERCASE]</label>
-                            <visible>!IsEmpty(ListItem.Album)</visible>
+                            <visible>!String.IsEmpty(ListItem.Album)</visible>
                         </control>
                         <control type="textbox">
                             <top>pad</top>
@@ -76,7 +76,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Genre)</visible>
+                                    <visible>!String.IsEmpty(ListItem.Genre)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <height>36</height>
@@ -100,7 +100,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Album_Type))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Album_Type))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -124,7 +124,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Album_Label))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -148,7 +148,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Album_Mood))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Album_Mood))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -172,7 +172,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Album_Style)) + Container.Content(albums)</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Album_Style)) + Container.Content(albums)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -196,7 +196,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Album_Theme))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Album_Theme))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -218,7 +218,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Artist_Born))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -240,7 +240,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Artist_Formed))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -262,7 +262,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Artist_Mood))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -284,7 +284,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Artist_Style)) + !Container.Content(albums)</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Artist_Style)) + !Container.Content(albums)</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -306,7 +306,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Artist_Instrument))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Artist_Instrument))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -328,7 +328,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Artist_Died))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -350,7 +350,7 @@
                                 <control type="group">
                                     <height>36</height>
                                     <width>100%</width>
-                                    <visible>!IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
                                     <control type="label">
                                         <width>200</width>
                                         <font>Font-ListInfo-Small</font>
@@ -381,8 +381,8 @@
                         <itemgap>pad</itemgap>
                         <usecontrolcoords>true</usecontrolcoords>
                         <orientation>horizontal</orientation>
-                        <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
-                        <onup condition="!StringCompare(Control.GetLabel(5),$LOCALIZE[207])">9601</onup>
+                        <onup condition="String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+                        <onup condition="!String.IsEqual(Control.GetLabel(5),$LOCALIZE[207])">9601</onup>
 
                         <!-- Youtube Button -->
                         <control type="button" id="9001">

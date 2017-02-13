@@ -14,10 +14,10 @@
                 <top>30</top>
                 <left>bigiconpanelpadw</left>
                 <right>15</right>
-                <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[538]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]]</visible>
+                <visible>[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[538]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[538]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[538]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[538]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[538]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]]</visible>
                 <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
                 <ondown>61</ondown>
-                <onback condition="!IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
+                <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                 <onleft>52</onleft>
                 <onright>52</onright>
                 <focusposition>0</focusposition>
@@ -34,7 +34,7 @@
                         <height>bigiconh</height>
 
                         <control type="image">
-                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
@@ -44,7 +44,7 @@
                             <height>32</height>
                             <width>32</width>
                             <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </control>
                 </itemlayout>
@@ -57,7 +57,7 @@
                         <height>bigiconh</height>
 
                         <control type="image">
-                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
@@ -67,7 +67,7 @@
                             <height>32</height>
                             <width>32</width>
                             <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </control>
                 </focusedlayout>
@@ -81,7 +81,7 @@
                     <texture colordiffuse="ff181818">common/white.png</texture>
                 </control>
                 <control type="image">
-                    <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                    <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                     <texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
                     <fadetime>300</fadetime>
@@ -100,7 +100,7 @@
                     <height>32</height>
                     <width>32</width>
                     <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                 </control>
             </control>
             <control type="group">
@@ -173,10 +173,10 @@
                 <top>10</top>
                 <centerleft>50%</centerleft>
                 <width>1722</width>
-                <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(musicvideos) + [StringCompare(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31230]) | IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]]</visible>
+                <visible>[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31230]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31230]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31230]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31230]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(musicvideos) + [String.IsEqual(Skin.String(Skin.ForcedView.musicvideos),$LOCALIZE[31230]) | String.IsEmpty(Skin.String(Skin.ForcedView.musicvideos)) ]]</visible>
                 <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
                 <ondown>61</ondown>
-                <onback condition="!IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
+                <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                 <onleft>525</onleft>
                 <onright>525</onright>
                 <focusposition>2</focusposition>
@@ -194,7 +194,7 @@
                         <height>456.6</height>
 
                         <control type="image">
-                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
@@ -204,7 +204,7 @@
                             <height>32</height>
                             <width>32</width>
                             <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                         </control>
                     </control>
                 </itemlayout>
@@ -217,7 +217,7 @@
                         <height>456.6</height>
 
                         <control type="image">
-                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !stringcompare(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
@@ -227,7 +227,7 @@
                             <height>32</height>
                             <width>32</width>
                             <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                         </control>
 
                         <control type="image">
@@ -317,9 +317,9 @@
                         <viewtype label="31163">bigwide</viewtype>
                         <orientation>horizontal</orientation>
                         <onup condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onup>
-                        <onback condition="!IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
+                        <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                         <scrolltime tween="quadratic">400</scrolltime>
-                        <visible>[Container.Content(movies) + [StringCompare(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [StringCompare(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [StringCompare(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [StringCompare(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(videos) + [StringCompare(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [StringCompare(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(episodes) + [StringCompare(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31163]) | IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]]</visible>
+                        <visible>[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31163]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31163]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31163]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31163]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31163]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31163]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31163]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]]</visible>
                         <itemlayout width="1280" height="720">
                             <control type="image">
                                 <width>100%</width>

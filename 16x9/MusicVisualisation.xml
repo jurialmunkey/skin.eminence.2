@@ -6,7 +6,7 @@
 	<controls>
 
 		<control type="visualisation" id="2">
-            <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)]] | [Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)] + IsEmpty(Player.Art(fanart))]</visible>
+            <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)]] | [Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)] + String.IsEmpty(Player.Art(fanart))]</visible>
             <description>visualisation</description>
 
         </control>
@@ -16,7 +16,7 @@
             <texture background="true">$INFO[Player.Art(fanart)]</texture>
             <visible>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
             <visible>Skin.HasSetting(musicvis.fanartfallback)</visible>
-            <visible>!IsEmpty(Player.Art(fanart))</visible>
+            <visible>!String.IsEmpty(Player.Art(fanart))</visible>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>

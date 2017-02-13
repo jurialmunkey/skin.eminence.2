@@ -40,7 +40,7 @@
                         <top>0</top>
                         <height>100%</height>
                         <label>$INFO[ListItem.Label]</label>
-                        <visible>stringcompare(Window.Property(groupname),powermenu)</visible>
+                        <visible>String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
                     <control type="label">
                         <left>90</left>
@@ -48,7 +48,7 @@
                         <top>0</top>
                         <height>100%</height>
                         <label>$INFO[ListItem.Label]</label>
-                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                        <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
                     <control type="image">
                         <left>10</left>
@@ -58,7 +58,7 @@
                         <align>right</align>
                         <font>Font-ListInfo</font>
                         <aspectratio align="left">keep</aspectratio>
-                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                        <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                         <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
                     </control>
                 </itemlayout>
@@ -76,7 +76,7 @@
                         <height>100%</height>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>Selected</textcolor>
-                        <visible>stringcompare(Window.Property(groupname),powermenu)</visible>
+                        <visible>String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
                     <control type="label">
                         <left>90</left>
@@ -85,7 +85,7 @@
                         <height>100%</height>
                         <label>$INFO[ListItem.Label]</label>
                         <textcolor>Selected</textcolor>
-                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                        <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
                     <control type="image">
                         <left>10</left>
@@ -96,7 +96,7 @@
                         <font>Font-ListInfo</font>
                         <aspectratio align="left">keep</aspectratio>
                         <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                        <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
                 </focusedlayout>
             </control>
@@ -144,7 +144,7 @@
                     <label>31075</label>
                     <label2>$INFO[Container(211).ListItem.Icon]</label2>
                     <include>Defs_OptionButton</include>
-                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                    <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                 </control>
 
                 <control type="button" id="312" description="Widget">
@@ -152,21 +152,21 @@
                     <label>Widget</label>
                     <label2>$VAR[Label_ShortcutsWidget]</label2>
                     <include>Defs_OptionButton</include>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                 </control>
 
                 <control type="radiobutton" id="9702" description="PosterWidget">
                     <label>31150</label>
                     <width>100%</width>
                     <radioposx>985</radioposx>
-                    <selected>!IsEmpty(Container(211).ListItem.Property(PosterWidget))</selected>
+                    <selected>!String.IsEmpty(Container(211).ListItem.Property(PosterWidget))</selected>
                     <onclick>SetProperty(customProperty,PosterWidget)</onclick>
-                    <onclick condition="IsEmpty(Container(211).ListItem.Property(PosterWidget))">SetProperty(customValue,true)</onclick>
-                    <onclick condition="!IsEmpty(Container(211).ListItem.Property(PosterWidget))">ClearProperty(customValue)</onclick>
+                    <onclick condition="String.IsEmpty(Container(211).ListItem.Property(PosterWidget))">SetProperty(customValue,true)</onclick>
+                    <onclick condition="!String.IsEmpty(Container(211).ListItem.Property(PosterWidget))">ClearProperty(customValue)</onclick>
                     <onclick>SendClick(404)</onclick>
                     <include>Defs_OptionButton</include>
-                    <visible>stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166])</visible>
-                    <!-- <visible>!IsEmpty(Container(211).ListItem.Property(widget))</visible> -->
+                    <visible>String.IsEqual(Skin.String(home.widgetposters),$LOCALIZE[31166])</visible>
+                    <!-- <visible>!String.IsEmpty(Container(211).ListItem.Property(widget))</visible> -->
                 </control>
 
                 <include content="Defs_Shortcuts_SetHub">
@@ -226,7 +226,7 @@
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
                     <label>31074</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <include>Defs_OptionButton</include>
                 </control>
 
@@ -234,7 +234,7 @@
                     <width>100%</width>
                     <label>31187</label>
                     <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <include>Defs_OptionButton</include>
                 </control>
 
@@ -276,18 +276,18 @@
                 <onup>Control.Move(211,-1)</onup>
                 <ondown>Control.Move(211,1)</ondown>
                 <orientation>horizontal</orientation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,0)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,1)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,2)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,3)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,4)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,5)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,6)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,7)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,8)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,9)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,10)">Conditional</animation>
-                <animation effect="slide" end="0,72" condition="IntegerGreaterThan(Container(211).Position,11)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,0)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,1)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,2)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,3)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,4)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,5)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,6)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,7)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,8)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,9)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,10)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,11)">Conditional</animation>
                 <control type="button" id="302" description="Delete">
                     <width>32</width>
                     <height>32</height>
