@@ -726,8 +726,8 @@
 
         <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
         <value condition="!IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>
-        <value condition="Pvr.IsRecording">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19158]...[/COLOR]$INFO[Pvr.NowRecordingTitle,  ,]$INFO[Pvr.NowRecordingChannel,  ,]</value>
-        <value condition="Pvr.HasTimer">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19157]...[/COLOR]$INFO[Pvr.NextRecordingTitle,  ,]$INFO[Pvr.NextRecordingDateTime,  ,]$INFO[Pvr.NextRecordingChannel,  ,]</value>
+        <value condition="Pvr.IsRecording">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19158][/COLOR][CR]$INFO[Pvr.NextRecordingTitle]$INFO[Pvr.NowRecordingChannel,  ,]</value>
+        <value condition="Pvr.HasTimer">[COLOR=$VAR[HighlightColor2]]$LOCALIZE[19157][/COLOR][CR]$INFO[Pvr.NextRecordingTitle]$INFO[Pvr.NextRecordingDateTime,  ,]$INFO[Pvr.NextRecordingChannel,  ,]</value>
         <value>$VAR[Furniture_Counter_Movies]$VAR[Furniture_Counter_Episodes]$VAR[Furniture_Counter_Songs]$VAR[Furniture_Counter_Channels]</value>
     </variable>
     <variable name="Furniture_TopBar_Tile_Text">
