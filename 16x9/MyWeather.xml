@@ -10,10 +10,10 @@
         <!-- Hidden button -->
         <control type="button" id="50">
             <onclick condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onclick>
-            <onup condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onup>
-            <ondown condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</ondown>
-            <onleft condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onleft>
-            <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
+            <onup condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onup>
+            <ondown condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</ondown>
+            <onleft condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onleft>
+            <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
         </control>
 
         <!-- Background -->
@@ -144,6 +144,18 @@
                 <control type="button" id="9003">
                     <label>31174</label>
                     <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <!-- Weather Settings -->
+                <control type="button" id="9004">
+                    <label>10140</label>
+                    <onclick>Addon.OpenSettings($INFO[Weather.Plugin])</onclick>
+                    <include>Defs_OptionButton2</include>
+                </control>
+                <!-- Settings -->
+                <control type="button" id="9005">
+                    <label>5</label>
+                    <onclick>ActivateWindow(ServiceSettings,weather)</onclick>
                     <include>Defs_OptionButton2</include>
                 </control>
             </control>

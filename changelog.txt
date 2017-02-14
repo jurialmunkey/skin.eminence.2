@@ -1,5 +1,8 @@
 [B]2.5.34[/B]
 Change String and Integer conditions to Krypton standard.
+Fix access to weather menu
+Add options to edit weather settings from weather menu
+Fix missing globaloverlay in DialogAddonSettings
 
 [B]2.5.33[/B]
 Add a hackish workaround for plugins that don't use return property properly.

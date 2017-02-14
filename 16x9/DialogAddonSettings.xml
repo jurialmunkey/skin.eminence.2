@@ -3,6 +3,7 @@
     <!-- addonsettings -->
     <defaultcontrol always="true">9</defaultcontrol>
     <controls>
+        <include>GlobalOverlay</include>
         <control type="group">
             <top>dialogtop</top>
             <bottom>sidepad</bottom>
