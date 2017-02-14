@@ -1,0 +1,731 @@
+# XBMC Media Center language file
+# Addon Name: Eminence 2
+# Addon id: skin.eminence.2
+# Addon Provider: jurialmunkey
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Main\n"
+"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-10-14 08:53+0200\n"
+"Last-Translator: XBMC Translation Team\n"
+"Language-Team: Wazzu <egrueda@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.9\n"
+
+# Misc labels
+msgctxt "#31000"
+msgid "Item"
+msgstr "Item"
+
+msgctxt "#31001"
+msgid "Items"
+msgstr "Items"
+
+msgctxt "#31002"
+msgid "Tag"
+msgstr "Etiqueta"
+
+msgctxt "#31003"
+msgid "Next"
+msgstr "Siguiente"
+
+msgctxt "#31004"
+msgid "Show shadows on panels"
+msgstr "Mostrar sombra en paneles"
+
+msgctxt "#31005"
+msgid "Video OSD"
+msgstr "OSD Vídeo"
+
+msgctxt "#31006"
+msgid "Show plot when pressing info"
+msgstr "Ver argumento al pulsar info"
+
+msgctxt "#31007"
+msgid "Show media flags"
+msgstr ""
+
+msgctxt "#31008"
+msgid "Show plot overlay in video library after delay"
+msgstr ""
+
+msgctxt "#31009"
+msgid "Open playlist"
+msgstr ""
+
+msgctxt "#31010"
+msgid "Save playlist"
+msgstr ""
+
+msgctxt "#31011"
+msgid "Close playlist"
+msgstr ""
+
+msgctxt "#31012"
+msgid "Current playlist"
+msgstr ""
+
+msgctxt "#31013"
+msgid "Muted"
+msgstr ""
+
+msgctxt "#31014"
+msgid "Show header"
+msgstr ""
+
+msgctxt "#31015"
+msgid "Live TV"
+msgstr "Ver TV"
+
+msgctxt "#31016"
+msgid "Show widget information"
+msgstr ""
+
+msgctxt "#31017"
+msgid "Votes"
+msgstr "Votos"
+
+msgctxt "#31018"
+msgid "Increase"
+msgstr "Aumentar"
+
+msgctxt "#31019"
+msgid "Decrease"
+msgstr "Reducir"
+
+msgctxt "#31020"
+msgid "Background"
+msgstr "Fondo"
+
+msgctxt "#31021"
+msgid "Show fanart"
+msgstr "Ver fanart"
+
+msgctxt "#31027"
+msgid "Show background video"
+msgstr "Ver vídeo de fondo"
+
+msgctxt "#31028"
+msgid "Show background visualisation"
+msgstr ""
+
+msgctxt "#31031"
+msgid "Recent movies"
+msgstr "Películas recientes"
+
+msgctxt "#31032"
+msgid "Recommended movies"
+msgstr "Películas recomendadas"
+
+msgctxt "#31034"
+msgid "Enable Artist Slideshow"
+msgstr ""
+
+msgctxt "#31035"
+msgid "Recent episodes"
+msgstr "Episodios recientes"
+
+msgctxt "#31036"
+msgid "Recommended episodes"
+msgstr "Episodios recomendados"
+
+msgctxt "#31038"
+msgid "Recent albums"
+msgstr "Albumes recientes"
+
+msgctxt "#31039"
+msgid "Recommended albums"
+msgstr "Albumes recomendados"
+
+msgctxt "#31043"
+msgid "Extra art"
+msgstr ""
+
+msgctxt "#31044"
+msgid "Local subtitle found!"
+msgstr ""
+
+msgctxt "#31045"
+msgid "Supplied by"
+msgstr ""
+
+msgctxt "#31046"
+msgid "Currently"
+msgstr ""
+
+msgctxt "#31047"
+msgid "Visualisation Presets"
+msgstr ""
+
+msgctxt "#31048"
+msgid "Playlist Options"
+msgstr ""
+
+msgctxt "#31049"
+msgid "Customise home menu"
+msgstr "Personalizar menú inicio"
+
+msgctxt "#31052"
+msgid "Rated"
+msgstr ""
+
+msgctxt "#31054"
+msgid "Random movies"
+msgstr ""
+
+msgctxt "#31055"
+msgid "Random episodes"
+msgstr ""
+
+msgctxt "#31056"
+msgid "Random albums"
+msgstr ""
+
+msgctxt "#31057"
+msgid "Kiosk mode"
+msgstr "Modo kiosko"
+
+msgctxt "#31059"
+msgid "Memory Used:"
+msgstr "Memoria usada"
+
+msgctxt "#31063"
+msgid "Addons"
+msgstr "Addons"
+
+msgctxt "#31064"
+msgid "Custom background image"
+msgstr ""
+
+msgctxt "#31065"
+msgid "Hide 'Mouse' warning"
+msgstr ""
+
+msgctxt "#31066"
+msgid "Cinema Exp."
+msgstr ""
+
+msgctxt "#31067"
+msgid "Pages"
+msgstr "Páginas"
+
+msgctxt "#31068"
+msgid "View Options"
+msgstr ""
+
+msgctxt "#31069"
+msgid "Context Menu"
+msgstr "Menú contextual"
+
+msgctxt "#31070"
+msgid "Info"
+msgstr "Info"
+
+msgctxt "#31071"
+msgid "Finishes at"
+msgstr "Termina a las"
+
+msgctxt "#31072"
+msgid "Playing"
+msgstr "Reproduciendo"
+
+msgctxt "#31073"
+msgid "Categories"
+msgstr "Categorías"
+
+msgctxt "#31074"
+msgid "Submenu"
+msgstr ""
+
+msgctxt "#31075"
+msgid "Icon"
+msgstr "Icono"
+
+msgctxt "#31076"
+msgid "Weather Fanart"
+msgstr ""
+
+msgctxt "#31077"
+msgid "Trending Movies"
+msgstr ""
+
+msgctxt "#31078"
+msgid "In Cinemas"
+msgstr ""
+
+msgctxt "#31079"
+msgid "Upcoming Films"
+msgstr ""
+
+msgctxt "#31080"
+msgid "Popular Movies"
+msgstr ""
+
+msgctxt "#31081"
+msgid "Top Rated Movies"
+msgstr ""
+
+msgctxt "#31082"
+msgid "Popular Shows"
+msgstr ""
+
+msgctxt "#31083"
+msgid "Top Rated Shows"
+msgstr ""
+
+msgctxt "#31084"
+msgid "On Air Shows"
+msgstr ""
+
+msgctxt "#31085"
+msgid "Airing Today"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Custom 1"
+msgstr ""
+
+msgctxt "#31087"
+msgid "Custom 2"
+msgstr ""
+
+msgctxt "#31088"
+msgid "Custom 3"
+msgstr ""
+
+msgctxt "#31089"
+msgid "Custom 4"
+msgstr ""
+
+msgctxt "#31090"
+msgid "Content Loading"
+msgstr ""
+
+msgctxt "#31091"
+msgid "Trending Shows"
+msgstr ""
+
+msgctxt "#31092"
+msgid "No information available"
+msgstr "No hay información disponible"
+
+msgctxt "#31093"
+msgid "Movie Hub"
+msgstr ""
+
+msgctxt "#31094"
+msgid "TV Hub"
+msgstr ""
+
+msgctxt "#31095"
+msgid "Spotlight"
+msgstr ""
+
+msgctxt "#31096"
+msgid "Hub items"
+msgstr ""
+
+msgctxt "#31097"
+msgid "Hub widget"
+msgstr ""
+
+msgctxt "#31098"
+msgid "Artwork"
+msgstr ""
+
+msgctxt "#31099"
+msgid "Codec"
+msgstr ""
+
+msgctxt "#31100"
+msgid "Recently Added"
+msgstr "Últimos añadidos"
+
+msgctxt "#31101"
+msgid "Recently Played"
+msgstr "Vistos últimamente"
+
+msgctxt "#31102"
+msgid "Watch Random"
+msgstr "Ver aleatorio"
+
+msgctxt "#31103"
+msgid "Delete Settings Shortcut"
+msgstr ""
+
+msgctxt "#31104"
+msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
+msgstr ""
+
+msgctxt "#31105"
+msgid "Extra Info"
+msgstr ""
+
+msgctxt "#31106"
+msgid "3D Mode"
+msgstr ""
+
+msgctxt "#31107"
+msgid "Similar"
+msgstr ""
+
+msgctxt "#31108"
+msgid "Youtube"
+msgstr ""
+
+msgctxt "#31109"
+msgid "provided by themoviedb.org"
+msgstr ""
+
+msgctxt "#31110"
+msgid "Extras"
+msgstr ""
+
+msgctxt "#31111"
+msgid "Choose primary highlight color"
+msgstr ""
+
+msgctxt "#31112"
+msgid "Choose secondary highlight color"
+msgstr ""
+
+msgctxt "#31113"
+msgid "Reset colors to defaults"
+msgstr ""
+
+msgctxt "#31114"
+msgid "Install weather fanart"
+msgstr ""
+
+msgctxt "#31115"
+msgid "Show weather with clock"
+msgstr "Mostrar el tiempo con reloj"
+
+msgctxt "#31116"
+msgid "Animate fanart"
+msgstr "Fanart animado"
+
+msgctxt "#31117"
+msgid "mins"
+msgstr "mins"
+
+msgctxt "#31118"
+msgid "Animate artist slideshow"
+msgstr ""
+
+msgctxt "#31119"
+msgid "Show visualisation behind artist slideshow"
+msgstr ""
+
+msgctxt "#31120"
+msgid "Show artist slideshow"
+msgstr ""
+
+msgctxt "#31121"
+msgid "Music OSD"
+msgstr "OSD Música"
+
+msgctxt "#31122"
+msgid "Match header tile with highlight color"
+msgstr ""
+
+msgctxt "#31123"
+msgid "Hub"
+msgstr ""
+
+msgctxt "#31124"
+msgid "Similar movies"
+msgstr "Películas similares"
+
+msgctxt "#31125"
+msgid "Similar to"
+msgstr "Similares a"
+
+msgctxt "#31126"
+msgid "Colors"
+msgstr "Colores"
+
+msgctxt "#31127"
+msgid "Header"
+msgstr "Cabecera"
+
+msgctxt "#31128"
+msgid "Color"
+msgstr "Color"
+
+msgctxt "#31129"
+msgid "Enable individual tile colors in home customisation"
+msgstr ""
+
+msgctxt "#31130"
+msgid "items found"
+msgstr "items encontrados"
+
+msgctxt "#31131"
+msgid "Search Options"
+msgstr ""
+
+msgctxt "#31132"
+msgid "by Title"
+msgstr "por Título"
+
+msgctxt "#31133"
+msgid "by Genre"
+msgstr "por Género"
+
+msgctxt "#31134"
+msgid "by Actor"
+msgstr "por Actor"
+
+msgctxt "#31135"
+msgid "by Director"
+msgstr "por Director"
+
+msgctxt "#31136"
+msgid "by Studio"
+msgstr "por Estudio"
+
+msgctxt "#31137"
+msgid "Panel list"
+msgstr ""
+
+msgctxt "#31138"
+msgid "Show clock"
+msgstr "Mostrar reloj"
+
+msgctxt "#31139"
+msgid "Hubs"
+msgstr ""
+
+msgctxt "#31140"
+msgid "Show tile colour on unfocused tiles"
+msgstr ""
+
+msgctxt "#31141"
+msgid "Info icons"
+msgstr ""
+
+msgctxt "#31142"
+msgid "Big list info"
+msgstr ""
+
+msgctxt "#31143"
+msgid "Media Info 2"
+msgstr ""
+
+msgctxt "#31144"
+msgid "Player Controls"
+msgstr ""
+
+msgctxt "#31145"
+msgid "Extended Info"
+msgstr ""
+
+msgctxt "#31146"
+msgid "Fanart fallback image"
+msgstr ""
+
+msgctxt "#31147"
+msgid "Fallback widget"
+msgstr ""
+
+msgctxt "#31148"
+msgid "Media Info 3"
+msgstr ""
+
+msgctxt "#31149"
+msgid "Next Aired"
+msgstr ""
+
+msgctxt "#31150"
+msgid "Show widget posters"
+msgstr ""
+
+msgctxt "#31151"
+msgid "Home tile icon"
+msgstr ""
+
+msgctxt "#31152"
+msgid "Home tile text"
+msgstr ""
+
+msgctxt "#31153"
+msgid "Always"
+msgstr "Siempre"
+
+msgctxt "#31154"
+msgid "On Up"
+msgstr ""
+
+msgctxt "#31155"
+msgid "Never"
+msgstr "Nunca"
+
+msgctxt "#31156"
+msgid "Show widget discart"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Home header text"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Media Center"
+msgstr ""
+
+msgctxt "#31159"
+msgid "Background overlay image"
+msgstr ""
+
+msgctxt "#31160"
+msgid "Busy spinner"
+msgstr ""
+
+msgctxt "#31161"
+msgid "Backup skin settings"
+msgstr "Hacer copia de los ajustes del skin"
+
+msgctxt "#31162"
+msgid "Restore skin settings from file"
+msgstr "Restaurar ajustes del skin desde fichero"
+
+msgctxt "#31163"
+msgid "Gallery"
+msgstr "Galería"
+
+msgctxt "#31164"
+msgid "Fanart list"
+msgstr ""
+
+msgctxt "#31165"
+msgid "Show sorting and info line headers"
+msgstr ""
+
+msgctxt "#31166"
+msgid "Individually set in customisation dialog"
+msgstr ""
+
+msgctxt "#31167"
+msgid "Show unwatched count in header"
+msgstr ""
+
+msgctxt "#31168"
+msgid "Now / Next"
+msgstr "Ahora / Siguiente"
+
+msgctxt "#31169"
+msgid "Reset skin settings to defaults  (WARNING - This will override all skin settings)"
+msgstr "Restaurar ajustes predeterminados del skin (AVISO: esto sobrescribirá todos los ajustes del skin)"
+
+msgctxt "#31170"
+msgid "Backup / Restore"
+msgstr "Backup / Restaurar"
+
+msgctxt "#31171"
+msgid "Reload skin"
+msgstr "Recargar skin"
+
+msgctxt "#31172"
+msgid "Transparent home bar"
+msgstr ""
+
+msgctxt "#31173"
+msgid "Home bar style"
+msgstr ""
+
+msgctxt "#31174"
+msgid "Weather icons"
+msgstr "Iconos del tiempo"
+
+msgctxt "#31175"
+msgid "Customise shutdown menu"
+msgstr "Personalizar menú apagado"
+
+msgctxt "#31176"
+msgid "Genre icons"
+msgstr ""
+
+msgctxt "#31180"
+msgid "Default"
+msgstr "Por defecto"
+
+msgctxt "#31181"
+msgid "Text in tiles"
+msgstr ""
+
+msgctxt "#31182"
+msgid "Text only"
+msgstr ""
+
+msgctxt "#31183"
+msgid "Customise shutdown menu"
+msgstr "Personalizar menú apagado"
+
+msgctxt "#31184"
+msgid "Startup video or playlist"
+msgstr ""
+
+msgctxt "#31185"
+msgid "Label"
+msgstr "Etiqueta"
+
+msgctxt "#31186"
+msgid "Action"
+msgstr "Acción"
+
+msgctxt "#31187"
+msgid "Background"
+msgstr "Fondo"
+
+msgctxt "#31188"
+msgid "None (show user background)"
+msgstr ""
+
+msgctxt "#31189"
+msgid "None"
+msgstr "Ninguno"
+
+msgctxt "#31190"
+msgid "Next Episode"
+msgstr "Siguiente episodio"
+
+msgctxt "#31191"
+msgid "Last Episode"
+msgstr "Episodio anterior"
+
+msgctxt "#31192"
+msgid "Info List"
+msgstr ""
+
+msgctxt "#31193"
+msgid "Box Office"
+msgstr ""
+
+msgctxt "#31194"
+msgid "Show plot for hub widgets"
+msgstr ""
+
+msgctxt "#31195"
+msgid "Allow widget reloading"
+msgstr ""
+
+msgctxt "#31196"
+msgid "Use padding around panel edges"
+msgstr ""
+
+msgctxt "#31197"
+msgid "Panels"
+msgstr "Paneles"
+
+msgctxt "#31198"
+msgid "Manage Dependencies"
+msgstr ""
+
+msgctxt "#31199"
+msgid "Showcase"
+msgstr ""
