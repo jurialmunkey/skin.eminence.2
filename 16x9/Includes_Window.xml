@@ -1558,7 +1558,6 @@
     <!-- Music OSD SeekBar -->
     <include name="Window_Seekbar_Music">
         <control type="group">
-            <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
             <control type="group">
                 <animation type="Visible">
                     <effect type="fade" start="0" end="100" time="200" />
@@ -1566,11 +1565,11 @@
                 <animation type="Hidden">
                     <effect type="fade" end="0" start="100" time="200" />
                 </animation>
-                <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd)</visible>
+                <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
                 <include>Furniture_TopBar_Clock</include>
             </control>
             <control type="group">
-                <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd)</visible>
+                <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
                 <include>Defs_ViewBackground</include>
@@ -1598,12 +1597,12 @@
                         <right>0</right>
                         <animation effect="slide" start="0" end="0,-64" time="200" condition="!Window.IsVisible(script-cu-lrclyrics-main.xml) + Window.IsVisible(musicosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">Conditional</animation>
                         <animation effect="slide" start="0" end="0,-64" time="0" condition="!Window.IsVisible(script-cu-lrclyrics-main.xml) + Window.IsVisible(musicosd) + ![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">Conditional</animation>
-                        <animation effect="slide" start="0" end="0,-400" time="200" condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation>
                         <control type="grouplist">
                             <top>400</top>
                             <left>40</left>
                             <bottom>10</bottom>
                             <right>0</right>
+                            <animation effect="slide" start="0" end="0,-400" time="200" condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation>
                             <control type="label">
                                 <aligny>top</aligny>
                                 <height>105</height>
@@ -1654,54 +1653,57 @@
                                     <label>$INFO[MusicPlayer.Album]</label>
                                 </control>
                             </control>
+                        </control>
+                        <control type="group">
+                            <left>40</left>
+                            <right>0</right>
+                            <bottom>10</bottom>
+                            <height>60</height>
+                            <control type="label">
+                                <aligny>center</aligny>
+                                <left>0</left>
+                                <align>left</align>
+                                <textcolor>HomeSubLabel</textcolor>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[Player.Time]</label>
+                                <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <aligny>center</aligny>
+                                <right>0</right>
+                                <align>right</align>
+                                <textcolor>HomeSubLabel</textcolor>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[Player.Duration]</label>
+                                <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
+                            </control>
                             <control type="group">
-                                <height>60</height>
-                                <control type="label">
-                                    <aligny>center</aligny>
-                                    <left>0</left>
-                                    <align>left</align>
-                                    <textcolor>HomeSubLabel</textcolor>
-                                    <font>Font-ListInfo-Small-Bold</font>
-                                    <label>$INFO[Player.Time]</label>
-                                    <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
-                                </control>
-                                <control type="label">
-                                    <aligny>center</aligny>
-                                    <right>0</right>
-                                    <align>right</align>
-                                    <textcolor>HomeSubLabel</textcolor>
-                                    <font>Font-ListInfo-Small-Bold</font>
-                                    <label>$INFO[Player.Duration]</label>
-                                    <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
-                                </control>
-                                <control type="group">
+                                <height>12</height>
+                                <centertop>53%</centertop>
+                                <left>100</left>
+                                <right>100</right>
+                                <control type="progress" description="cache">
+                                    <width>100%</width>
                                     <height>12</height>
-                                    <centertop>53%</centertop>
-                                    <left>100</left>
-                                    <right>100</right>
-                                    <control type="progress" description="cache">
-                                        <width>100%</width>
-                                        <height>12</height>
-                                        <info>Player.ProgressCache</info>
-                                        <visible>true</visible>
-                                        <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
-                                        <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
-                                        <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
-                                        <righttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</righttexture>
-                                        <visible>!Player.Seeking</visible>
-                                    </control>
-                                    <control type="progress" id="23">
-                                        <width>100%</width>
-                                        <height>12</height>
-                                        <info>Player.Progress</info>
-                                        <visible>!Player.Seeking</visible>
-                                    </control>
-                                    <control type="progress" id="401">
-                                        <width>100%</width>
-                                        <bottom>0</bottom>
-                                        <height>12</height>
-                                        <visible>Player.Seeking</visible>
-                                    </control>
+                                    <info>Player.ProgressCache</info>
+                                    <visible>true</visible>
+                                    <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
+                                    <lefttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</lefttexture>
+                                    <midtexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</midtexture>
+                                    <righttexture colordiffuse="$VAR[HighlightColor2]">osd/progress-end.png</righttexture>
+                                    <visible>!Player.Seeking</visible>
+                                </control>
+                                <control type="progress" id="23">
+                                    <width>100%</width>
+                                    <height>12</height>
+                                    <info>Player.Progress</info>
+                                    <visible>!Player.Seeking</visible>
+                                </control>
+                                <control type="progress" id="401">
+                                    <width>100%</width>
+                                    <bottom>0</bottom>
+                                    <height>12</height>
+                                    <visible>Player.Seeking</visible>
                                 </control>
                             </control>
                         </control>

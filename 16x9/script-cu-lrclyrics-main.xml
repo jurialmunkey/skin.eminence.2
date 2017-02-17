@@ -11,13 +11,13 @@
                 <control type="group">
                     <top>200</top>
                     <bottom>180</bottom>
-                    <width>100%</width>
-
+                    <left>posterh</left>
+                    <right>0</right>
                     <!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
                     <control type="list" id="110">
-                        <left>100</left>
-                        <right>100</right>
-                        <top>0</top>
+                        <left>125</left>
+                        <right>50</right>
+                        <top>350</top>
                         <bottom>0</bottom>
                         <onleft>101</onleft>
                         <onright>101</onright>
@@ -25,19 +25,19 @@
                         <ondown>110</ondown>
                         <pagecontrol>111</pagecontrol>
                         <scrolltime>200</scrolltime>
-                        <itemlayout height="100" width="1720">
+                        <itemlayout height="60" width="1120">
                             <control type="label">
                                 <width>100%</width>
-                                <align>center</align>
+                                <align>left</align>
                                 <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
                                 <info>ListItem.Label</info>
                                 <font>Font-ListInfo</font>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="100" width="1720">
+                        <focusedlayout height="60" width="1120">
                             <control type="label">
                                 <width>100%</width>
-                                <align>center</align>
+                                <align>left</align>
                                 <textcolor>$VAR[HighlightColor2]</textcolor>
                                 <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
                                 <info>ListItem.Label</info>
@@ -47,26 +47,26 @@
                     </control>
                     <!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
                     <control type="list" id="120">
-                        <left>100</left>
-                        <right>100</right>
-                        <top>SidePad</top>
-                        <bottom>30</bottom>
+                        <left>125</left>
+                        <right>50</right>
+                        <top>350</top>
+                        <bottom>0</bottom>
                         <onleft>111</onleft>
                         <onright>111</onright>
                         <onup>110</onup>
                         <ondown>110</ondown>
                         <pagecontrol>111</pagecontrol>
                         <scrolltime>200</scrolltime>
-                        <itemlayout height="50">
+                        <itemlayout height="60">
                             <control type="label">
-                                <width>1720</width>
+                                <width>1120</width>
                                 <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
                                 <info>ListItem.Label</info>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="50">
+                        <focusedlayout height="60">
                             <control type="label">
-                                <width>1720</width>
+                                <width>1120</width>
                                 <textcolor>$VAR[HighlightColor2]</textcolor>
                                 <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
                                 <info>ListItem.Label</info>
