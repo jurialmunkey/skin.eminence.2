@@ -25,7 +25,7 @@
                         <ondown>110</ondown>
                         <pagecontrol>111</pagecontrol>
                         <scrolltime>200</scrolltime>
-                        <itemlayout height="60" width="1120">
+                        <itemlayout height="60" width="1000">
                             <control type="label">
                                 <width>100%</width>
                                 <align>left</align>
@@ -34,7 +34,7 @@
                                 <font>Font-ListInfo</font>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="60" width="1120">
+                        <focusedlayout height="60" width="1000">
                             <control type="label">
                                 <width>100%</width>
                                 <align>left</align>
@@ -59,14 +59,14 @@
                         <scrolltime>200</scrolltime>
                         <itemlayout height="60">
                             <control type="label">
-                                <width>1120</width>
+                                <width>1000</width>
                                 <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
                                 <info>ListItem.Label</info>
                             </control>
                         </itemlayout>
                         <focusedlayout height="60">
                             <control type="label">
-                                <width>1120</width>
+                                <width>1000</width>
                                 <textcolor>$VAR[HighlightColor2]</textcolor>
                                 <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
                                 <info>ListItem.Label</info>
