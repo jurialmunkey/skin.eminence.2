@@ -616,17 +616,6 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>
                     </control>
-                    <!-- Info Line -->
-                    <control type="radiobutton" id="8501">
-                        <radioposx>settingsradioposx</radioposx>
-                        <width>100%</width>
-                        <label>31165</label>
-                        <selected>!Skin.HasSetting(furniture.hidesortinfo)</selected>
-                        <onclick>Skin.ToggleSetting(furniture.hidesortinfo)</onclick>
-                        <height>72</height>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
-                    </control>
                     <!-- Media Flags -->
                     <control type="radiobutton" id="8502">
                         <radioposx>settingsradioposx</radioposx>
@@ -860,6 +849,17 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Info Line -->
+                    <control type="radiobutton" id="8913">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>31165</label>
+                        <selected>!Skin.HasSetting(furniture.hidesortinfo)</selected>
+                        <onclick>Skin.ToggleSetting(furniture.hidesortinfo)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
                     <!-- Object Shadows -->
                     <control type="radiobutton" id="8902">
                         <radioposx>settingsradioposx</radioposx>
@@ -907,6 +907,21 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <!-- Info Line -->
+                    <!-- <control type="button" id="8914">
+                        <width>100%</width>
+                        <label>Fanart opacity</label>
+                        <height>72</height>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),50)">Skin.SetString(fanart.opacity,100)</onclick>
+                         <onclick condition="String.IsEqual(Skin.String(fanart.opacity),100) | String.IsEmpty(Skin.String(fanart.opacity))">Skin.SetString(fanart.opacity,90)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),90)">Skin.SetString(fanart.opacity,80)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),80)">Skin.SetString(fanart.opacity,70)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),70)">Skin.SetString(fanart.opacity,60)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),60)">Skin.SetString(fanart.opacity,50)</onclick>
+                        <label2>$INFO[Skin.String(fanart.opacity),, %]</label2>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control> -->
                     <!-- Div Extras Label -->
                     <control type="image" id="8904">
                         <width>100%</width>
