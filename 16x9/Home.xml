@@ -18,6 +18,9 @@
     <onunload>SetProperty(Header.Label,$INFO[Container(9000).ListItem.Label],home)</onunload>
     <onunload>SetProperty(Header.Icon,$INFO[Container(9000).ListItem.Icon],home)</onunload>
     <onunload condition="!String.IsEmpty(Container(9000).ListItem.Property(TileColor))">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
+
+    <onload condition="!Integer.IsEqual(Window(Home).Property(WidgetRefresh),1)">SetProperty(WidgetRefresh,1,Home)</onload>
+    <onload condition="Integer.IsEqual(Window(Home).Property(WidgetRefresh),1)">SetProperty(WidgetRefresh,2,Home)</onload>
     <controls>
 
         <include>Furniture_Background</include>

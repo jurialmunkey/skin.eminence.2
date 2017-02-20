@@ -1,3 +1,6 @@
+[B]2.5.35[/B]
+Update lyrics so shows info with it 
+
 [B]2.5.34[/B]
 Change String and Integer conditions to Krypton standard.
 Fix access to weather menu
