@@ -349,7 +349,7 @@
                             <top>540</top>
                             <width>2058</width>
                             <height>525</height>
-                            <onup condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onup>
+                            <onup condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onup>
                             <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                             <ondown>61</ondown>
                             <onleft>535</onleft>

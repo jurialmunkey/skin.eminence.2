@@ -23,7 +23,7 @@
                         <height>740</height>
                         <onup>$PARAM[id]</onup>
                         <ondown>$PARAM[id]</ondown>
-                        <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
+                        <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
                         <onleft>60</onleft>
                         <pagecontrol>60</pagecontrol>
                         <preloaditems>2</preloaditems>
@@ -244,7 +244,7 @@
                         <height>posterh</height>
                         <onup>$PARAM[id]</onup>
                         <ondown>$PARAM[id]</ondown>
-                        <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
+                        <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
                         <onleft>60</onleft>
                         <pagecontrol>60</pagecontrol>
                         <preloaditems>2</preloaditems>
@@ -409,7 +409,7 @@
                         <height>483</height>
                         <onup>$PARAM[id]</onup>
                         <ondown>$PARAM[id]</ondown>
-                        <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
+                        <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
                         <onleft>60</onleft>
                         <pagecontrol>60</pagecontrol>
                         <preloaditems>2</preloaditems>
@@ -630,7 +630,7 @@
                     <height>740</height>
                     <onup>50</onup>
                     <ondown>50</ondown>
-                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
+                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
                     <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>

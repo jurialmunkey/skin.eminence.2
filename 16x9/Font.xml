@@ -86,6 +86,13 @@
         </font>
 
         <font>
+            <name>Font-LoginLabel</name>
+            <style>uppercase</style>
+            <filename>Roboto-Black.ttf</filename>
+            <size>36</size>
+        </font>
+
+        <font>
             <name>Font-MusicVis-Title</name>
             <filename>Roboto-Black.ttf</filename>
             <size>64</size>

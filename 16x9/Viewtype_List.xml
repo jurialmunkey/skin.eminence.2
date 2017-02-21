@@ -258,7 +258,7 @@
                 <onup>$PARAM[id]</onup>
                 <ondown>$PARAM[id]</ondown>
                 <onleft>60</onleft>
-                <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
+                <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
                 <pagecontrol>60</pagecontrol>
                 <focusposition>2</focusposition>
                 <movement>2</movement>
@@ -413,7 +413,7 @@
                     <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
                     <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
-                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
+                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
                     <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                     <onleft>60</onleft>
                     <pagecontrol>60</pagecontrol>
@@ -903,7 +903,7 @@
                     <onup>$PARAM[id]</onup>
                     <ondown>$PARAM[id]</ondown>
                     <onleft>60</onleft>
-                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9978)</onright>
+                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
                     <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                     <pagecontrol>60</pagecontrol>
                     <orientation>vertical</orientation>

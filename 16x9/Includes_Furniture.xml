@@ -634,6 +634,7 @@
             <texture colordiffuse="FanartFade">common/white.png</texture>
             <visible>!Window.IsVisible(home)</visible>
             <visible>!Window.IsVisible(weather)</visible>
+            <visible>!Window.IsVisible(loginscreen)</visible>
             <animation effect="fade" start="100" end="10" condition="String.IsEqual(Skin.String(fanart.opacity),10)">Conditional</animation>
             <animation effect="fade" start="100" end="20" condition="String.IsEqual(Skin.String(fanart.opacity),20)">Conditional</animation>
             <animation effect="fade" start="100" end="30" condition="String.IsEqual(Skin.String(fanart.opacity),30)">Conditional</animation>
