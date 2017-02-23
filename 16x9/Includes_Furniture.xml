@@ -802,6 +802,23 @@
             <posx>-88</posx>
             <width>300</width>
             <height>164</height>
+            <texture align="left" border="75" colordiffuse="Background">common/header.png</texture>
+            <visible>!Window.IsVisible(home) + !Window.IsVisible(weather) + !VideoPlayer.IsFullscreen + !Window.IsVisible(visualisation)</visible>
+            <animation effect="fade" start="100" end="80" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),10)">Conditional</animation>
+            <animation effect="fade" start="100" end="70" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),20)">Conditional</animation>
+            <animation effect="fade" start="100" end="60" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),30)">Conditional</animation>
+            <animation effect="fade" start="100" end="50" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),40)">Conditional</animation>
+            <animation effect="fade" start="100" end="40" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),50)">Conditional</animation>
+            <animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),60)">Conditional</animation>
+            <animation effect="fade" start="100" end="20" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),70)">Conditional</animation>
+            <animation effect="fade" start="100" end="10" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),80)">Conditional</animation>
+            <visible>!Skin.HasSetting(background.hidefanart) + Integer.IsLess(Skin.String(fanart.opacity),90) + !String.IsEmpty(Skin.String(fanart.opacity))</visible>
+        </control>
+        <control type="image">
+            <posy>18</posy>
+            <posx>-88</posx>
+            <width>300</width>
+            <height>164</height>
             <texture align="left" border="75">common/header.png</texture>
             <colordiffuse>$VAR[Furniture_TopBar_Tile_BGCOLOR]</colordiffuse>
             <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [Window.IsVisible(home) | Window.IsVisible(weather)]">Conditional</animation>

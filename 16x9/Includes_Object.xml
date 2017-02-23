@@ -297,6 +297,18 @@
     </include>
     <include name="Object_Background">
         <control type="image">
+            <texture colordiffuse="Background">common/white.png</texture>
+            <animation effect="fade" start="100" end="80" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),10)">Conditional</animation>
+            <animation effect="fade" start="100" end="70" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),20)">Conditional</animation>
+            <animation effect="fade" start="100" end="60" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),30)">Conditional</animation>
+            <animation effect="fade" start="100" end="50" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),40)">Conditional</animation>
+            <animation effect="fade" start="100" end="40" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),50)">Conditional</animation>
+            <animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),60)">Conditional</animation>
+            <animation effect="fade" start="100" end="20" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),70)">Conditional</animation>
+            <animation effect="fade" start="100" end="10" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),80)">Conditional</animation>
+            <visible>!Skin.HasSetting(background.hidefanart) + Integer.IsLess(Skin.String(fanart.opacity),90) + !String.IsEmpty(Skin.String(fanart.opacity))</visible>
+        </control>
+        <control type="image">
             <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
             <texture colordiffuse="ObjectBackground">common/white.png</texture>
         </control>
