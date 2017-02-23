@@ -841,3 +841,8 @@ msgstr "Ten widok jest aktualnie zablokowany dla tego typu zawartości"
 msgctxt "#31234"
 msgid "Do you wish to unlock it and set a new view mode?"
 msgstr "Czy chcesz go odblokować i ustawić jako nowy tryb widoku?"
+
+msgctxt "#31235"
+msgid "Fanart fade opacity (default is 90%)"
+msgstr "Nieprzezroczystość fototapet (domyślnie 90%)"
+
