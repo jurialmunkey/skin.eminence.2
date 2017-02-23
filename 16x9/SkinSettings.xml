@@ -324,8 +324,10 @@
                         <width>100%</width>
                         <label>31021</label>
                         <radioposx>settingsradioposx</radioposx>
-                        <selected>!Skin.HasSetting(background.hidefanart)</selected>
-                        <onclick>Skin.ToggleSetting(background.hidefanart)</onclick>
+                        <selected>!Skin.HasSetting(background.hidefanart) + !String.IsEqual(Skin.String(fanart.opacity),100)</selected>
+                        <onclick condition="!String.IsEqual(Skin.String(fanart.opacity),100)">Skin.ToggleSetting(background.hidefanart)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),100)">Skin.Reset(background.hidefanart)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),100)">Skin.SetString(fanart.opacity,90)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
@@ -382,6 +384,23 @@
                         <onclick condition="String.IsEmpty(Skin.String(background.fallback))">Skin.SetImage(background.fallback)</onclick>
                         <onclick condition="!String.IsEmpty(Skin.String(background.fallback))">Skin.Reset(background.fallback)</onclick>
                         <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
+                    <!-- Fanart Opacity -->
+                    <control type="button" id="8208">
+                        <width>100%</width>
+                        <label>31235</label>
+                        <height>72</height>
+                        <onclick condition="!String.IsEqual(Skin.String(fanart.opacity),50) + Skin.HasSetting(background.hidefanart)">Skin.Reset(background.hidefanart)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),100)">Skin.SetString(fanart.opacity,90)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),90) | String.IsEmpty(Skin.String(fanart.opacity))">Skin.SetString(fanart.opacity,80)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),80)">Skin.SetString(fanart.opacity,70)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),70)">Skin.SetString(fanart.opacity,60)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),60)">Skin.SetString(fanart.opacity,50)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),50)">Skin.SetBool(background.hidefanart)</onclick>
+                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),50)">Skin.SetString(fanart.opacity,100)</onclick>
+                        <label2 fallback="90%">$INFO[Skin.String(fanart.opacity),, %]</label2>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
                     </control>
@@ -907,21 +926,6 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
-                    <!-- Info Line -->
-                    <!-- <control type="button" id="8914">
-                        <width>100%</width>
-                        <label>Fanart opacity</label>
-                        <height>72</height>
-                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),50)">Skin.SetString(fanart.opacity,100)</onclick>
-                         <onclick condition="String.IsEqual(Skin.String(fanart.opacity),100) | String.IsEmpty(Skin.String(fanart.opacity))">Skin.SetString(fanart.opacity,90)</onclick>
-                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),90)">Skin.SetString(fanart.opacity,80)</onclick>
-                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),80)">Skin.SetString(fanart.opacity,70)</onclick>
-                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),70)">Skin.SetString(fanart.opacity,60)</onclick>
-                        <onclick condition="String.IsEqual(Skin.String(fanart.opacity),60)">Skin.SetString(fanart.opacity,50)</onclick>
-                        <label2>$INFO[Skin.String(fanart.opacity),, %]</label2>
-                        <include>Defs_OptionButton</include>
-                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                    </control> -->
                     <!-- Div Extras Label -->
                     <control type="image" id="8904">
                         <width>100%</width>

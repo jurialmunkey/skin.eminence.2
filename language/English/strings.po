@@ -869,3 +869,7 @@ msgstr ""
 msgctxt "#31234"
 msgid "Do you wish to unlock it and set a new view mode?"
 msgstr ""
+
+msgctxt "#31235"
+msgid "Fanart fade opacity (default is 90%)"
+msgstr ""

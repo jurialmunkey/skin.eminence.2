@@ -1,6 +1,6 @@
 <colors>
     <color name="Background">ffdfdfdf</color>
-    <color name="FanartFade">e2ffffff</color>
+    <color name="FanartFade">ffffffff</color>
     <color name="HomeBarBG">ffdfdfdf</color>
     <color name="HomeBarFG">ff333333</color>
     <color name="HomeBarTile">3e555555</color>

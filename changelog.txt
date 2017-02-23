@@ -1,3 +1,6 @@
+[B]2.5.36[/B]
+Add opacity control for fanart fade
+
 [B]2.5.35[/B]
 Update lyrics so shows info with it 
 New Default icons to match other icon themes
