@@ -32,11 +32,11 @@ msgstr "Tag"
 
 msgctxt "#31003"
 msgid "Next"
-msgstr ""
+msgstr "Nächste"
 
 msgctxt "#31004"
 msgid "Show shadows on panels"
-msgstr "Schatten in Panels zeigen"
+msgstr "Schatten in Bedienfeldern zeigen"
 
 msgctxt "#31005"
 msgid "Video OSD"
@@ -52,23 +52,23 @@ msgstr "Media Flags zeigen"
 
 msgctxt "#31008"
 msgid "Show plot overlay in video library after delay"
-msgstr ""
+msgstr "Handlung in der Videobibliothek verzögert anzeigen"
 
 msgctxt "#31009"
 msgid "Open playlist"
-msgstr "Playlist öffnen"
+msgstr "Wiedergabeliste öffnen"
 
 msgctxt "#31010"
 msgid "Save playlist"
-msgstr "Playlist speichern"
+msgstr "Wiedergabeliste speichern"
 
 msgctxt "#31011"
 msgid "Close playlist"
-msgstr "Playlist schließen"
+msgstr "Wiedergabelistet schließen"
 
 msgctxt "#31012"
 msgid "Current playlist"
-msgstr "Aktuelle Playlist"
+msgstr "Aktuelle Wiedergabeliste"
 
 msgctxt "#31013"
 msgid "Muted"
@@ -152,7 +152,7 @@ msgstr "Untertitel gefunden!"
 
 msgctxt "#31045"
 msgid "Supplied by"
-msgstr "Geliefert von"
+msgstr "Bereitgestellt von"
 
 msgctxt "#31046"
 msgid "Currently"
@@ -160,11 +160,11 @@ msgstr "Zurzeit"
 
 msgctxt "#31047"
 msgid "Visualisation Presets"
-msgstr ""
+msgstr "Visualisierung Voreinstellung"
 
 msgctxt "#31048"
 msgid "Playlist Options"
-msgstr "Playlist Optionen"
+msgstr "Optionen Wiedergabeliste"
 
 msgctxt "#31049"
 msgid "Customise home menu"
@@ -280,35 +280,35 @@ msgstr "Bestbewertete Serien"
 
 msgctxt "#31084"
 msgid "On Air Shows"
-msgstr "On Air Shows"
+msgstr "Serien auf Sendung"
 
 msgctxt "#31085"
 msgid "Airing Today"
-msgstr ""
+msgstr "Heute gesendet"
 
 msgctxt "#31086"
 msgid "Custom 1"
-msgstr ""
+msgstr "Benutzer 1"
 
 msgctxt "#31087"
 msgid "Custom 2"
-msgstr ""
+msgstr "Benutzer 2"
 
 msgctxt "#31088"
 msgid "Custom 3"
-msgstr ""
+msgstr "Benutzer 3"
 
 msgctxt "#31089"
 msgid "Custom 4"
-msgstr ""
+msgstr "Benutzer 4"
 
 msgctxt "#31090"
 msgid "Content Loading"
-msgstr ""
+msgstr "Lade Inhalt"
 
 msgctxt "#31091"
 msgid "Trending Shows"
-msgstr ""
+msgstr "Populäre Serien"
 
 msgctxt "#31092"
 msgid "No information available"
@@ -316,11 +316,11 @@ msgstr "Keine Informationen verfügbar"
 
 msgctxt "#31093"
 msgid "Movie Hub"
-msgstr ""
+msgstr "Filme Hub"
 
 msgctxt "#31094"
 msgid "TV Hub"
-msgstr ""
+msgstr "Serien Hub"
 
 msgctxt "#31095"
 msgid "Spotlight"
@@ -328,11 +328,11 @@ msgstr "Spotlight"
 
 msgctxt "#31096"
 msgid "Hub items"
-msgstr ""
+msgstr "Hub Elemente"
 
 msgctxt "#31097"
 msgid "Hub widget"
-msgstr ""
+msgstr "Hub Widget"
 
 msgctxt "#31098"
 msgid "Artwork"
@@ -352,15 +352,15 @@ msgstr "Kürzlich gespielt"
 
 msgctxt "#31102"
 msgid "Watch Random"
-msgstr ""
+msgstr "Zufällig"
 
 msgctxt "#31103"
 msgid "Delete Settings Shortcut"
-msgstr ""
+msgstr "Einstellungs-Verknüpfung entfernen"
 
 msgctxt "#31104"
 msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
-msgstr ""
+msgstr "Soll wirklich die Verknüpfung entfernt werden?[CR]Bitte stelle sicher, dass alternative Methode verfügbar ist, auf Einstellungen zuzugreifen, bevor diese Verknüpfung entfernt wird."
 
 msgctxt "#31105"
 msgid "Extra Info"
@@ -380,7 +380,7 @@ msgstr "Youtube"
 
 msgctxt "#31109"
 msgid "provided by themoviedb.org"
-msgstr ""
+msgstr "zur Verfügung gestellt von themoviedb.org"
 
 msgctxt "#31110"
 msgid "Extras"
@@ -388,43 +388,43 @@ msgstr "Extras"
 
 msgctxt "#31111"
 msgid "Choose primary highlight color"
-msgstr ""
+msgstr "Wähle primäre Highlight-Farbe"
 
 msgctxt "#31112"
 msgid "Choose secondary highlight color"
-msgstr ""
+msgstr "Wähle sekundäre Highlight-Farbe"
 
 msgctxt "#31113"
 msgid "Reset colors to defaults"
-msgstr ""
+msgstr "Setze Farben auf Standardwerte zurück"
 
 msgctxt "#31114"
 msgid "Install weather fanart"
-msgstr ""
+msgstr "Installiere Wetter-Fanart"
 
 msgctxt "#31115"
 msgid "Show weather with clock"
-msgstr ""
+msgstr "Zeige Wetter mit Uhr"
 
 msgctxt "#31116"
 msgid "Animate fanart"
-msgstr ""
+msgstr "Animation Fanart"
 
 msgctxt "#31117"
 msgid "mins"
-msgstr ""
+msgstr "Min"
 
 msgctxt "#31118"
 msgid "Animate artist slideshow"
-msgstr ""
+msgstr "Animation Künstler-Diashow"
 
 msgctxt "#31119"
 msgid "Show visualisation behind artist slideshow"
-msgstr ""
+msgstr "Visualisierung hinter Künstler-Diashow zeigen"
 
 msgctxt "#31120"
 msgid "Show artist slideshow"
-msgstr ""
+msgstr "Künstler-Diashow zeigen"
 
 msgctxt "#31121"
 msgid "Music OSD"
@@ -432,11 +432,11 @@ msgstr "Musik OSD"
 
 msgctxt "#31122"
 msgid "Match header tile with highlight color"
-msgstr ""
+msgstr "Kopfzeile in Highlight-Farbe zeigen"
 
 msgctxt "#31123"
 msgid "Hub"
-msgstr ""
+msgstr "Hub"
 
 msgctxt "#31124"
 msgid "Similar movies"
@@ -452,7 +452,7 @@ msgstr "Farben"
 
 msgctxt "#31127"
 msgid "Header"
-msgstr ""
+msgstr "Kopfzeile"
 
 msgctxt "#31128"
 msgid "Color"
@@ -464,7 +464,7 @@ msgstr ""
 
 msgctxt "#31130"
 msgid "items found"
-msgstr ""
+msgstr "Elemente gefunden"
 
 msgctxt "#31131"
 msgid "Search Options"
@@ -500,7 +500,7 @@ msgstr "Zeige Uhr"
 
 msgctxt "#31139"
 msgid "Hubs"
-msgstr ""
+msgstr "Hubs"
 
 msgctxt "#31140"
 msgid "Show tile colour on unfocused tiles"
@@ -516,7 +516,7 @@ msgstr "Große Liste"
 
 msgctxt "#31143"
 msgid "Media Info 2"
-msgstr ""
+msgstr "Media Info 2"
 
 msgctxt "#31144"
 msgid "Player Controls"
@@ -536,11 +536,11 @@ msgstr ""
 
 msgctxt "#31148"
 msgid "Media Info 3"
-msgstr ""
+msgstr "Media Info 3"
 
 msgctxt "#31149"
 msgid "Next Aired"
-msgstr ""
+msgstr "Nächste Sendung"
 
 msgctxt "#31150"
 msgid "Show widget posters"
@@ -612,7 +612,7 @@ msgstr ""
 
 msgctxt "#31167"
 msgid "Show unwatched count in header"
-msgstr ""
+msgstr "Anzahl ungesehen im Kopf anzeigen"
 
 msgctxt "#31168"
 msgid "Now / Next"
@@ -632,11 +632,11 @@ msgstr "Skin neuladen"
 
 msgctxt "#31172"
 msgid "Transparent home bar"
-msgstr ""
+msgstr "Homebar transparent"
 
 msgctxt "#31173"
 msgid "Home bar style"
-msgstr ""
+msgstr "Homebar Stil"
 
 msgctxt "#31174"
 msgid "Weather icons"
@@ -644,7 +644,7 @@ msgstr "Wetter-Symbole"
 
 msgctxt "#31175"
 msgid "Customise shutdown menu"
-msgstr ""
+msgstr "Shutdwon Menü anpassen"
 
 msgctxt "#31176"
 msgid "Genre icons"
@@ -656,7 +656,7 @@ msgstr "Standard"
 
 msgctxt "#31181"
 msgid "Text in tiles"
-msgstr ""
+msgstr "Text in Tiles"
 
 msgctxt "#31182"
 msgid "Text only"
@@ -664,11 +664,11 @@ msgstr "Nur Text"
 
 msgctxt "#31183"
 msgid "Customise shutdown menu"
-msgstr ""
+msgstr "Shutdwon Menü anpassen"
 
 msgctxt "#31184"
 msgid "Startup video or playlist"
-msgstr ""
+msgstr "Starte Video oder Wiedergabeliste"
 
 msgctxt "#31185"
 msgid "Label"
@@ -684,11 +684,11 @@ msgstr "Hintergrund"
 
 msgctxt "#31188"
 msgid "None (show user background)"
-msgstr ""
+msgstr "Kein (Eigener Hintergrund)"
 
 msgctxt "#31189"
 msgid "None"
-msgstr ""
+msgstr "Kein"
 
 msgctxt "#31190"
 msgid "Next Episode"
@@ -700,7 +700,7 @@ msgstr "Lezte Folge"
 
 msgctxt "#31192"
 msgid "Info List"
-msgstr ""
+msgstr "Info Liste"
 
 msgctxt "#31193"
 msgid "Box Office"
