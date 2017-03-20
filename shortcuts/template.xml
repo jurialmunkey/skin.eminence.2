@@ -20,7 +20,7 @@
                 <onback>ClearProperty(FO9001,home)</onback>
                 <onback>9000</onback>
                 <ondown>9000</ondown>
-                <onup>SetFocus(9002)</onup>
+                <onup>9000</onup>
                 <autoscroll time="8000">![Control.HasFocus(9001) | Control.HasFocus(9101)]</autoscroll>
                 <scrolltime tween="sine" easing="out">240</scrolltime>
                 <itemlayout />
@@ -49,7 +49,7 @@
                 <onback>ClearProperty(FO9001,home)</onback>
                 <onback>9000</onback>
                 <ondown>9000</ondown>
-                <onup>SetFocus(9002)</onup>
+                <onup>9000</onup>
                 <autoscroll time="8000">![Control.HasFocus(9001) | Control.HasFocus(9101)]</autoscroll>
                 <scrolltime tween="sine" easing="out">240</scrolltime>
                 <itemlayout />
