@@ -10,7 +10,7 @@
         <top>0</top>
         <height>toppanel</height>
     </include>
-
+ 
     <include name="Dialog_Background">
         <control type="image">
             <top>-24</top>
@@ -237,7 +237,7 @@
     </include>
     <include name="Dialog_BasicList">
         <param name="backpanel" default="true" />
-        <param name="type" default="panel" />
+        <param name="type" default="panel" /> 
         <param name="imagelist" default="false" />
         <param name="contentvisible" default="false" />
         <definition>

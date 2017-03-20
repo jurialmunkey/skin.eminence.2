@@ -173,7 +173,7 @@
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
                     </control>
                     <!-- Persistent Widgets-->
-                    <control type="radiobutton" id="8104">
+                    <!-- <control type="radiobutton" id="8104">
                         <width>100%</width>
                         <label>31195</label>
                         <radioposx>settingsradioposx</radioposx>
@@ -182,7 +182,7 @@
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8001)</visible>
-                    </control>
+                    </control> -->
                     <!-- Widget Info Box -->
                     <control type="radiobutton" id="8105">
                         <width>100%</width>

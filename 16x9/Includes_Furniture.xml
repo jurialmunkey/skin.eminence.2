@@ -11,7 +11,6 @@
             <onback>50</onback>
             <onleft>50</onleft>
             <onright>50</onright>
-            <onclick>50</onclick>
             <ondown>50</ondown>
             <orientation>vertical</orientation>
             <animation effect="fade" condition="true" time="0" start="100" end="0">Conditional</animation>
@@ -136,7 +135,6 @@
                 <onback>9000</onback>
                 <onleft>9000</onleft>
                 <onright>9000</onright>
-                <onclick>9000</onclick>
                 <ondown>9000</ondown>
                 <width>8</width>
                 <orientation>vertical</orientation>
@@ -620,7 +618,6 @@
                 <timeperimage>10000</timeperimage>
                 <randomize>true</randomize>
                 <fadetime>600</fadetime>
-                <loop>yes</loop>
                 <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
                 <visible>System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
                 <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
@@ -802,7 +799,7 @@
             <posx>-88</posx>
             <width>300</width>
             <height>164</height>
-            <texture align="left" border="75" colordiffuse="Background">common/header.png</texture>
+            <texture border="75" colordiffuse="Background">common/header.png</texture>
             <visible>!Window.IsVisible(home) + !Window.IsVisible(weather) + !VideoPlayer.IsFullscreen + !Window.IsVisible(visualisation)</visible>
             <animation effect="fade" start="100" end="80" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),10)">Conditional</animation>
             <animation effect="fade" start="100" end="70" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),20)">Conditional</animation>
@@ -819,7 +816,7 @@
             <posx>-88</posx>
             <width>300</width>
             <height>164</height>
-            <texture align="left" border="75">common/header.png</texture>
+            <texture border="75">common/header.png</texture>
             <colordiffuse>$VAR[Furniture_TopBar_Tile_BGCOLOR]</colordiffuse>
             <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [Window.IsVisible(home) | Window.IsVisible(weather)]">Conditional</animation>
         </control>
@@ -1013,7 +1010,6 @@
                 <font>Font-Sublabel</font>
                 <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <align>center</align>
-                <aligny>top</aligny>
                 <label>$INFO[Weather.Temperature]</label>
                 <visible>!Skin.HasSetting(disable.weatherheader)</visible>
             </control>
@@ -1057,7 +1053,7 @@
     <include name="Furniture_TopBar">
         <!-- <include>GlobalInfoOverlay</include> -->
         <control type="group">
-            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101) | Control.HasFocus(9002)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -1077,7 +1073,7 @@
             <include>Furniture_TopBar_Clock</include>
         </control>
         <control type="group">
-            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Player.Muted | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101) | Control.HasFocus(9002)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Player.Muted | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />

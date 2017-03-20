@@ -56,7 +56,6 @@
                         <top>0</top>
                         <height>100%</height>
                         <align>right</align>
-                        <font>Font-ListInfo</font>
                         <aspectratio align="left">keep</aspectratio>
                         <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                         <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
@@ -93,7 +92,6 @@
                         <top>0</top>
                         <height>100%</height>
                         <align>right</align>
-                        <font>Font-ListInfo</font>
                         <aspectratio align="left">keep</aspectratio>
                         <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
                         <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
@@ -152,7 +150,7 @@
                     <label>Widget</label>
                     <label2>$VAR[Label_ShortcutsWidget]</label2>
                     <include>Defs_OptionButton</include>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>!String.Contains(Window.Property(groupname),x11)</visible>
                 </control>
 
                 <control type="radiobutton" id="9702" description="PosterWidget">
