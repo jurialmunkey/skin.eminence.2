@@ -135,7 +135,7 @@
                 <top>20</top>
                 <height>32</height>
                 <width>32</width>
-                <texture>$VAR[Image_Indicator]</texture>
+                <texture>$VAR[Image_Indicator_List]</texture>
                 <visible>!String.IsEmpty(ListItem.Overlay)</visible>
             </control>
             <control type="grouplist">
@@ -398,7 +398,7 @@
                     <top>20</top>
                     <height>32</height>
                     <width>32</width>
-                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator_List]</texture>
                     <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                 </control>
             </control>
@@ -508,7 +508,7 @@
                                     <top>20</top>
                                     <height>32</height>
                                     <width>32</width>
-                                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                                    <texture colordiffuse="Selected">$VAR[Image_Indicator_List]</texture>
                                     <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                                 </control>
                             </control>
@@ -629,7 +629,7 @@
                     <centertop>50%</centertop>
                     <height>32</height>
                     <width>32</width>
-                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator_List]</texture>
                     <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets) + ![ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
@@ -638,7 +638,7 @@
                     <centertop>50%</centertop>
                     <height>32</height>
                     <width>32</width>
-                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator_List]</texture>
                     <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                     <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
@@ -679,7 +679,7 @@
                     <height>32</height>
                     <width>32</width>
                     <textcolor>ListLabel</textcolor>
-                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator_List]</texture>
                     <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
 
@@ -796,7 +796,7 @@
                     <centertop>50%</centertop>
                     <height>32</height>
                     <width>32</width>
-                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                    <texture colordiffuse="Selected">$VAR[Image_Indicator_List]</texture>
                     <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                     <visible>!Container.Content(seasons) + !Container.Content(sets) + ![ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
@@ -805,7 +805,7 @@
                     <centertop>50%</centertop>
                     <height>32</height>
                     <width>32</width>
-                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                    <texture colordiffuse="Selected">$VAR[Image_Indicator_List]</texture>
                     <visible>!String.IsEmpty(ListItem.Overlay)</visible>
                     <visible>Container.Content(seasons) | Container.Content(sets) | [ListItem.IsFolder + String.String.IsEmpty(Listitem.dbtype) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsParentFolder]</visible>
                 </control>
@@ -846,7 +846,7 @@
                     <height>32</height>
                     <width>32</width>
                     <textcolor>Selected</textcolor>
-                    <texture colordiffuse="Selected">$VAR[Image_Indicator]</texture>
+                    <texture colordiffuse="Selected">$VAR[Image_Indicator_List]</texture>
                     <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
                 </control>
 
