@@ -443,7 +443,7 @@
 
             <control type="panel" id="9002">
                 <onup>9000</onup>
-                <ondown>9000</ondown>
+                <ondown>9001</ondown>
                 <onback>9000</onback>
                 <left>30</left>
                 <right>20</right>
