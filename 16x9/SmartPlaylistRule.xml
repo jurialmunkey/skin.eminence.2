@@ -27,7 +27,7 @@
                 </control>
                 <control type="group">
                     <width>100%</width>
-                    <control type="spincontrolex" id="15">
+                    <control type="button" id="15">
                         <align>left</align>
                         <textoffsetx>30</textoffsetx>
                         <width>675</width>
@@ -35,7 +35,7 @@
                         <onright>16</onright>
                         <include>Defs_OptionButton2</include>
                     </control>
-                    <control type="spincontrolex" id="16">
+                    <control type="button" id="16">
                         <right>0</right>
                         <align>left</align>
                         <textoffsetx>30</textoffsetx>

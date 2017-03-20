@@ -25,7 +25,7 @@
                         <param name="width" value="headlinew" />
                         <param name="label" value="$LOCALIZE[20333]" />
                     </include>
-                    <control type="spincontrolex" id="22">
+                    <control type="button" id="22">
                         <align>left</align>
                         <textoffsetx>30</textoffsetx>
                         <width>100%</width>
@@ -104,14 +104,14 @@
                         <onright>8300</onright>
                         <ondown>8000</ondown>
                         <orientation>vertical</orientation>
-                        <control type="spincontrolex" id="16">
+                        <control type="button" id="16">
                             <align>left</align>
                             <textoffsetx>30</textoffsetx>
                             <width>settingshalfw</width>
                             <label>21424</label>
                             <include>Defs_OptionButton</include>
                         </control>
-                        <control type="spincontrolex" id="17">
+                        <control type="button" id="17">
                             <right>0</right>
                             <align>left</align>
                             <textoffsetx>30</textoffsetx>
@@ -119,7 +119,7 @@
                             <label>21427</label>
                             <include>Defs_OptionButton</include>
                         </control>
-                        <control type="spincontrolex" id="18">
+                        <control type="button" id="18">
                             <top>72</top>
                             <left>0</left>
                             <align>left</align>
@@ -151,8 +151,6 @@
                             <align>right</align>
                             <textoffsetx>30</textoffsetx>
                             <width>settingshalfw</width>
-                            <label>584</label>
-                            <altlabel>585</altlabel>
                             <include>Defs_OptionButton</include>
                         </control>
                         <control type="label" id="8301">
@@ -164,7 +162,7 @@
                             <label>580</label>
                             <include>Defs_OptionButton</include>
                         </control>
-                        <control type="spincontrolex" id="23">
+                        <control type="button" id="23">
                             <left>0</left>
                             <align>left</align>
                             <textoffsetx>30</textoffsetx>

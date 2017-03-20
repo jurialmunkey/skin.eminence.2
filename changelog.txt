@@ -1,3 +1,6 @@
+[B]2.5.37[/B]
+Fix Smart playlists
+
 [B]2.5.36[/B]
 Add opacity control for fanart fade
 
