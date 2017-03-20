@@ -17,6 +17,7 @@
                     <centerleft>50%</centerleft>
                     <width>1752</width>
                     <control type="group">
+                        <include>Animation_FadeOut</include>
                         <visible>Control.IsVisible(535) + Integer.IsGreater(Container.NumItems,1)</visible>
                         <top>-545</top>
                         <include condition="Window.IsVisible(MyVideoNav.xml)">Viewtype_ShowCase_MovieLeft</include>
@@ -33,7 +34,6 @@
                                     <visible>!String.IsEmpty(Container(535).ListItemNoWrap(-7).FolderPath) | !Skin.HasSetting(HorizontalListNav)</visible>
                                     <visible>!Window.IsVisible(MyMusicNav.xml)</visible>
                                     <visible>Container.OnNext</visible>
-                                    <scale>true</scale>
                                     <animation effect="fade" start="100" end="0" time="70" reversible="false">Hidden</animation>
                                     <animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                                     <include>MovieShowCaseItem-7</include>
