@@ -6,30 +6,19 @@
 	<controls>
 
 		<control type="visualisation" id="2">
-            <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)]] | [Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)] + String.IsEmpty(Player.Art(fanart))]</visible>
+            <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + !Skin.HasSetting(ArtistSlideShow.Enabled)] | [Skin.HasSetting(musicvis.fanartfallback) + !Skin.HasSetting(ArtistSlideShow.Enabled) + String.IsEmpty(Player.Art(fanart))]</visible>
             <description>visualisation</description>
 
         </control>
-        <control type="image">
-            <aspectratio>scale</aspectratio>
 
-            <texture background="true">$INFO[Player.Art(fanart)]</texture>
-            <visible>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
-            <visible>Skin.HasSetting(musicvis.fanartfallback)</visible>
-            <visible>!String.IsEmpty(Player.Art(fanart))</visible>
-            <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
-            <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-            <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-        </control>
         <control type="multiimage">
             <aspectratio>scale</aspectratio>
-
             <timeperimage>10000</timeperimage>
             <randomize>true</randomize>
             <fadetime>600</fadetime>
             <loop>yes</loop>
-            <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-            <visible>System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
+            <visible>Skin.HasSetting(musicvis.fanartfallback) | Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
+            <imagepath background="true">$VAR[Image_MusicVisualisation]</imagepath>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>

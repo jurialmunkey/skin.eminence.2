@@ -426,7 +426,7 @@
                         <include>Defs_OptionButton</include>
                         <label>31021</label>
                         <selected>Skin.HasSetting(musicvis.fanartfallback)</selected>
-                        <enable>!System.HasAddon(script.artistslideshow) | !Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
+                        <enable>!Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
                         <onclick>Skin.ToggleSetting(musicvis.fanartfallback)</onclick>
                     </control>
                     <control type="radiobutton" id="8303" description="Use artist slideshow">
@@ -436,7 +436,6 @@
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <label>31120</label>
-                        <enable>System.HasAddon(script.artistslideshow)</enable>
                         <selected>Skin.HasSetting(ArtistSlideShow.Enabled)</selected>
                         <onclick>Skin.ToggleSetting(ArtistSlideShow.Enabled)</onclick>
                     </control>
@@ -449,7 +448,7 @@
                         <label>31119</label>
                         <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
                         <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
-                        <enable>Skin.HasSetting(musicvis.fanartfallback) | [Skin.HasSetting(ArtistSlideShow.Enabled) + System.HasAddon(script.artistslideshow)]</enable>
+                        <enable>Skin.HasSetting(musicvis.fanartfallback) | Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
                     </control>
                     <control type="radiobutton" id="8305" description="Animate Artist slideshow">
                         <visible>ControlGroup(8000).HasFocus(8003)</visible>
@@ -460,7 +459,7 @@
                         <label>31118</label>
                         <selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
-                        <enable>Skin.HasSetting(musicvis.fanartfallback) | [Skin.HasSetting(ArtistSlideShow.Enabled) + System.HasAddon(script.artistslideshow)]</enable>
+                        <enable>Skin.HasSetting(musicvis.fanartfallback) | Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
                     </control>
                     <!-- Div -->
                     <control type="image" id="8306">

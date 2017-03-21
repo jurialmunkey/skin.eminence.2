@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
+    <variable name="Image_MusicVisualisation">
+        <value condition="Skin.HasSetting(ArtistSlideShow.Enabled) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ExtraFanart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.ExtraFanart)]</value>
+        <value condition="Skin.HasSetting(ArtistSlideShow.Enabled) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Fanart)]</value>
+        <value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
+    </variable>
     <variable name="Image_Poster">
         <value condition="[Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)] + Control.IsVisible(150) + !String.IsEmpty(Container(150).ListItem.Icon)">$INFO[Container(150).ListItem.Icon]</value>
         <value condition="[Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)] + Control.IsVisible(250) + !String.IsEmpty(Container(250).ListItem.Icon)">$INFO[Container(250).ListItem.Icon]</value>
