@@ -6,7 +6,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="wraplist" id="9001">
-                <visible>[!String.IsEmpty(Container(9002).ListItem.Property(widgetType))]</visible>
+                <visible>Integer.IsEqual(Window(Home).Property(MenuFocus),9002) + !String.IsEmpty(Container(9002).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
                 <orientation>horizontal</orientation>
@@ -35,7 +35,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="wraplist" id="9001">
-                <visible>String.IsEmpty(Container(9002).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuFocus),9002) | String.IsEmpty(Container(9002).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)]</visible>
                 <orientation>horizontal</orientation>

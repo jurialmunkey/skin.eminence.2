@@ -105,6 +105,7 @@
                 <right>0</right>
                 <bottom>0</bottom>
                 <height>266</height>
+                <onfocus>SetProperty(MenuFocus,9000,Home)</onfocus>
                 <onup condition="!Player.HasMedia + !Window.IsVisible(PlayerControls.xml)">SetProperty(FO9001,1,home)</onup>
                 <onup condition="!Player.HasMedia + !Window.IsVisible(PlayerControls.xml) + [[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]]">9001</onup>
                 <onup condition="Player.HasMedia + !Window.IsVisible(PlayerControls.xml)">9005</onup>
@@ -452,6 +453,7 @@
                 <onleft>noop</onleft>
                 <onright>noop</onright>
                 <scrolltime>200</scrolltime>
+                <onfocus>SetProperty(MenuFocus,9002,Home)</onfocus>
                 <orientation>horizontal</orientation>
                 <!-- Hack for Extended Info and Notification property setting -->
                 <onclick>SetFocus(9000)</onclick>

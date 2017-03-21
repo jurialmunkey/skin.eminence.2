@@ -255,9 +255,9 @@
     </variable>
 
     <variable name="Label_HomeWidget">
-        <value condition="String.IsEqual(Container(9002).ListItem.Property(widget),Weather) + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Weather.Location]</value>
-        <value condition="String.IsEqual(Container(9002).ListItem.Property(widget),SimilarMovies)">$INFO[Container(9001).ListItem.Property(originaltitle),$LOCALIZE[31125] ,]</value>
-        <value condition="!String.IsEmpty(Container(9002).ListItem.Property(widgetName))">$INFO[Container(9002).ListItem.Property(widgetName)]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(MenuFocus),9002) + String.IsEqual(Container(9002).ListItem.Property(widget),Weather) + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Weather.Location]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(MenuFocus),9002) + String.IsEqual(Container(9002).ListItem.Property(widget),SimilarMovies)">$INFO[Container(9001).ListItem.Property(originaltitle),$LOCALIZE[31125] ,]</value>
+        <value condition="Integer.IsEqual(Window(Home).Property(MenuFocus),9002) + !String.IsEmpty(Container(9002).ListItem.Property(widgetName))">$INFO[Container(9002).ListItem.Property(widgetName)]</value>
         <value condition="String.IsEqual(Container(9000).ListItem.Property(widget),Weather) + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Weather.Location]</value>
         <value condition="String.IsEqual(Container(9000).ListItem.Property(widget),SimilarMovies)">$INFO[Container(9001).ListItem.Property(originaltitle),$LOCALIZE[31125] ,]</value>
         <value condition="!String.IsEmpty(Container(9000).ListItem.Property(widgetName))">$INFO[Container(9000).ListItem.Property(widgetName)]</value>
