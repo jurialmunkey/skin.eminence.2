@@ -1874,6 +1874,16 @@
                     </control>
                 </control>
             </control>
+            <control type="group">
+                <width>100%</width>
+                <bottom>-1000</bottom>
+                <height>1016</height>
+                <visible>!Skin.HasSetting(global.hideobjectshadows)</visible>
+                <control type="image">
+                    <texture colordiffuse="00ffffff">common/white.png</texture>
+                    <include>Object_Background_Shadows</include>
+                </control>
+            </control>
             <control type="progress" description="cache">
                 <width>100%</width>
                 <bottom>0</bottom>

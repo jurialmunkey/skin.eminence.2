@@ -785,6 +785,14 @@
     </variable>
     <include name="Furniture_TopBar_Tile">
         <control type="image">
+            <posy>-6</posy>
+            <posx>-88</posx>
+            <width>324</width>
+            <height>212</height>
+            <visible>!Skin.HasSetting(global.hideobjectshadows)</visible>
+            <texture border="75">common/header-shadow-24.png</texture>
+        </control>
+        <control type="image">
             <posy>18</posy>
             <posx>-88</posx>
             <width>300</width>

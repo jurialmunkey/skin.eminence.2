@@ -37,6 +37,13 @@
                 <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
             </control>
             <control type="image">
+                <posx>-124</posx>
+                <top>-24</top>
+                <width>948</width>
+                <height>388</height>
+                <texture border="150">common/half-tile-shadow-24.png</texture>
+            </control>
+            <control type="image">
                 <posx>-100</posx>
                 <width>900</width>
                 <height>340</height>

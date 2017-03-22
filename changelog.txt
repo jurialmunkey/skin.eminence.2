@@ -2,6 +2,7 @@
 Fix Smart playlists
 Fix visibility of showcase close animation
 Add submenu widgets
+Add additional shadows to furniture items
 
 [B]2.5.36[/B]
 Add opacity control for fanart fade
