@@ -3,6 +3,7 @@ Fix Smart playlists
 Fix visibility of showcase close animation
 Add submenu widgets
 Add additional shadows to furniture items
+New viewtype mediainfo 3 (mediainfo2 with banners)
 
 [B]2.5.36[/B]
 Add opacity control for fanart fade

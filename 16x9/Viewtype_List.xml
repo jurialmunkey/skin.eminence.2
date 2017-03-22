@@ -96,14 +96,39 @@
             <right>bigpad</right>
             <top>bigpad</top>
             <height>posterh</height>
-            <include content="View_List">
-                <param name="viewlabel" value="31143" />
-                <param name="posx" value="0" />
-                <param name="width" value="listmediainfow" />
-                <param name="id" value="57" />
-                <param name="label3" value="false" />
-                <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]]" />
-            </include>
+            <control type="group">
+                <include content="View_List">
+                    <param name="viewlabel" value="31143" />
+                    <param name="posx" value="0" />
+                    <param name="width" value="listmediainfow" />
+                    <param name="id" value="57" />
+                    <param name="label3" value="false" />
+                    <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(seasons) + [String.IsEqual(Skin.String(Skin.ForcedView.seasons),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.seasons)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31143]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]]" />
+                </include>
+            </control>
+            <include>Object_ExtraInfo2</include>
+        </control>
+    </include>
+
+    <!-- MEDIA INFO 3 -->
+    <include name="Viewtype_MediaInfo3">
+        <control type="group">
+            <visible>Control.IsVisible(577)</visible>
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>bigpad</top>
+            <height>posterh</height>
+            <control type="group">
+                <width>720</width>
+                <include>Object_Background</include>
+                <include>Object_Scrollbar</include>
+                <include content="View_IconWide_List">
+                    <param name="id" value="577" />
+                    <param name="width" value="720" />
+                    <param name="name" value="$LOCALIZE[31022]" />
+                    <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31022]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31022]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] + !Skin.HasSetting(global.widescreen)" />
+                </include>
+            </control>
             <include>Object_ExtraInfo2</include>
         </control>
     </include>

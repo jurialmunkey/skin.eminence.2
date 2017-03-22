@@ -152,6 +152,17 @@
                         <visible>!Skin.HasSetting(SkinHelper.View.Disabled.57)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
                     </item>
+                    <!-- Media Info 3 -->
+                    <item>
+                        <label>31022</label>
+                        <icon>special://skin/extras/viewthumbs/577.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(577)</onclick>
+                        <visible>!Skin.HasSetting(global.widescreen)</visible>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.577)</visible>
+                        <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                    </item>
                     <!-- Info List -->
                     <item>
                         <label>31192</label>

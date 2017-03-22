@@ -353,6 +353,89 @@
         </definition>
     </include>
 
+    <include name="View_IconWide_List">
+        <param name="updownid" default="true" />
+        <param name="width" default="headlinew" />
+        <definition>
+            <control type="group">
+                <width>$PARAM[width]</width>
+                <control type="panel" id="$PARAM[id]">
+                    <top>15</top>
+                    <left>iconwidepanelpadw</left>
+                    <width>$PARAM[width]</width>
+                    <height>690</height>
+                    <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
+                    <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
+                    <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
+                    <ondown condition="!$PARAM[updownid]">$PARAM[ondown]</ondown>
+                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
+                    <onleft>60</onleft>
+                    <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[name]">wide</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="172.5" width="690">
+                        <control type="group">
+                            <left>iconwidepadw</left>
+                            <right>iconwidepadw</right>
+                            <bottom>16</bottom>
+                            <top>16</top>
+                            <control type="group">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <include>Object_Background</include>
+                                <control type="image">
+                                    <aspectratio>scale</aspectratio>
+                                    <texture background="true">$VAR[Image_Banner]</texture>
+                                </control>
+                            </control>
+                            <control type="image">
+                                <right>15</right>
+                                <top>15</top>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="172.5" width="690">
+                        <control type="group">
+                            <left>iconwidepadw</left>
+                            <right>iconwidepadw</right>
+                            <bottom>16</bottom>
+                            <top>16</top>
+                            <control type="image">
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>pad</left>
+                                <right>pad</right>
+                                <top>pad</top>
+                                <bottom>pad</bottom>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true">$VAR[Image_Banner]</texture>
+                            </control>
+                            <control type="image">
+                                <right>15</right>
+                                <top>15</top>
+                                <height>32</height>
+                                <width>32</width>
+                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
+                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <include name="View_IconFanart">
         <param name="updownid" default="true" />
         <param name="width" default="headlinew" />

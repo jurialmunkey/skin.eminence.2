@@ -4,6 +4,7 @@
     <!-- <view id="Plain List" value="552" languageid="31215" type="all" /> -->
     <view id="Media Info" value="51" languageid="544" type="seasons,movies,tvshows,episodes,sets,artists,songs,videos" />
     <view id="Media Info 2" value="57" languageid="31143" type="seasons,movies,tvshows,episodes,sets" />
+    <view id="Media Info 3" value="577" languageid="31022" type="movies,tvshows" />
     <view id="Info List" value="53" languageid="31192" type="seasons,sets,episodes,tvshows,movies,artists,albums,songs,videos" />
     <view id="Info List 2" value="553" languageid="31220" type="sets,tvshows,movies,episodes,artists,videos" />
     <view id="Fanart List" value="54" languageid="31164" type="seasons,movies,tvshows,episodes,sets,artists,videos" />

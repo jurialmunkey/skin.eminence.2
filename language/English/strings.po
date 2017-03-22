@@ -16,8 +16,6 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#Misc labels
-
 msgctxt "#31000"
 msgid "Item"
 msgstr ""
@@ -104,6 +102,11 @@ msgstr ""
 
 msgctxt "#31021"
 msgid "Show fanart"
+msgstr ""
+
+#: /16x9/Viewtype_List.xml
+msgctxt "#31022"
+msgid "Media Info 3"
 msgstr ""
 
 msgctxt "#31027"
