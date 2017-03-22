@@ -43,6 +43,7 @@
 
     <variable name="Image_PVRThumb">
         <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.FanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
+        <value condition="!String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         <value>special://skin/extras/backgrounds/home.jpg</value>
     </variable>
 
@@ -156,9 +157,10 @@
         <value condition="!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.FanArt)) + !Skin.HasSetting(global.fanart)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
 
-        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SettingsProfile.xml)">special://skin/extras/backgrounds/settings.jpg</value>
-
         <value condition="!String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
+
+        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SettingsProfile.xml)">special://skin/extras/backgrounds/settings.jpg</value>
+        
         <value>common/black.png</value>
     </variable>
 

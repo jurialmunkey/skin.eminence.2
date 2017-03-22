@@ -181,7 +181,7 @@
                 </control>
                 <control type="image">
                 	<visible>!Integer.IsGreater(Container(9500).NumItems,0)</visible>
-                	<texture>special://skin/extras/backgrounds/home.jpg</texture>
+                	<texture fallback="special://skin/extras/backgrounds/home.jpg">$INFO[Skin.String(background.fallback)]</texture>
                 </control>
             </control>
             <control type="group" description="hub side">
