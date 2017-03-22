@@ -461,6 +461,20 @@
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
                         <enable>Skin.HasSetting(musicvis.fanartfallback) | Skin.HasSetting(ArtistSlideShow.Enabled)</enable>
                     </control>
+                    <control type="radiobutton" id="8309" description="Video Lyrics">
+                        <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                        <width>100%</width>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <label>$LOCALIZE[31023]</label>
+                        <selected>!Skin.HasSetting(DisableVideoLyrics)</selected>
+                        <onclick>Skin.ToggleSetting(DisableVideoLyrics)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <onclick>SetFocus(8003)</onclick>
+                        <onclick>AlarmClock(setfo,SetFocus(8309),00:00,silent)</onclick>
+                        <enable>System.HasAddon(script.cu.lrclyrics)</enable>
+                    </control>
                     <!-- Div -->
                     <control type="image" id="8306">
                         <width>100%</width>
@@ -890,6 +904,8 @@
                         <selected>!Skin.HasSetting(global.hideobjectshadows)</selected>
                         <onclick>Skin.ToggleSetting(global.hideobjectshadows)</onclick>
                         <onclick>ReloadSkin()</onclick>
+                        <onclick>SetFocus(8009)</onclick>
+                        <onclick>AlarmClock(setfo,SetFocus(8902),00:00,silent)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
@@ -913,6 +929,8 @@
                         <selected>!Skin.HasSetting(global.widescreen)</selected>
                         <onclick>Skin.ToggleSetting(global.widescreen)</onclick>
                         <onclick>ReloadSkin()</onclick>
+                        <onclick>SetFocus(8009)</onclick>
+                        <onclick>AlarmClock(setfo,SetFocus(8903),00:00,silent)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>

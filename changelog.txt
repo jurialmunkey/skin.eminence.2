@@ -4,6 +4,8 @@ Fix visibility of showcase close animation
 Add submenu widgets
 Add additional shadows to furniture items
 New viewtype mediainfo 3 (mediainfo2 with banners)
+VideoLyrics
+Fix focus of items that need to reload skin in skin settings
 
 [B]2.5.36[/B]
 Add opacity control for fanart fade

@@ -109,6 +109,11 @@ msgctxt "#31022"
 msgid "Media Info 3"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31023"
+msgid "Enable animated video lyrics"
+msgstr ""
+
 msgctxt "#31027"
 msgid "Show background video"
 msgstr ""

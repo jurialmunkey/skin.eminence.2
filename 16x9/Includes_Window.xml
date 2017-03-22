@@ -1351,7 +1351,6 @@
     <include name="Window_OSD">
         <control type="group">
             <visible>![Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)]</visible>
-            <!-- <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml) | !Window.IsVisible(MusicVisualisation.xml)</visible> -->
             <animation type="WindowOpen">
                 <effect type="slide" start="0,64" end="0" time="175" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -1602,7 +1601,7 @@
                             <left>40</left>
                             <bottom>10</bottom>
                             <right>0</right>
-                            <animation effect="slide" start="0" end="0,-400" time="200" condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation>
+                            <animation effect="slide" start="0" end="0,-400" time="200" condition="Window.IsVisible(script-cu-lrclyrics-main.xml) + Skin.HasSetting(DisableVideoLyrics)">Conditional</animation>
                             <control type="label">
                                 <aligny>top</aligny>
                                 <height>105</height>
