@@ -1004,6 +1004,16 @@
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8009)</visible>
                     </control>
+                    <control type="radiobutton" id="8917">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>$LOCALIZE[31024]</label>
+                        <selected>Skin.HasSetting(DebugInfo)</selected>
+                        <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                    </control>
 
                     <!-- RESET -->
                     <control type="label" id="8979">
