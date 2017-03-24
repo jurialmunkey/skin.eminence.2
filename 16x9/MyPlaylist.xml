@@ -13,6 +13,7 @@
 
         <!-- Main group -->
         <control type="group">
+            <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container.NumItems,0)">Conditional</animation>
             <include>Defs_ViewBackground</include>
             <include content="Object_Headline">
                 <param name="label" value="$VAR[Label_SortLine]" />
