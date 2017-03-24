@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-02-13 11:13+0100\n"
+"PO-Revision-Date: 2017-03-24 13:34+0100\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.8.12\n"
 
 # Misc labels
 msgctxt "#31000"
@@ -105,6 +105,11 @@ msgstr "Tło"
 msgctxt "#31021"
 msgid "Show fanart"
 msgstr "Pokazuj fototapetę"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31024"
+msgid "Enable skin debug info"
+msgstr "Pokazuj informacje diagnostyczne"
 
 msgctxt "#31027"
 msgid "Show background video"
@@ -732,7 +737,7 @@ msgstr "Wizytownik"
 
 msgctxt "#31200"
 msgid "by"
-msgstr "autorstwa"
+msgstr "według"
 
 msgctxt "#31201"
 msgid "on"
@@ -845,4 +850,3 @@ msgstr "Czy chcesz go odblokować i ustawić jako nowy tryb widoku?"
 msgctxt "#31235"
 msgid "Fanart fade opacity (default is 90%)"
 msgstr "Nieprzezroczystość fototapet (domyślnie 90%)"
-
