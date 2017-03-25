@@ -475,6 +475,26 @@
                         <onclick>AlarmClock(setfo,SetFocus(8309),00:00,silent)</onclick>
                         <enable>System.HasAddon(script.cu.lrclyrics)</enable>
                     </control>
+                    <control type="radiobutton" id="8311" description="Show colour overlay">
+                        <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                        <width>100%</width>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <label>$LOCALIZE[31025]</label>
+                        <selected>!Skin.HasSetting(HideOSDDiffuseColors)</selected>
+                        <onclick>Skin.ToggleSetting(HideOSDDiffuseColors)</onclick>
+                    </control>
+                    <control type="radiobutton" id="8312" description="Show scrolling background text">
+                        <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                        <width>100%</width>
+                        <radioposx>settingsradioposx</radioposx>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <label>$LOCALIZE[31026]</label>
+                        <selected>!Skin.HasSetting(HideOSDScrollingText)</selected>
+                        <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
+                    </control>
                     <!-- Div -->
                     <control type="image" id="8306">
                         <width>100%</width>

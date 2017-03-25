@@ -103,6 +103,23 @@
             <size>42</size>
         </font>
 
+        <!-- Music Vis -->
+        <font>
+            <name>Font-MusicVis-Biggest</name>
+            <filename>Roboto-Light.ttf</filename>
+            <size>230</size>
+        </font>
+        <font>
+            <name>Font-MusicVis-Bigger</name>
+            <filename>Roboto-Light.ttf</filename>
+            <size>130</size>
+        </font>
+        <font>
+            <name>Font-MusicVis-Big</name>
+            <filename>Roboto-Light.ttf</filename>
+            <size>80</size>
+        </font>
+
         <!-- Video Lyrics -->
         <font>
             <name>lyr1</name>

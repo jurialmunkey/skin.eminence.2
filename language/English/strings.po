@@ -119,6 +119,16 @@ msgctxt "#31024"
 msgid "Enable skin debug info"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31025"
+msgid "Show colour diffuse overlay"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31026"
+msgid "Show scrolling background text"
+msgstr ""
+
 msgctxt "#31027"
 msgid "Show background video"
 msgstr ""
