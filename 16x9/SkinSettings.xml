@@ -482,8 +482,8 @@
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <label>$LOCALIZE[31025]</label>
-                        <selected>!Skin.HasSetting(HideOSDDiffuseColors)</selected>
-                        <onclick>Skin.ToggleSetting(HideOSDDiffuseColors)</onclick>
+                        <selected>Skin.HasSetting(ShowOSDDiffuseColors)</selected>
+                        <onclick>Skin.ToggleSetting(ShowOSDDiffuseColors)</onclick>
                     </control>
                     <control type="radiobutton" id="8312" description="Show scrolling background text">
                         <visible>ControlGroup(8000).HasFocus(8003)</visible>
@@ -492,8 +492,8 @@
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <label>$LOCALIZE[31026]</label>
-                        <selected>!Skin.HasSetting(HideOSDScrollingText)</selected>
-                        <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
+                        <selected>Skin.HasSetting(ShowOSDScrollingText)</selected>
+                        <onclick>Skin.ToggleSetting(ShowOSDScrollingText)</onclick>
                     </control>
                     <!-- Div -->
                     <control type="image" id="8306">

@@ -34,11 +34,11 @@
             <colordiffuse>9fffffff</colordiffuse>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-            <visible>!Skin.HasSetting(HideOSDDiffuseColors)</visible>
+            <visible>Skin.HasSetting(ShowOSDDiffuseColors)</visible>
         </control>
 
         <control type="group" id="3334">
-            <visible>!Skin.HasSetting(HideOSDScrollingText)</visible>
+            <visible>Skin.HasSetting(ShowOSDScrollingText)</visible>
             <visible>![Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
             <animation effect="fade" time="600" delay="600">Visible</animation>
             <animation effect="fade" time="600">Hidden</animation>
