@@ -270,6 +270,7 @@
     <variable name="Label_Hub_WidgetType">
         <value condition="!Integer.IsGreater(Container(9500).NumItems,0)">$LOCALIZE[31212]</value>
         <value condition="Skin.HasSetting(furniture.hidehubplot)">$VAR[Label_Hub_WidgetLabel]$VAR[Label_Hub_WidgetLabel2,  •  ,]</value>
+        <value condition="!String.IsEmpty(Container(9501).ListItem.Property(widgetName))">$INFO[Container(9501).ListItem.Property(widgetName)]</value>
         <value condition="Window.IsVisible(1101) + !String.IsEmpty(Skin.String(Widget.1101.Label))">$INFO[Skin.String(Widget.1101.Label)]</value>
         <value condition="Window.IsVisible(1102) + !String.IsEmpty(Skin.String(Widget.1102.Label))">$INFO[Skin.String(Widget.1102.Label)]</value>
         <value condition="Window.IsVisible(1103) + !String.IsEmpty(Skin.String(Widget.1103.Label))">$INFO[Skin.String(Widget.1103.Label)]</value>

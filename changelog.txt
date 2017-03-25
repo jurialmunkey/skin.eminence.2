@@ -1,6 +1,7 @@
 [B]2.5.38[/B]
 Add colour diffuse overlay for music vis
 Add scrolling text for music vis
+Add multiple widgets per hub
 
 [B]2.5.37[/B]
 Fix Smart playlists

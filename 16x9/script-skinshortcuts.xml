@@ -150,7 +150,7 @@
                     <label>Widget</label>
                     <label2>$VAR[Label_ShortcutsWidget]</label2>
                     <include>Defs_OptionButton</include>
-                    <visible>!String.Contains(Window.Property(groupname),x11)</visible>
+                    <!-- <visible>!String.Contains(Window.Property(groupname),x11)</visible> -->
                 </control>
 
                 <control type="radiobutton" id="9702" description="PosterWidget">
