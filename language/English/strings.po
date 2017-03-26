@@ -137,6 +137,11 @@ msgctxt "#31028"
 msgid "Show background visualisation"
 msgstr ""
 
+#: /16x9/Includes_Label.xml
+msgctxt "#31029"
+msgid "Hub fallback widget"
+msgstr ""
+
 msgctxt "#31031"
 msgid "Recent movies"
 msgstr ""

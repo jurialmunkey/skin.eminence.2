@@ -61,6 +61,15 @@
     <variable name="Label_ShortcutsWidget">
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(background))">$LOCALIZE[31188]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1101)">$INFO[Skin.String(Widget.1101.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1102)">$INFO[Skin.String(Widget.1102.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1103)">$INFO[Skin.String(Widget.1103.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1104)">$INFO[Skin.String(Widget.1104.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1105)">$INFO[Skin.String(Widget.1105.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1106)">$INFO[Skin.String(Widget.1106.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1107)">$INFO[Skin.String(Widget.1107.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1108)">$INFO[Skin.String(Widget.1108.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1109)">$INFO[Skin.String(Widget.1109.Label),$LOCALIZE[31029] (,)]</value>
         <value>$LOCALIZE[31147]$INFO[Skin.String(home.fallbackwidget.name), (,)]</value>
     </variable>
 
