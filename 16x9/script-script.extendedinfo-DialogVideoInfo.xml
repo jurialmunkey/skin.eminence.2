@@ -415,6 +415,26 @@
                             <onclick>SetFocus(950)</onclick>
                             <enable>Integer.IsGreater(Container(950).NumItems,0)</enable>
                         </control>
+
+                        <control type="button" id ="9009">
+                            <description>Add to trakt</description>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton3</include>
+                            <onclick>XBMC.RunPlugin(plugin://plugin.video.trakt_list_manager/movies/add?title=$INFO[Window.Property(label)])</onclick>
+                            <label>Trakt</label>
+                            <visible>System.HasAddon(plugin.video.trakt_list_manager)</visible>
+                        </control>
+
+                        <control type="button" id ="445">
+                            <description>Manage</description>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <onback>SetProperty(extinfo,1,home)</onback>
+                            <onfocus>ClearProperty(content)</onfocus>
+                            <include>Defs_OptionButton3</include>
+                            <label>$ADDON[script.extendedinfo 32133]</label>
+                        </control>
                         
 
                         <control type="button" id="9998">
