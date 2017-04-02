@@ -24,5 +24,19 @@
         <license>CC-NC-SA 3.0</license>
         <website></website>
         <email></email>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>extras/viewthumbs/50.jpg</screenshot>
+            <screenshot>extras/viewthumbs/51.jpg</screenshot>
+            <screenshot>extras/viewthumbs/52.jpg</screenshot>
+            <screenshot>extras/viewthumbs/53.jpg</screenshot>
+            <screenshot>extras/viewthumbs/54.jpg</screenshot>
+            <screenshot>extras/viewthumbs/55.jpg</screenshot>
+            <screenshot>extras/viewthumbs/56.jpg</screenshot>
+            <screenshot>extras/viewthumbs/57.jpg</screenshot>
+            <screenshot>extras/viewthumbs/58.jpg</screenshot>
+            <screenshot>extras/viewthumbs/59.jpg</screenshot>
+        </assets>
     </extension>
 </addon>
