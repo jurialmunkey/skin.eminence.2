@@ -132,9 +132,11 @@
                                             <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
                                             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
                                         </control>
-                                        <control type="image">
+                                        <control type="group">
                                             <include>WatchedOverlayShowCase</include>
-                                            <texture>$VAR[IconOverlay-1Var]</texture>
+                                            <include content="Defs_WatchedOverlay">
+                                                <param name="pos" value="-1" />
+                                            </include>
                                         </control>
                                     </control>
                                 </control>
@@ -249,9 +251,11 @@
                                             <include condition="Window.IsVisible(MyVideoNav.xml)">MovieShowcaseThumb</include>
                                             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
                                         </control>
-                                        <control type="image">
+                                        <control type="group">
                                             <include>WatchedOverlayShowCase</include>
-                                            <texture>$VAR[IconOverlay1Var]</texture>
+                                            <include content="Defs_WatchedOverlay">
+                                                <param name="pos" value="1" />
+                                            </include>
                                         </control>
                                     </control>
                                 </control>
@@ -457,12 +461,10 @@
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
     </include>
     <include name="WatchedOverlayShowCase">
-        <left>230</left>
-        <top>-10</top>
+        <left>224</left>
+        <top>-4</top>
         <width>80</width>
         <height>80</height>
-        <fadetime>0</fadetime>
-        <bordersize>20</bordersize>
     </include>
     <include name="MovieShowCaseItem-7">
         <visible>Control.IsVisible(535) + Integer.IsGreater(Container.NumItems,0)</visible>
@@ -520,9 +522,11 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay-1Var]</texture>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="-1" />
+            </include>
         </control>
     </include>
     <include name="MovieShowCaseItem0">
@@ -532,9 +536,9 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay0Var]</texture>
+            <include>Defs_WatchedOverlay</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
     </include>
@@ -545,9 +549,11 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay1Var]</texture>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="1" />
+            </include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
     </include>
@@ -558,9 +564,11 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay2Var]</texture>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="2" />
+            </include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
     </include>
@@ -571,9 +579,11 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay3Var]</texture>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="3" />
+            </include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
     </include>
@@ -584,9 +594,11 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay4Var]</texture>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="4" />
+            </include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
     </include>
@@ -597,9 +609,11 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay5Var]</texture>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="5" />
+            </include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
     </include>
@@ -610,9 +624,11 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay6Var]</texture>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="6" />
+            </include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
     </include>
@@ -623,9 +639,11 @@
             <include condition="Window.IsVisible(MyMusicNav.xml)">MusicShowcaseThumb</include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
-        <control type="image">
+        <control type="group">
             <include>WatchedOverlayShowCase</include>
-            <texture>$VAR[IconOverlay7Var]</texture>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="7" />
+            </include>
             <visible>Integer.IsGreater(Container.NumItems,0)</visible>
         </control>
     </include>
@@ -715,48 +733,6 @@
         <value condition="Container.Content(genres)">$INFO[ListItem(9).Label,special://skin/extras/moviegenres/,.jpg]</value>
         <value>$INFO[ListItem(9).Icon]</value>
     </variable>
-    <variable name="IconOverlay-1Var">
-        <value condition="ListItem(-1).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(-1).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay0Var">
-        <value condition="ListItem.IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay1Var">
-        <value condition="ListItem(1).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(1).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay2Var">
-        <value condition="ListItem(2).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(2).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay3Var">
-        <value condition="ListItem(3).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(3).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay4Var">
-        <value condition="ListItem(4).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(4).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay5Var">
-        <value condition="ListItem(5).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(5).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay6Var">
-        <value condition="ListItem(6).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(6).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay7Var">
-        <value condition="ListItem(7).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(7).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay8Var">
-        <value condition="ListItem(8).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(8).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
-    <variable name="IconOverlay9Var">
-        <value condition="ListItem(9).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">indicator/inprogress.png</value>
-        <value condition="String.IsEqual(ListItem(9).Overlay,OverlayWatched.png)">indicator/checkmark.png</value>
-    </variable>
+    
+
 </includes>
