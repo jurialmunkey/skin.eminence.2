@@ -38,13 +38,10 @@
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
-                        <control type="image">
-                            <right>15</right>
-                            <top>15</top>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        <control type="group">
+                            <right>-10</right>
+                            <top>-10</top>
+                            <include>Defs_WatchedOverlay</include>
                         </control>
                     </control>
                 </itemlayout>
@@ -61,13 +58,10 @@
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
-                        <control type="image">
-                            <right>15</right>
-                            <top>15</top>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        <control type="group">
+                            <right>-10</right>
+                            <top>-10</top>
+                            <include>Defs_WatchedOverlay</include>
                         </control>
                     </control>
                 </focusedlayout>
@@ -78,29 +72,39 @@
                 <width>440</width>
                 <height>660</height>
                 <control type="image">
+                    <left>-10</left>
+                    <right>-10</right>
+                    <top>-10</top>
+                    <bottom>-10</bottom>
+                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                    <visible>Control.HasFocus(52)</visible>
+                </control>
+                <control type="image">
                     <texture colordiffuse="ff181818">common/white.png</texture>
                 </control>
                 <control type="image">
                     <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                     <texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
-                    <fadetime>300</fadetime>
+                    <visible>!Control.HasFocus(52)</visible>
                 </control>
-                <!-- <control type="image">
-                    <left>-10</left>
+                <control type="group">
                     <right>-10</right>
                     <top>-10</top>
-                    <bottom>-10</bottom>
-                    <texture colordiffuse="$VAR[HighlightColor]" border="12">common/border.png</texture>
-                    <visible>Control.HasFocus(52)</visible>
-                </control> -->
+                    <visible>!Control.HasFocus(52)</visible>
+                    <include>Defs_WatchedOverlay</include>
+                </control>
                 <control type="image">
-                    <right>15</right>
-                    <top>15</top>
-                    <height>32</height>
-                    <width>32</width>
-                    <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                    <texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
+                    <fadetime>300</fadetime>
+                    <visible>Control.HasFocus(52)</visible>
+                </control>
+                <control type="group">
+                    <right>-10</right>
+                    <top>-10</top>
+                    <visible>Control.HasFocus(52)</visible>
+                    <include>Defs_WatchedOverlay_Focus</include>
                 </control>
             </control>
             <control type="group">
@@ -198,13 +202,10 @@
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true">$VAR[Image_Poster]</texture>
                         </control>
-                        <control type="image">
-                            <right>15</right>
-                            <top>15</top>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                        <control type="group">
+                            <right>-10</right>
+                            <top>-10</top>
+                            <include>Defs_WatchedOverlay</include>
                         </control>
                     </control>
                 </itemlayout>
@@ -215,29 +216,39 @@
                         <left>15</left>
                         <right>15</right>
                         <height>456.6</height>
-
-                        <control type="image">
-                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
-                            <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-                            <texture background="true">$VAR[Image_Poster]</texture>
-                        </control>
-                        <control type="image">
-                            <right>15</right>
-                            <top>15</top>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                        </control>
-
                         <control type="image">
                             <left>-10</left>
                             <right>-10</right>
                             <top>-10</top>
                             <bottom>-10</bottom>
-                            <texture colordiffuse="$VAR[HighlightColor]" border="12">common/border.png</texture>
+                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                             <visible>Control.HasFocus(525)</visible>
                         </control>
+                        <control type="image">
+                            <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                            <visible>Control.HasFocus(525)</visible>
+                        </control>
+                        <control type="group">
+                            <right>-10</right>
+                            <top>-10</top>
+                            <include>Defs_WatchedOverlay_Focus</include>
+                            <visible>Control.HasFocus(525)</visible>
+                        </control>
+                        <control type="image">
+                            <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                            <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                            <texture background="true">$VAR[Image_Poster]</texture>
+                            <visible>!Control.HasFocus(525)</visible>
+                        </control>
+                        <control type="group">
+                            <right>-10</right>
+                            <top>-10</top>
+                            <include>Defs_WatchedOverlay</include>
+                            <visible>!Control.HasFocus(525)</visible>
+                        </control>
+
+                        
                     </control>
                 </focusedlayout>
             </control>

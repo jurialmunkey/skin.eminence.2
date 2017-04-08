@@ -158,14 +158,7 @@
                                 <visible>![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]</visible>
                             </control>
                         </control>
-                        <control type="image">
-                            <right>15</right>
-                            <top>15</top>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                        </control>
+                        <include>Defs_WatchedOverlay</include>
                     </control>
                 </itemlayout>
                 <itemlayout height="115" width="$PARAM[icongenreitemw]" condition="[Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
@@ -232,14 +225,7 @@
                             <texture background="true">$VAR[Image_Poster]</texture>
                             <visible>![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]</visible>
                         </control>
-                        <control type="image">
-                            <right>15</right>
-                            <top>15</top>
-                            <height>32</height>
-                            <width>32</width>
-                            <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                            <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                        </control>
+                        <include>Defs_WatchedOverlay_Focus</include>
                     </control>
                 </focusedlayout>
                 <focusedlayout height="115" width="$PARAM[icongenreitemw]" condition="[Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(countries) | Container.Content(directors)]">
@@ -311,14 +297,7 @@
                                     <texture background="true">$VAR[Image_Banner]</texture>
                                 </control>
                             </control>
-                            <control type="image">
-                                <right>15</right>
-                                <top>15</top>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                            </control>
+                            <include>Defs_WatchedOverlay</include>
                         </control>
                     </itemlayout>
                     <focusedlayout height="138" width="iconwideitemw">
@@ -338,14 +317,7 @@
                                 <aspectratio>scale</aspectratio>
                                 <texture background="true">$VAR[Image_Banner]</texture>
                             </control>
-                            <control type="image">
-                                <right>15</right>
-                                <top>15</top>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                            </control>
+                            <include>Defs_WatchedOverlay_Focus</include>
                         </control>
                     </focusedlayout>
                 </control>
@@ -394,14 +366,7 @@
                                     <texture background="true">$VAR[Image_Banner]</texture>
                                 </control>
                             </control>
-                            <control type="image">
-                                <right>15</right>
-                                <top>15</top>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                            </control>
+                            <include>Defs_WatchedOverlay</include>
                         </control>
                     </itemlayout>
                     <focusedlayout height="172.5" width="690">
@@ -421,14 +386,7 @@
                                 <aspectratio>scale</aspectratio>
                                 <texture background="true">$VAR[Image_Banner]</texture>
                             </control>
-                            <control type="image">
-                                <right>15</right>
-                                <top>15</top>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                            </control>
+                            <include>Defs_WatchedOverlay_Focus</include>
                         </control>
                     </focusedlayout>
                 </control>
@@ -478,14 +436,7 @@
                                     <texture background="true">$VAR[Image_Thumb]</texture>
                                 </control>
                             </control>
-                            <control type="image">
-                                <right>15</right>
-                                <top>15</top>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                            </control>
+                            <include>Defs_WatchedOverlay</include>
                             <control type="image">
                                 <left>pad</left>
                                 <right>pad</right>
@@ -519,7 +470,7 @@
                             <bottom>5</bottom>
                             <top>5</top>
                             <control type="image">
-                                <texture colordiffuse="$VAR[HighlightColor]" border="12">common/border.png</texture>
+                                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                             </control>
                             <control type="group">
                                 <left>pad</left>
@@ -531,14 +482,7 @@
                                     <texture background="true">$VAR[Image_Thumb]</texture>
                                 </control>
                             </control>
-                            <control type="image">
-                                <right>15</right>
-                                <top>15</top>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture colordiffuse="ListLabel">$VAR[Image_Indicator]</texture>
-                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
-                            </control>
+                            <include>Defs_WatchedOverlay_Focus</include>
                             <control type="image">
                                 <left>pad</left>
                                 <right>pad</right>

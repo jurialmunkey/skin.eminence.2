@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
+    <include name="Defs_WatchedOverlay">
+        <control type="image">
+            <top>10</top>
+            <right>10</right>
+            <width>56</width>
+            <height>56</height>
+            <texture colordiffuse="ff000000">$VAR[Image_Overlay_Corner]</texture>
+        </control>
+        <control type="image">
+            <top>12</top>
+            <right>12</right>
+            <width>28</width>
+            <height>28</height>
+            <texture>$VAR[Image_Overlay]</texture>
+        </control>
+    </include>
+    <include name="Defs_WatchedOverlay_Focus">
+        <control type="image">
+            <top>10</top>
+            <right>10</right>
+            <width>56</width>
+            <height>56</height>
+            <texture colordiffuse="$VAR[HighlightColor]">$VAR[Image_Overlay_Corner]</texture>
+        </control>
+        <control type="image">
+            <top>12</top>
+            <right>12</right>
+            <width>28</width>
+            <height>28</height>
+            <texture colordiffuse="ff000000">$VAR[Image_Overlay]</texture>
+        </control>
+    </include>
+
     <include name="Defs_DialogInfo_PosterLeft"><left>500</left></include>
     <include name="Defs_DialogInfo_SquareLeft"><left>740</left></include>
     <variable name="Defs_SpinnerTexture">
