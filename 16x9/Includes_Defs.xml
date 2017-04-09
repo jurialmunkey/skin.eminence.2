@@ -18,10 +18,23 @@
                 <height>28</height>
                 <texture>$VAR[Image_Overlay$PARAM[pos]]</texture>
             </control>
+            <control type="label">
+                <top>12</top>
+                <right>12</right>
+                <width>28</width>
+                <height>28</height>
+                <font>Font-NumEpisodes</font>
+                <align>center</align>
+                <textcolor>ffcccccc</textcolor>
+                <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                <visible>Skin.HasSetting(Indicator.UnwatchedEpisodes)</visible>
+                <visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
+            </control>
         </definition>
     </include>
     <include name="Defs_WatchedOverlay_Focus">
         <param name="pos" default="" />
+        <param name="corner" default="true" />
         <definition>
             <control type="image">
                 <top>10</top>
@@ -29,6 +42,7 @@
                 <width>56</width>
                 <height>56</height>
                 <texture colordiffuse="$VAR[HighlightColor]">$VAR[Image_Overlay_Corner$PARAM[pos]]</texture>
+                <visible>$PARAM[corner]</visible>
             </control>
             <control type="image">
                 <top>12</top>
@@ -36,6 +50,18 @@
                 <width>28</width>
                 <height>28</height>
                 <texture colordiffuse="ff000000">$VAR[Image_Overlay$PARAM[pos]]</texture>
+            </control>
+            <control type="label">
+                <top>12</top>
+                <right>12</right>
+                <width>28</width>
+                <height>28</height>
+                <font>Font-NumEpisodes</font>
+                <align>center</align>
+                <textcolor>Selected</textcolor>
+                <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                <visible>Skin.HasSetting(Indicator.UnwatchedEpisodes)</visible>
+                <visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
             </control>
         </definition>
     </include>

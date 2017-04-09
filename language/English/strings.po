@@ -142,12 +142,22 @@ msgctxt "#31029"
 msgid "Hub fallback widget"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31030"
+msgid "Watched/UnWatched Indicators"
+msgstr ""
+
 msgctxt "#31031"
 msgid "Recent movies"
 msgstr ""
 
 msgctxt "#31032"
 msgid "Recommended movies"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31033"
+msgid "Watched / Unwatched Indicators"
 msgstr ""
 
 msgctxt "#31034"
@@ -162,12 +172,32 @@ msgctxt "#31036"
 msgid "Recommended episodes"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31037"
+msgid "Watched (checkmark)"
+msgstr ""
+
 msgctxt "#31038"
 msgid "Recent albums"
 msgstr ""
 
 msgctxt "#31039"
 msgid "Recommended albums"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31040"
+msgid "Recently added (star)"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31041"
+msgid "Resumable (progress circle)"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31042"
+msgid "Unwatched episodes (numeric counter)"
 msgstr ""
 
 msgctxt "#31043"

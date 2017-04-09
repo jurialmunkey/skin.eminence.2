@@ -1,3 +1,10 @@
+[B]2.5.39[/B]
+New indicator style
+Options for disabling indicators on icon views
+Add indicator for number of unwatched episodes on icon views
+Add overlay backgrounds
+Fix issue with DialogSelect and ParentFolder items
+
 [B]2.5.38[/B]
 Add colour diffuse overlay for music vis
 Add scrolling text for music vis

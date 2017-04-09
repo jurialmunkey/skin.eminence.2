@@ -370,7 +370,7 @@
                         <width>100%</width>
                         <label>31159</label>
                         <label2>$VAR[Label_SkinSetting_GlobalOverlay]</label2>
-                        <onclick condition="String.IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background,special://skin/extras/backgrounds/overlays/)</onclick>
                         <onclick condition="!String.IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
@@ -747,6 +747,62 @@
                         <label>31231</label>
                         <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
                         <selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    <!-- Div Indicators Label -->
+                    <control type="image" id="8510">
+                        <width>100%</width>
+                        <height>72</height>
+                        <texture border="30">common/div.png</texture>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    <control type="label" id="8511">
+                        <width>100%</width>
+                        <label>$LOCALIZE[31033]</label>
+                        <height>72</height>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    <control type="radiobutton" id="8512">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>$LOCALIZE[31037]</label>
+                        <onclick>Skin.ToggleSetting(Indicator.Watched)</onclick>
+                        <selected>!Skin.HasSetting(Indicator.Watched)</selected>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    <control type="radiobutton" id="8513">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>$LOCALIZE[31040]</label>
+                        <onclick>Skin.ToggleSetting(Indicator.New)</onclick>
+                        <selected>!Skin.HasSetting(Indicator.New)</selected>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    <control type="radiobutton" id="8514">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>$LOCALIZE[31041]</label>
+                        <onclick>Skin.ToggleSetting(Indicator.Resume)</onclick>
+                        <selected>!Skin.HasSetting(Indicator.Resume)</selected>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                    </control>
+                    <control type="radiobutton" id="8515">
+                        <radioposx>settingsradioposx</radioposx>
+                        <width>100%</width>
+                        <label>$LOCALIZE[31042]</label>
+                        <onclick>Skin.ToggleSetting(Indicator.UnWatchedEpisodes)</onclick>
+                        <selected>Skin.HasSetting(Indicator.UnWatchedEpisodes)</selected>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8005)</visible>

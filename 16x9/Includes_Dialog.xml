@@ -515,7 +515,7 @@
                         </control>
                     </control>
                 </itemlayout>
-                <itemlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)]  | [String.StartsWith(ListItem.FolderPath,special://skin/extras/) + String.IsEqual(ListItem.Label,..)]]">
+                <itemlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)]  | [String.StartsWith(Container($PARAM[id]).ListItem(1).FolderPath,special://skin/extras/icons/) + String.IsEqual(ListItem.Label,..)]]">
                     <control type="group">
                         <left>$PARAM[pad]</left>
                         <control type="image">
@@ -563,7 +563,7 @@
                         </control>
                     </control>
                 </itemlayout>
-                <itemlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)]  | [String.StartsWith(ListItem.FolderPath,special://skin/extras/) + String.IsEqual(ListItem.Label,..)]]">
+                <itemlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)]  | [String.StartsWith(Container($PARAM[id]).ListItem(1).FolderPath,special://skin/extras/icons/) + String.IsEqual(ListItem.Label,..)]]">
 
                     <control type="image">
                         <centerleft>50%</centerleft>
@@ -596,7 +596,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)] | [String.StartsWith(ListItem.FolderPath,special://skin/extras/) + String.IsEqual(ListItem.Label,..)]]">
+                <focusedlayout width="$PARAM[width]" height="144" condition="!$PARAM[noimage] + ![[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)] | [String.StartsWith(Container($PARAM[id]).ListItem(1).FolderPath,special://skin/extras/icons/) + String.IsEqual(ListItem.Label,..)]]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>
@@ -649,7 +649,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)] | [String.StartsWith(ListItem.FolderPath,special://skin/extras/) + String.IsEqual(ListItem.Label,..)]]">
+                <focusedlayout width="139.75" height="144" condition="!$PARAM[noimage] + [[String.StartsWith(ListItem.FolderPath,special://skin/extras/icons/) + !String.IsEqual(ListItem.Label,icons)] | [String.StartsWith(Container($PARAM[id]).ListItem(1).FolderPath,special://skin/extras/icons/) + String.IsEqual(ListItem.Label,..)]]">
                     <control type="image">
                         <width>100%</width>
                         <height>100%</height>

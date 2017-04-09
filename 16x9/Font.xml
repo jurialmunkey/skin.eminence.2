@@ -59,6 +59,11 @@
             <style>uppercase</style>
         </font>
         <font>
+            <name>Font-NumEpisodes</name>
+            <filename>Roboto-Black.ttf</filename>
+            <size>16</size>
+        </font>
+        <font>
             <name>Font-RSS</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>24</size>

@@ -553,6 +553,7 @@
             <top>bigpad</top>
             <height>posterh</height>
             <include>Object_BigFanart</include>
+            
             <include content="View_List">
                 <param name="viewlabel" value="31164" />
                 <param name="posx" value="0" />
@@ -751,6 +752,7 @@
             <control type="image">
                 <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
             </control>
+            
             
             <!-- Detailed List -->
             <control type="group">
