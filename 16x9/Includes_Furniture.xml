@@ -645,11 +645,24 @@
             <width>100%</width>
             <height>100%</height>
             <fadetime>1000</fadetime>
+            <animation effect="fade" end="30" condition="true">Conditional</animation>
+            <texture colordiffuse="$VAR[HighlightColor]">$INFO[Skin.String(global.background)]</texture>
+            <visible>!String.IsEmpty(Skin.String(global.background))</visible>
+            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+            <visible>Skin.HasSetting(overlay.colourfilter)</visible>
+        </control>
+        <control type="image" description="Background Overlay">
+            <width>100%</width>
+            <height>100%</height>
+            <fadetime>1000</fadetime>
             <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
             <visible>!String.IsEmpty(Skin.String(global.background))</visible>
             <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
             <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
             <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+            <visible>!Skin.HasSetting(overlay.colourfilter)</visible>
         </control>
     </include>
 

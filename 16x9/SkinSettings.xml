@@ -370,8 +370,24 @@
                         <width>100%</width>
                         <label>31159</label>
                         <label2>$VAR[Label_SkinSetting_GlobalOverlay]</label2>
-                        <onclick condition="String.IsEmpty(Skin.String(global.background))">Skin.SetImage(global.background,special://skin/extras/backgrounds/overlays/)</onclick>
-                        <onclick condition="!String.IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(global.background)) | Skin.HasSetting(overlay.colourfilter)">Skin.SetImage(global.background,special://skin/extras/backgrounds/overlays/)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(overlay.colourfilter)">Skin.Reset(global.background)</onclick>
+                        <height>72</height>
+                        <include>Defs_OptionButton</include>
+                        <visible>ControlGroup(8000).HasFocus(8002)</visible>
+                    </control>
+                    <control type="radiobutton" id="8209">
+                        <width>100%</width>
+                        <label>$LOCALIZE[31050]</label>
+                        <radioposx>settingsradioposx</radioposx>
+                        <selected>Skin.HasSetting(overlay.colourfilter) + !String.IsEmpty(Skin.String(global.background))</selected>
+                        <onclick condition="!Skin.HasSetting(overlay.colourfilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetBool(overlay.patterntemp)</onclick>
+                        <onclick condition="!Skin.HasSetting(overlay.colourfilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onclick>
+
+                        <onclick condition="Skin.HasSetting(overlay.colourfilter) + String.IsEqual(Skin.String(global.background),special://skin/extras/backgrounds/overlays/pattern0.jpg) + Skin.HasSetting(overlay.patterntemp)">Skin.Reset(global.background)</onclick>
+                        <onclick condition="Skin.HasSetting(overlay.colourfilter) + String.IsEqual(Skin.String(global.background),special://skin/extras/backgrounds/overlays/pattern0.jpg) + Skin.HasSetting(overlay.patterntemp)">Skin.Reset(overlay.patterntemp)</onclick>
+
+                        <onclick>Skin.ToggleSetting(overlay.colourfilter)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>

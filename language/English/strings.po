@@ -228,6 +228,11 @@ msgctxt "#31049"
 msgid "Customise home menu"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31050"
+msgid "Apply highlight colour filter to background overlay"
+msgstr ""
+
 msgctxt "#31052"
 msgid "Rated"
 msgstr ""
