@@ -24,7 +24,6 @@
         </control>
 
         <control type="multiimage">
-            <include>FullscreenDimensions</include>
             <randomize>true</randomize>
             <timeperimage>4000</timeperimage>
             <fadetime>4000</fadetime>
