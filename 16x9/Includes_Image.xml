@@ -47,11 +47,6 @@
         <value>special://skin/extras/backgrounds/home.jpg</value>
     </variable>
 
-    <variable name="Image_Icon">
-        <value condition="Container.Content(genres)">http://localhost:52307/getvarimage&amp;title=$INFO{Skin.String(genre.icons.path)}$INFO[ListItem.Label,,.jpg]&amp;fallback=$INFO[ListItem.Icon]</value>
-        <value>$INFO[ListItem.Icon]</value>
-    </variable>
-
     <variable name="Image_OSDMusicFlagstar5">
         <value condition="String.IsEqual(Player.StarRating,rating5.png)">star10</value>
         <value>star0</value>
@@ -84,31 +79,7 @@
     </variable>
 
 
-    <variable name="Image_UserRatingStar5">
-        <value condition="Integer.IsGreater(ListItem.UserRating,9)">star10</value>
-        <value condition="Integer.IsGreater(ListItem.UserRating,8)">star5</value>
-        <value>star0</value>
-    </variable>
-    <variable name="Image_UserRatingStar4">
-        <value condition="Integer.IsGreater(ListItem.UserRating,7)">star10</value>
-        <value condition="Integer.IsGreater(ListItem.UserRating,6)">star5</value>
-        <value>star0</value>
-    </variable>
-    <variable name="Image_UserRatingStar3">
-        <value condition="Integer.IsGreater(ListItem.UserRating,5)">star10</value>
-        <value condition="Integer.IsGreater(ListItem.UserRating,4)">star5</value>
-        <value>star0</value>
-    </variable>
-    <variable name="Image_UserRatingStar2">
-        <value condition="Integer.IsGreater(ListItem.UserRating,3)">star10</value>
-        <value condition="Integer.IsGreater(ListItem.UserRating,2)">star5</value>
-        <value>star0</value>
-    </variable>
-    <variable name="Image_UserRatingStar1">
-        <value condition="Integer.IsGreater(ListItem.UserRating,1)">star10</value>
-        <value condition="Integer.IsGreater(ListItem.UserRating,0)">star5</value>
-        <value>star0</value>
-    </variable>
+
 
     <variable name="Image_Fanart">
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>

@@ -106,19 +106,6 @@
         <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
         <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
     </include>
-    <include name="Defs_OptionButton_Circle">
-        <height>64</height>
-        <width>64</width>
-        <textcolor>00ffffff</textcolor>
-        <alttextcolor>00ffffff</alttextcolor>
-        <selectedcolor>00ffffff</selectedcolor>
-        <focusedcolor>00ffffff</focusedcolor>
-        <include>Defs_OptionButton_Basic</include>
-        <texturenofocus colordiffuse="PosterBorder">common/circle.png</texturenofocus>
-        <texturefocus colordiffuse="$VAR[HighlightColor]">common/circle.png</texturefocus>
-        <alttexturenofocus colordiffuse="PosterBorder">common/circle.png</alttexturenofocus>
-        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/circle.png</alttexturefocus>
-    </include>
     <include name="Defs_OSDButton">
         <width>230</width>
         <height>48</height>

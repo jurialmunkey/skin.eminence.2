@@ -9,27 +9,6 @@
         <aligny>center</aligny>
         <usecontrolcoords>true</usecontrolcoords>
     </include>
-    <include name="Info_Textbox">
-        <top>420</top>
-        <left>30</left>
-        <right>30</right>
-        <height>155</height>
-        <align>left</align>
-        <font>Font-ListInfo</font>
-        <textcolor>ListLabel</textcolor>
-        <autoscroll delay="6000" time="3000" repeat="12000">True</autoscroll>
-    </include>
-    <include name="Info_ButtonGrouplist">
-        <left>pad</left>
-        <bottom>pad</bottom>
-        <right>11</right>
-        <height>66</height>
-        <itemgap>pad</itemgap>
-        <onleft>noop</onleft>
-        <onright>noop</onright>
-        <ondown>noop</ondown>
-        <orientation>horizontal</orientation>
-    </include>
 
 
 

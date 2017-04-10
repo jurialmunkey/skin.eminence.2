@@ -1062,7 +1062,6 @@
         </control>
     </include>
     <include name="Furniture_TopBar">
-        <!-- <include>GlobalInfoOverlay</include> -->
         <control type="group">
             <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101) | Control.HasFocus(9002)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
             <animation type="Visible">

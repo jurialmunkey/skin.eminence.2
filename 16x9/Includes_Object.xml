@@ -82,18 +82,6 @@
         </control>
 
     </include>
-    <include name="Object_HomeTile">
-        <control type="image">
-            <top>16</top>
-            <width>196</width>
-            <height>170</height>
-            <texture colordiffuse="$PARAM[tilecolor]">common/tile.png</texture>
-            <aspectratio>scale</aspectratio>
-            <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
-            <visible>String.IsEqual(ListItem.Property(tilecolor),$PARAM[tilecolor])</visible>
-            <visible>Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
-        </control>
-    </include>
     <include name="Object_Arrows_Vertical">
         
         <!-- <control type="group">

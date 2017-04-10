@@ -723,16 +723,6 @@
         <value condition="Container.Content(genres)">$INFO[ListItem(7).Label,special://skin/extras/moviegenres/,.jpg]</value>
         <value>$INFO[ListItem(7).Icon]</value>
     </variable>
-    <variable name="ShowcaseItem8Var">
-        <value condition="!String.IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
-        <value condition="Container.Content(genres)">$INFO[ListItem(8).Label,special://skin/extras/moviegenres/,.jpg]</value>
-        <value>$INFO[ListItem(8).Icon]</value>
-    </variable>
-    <variable name="ShowcaseItem9Var">
-        <value condition="!String.IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
-        <value condition="Container.Content(genres)">$INFO[ListItem(9).Label,special://skin/extras/moviegenres/,.jpg]</value>
-        <value>$INFO[ListItem(9).Icon]</value>
-    </variable>
     
 
 </includes>
