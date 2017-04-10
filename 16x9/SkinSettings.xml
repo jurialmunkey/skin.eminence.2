@@ -6,6 +6,7 @@
     <onload condition="String.IsEmpty(Skin.String(home.mainheadertext))">Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onload>
     <onload condition="String.IsEmpty(Skin.String(home.headertext))">Skin.SetString(home.headertext,$LOCALIZE[10000])</onload>
     <onload condition="String.IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onload>
+    <onload condition="!Skin.HasSetting(DisableColorFilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onload>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|powermenu)</onunload>
     <controls>
         <include>Furniture_Background</include>
@@ -370,8 +371,8 @@
                         <width>100%</width>
                         <label>31159</label>
                         <label2>$VAR[Label_SkinSetting_GlobalOverlay]</label2>
-                        <onclick condition="String.IsEmpty(Skin.String(global.background)) | Skin.HasSetting(overlay.colourfilter)">Skin.SetImage(global.background,special://skin/extras/backgrounds/overlays/)</onclick>
-                        <onclick condition="!String.IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(overlay.colourfilter)">Skin.Reset(global.background)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(global.background)) | !Skin.HasSetting(DisableColorFilter)">Skin.SetImage(global.background,special://skin/extras/backgrounds/overlays/)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(global.background)) + Skin.HasSetting(DisableColorFilter)">Skin.Reset(global.background)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
@@ -380,14 +381,14 @@
                         <width>100%</width>
                         <label>$LOCALIZE[31050]</label>
                         <radioposx>settingsradioposx</radioposx>
-                        <selected>Skin.HasSetting(overlay.colourfilter) + !String.IsEmpty(Skin.String(global.background))</selected>
-                        <onclick condition="!Skin.HasSetting(overlay.colourfilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetBool(overlay.patterntemp)</onclick>
-                        <onclick condition="!Skin.HasSetting(overlay.colourfilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onclick>
+                        <selected>!Skin.HasSetting(DisableColorFilter) + !String.IsEmpty(Skin.String(global.background))</selected>
+                        <onclick condition="Skin.HasSetting(DisableColorFilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetBool(overlay.patterntemp)</onclick>
+                        <onclick condition="Skin.HasSetting(DisableColorFilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onclick>
 
-                        <onclick condition="Skin.HasSetting(overlay.colourfilter) + String.IsEqual(Skin.String(global.background),special://skin/extras/backgrounds/overlays/pattern0.jpg) + Skin.HasSetting(overlay.patterntemp)">Skin.Reset(global.background)</onclick>
-                        <onclick condition="Skin.HasSetting(overlay.colourfilter) + String.IsEqual(Skin.String(global.background),special://skin/extras/backgrounds/overlays/pattern0.jpg) + Skin.HasSetting(overlay.patterntemp)">Skin.Reset(overlay.patterntemp)</onclick>
+                        <onclick condition="!Skin.HasSetting(DisableColorFilter) + String.IsEqual(Skin.String(global.background),special://skin/extras/backgrounds/overlays/pattern0.jpg) + Skin.HasSetting(overlay.patterntemp)">Skin.Reset(global.background)</onclick>
+                        <onclick condition="!Skin.HasSetting(DisableColorFilter) + String.IsEqual(Skin.String(global.background),special://skin/extras/backgrounds/overlays/pattern0.jpg) + Skin.HasSetting(overlay.patterntemp)">Skin.Reset(overlay.patterntemp)</onclick>
 
-                        <onclick>Skin.ToggleSetting(overlay.colourfilter)</onclick>
+                        <onclick>Skin.ToggleSetting(DisableColorFilter)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
                         <visible>ControlGroup(8000).HasFocus(8002)</visible>
@@ -1142,6 +1143,7 @@
                         <onclick>Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onclick>
                         <onclick>Skin.SetString(home.headertext,$LOCALIZE[10000])</onclick>
                         <onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
+                        <onclick>Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onclick>
                         <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
