@@ -651,7 +651,7 @@
             <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
             <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
             <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-            <visible>!Skin.HasSetting(DisableColorFilter)</visible>
+            <visible>Skin.HasSetting(EnableColorFilter)</visible>
         </control>
         <control type="image" description="Background Overlay">
             <width>100%</width>
@@ -662,7 +662,7 @@
             <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
             <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
             <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-            <visible>Skin.HasSetting(DisableColorFilter)</visible>
+            <visible>!Skin.HasSetting(EnableColorFilter)</visible>
         </control>
     </include>
 

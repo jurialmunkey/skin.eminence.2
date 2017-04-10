@@ -4,7 +4,7 @@
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">9000</defaultcontrol>
     <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|powermenu)</onload>
-    <onload condition="!Skin.HasSetting(DisableColorFilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onload>
+    <onload condition="Skin.HasSetting(EnableColorFilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onload>
     <onload>ClearProperty(Header.Label,home)</onload>
     <onload>ClearProperty(Header.Icon,home)</onload>
     <onload>ClearProperty(HighlightColor,home)</onload>
