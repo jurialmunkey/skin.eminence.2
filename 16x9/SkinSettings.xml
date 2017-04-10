@@ -1143,7 +1143,6 @@
                         <onclick>Skin.SetString(home.mainheadertext,$LOCALIZE[31158])</onclick>
                         <onclick>Skin.SetString(home.headertext,$LOCALIZE[10000])</onclick>
                         <onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
-                        <onclick>Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onclick>
                         <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
                         <height>72</height>
                         <include>Defs_OptionButton</include>
