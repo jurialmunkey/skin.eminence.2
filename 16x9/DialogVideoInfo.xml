@@ -56,8 +56,8 @@
                         <orientation>horizontal</orientation>
                         <align>right</align>
                         <left>pad</left>
-                        <right>bigpad</right>
-                        <top>pad</top>
+                        <right>30</right>
+                        <top>24</top>
                         <height>32</height>
                         <control type="image">
                             <width>32</width>
