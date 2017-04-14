@@ -919,5 +919,18 @@
             <visible>Skin.HasSetting(DebugInfo)</visible>
         </control>
 
+        <control type="label">
+            <left>15</left>
+            <posy>48r</posy>
+            <right>15</right>
+            <height>21</height>
+            <textcolor>FFFF0000</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <font>font13</font>
+            <align>left</align>
+            <label>[COLOR=FF00FF00]$INFO[ListItem.Icon,, - ][/COLOR]$INFO[ListItem.ActualIcon]</label>
+            <visible>Skin.HasSetting(DebugInfo)</visible>
+        </control>
+
     </controls>
 </window>
