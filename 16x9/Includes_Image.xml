@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Image_SettingsHeader">
+        <value condition="Window.IsActive(systeminfo)">special://skin/extras/icons/sysinfo.png</value>
+        <value condition="Window.IsActive(systemsettings)">special://skin/extras/icons/configure.png</value>
+        <value condition="Window.IsActive(pvrsettings)">special://skin/extras/icons/livetv.png</value>
+        <value condition="Window.IsActive(skinsettings)">special://skin/extras/icons/paintbrush.png</value>
+        <value condition="Window.IsActive(addonbrowser)">special://skin/extras/icons/addons.png</value>
+        <value condition="Window.IsActive(profiles)">special://skin/extras/icons/actor.png</value>
+        <value condition="Window.IsActive(servicesettings)">special://skin/extras/icons/network.png</value>
+        <value condition="Window.IsActive(interfacesettings)">special://skin/extras/icons/skinsettings.png</value>
+        <value condition="Window.IsActive(mediasettings)">special://skin/extras/icons/tags.png</value>
+        <value condition="Window.IsActive(playersettings)">special://skin/extras/icons/equalizer.png</value>
+        <value>special://skin/extras/icons/settings.png</value>
+    </variable>
     <variable name="Image_MusicVisualisation">
         <value condition="Skin.HasSetting(ArtistSlideShow.Enabled) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
         <value condition="Skin.HasSetting(ArtistSlideShow.Enabled) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ExtraFanart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.ExtraFanart)]</value>

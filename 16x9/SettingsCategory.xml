@@ -5,104 +5,112 @@
     <controls>
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
-
+        <include>Furniture_RSS</include>
+        <!-- Settings -->
+        <control type="group">
+            <include condition="Window.Previous(Settings.xml) | Window.Previous(SettingsCategory.xml) | Window.Previous(SkinSettings.xml)">Defs_SettingsScreen</include>
+        </control>
+        <control type="group">
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <include>GlobalOverlay</include>
+        </control>
+        <!-- Main -->
         <control type="group">
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <include>Defs_ViewBackground</include>
-            <control type="group">
-                <visible>!Control.HasFocus(20)</visible>
-                <include content="Object_Headline">
-                    <param name="label" value="$INFO[Control.GetLabel(20),$LOCALIZE[31205]: ,]" />
-                </include>
-            </control>
-            <control type="group">
-                <visible>Control.HasFocus(20)</visible>
-                <include content="Object_Headline">
-                    <param name="label" value="[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(20),$LOCALIZE[31205]: ,][/COLOR]" />
-                </include>
-            </control>
-
-            <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
-            <!-- Main List -->
+            
             <control type="group">
                 <left>bigpad</left>
-                <top>bigpad</top>
-                <height>posterh</height>
-                <width>465</width>
-                <include>Object_Background</include>
-                <control type="button" id="20">
-                    <top>-45</top>
-                    <height>48</height>
-                    <aligny>center</aligny>
-                    <width>300</width>
-                    <font>-</font>
-                    <textcolor>00ffffff</textcolor>
-                    <focusedcolor>$VAR[HighlightColor2]</focusedcolor>
-                    <texturefocus>noop</texturefocus>
-                    <texturenofocus>noop</texturenofocus>
-                    <onright>3</onright>
-                    <ondown>3</ondown>
-                    <onclick>settingslevelchange</onclick>
-                </control>
-                <control type="label">
-                    <width>100%</width>
-                    <height>72</height>
-                    <align>left</align>
-                    <label>$VAR[Label_SettingsHeader,, $LOCALIZE[5]]</label>
-                    <font>Font-ListInfo-Small-Bold</font>
-                    <include>Defs_OptionButton</include>
-                </control>
-                <control type="grouplist" id="3">
-                    <top>72</top>
-                    <itemgap>0</itemgap>
-                    <onleft>20</onleft>
-                    <onup>20</onup>
-                    <onright>5</onright>
-                    <ondown>noop</ondown>
-                </control>
-            </control>
-
-            <!-- Sub List -->
-            <control type="group">
-                <left>505</left>
-                <top>bigpad</top>
-                <height>posterh</height>
                 <right>bigpad</right>
-                <include>Object_Background</include>
-                <control type="grouplist" id="5">
-                    <itemgap>0</itemgap>
-                    <onleft>3</onleft>
+                <top>-8</top>
+                <bottom>bigpad</bottom>
+                <include>Dialog_Background</include>
+                <include content="Dialog_Top_IconHeader">
+                    <param name="label" value="$VAR[Label_SettingsHeader,, $LOCALIZE[5]]" />
+                    <param name="icon" value="$VAR[Image_SettingsHeader]" />
+                </include>
+                <!-- Main List -->
+                <control type="group">
+                    <left>bigpad</left>
+                    <top>80</top>
+                    <bottom>bigpad</bottom>
+                    <width>465</width>
+                    <include>Object_FlatBackground</include>
+                    
+                    <control type="grouplist" id="3">
+                        <top>0</top>
+                        <bottom>72</bottom>
+                        <itemgap>0</itemgap>
+                        <onleft>20</onleft>
+                        <onup>noop</onup>
+                        <ondown>20</ondown>
+                        <onright>5</onright>
+                        <ondown>noop</ondown>
+                    </control>
+                    
+                    <control type="button" id="20">
+                        <bottom>0</bottom>
+                        <width>100%</width>
+                        <height>72</height>
+                        <onright>3</onright>
+                        <onup>3</onup>
+                        <textoffsetx>80</textoffsetx>
+                        <font>Font-SettingsLevel</font>
+                        <onclick>settingslevelchange</onclick>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                    <control type="image">
+                        <bottom>0</bottom>
+                        <left>0</left>
+                        <width>72</width>
+                        <height>72</height>
+                        <visible>!Control.Hasfocus(20)</visible>
+                        <texture colordiffuse="ListLabel">special://skin/extras/icons/settings.png</texture>
+                    </control>
+                    <control type="image">
+                        <bottom>0</bottom>
+                        <left>0</left>
+                        <width>72</width>
+                        <height>72</height>
+                        <visible>Control.Hasfocus(20)</visible>
+                        <texture colordiffuse="Selected">special://skin/extras/icons/settings.png</texture>
+                    </control>
+                </control>
+
+                <!-- Sub List -->
+                <control type="group">
+                    <left>505</left>
+                    <top>80</top>
+                    <bottom>92</bottom>
+                    <right>bigpad</right>
+                    <include>Object_FlatBackground</include>
+                    <control type="grouplist" id="5">
+                        <itemgap>0</itemgap>
+                        <onleft>3</onleft>
+                    </control>
+                </control>
+
+                <!-- Text Box RSS -->
+                <control type="group">
+                    <bottom>bigpad</bottom>
+                    <left>504</left>
+                    <right>bigpad</right>
+                    <height>62</height>
+                    <control type="textbox">
+                        <aligny>center</aligny>
+                        <font>Font-RSS</font>
+                        <label>$INFO[Control.GetLabel(6)]</label>
+                        <textcolor>LineLabel</textcolor>
+                        <autoscroll delay="2000" time="4000" repeat="3000">True</autoscroll>
+                    </control>
+                    <control type="label" id="6"><visible>false</visible></control>
                 </control>
             </control>
         </control>
 
-        <!-- Text Box RSS -->
-        <control type="group">
-            <visible>!Window.IsVisible(DialogNotification.xml)</visible>
-            <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
-            <animation effect="slide" start="0,64" end="0" time="125">VisibleChange</animation>
-            <control type="image">
-                <posx>16</posx>
-                <posy>48r</posy>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="LineLabel">common/rss.png</texture>
-            </control>
-            <control type="label">
-                <bottom>16</bottom>
-                <left>48</left>
-                <right>0</right>
-                <height>32</height>
-                <font>Font-RSS</font>
-                <label>$INFO[Control.GetLabel(6),   ,]</label>
-                <scroll>true</scroll>
-                <textcolor>LineLabel</textcolor>
-                <wrapmultiline>false</wrapmultiline>
-                <visible>!Window.IsVisible(DialogAudioDSPManager.xml)</visible>
-            </control>
-            <control type="label" id="6"><visible>false</visible></control>
-        </control>
+        
 
         <!-- Category Template -->
         <control type="togglebutton" id="10">

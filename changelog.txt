@@ -1,3 +1,6 @@
+[B]2.5.40[/B]
+New Settings style (dialog with fake settings category behind)
+
 [B]2.5.39[/B]
 New indicator style
 Options for disabling indicators on icon views

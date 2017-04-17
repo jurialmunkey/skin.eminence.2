@@ -7,190 +7,207 @@
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
+        <!-- Settings -->
+        <control type="group">
+            <include condition="Window.Previous(Settings.xml) | Window.Previous(SettingsCategory.xml) | Window.Previous(SkinSettings.xml)">Defs_SettingsScreen</include>
+        </control>
+        <control type="group">
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <include>GlobalOverlay</include>
+        </control>
         <control type="group">
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <include>Defs_ViewBackground</include>
-            <include content="Object_Headline">
-                <param name="label" value="19033" />
-            </include>
-            <!-- Main List -->
             <control type="group">
                 <left>bigpad</left>
-                <top>bigpad</top>
-                <height>posterh</height>
-                <width>465</width>
-                <include>Object_Background</include>
-                <control type="grouplist" id="9000">
-                    <itemgap>0</itemgap>
-                    <onright>9100</onright>
-                    <onup>noop</onup>
-                    <ondown>noop</ondown>
-                    <control type="button" id="95">
-                        <width>100%</width>
-                        <label>20154</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="button" id="94">
-                        <width>100%</width>
-                        <label>20155</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="button" id="96">
-                        <width>100%</width>
-                        <label>20158</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="button" id="97">
-                        <width>100%</width>
-                        <label>20159</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="button" id="98">
-                        <width>100%</width>
-                        <label>20160</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="button" id="99">
-                        <width>100%</width>
-                        <label>19166</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="button" id="100">
-                        <width>100%</width>
-                        <label>12389</label>
-                        <include>Defs_OptionButton</include>
+                <right>bigpad</right>
+                <top>-8</top>
+                <bottom>bigpad</bottom>
+                <include>Dialog_Background</include>
+                <include content="Dialog_Top_IconHeader">
+                    <param name="label" value="$VAR[Label_SettingsHeader,, $LOCALIZE[5]]" />
+                    <param name="icon" value="$VAR[Image_SettingsHeader]" />
+                </include>
+                <!-- Main List -->
+                <control type="group">
+                    <left>bigpad</left>
+                    <top>80</top>
+                    <bottom>bigpad</bottom>
+                    <width>465</width>
+                    <include>Object_FlatBackground</include>
+                    <control type="grouplist" id="9001">
+                        <itemgap>0</itemgap>
+                        <onright>9100</onright>
+                        <onup>noop</onup>
+                        <ondown>noop</ondown>
+                        <control type="button" id="95">
+                            <width>100%</width>
+                            <label>20154</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="button" id="94">
+                            <width>100%</width>
+                            <label>20155</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="button" id="96">
+                            <width>100%</width>
+                            <label>20158</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="button" id="97">
+                            <width>100%</width>
+                            <label>20159</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="button" id="98">
+                            <width>100%</width>
+                            <label>20160</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="button" id="99">
+                            <width>100%</width>
+                            <label>19166</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="button" id="100">
+                            <width>100%</width>
+                            <label>12389</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
                     </control>
                 </control>
-            </control>
 
-            <!-- Sub List -->
-            <control type="group">
-                <left>505</left>
-                <top>bigpad</top>
-                <height>posterh</height>
-                <right>bigpad</right>
-                <include>Object_Background</include>
-                <control type="grouplist" id="9100">
-                    <itemgap>0</itemgap>
-                    <onleft>9000</onleft>
-                    <usecontrolcoords>true</usecontrolcoords>
-                    <control type="label">
-                        <top>16</top>
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                        <label>$INFO[Control.GetLabel(52)]</label>
-                    </control>
-                    <control type="label">
-                        <description>CPU Text</description>
-                        <label>$LOCALIZE[13271]</label>
-                        <width>100%</width>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label">
-                        <description>CPU Text</description>
-                        <posy>-72</posy>
-                        <align>right</align>
-                        <left>20</left>
-                        <width>960</width>
-                        <label>$INFO[System.CPUUsage]</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="progress" id="22">
-                        <description>CPU BAR</description>
-                        <height>10</height>
-                        <left>20</left>
-                        <width>940</width>
-                        <info>System.CPUUsage</info>
-                        <include>Defs_OptionButton</include>
-                    </control>
+                <!-- Sub List -->
+                <control type="group">
+                    <left>505</left>
+                    <top>80</top>
+                    <bottom>bigpad</bottom>
+                    <right>bigpad</right>
+                    <include>Object_FlatBackground</include>
+                    <control type="grouplist" id="9100">
+                        <itemgap>0</itemgap>
+                        <onleft>9000</onleft>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <control type="label">
+                            <top>16</top>
+                            <width>100%</width>
+                            <height>48</height>
+                            <include>Defs_OptionButton</include>
+                            <label>$INFO[Control.GetLabel(52)]</label>
+                        </control>
+                        <control type="label">
+                            <description>CPU Text</description>
+                            <label>$LOCALIZE[13271]</label>
+                            <width>100%</width>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label">
+                            <description>CPU Text</description>
+                            <posy>-72</posy>
+                            <align>right</align>
+                            <left>20</left>
+                            <width>960</width>
+                            <label>$INFO[System.CPUUsage]</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="progress" id="22">
+                            <description>CPU BAR</description>
+                            <height>10</height>
+                            <left>20</left>
+                            <width>940</width>
+                            <info>System.CPUUsage</info>
+                            <include>Defs_OptionButton</include>
+                        </control>
 
-                    <control type="label">
-                        <top>-82</top>
-                        <left>960</left>
-                        <description>Memory Text</description>
-                        <label>RAM:</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label">
-                        <description>Memory Text</description>
-                        <posy>-72</posy>
-                        <align>right</align>
-                        <right>5</right>
-                        <label>$INFO[system.memory(used.percent)]</label>
-                        <include>Defs_OptionButton</include>
-                    </control>
+                        <control type="label">
+                            <top>-82</top>
+                            <left>960</left>
+                            <description>Memory Text</description>
+                            <label>RAM:</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label">
+                            <description>Memory Text</description>
+                            <posy>-72</posy>
+                            <align>right</align>
+                            <right>5</right>
+                            <label>$INFO[system.memory(used.percent)]</label>
+                            <include>Defs_OptionButton</include>
+                        </control>
 
-                    <control type="progress" id="24">
-                        <description>Memory BAR</description>
-                        <height>10</height>
-                        <left>980</left>
-                        <width>265</width>
-                        <info>system.memory(used)</info>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="textbox" id="30">
-                        <top>48</top>
-                        <left>20</left>
-                        <width>97%</width>
-                        <height>500</height>
-                        <align>left</align>
-                        <include>Defs_OptionButton</include>
-                    </control>
+                        <control type="progress" id="24">
+                            <description>Memory BAR</description>
+                            <height>10</height>
+                            <left>980</left>
+                            <width>265</width>
+                            <info>system.memory(used)</info>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="textbox" id="30">
+                            <top>48</top>
+                            <left>20</left>
+                            <width>97%</width>
+                            <height>430</height>
+                            <align>left</align>
+                            <include>Defs_OptionButton</include>
+                        </control>
 
-                    <control type="label" id="2">
-                        <top>48</top>
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="3">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="4">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="5">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="6">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="7">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="8">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="9">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="10">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
-                    <control type="label" id="11">
-                        <width>100%</width>
-                        <height>48</height>
-                        <include>Defs_OptionButton</include>
-                    </control>
+                        <control type="label" id="2">
+                            <top>48</top>
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="3">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="4">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="5">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="6">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="7">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="8">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="9">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="10">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
+                        <control type="label" id="11">
+                            <width>100%</width>
+                            <height>40</height>
+                            <include>Defs_OptionButton</include>
+                        </control>
 
+                    </control>
                 </control>
             </control>
         </control>

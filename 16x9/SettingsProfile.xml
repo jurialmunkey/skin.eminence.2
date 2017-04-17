@@ -8,60 +8,82 @@
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
-
-        <!-- Content -->
+        <!-- Settings -->
         <control type="group">
-            <include>Defs_ViewBackground</include>
-            <include content="Object_Headline">
-                <param name="label" value="$INFO[System.ProfileName]" />
-            </include>
+            <include condition="Window.Previous(Settings.xml) | Window.Previous(SettingsCategory.xml) | Window.Previous(SkinSettings.xml)">Defs_SettingsScreen</include>
+        </control>
+        <control type="group">
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <include>GlobalOverlay</include>
+        </control>
+        <!-- Main -->
+        <control type="group">
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
+            <include>Defs_ViewBackground</include>
             <control type="group">
-                <top>bigpad</top>
                 <left>bigpad</left>
                 <right>bigpad</right>
-                <height>posterh</height>
-                <include>Object_Background</include>
-                <control type="radiobutton" id="4">
-                    <align>left</align>
-                    <textoffsetx>30</textoffsetx>
-                    <width>100%</width>
-                    <label>20096</label>
-                    <onup>noop</onup>
-                    <ondown>5</ondown>
-                    <radioposx>totalradioposx</radioposx>
-                    <include>Defs_OptionButton</include>
-                </control>
-                <control type="button" id="5">
-                    <top>72</top>
-                    <align>left</align>
-                    <textoffsetx>30</textoffsetx>
-                    <radioposx>totalradioposx</radioposx>
-                    <width>100%</width>
-                    <onup>4</onup>
-                    <ondown>2</ondown>
-                    <label>33084</label>
-                    <label2>$INFO[System.ProfileAutoLogin]</label2>
-                    <enable>!System.HasLoginScreen</enable>
-                    <include>Defs_OptionButton</include>
-                </control>
-
-            </control>
-            <control type="group">
-                <top>164</top>
-                <left>bigpad</left>
-                <right>0</right>
-                <height>604</height>
-                <include content="Dialog_ImageList">
-                    <param name="id" value="2" />
-                    <param name="moveid" value="5" />
-                    <param name="onup" value="5" />
-                    <param name="left" value="0" />
-                    <param name="width" value="totalpanelw" />
-                    <param name="top" value="0" />
-                    <param name="pad" value="20" />
+                <top>-8</top>
+                <bottom>bigpad</bottom>
+                <include>Dialog_Background</include>
+                <include content="Dialog_Top_IconHeader">
+                    <param name="label" value="$VAR[Label_SettingsHeader,, $LOCALIZE[5]]" />
+                    <param name="icon" value="$VAR[Image_SettingsHeader]" />
                 </include>
+                <control type="group">
+                    <top>80</top>
+                    <left>bigpad</left>
+                    <right>bigpad</right>
+                    <bottom>bigpad</bottom>
+                    <include>Object_FlatBackground</include>
+                    <control type="radiobutton" id="4">
+                        <align>left</align>
+                        <textoffsetx>30</textoffsetx>
+                        <width>100%</width>
+                        <label>20096</label>
+                        <onup>noop</onup>
+                        <ondown>5</ondown>
+                        <radioposx>totalradioposx</radioposx>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                    <control type="button" id="5">
+                        <top>72</top>
+                        <align>left</align>
+                        <textoffsetx>30</textoffsetx>
+                        <radioposx>totalradioposx</radioposx>
+                        <width>100%</width>
+                        <onup>4</onup>
+                        <ondown>2</ondown>
+                        <label>33084</label>
+                        <label2>$INFO[System.ProfileAutoLogin]</label2>
+                        <enable>!System.HasLoginScreen</enable>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                    <control type="image">
+                        <top>144</top>
+                        <width>100%</width>
+                        <height>72</height>
+                        <texture border="30">common/div.png</texture>
+                        <include>Defs_OptionButton</include>
+                    </control>
+                </control>
+                <control type="group">
+                    <height>452</height>
+                    <left>bigpad</left>
+                    <right>0</right>
+                    <bottom>0</bottom>
+                    <include content="Dialog_ImageList">
+                        <param name="id" value="2" />
+                        <param name="moveid" value="5" />
+                        <param name="onup" value="5" />
+                        <param name="left" value="0" />
+                        <param name="width" value="totalpanelw" />
+                        <param name="top" value="0" />
+                        <param name="pad" value="20" />
+                    </include>
+                </control>
             </control>
         </control>
 

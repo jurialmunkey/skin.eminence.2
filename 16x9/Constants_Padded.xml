@@ -17,7 +17,7 @@
     <constant name="hubitemw">452</constant>
     <constant name="headlinew">1752</constant>
     <constant name="totalpanelw">1792</constant>
-    <constant name="totalradioposx">1700</constant>
+    <constant name="totalradioposx">1660</constant>
     <constant name="listlinew">1272</constant>
     <constant name="listw">1252</constant>
     <constant name="listinfow">1012</constant>
@@ -34,7 +34,7 @@
     <constant name="iconwideitemw">574</constant>
     <constant name="iconlistwideitemw">1772</constant>
     <constant name="settingsitemw">354.4</constant>
-    <constant name="settingsradioposx">1220</constant>
+    <constant name="settingsradioposx">1180</constant>
     <constant name="settingswideradioposx">1660</constant>
     <constant name="settingshalfw">866</constant>
     <constant name="settingscategoryw">326.4</constant>
