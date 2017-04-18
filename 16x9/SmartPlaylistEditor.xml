@@ -146,7 +146,7 @@
                         <ondown>8000</ondown>
                         <usecontrolcoords>true</usecontrolcoords>
                         <orientation>vertical</orientation>
-                        <control type="togglebutton" id="19">
+                        <control type="button" id="19">
                             <right>0</right>
                             <align>right</align>
                             <textoffsetx>30</textoffsetx>
