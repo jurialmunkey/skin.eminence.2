@@ -110,7 +110,8 @@
     <include name="Object_BasicViewList">
         <!-- View by (Hidden) -->
         <control type="button" id="2">
-            <include>Defs_OptionButton2</include>
+            <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
             <visible>false</visible>
         </control>
 
@@ -124,7 +125,8 @@
             <textureradiooffnofocus>noop</textureradiooffnofocus>
             <textureradiooffdisabled>noop</textureradiooffdisabled>
             
-            <include>Defs_OptionButton2</include>
+            <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
 
             <onclick condition="[Container.Content() + !String.IsEmpty(Skin.String(Skin.ForcedView.))]">ActivateWindow(1111)</onclick>
             <onclick condition="[Container.Content(tags) + !String.IsEmpty(Skin.String(Skin.ForcedView.tags))]">ActivateWindow(1111)</onclick>
@@ -184,14 +186,16 @@
 
         <!-- Sort by -->
         <control type="button" id="3">
-            <include>Defs_OptionButton2</include>
+            <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
             <label>103</label>
             <visible>Control.IsEnabled(3)</visible>
         </control>
         
         <!-- Sort ascending/descending -->
         <control type="togglebutton" id="4">
-            <include>Defs_OptionButton2</include>
+            <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
             <label>584</label>
             <altlabel>585</altlabel>
             <usealttexture>Container.SortDirection(Descending)</usealttexture>
@@ -200,7 +204,8 @@
 
         <!-- Fullscreen -->
         <control type="button" id="9099">
-            <include>Defs_OptionButton2</include>
+            <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
             <label>$VAR[Label_FullscreenButton]</label>
             <visible>Player.HasMedia</visible>
             <onclick>Fullscreen</onclick>

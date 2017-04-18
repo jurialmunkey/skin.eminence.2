@@ -1,5 +1,6 @@
 [B]2.5.40[/B]
 New Settings style (dialog with fake settings category behind)
+Add option for vertical menus for context/view
 
 [B]2.5.39[/B]
 New indicator style

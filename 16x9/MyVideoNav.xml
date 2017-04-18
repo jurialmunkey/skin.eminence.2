@@ -45,36 +45,51 @@
 
         <!-- Menu -->
         <control type="group">
+            <include condition="Skin.HasSetting(VerticalMenus)">GlobalOverlay</include>
+            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center</include>
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-            <include>Dialog_Top</include>
-            <include>Dialog_Background</include>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+        </control>
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_Def</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31068]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-            <include content="Dialog_Top_Arrows">
+            <include content="Dialog_Center_Arrows" condition="Skin.HasSetting(VerticalMenus)">
+                <param name="id" value="9000" />
+            </include>
+            <include content="Dialog_Top_Arrows" condition="!Skin.HasSetting(VerticalMenus)">
                 <param name="id" value="9000" />
             </include>
 
             <control type="grouplist" id="9000">
-                <include>Dialog_Top_GroupList</include>
+                <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_GroupList</include>
+                <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top_GroupList</include>
                 <defaultcontrol always="true">3</defaultcontrol>
                 <include>Object_BasicViewList</include>
                 <!-- Watched toggle -->
                 <control type="radiobutton" id="14">
-                    <include>Defs_OptionButton2</include>
+                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
                     <label>20367</label>
                     <visible>Control.IsEnabled(14)</visible>
                 </control>
                 <!-- Filter -->
                 <control type="edit" id="19">
-                    <include>Defs_OptionButton2</include>
+                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
                     <label>587</label>
                     <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
                 </control>
                 <!-- Filter -->
                 <control type="radiobutton" id="93">
-                    <include>Defs_OptionButton2</include>
+                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
                     <label>587</label>
                     <onclick>Filter</onclick>
                     <selected>Container.Filtered</selected>
@@ -83,7 +98,8 @@
                 <!-- Update -->
                 <control type="button" id="20">
                     <label>653</label>
-                    <include>Defs_OptionButton2</include>
+                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
                     <onclick>SetFocus(50)</onclick>
                 </control>
             </control>

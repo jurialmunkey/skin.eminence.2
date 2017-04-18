@@ -57,7 +57,7 @@
                             <label>10000</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[10000][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8001)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -67,7 +67,7 @@
                             <label>31020</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[31020][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8002)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -77,7 +77,7 @@
                             <label>15100</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[15100][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8005)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -87,7 +87,7 @@
                             <label>31127</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[31127][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8007)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -97,7 +97,7 @@
                             <label>31126</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[31126][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8008)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -107,7 +107,7 @@
                             <label>31210</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[31210][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8003)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -117,7 +117,7 @@
                             <label>$LOCALIZE[31219]</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[31219][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8009)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -127,7 +127,7 @@
                             <label>31198</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[31198][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8006)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -137,7 +137,7 @@
                             <label>31170</label>
                             <altlabel>[COLOR=Selected]$LOCALIZE[31170][/COLOR]</altlabel>
                             <usealttexture>ControlGroup(8000).HasFocus(8099)</usealttexture>
-                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                            <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white-50.png</alttexturenofocus>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                         </control>
@@ -1107,6 +1107,16 @@
                             <visible>ControlGroup(8000).HasFocus(8009)</visible>
                         </control>
                         <control type="radiobutton" id="8917">
+                            <radioposx>settingsradioposx</radioposx>
+                            <width>100%</width>
+                            <label>$LOCALIZE[31051]</label>
+                            <selected>Skin.HasSetting(VerticalMenus)</selected>
+                            <onclick>Skin.ToggleSetting(VerticalMenus)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        </control>
+                        <control type="radiobutton" id="8918">
                             <radioposx>settingsradioposx</radioposx>
                             <width>100%</width>
                             <label>$LOCALIZE[31024]</label>

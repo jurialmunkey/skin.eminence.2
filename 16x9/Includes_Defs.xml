@@ -96,6 +96,15 @@
         <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
         <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
     </include>
+    <include name="Defs_OptionButton2_Horz">
+        <width>460</width>
+        <radioposx>390</radioposx>
+        <include>Defs_OptionButton_Basic</include>
+        <texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
+        <texturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturefocus>
+        <alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
+        <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+    </include>
     <include name="Defs_OptionButton3">
         <width>auto</width>
         <height>64</height>

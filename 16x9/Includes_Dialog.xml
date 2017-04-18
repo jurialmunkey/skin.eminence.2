@@ -1,5 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="Dialog_Center_Def">
+        <include>Animation_SlideIn</include>
+        <include>Animation_FadeOut</include>
+        <centerleft>50%</centerleft>
+        <top>230</top>
+        <height>756</height>
+        <width>500</width>
+    </include>
+    <include name="Dialog_Center_1">
+        <control type="group">
+            <height>182</height>
+            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,1)</visible>
+            <include>Dialog_Center_Def</include>
+            <include>Dialog_Background</include>
+        </control>
+    </include>
+    <include name="Dialog_Center_2">
+        <control type="group">
+            <height>264</height>
+            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,2)</visible>
+            <include>Dialog_Center_Def</include>
+            <include>Dialog_Background</include>
+        </control>
+    </include>
+    <include name="Dialog_Center_3">
+        <control type="group">
+            <height>346</height>
+            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,3)</visible>
+            <include>Dialog_Center_Def</include>
+            <include>Dialog_Background</include>
+        </control>
+    </include>
+    <include name="Dialog_Center_4">
+        <control type="group">
+            <height>428</height>
+            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,4)</visible>
+            <include>Dialog_Center_Def</include>
+            <include>Dialog_Background</include>
+        </control>
+    </include>
+    <include name="Dialog_Center_5">
+        <control type="group">
+            <height>510</height>
+            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,5)</visible>
+            <include>Dialog_Center_Def</include>
+            <include>Dialog_Background</include>
+        </control>
+    </include>
+    <include name="Dialog_Center_6">
+        <control type="group">
+            <height>592</height>
+            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,6)</visible>
+            <include>Dialog_Center_Def</include>
+            <include>Dialog_Background</include>
+        </control>
+    </include>
+    <include name="Dialog_Center_7">
+        <control type="group">
+            <height>674</height>
+            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,7)</visible>
+            <include>Dialog_Center_Def</include>
+            <include>Dialog_Background</include>
+        </control>
+    </include>
+    <include name="Dialog_Center_8">
+        <control type="group">
+            <height>756</height>
+            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,8)</visible>
+            <include>Dialog_Center_Def</include>
+            <include>Dialog_Background</include>
+        </control>
+    </include>
+    <include name="Dialog_Center">
+        <param name="id" default="9000" />
+        <definition>
+            <include content="Dialog_Center_1">
+                <param name="id" value="$PARAM[id]" />
+            </include>
+            <include content="Dialog_Center_2">
+                <param name="id" value="$PARAM[id]" />
+            </include>
+            <include content="Dialog_Center_3">
+                <param name="id" value="$PARAM[id]" />
+            </include>
+            <include content="Dialog_Center_4">
+                <param name="id" value="$PARAM[id]" />
+            </include>
+            <include content="Dialog_Center_5">
+                <param name="id" value="$PARAM[id]" />
+            </include>
+            <include content="Dialog_Center_6">
+                <param name="id" value="$PARAM[id]" />
+            </include>
+            <include content="Dialog_Center_7">
+                <param name="id" value="$PARAM[id]" />
+            </include>
+            <include content="Dialog_Center_8">
+                <param name="id" value="$PARAM[id]" />
+            </include>
+        </definition>
+    </include>
+    <include name="Dialog_Center_GroupList">
+        <left>30</left>
+        <right>30</right>
+        <top>80</top>
+        <bottom>30</bottom>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onback>50</onback>
+        <onup>noop</onup>
+        <ondown>noop</ondown>
+        <itemgap>10</itemgap>
+        <scrolltime>200</scrolltime>
+        <orientation>vertical</orientation>
+    </include>
+    <include name="Dialog_Center_Arrows">
+        <control type="group">
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <top>-20</top>
+                <width>16</width>
+                <height>16</height>
+                <texture colordiffuse="ListLabel" flipy="true">common/16-arrow-down.png</texture>
+                <visible>Container($PARAM[id]).HasPrevious</visible>
+            </control>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <bottom>-20</bottom>
+                <width>16</width>
+                <height>16</height>
+                <texture colordiffuse="ListLabel">common/16-arrow-down.png</texture>
+                <visible>Container($PARAM[id]).HasNext</visible>
+            </control>
+        </control>
+    </include>
+    <include name="Dialog_Center_Background">
+        <top>-24</top>
+        <bottom>-24</bottom>
+        <left>-24</left>
+        <right>-24</right>
+        <bordertexture border="24">common/24-shadow.png</bordertexture>
+        <bordersize>24</bordersize>
+        <texture colordiffuse="DialogBG">common/white.png</texture>
+    </include>
+
     <include name="Dialog_Top">
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0">Visible</animation>
         <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,-400" start="0">Hidden</animation>
@@ -10,6 +155,8 @@
         <top>0</top>
         <height>toppanel</height>
     </include>
+
+
  
     <include name="Dialog_Background">
         <control type="image">
