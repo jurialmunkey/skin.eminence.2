@@ -57,7 +57,7 @@
             <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top</include>
             <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
-                <param name="label" value="$LOCALIZE[31068] $INFO[Container(9000).NumItems]" />
+                <param name="label" value="$LOCALIZE[31068]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
             <include content="Dialog_Center_Arrows" condition="Skin.HasSetting(VerticalMenus)">
