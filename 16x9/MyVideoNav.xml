@@ -57,7 +57,7 @@
             <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top</include>
             <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
-                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="label" value="$LOCALIZE[31068] $INFO[Container(9000).NumItems]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
             <include content="Dialog_Center_Arrows" condition="Skin.HasSetting(VerticalMenus)">
@@ -85,6 +85,7 @@
                     <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
                     <label>587</label>
                     <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+                    <visible>Control.IsEnabled(19)</visible>
                 </control>
                 <!-- Filter -->
                 <control type="radiobutton" id="93">
@@ -94,6 +95,7 @@
                     <onclick>Filter</onclick>
                     <selected>Container.Filtered</selected>
                     <visible>Container.CanFilterAdvanced</visible>
+                    <visible>Control.IsEnabled(93)</visible>
                 </control>
                 <!-- Update -->
                 <control type="button" id="20">
@@ -101,6 +103,7 @@
                     <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
                     <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
                     <onclick>SetFocus(50)</onclick>
+                    <visible>Control.IsEnabled(20)</visible>
                 </control>
             </control>
 
