@@ -94,6 +94,57 @@
             <height>100%</height>
         </control>
 
+        <control type="group">
+            <visible>Skin.HasSetting(OSDBlackScreen)</visible>
+            <visible>![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="image">
+                <texture colordiffuse="ff000000">common/white.png</texture>
+            </control>
+            <control type="label">
+                <centerleft>50%</centerleft>
+                <centertop>44%</centertop>
+                <height>100</height>
+                <font>Font-Header</font>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$INFO[System.Time(hh:mm)]</label>
+                <textcolor>ffededed</textcolor>
+            </control>
+            <control type="label">
+                <centerleft>50%</centerleft>
+                <centertop>52%</centertop>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-Sublabel</font>
+                <textcolor>bfededed</textcolor>
+                <align>center</align>
+                <label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
+            </control>
+            <control type="label">
+                <centerleft>50%</centerleft>
+                <centertop>57%</centertop>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>5fededed</textcolor>
+                <align>center</align>
+                <label>$INFO[MusicPlayer.Artist,,  [COLOR=9fededed]•[/COLOR]  ]$INFO[MusicPlayer.Title]</label>
+            </control>
+            <control type="label">
+                <centerleft>50%</centerleft>
+                <centertop>60.2%</centertop>
+                <height>100</height>
+                <aligny>top</aligny>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>9fededed</textcolor>
+                <align>center</align>
+                <label>$INFO[Player.Time]$INFO[Player.Duration,  [COLOR=5fededed]/[/COLOR]  ,]</label>
+            </control>
+
+        </control>
+
 	</controls>
 
 </window>

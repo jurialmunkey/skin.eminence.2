@@ -435,7 +435,36 @@
                             <visible>ControlGroup(8000).HasFocus(8002)</visible>
                         </control>
 
-                        <!-- MUSIC OSD -->
+                        <!-- MUSIC VIDEO OSD -->
+                        <!-- Video -->
+                        <control type="label" id="8307">
+                            <width>100%</width>
+                            <label>31211</label>
+                            <height>72</height>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                        </control>
+                        <!-- Show Info -->
+                        <control type="radiobutton" id="8308" description="Show Info">
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                            <width>100%</width>
+                            <radioposx>settingsradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>31006</label>
+                            <selected>Skin.HasSetting(videoosd.showinfo)</selected>
+                            <onclick>Skin.ToggleSetting(videoosd.showinfo)</onclick>
+                        </control>
+                        <!-- Div -->
+                        <control type="image" id="8306">
+                            <width>100%</width>
+                            <height>72</height>
+                            <texture border="30">common/div.png</texture>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                        </control>
+                        <!-- Music -->
                         <control type="label" id="8301">
                             <width>100%</width>
                             <label>31209</label>
@@ -521,33 +550,17 @@
                             <selected>Skin.HasSetting(ShowOSDScrollingText)</selected>
                             <onclick>Skin.ToggleSetting(ShowOSDScrollingText)</onclick>
                         </control>
-                        <!-- Div -->
-                        <control type="image" id="8306">
-                            <width>100%</width>
-                            <height>72</height>
-                            <texture border="30">common/div.png</texture>
-                            <include>Defs_OptionButton</include>
-                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
-                        </control>
-                        <control type="label" id="8307">
-                            <width>100%</width>
-                            <label>31211</label>
-                            <height>72</height>
-                            <font>Font-ListInfo-Small-Bold</font>
-                            <include>Defs_OptionButton</include>
-                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
-                        </control>
-                        <!-- Show Info -->
-                        <control type="radiobutton" id="8308" description="Show Info">
+                        <control type="radiobutton" id="8313" description="Black Screen when Controls / Info / Lyrics not shown">
                             <visible>ControlGroup(8000).HasFocus(8003)</visible>
                             <width>100%</width>
                             <radioposx>settingsradioposx</radioposx>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
-                            <label>31006</label>
-                            <selected>Skin.HasSetting(videoosd.showinfo)</selected>
-                            <onclick>Skin.ToggleSetting(videoosd.showinfo)</onclick>
+                            <label>$LOCALIZE[31053]</label>
+                            <selected>Skin.HasSetting(OSDBlackScreen)</selected>
+                            <onclick>Skin.ToggleSetting(OSDBlackScreen)</onclick>
                         </control>
+                        
 
                         <!-- HEADER -->
                         <control type="label" id="8799">

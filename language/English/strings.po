@@ -242,6 +242,11 @@ msgctxt "#31052"
 msgid "Rated"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31053"
+msgid "Show blank screen with clock when controls and info are hidden"
+msgstr ""
+
 msgctxt "#31054"
 msgid "Random movies"
 msgstr ""
