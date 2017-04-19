@@ -144,6 +144,52 @@
         <bordersize>24</bordersize>
         <texture colordiffuse="DialogBG">common/white.png</texture>
     </include>
+    <include name="Dialog_Center_PowerMenu">
+        <left>30</left>
+        <right>30</right>
+        <onleft>Close</onleft>
+        <onright>Close</onright>
+        <top>80</top>
+        <bottom>20</bottom>
+        <onup>SetFocus(9000)</onup>
+        <ondown>SetFocus(9000)</ondown>
+        <scrolltime>200</scrolltime>
+        <orientation>vertical</orientation>
+        <itemlayout width="460" height="82">
+            <control type="image">
+                <left>0</left>
+                <right>0</right>
+                <bottom>pad</bottom>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+            <control type="label">
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <bottom>pad</bottom>
+                <font>Font-ListInfo-Small</font>
+                <aligny>center</aligny>
+                <textcolor>ListLabel</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </itemlayout>
+        <focusedlayout width="460" height="82">
+            <control type="image">
+                <left>0</left>
+                <right>0</right>
+                <bottom>pad</bottom>
+                <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+            </control>
+            <control type="label">
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <bottom>pad</bottom>
+                <font>Font-ListInfo-Small</font>
+                <aligny>center</aligny>
+                <textcolor>Selected</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </focusedlayout>
+    </include>
 
     <include name="Dialog_Top">
         <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,-400" end="0">Visible</animation>
@@ -213,7 +259,7 @@
         <onright>SetFocus(9000)</onright>
         <scrolltime>200</scrolltime>
         <orientation>horizontal</orientation>
-        <itemlayout width="374" height="69">
+        <itemlayout width="374" height="72">
             <control type="image">
                 <left>0</left>
                 <right>pad</right>
@@ -230,7 +276,7 @@
                 <label>$INFO[ListItem.Label]</label>
             </control>
         </itemlayout>
-        <focusedlayout width="374" height="69">
+        <focusedlayout width="374" height="72">
             <control type="image">
                 <left>0</left>
                 <right>pad</right>

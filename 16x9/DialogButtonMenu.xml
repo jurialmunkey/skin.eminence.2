@@ -4,18 +4,27 @@
     <controls>
         <include>GlobalOverlay</include>
         <control type="group">
-            <include>Dialog_Top</include>
-            <include>Dialog_Background</include>
+            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center</include>
+            <include>Animation_FadeIn</include>
+        </control>
+        <control type="group">
+            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_Def</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top</include>
+            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[33060]" />
                 <param name="icon" value="special://skin/extras/icons/power.png" />
             </include>
-            <include content="Dialog_Top_Arrows">
+            <include content="Dialog_Center_Arrows" condition="Skin.HasSetting(VerticalMenus)">
+                <param name="id" value="9000" />
+            </include>
+            <include content="Dialog_Top_Arrows" condition="!Skin.HasSetting(VerticalMenus)">
                 <param name="id" value="9000" />
             </include>
 
             <control type="list" id="9000">
-                <include>Dialog_Top_PowerMenu</include>
+                <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top_PowerMenu</include>
+                <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_PowerMenu</include>
                 <content><include>skinshortcuts-group-powermenu</include></content>
             </control>
 
