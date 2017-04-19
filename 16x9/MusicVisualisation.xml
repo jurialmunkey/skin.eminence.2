@@ -110,7 +110,7 @@
                 <align>center</align>
                 <aligny>center</aligny>
                 <label>$INFO[System.Time(hh:mm)]</label>
-                <textcolor>ffededed</textcolor>
+                <textcolor>bfededed</textcolor>
             </control>
             <control type="label">
                 <centerleft>50%</centerleft>
@@ -118,7 +118,7 @@
                 <height>100</height>
                 <aligny>top</aligny>
                 <font>Font-Sublabel</font>
-                <textcolor>bfededed</textcolor>
+                <textcolor>7fededed</textcolor>
                 <align>center</align>
                 <label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
             </control>
@@ -128,9 +128,9 @@
                 <height>100</height>
                 <aligny>top</aligny>
                 <font>Font-ListInfo-Small-Bold</font>
-                <textcolor>5fededed</textcolor>
+                <textcolor>3fededed</textcolor>
                 <align>center</align>
-                <label>$INFO[MusicPlayer.Artist,,  [COLOR=9fededed]•[/COLOR]  ]$INFO[MusicPlayer.Title]</label>
+                <label>$INFO[MusicPlayer.Artist,,  [COLOR=7fededed]•[/COLOR]  ]$INFO[MusicPlayer.Title]</label>
             </control>
             <control type="label">
                 <centerleft>50%</centerleft>
@@ -138,9 +138,9 @@
                 <height>100</height>
                 <aligny>top</aligny>
                 <font>Font-ListInfo-Small-Bold</font>
-                <textcolor>9fededed</textcolor>
+                <textcolor>7fededed</textcolor>
                 <align>center</align>
-                <label>$INFO[Player.Time]$INFO[Player.Duration,  [COLOR=5fededed]/[/COLOR]  ,]</label>
+                <label>$INFO[Player.Time]$INFO[Player.Duration,  [COLOR=3fededed]/[/COLOR]  ,]</label>
             </control>
 
         </control>
