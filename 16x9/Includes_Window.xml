@@ -1736,11 +1736,11 @@
                 <animation type="Hidden">
                     <effect type="fade" end="0" start="100" time="200" />
                 </animation>
-                <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+                <visible>[!Skin.HasSetting(OSDBlackScreen) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo]] | Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
                 <include>Furniture_TopBar_Clock</include>
             </control>
             <control type="group">
-                <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+                <visible>[!Skin.HasSetting(OSDBlackScreen) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo]] | Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
                 <include>Defs_ViewBackground</include>

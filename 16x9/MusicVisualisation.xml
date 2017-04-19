@@ -96,9 +96,8 @@
 
         <control type="group">
             <visible>Skin.HasSetting(OSDBlackScreen)</visible>
-            <visible>![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
+            <visible>![Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
             <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
             <control type="image">
                 <texture colordiffuse="ff000000">common/white.png</texture>
             </control>
@@ -140,7 +139,7 @@
                 <font>Font-ListInfo-Small-Bold</font>
                 <textcolor>7fededed</textcolor>
                 <align>center</align>
-                <label>$INFO[Player.Time]$INFO[Player.Duration,  [COLOR=3fededed]/[/COLOR]  ,]</label>
+                <label>$VAR[Label_PlayerStatus,,...  ]$INFO[Player.Time]$INFO[Player.Duration,  [COLOR=3fededed]/[/COLOR]  ,]</label>
             </control>
 
         </control>
