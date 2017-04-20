@@ -97,7 +97,7 @@
         <control type="group">
             <visible>Skin.HasSetting(OSDBlackScreen)</visible>
             <visible>![Window.IsActive(musicosd) | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
-            <include>Animation_FadeIn</include>
+            <animation effect="fade" start="0" end="100" time="200" reversible="false">Visible</animation>
             <control type="image">
                 <texture colordiffuse="ff000000">common/white.png</texture>
             </control>

@@ -2,7 +2,6 @@
 <template>
     <submenuOther include="submenu-widget" container="9002">
         <property name="content" tag="property" attribute="name|widgetPath" />
-        <property name="content">$VAR[Defs_HomeWidget_Content]</property>
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="wraplist" id="9001">
