@@ -33,6 +33,7 @@
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="content">$VAR[Defs_HomeWidget_Content]</property>
         <property name="target" tag="property" attribute="name|widgetTarget" />
+        <property name="target">$VAR[Defs_HomeWidget_Target]</property>
         <controls>
             <control type="wraplist" id="9001">
                 <visible>!Integer.IsEqual(Window(Home).Property(MenuFocus),9002) | String.IsEmpty(Container(9002).ListItem.Property(widgetType))</visible>

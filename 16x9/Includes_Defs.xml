@@ -268,6 +268,7 @@
     </variable>
     <variable name="Defs_HomeWidget_Target">
         <value condition="!String.IsEmpty(Container(9000).ListItem.Property(widgetTarget))">$INFO[Container(9000).ListItem.Property(widgetTarget)]</value>
+        <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget.target))">$INFO[Skin.String(home.fallbackwidget.target)]</value>
         <value>videos</value>
     </variable>
 
