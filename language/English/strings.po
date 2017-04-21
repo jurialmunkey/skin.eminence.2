@@ -263,6 +263,11 @@ msgctxt "#31057"
 msgid "Kiosk mode"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31058"
+msgid "Show player controls when pressing up if media playing"
+msgstr ""
+
 msgctxt "#31059"
 msgid "Memory Used:"
 msgstr ""
