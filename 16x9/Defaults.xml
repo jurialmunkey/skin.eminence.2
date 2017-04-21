@@ -112,7 +112,7 @@
         <texturebg colordiffuse="PosterBorder">osd/progress-bg.png</texturebg>
         <lefttexture colordiffuse="$VAR[HighlightColor]">osd/progress-end.png</lefttexture>
         <midtexture colordiffuse="$VAR[HighlightColor]">osd/progress-end.png</midtexture>
-        <righttexture colordiffuse="ListLabel">osd/progress-end.png</righttexture>
+        <righttexture colordiffuse="$VAR[HighlightColor]">osd/progress-end.png</righttexture>
         <overlaytexture>noop</overlaytexture>
         <textcolor>ListLabel</textcolor>
         <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
