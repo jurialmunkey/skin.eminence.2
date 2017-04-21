@@ -909,13 +909,13 @@
         <control type="label">
             <posx>15r</posx>
             <posy>48</posy>
-            <width>780</width>
-            <height>21</height>
+            <width>1620</width>
+            <height>60</height>
             <textcolor>FFFF0000</textcolor>
             <shadowcolor>FF000000</shadowcolor>
             <font>font13</font>
             <align>right</align>
-            <label>[COLOR=FF00FF00]$INFO[ListItem.Icon,, - ][/COLOR]$INFO[ListItem.ActualIcon]</label>
+            <label>[COLOR=FF00FF00]$INFO[ListItem.Icon,, - ][/COLOR]$INFO[ListItem.ActualIcon][CR]$INFO[Player.FileNameAndPath]</label>
             <visible>Skin.HasSetting(DebugInfo)</visible>
         </control>
 
