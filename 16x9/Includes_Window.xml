@@ -2030,7 +2030,7 @@
                             <right>800</right>
                             <height>32</height>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Genre,,  -  ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] , ][/COLOR][/UPPERCASE]</label>
+                            <label>[UPPERCASE][COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ,  -  ]$INFO[VideoPlayer.Genre][/COLOR][/UPPERCASE]</label>
                             <visible>!String.IsEmpty(VideoPlayer.Season)</visible>
                         </control>
 

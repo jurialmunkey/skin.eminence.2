@@ -456,6 +456,17 @@
                             <selected>Skin.HasSetting(videoosd.showinfo)</selected>
                             <onclick>Skin.ToggleSetting(videoosd.showinfo)</onclick>
                         </control>
+                        <!-- Show Notification -->
+                        <control type="radiobutton" id="8318" description="Show notifications">
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                            <width>100%</width>
+                            <radioposx>settingsradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>$LOCALIZE[36609]</label>
+                            <selected>!Skin.HasSetting(videoosd.hidenotification)</selected>
+                            <onclick>Skin.ToggleSetting(videoosd.hidenotification)</onclick>
+                        </control>
                         <!-- Div -->
                         <control type="image" id="8306">
                             <width>100%</width>
