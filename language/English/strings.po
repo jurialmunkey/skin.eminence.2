@@ -272,6 +272,11 @@ msgctxt "#31059"
 msgid "Memory Used:"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31060"
+msgid "Show top header tile and text when paused or seeking"
+msgstr ""
+
 msgctxt "#31063"
 msgid "Addons"
 msgstr ""

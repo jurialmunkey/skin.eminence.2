@@ -2079,7 +2079,24 @@
                 <height>16</height>
                 <visible>Player.Seeking</visible>
             </control>
-            <control type="group">
+                
+            <control type="button">
+                <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | [Skin.HasSetting(OSDNoInfo) + Player.Caching]</visible>
+                <include>Animation_FadeIn</include>
+                <animation effect="fade" start="100" end="0" time="200" delay="0">Hidden</animation>
+                <left>20</left>
+                <width>auto</width>
+                <include condition="Skin.HasSetting(OSDNoInfo)">Window_SeekBar_Bubble_Label</include>
+                <label>$VAR[Label_SeekStep]</label>
+                <height>30</height>
+                <bottom>50</bottom>
+                <align>center</align>
+                <textoffsety>4</textoffsety>
+                <textoffsetx>20</textoffsetx>
+                <font>Font-ListInfo-Small-Bold</font>
+                <textcolor>ListLabel</textcolor>
+                <texturenofocus colordiffuse="DialogBG" border="100,32,0,32">common/bubble.png</texturenofocus>
+                <texturefocus colordiffuse="DialogBG" border="100,32,0,32">common/bubble.png</texturefocus>
                 <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),1)">Conditional</animation>
                 <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),2)">Conditional</animation>
                 <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),3)">Conditional</animation>
@@ -2172,29 +2189,8 @@
                 <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),90)">Conditional</animation>
                 <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),91)">Conditional</animation>
                 <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),92)">Conditional</animation>
-                <left>20</left>
-                <bottom>16</bottom>
-                <height>64</height>
-                <width>140</width>
-                <control type="image">
-                    <width>100%</width>
-                    <height>100%</height>
-                    <texture colordiffuse="DialogBG" border="32">common/bubble.png</texture>
-                </control>
-                <control type="label">
-                    <left>0</left>
-                    <right>0</right>
-                    <label>$VAR[Label_SeekStep]</label>
-                    <height>30</height>
-                    <top>8</top>
-                    <align>center</align>
-                    <font>Font-ListInfo-Small-Bold</font>
-                    <textcolor>ListLabel</textcolor>
-                </control>
-                <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding</visible>
-                <include>Animation_FadeIn</include>
-                <animation effect="fade" start="100" end="0" time="200" delay="0">Hidden</animation>
             </control>
+                
         </control>
     </include>
 </includes>

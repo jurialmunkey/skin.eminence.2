@@ -81,7 +81,9 @@
 
     <variable name="Label_SeekStep">
         <value condition="!String.IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize]</value>
-        <value condition="!String.IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset]</value>
+        <value condition="!Skin.HasSetting(OSDNoInfo) + !String.IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset]</value>
+        <value condition="Skin.HasSetting(OSDNoInfo) + Player.Caching">$LOCALIZE[439] $INFO[Player.CacheLevel,,%]</value>
+        <value condition="Skin.HasSetting(OSDNoInfo) + Player.Paused">Paused</value>
         <value>$INFO[Player.SeekTime]</value>
     </variable>
 
