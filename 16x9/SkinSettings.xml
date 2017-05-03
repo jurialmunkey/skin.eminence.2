@@ -468,7 +468,7 @@
                             <onclick>Skin.ToggleSetting(videoosd.showinfo)</onclick>
                         </control>
                         <!-- Show Notification -->
-                        <control type="radiobutton" id="8318" description="Show notifications">
+                        <control type="radiobutton" id="8317" description="Show notifications">
                             <visible>ControlGroup(8000).HasFocus(8003)</visible>
                             <width>100%</width>
                             <radioposx>settingsradioposx</radioposx>
@@ -479,7 +479,7 @@
                             <onclick>Skin.ToggleSetting(videoosd.hidenotification)</onclick>
                         </control>
                         <!-- Show Notification -->
-                        <control type="radiobutton" id="8319" description="Show top header text when paused or seeking">
+                        <control type="radiobutton" id="8318" description="Show top header text when paused or seeking">
                             <visible>ControlGroup(8000).HasFocus(8003)</visible>
                             <width>100%</width>
                             <radioposx>settingsradioposx</radioposx>
@@ -488,6 +488,17 @@
                             <label>$LOCALIZE[31060]</label>
                             <selected>!Skin.HasSetting(OSDNoInfo)</selected>
                             <onclick>Skin.ToggleSetting(OSDNoInfo)</onclick>
+                        </control>
+                        <!-- Show ClearARt -->
+                        <control type="radiobutton" id="8319" description="Show clearart with seekbar">
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                            <width>100%</width>
+                            <radioposx>settingsradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>$LOCALIZE[31061]</label>
+                            <selected>Skin.HasSetting(osd.showclearart)</selected>
+                            <onclick>Skin.ToggleSetting(osd.showclearart)</onclick>
                         </control>
                         <!-- Div -->
                         <control type="image" id="8306">

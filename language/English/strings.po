@@ -277,6 +277,11 @@ msgctxt "#31060"
 msgid "Show top header tile and text when paused or seeking"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31061"
+msgid "Show clearart"
+msgstr ""
+
 msgctxt "#31063"
 msgid "Addons"
 msgstr ""

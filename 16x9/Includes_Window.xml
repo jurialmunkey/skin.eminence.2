@@ -2045,6 +2045,14 @@
                     </control>
                 </control>
             </control>
+            <control type="image">
+                <bottom>16</bottom>
+                <right>0</right>
+                <width>500</width>
+                <height>281</height>
+                <texture background="true">$INFO[Player.Art(clearart)]</texture>
+                <visible>Skin.HasSetting(osd.showclearart)</visible>
+            </control>
             <control type="group">
                 <width>100%</width>
                 <bottom>-1000</bottom>
