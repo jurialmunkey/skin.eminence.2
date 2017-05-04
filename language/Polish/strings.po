@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-04 12:13+0200\n"
+"PO-Revision-Date: 2017-05-04 12:26+0200\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -177,7 +177,7 @@ msgstr "Odcinki polecane"
 #: /16x9/SkinSettings.xml
 msgctxt "#31037"
 msgid "Watched (checkmark)"
-msgstr "Obejrzane (fajka)"
+msgstr "Obejrzany (haczyk)"
 
 msgctxt "#31038"
 msgid "Recent albums"
@@ -195,7 +195,7 @@ msgstr "Ostatnio dodane (gwiazdka)"
 #: /16x9/SkinSettings.xml
 msgctxt "#31041"
 msgid "Resumable (progress circle)"
-msgstr "Kontynuuj odtwarzanie (okrąg postępu)"
+msgstr "Częściowo obejrzany (okrąg postępu)"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31042"
