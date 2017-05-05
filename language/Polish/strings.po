@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-04 12:26+0200\n"
+"PO-Revision-Date: 2017-05-05 15:37+0200\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -190,7 +190,7 @@ msgstr "Albumy polecane"
 #: /16x9/SkinSettings.xml
 msgctxt "#31040"
 msgid "Recently added (star)"
-msgstr "Ostatnio dodane (gwiazdka)"
+msgstr "Ostatnio dodany (gwiazdka)"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31041"
@@ -247,7 +247,7 @@ msgstr "Kategoria wiekowa"
 #: /16x9/SkinSettings.xml
 msgctxt "#31053"
 msgid "Show blank screen with clock when controls and info are hidden"
-msgstr "Pokazuj pusty ekran z zegarem, gdy  przyciski i informacje są ukryte"
+msgstr "Pokazuj pusty ekran z zegarem, gdy przyciski i informacje są ukryte"
 
 msgctxt "#31054"
 msgid "Random movies"
@@ -502,7 +502,7 @@ msgstr "Animuj fototapetę"
 
 msgctxt "#31117"
 msgid "mins"
-msgstr "minut"
+msgstr "minuty"
 
 msgctxt "#31118"
 msgid "Animate artist slideshow"
@@ -814,7 +814,7 @@ msgstr "Panele"
 
 msgctxt "#31198"
 msgid "Manage Dependencies"
-msgstr "Zarządzaj zależnościami"
+msgstr "Dodatki"
 
 msgctxt "#31199"
 msgid "Showcase"
@@ -866,7 +866,7 @@ msgstr "Menu ekranowe"
 
 msgctxt "#31211"
 msgid "Video Information"
-msgstr "O wideo"
+msgstr "Informacje o wideo"
 
 msgctxt "#31212"
 msgid "No Content Currently Available"
@@ -902,7 +902,7 @@ msgstr "Inne"
 
 msgctxt "#31220"
 msgid "Info List 2"
-msgstr "Informacje 2"
+msgstr "Lista 2"
 
 msgctxt "#31221"
 msgid "Square List"
