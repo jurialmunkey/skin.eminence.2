@@ -13,8 +13,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
+"Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#31159"
+msgid "Recently Played"
+msgstr "KÃ¼rzlich abgespielt"
 
 msgctxt "#31000"
 msgid "Item"
@@ -22,15 +26,15 @@ msgstr "Eintrag"
 
 msgctxt "#31001"
 msgid "Items"
-msgstr "Einträge"
+msgstr "EintrÃ¤ge"
 
 msgctxt "#31002"
 msgid "Tag"
-msgstr "TAG"
+msgstr "Tag"
 
 msgctxt "#31003"
 msgid "Next"
-msgstr "Demnächst"
+msgstr "DemnÃ¤chst"
 
 msgctxt "#31004"
 msgid "Show shadows on panels"
@@ -42,19 +46,19 @@ msgstr "Video OSD"
 
 msgctxt "#31006"
 msgid "Show plot when pressing info"
-msgstr "Zeige Handlung beim Drücken von Info"
+msgstr "Zeige Handlung beim DrÃ¼cken von Info"
 
 msgctxt "#31007"
 msgid "Show media flags"
-msgstr "Zeige Medieninformationen"
+msgstr "Zeige Medieninformationssymbole"
 
 msgctxt "#31008"
 msgid "Show plot overlay in after delay"
-msgstr "Zeige Handlung nach Verzögerung an"
+msgstr "Zeige Handlung verzÃ¶gert an"
 
 msgctxt "#31009"
 msgid "Open playlist"
-msgstr "Wiedergabeliste öffnen"
+msgstr "Wiedergabeliste Ã¶ffnen"
 
 msgctxt "#31010"
 msgid "Save playlist"
@@ -62,7 +66,7 @@ msgstr "Wiedergabeliste speichern"
 
 msgctxt "#31011"
 msgid "Close playlist"
-msgstr "Wiedergabeliste schließen"
+msgstr "Wiedergabeliste schlieÃŸen"
 
 msgctxt "#31012"
 msgid "Current playlist"
@@ -74,7 +78,7 @@ msgstr "Lautlos"
 
 msgctxt "#31014"
 msgid "Show header"
-msgstr "Zeige Überschrift"
+msgstr "Zeige Kopfzeile"
 
 msgctxt "#31015"
 msgid "Live TV"
@@ -89,8 +93,8 @@ msgid "Votes"
 msgstr "Stimmen"
 
 msgctxt "#31018"
-msgid "Erhöhen"
-msgstr ""
+msgid "Increase"
+msgstr "ErhÃ¶hen"
 
 msgctxt "#31019"
 msgid "Decrease"
@@ -122,30 +126,30 @@ msgstr "Aktiviere Skin Debug Informationen"
 #: /16x9/SkinSettings.xml
 msgctxt "#31025"
 msgid "Show colour diffuse overlay"
-msgstr "Farbdiffus-Overlay anzeigen"
+msgstr "Farbdiffuse Ãœberlagerung anzeigen"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31026"
 msgid "Show scrolling background text"
-msgstr "Zeige blätternden Hintergrundtext an"
+msgstr "Zeige blÃ¤tternden Hintergrundtext an"
 
 msgctxt "#31027"
 msgid "Show background video"
 msgstr "Zeige Video im Hintergrund"
 
 msgctxt "#31028"
-msgid "Hintergrundvisualisierung anzeigen"
-msgstr "Zeige Visual"
+msgid "Show background visualisation"
+msgstr "Zeige Hintergrundvisualisierung"
 
 #: /16x9/Includes_Label.xml
 msgctxt "#31029"
 msgid "Hub fallback widget"
-msgstr "Hub fallback widget"
+msgstr "Hub Fallback widget"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31030"
 msgid "Watched/UnWatched Indicators"
-msgstr "Gesehen/Ungesehen Indikatoren"
+msgstr "Gesehen / Ungesehen Indikatoren"
 
 msgctxt "#31031"
 msgid "Recent movies"
@@ -158,11 +162,11 @@ msgstr "Empfohlene Filme"
 #: /16x9/SkinSettings.xml
 msgctxt "#31033"
 msgid "Watched / Unwatched Indicators"
-msgstr "Gesehen/Ungesehen Indikatoren"
+msgstr "Gesehen / Ungesehen Indikatoren"
 
 msgctxt "#31034"
 msgid "Enable Artist Slideshow"
-msgstr "Aktiviere Künstler Diashow"
+msgstr "Aktiviere KÃ¼nstler Diashow"
 
 msgctxt "#31035"
 msgid "Recent episodes"
@@ -175,7 +179,7 @@ msgstr "Empfohlene Episoden"
 #: /16x9/SkinSettings.xml
 msgctxt "#31037"
 msgid "Watched (checkmark)"
-msgstr "Gesehen (Häkchen)"
+msgstr "Gesehen (HÃ¤kchen)"
 
 msgctxt "#31038"
 msgid "Recent albums"
@@ -188,7 +192,7 @@ msgstr "Empfohlene Alben"
 #: /16x9/SkinSettings.xml
 msgctxt "#31040"
 msgid "Recently added (star)"
-msgstr "Kürzlich hinzugefügt (Stern)"
+msgstr "KÃ¼rzlich hinzugefÃ¼gt (Stern)"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31041"
@@ -198,11 +202,11 @@ msgstr "Wiedergabe (Fortschrittskreis)"
 #: /16x9/SkinSettings.xml
 msgctxt "#31042"
 msgid "Unwatched episodes (numeric counter)"
-msgstr "Ungesehene Episoden (numerischer Zähler)"
+msgstr "Ungesehene Episoden (numerischer ZÃ¤hler)"
 
 msgctxt "#31043"
 msgid "Extra art"
-msgstr "Extra art"
+msgstr "Extra Art"
 
 msgctxt "#31044"
 msgid "Local subtitle found!"
@@ -226,38 +230,38 @@ msgstr "Playlist Optionen"
 
 msgctxt "#31049"
 msgid "Customise home menu"
-msgstr "Anpassen des Home-Menüs"
+msgstr "Anpassen des Home-MenÃ¼s"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31050"
 msgid "Apply highlight colour filter to background overlay"
-msgstr "Hervorheben von Farbfilter auf Hintergrundüberlagerung"
+msgstr "Angleichen der Highlight-Farbe an die Hintergrundfarbe"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31051"
 msgid "Prefer vertical context/view menus"
-msgstr "Bevorzugte vertikale Kontext- / Ansichtsmenüs"
+msgstr "Bevorzuge vertikale Kontext- / AnsichtsmenÃ¼s"
 
 msgctxt "#31052"
 msgid "Rated"
-msgstr "Bewertet"
+msgstr "Alterseinstufung"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31053"
 msgid "Show blank screen with clock when controls and info are hidden"
-msgstr "Zeige leeren Bildschirm mit Uhr, wenn Kontrollen und Info versteckt sind"
+msgstr "Zeige leeren Bildschirm mit Uhr, wenn Kontrollanzeigen und Informationen versteckt sind"
 
 msgctxt "#31054"
 msgid "Random movies"
-msgstr "Zufällige Filme"
+msgstr "ZufÃ¤llige Filme"
 
 msgctxt "#31055"
 msgid "Random episodes"
-msgstr "Zufällige Episoden"
+msgstr "ZufÃ¤llige Episoden"
 
 msgctxt "#31056"
 msgid "Random albums"
-msgstr "Zufällige Alben"
+msgstr "ZufÃ¤llige Alben"
 
 msgctxt "#31057"
 msgid "Kiosk mode"
@@ -266,7 +270,7 @@ msgstr "Kiosk Modus"
 #: /16x9/SkinSettings.xml
 msgctxt "#31058"
 msgid "Show player controls when pressing up if media playing"
-msgstr "Zeige Knöpfe, wenn die Wiedergabe aktiv ist"
+msgstr "Zeige Bedienelemente bei DrÃ¼cken der Oben-Taste, wenn die Wiedergabe aktiv ist"
 
 msgctxt "#31059"
 msgid "Memory Used:"
@@ -275,7 +279,7 @@ msgstr "Speicher genutzt:"
 #: /16x9/SkinSettings.xml
 msgctxt "#31060"
 msgid "Show top header tile and text when paused or seeking"
-msgstr "Zeig Top-Überschrift-Titel und Text, wenn Pause gedrückt ist"
+msgstr "Zeige Kopfbereich-Kachel und Text, wenn Pause gedrÃ¼ckt ist"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31061"
@@ -308,7 +312,7 @@ msgstr "Ansichtsoptionen"
 
 msgctxt "#31069"
 msgid "Context Menu"
-msgstr "Kontext Menü"
+msgstr "Kontext MenÃ¼"
 
 msgctxt "#31070"
 msgid "Info"
@@ -328,7 +332,7 @@ msgstr "Kategorien"
 
 msgctxt "#31074"
 msgid "Submenu"
-msgstr "Untermenü"
+msgstr "UntermenÃ¼"
 
 msgctxt "#31075"
 msgid "Icon"
@@ -352,7 +356,7 @@ msgstr "Bevorstehende Filme"
 
 msgctxt "#31080"
 msgid "Popular Movies"
-msgstr "Populäre Filme"
+msgstr "PopulÃ¤re Filme"
 
 msgctxt "#31081"
 msgid "Top Rated Movies"
@@ -360,7 +364,7 @@ msgstr "Top bewertete Filme"
 
 msgctxt "#31082"
 msgid "Popular Shows"
-msgstr "Populäre Sendungen"
+msgstr "PopulÃ¤re Sendungen"
 
 msgctxt "#31083"
 msgid "Top Rated Shows"
@@ -372,7 +376,7 @@ msgstr "Laufende Sendungen"
 
 msgctxt "#31085"
 msgid "Airing Today"
-msgstr "Läuft Heute"
+msgstr "LÃ¤uft Heute"
 
 msgctxt "#31086"
 msgid "Custom 1"
@@ -392,7 +396,7 @@ msgstr "Custom 4"
 
 msgctxt "#31090"
 msgid "Content Loading"
-msgstr "Inhalt lädt"
+msgstr "Inhalt lÃ¤dt"
 
 msgctxt "#31091"
 msgid "Trending Shows"
@@ -400,7 +404,7 @@ msgstr "Angesagte Sendungen"
 
 msgctxt "#31092"
 msgid "No information available"
-msgstr "Keine Informationen verfügbar"
+msgstr "Keine Informationen verfÃ¼gbar"
 
 msgctxt "#31093"
 msgid "Movie Hub"
@@ -416,7 +420,7 @@ msgstr "Im Rampenlicht"
 
 msgctxt "#31096"
 msgid "Hub items"
-msgstr "Hub Einträge"
+msgstr "Hub EintrÃ¤ge"
 
 msgctxt "#31097"
 msgid "Hub widget"
@@ -432,23 +436,23 @@ msgstr "Codec"
 
 msgctxt "#31100"
 msgid "Recently Added"
-msgstr "Zuletzt hinzugefügt"
+msgstr "KÃ¼rzlich hinzugefÃ¼gt"
 
 msgctxt "#31101"
 msgid "Recently Played"
-msgstr "Zuletzt wiedergegeben"
+msgstr "KÃ¼rzlich abgespielt"
 
 msgctxt "#31102"
 msgid "Watch Random"
-msgstr "Zufällig ansehen"
+msgstr "ZufÃ¤llig ansehen"
 
 msgctxt "#31103"
 msgid "Delete Settings Shortcut"
-msgstr "Lösche Einstellungsverknüpfung"
+msgstr "LÃ¶sche EinstellungsverknÃ¼pfung"
 
 msgctxt "#31104"
 msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
-msgstr "Sind Sie sicher, dass Sie die Einstellungsverknüpfung entfernen möchten?"
+msgstr "Sind Sie sicher, dass Sie die EinstellungsverknÃ¼pfung entfernen mÃ¶chten? Bitte versichern Sie sich, dass Sie eine alternative Metode haben die Einstellungen zu erreichen, bevor Sie diese VerknÃ¼pfung entfernen"
 
 msgctxt "#31105"
 msgid "Extra Info"
@@ -460,7 +464,7 @@ msgstr "3D Modus"
 
 msgctxt "#31107"
 msgid "Similar"
-msgstr "Ähnlich"
+msgstr "Ã„hnlich"
 
 msgctxt "#31108"
 msgid "Youtube"
@@ -468,7 +472,7 @@ msgstr "Youtube"
 
 msgctxt "#31109"
 msgid "provided by themoviedb.org"
-msgstr "Von youoviedb.org zur Verfügung gestellt"
+msgstr "Von youoviedb.org zur VerfÃ¼gung gestellt"
 
 msgctxt "#31110"
 msgid "Extras"
@@ -476,15 +480,15 @@ msgstr "Extras"
 
 msgctxt "#31111"
 msgid "Choose primary highlight color"
-msgstr "Wähle primäre Highlight-Farbe"
+msgstr "WÃ¤hle primÃ¤re Highlight-Farbe"
 
 msgctxt "#31112"
 msgid "Choose secondary highlight color"
-msgstr "Wähle sekundäre Highlight-Farbe"
+msgstr "WÃ¤hle sekundÃ¤re Highlight-Farbe"
 
 msgctxt "#31113"
 msgid "Reset colors to defaults"
-msgstr "Farben auf Standart zurücksetzen"
+msgstr "Farben auf Standard zurÃ¼cksetzen"
 
 msgctxt "#31114"
 msgid "Install weather fanart"
@@ -504,15 +508,15 @@ msgstr "Minuten"
 
 msgctxt "#31118"
 msgid "Animate artist slideshow"
-msgstr "Animiere Künster Diashow"
+msgstr "Animiere KÃ¼nster Diashow"
 
 msgctxt "#31119"
 msgid "Show visualisation behind artist slideshow"
-msgstr "Zeige Visualisierung hinter Künster Diashow"
+msgstr "Zeige Visualisierung hinter KÃ¼nstler Diashow"
 
 msgctxt "#31120"
 msgid "Show artist slideshow"
-msgstr "Zeige Künstler Diashow"
+msgstr "Zeige KÃ¼nstler Diashow"
 
 msgctxt "#31121"
 msgid "Music OSD"
@@ -520,7 +524,7 @@ msgstr "Musik OSD"
 
 msgctxt "#31122"
 msgid "Match header tile with highlight color"
-msgstr "Stimme Überschrift Titel mit Highlight-Farbe ab"
+msgstr "Stimme Kopfbereich Kachelfarbe mit Highlight-Farbe ab"
 
 msgctxt "#31123"
 msgid "Hub"
@@ -528,11 +532,11 @@ msgstr "Hub"
 
 msgctxt "#31124"
 msgid "Similar movies"
-msgstr "Ähnliche Filme"
+msgstr "Ã„hnliche Filme"
 
 msgctxt "#31125"
 msgid "Similar to"
-msgstr "Ähnlich zu"
+msgstr "Ã„hnlich zu"
 
 msgctxt "#31126"
 msgid "Colors"
@@ -540,7 +544,7 @@ msgstr "Farben"
 
 msgctxt "#31127"
 msgid "Header"
-msgstr "Überschrift"
+msgstr "Kopfbereich"
 
 msgctxt "#31128"
 msgid "Color"
@@ -548,11 +552,11 @@ msgstr "Farbe"
 
 msgctxt "#31129"
 msgid "Enable individual tile colors in home customisation"
-msgstr "Aktivieren individuelle Farbe für Überschriften in Home Anpassung"
+msgstr "Aktiviere individuelle Farbanpassungen fÃ¼r Kacheln in Home MenÃ¼"
 
 msgctxt "#31130"
 msgid "items found"
-msgstr "Gefundene Einträge"
+msgstr "Gefundene EintrÃ¤ge"
 
 msgctxt "#31131"
 msgid "Search Options"
@@ -572,7 +576,7 @@ msgstr "nach Darsteller"
 
 msgctxt "#31135"
 msgid "by Director"
-msgstr "nach Regiseur"
+msgstr "nach Regisseur"
 
 msgctxt "#31136"
 msgid "by Studio"
@@ -592,7 +596,7 @@ msgstr "Hubs"
 
 msgctxt "#31140"
 msgid "Show tile colour on unfocused tiles"
-msgstr "Zeige Kachelfarbe bei unfokusierten Überschríften"
+msgstr "Zeige Kachelfarbe bei unfokussierten Ãœberschriften"
 
 msgctxt "#31141"
 msgid "Info icons"
@@ -628,7 +632,7 @@ msgstr "Medua info 3"
 
 msgctxt "#31149"
 msgid "Next Aired"
-msgstr "Als nächstes läuft"
+msgstr "Als nÃ¤chstes lÃ¤uft"
 
 msgctxt "#31150"
 msgid "Show widget posters"
@@ -660,7 +664,7 @@ msgstr "Widget anzeigen"
 
 msgctxt "#31157"
 msgid "Home header text"
-msgstr "Home Überschrift Text"
+msgstr "Home Kopfzeile Text"
 
 msgctxt "#31158"
 msgid "Media Center"
@@ -668,11 +672,11 @@ msgstr "Media Center"
 
 msgctxt "#31159"
 msgid "Background overlay image"
-msgstr "Hintergrundbild überlagern"
+msgstr "Hintergrundbild Ã¼berlagern"
 
 msgctxt "#31160"
 msgid "Busy spinner"
-msgstr "Beschäftigt Symbol (Spinner)"
+msgstr "BeschÃ¤ftigt Symbol (Spinner)"
 
 msgctxt "#31161"
 msgid "Backup skin settings"
@@ -680,7 +684,7 @@ msgstr "Skin-Einstellungen sichern"
 
 msgctxt "#31162"
 msgid "Restore skin settings from file"
-msgstr "Skin-Einstellungen wieder herstellen mit Datei"
+msgstr "Skin-Einstellungen wiederherstellen mit Datei"
 
 msgctxt "#31163"
 msgid "Gallery"
@@ -692,7 +696,7 @@ msgstr "Fanart Liste"
 
 msgctxt "#31165"
 msgid "Show sorting and info line headers"
-msgstr "Sortier- und Infozeilenüberschriften anzeigen"
+msgstr "Sortier- und InfozeilenÃ¼berschriften anzeigen"
 
 msgctxt "#31166"
 msgid "Individually set in customisation dialog"
@@ -700,19 +704,19 @@ msgstr "Individuell im Anpassungsdialog eingestellt"
 
 msgctxt "#31167"
 msgid "Show unwatched count in header"
-msgstr "Zeige ungesehen Zählung in Kopfzeile"
+msgstr "Zeige ungesehen ZÃ¤hler in Kopfzeile"
 
 msgctxt "#31168"
-msgid "Jetzt / als Nächstes"
+msgid "Jetzt / als NÃ¤chstes"
 msgstr ""
 
 msgctxt "#31169"
 msgid "Reset skin settings to defaults  (WARNING - This will override all skin settings)"
-msgstr "Setzen Sie die Skin-Einstellungen auf die Standardwerte zurück (WARNUNG - Dadurch werden alle Skin-Einstellungen überschrieben)"
+msgstr "Setzen Sie die Skin-Einstellungen auf die Standardwerte zurÃ¼ck (WARNUNG - Dadurch werden alle Skin-Einstellungen Ã¼berschrieben)"
 
 msgctxt "#31170"
 msgid "Backup / Restore"
-msgstr "Backup / Wiederherstellen"
+msgstr "Backup / Wiederherstellung"
 
 msgctxt "#31171"
 msgid "Reload skin"
@@ -720,11 +724,11 @@ msgstr "Skin neu laden"
 
 msgctxt "#31172"
 msgid "Transparent home bar"
-msgstr "Transparente Home Leiste"
+msgstr "Transparente Home-Leiste"
 
 msgctxt "#31173"
 msgid "Home bar style"
-msgstr "Home Leiste Style"
+msgstr "Home-Leisten Stil"
 
 msgctxt "#31174"
 msgid "Weather icons"
@@ -732,7 +736,7 @@ msgstr "Wetter Symbole"
 
 msgctxt "#31175"
 msgid "Customise shutdown menu"
-msgstr "Ausschalten Menü anpassen"
+msgstr "Ausschalten MenÃ¼ anpassen"
 
 msgctxt "#31176"
 msgid "Genre icons"
@@ -740,7 +744,7 @@ msgstr "Genre Symbole"
 
 msgctxt "#31180"
 msgid "Default"
-msgstr "Standart"
+msgstr "Standard"
 
 msgctxt "#31181"
 msgid "Text in tiles"
@@ -752,7 +756,7 @@ msgstr "Nur Text"
 
 msgctxt "#31183"
 msgid "Customise shutdown menu"
-msgstr "Ausschalten Menü anpassen"
+msgstr "Ausschalten MenÃ¼ anpassen"
 
 msgctxt "#31184"
 msgid "Startup video or playlist"
@@ -760,7 +764,7 @@ msgstr "Video oder Playliste wiedergeben"
 
 msgctxt "#31185"
 msgid "Label"
-msgstr "Etikett"
+msgstr "Beschriftung"
 
 msgctxt "#31186"
 msgid "Action"
@@ -780,7 +784,7 @@ msgstr "Nichts"
 
 msgctxt "#31190"
 msgid "Next Episode"
-msgstr "Näcshte Episode"
+msgstr "NÃ¤chste Episode"
 
 msgctxt "#31191"
 msgid "Last Episode"
@@ -804,15 +808,15 @@ msgstr "Erlaube das Neuladen von Widgets"
 
 msgctxt "#31196"
 msgid "Use padding around panel edges"
-msgstr "Verwende Polsterung um die Plattenkanten"
+msgstr "Verwende Polsterung/Freiraum um die Plattenkanten"
 
 msgctxt "#31197"
 msgid "Panels"
-msgstr "Platten"
+msgstr "Informationsfelder"
 
 msgctxt "#31198"
 msgid "Manage Dependencies"
-msgstr "Abhängigkeiten verwalten"
+msgstr "AbhÃ¤ngigkeiten verwalten"
 
 msgctxt "#31199"
 msgid "Showcase"
@@ -828,15 +832,15 @@ msgstr "auf"
 
 msgctxt "#31202"
 msgid "Sort by: Default"
-msgstr "Sortieren nach: Standart"
+msgstr "Sortieren nach: Standard"
 
 msgctxt "#31203"
 msgid "No Additional Details Available"
-msgstr "Keine zusätzlichen Details verfügbar"
+msgstr "Keine zusÃ¤tzlichen Details verfÃ¼gbar"
 
 msgctxt "#31204"
 msgid "Header tile icon and label follows library content type"
-msgstr "Header-Kachelsymbol und Label folgt dem Bibliotheksinhaltstyp"
+msgstr "Kopfbereich-Kachelsymbol und Beschriftung folgt dem Bibliotheksinhaltstyp"
 
 msgctxt "#31205"
 msgid "Settings Level"
@@ -844,7 +848,7 @@ msgstr "Einstellungsebene"
 
 msgctxt "#31206"
 msgid "Home Shortcuts and Widgets"
-msgstr "Home Verknüpfungen und Widgets"
+msgstr "Home VerknÃ¼pfungen und Widgets"
 
 msgctxt "#31207"
 msgid "Home Header"
@@ -868,7 +872,7 @@ msgstr "Video Informationen"
 
 msgctxt "#31212"
 msgid "No Content Currently Available"
-msgstr "Momentan nicht verfügbar"
+msgstr "Momentan nicht verfÃ¼gbar"
 
 msgctxt "#31213"
 msgid "Show user ratings for music albums / songs"
@@ -876,7 +880,7 @@ msgstr "Zeige Nutzerbewertung von Musik Alben / Titeln"
 
 msgctxt "#31214"
 msgid "Show additional info labels in lists (e.g. ratings and year)"
-msgstr "Zeige zusätzlich Info Etiketten in Listen /z.B. Bewertung und Jahr)"
+msgstr "Zeige zusÃ¤tzlich Info Beschriftungen in Listen (z.B. Bewertung und Jahr)"
 
 msgctxt "#31215"
 msgid "Plain list"
@@ -892,7 +896,7 @@ msgstr "Pixelformat"
 
 msgctxt "#31218"
 msgid "Show additional info labels with media flags (e.g. ratings and year)"
-msgstr "Zeige zusätzlich Info Etiketten in Listen /z.B. Bewertung und Jahr)"
+msgstr "Zeige zusÃ¤tzlich Info Etiketten in Listen (z.B. Bewertung und Jahr)"
 
 msgctxt "#31219"
 msgid "Miscellaneous"
@@ -916,11 +920,11 @@ msgstr "Poster Liste"
 
 msgctxt "#31224"
 msgid "Show additional dialog shadows"
-msgstr "Zeige zusätzliche Dialogschatten"
+msgstr "Zeige zusÃ¤tzliche Dialogschatten"
 
 msgctxt "#31225"
 msgid "Use original Eminence v1 style side labels and arrows"
-msgstr "Benutze original Eminence v1 Stil Etiketten und Pfeile"
+msgstr "Benutze original Eminence v1 Stil Beschriftungen und Pfeile"
 
 msgctxt "#31226"
 msgid "Lock view"
@@ -932,7 +936,7 @@ msgstr "Aktivieren Ansicht passend zu Inhalt Typ"
 
 msgctxt "#31228"
 msgid "Select view mode"
-msgstr "Ansichtsstil auswählen"
+msgstr "Ansichtsstil auswÃ¤hlen"
 
 msgctxt "#31229"
 msgid "Lock this viewtype to content type"
@@ -944,7 +948,7 @@ msgstr "Mittlere Symbole"
 
 msgctxt "#31231"
 msgid "Use extra fanart if available"
-msgstr "Benutze extra Fanart wenn verfügbar"
+msgstr "Benutze extra Fanart wenn verfÃ¼gbar"
 
 msgctxt "#31232"
 msgid "Unlock View"
@@ -956,7 +960,7 @@ msgstr "Dieser Ansichtsmodus ist derzeit auf den Inhaltstyp gesperrt"
 
 msgctxt "#31234"
 msgid "Do you wish to unlock it and set a new view mode?"
-msgstr "Möchten Sie es entsperren und einen neuen Ansichtsmodus setzen?"
+msgstr "MÃ¶chten Sie es entsperren und einen neuen Ansichtsmodus setzen?"
 
 msgctxt "#31235"
 msgid "Fanart fade opacity (default is 90%)"
