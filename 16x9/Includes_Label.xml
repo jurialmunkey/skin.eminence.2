@@ -111,10 +111,10 @@
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Albums.Formatted))">$INFO[Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2))">$INFO[Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2)]</value>
-        <value>$INFO[ListItem.Plot]</value>
+        <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
     </variable>
 
     <variable name="Label_ListPlot">
