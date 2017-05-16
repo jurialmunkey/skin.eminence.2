@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-04-24 11:34+0200\n"
+"PO-Revision-Date: 2017-05-05 15:37+0200\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.0.1\n"
 
-# Misc labels
 msgctxt "#31000"
 msgid "Item"
 msgstr "Pozycja"
@@ -40,7 +39,7 @@ msgstr "Pokazuj cienie paneli"
 
 msgctxt "#31005"
 msgid "Video OSD"
-msgstr "Biblioteka wideo"
+msgstr "Menu ekranowe"
 
 msgctxt "#31006"
 msgid "Show plot when pressing info"
@@ -106,10 +105,31 @@ msgctxt "#31021"
 msgid "Show fanart"
 msgstr "Pokazuj fototapetę"
 
+#: /16x9/Viewtype_List.xml
+msgctxt "#31022"
+msgid "Media Info 3"
+msgstr "Informacje 3"
+
+#: /16x9/SkinSettings.xml
+#, fuzzy
+msgctxt "#31023"
+msgid "Enable animated video lyrics"
+msgstr "Aktywuj animowane teksty utworów"
+
 #: /16x9/SkinSettings.xml
 msgctxt "#31024"
 msgid "Enable skin debug info"
 msgstr "Pokazuj informacje diagnostyczne skóry"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31025"
+msgid "Show colour diffuse overlay"
+msgstr "Pokazuj kolor rozproszenia tekstury"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31026"
+msgid "Show scrolling background text"
+msgstr "Pokazuj przewijany tekst w tle interfejsu"
 
 msgctxt "#31027"
 msgid "Show background video"
@@ -124,13 +144,23 @@ msgctxt "#31029"
 msgid "Hub fallback widget"
 msgstr "Zapasowy gadżet centrum"
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31030"
+msgid "Watched/UnWatched Indicators"
+msgstr "Wskaźniki stanu obejrzenia"
+
 msgctxt "#31031"
 msgid "Recent movies"
 msgstr "Filmy ostatnio dodane"
 
 msgctxt "#31032"
 msgid "Recommended movies"
-msgstr "Filmy rekomendowane"
+msgstr "Filmy polecane"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31033"
+msgid "Watched / Unwatched Indicators"
+msgstr "Wskaźniki stanu obejrzenia"
 
 msgctxt "#31034"
 msgid "Enable Artist Slideshow"
@@ -142,7 +172,12 @@ msgstr "Odcinki ostatnio dodane"
 
 msgctxt "#31036"
 msgid "Recommended episodes"
-msgstr "Odcinki rekomendowane"
+msgstr "Odcinki polecane"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31037"
+msgid "Watched (checkmark)"
+msgstr "Obejrzany (haczyk)"
 
 msgctxt "#31038"
 msgid "Recent albums"
@@ -150,7 +185,22 @@ msgstr "Albumy ostatnio dodane"
 
 msgctxt "#31039"
 msgid "Recommended albums"
-msgstr "Albumy rekomendowane"
+msgstr "Albumy polecane"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31040"
+msgid "Recently added (star)"
+msgstr "Ostatnio dodany (gwiazdka)"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31041"
+msgid "Resumable (progress circle)"
+msgstr "Częściowo obejrzany (okrąg postępu)"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31042"
+msgid "Unwatched episodes (numeric counter)"
+msgstr "Odcinki nieobejrzane (licznik)"
 
 msgctxt "#31043"
 msgid "Extra art"
@@ -174,11 +224,16 @@ msgstr "Szablony wizualizacji"
 
 msgctxt "#31048"
 msgid "Playlist Options"
-msgstr "Opcje listy odtwarzania"
+msgstr "Opcje listy"
 
 msgctxt "#31049"
 msgid "Customise home menu"
 msgstr "Dostosuj menu startowe"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31050"
+msgid "Apply highlight colour filter to background overlay"
+msgstr "Zastosuj filtr koloru podświetlenia na teksturę tła"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31051"
@@ -192,7 +247,7 @@ msgstr "Kategoria wiekowa"
 #: /16x9/SkinSettings.xml
 msgctxt "#31053"
 msgid "Show blank screen with clock when controls and info are hidden"
-msgstr "Pokazuj pusty ekran z zegarem, gdy  przyciski i informacje są ukryte"
+msgstr "Pokazuj pusty ekran z zegarem, gdy przyciski i informacje są ukryte"
 
 msgctxt "#31054"
 msgid "Random movies"
@@ -219,6 +274,16 @@ msgctxt "#31059"
 msgid "Memory Used:"
 msgstr "Użycie pamięci:"
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31060"
+msgid "Show top header tile and text when paused or seeking"
+msgstr "Pokazuj kafelek nagłówka z tekstem podczas pauzy i przewijania"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31061"
+msgid "Show clearart"
+msgstr "Pokazuj przezrocze"
+
 msgctxt "#31063"
 msgid "Addons"
 msgstr "Dodatki"
@@ -233,7 +298,7 @@ msgstr "Ukrywaj ostrzeżenia o brakującej obsłudze myszy"
 
 msgctxt "#31066"
 msgid "Cinema Exp."
-msgstr "Cinema Expierence"
+msgstr "Cinema Experience"
 
 msgctxt "#31067"
 msgid "Pages"
@@ -285,7 +350,7 @@ msgstr "W kinach"
 
 msgctxt "#31079"
 msgid "Upcoming Films"
-msgstr "Filmy wkrótce w kinach"
+msgstr "Wkrótce w kinach"
 
 msgctxt "#31080"
 msgid "Popular Movies"
@@ -437,7 +502,7 @@ msgstr "Animuj fototapetę"
 
 msgctxt "#31117"
 msgid "mins"
-msgstr "minut"
+msgstr "minuty"
 
 msgctxt "#31118"
 msgid "Animate artist slideshow"
@@ -453,7 +518,7 @@ msgstr "Wizualizuj odtwarzanie muzyki pokazem slajdów wykonawcy"
 
 msgctxt "#31121"
 msgid "Music OSD"
-msgstr "Biblioteka muzyki"
+msgstr "Menu ekranowe"
 
 msgctxt "#31122"
 msgid "Match header tile with highlight color"
@@ -605,7 +670,7 @@ msgstr "Centrum multimedialne"
 
 msgctxt "#31159"
 msgid "Background overlay image"
-msgstr "Nakładka na tło"
+msgstr "Tekstura tła"
 
 msgctxt "#31160"
 msgid "Busy spinner"
@@ -617,7 +682,7 @@ msgstr "Wykonaj kopię ustawień skóry"
 
 msgctxt "#31162"
 msgid "Restore skin settings from file"
-msgstr "Przywróć ustawienia skóry z pliku"
+msgstr "Przywróć kopię ustawień z pliku"
 
 msgctxt "#31163"
 msgid "Gallery"
@@ -801,7 +866,7 @@ msgstr "Menu ekranowe"
 
 msgctxt "#31211"
 msgid "Video Information"
-msgstr "O wideo"
+msgstr "Informacje o wideo"
 
 msgctxt "#31212"
 msgid "No Content Currently Available"
@@ -825,7 +890,7 @@ msgstr "Dekoder wideo"
 
 msgctxt "#31217"
 msgid "Pixel format"
-msgstr "Format pikseli"
+msgstr "Format piksela"
 
 msgctxt "#31218"
 msgid "Show additional info labels with media flags (e.g. ratings and year)"
@@ -837,14 +902,14 @@ msgstr "Inne"
 
 msgctxt "#31220"
 msgid "Info List 2"
-msgstr "Informacje 2"
+msgstr "Lista 2"
 
 msgctxt "#31221"
 msgid "Square List"
 msgstr "Kafelki"
 
 msgctxt "#31222"
-msgid "Enable / Disable Views"
+msgid "Enable / Disable views"
 msgstr "Zarządzanie widokami"
 
 msgctxt "#31223"
@@ -855,17 +920,45 @@ msgctxt "#31224"
 msgid "Show additional dialog shadows"
 msgstr "Pokazuj dodatkowe cienie okien dialogowych"
 
+msgctxt "#31225"
+msgid "Use original Eminence v1 style side labels and arrows"
+msgstr "Używaj stylu menu bocznego i strzałek skóry Emincence w wersji 1"
+
+msgctxt "#31226"
+msgid "Lock view"
+msgstr "Zablokuj widok"
+
+msgctxt "#31227"
+msgid "Enable viewtype locking to content type"
+msgstr "Aktywuj przypisanie widoku dla typu zawartości"
+
+msgctxt "#31228"
+msgid "Select view mode"
+msgstr "Wybierz tryb widoku"
+
+msgctxt "#31229"
+msgid "Lock this viewtype to content type"
+msgstr "Przypisz widoku dla typu zawartości"
+
+msgctxt "#31230"
+msgid "Medium icons"
+msgstr "Miniatury"
+
+msgctxt "#31231"
+msgid "Use extra fanart if available"
+msgstr "Używaj dodatkowej grafiki jeśli dostępna"
+
 msgctxt "#31232"
 msgid "Unlock View"
 msgstr "Odblokuj widok"
 
 msgctxt "#31233"
 msgid "This view mode is currently locked to the content type"
-msgstr "Ten widok jest aktualnie zablokowany dla tego typu zawartości"
+msgstr "Ten tryb widoku jest aktualnie powiązany z typem zawartości"
 
 msgctxt "#31234"
 msgid "Do you wish to unlock it and set a new view mode?"
-msgstr "Czy chcesz go odblokować i ustawić jako nowy tryb widoku?"
+msgstr "Czy chcesz go odblokować i  ustawić nowy tryb widoku?"
 
 msgctxt "#31235"
 msgid "Fanart fade opacity (default is 90%)"
