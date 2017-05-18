@@ -2094,7 +2094,6 @@
                 <animation effect="fade" start="100" end="0" time="200" delay="0">Hidden</animation>
                 <left>20</left>
                 <width>auto</width>
-                <include condition="Skin.HasSetting(OSDNoInfo)">Window_SeekBar_Bubble_Label</include>
                 <label>$VAR[Label_SeekStep]</label>
                 <height>30</height>
                 <bottom>50</bottom>
