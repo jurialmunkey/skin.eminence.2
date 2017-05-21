@@ -14,6 +14,7 @@
             <include>Animation_FadeOut</include>
         </control>
         <control type="group">
+
             <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_Def</include>
             <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top</include>
             <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Background</include>
@@ -34,6 +35,8 @@
 
             <!-- Default GroupList -->
             <control type="grouplist" id="996">
+                <onup condition="!Skin.HasSetting(HorizontalMenus)">996</onup>
+                <ondown condition="!Skin.HasSetting(HorizontalMenus)">996</ondown>
                 <onleft condition="!Skin.HasSetting(HorizontalMenus)">Close</onleft>
                 <onright condition="!Skin.HasSetting(HorizontalMenus)">Close</onright>
                 <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_GroupList</include>

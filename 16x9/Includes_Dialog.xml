@@ -109,8 +109,8 @@
         <onleft>50</onleft>
         <onright>50</onright>
         <onback>50</onback>
-        <onup>noop</onup>
-        <ondown>noop</ondown>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
         <itemgap>10</itemgap>
         <scrolltime>200</scrolltime>
         <orientation>vertical</orientation>
