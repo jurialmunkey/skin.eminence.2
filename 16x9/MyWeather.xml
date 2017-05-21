@@ -116,41 +116,41 @@
 
         <!-- Menu -->
         <control type="group">
-            <include condition="Skin.HasSetting(VerticalMenus)">GlobalOverlay</include>
-            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">GlobalOverlay</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center</include>
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
         </control>
         <control type="group">
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_Def</include>
-            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top</include>
-            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Background</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_Def</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31068]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-            <include content="Dialog_Center_Arrows" condition="Skin.HasSetting(VerticalMenus)">
+            <include content="Dialog_Center_Arrows" condition="!Skin.HasSetting(HorizontalMenus)">
                 <param name="id" value="9000" />
             </include>
-            <include content="Dialog_Top_Arrows" condition="!Skin.HasSetting(VerticalMenus)">
+            <include content="Dialog_Top_Arrows" condition="Skin.HasSetting(HorizontalMenus)">
                 <param name="id" value="9000" />
             </include>
 
             <control type="grouplist" id="9000">
-                <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_GroupList</include>
-                <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top_GroupList</include>
+                <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_GroupList</include>
+                <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top_GroupList</include>
                 <!-- Refresh -->
                 <control type="button" id="2">
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(2)</visible>
                 </control>
                 <!-- Change Location -->
                 <control type="button" id="9001">
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <onclick>Weather.LocationNext</onclick>
                     <label>$INFO[Weather.Location]</label>
                 </control>
@@ -158,30 +158,30 @@
                 <control type="button" id="9002">
                     <label>31114</label>
                     <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <visible>!System.HasAddon(resource.images.weatherfanart.multi)</visible>
                 </control>
                 <!-- Icon -->
                 <control type="button" id="9003">
                     <label>31174</label>
                     <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                 </control>
                 <!-- Weather Settings -->
                 <control type="button" id="9004">
                     <label>10140</label>
                     <onclick>Addon.OpenSettings($INFO[Weather.Plugin])</onclick>
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                 </control>
                 <!-- Settings -->
                 <control type="button" id="9005">
                     <label>5</label>
                     <onclick>ActivateWindow(ServiceSettings,weather)</onclick>
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                 </control>
             </control>
         </control>

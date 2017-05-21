@@ -18,66 +18,74 @@
             <include content="Object_Headline">
                 <param name="label" value="$VAR[Label_SortLine]" />
             </include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.550)">Viewtype_List</include>
+            <include>Viewtype_List</include>
             <include>Viewtype_SquareList</include>
-            <include>Viewtype_PlainList</include>
         </control>
 
         <include>Furniture_TopBar</include>
 
         <!-- Menu -->
         <control type="group">
-            <include condition="Skin.HasSetting(VerticalMenus)">GlobalOverlay</include>
-            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">GlobalOverlay</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center</include>
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
         </control>
         <control type="group">
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_Def</include>
-            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top</include>
-            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Background</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_Def</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31068]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-            <include content="Dialog_Center_Arrows" condition="Skin.HasSetting(VerticalMenus)">
+            <include content="Dialog_Center_Arrows" condition="!Skin.HasSetting(HorizontalMenus)">
                 <param name="id" value="9000" />
             </include>
-            <include content="Dialog_Top_Arrows" condition="!Skin.HasSetting(VerticalMenus)">
+            <include content="Dialog_Top_Arrows" condition="Skin.HasSetting(HorizontalMenus)">
                 <param name="id" value="9000" />
             </include>
 
             <control type="grouplist" id="9000">
-                <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_GroupList</include>
-                <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top_GroupList</include>
+                <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_GroupList</include>
+                <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top_GroupList</include>
                 <defaultcontrol always="true">3</defaultcontrol>
-                <include>Object_BasicViewList</include>
+                <!-- Dont include basic list and only put fullscreen because cant change view -->
+                <!-- Fullscreen -->
+                <control type="button" id="9099">
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
+                    <label>$VAR[Label_FullscreenButton]</label>
+                    <visible>Player.HasMedia</visible>
+                    <onclick>Fullscreen</onclick>
+                    <visible>Control.IsEnabled(9099)</visible>
+                </control>
                 <!-- Shuffle -->
                 <control type="radiobutton" id="20">
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <label>191</label>
                     <visible>Control.IsEnabled(20)</visible>
                 </control>
                 <!-- Repeat -->
                 <control type="button" id="26">
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(26)</visible>
                 </control>
                 <!-- Save -->
                 <control type="button" id="21">
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <label>190</label>
                     <visible>Control.IsEnabled(21)</visible>
                 </control>
                 <!-- Clear -->
                 <control type="button" id="22">
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <label>192</label>
                     <visible>Control.IsEnabled(22)</visible>
                 </control>

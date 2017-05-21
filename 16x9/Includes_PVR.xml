@@ -536,44 +536,44 @@
     <include name="PVR_Menu">
         <!-- Menu -->
         <control type="group">
-            <include condition="Skin.HasSetting(VerticalMenus)">GlobalOverlay</include>
-            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">GlobalOverlay</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center</include>
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
         </control>
         <control type="group">
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
-            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_Def</include>
-            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top</include>
-            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Background</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_Def</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31068]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-            <include content="Dialog_Center_Arrows" condition="Skin.HasSetting(VerticalMenus)">
+            <include content="Dialog_Center_Arrows" condition="!Skin.HasSetting(HorizontalMenus)">
                 <param name="id" value="9000" />
             </include>
-            <include content="Dialog_Top_Arrows" condition="!Skin.HasSetting(VerticalMenus)">
+            <include content="Dialog_Top_Arrows" condition="Skin.HasSetting(HorizontalMenus)">
                 <param name="id" value="9000" />
             </include>
 
             <control type="grouplist" id="9000">
-                <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_GroupList</include>
-                <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top_GroupList</include>
+                <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_GroupList</include>
+                <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top_GroupList</include>
                 <defaultcontrol always="true">3</defaultcontrol>
                 <include>Object_BasicViewList</include>
                 <!-- Groups -->
                 <control type="button" id="28">
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <label>103</label>
                     <visible>Control.IsEnabled(28)</visible>
                 </control>
                 <!-- Filter -->
                 <control type="radiobutton" id="31">
-                    <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                    <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <label>587</label>
                     <selected>Container.Filtered</selected>
                     <visible>Control.IsEnabled(31) + Window.IsVisible(MyPVRChannels.xml)</visible>

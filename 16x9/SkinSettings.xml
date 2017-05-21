@@ -1122,6 +1122,17 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8009)</visible>
                         </control>
+                        <!-- Vertical Menus -->
+                        <control type="radiobutton" id="8917">
+                            <radioposx>settingsradioposx</radioposx>
+                            <width>100%</width>
+                            <label>$LOCALIZE[31051]</label>
+                            <selected>!Skin.HasSetting(HorizontalMenus)</selected>
+                            <onclick>Skin.ToggleSetting(HorizontalMenus)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
+                        </control>
                         <!-- Kiosk -->
                         <control type="radiobutton" id="8906">
                             <radioposx>settingsradioposx</radioposx>
@@ -1163,16 +1174,7 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8009)</visible>
                         </control>
-                        <control type="radiobutton" id="8917">
-                            <radioposx>settingsradioposx</radioposx>
-                            <width>100%</width>
-                            <label>$LOCALIZE[31051]</label>
-                            <selected>Skin.HasSetting(VerticalMenus)</selected>
-                            <onclick>Skin.ToggleSetting(VerticalMenus)</onclick>
-                            <height>72</height>
-                            <include>Defs_OptionButton</include>
-                            <visible>ControlGroup(8000).HasFocus(8009)</visible>
-                        </control>
+                        
                         <control type="radiobutton" id="8918">
                             <radioposx>settingsradioposx</radioposx>
                             <width>100%</width>

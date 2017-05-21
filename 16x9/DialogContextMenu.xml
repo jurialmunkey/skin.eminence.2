@@ -8,44 +8,44 @@
 
     <controls>
         <control type="group">
-            <include condition="Skin.HasSetting(VerticalMenus)">GlobalOverlay</include>
-            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">GlobalOverlay</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center</include>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
         </control>
         <control type="group">
-            <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_Def</include>
-            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top</include>
-            <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Background</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_Def</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Background</include>
             <control type="image" id="999">
-                <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_Background</include>
+                <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_Background</include>
             </control>
 
             <include content="Dialog_Top_IconHeader">
                 <param name="label" value="$LOCALIZE[31069]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
-            <include content="Dialog_Center_Arrows" condition="Skin.HasSetting(VerticalMenus)">
+            <include content="Dialog_Center_Arrows" condition="!Skin.HasSetting(HorizontalMenus)">
                 <param name="id" value="996" />
             </include>
-            <include content="Dialog_Top_Arrows" condition="!Skin.HasSetting(VerticalMenus)">
+            <include content="Dialog_Top_Arrows" condition="Skin.HasSetting(HorizontalMenus)">
                 <param name="id" value="996" />
             </include>
 
             <!-- Default GroupList -->
             <control type="grouplist" id="996">
-                <onleft condition="Skin.HasSetting(VerticalMenus)">Close</onleft>
-                <onright condition="Skin.HasSetting(VerticalMenus)">Close</onright>
-                <include condition="Skin.HasSetting(VerticalMenus)">Dialog_Center_GroupList</include>
-                <onup condition="!Skin.HasSetting(VerticalMenus)">Close</onup>
-                <ondown condition="!Skin.HasSetting(VerticalMenus)">Close</ondown>
-                <include condition="!Skin.HasSetting(VerticalMenus)">Dialog_Top_GroupList</include>
+                <onleft condition="!Skin.HasSetting(HorizontalMenus)">Close</onleft>
+                <onright condition="!Skin.HasSetting(HorizontalMenus)">Close</onright>
+                <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_GroupList</include>
+                <onup condition="Skin.HasSetting(HorizontalMenus)">Close</onup>
+                <ondown condition="Skin.HasSetting(HorizontalMenus)">Close</ondown>
+                <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top_GroupList</include>
             </control>
 
             <!-- Default Button -->
             <control type="button" id="1000">
-                <include condition="Skin.HasSetting(VerticalMenus)">Defs_OptionButton2_Horz</include>
-                <include condition="!Skin.HasSetting(VerticalMenus)">Defs_OptionButton2</include>
+                <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
             </control>
         </control>
 

@@ -1,3 +1,11 @@
+[B]2.5.43[/B]
+Make vertical context and view menus default
+Add playlist for videos
+Fix playlist views
+
+[B]2.5.42[/B]
+Bump for repo
+
 [B]2.5.41[/B]
 Add clearart to video osd.
 
