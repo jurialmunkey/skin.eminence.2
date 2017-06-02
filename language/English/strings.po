@@ -282,6 +282,11 @@ msgctxt "#31061"
 msgid "Show clearart"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31062"
+msgid "Show file name and path in info dialog"
+msgstr ""
+
 msgctxt "#31063"
 msgid "Addons"
 msgstr ""

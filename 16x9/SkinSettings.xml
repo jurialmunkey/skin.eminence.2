@@ -778,6 +778,17 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
                         </control>
+                        <!-- Show Path in Info Dialog -->
+                        <control type="radiobutton" id="8519">
+                            <radioposx>settingsradioposx</radioposx>
+                            <width>100%</width>
+                            <label>$LOCALIZE[31062]</label>
+                            <selected>Skin.HasSetting(InfoShowPath)</selected>
+                            <onclick>Skin.ToggleSetting(InfoShowPath)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                        </control>
                         <!-- Show Additional Labels in Lists-->
                         <control type="radiobutton" id="8504">
                             <radioposx>settingsradioposx</radioposx>
