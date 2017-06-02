@@ -132,6 +132,16 @@
                         <visible>!Skin.HasSetting(SkinHelper.View.Disabled.550)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors)</visible>
                     </item>
+                    <!-- Big List -->
+                    <item>
+                        <label>537</label>
+                        <icon>special://skin/extras/viewthumbs/510.jpg</icon>
+                        <onclick>Close</onclick>
+                        <onclick>Container.SetViewMode(50)</onclick>
+                        <onclick>Container.SetViewMode(510)</onclick>
+                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.510)</visible>
+                        <visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(genres) | Container.Content(images) | Container.Content(videos) | Container.Content()</visible>
+                    </item>
                     <!-- Media Info -->
                     <item>
                         <label>544</label>

@@ -69,6 +69,43 @@
         </control>
     </include>
 
+    <include name="Viewtype_BigList">
+        <control type="group">
+            <visible>Control.IsVisible(510)</visible>
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>bigpad</top>
+            <height>posterh</height>
+            <control type="group">
+                <visible>Container.Content() | Window.IsVisible(MyPics.xml)</visible>
+                <include content="Object_Poster">
+                    <param name="width" value="posterh" />
+                </include>
+            </control>
+            <include content="View_BigList">
+                <param name="viewlabel" value="537" />
+                <param name="posx" value="0" />
+                <param name="width" value="listinfow" />
+                <param name="id" value="510" />
+                <param name="condition" value="[Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]] | [Container.Content(albums) + [String.IsEqual(Skin.String(Skin.ForcedView.albums),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.albums)) ]] | [Container.Content(addons) + [String.IsEqual(Skin.String(Skin.ForcedView.addons),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.addons)) ]] | [Container.Content(images) + [String.IsEqual(Skin.String(Skin.ForcedView.images),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.images)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(songs) + [String.IsEqual(Skin.String(Skin.ForcedView.songs),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.songs)) ]] | [!Window.IsVisible(videoplaylist) + Container.Content() + [String.IsEqual(Skin.String(Skin.ForcedView.),$LOCALIZE[537]) | String.IsEmpty(Skin.String(Skin.ForcedView.)) ]]" />
+            </include>
+            <!-- <include content="View_BigList_Pair">
+                <param name="viewlabel" value="537" />
+                <param name="width" value="settingshalfw" />
+                <param name="id" value="511" />
+                <param name="condition" value="Control.IsVisible(510)" />
+            </include> -->
+            <control type="group">
+                <visible>!Container.Content() + !Window.IsVisible(MyPics.xml)</visible>
+                <include>Object_ExtraInfo</include>
+            </control>
+            <control type="group">
+                <width>listw</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
     <!-- MEDIA INFO -->
     <include name="Viewtype_MediaInfo">
         <control type="group">
@@ -954,5 +991,172 @@
         </definition>
     </include>
 
+    <include name="View_BigList_Pair">
+        <param name="label3" default="true" />
+        <param name="label2" default="true" />
+        <definition>
+            <control type="group">
+                <right>0</right>
+                <width>$PARAM[width]</width>
+                <include>Object_Background</include>
+                <control type="panel" id="$PARAM[id]">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>$PARAM[width]</width>
+                    <height>posterh</height>
+                    <onup>$PARAM[id]</onup>
+                    <ondown>$PARAM[id]</ondown>
+                    <onleft>510</onleft>
+                    <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
+                    <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[viewlabel]">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="72" width="$PARAM[width]" condition="Container.Content(albums)">
+                        <include content="View_List_Itemlayout">
+                            <param name="label3" value="$PARAM[label3]" />
+                            <param name="label2" value="$PARAM[label2]" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout height="72" width="$PARAM[width]" condition="Container.Content(albums)">
+                        <include content="View_List_Focusedlayout">
+                            <param name="label3" value="$PARAM[label3]" />
+                            <param name="label2" value="$PARAM[label2]" />
+                        </include>
+                    </focusedlayout>
+                    <itemlayout height="144" width="$PARAM[width]" condition="Container.Content(artists)">
+                        <include>View_BigList_ItemLayout</include>
+                    </itemlayout>
+                    <focusedlayout height="144" width="$PARAM[width]" condition="Container.Content(artists)">
+                        <include>View_BigList_FocusedLayout</include>
+                    </focusedlayout>
+                    <content target="music">$VAR[View_BigList_Pair_Content]</content>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <variable name="View_BigList_Pair_Content">
+        <value condition="Container.Content(albums)">$INFO[Container(510).ListItem.DBID,musicdb://albums/,/]</value>
+        <value condition="Container.Content(artists)">$INFO[Container(510).ListItem.DBID,musicdb://artists/,/]</value>
+    </variable>
+
+    <include name="View_BigList_ItemLayout">
+        <control type="image">
+            <left>bigpad</left>
+            <top>bigpad</top>
+            <bottom>bigpad</bottom>
+            <width>104</width>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$INFO[ListItem.Icon]</texture>
+        </control>
+        <control type="label">
+            <left>144</left>
+            <right>30</right>
+            <bottom>0</bottom>
+            <height>70%</height>
+            <align>left</align>
+            <font>Font-ListInfo</font>
+            <textcolor>ListLabel</textcolor>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+        </control>
+        <control type="label">
+            <left>144</left>
+            <right>30</right>
+            <top>0</top>
+            <height>70%</height>
+            <textcolor>ListLabel</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+        </control>
+        <control type="label">
+            <left>144</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <textcolor>ListLabel</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>String.IsEmpty(ListItem.Label2)</visible>
+        </control>
+    </include>
+
+    <include name="View_BigList_FocusedLayout">
+        <control type="image">
+            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+        </control>
+        <control type="image">
+            <left>bigpad</left>
+            <top>bigpad</top>
+            <bottom>bigpad</bottom>
+            <width>104</width>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$INFO[ListItem.Icon]</texture>
+        </control>
+        <control type="label">
+            <left>144</left>
+            <right>30</right>
+            <bottom>0</bottom>
+            <height>70%</height>
+            <align>left</align>
+            <font>Font-ListInfo</font>
+            <textcolor>Selected</textcolor>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+        </control>
+        <control type="label">
+            <left>144</left>
+            <right>30</right>
+            <top>0</top>
+            <height>70%</height>
+            <textcolor>Selected</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!String.IsEmpty(ListItem.Label2)</visible>
+        </control>
+        <control type="label">
+            <left>144</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <textcolor>Selected</textcolor>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>String.IsEmpty(ListItem.Label2)</visible>
+        </control>
+    </include>
+
+    <include name="View_BigList">
+        <definition>
+            <control type="group">
+                <left>$PARAM[posx]</left>
+                <width>$PARAM[width]</width>
+                <include>Object_Background</include>
+                <include>Object_Scrollbar</include>
+                <control type="panel" id="$PARAM[id]">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>$PARAM[width]</width>
+                    <height>posterh</height>
+                    <onup>$PARAM[id]</onup>
+                    <ondown>$PARAM[id]</ondown>
+                    <onleft>60</onleft>
+                    <onright condition="!Skin.HasSetting(KioskMode) + !Control.IsVisible(511)">SetFocus(9000)</onright>
+                    <onright condition="Control.IsVisible(511)">SetFocus(511)</onright>
+                    <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
+                    <pagecontrol>60</pagecontrol>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[viewlabel]">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="144" width="$PARAM[width]">
+                        <include>View_BigList_ItemLayout</include>
+                    </itemlayout>
+                    <focusedlayout height="144" width="$PARAM[width]">
+                        <include>View_BigList_FocusedLayout</include>
+                    </focusedlayout>
+                </control>
+            </control>
+        </definition>
+    </include>
 
 </includes>

@@ -2,6 +2,7 @@
     <!-- <view id="List" value="50" languageid="535" type="artists,albums,songs,addons,genres,images,videos"/> -->
     <view id="Poster List" value="550" languageid="535" type="movies,sets,tvshows,seasons,episodes,actors" />
     <!-- <view id="Plain List" value="552" languageid="31215" type="all" /> -->
+    <view id="Big List" value="510" languageid="537" type="artists,albums,addons,images,videos"/>
     <view id="Media Info" value="51" languageid="544" type="seasons,movies,tvshows,episodes,sets,artists,songs,videos" />
     <view id="Media Info 2" value="57" languageid="31143" type="seasons,movies,tvshows,episodes,sets" />
     <view id="Media Info 3" value="577" languageid="31022" type="movies,tvshows" />

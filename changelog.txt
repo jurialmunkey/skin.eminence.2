@@ -1,3 +1,7 @@
+[B]2.5.44[/B]
+Fix powermenu vertical scroll issue
+Add biglist view for music
+
 [B]2.5.43[/B]
 Make vertical context and view menus default
 Add playlist for videos

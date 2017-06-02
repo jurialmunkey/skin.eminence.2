@@ -151,8 +151,8 @@
         <onright>Close</onright>
         <top>80</top>
         <bottom>20</bottom>
-        <onup>SetFocus(9000)</onup>
-        <ondown>SetFocus(9000)</ondown>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
         <scrolltime>200</scrolltime>
         <orientation>vertical</orientation>
         <itemlayout width="460" height="82">
