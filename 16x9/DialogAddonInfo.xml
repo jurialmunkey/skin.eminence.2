@@ -222,6 +222,15 @@
                             <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(8)</visible>
                         </control>
+
+                        <!-- Auto Updates -->
+                        <control type="radiobutton" id="13">
+                            <width>300</width>
+                            <radioposx>250</radioposx>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton3</include>
+                            <visible>Control.IsEnabled(13)</visible>
+                        </control>
                     
 
                         <!-- Install/UnInstall Addon button -->
