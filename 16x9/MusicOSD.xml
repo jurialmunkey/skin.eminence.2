@@ -281,6 +281,44 @@
                 </control>
             </control>
         </control>
+
+        <control type="group">
+            <include>Defs_ViewBackground</include>
+            <control type="group">
+                <left>bigpad</left>
+                <right>bigpad</right>
+                <top>bigpad</top>
+                <height>posterh</height>
+                <control type="group" description="info">
+                    <left>posterh</left>
+                    <right>0</right>
+                    <animation effect="slide" start="0" end="0,-64" time="200" condition="!Window.IsVisible(script-cu-lrclyrics-main.xml) + Window.IsVisible(musicosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">Conditional</animation>
+                    <animation effect="slide" start="0" end="0,-64" time="0" condition="!Window.IsVisible(script-cu-lrclyrics-main.xml) + Window.IsVisible(musicosd) + ![Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo]">Conditional</animation>
+                    <control type="group">
+                        <left>40</left>
+                        <right>0</right>
+                        <bottom>10</bottom>
+                        <height>60</height>
+                        <control type="group">
+                            <height>12</height>
+                            <centertop>53%</centertop>
+                            <left>100</left>
+                            <right>100</right>
+                            <control type="slider">
+                                <width>100%</width>
+                                <bottom>0</bottom>
+                                <height>12</height>
+                                <texturesliderbar>-</texturesliderbar>
+                                <textureslidernib>-</textureslidernib>
+                                <textureslidernibfocus>-</textureslidernibfocus>
+                                <info>Player.Progress</info>
+                                <action>seek</action>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </control>
     </controls>
 
 </window>
