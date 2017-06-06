@@ -960,7 +960,7 @@
                     <font>Font-Sublabel</font>
                     <aligny>top</aligny>
                     <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName,,  ][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelNumber,,.  ]$INFO[VideoPlayer.ChannelName,,  ][/COLOR]</label>
                     <visible>VideoPlayer.Content(livetv)</visible>
                 </control>
                 <control type="label">
