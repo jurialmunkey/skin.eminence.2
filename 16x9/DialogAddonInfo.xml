@@ -187,8 +187,8 @@
                     </control>
                     <!-- BUTTONS -->
                     <control type="grouplist" id="9000">
-                        <left>pad</left>
-                        <width>100%</width>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
                         <bottom>30</bottom>
                         <height>64</height>
                         <align>center</align>
@@ -224,14 +224,17 @@
                         </control>
 
                         <!-- Auto Updates -->
-                        <control type="radiobutton" id="13">
-                            <width>250</width>
-                            <radioposx>200</radioposx>
+                        <control type="togglebutton" id="9013">
+                            <label>$LOCALIZE[21340] $LOCALIZE[351]</label>
+                            <altlabel>$LOCALIZE[21340] $LOCALIZE[16041]</altlabel>
+                            <usealttexture>String.Contains(Control.GetLabel(13),*)</usealttexture>
+                            <onclick>SetFocus(13)</onclick>
+                            <onclick>Action(Select)</onclick>
+                            <onclick>SetFocus(9013)</onclick>
                             <font>Font-ListInfo-Small-Bold</font>
                             <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(13)</visible>
                         </control>
-                    
 
                         <!-- Install/UnInstall Addon button -->
                         <control type="button" id="6">
@@ -253,6 +256,7 @@
             </control>
 
         </control>
+        <control type="radiobutton" id="13"><width>1</width><height>1</height><visible allowhiddenfocus="true">false</visible></control>
         <include>Furniture_DialogInfoOverlay</include>
     </controls>
 

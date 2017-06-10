@@ -743,6 +743,11 @@ msgctxt "#31176"
 msgid "Genre icons"
 msgstr ""
 
+#: /16x9/SkinSettings.xml
+msgctxt "#31177"
+msgid "Automatically start fullscreen visualisation when starting playback"
+msgstr ""
+
 msgctxt "#31180"
 msgid "Default"
 msgstr ""

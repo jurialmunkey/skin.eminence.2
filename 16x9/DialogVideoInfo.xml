@@ -429,8 +429,8 @@
                     </control>
                     <control type="grouplist" id="9000">
                         <visible allowhiddenfocus="true">!Control.HasFocus(50) + !Control.HasFocus(51) + !Control.HasFocus(9500)</visible>
-                        <left>pad</left>
-                        <width>100%</width>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
                         <bottom>30</bottom>
                         <height>64</height>
                         <align>center</align>

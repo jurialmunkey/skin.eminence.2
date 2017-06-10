@@ -373,8 +373,8 @@
 
                     <!-- BUTTONS -->
                     <control type="grouplist" id="9000">
-                        <left>pad</left>
-                        <width>100%</width>
+                        <left>bigpad</left>
+                        <right>bigpad</right>
                         <bottom>30</bottom>
                         <height>64</height>
                         <align>center</align>
