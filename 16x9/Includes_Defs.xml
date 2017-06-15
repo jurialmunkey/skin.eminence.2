@@ -325,8 +325,8 @@
                     <right>140</right>
                     <height>100</height>
                     <centerbottom>60</centerbottom>
-                    <font>Font-RSS</font>
-                    <textcolor>LineLabel</textcolor>
+                    <font>Font-LineLabel</font>
+                    <textcolor>SideArrow</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label2]</label>
@@ -366,7 +366,7 @@
                     <right>140</right>
                     <height>100</height>
                     <centerbottom>60</centerbottom>
-                    <font>Font-RSS</font>
+                    <font>Font-LineLabel</font>
                     <textcolor>Selected</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
