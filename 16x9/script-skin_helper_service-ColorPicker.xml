@@ -10,7 +10,7 @@
             <height>504</height>
             <include>Dialog_Background</include>
             <include content="Dialog_Top_IconHeader">
-                <param name="label" value="$ADDON[script.skin.helper.service 32011]" />
+                <param name="label" value="$ADDON[script.skin.helper.colorpicker 32011]" />
                 <param name="icon" value="special://skin/extras/icons/filebox.png" />
             </include>
             <control type="panel" id="3110">
@@ -77,7 +77,7 @@
                 <control type="button" id="3010">
                     <width>400</width>
                     <height>100%</height>
-                    <label>$ADDON[script.skin.helper.service 32012]$INFO[Window.Property(colorstring),  ,]</label>
+                    <label>$ADDON[script.skin.helper.colorpicker 32012]$INFO[Window.Property(colorstring),  ,]</label>
                     <align>center</align>
                     <texturenofocus>noop</texturenofocus>
                     <texturefocus>noop</texturefocus>
