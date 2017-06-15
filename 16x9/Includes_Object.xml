@@ -397,7 +397,8 @@
     <include name="Object_ExtraInfo">
         <definition>
             <control type="group">
-                <right>0</right>
+                <include condition="Skin.HasSetting(SwitchSides)">Defs_LeftSide</include>
+                <include condition="!Skin.HasSetting(SwitchSides)">Defs_RightSide</include>
                 <width>720</width>
                 <height>posterh</height>
                 <control type="group">
@@ -421,7 +422,8 @@
     <include name="Object_ExtraInfo2">
         <definition>
             <control type="group">
-                <right>0</right>
+                <include condition="Skin.HasSetting(SwitchSides)">Defs_LeftSide</include>
+                <include condition="!Skin.HasSetting(SwitchSides)">Defs_RightSide</include>
                 <width>1010</width>
                 <height>posterh</height>
                 <control type="group">
@@ -505,7 +507,8 @@
         <definition>
             <control type="group">
                 <top>0</top>
-                <right>0</right>
+                <include condition="Skin.HasSetting(SwitchSides)">Defs_LeftSide</include>
+                <include condition="!Skin.HasSetting(SwitchSides)">Defs_RightSide</include>
                 <height>posterh</height>
                 <width>1280</width>
                 <include>Object_Background</include>

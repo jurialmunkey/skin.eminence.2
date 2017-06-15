@@ -1,3 +1,11 @@
+[B]2.5.45[/B]
+Add option to switch artwork and list positions
+Add filemanger and eventlog to settings window
+Update filemanager and eventlog to match other settings dialogs
+Update settings window to show details about each section
+Change settings window to 3x4 tiles
+Fix bug in vertical powermenu with more than 8 items not showing background
+
 [B]2.5.44[/B]
 Fix powermenu vertical scroll issue
 Add biglist view for music

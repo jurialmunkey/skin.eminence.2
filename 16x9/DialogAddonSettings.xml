@@ -70,7 +70,7 @@
             </control>
             <control type="radiobutton" id="4">
                 <width>100%</width>
-                <radioposx>settingsradioposx</radioposx>
+                <radioposx>addonsettingsradioposx</radioposx>
                 <include>Defs_OptionButton</include>
             </control>
             <control type="spincontrolex" id="5">

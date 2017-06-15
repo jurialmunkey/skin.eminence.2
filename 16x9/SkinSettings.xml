@@ -843,6 +843,17 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
                         </control>
+                        <!-- Switch Positions -->
+                        <control type="radiobutton" id="8516">
+                            <radioposx>settingsradioposx</radioposx>
+                            <width>100%</width>
+                            <label>$LOCALIZE[31240]</label>
+                            <onclick>Skin.ToggleSetting(SwitchSides)</onclick>
+                            <selected>Skin.HasSetting(SwitchSides)</selected>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                        </control>
                         <!-- Extrafanart -->
                         <control type="radiobutton" id="8509">
                             <radioposx>settingsradioposx</radioposx>
@@ -1096,6 +1107,9 @@
                             <label>31224</label>
                             <selected>Skin.HasSetting(global.showdialogshadows)</selected>
                             <onclick>Skin.ToggleSetting(global.showdialogshadows)</onclick>
+                            <onclick>ReloadSkin()</onclick>
+                            <onclick>SetFocus(8009)</onclick>
+                            <onclick>AlarmClock(setfo,SetFocus(8910),00:00,silent)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8009)</visible>

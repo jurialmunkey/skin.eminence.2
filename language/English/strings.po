@@ -748,6 +748,16 @@ msgctxt "#31177"
 msgid "Automatically start fullscreen visualisation when starting playback"
 msgstr ""
 
+#: /16x9/Includes_Defs.xml
+msgctxt "#31178"
+msgid "User profiles"
+msgstr ""
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31179"
+msgid "Install from repository or zip file"
+msgstr ""
+
 msgctxt "#31180"
 msgid "Default"
 msgstr ""
@@ -970,4 +980,29 @@ msgstr ""
 
 msgctxt "#31235"
 msgid "Fanart fade opacity (default is 90%)"
+msgstr ""
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31236"
+msgid "PVR"
+msgstr ""
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31237"
+msgid "View system events"
+msgstr ""
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31238"
+msgid "Event logs"
+msgstr ""
+
+#: /16x9/EventLog.xml
+msgctxt "#31239"
+msgid "Events Log"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31240"
+msgid "Switch viewtype artwork and list positions"
 msgstr ""

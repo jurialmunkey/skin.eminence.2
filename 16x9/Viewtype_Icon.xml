@@ -32,6 +32,8 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <control type="group">
+                    <include condition="!Skin.HasSetting(SwitchSides)">Defs_LeftSide</include>
+                    <include condition="Skin.HasSetting(SwitchSides)">Defs_RightSide</include>
                     <include>Object_Background</include>
                     <include>Object_Scrollbar</include>
                     <width>listinfow</width>

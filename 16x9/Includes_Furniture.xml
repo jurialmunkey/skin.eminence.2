@@ -693,7 +693,6 @@
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$LOCALIZE[31145]</value>
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31149]</value>
-        <value condition="Window.IsVisible(filemanager)">$LOCALIZE[7]</value>
         <value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
         <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(10)">$LOCALIZE[19032]</value>
@@ -709,10 +708,8 @@
         <value condition="!String.IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
         <value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(home.mainheadertext))">$LOCALIZE[31158]</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(home.mainheadertext))">$INFO[Skin.String(home.mainheadertext)]</value>
-        <!-- <value condition="Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value> -->
-                <value condition="Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
+        <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(filemanager) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
         <value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
-        <value condition="Window.IsVisible(EventLog.xml)">$LOCALIZE[14111]</value>
         <value>$LOCALIZE[15100]</value>
     </variable>
     <variable name="Furniture_Counter_Movies">
@@ -755,9 +752,8 @@
         <value condition="Player.Muted">$LOCALIZE[31013]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31070]</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]">$VAR[Label_PlayerStatus]</value>
-        <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
-        <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">$LOCALIZE[5]</value>
+        <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(filemanager) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
         <value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
@@ -785,11 +781,9 @@
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(livetv)">special://skin/extras/icons/livetv.png</value>
         <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo">special://skin/extras/icons/video-addons.png</value>
         <value condition="Window.IsVisible(weather)">special://skin/extras/icons/sun.png</value>
-        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">special://skin/extras/icons/settings.png</value>
-        <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">special://skin/extras/icons/settings.png</value>
+        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(EventLog.xml) | Window.IsVisible(filemanager) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">special://skin/extras/icons/settings.png</value>
         <value condition="Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addons.png</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
-        <value condition="Window.IsVisible(FileManager.xml)">special://skin/extras/icons/database.png</value>
 
         <value condition="!Skin.HasSetting(header.tilefollowsnode) + !String.IsEmpty(Window(home).Property(Header.Icon)) + String.Contains(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
 

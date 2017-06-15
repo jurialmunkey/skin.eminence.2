@@ -11,43 +11,72 @@
         <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
 
-        <!-- Main group -->
+        <!-- Settings -->
         <control type="group">
-            <left>sidepad</left>
-            <right>sidepad</right>
-            <!-- Left group -->
+            <include condition="Window.Previous(Settings.xml) | Window.Previous(SettingsCategory.xml) | Window.Previous(SkinSettings.xml)">Defs_SettingsScreen</include>
+        </control>
+        <control type="group">
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <include>GlobalOverlay</include>
+        </control>
+        <!-- Main -->
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <include>Defs_ViewBackground</include>
             <control type="group">
                 <left>bigpad</left>
-                <width>settingshalfw</width>
-                <top>top</top>
-                <include>Animation_Hub</include>
-
-                <include content="Dialog_FileManager_List">
-                    <param name="width" value="settingshalfw" />
-                    <param name="labelwidth" value="761" />
-                    <param name="id" value="20" />
-                    <param name="onright" value="21" />
-                    <param name="pathid" value="101" />
-                </include>
-
-            </control>
-
-            <!-- Right group -->
-            <control type="group">
                 <right>bigpad</right>
-                <width>settingshalfw</width>
-                <top>top</top>
-                <include>Animation_Common</include>
-
-                <include content="Dialog_FileManager_List">
-                    <param name="width" value="settingshalfw" />
-                    <param name="labelwidth" value="761" />
-                    <param name="id" value="21" />
-                    <param name="onleft" value="20" />
-                    <param name="pathid" value="102" />
+                <top>-8</top>
+                <bottom>bigpad</bottom>
+                <include>Dialog_Background</include>
+                <include content="Dialog_Top_IconHeader">
+                    <param name="label" value="File Manager" />
+                    <param name="icon" value="special://skin/extras/icons/database.png" />
                 </include>
-            </control>
 
+                <!-- Left group -->
+                <control type="group">
+                    <left>bigpad</left>
+                    <bottom>bigpad</bottom>
+                    <width>filemanagerw</width>
+                    <top>80</top>
+                    <control type="group">
+                        <top>26</top>
+                        <include>Object_FlatBackground</include>
+                    </control>
+
+                    <include content="Dialog_FileManager_List">
+                        <param name="width" value="filemanagerw" />
+                        <param name="labelwidth" value="761" />
+                        <param name="id" value="20" />
+                        <param name="onright" value="21" />
+                        <param name="pathid" value="101" />
+                    </include>
+
+                </control>
+
+                <!-- Right group -->
+                <control type="group">
+                    <right>bigpad</right>
+                    <width>filemanagerw</width>
+                    <top>80</top>
+                    <bottom>bigpad</bottom>
+                    <control type="group">
+                        <top>26</top>
+                        <include>Object_FlatBackground</include>
+                    </control>
+
+                    <include content="Dialog_FileManager_List">
+                        <param name="width" value="filemanagerw" />
+                        <param name="labelwidth" value="761" />
+                        <param name="id" value="21" />
+                        <param name="onleft" value="20" />
+                        <param name="pathid" value="102" />
+                    </include>
+                </control>
+            </control>
         </control>
 
     </controls>
