@@ -67,7 +67,7 @@
     <include name="Dialog_Center_8">
         <control type="group">
             <height>756</height>
-            <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,8)</visible>
+            <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,7)</visible>
             <include>Dialog_Center_Def</include>
             <include>Dialog_Background</include>
         </control>
