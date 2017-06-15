@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-05-05 15:37+0200\n"
+"PO-Revision-Date: 2017-06-13 14:44+0200\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.0.2\n"
 
 msgctxt "#31000"
 msgid "Item"
@@ -111,7 +111,6 @@ msgid "Media Info 3"
 msgstr "Informacje 3"
 
 #: /16x9/SkinSettings.xml
-#, fuzzy
 msgctxt "#31023"
 msgid "Enable animated video lyrics"
 msgstr "Aktywuj animowane teksty utworów"
@@ -124,7 +123,7 @@ msgstr "Pokazuj informacje diagnostyczne skóry"
 #: /16x9/SkinSettings.xml
 msgctxt "#31025"
 msgid "Show colour diffuse overlay"
-msgstr "Pokazuj kolor rozproszenia tekstury"
+msgstr "Pokazuj kolorową teksturę rozmywającą"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31026"
@@ -283,6 +282,11 @@ msgstr "Pokazuj kafelek nagłówka z tekstem podczas pauzy i przewijania"
 msgctxt "#31061"
 msgid "Show clearart"
 msgstr "Pokazuj przezrocze"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31062"
+msgid "Show file name and path in info dialog"
+msgstr "Pokazuj nazwę pliku i folder w oknach informacji"
 
 msgctxt "#31063"
 msgid "Addons"
@@ -694,7 +698,7 @@ msgstr "Fototapety"
 
 msgctxt "#31165"
 msgid "Show sorting and info line headers"
-msgstr "Pokazuj w nagłówku opcje sortowania i informacje "
+msgstr "Pokazuj w nagłówku opcje sortowania i informacje"
 
 msgctxt "#31166"
 msgid "Individually set in customisation dialog"
@@ -710,7 +714,7 @@ msgstr "Teraz / Następnie"
 
 msgctxt "#31169"
 msgid "Reset skin settings to defaults  (WARNING - This will override all skin settings)"
-msgstr "Przywróć domyślne ustawienia skóry (OSTRZEŻENIE - To wyczyści wszystkie zmiany)"
+msgstr "Przywróć domyślne ustawienia skóry (OSTRZEŻENIE - Wszystkie zmiany zostaną nadpisane)"
 
 msgctxt "#31170"
 msgid "Backup / Restore"
@@ -739,6 +743,11 @@ msgstr "Dostosuj menu zamykania"
 msgctxt "#31176"
 msgid "Genre icons"
 msgstr "Ikony gatunków"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31177"
+msgid "Automatically start fullscreen visualisation when starting playback"
+msgstr "Uruchamiaj wizualizacje muzyki w trybie pełnoekranowym"
 
 msgctxt "#31180"
 msgid "Default"
