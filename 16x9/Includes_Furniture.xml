@@ -805,7 +805,7 @@
             <posx>-88</posx>
             <width>324</width>
             <height>212</height>
-            <visible>!Skin.HasSetting(global.hideobjectshadows)</visible>
+            <visible>!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)</visible>
             <texture border="75">common/header-shadow-24.png</texture>
         </control>
         <control type="image">
