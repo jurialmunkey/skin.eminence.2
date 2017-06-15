@@ -1,0 +1,6 @@
+<window type="dialog" id="1112">
+    <allowoverlay>no</allowoverlay>
+    <onload condition="!Window.IsActive(visualisation)">FullScreen</onload>
+    <visible>Player.HasAudio + Skin.HasSetting(music.autovis)</visible>
+    <controls></controls>
+</window>
