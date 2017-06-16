@@ -3,34 +3,40 @@
 	<defaultcontrol always="true">5</defaultcontrol>
 	<controls>
         <include>GlobalOverlay</include>
-		<control type="group">
+        <!-- Main -->
+        <control type="group">
             <include>Animation_SlideIn</include>
-            <centerleft>50%</centerleft>
-            <width>favdialogw</width>
-            <bottom>80</bottom>
-            <height>532</height>
-            <include>Dialog_Background</include>
-            <include content="Dialog_Top_IconHeader">
-                <param name="label" value="$INFO[ListItem.Label]" />
-                <param name="icon" value="special://skin/extras/icons/info.png" />
-            </include>
+            <include>Animation_FadeOut</include>
+            <include>Defs_ViewBackground</include>
             <control type="group">
                 <left>bigpad</left>
+                <right>bigpad</right>
+                <top>-8</top>
                 <bottom>bigpad</bottom>
-                <width>432</width>
-                <height>432</height>
-                <include>Object_FlatBackground</include>
-                <control type="image">
-                    <aspectratio>keep</aspectratio>
-                    <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                <include>Dialog_Background</include>
+                <include content="Dialog_Top_IconHeader">
+                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="icon" value="special://skin/extras/icons/pictures.png" />
+                </include>
+                <control type="group">
+                    <left>bigpad</left>
+                    <bottom>bigpad</bottom>
+                    <width>648</width>
+                    <height>648</height>
+                    <include>Object_FlatBackground</include>
+                    <control type="image">
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+                    </control>
                 </control>
+                <include content="Dialog_FavouriteList">
+                    <param name="id" value="5" />
+                    <param name="moveid" value="noop" />
+                    <param name="left" value="688" />
+                    <param name="width" value="pictureinfow" />
+                    <param name="label2" value="true" />
+                </include>
             </control>
-            <include content="Dialog_FavouriteList">
-                <param name="id" value="5" />
-                <param name="moveid" value="noop" />
-                <param name="left" value="472" />
-                <param name="label2" value="true" />
-            </include>
 
         </control>
 
