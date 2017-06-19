@@ -280,8 +280,8 @@
         <right>sidepad</right>
         <top>top</top>
         <height>height</height>
-        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0" condition="!Window.Previous(Settings.xml) + !Window.Previous(SettingsCategory.xml) + !Window.Previous(SkinSettings.xml) + !Window.Previous(SettingsSystemInfo.xml) + !Window.Previous(SettingsProfile.xml) + !Window.Previous(EventLog.xml) + !Window.Previous(FileManager.xml)">WindowOpen</animation>
-        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="!Window.Next(Settings.xml) + !Window.Next(SettingsCategory.xml) + !Window.Next(SkinSettings.xml) + !Window.Next(SettingsSystemInfo.xml) + !Window.Next(SettingsProfile.xml) + !Window.Next(EventLog.xml) + !Window.Next(FileManager.xml)">WindowClose</animation>
+        <animation effect="slide" tween="quadratic" easing="out" time="200" start="1920" end="0" condition="!Window.Previous(Settings.xml) + !Window.Previous(SettingsCategory.xml) + !Window.Previous(SkinSettings.xml) + !Window.Previous(SettingsSystemInfo.xml) + !Window.Previous(SettingsProfile.xml) + !Window.Previous(EventLog.xml) + !Window.Previous(FileManager.xml) + !Window.Previous(service-LibreELEC-Settings-mainWindow.xml)">WindowOpen</animation>
+        <animation effect="slide" tween="quadratic" easing="in" time="200" end="1920" start="0" condition="!Window.Next(Settings.xml) + !Window.Next(SettingsCategory.xml) + !Window.Next(SkinSettings.xml) + !Window.Next(SettingsSystemInfo.xml) + !Window.Next(SettingsProfile.xml) + !Window.Next(EventLog.xml) + !Window.Next(FileManager.xml) + !Window.Next(service-LibreELEC-Settings-mainWindow.xml)">WindowClose</animation>
         <include condition="!Skin.HasSetting(global.widescreen)">Defs_SideLabel</include>
         <include condition="!Skin.HasSetting(global.widescreen)">Defs_SideArrows</include>
         <include content="Object_Headline">
