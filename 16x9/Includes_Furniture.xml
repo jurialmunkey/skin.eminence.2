@@ -115,7 +115,7 @@
 
     <include name="Furniture_DialogInfoOverlay">
         <control type="group">
-            
+            <include>Object_FakeImage</include>
 
             <control type="group">
                 <visible>Control.HasFocus(9601)</visible>
@@ -570,6 +570,8 @@
 
     <!-- BACKGROUND -->
     <include name="Furniture_Background">
+        <include>Object_FakeImage</include>
+        <!-- Background Stuff -->
         <control type="videowindow">
             <visible>Skin.HasSetting(background.showvideo)</visible>
             <visible>Player.HasVideo</visible>

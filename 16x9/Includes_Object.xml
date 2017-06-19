@@ -322,11 +322,20 @@
         </control>
     </include>
     <!-- Poster -->
+    <include name="Object_FakeImage">
+        <control type="image" id="6699">
+            <width>1</width>
+            <height>1</height>
+            <animation effect="fade" start="0" end="0" condition="true">Conditional</animation>
+            <texture background="true">$VAR[Image_Poster]</texture>
+        </control>
+    </include>
     <include name="Object_RightSide"><right>0</right></include>
     <include name="Object_LeftSide"><left>0</left></include>
     <include name="Object_Poster">
         <param name="flipx" default="true" />
         <definition>
+            
             <control type="group">
                 <include condition="$PARAM[flipx]">Object_RightSide</include>
                 <include condition="!$PARAM[flipx]">Object_LeftSide</include>
@@ -350,9 +359,8 @@
                         <height>100%</height>
                         <aspectratio>center</aspectratio>
                         <fadetime>200</fadetime>
-                        <texture background="true">$INFO[ListItem.Icon]</texture>
-                        <visible>String.StartsWith(ListItem.Icon,Default)</visible>
-                        <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                        <texture background="true">$VAR[Image_Poster]</texture>
+                        <visible>String.StartsWith(Control.GetLabel(6699),Default)</visible>
                     </control>
                     <control type="image">
                         <width>100%</width>
@@ -360,8 +368,7 @@
                         <aspectratio>keep</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Poster]</texture>
-                        <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
-                        <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                        <visible>!String.StartsWith(Control.GetLabel(6699),Default) + !String.IsEqual(Control.GetLabel(6699),ListItem.Art(tvshow.poster)) + !String.IsEqual(Control.GetLabel(6699),ListItem.Art(poster)) + !String.IsEqual(Control.GetLabel(6699),ListItem.Art(season.poster))</visible>
                     </control>
                     <control type="image">
                         <width>100%</width>
@@ -369,10 +376,12 @@
                         <aspectratio>stretch</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Poster]</texture>
-                        <visible>![String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))]</visible>
+                        <visible>!String.StartsWith(Control.GetLabel(6699),Default) + [String.IsEqual(Control.GetLabel(6699),ListItem.Art(tvshow.poster)) | String.IsEqual(Control.GetLabel(6699),ListItem.Art(poster)) | String.IsEqual(Control.GetLabel(6699),ListItem.Art(season.poster))] + !String.IsEmpty(Control.GetLabel(6699)</visible>
                     </control>
+                    
                 </control>
             </control>
+
         </definition>
     </include>
 

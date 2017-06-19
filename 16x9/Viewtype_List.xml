@@ -59,6 +59,7 @@
         </control>
     </include>
     <include name="Viewtype_PlainList">
+        <include>Object_FakeImage</include>
         <control type="group">
             <visible>Control.IsVisible(552)</visible>
             <left>bigpad</left>

@@ -3,7 +3,7 @@
     <defaultcontrol always="true">9000</defaultcontrol>
     <onload>ClearProperty(extinfo,home)</onload>
     <controls>
-        
+
 
         <!-- INFO DIALOG -->
         <control type="group">

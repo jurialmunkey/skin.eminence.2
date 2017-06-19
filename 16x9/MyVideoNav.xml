@@ -43,7 +43,7 @@
             <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.535)">Viewtype_ShowCase</include>
         </control>
 
-
+        
         <!-- Menu -->
         <control type="group">
             <include condition="!Skin.HasSetting(HorizontalMenus)">GlobalOverlay</include>

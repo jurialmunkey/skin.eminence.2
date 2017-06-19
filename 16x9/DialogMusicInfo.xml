@@ -388,7 +388,8 @@
                         <control type="button" id="9001">
                             <include>Defs_OptionButton3</include>
                             <label>31108</label>
-                            <onclick>RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Artist],header=Youtube - $INFO[ListItem.Artist])</onclick>
+                            <onclick>Close</onclick>
+                            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/search/?q=$INFO[ListItem.Artist],return)</onclick>
                         </control>
 
                         <!-- Refresh Button -->

@@ -293,8 +293,8 @@
             <right>0</right>
             <top>0</top>
             <height>770</height>
-            <orientation>horizontal</orientation>
-            <itemlayout height="185" width="settingsitemw">
+            <orientation>vertical</orientation>
+            <itemlayout height="246.66" width="settingsitemw">
                 <control type="group">
                     <top>bigpad</top>
                     <bottom>0</bottom>
@@ -303,36 +303,36 @@
                     <include>Object_Background</include>
                 </control>
                 <control type="image">
-                    <centertop>100</centertop>
+                    <top>20</top>
                     <left>30</left>
                     <right>10</right>
                     <height>128</height>
-                    <aspectratio align="right">keep</aspectratio>
+                    <aspectratio align="center">keep</aspectratio>
                     <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
                 </control>
                 <control type="label">
                     <left>60</left>
-                    <right>30</right>
+                    <right>40</right>
                     <height>50</height>
-                    <centertop>65</centertop>
+                    <centerbottom>90</centerbottom>
                     <textcolor>ListLabel</textcolor>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
                 <control type="textbox">
                     <left>60</left>
-                    <right>140</right>
+                    <right>40</right>
                     <height>100</height>
-                    <centerbottom>60</centerbottom>
+                    <centerbottom>40</centerbottom>
                     <font>Font-LineLabel</font>
                     <textcolor>SideArrow</textcolor>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label2]</label>
                 </control>
             </itemlayout>
-            <focusedlayout height="185" width="settingsitemw">
+            <focusedlayout height="246.66" width="settingsitemw">
                 <control type="group">
                     <top>bigpad</top>
                     <bottom>0</bottom>
@@ -344,31 +344,31 @@
                     </control>
                 </control>
                 <control type="image">
-                    <centertop>100</centertop>
+                    <top>20</top>
                     <left>30</left>
                     <right>10</right>
                     <height>128</height>
-                    <aspectratio align="right">keep</aspectratio>
+                    <aspectratio align="center">keep</aspectratio>
                     <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
                 </control>
                 <control type="label">
                     <left>60</left>
-                    <right>30</right>
+                    <right>40</right>
                     <height>50</height>
-                    <centertop>65</centertop>
+                    <centerbottom>90</centerbottom>
                     <textcolor>Selected</textcolor>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
                 <control type="textbox">
                     <left>60</left>
-                    <right>140</right>
+                    <right>40</right>
                     <height>100</height>
-                    <centerbottom>60</centerbottom>
+                    <centerbottom>40</centerbottom>
                     <font>Font-LineLabel</font>
                     <textcolor>Selected</textcolor>
-                    <align>left</align>
+                    <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.Label2]</label>
                 </control>
@@ -404,7 +404,7 @@
                     <icon>special://skin/extras/icons/configure.png</icon>
                 </item>
 
-                <!-- Column 2 -->
+                <!-- Row 2 -->
                 <item id="2">
                     <description>Skin Settings</description>
                     <label>20077</label>
@@ -426,15 +426,16 @@
                     <onclick>activatewindow(pvrsettings)</onclick>
                     <icon>special://skin/extras/icons/livetv.png</icon>
                 </item>
-                <item id="3">
-                    <description>Profiles</description>
-                    <label>13200</label>
-                    <label2>$LOCALIZE[10029] • $LOCALIZE[33084][CR]$LOCALIZE[31178]</label2>
-                    <onclick>activatewindow(Profiles)</onclick>
-                    <icon>special://skin/extras/icons/actor.png</icon>
+                <item id="11">
+                    <description>System Info</description>
+                    <label>130</label>
+                    <label2>$LOCALIZE[154] • $LOCALIZE[705] • $LOCALIZE[157][CR]$LOCALIZE[13281] • $LOCALIZE[31236] • $LOCALIZE[12389]</label2>
+                    <onclick>activatewindow(7)</onclick>
+                    <icon>special://skin/extras/icons/sysinfo.png</icon>
                 </item>
                 
-                <!-- Column 3 -->
+                
+                <!-- Row 3 -->
                 <item id="10">
                     <description>Addons</description>
                     <label>24001</label>
@@ -449,12 +450,12 @@
                     <onclick>activatewindow(filemanager)</onclick>
                     <icon>special://skin/extras/icons/database.png</icon>
                 </item>
-                <item id="11">
-                    <description>System Info</description>
-                    <label>130</label>
-                    <label2>$LOCALIZE[154] • $LOCALIZE[705] • $LOCALIZE[157][CR]$LOCALIZE[13281] • $LOCALIZE[31236] • $LOCALIZE[12389]</label2>
-                    <onclick>activatewindow(7)</onclick>
-                    <icon>special://skin/extras/icons/sysinfo.png</icon>
+                <item id="3">
+                    <description>Profiles</description>
+                    <label>13200</label>
+                    <label2>$LOCALIZE[10029] • $LOCALIZE[33084][CR]$LOCALIZE[31178]</label2>
+                    <onclick>activatewindow(Profiles)</onclick>
+                    <icon>special://skin/extras/icons/actor.png</icon>
                 </item>
                 <item id="14">
                     <description>Events</description>
