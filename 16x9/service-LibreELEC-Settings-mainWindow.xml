@@ -9,11 +9,6 @@
         <include>Furniture_TopBar</include>
         <include>Furniture_RSS</include>
 
-        <!-- Settings -->
-        <control type="group">
-            <include condition="Window.Previous(Settings.xml) | Window.Previous(SettingsCategory.xml) | Window.Previous(SkinSettings.xml)">Defs_SettingsScreen</include>
-        </control>
-
         <control type="group">
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
