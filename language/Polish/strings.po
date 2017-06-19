@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-06-13 14:44+0200\n"
+"PO-Revision-Date: 2017-06-15 19:54+0200\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -526,7 +526,7 @@ msgstr "Menu ekranowe"
 
 msgctxt "#31122"
 msgid "Match header tile with highlight color"
-msgstr "Dopasowuj nagłówek kafelka z kolorem podświetlenia"
+msgstr "Dopasowuj nagłówek kafelka do koloru podświetlenia"
 
 msgctxt "#31123"
 msgid "Hub"
@@ -749,6 +749,16 @@ msgctxt "#31177"
 msgid "Automatically start fullscreen visualisation when starting playback"
 msgstr "Uruchamiaj wizualizacje muzyki w trybie pełnoekranowym"
 
+#: /16x9/Includes_Defs.xml
+msgctxt "#31178"
+msgid "User profiles"
+msgstr "Profile użytkownika"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31179"
+msgid "Install from repository or zip file"
+msgstr "Zainstaluj z repozytorium lub pliku ZIP"
+
 msgctxt "#31180"
 msgid "Default"
 msgstr "Domyślne"
@@ -799,7 +809,7 @@ msgstr "Ostatni odcinek"
 
 msgctxt "#31192"
 msgid "Info List"
-msgstr "Lista informacji"
+msgstr "Informacje 3"
 
 msgctxt "#31193"
 msgid "Box Office"
@@ -955,7 +965,7 @@ msgstr "Miniatury"
 
 msgctxt "#31231"
 msgid "Use extra fanart if available"
-msgstr "Używaj dodatkowej grafiki jeśli dostępna"
+msgstr "Używaj dodatkowej grafiki, jeśli jest dostępna"
 
 msgctxt "#31232"
 msgid "Unlock View"
@@ -972,3 +982,28 @@ msgstr "Czy chcesz go odblokować i  ustawić nowy tryb widoku?"
 msgctxt "#31235"
 msgid "Fanart fade opacity (default is 90%)"
 msgstr "Nieprzezroczystość fototapet (domyślnie 90%)"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31236"
+msgid "PVR"
+msgstr "Telewizja"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31237"
+msgid "View system events"
+msgstr "Pogląd zdarzeń systemowych"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31238"
+msgid "Event logs"
+msgstr "Dziennik zdarzeń"
+
+#: /16x9/EventLog.xml
+msgctxt "#31239"
+msgid "Events Log"
+msgstr "Dziennik zdarzeń"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31240"
+msgid "Switch viewtype artwork and list positions"
+msgstr "Zmieniaj grafikę widoku i pozycje listy"
