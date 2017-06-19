@@ -463,6 +463,15 @@
                     <label2>$LOCALIZE[31237][CR]$LOCALIZE[31238]</label2>
                     <onclick>activatewindow(eventlog)</onclick>
                     <icon>special://skin/extras/icons/year.png</icon>
+                    <visible>!System.HasAddon(service.libreelec.settings)</visible>
+                </item>
+                <item id="19">
+                    <description>LibreElec</description>
+                    <label>$ADDON[service.libreelec.settings 600]</label>
+                    <label2>$ADDON[service.libreelec.settings 32002] • $ADDON[service.libreelec.settings 32101] • $ADDON[service.libreelec.settings 32001][CR]$ADDON[service.libreelec.settings 32100] • $ADDON[service.libreelec.settings 32331]</label2>
+                    <onclick>RunScript(service.libreelec.settings)</onclick>
+                    <icon>special://skin/extras/icons/libreelec.png</icon>
+                    <visible>System.HasAddon(service.libreelec.settings)</visible>
                 </item>
 
             </content>

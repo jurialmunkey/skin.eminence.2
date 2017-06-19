@@ -1,3 +1,7 @@
+[B]2.5.46[/B]
+Tweak settings layout
+Add libreelec configuration window and settings button
+
 [B]2.5.45[/B]
 Add option to switch artwork and list positions
 Add filemanger and eventlog to settings window

@@ -40,6 +40,7 @@
     <constant name="settingswideradioposx">1788</constant>
     <constant name="settingshalfw">930</constant>
     <constant name="settingscategoryw">352</constant>
+    <constant name="settingslistw">1355</constant>
     <constant name="filemanagerw">910</constant>
     <constant name="bigiconw">345</constant>
     <constant name="bigiconh">472.5</constant>
