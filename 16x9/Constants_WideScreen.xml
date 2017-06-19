@@ -35,7 +35,7 @@
     <constant name="iconwideitemw">606</constant>
     <constant name="iconlistwideitemw">1900</constant>
     <constant name="addonsettingsradioposx">1346</constant>
-    <constant name="settingsitemw">472.5</constant>
+    <constant name="settingsitemw">475</constant>
     <constant name="settingsradioposx">1308</constant>
     <constant name="settingswideradioposx">1788</constant>
     <constant name="settingshalfw">930</constant>
