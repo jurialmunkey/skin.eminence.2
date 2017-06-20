@@ -72,7 +72,7 @@
     <include name="Defs_DialogInfo_PosterLeft"><left>500</left></include>
     <include name="Defs_DialogInfo_SquareLeft"><left>740</left></include>
     <variable name="Defs_SpinnerTexture">
-        <value condition="!String.IsEmpty(Skin.String(SkinHelper.SpinnerTexturePath)) + !String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture)) + !String.IsEqual(Skin.String(SkinHelper.SpinnerTexturePath),None)">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</value>
+        <value condition="!String.IsEmpty(Skin.String(SkinHelper.SkinHelper.SpinnerTexture.Path)) + !String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture)) + !String.IsEqual(Skin.String(SkinHelper.SkinHelper.SpinnerTexture.Path),None)">$INFO[Skin.String(SkinHelper.SkinHelper.SpinnerTexture.Path)]</value>
         <value>special://skin/extras/busy_spinners/Default</value>
     </variable>
     <include name="Defs_OptionButton_Basic">
@@ -246,7 +246,6 @@
             <width>100%</width>
             <label>31097</label>
             <label2>$INFO[Skin.String(Widget.$PARAM[hubid].Label)]</label2>
-            <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
             <visible>String.IsEqual(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | String.IsEqual(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <include>Defs_OptionButton</include>
             <onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=widget&amp;skinWidgetPath=Widget.$PARAM[hubid]&amp;skinWidgetName=Widget.$PARAM[hubid].Label&amp;skinWidgetTarget=Widget.$PARAM[hubid].Type)</onclick>
@@ -254,7 +253,6 @@
         <control type="button" id="$PARAM[buttonid1]" description="Set HUB">
             <width>100%</width>
             <label>31096</label>
-            <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
             <include>Defs_OptionButton</include>
             <visible>String.IsEqual(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | String.IsEqual(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
             <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
