@@ -47,8 +47,13 @@
         <value>$INFO[ListItem.Icon]</value>
     </variable>
 
+    <variable name="Image_Poster_Genres">
+        <value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
+        <value>$VAR[Image_Poster]</value>
+    </variable>
+
     <variable name="Image_Thumb">
-        <value condition="[Container.Content(episodes) | Window.IsVisible(MyPics.xml) | Container.Content(videos)] + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+        <value condition="[Container.Content(episodes) | Window.IsVisible(MyPics.xml) | Container.Content(videos) | Window.IsVisible(1131)] + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.FanArt)) + !Control.IsVisible(58) + !Control.IsVisible(553) + !Control.IsVisible(56)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
         <value>$INFO[ListItem.Icon]</value>
@@ -138,8 +143,8 @@
         <value condition="Skin.HasSetting(background.hidefanart) + !String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         <value  condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.ExtraFanArt)) + Skin.HasSetting(SkinHelper.EnableExtraFanart)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
         <value condition="!String.IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.FanArt)) + !Skin.HasSetting(global.fanart)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
+
+       
 
         <value condition="!String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         

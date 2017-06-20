@@ -760,6 +760,8 @@
         <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
 
+        <value condition="Window.IsVisible(1131)">$LOCALIZE[31199]</value>
+
         <value condition="!Skin.HasSetting(header.tilefollowsnode) + !String.IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
 
         <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(movies) | Container.Content(sets) | String.Contains(Container.FolderPath,/movies/)]">$LOCALIZE[20342]</value>
@@ -786,6 +788,8 @@
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(EventLog.xml) | Window.IsVisible(filemanager) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">special://skin/extras/icons/settings.png</value>
         <value condition="Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addons.png</value>
         <value condition="Window.IsVisible(MyPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
+
+        <value condition="Window.IsVisible(1131)">special://skin/extras/icons/playlist.png</value>
 
         <value condition="!Skin.HasSetting(header.tilefollowsnode) + !String.IsEmpty(Window(home).Property(Header.Icon)) + String.Contains(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
 

@@ -116,6 +116,7 @@
                 <onup condition="[Skin.HasSetting(home.disableplayercontrols) | !Player.HasMedia] + !Window.IsVisible(PlayerControls.xml) + [[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]]">9001</onup>
                 <onup condition="Player.HasMedia + !Window.IsVisible(PlayerControls.xml) + !Skin.HasSetting(home.disableplayercontrols)">9005</onup>
                 <ondown condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</ondown>
+                <ondown condition="!Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">ActivateWindow(1131)</ondown>
                 <animation type="Visible">
                     <effect type="slide" start="0,266" end="0" time="150" />
                 </animation>

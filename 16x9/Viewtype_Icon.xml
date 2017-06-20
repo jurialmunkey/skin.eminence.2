@@ -102,12 +102,15 @@
         <param name="icongenreitemw" default="icongenreitemw" />
         <param name="iconpadw" default="iconpadw" />
         <param name="iconpanelpadw" default="iconpanelpadw" />
+        <param name="height" default="690" />
+        <param name="orientation" default="vertical" />
+        <param name="genres" default="false" />
         <definition>
             <control type="panel" id="$PARAM[id]">
                 <top>15</top>
                 <left>$PARAM[iconpanelpadw]</left>
                 <width>$PARAM[width]</width>
-                <height>690</height>
+                <height>$PARAM[height]</height>
                 <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
                 <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                 <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
@@ -117,7 +120,7 @@
                 <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                 <pagecontrol>60</pagecontrol>
                 <preloaditems>2</preloaditems>
-                <orientation>vertical</orientation>
+                <orientation>$PARAM[orientation]</orientation>
                 <viewtype label="$PARAM[name]">icons</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
@@ -145,6 +148,26 @@
                                 <aspectratio aligny="center">keep</aspectratio>
                                 <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
                                 <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                                <visible>!$PARAM[genres]</visible>
+                            </control>
+                            <control type="image">
+                                <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                                <aspectratio aligny="center">scale</aspectratio>
+                                <width>260</width>
+                                <height>260</height>
+                                <texture background="true" colordiffuse="00ffffff">common/white.png</texture>
+                                <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                                <visible>$PARAM[genres]</visible>
+                            </control>
+                            <control type="image">
+                                <top>50</top>
+                                <left>50</left>
+                                <width>110</width>
+                                <height>110</height>
+                                <aspectratio aligny="center">keep</aspectratio>
+                                <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster_Genres]</texture>
+                                <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                                <visible>$PARAM[genres]</visible>
                             </control>
                         </control>
                         <control type="group">
@@ -217,7 +240,30 @@
                                 <aspectratio aligny="center">keep</aspectratio>
                                 <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster]</texture>
                                 <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
-                            </control>
+                                <visible>!$PARAM[genres]</visible>
+                                </control>
+                                <control type="image">
+                                    <left>-10</left>
+                                    <right>-10</right>
+                                    <top>-20</top>
+                                    <bottom>-10</bottom>
+                                    <bordersize>10</bordersize>
+                                    <bordertexture colordiffuse="$VAR[HighlightColor]" border="10">common/border.png</bordertexture>
+                                    <aspectratio aligny="center">keep</aspectratio>
+                                    <texture background="true" colordiffuse="00ffffff" fallback="DefaultFile.png">common/white.png</texture>
+                                    <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                                    <visible>$PARAM[genres]</visible>
+                                </control>
+                                <control type="image">
+                                    <top>50</top>
+                                    <left>50</left>
+                                    <width>110</width>
+                                    <height>110</height>
+                                    <aspectratio aligny="center">keep</aspectratio>
+                                    <texture background="true" fallback="DefaultFile.png">$VAR[Image_Poster_Genres]</texture>
+                                    <visible>String.IsEmpty(ListItem.Art(tvshow.poster)) + String.IsEmpty(ListItem.Art(poster))</visible>
+                                    <visible>$PARAM[genres]</visible>
+                                </control>
 
                         </control>
                         <control type="image">
@@ -254,6 +300,10 @@
                         </control>
                     </control>
                 </focusedlayout>
+                <include content="$PARAM[include_name]">
+                    <param name="include_target" value="$PARAM[include_target]" />
+                    <param name="include_content" value="$PARAM[include_content]" />
+                </include>
             </control>
         </definition>
     </include>
@@ -400,6 +450,8 @@
         <param name="updownid" default="true" />
         <param name="width" default="headlinew" />
         <param name="posx" default="iconwidepanelpadw" />
+        <param name="height" default="690" />
+        <param name="orientation" default="vertical" />
         <definition>
             <control type="group">
                 <width>$PARAM[width]</width>
@@ -407,7 +459,7 @@
                     <top>15</top>
                     <left>$PARAM[posx]</left>
                     <width>$PARAM[width]</width>
-                    <height>690</height>
+                    <height>$PARAM[height]</height>
                     <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
                     <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
@@ -417,7 +469,7 @@
                     <onback condition="!String.IsEmpty(Window(home).Property(HubReturn)) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(returnhack,ActivateWindow($INFO[Window(home).Property(HubReturn)]),00:00,silent)</onback>
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
-                    <orientation>vertical</orientation>
+                    <orientation>$PARAM[orientation]</orientation>
                     <viewtype label="$PARAM[name]">wide</viewtype>
                     <scrolltime tween="quadratic">400</scrolltime>
                     <visible>$PARAM[condition]</visible>
@@ -462,6 +514,17 @@
                                 <align>right</align>
                                 <font>Font-ListInfo-Small</font>
                                 <label>$INFO[ListItem.Label2]</label>
+                                <visible>!Window.IsVisible(1131)</visible>
+                            </control>
+                            <control type="label">
+                                <left>25</left>
+                                <right>25</right>
+                                <bottom>pad</bottom>
+                                <height>48</height>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$INFO[ListItem.TvShowTitle]</label>
+                                <visible>Window.IsVisible(1131) + !String.IsEqual(ListItem.TvShowTitle,ListItem.Label)</visible>
                             </control>
                         </control>
                     </itemlayout>
@@ -507,12 +570,28 @@
                                 <bottom>pad</bottom>
                                 <height>48</height>
                                 <align>right</align>
-                                <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small</font>
+                                <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Label2]</label>
+                                <visible>!Window.IsVisible(1131)</visible>
+                            </control>
+                            <control type="label">
+                                <left>25</left>
+                                <right>25</right>
+                                <bottom>pad</bottom>
+                                <height>48</height>
+                                <align>right</align>
+                                <font>Font-ListInfo-Small</font>
+                                <textcolor>Selected</textcolor>
+                                <label>$INFO[ListItem.TvShowTitle]</label>
+                                <visible>Window.IsVisible(1131) + !String.IsEqual(ListItem.TvShowTitle,ListItem.Label)</visible>
                             </control>
                         </control>
                     </focusedlayout>
+                    <include content="$PARAM[include_name]">
+                        <param name="include_target" value="$PARAM[include_target]" />
+                        <param name="include_content" value="$PARAM[include_content]" />
+                    </include>
                 </control>
             </control>
         </definition>

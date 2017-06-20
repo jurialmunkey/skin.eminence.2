@@ -1011,3 +1011,8 @@ msgstr ""
 msgctxt "#31241"
 msgid "Hide home menu when widgets are focused"
 msgstr ""
+
+#: /16x9/Custom_Store_1131.xml
+msgctxt "#31242"
+msgid "Recently viewed movies"
+msgstr ""
