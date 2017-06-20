@@ -70,6 +70,17 @@
         <value condition="String.IsEqual(Window.Property(groupname),x1107)">$INFO[Skin.String(Widget.1107.Label),$LOCALIZE[31029] (,)]</value>
         <value condition="String.IsEqual(Window.Property(groupname),x1108)">$INFO[Skin.String(Widget.1108.Label),$LOCALIZE[31029] (,)]</value>
         <value condition="String.IsEqual(Window.Property(groupname),x1109)">$INFO[Skin.String(Widget.1109.Label),$LOCALIZE[31029] (,)]</value>
+
+        <value condition="String.IsEqual(Window.Property(groupname),x1111)">$INFO[Skin.String(Widget.1111.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1112)">$INFO[Skin.String(Widget.1112.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1113)">$INFO[Skin.String(Widget.1113.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1114)">$INFO[Skin.String(Widget.1114.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1115)">$INFO[Skin.String(Widget.1115.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1116)">$INFO[Skin.String(Widget.1116.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1117)">$INFO[Skin.String(Widget.1117.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1118)">$INFO[Skin.String(Widget.1118.Label),$LOCALIZE[31029] (,)]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),x1119)">$INFO[Skin.String(Widget.1119.Label),$LOCALIZE[31029] (,)]</value>
+
         <value>$LOCALIZE[31147]$INFO[Skin.String(home.fallbackwidget.name), (,)]</value>
     </variable>
 

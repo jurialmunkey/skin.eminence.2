@@ -221,6 +221,60 @@
                     <param name="buttonid2" value="9409" />
                 </include>
 
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1111" />
+                    <param name="buttonid1" value="9311" />
+                    <param name="buttonid2" value="9411" />
+                </include>
+
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1112" />
+                    <param name="buttonid1" value="9312" />
+                    <param name="buttonid2" value="9412" />
+                </include>
+
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1113" />
+                    <param name="buttonid1" value="9313" />
+                    <param name="buttonid2" value="9413" />
+                </include>
+
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1114" />
+                    <param name="buttonid1" value="9314" />
+                    <param name="buttonid2" value="9414" />
+                </include>
+
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1115" />
+                    <param name="buttonid1" value="9315" />
+                    <param name="buttonid2" value="9415" />
+                </include>
+
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1116" />
+                    <param name="buttonid1" value="9316" />
+                    <param name="buttonid2" value="9416" />
+                </include>
+
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1117" />
+                    <param name="buttonid1" value="9317" />
+                    <param name="buttonid2" value="9417" />
+                </include>
+
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1118" />
+                    <param name="buttonid1" value="9318" />
+                    <param name="buttonid2" value="9418" />
+                </include>
+
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1119" />
+                    <param name="buttonid1" value="9319" />
+                    <param name="buttonid2" value="9419" />
+                </include>
+
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
                     <label>31074</label>

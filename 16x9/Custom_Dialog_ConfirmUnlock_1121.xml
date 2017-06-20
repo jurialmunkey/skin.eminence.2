@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
-<window type="dialog" id="1111">
+<window type="dialog" id="1121">
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">9000</defaultcontrol>
 
