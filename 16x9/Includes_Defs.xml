@@ -4,6 +4,7 @@
     <include name="Defs_Store_Content"><content target="$PARAM[include_target]">$PARAM[include_content]</content></include>
     <include name="Defs_Store_Hub_1101"><content><include>skinshortcuts-group-x1101</include></content></include>
     <include name="Defs_Store_Hub_1102"><content><include>skinshortcuts-group-x1102</include></content></include>
+    <include name="Defs_Store_Menu"><content><include>skinshortcuts-mainmenu</include></content></include>
 
     <include name="Defs_LeftSide"><left>0</left></include>
     <include name="Defs_RightSide"><right>0</right></include>

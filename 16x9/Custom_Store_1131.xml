@@ -28,7 +28,8 @@
                 <top>-258</top>
                 <bottom>0</bottom>
                 <itemgap>-450</itemgap>
-                <usecontrolcoords>true</usecontrolcoords> 
+                <usecontrolcoords>true</usecontrolcoords>
+
                 <include content="Object_StoreWidgets">
                     <param name="widget1_id" value="9501" />
                     <param name="widget2_id" value="9502" />
