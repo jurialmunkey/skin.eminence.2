@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Home_TextOnly_Animate">
-        <animation effect="slide" start="0" end="0,106" time="500" tween="back" reversible="false" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
-        <animation effect="slide" end="0" start="0,106" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
+        <animation effect="slide" start="0" end="0,106" time="500" tween="back" reversible="false" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)] + !Skin.HasSetting(widgets.donthidemenu)">Conditional</animation>
+        <animation effect="slide" end="0" start="0,106" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)] + !Skin.HasSetting(widgets.donthidemenu)">Conditional</animation>
     </include>
     <include name="Home_Icons_Animate">
-        <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
-        <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)]">Conditional</animation>
+        <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="[Control.HasFocus(9001) | Control.HasFocus(9101)] + !Skin.HasSetting(widgets.donthidemenu)">Conditional</animation>
+        <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="![Control.HasFocus(9001) | Control.HasFocus(9101)] + !Skin.HasSetting(widgets.donthidemenu)">Conditional</animation>
     </include>
     <include name="Home_Dialogs_TextOnly_Animate">
         <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,106" start="0" reversible="false" condition="!String.IsEmpty(Window(home).Property(FO9001)) + String.IsEqual(Window(home).Property(FO9001),2)">Conditional</animation>

@@ -1006,3 +1006,8 @@ msgstr ""
 msgctxt "#31240"
 msgid "Switch viewtype artwork and list positions"
 msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31241"
+msgid "Hide home menu when widgets are focused"
+msgstr ""
