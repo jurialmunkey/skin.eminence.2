@@ -144,7 +144,8 @@
         <value  condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.ExtraFanArt)) + Skin.HasSetting(SkinHelper.EnableExtraFanart)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
         <value condition="!String.IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
 
-       
+        <value condition="!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.FanArt)) + !Skin.HasSetting(global.fanart)">$INFO[Window(home).Property(SkinHelper.ListItem.Art.FanArt)]</value>
 
         <value condition="!String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         
