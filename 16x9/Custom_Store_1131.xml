@@ -4,6 +4,8 @@
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">9500</defaultcontrol>
     <onload condition="Window.Previous(Home)">SetFocus(9501,0)</onload>
+    <include condition="!Skin.HasSetting(store_init)">Defs_Store_Init</include>
+
     <controls>
         <!-- Background -->
         <include>Furniture_Background</include>
@@ -40,48 +42,55 @@
                     <param name="widget7_id" value="9507" />
                     <param name="widget8_id" value="9508" />
 
-                    <param name="widget1_content" value="videodb://recentlyaddedmovies" />
-                    <param name="widget1_target" value="videos" />
-                    <param name="widget1_title" value="$LOCALIZE[20386]" />
-                    <param name="widget1_genres" value="false" />
+                    <param name="widget1_content" value="$INFO[Skin.String(Store_Widget1_Content)]" />
+                    <param name="widget1_target" value="$INFO[Skin.String(Store_Widget1_Target)]" />
+                    <param name="widget1_title" value="$INFO[Skin.String(Store_Widget1_Title)]" />
+                    <param name="widget1_genres" value="Skin.HasSetting(Store_Widget1_Genres)" />
+                    <param name="widget1_landscape" value="Skin.HasSetting(Store_Widget1_Landscape)" />
 
-                    <param name="widget2_content" value="special://skin/extras/playlists/RecentMovies.xsp" />
-                    <param name="widget2_target" value="videos" />
-                    <param name="widget2_title" value="$LOCALIZE[31242]" />
-                    <param name="widget2_genres" value="false" />
-                    
-                    <param name="widget3_content" value="videodb://movies/genres" />
-                    <param name="widget3_target" value="videos" />
-                    <param name="widget3_title" value="$LOCALIZE[20338] $LOCALIZE[135]" />
-                    <param name="widget3_genres" value="true" />
-                    
-                    <param name="widget4_content" value="special://skin/extras/playlists/RandomMovies.xsp" />
-                    <param name="widget4_target" value="videos" />
-                    <param name="widget4_title" value="$LOCALIZE[31054]" />
-                    <param name="widget4_genres" value="false" />
-                    
-                    <param name="widget5_content" value="special://skin/extras/playlists/RecentShows.xsp" />
-                    <param name="widget5_target" value="videos" />
-                    <param name="widget5_title" value="$LOCALIZE[626]" />
-                    <param name="widget5_genres" value="false" />
+                    <param name="widget2_content" value="$INFO[Skin.String(Store_Widget2_Content)]" />
+                    <param name="widget2_target" value="$INFO[Skin.String(Store_Widget2_Target)]" />
+                    <param name="widget2_title" value="$INFO[Skin.String(Store_Widget2_Title)]" />
+                    <param name="widget2_genres" value="Skin.HasSetting(Store_Widget2_Genres)" />
+                    <param name="widget2_landscape" value="Skin.HasSetting(Store_Widget2_Landscape)" />
 
-                    <param name="widget6_content" value="videodb://recentlyaddedepisodes" />
-                    <param name="widget6_target" value="videos" />
-                    <param name="widget6_title" value="$LOCALIZE[20387]" />
-                    <param name="widget6_genres" value="false" />
-                    <param name="widget6_landscape" value="true" />
+                    <param name="widget3_content" value="$INFO[Skin.String(Store_Widget3_Content)]" />
+                    <param name="widget3_target" value="$INFO[Skin.String(Store_Widget3_Target)]" />
+                    <param name="widget3_title" value="$INFO[Skin.String(Store_Widget3_Title)]" />
+                    <param name="widget3_genres" value="Skin.HasSetting(Store_Widget3_Genres)" />
+                    <param name="widget3_landscape" value="Skin.HasSetting(Store_Widget3_Landscape)" />
+
+                    <param name="widget4_content" value="$INFO[Skin.String(Store_Widget4_Content)]" />
+                    <param name="widget4_target" value="$INFO[Skin.String(Store_Widget4_Target)]" />
+                    <param name="widget4_title" value="$INFO[Skin.String(Store_Widget4_Title)]" />
+                    <param name="widget4_genres" value="Skin.HasSetting(Store_Widget4_Genres)" />
+                    <param name="widget4_landscape" value="Skin.HasSetting(Store_Widget4_Landscape)" />
+
+                    <param name="widget5_content" value="$INFO[Skin.String(Store_Widget5_Content)]" />
+                    <param name="widget5_target" value="$INFO[Skin.String(Store_Widget5_Target)]" />
+                    <param name="widget5_title" value="$INFO[Skin.String(Store_Widget5_Title)]" />
+                    <param name="widget5_genres" value="Skin.HasSetting(Store_Widget5_Genres)" />
+                    <param name="widget5_landscape" value="Skin.HasSetting(Store_Widget5_Landscape)" />
+
+                    <param name="widget6_content" value="$INFO[Skin.String(Store_Widget6_Content)]" />
+                    <param name="widget6_target" value="$INFO[Skin.String(Store_Widget6_Target)]" />
+                    <param name="widget6_title" value="$INFO[Skin.String(Store_Widget6_Title)]" />
+                    <param name="widget6_genres" value="Skin.HasSetting(Store_Widget6_Genres)" />
+                    <param name="widget6_landscape" value="Skin.HasSetting(Store_Widget6_Landscape)" />
+
+                    <param name="widget7_content" value="$INFO[Skin.String(Store_Widget7_Content)]" />
+                    <param name="widget7_target" value="$INFO[Skin.String(Store_Widget7_Target)]" />
+                    <param name="widget7_title" value="$INFO[Skin.String(Store_Widget7_Title)]" />
+                    <param name="widget7_genres" value="Skin.HasSetting(Store_Widget7_Genres)" />
+                    <param name="widget7_landscape" value="Skin.HasSetting(Store_Widget7_Landscape)" />
+
+                    <param name="widget8_content" value="$INFO[Skin.String(Store_Widget8_Content)]" />
+                    <param name="widget8_target" value="$INFO[Skin.String(Store_Widget8_Target)]" />
+                    <param name="widget8_title" value="$INFO[Skin.String(Store_Widget8_Title)]" />
+                    <param name="widget8_genres" value="Skin.HasSetting(Store_Widget8_Genres)" />
+                    <param name="widget8_landscape" value="Skin.HasSetting(Store_Widget8_Landscape)" />
                     
-                    <param name="widget7_content" value="videodb://tvshows/genres" />
-                    <param name="widget7_target" value="videos" />
-                    <param name="widget7_title" value="$LOCALIZE[20364] $LOCALIZE[135]" />
-                    <param name="widget7_genres" value="true" />
-                    
-                    <param name="widget8_content" value="special://skin/extras/playlists/RandomEpisodes.xsp" />
-                    <param name="widget8_target" value="videos" />
-                    <param name="widget8_title" value="$LOCALIZE[31055]" />
-                    <param name="widget8_genres" value="false" />
                     <param name="widget8_height" value="475" />
-                    <param name="widget8_landscape" value="true" />
 
                 </include>
                 

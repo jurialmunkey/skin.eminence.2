@@ -111,6 +111,7 @@
                 <left>$PARAM[iconpanelpadw]</left>
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
+                <onfocus condition="Window.IsVisible(1131)">SetProperty(list_focus,$PARAM[id],Home)</onfocus>
                 <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
                 <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                 <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>
@@ -460,6 +461,7 @@
                     <left>$PARAM[posx]</left>
                     <width>$PARAM[width]</width>
                     <height>$PARAM[height]</height>
+                    <onfocus condition="Window.IsVisible(1131)">SetProperty(list_focus,$PARAM[id],Home)</onfocus>
                     <onup condition="$PARAM[updownid]">$PARAM[id]</onup>
                     <ondown condition="$PARAM[updownid]">$PARAM[id]</ondown>
                     <onup condition="!$PARAM[updownid]">$PARAM[onup]</onup>

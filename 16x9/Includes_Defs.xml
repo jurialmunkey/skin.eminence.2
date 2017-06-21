@@ -2,9 +2,163 @@
 <includes>
 
     <include name="Defs_Store_Content"><content target="$PARAM[include_target]">$PARAM[include_content]</content></include>
-    <include name="Defs_Store_Hub_1101"><content><include>skinshortcuts-group-x1101</include></content></include>
-    <include name="Defs_Store_Hub_1102"><content><include>skinshortcuts-group-x1102</include></content></include>
-    <include name="Defs_Store_Menu"><content><include>skinshortcuts-mainmenu</include></content></include>
+
+    <include name="Defs_Store_Init">
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget1_Content,videodb://recentlyaddedmovies)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget1_Target,videos)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget1_Title,$LOCALIZE[20386])</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget1_Genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget1_Landscape)</onload>
+
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget2_Content,special://skin/extras/playlists/RecentMovies.xsp)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget2_Target,videos)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget2_Title,$LOCALIZE[31242])</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget2_Genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget2_Landscape)</onload>
+        
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget3_Content,videodb://movies/genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget3_Target,videos)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget3_Title,$LOCALIZE[20338] $LOCALIZE[135])</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetBool(Store_Widget3_Genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget3_Landscape)</onload>
+        
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget4_Content,special://skin/extras/playlists/RandomMovies.xsp)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget4_Target,videos)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget4_Title,$LOCALIZE[31054])</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget4_Genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget4_Landscape)</onload>
+        
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget5_Content,special://skin/extras/playlists/RecentShows.xsp)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget5_Target,videos)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget5_Title,$LOCALIZE[626])</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget5_Genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget5_Landscape)</onload>
+
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget6_Content,videodb://recentlyaddedepisodes)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget6_Target,videos)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget6_Title,$LOCALIZE[20387])</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget6_Genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetBool(Store_Widget6_Landscape)</onload>
+        
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget7_Content,videodb://tvshows/genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget7_Target,videos)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget7_Title,$LOCALIZE[20364] $LOCALIZE[135])</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetBool(Store_Widget7_Genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget7_Landscape)</onload>
+        
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget8_Content,special://skin/extras/playlists/RandomEpisodes.xsp)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget8_Target,videos)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget8_Title,$LOCALIZE[31055])</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.Reset(Store_Widget8_Genres)</onload>
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetBool(Store_Widget8_Landscape)</onload>
+
+        <onload condition="!Skin.HasSetting(store_init)">Skin.SetBool(store_init)</onload>
+    </include>
+
+    <include name="Defs_SkinSettings_StoreWidget">
+        <control type="group" id="812$PARAM[id]">
+            <height>72</height>
+            <width>100%</width>
+            <control type="togglebutton" id="813$PARAM[id]">
+                <onleft>815$PARAM[id]</onleft>
+                <onright>814$PARAM[id]</onright>
+                <ondown>813$PARAM[next_id]</ondown>
+                <onup>813$PARAM[prev_id]</onup>
+                <left>0</left>
+                <textoffsetx>148</textoffsetx>
+                <width>1000</width>
+                <alttexturenofocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturenofocus>
+                <alttexturefocus colordiffuse="$VAR[HighlightColor]">common/white.png</alttexturefocus>
+                <usealttexture>Control.HasFocus(814$PARAM[id]) | Control.HasFocus(815$PARAM[id])</usealttexture>
+                <label>$INFO[Skin.String(Store_Widget$PARAM[id]_Title)]</label>
+                <altlabel>[COLOR=Selected]$INFO[Skin.String(Store_Widget$PARAM[id]_Title)][/COLOR]</altlabel>
+                <onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=widget&amp;skinWidgetPath=Store_Widget$PARAM[id]_Content&amp;skinWidgetName=Store_Widget$PARAM[id]_Title&amp;skinWidgetTarget=Store_Widget$PARAM[id]_Target)</onclick>
+                <height>72</height>
+                <include>Defs_OptionButton</include>
+            </control>
+
+            <control type="label">
+                <label>$VAR[Label_Store_Widget$PARAM[id]_ViewMode]</label>
+                <align>right</align>
+                <width>300</width>
+                <height>72</height>
+                <right>64</right>
+                <width>100%</width>
+                <font>Font-ListInfo-Small</font>
+                <include>Defs_OptionButton</include>
+                <visible>![Control.HasFocus(813$PARAM[id]) | Control.HasFocus(814$PARAM[id]) | Control.HasFocus(815$PARAM[id])]</visible>
+            </control>
+            <control type="label">
+                <label>$VAR[Label_Store_Widget$PARAM[id]_ViewMode]</label>
+                <align>right</align>
+                <width>300</width>
+                <height>72</height>
+                <right>64</right>
+                <textcolor>Selected</textcolor>
+                <width>100%</width>
+                <font>Font-ListInfo-Small</font>
+                <include>Defs_OptionButton</include>
+                <visible>[Control.HasFocus(813$PARAM[id]) | Control.HasFocus(814$PARAM[id]) | Control.HasFocus(815$PARAM[id])]</visible>
+            </control>
+
+            <control type="image">
+                <top>4</top>
+                <width>64</width>
+                <height>64</height>
+                <left>0</left>
+                <texture colordiffuse="Disabled">special://skin/extras/icons/settings.png</texture>
+                <visible>!Control.HasFocus(813$PARAM[id])</visible>
+            </control>
+            <control type="image">
+                <top>4</top>
+                <width>64</width>
+                <height>64</height>
+                <left>0</left>
+                <texture colordiffuse="Selected">special://skin/extras/icons/settings.png</texture>
+                <visible>Control.HasFocus(813$PARAM[id])</visible>
+            </control>
+            <control type="button" id="814$PARAM[id]">
+                <onleft>813$PARAM[id]</onleft>
+                <onright>815$PARAM[id]</onright>
+                <ondown>813$PARAM[next_id]</ondown>
+                <onup>813$PARAM[prev_id]</onup>
+                <width>64</width>
+                <height>64</height>
+                <top>4</top>
+                <left>64</left>
+                <texturenofocus colordiffuse="Disabled">special://skin/extras/icons/write.png</texturenofocus>
+                <texturefocus colordiffuse="Selected">special://skin/extras/icons/write.png</texturefocus>
+                <align>center</align>
+                <onclick>Skin.SetString(Store_Widget$PARAM[id]_Title)</onclick>
+                <include>Defs_OptionButton</include>
+            </control>
+            <control type="button" id="815$PARAM[id]">
+                <onleft>814$PARAM[id]</onleft>
+                <onright>813$PARAM[id]</onright>
+                <ondown>813$PARAM[next_id]</ondown>
+                <onup>813$PARAM[prev_id]</onup>
+                <width>64</width>
+                <height>64</height>
+                <top>4</top>
+                <right>0</right>
+                <texturenofocus colordiffuse="Disabled">special://skin/extras/icons/pictures.png</texturenofocus>
+                <texturefocus colordiffuse="Selected">special://skin/extras/icons/pictures.png</texturefocus>
+                <align>center</align>
+                <selected>Skin.HasSetting(Store_Widget$PARAM[id]_Landscape)</selected>
+
+                <onclick condition="!Skin.HasSetting(Store_Widget$PARAM[id]_Genres) + !Skin.HasSetting(Store_Widget$PARAM[id]_Landscape)">Skin.ToggleSetting(Store_Widget$PARAM[id]_Landscape)</onclick>
+
+                <onclick condition="!Skin.HasSetting(Store_Widget$PARAM[id]_Genres) + Skin.HasSetting(Store_Widget$PARAM[id]_Landscape)">Skin.ToggleSetting(Store_Widget$PARAM[id]_Genres)</onclick>
+                <onclick condition="!Skin.HasSetting(Store_Widget$PARAM[id]_Genres) + Skin.HasSetting(Store_Widget$PARAM[id]_Landscape)">Skin.ToggleSetting(Store_Widget$PARAM[id]_Landscape)</onclick>
+
+                <onclick condition="Skin.HasSetting(Store_Widget$PARAM[id]_Genres) + Skin.HasSetting(Store_Widget$PARAM[id]_Landscape)">Skin.ToggleSetting(Store_Widget$PARAM[id]_Landscape)</onclick>
+                <onclick condition="Skin.HasSetting(Store_Widget$PARAM[id]_Genres)">Skin.ToggleSetting(Store_Widget$PARAM[id]_Genres)</onclick>
+
+                <include>Defs_OptionButton</include>
+            </control>
+            
+        </control>
+    </include>
 
     <include name="Defs_LeftSide"><left>0</left></include>
     <include name="Defs_RightSide"><right>0</right></include>

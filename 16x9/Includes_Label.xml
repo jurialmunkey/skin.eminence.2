@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Label_Store_Widget1_ViewMode">
+        <value condition="Skin.HasSetting(Store_Widget1_Landscape)">$LOCALIZE[31243]</value>
+        <value condition="Skin.HasSetting(Store_Widget1_Genres)">$LOCALIZE[135]</value>
+        <value>$LOCALIZE[31244]</value>
+    </variable>
+    <variable name="Label_Store_Widget2_ViewMode">
+        <value condition="Skin.HasSetting(Store_Widget2_Landscape)">$LOCALIZE[31243]</value>
+        <value condition="Skin.HasSetting(Store_Widget2_Genres)">$LOCALIZE[135]</value>
+        <value>$LOCALIZE[31244]</value>
+    </variable>
+    <variable name="Label_Store_Widget3_ViewMode">
+        <value condition="Skin.HasSetting(Store_Widget3_Landscape)">$LOCALIZE[31243]</value>
+        <value condition="Skin.HasSetting(Store_Widget3_Genres)">$LOCALIZE[135]</value>
+        <value>$LOCALIZE[31244]</value>
+    </variable>
+    <variable name="Label_Store_Widget4_ViewMode">
+        <value condition="Skin.HasSetting(Store_Widget4_Landscape)">$LOCALIZE[31243]</value>
+        <value condition="Skin.HasSetting(Store_Widget4_Genres)">$LOCALIZE[135]</value>
+        <value>$LOCALIZE[31244]</value>
+    </variable>
+    <variable name="Label_Store_Widget5_ViewMode">
+        <value condition="Skin.HasSetting(Store_Widget5_Landscape)">$LOCALIZE[31243]</value>
+        <value condition="Skin.HasSetting(Store_Widget5_Genres)">$LOCALIZE[135]</value>
+        <value>$LOCALIZE[31244]</value>
+    </variable>
+    <variable name="Label_Store_Widget6_ViewMode">
+        <value condition="Skin.HasSetting(Store_Widget6_Landscape)">$LOCALIZE[31243]</value>
+        <value condition="Skin.HasSetting(Store_Widget6_Genres)">$LOCALIZE[135]</value>
+        <value>$LOCALIZE[31244]</value>
+    </variable>
+    <variable name="Label_Store_Widget7_ViewMode">
+        <value condition="Skin.HasSetting(Store_Widget7_Landscape)">$LOCALIZE[31243]</value>
+        <value condition="Skin.HasSetting(Store_Widget7_Genres)">$LOCALIZE[135]</value>
+        <value>$LOCALIZE[31244]</value>
+    </variable>
+    <variable name="Label_Store_Widget8_ViewMode">
+        <value condition="Skin.HasSetting(Store_Widget8_Landscape)">$LOCALIZE[31243]</value>
+        <value condition="Skin.HasSetting(Store_Widget8_Genres)">$LOCALIZE[135]</value>
+        <value>$LOCALIZE[31244]</value>
+    </variable>
+
     <variable name="Label_Duration">
         <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Duration.Minutes)) + Integer.IsGreater(ListItem.Duration,59)">$INFO[Window(home).Property(SkinHelper.ListItem.Duration.Hours),, hr ]$INFO[Window(home).Property(SkinHelper.ListItem.Duration.Minutes),, mins]</value>
         <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Duration.Minutes)) + !Integer.IsGreater(ListItem.Duration,59)">$INFO[Window(home).Property(SkinHelper.ListItem.Duration.Minutes),, mins]</value>

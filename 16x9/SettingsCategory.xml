@@ -108,8 +108,28 @@
                     <control type="label" id="6"><visible>false</visible></control>
                 </control>
             </control>
+            <!-- Arrows -->
+        <control type="group">
+            <control type="image">
+                <top>-35</top>
+                <centerleft>50%</centerleft>
+                <width>16</width>
+                <height>16</height>
+                <texture colordiffuse="SubLabel" flipy="true">common/16-arrow-down.png</texture>
+                <visible>Container(5).HasPrevious</visible>
+            </control>
+            <control type="image">
+                <bottom>-10</bottom>
+                <centerleft>50%</centerleft>
+                <width>16</width>
+                <height>16</height>
+                <texture colordiffuse="SubLabel" flipy="false">common/16-arrow-down.png</texture>
+                <visible>Container(5).HasNext</visible>
+            </control>
+        </control>
         </control>
 
+        
         
 
         <!-- Category Template -->
