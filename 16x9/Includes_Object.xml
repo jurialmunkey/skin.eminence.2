@@ -543,7 +543,7 @@
                         <aspectratio>stretch</aspectratio>
                         <fadetime>200</fadetime>
                         <texture background="true">$VAR[Image_Poster]</texture>
-                        <visible>!String.StartsWith(Control.GetLabel(6699),Default) + [String.IsEqual(Control.GetLabel(6699),ListItem.Art(tvshow.poster)) | String.IsEqual(Control.GetLabel(6699),ListItem.Art(poster)) | String.IsEqual(Control.GetLabel(6699),ListItem.Art(season.poster))] + !String.IsEmpty(Control.GetLabel(6699)</visible>
+                        <visible>!String.StartsWith(Control.GetLabel(6699),Default) + [String.IsEqual(Control.GetLabel(6699),ListItem.Art(tvshow.poster)) | String.IsEqual(Control.GetLabel(6699),ListItem.Art(poster)) | String.IsEqual(Control.GetLabel(6699),ListItem.Art(season.poster))] + !String.IsEmpty(Control.GetLabel(6699))</visible>
                     </control>
                     
                 </control>
