@@ -2,6 +2,7 @@
 <includes>
 
     <include name="Defs_Store_Content"><content target="$PARAM[include_target]">$PARAM[include_content]</content></include>
+    <include name="Defs_Store_MainMenu"><content><include>skinshortcuts-mainmenu</include></content></include>
 
     <include name="Defs_Store_Init">
         <onload condition="!Skin.HasSetting(store_init)">Skin.SetString(Store_Widget1_Content,videodb://recentlyaddedmovies)</onload>

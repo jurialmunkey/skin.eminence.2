@@ -70,7 +70,7 @@
     <include name="Object_StoreWidgets">
         <include content="Object_StoreWidget">
             <param name="list_id" value="$PARAM[widget1_id]" />
-            <param name="onup_id" value="Close" />
+            <param name="onup_id" value="SetFocus($PARAM[widget8_id],0)" />
             <param name="ondown_id" value="SetFocus($PARAM[widget2_id],0)" />
             <param name="title" value="$PARAM[widget1_title]" />
             <param name="genres" value="$PARAM[widget1_genres]" />
@@ -155,7 +155,7 @@
         <include content="Object_StoreWidget">
             <param name="list_id" value="$PARAM[widget8_id]" />
             <param name="onup_id" value="SetFocus($PARAM[widget7_id],0)" />
-            <param name="ondown_id" value="noop" />
+            <param name="ondown_id" value="SetFocus($PARAM[widget1_id],0)" />
             <param name="title" value="$PARAM[widget8_title]" />
             <param name="genres" value="$PARAM[widget8_genres]" />
             <param name="include_name" value="$PARAM[widget8_includename]" />
