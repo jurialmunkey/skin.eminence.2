@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-06-15 19:54+0200\n"
+"PO-Revision-Date: 2017-06-22 15:35+0200\n"
 "Last-Translator: Marcin W.\n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/teamxbmc/kodi-main/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -1007,3 +1007,43 @@ msgstr "Dziennik zdarzeń"
 msgctxt "#31240"
 msgid "Switch viewtype artwork and list positions"
 msgstr "Zmieniaj grafikę widoku i pozycje listy"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31241"
+msgid "Hide home menu when widgets are focused"
+msgstr "Ukrywaj menu startowe po zaznaczeniu gadżetu"
+
+#: /16x9/Custom_Store_1131.xml
+msgctxt "#31242"
+msgid "Recently viewed movies"
+msgstr "Filmy ostatnio oglądane"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31243"
+msgid "Landscape"
+msgstr "Panoramy"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31244"
+msgid "Posters"
+msgstr "Plakaty"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31245"
+msgid "Widget view mode"
+msgstr "Tryb widoku gadżetu"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31246"
+msgid "Showcase widget"
+msgstr "Wizytownik gadżetu"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31247"
+msgid "Display showcase widget when pressing down on menu items without submenus"
+msgstr "Wyświetlaj wizytownik gadżetu dla pozycji menu bez podmenu"
+
+#: /16x9/Custom_Dialog_ShowcaseSettings_1130.xml
+msgctxt "#31248"
+msgid "Showcase Widgets"
+msgstr "Wizytownik gadżetów"
