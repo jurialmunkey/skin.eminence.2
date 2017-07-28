@@ -2050,7 +2050,7 @@
                 <right>0</right>
                 <width>500</width>
                 <height>281</height>
-                <texture background="true">$INFO[Player.Art(clearart)]</texture>
+                <texture background="true">$VAR[Image_ClearArtOSD]</texture>
                 <visible>Skin.HasSetting(osd.showclearart)</visible>
             </control>
             <control type="group">

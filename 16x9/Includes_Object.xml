@@ -184,14 +184,17 @@
                 <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
             </control>
-            <control type="image">
+            <control type="group">
                 <centerleft>50%</centerleft>
                 <top>pad</top>
                 <bottom>pad</bottom>
                 <width>200</width>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
-                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                    <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
+                    <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+                </control>
             </control>
         </control>
         <control type="group">
@@ -206,18 +209,22 @@
                 <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
                 <bordersize>10</bordersize>
                 <aspectratio>keep</aspectratio>
+
                 <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
                 <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
             </control>
-            <control type="image">
+            <control type="group">
                 <centerleft>50%</centerleft>
                 <top>pad</top>
                 <bottom>pad</bottom>
                 <width>200</width>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
-                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                    <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
+                    <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+                </control>
             </control>
         </control>
         <control type="group">
@@ -237,14 +244,17 @@
                 <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
             </control>
-            <control type="image">
+            <control type="group">
                 <centerleft>50%</centerleft>
                 <top>pad</top>
                 <bottom>pad</bottom>
                 <width>200</width>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
-                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
+                    <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
+                    <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+                </control>
             </control>
         </control>
 
