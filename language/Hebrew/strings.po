@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: skin.eminence.2\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2017-09-13 15:37+0300\n"
+"PO-Revision-Date: 2017-10-17 12:12+0300\n"
 "Last-Translator: A. Dambledore\n"
 "Language-Team: Eng2Heb\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he_IL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.3\n"
 
 msgctxt "#31000"
 msgid "Item"
@@ -38,7 +37,7 @@ msgstr "הצג צללים על לוחות"
 
 msgctxt "#31005"
 msgid "Video OSD"
-msgstr "מסך ווידאו OSD"
+msgstr "מסך תצוגת ווידאו"
 
 msgctxt "#31006"
 msgid "Show plot when pressing info"
@@ -50,7 +49,7 @@ msgstr "הצג דגלי מדיה"
 
 msgctxt "#31008"
 msgid "Show plot overlay in after delay"
-msgstr "‎הצג שכבת [B]עלילה[/B] בספריית הווידאו לאחר השהייה."
+msgstr "‎הצג שכבת [B]עלילה[/B] בספריית הווידאו לאחר השהייה"
 
 msgctxt "#31009"
 msgid "Open playlist"
@@ -145,7 +144,7 @@ msgstr "אחזור יישומון רכזת"
 #: /16x9/SkinSettings.xml
 msgctxt "#31030"
 msgid "Watched/UnWatched Indicators"
-msgstr "מחווני 'נצפה' / 'לא נצפה'"
+msgstr "מחווני נצפה / לא נצפה"
 
 msgctxt "#31031"
 msgid "Recent movies"
@@ -158,7 +157,7 @@ msgstr "‎סרטים מומלצים"
 #: /16x9/SkinSettings.xml
 msgctxt "#31033"
 msgid "Watched / Unwatched Indicators"
-msgstr "מחווני 'נצפה' / 'לא נצפה'"
+msgstr "מחווני נצפה / לא נצפה"
 
 msgctxt "#31034"
 msgid "Enable Artist Slideshow"
@@ -285,7 +284,7 @@ msgstr "הצג אומנות שקופה"
 #: /16x9/SkinSettings.xml
 msgctxt "#31062"
 msgid "Show file name and path in info dialog"
-msgstr "הצג את שם הקובץ והנתיב בתיבת הדו-שיח 'מידע'"
+msgstr "הצג את שם הקובץ והנתיב בתיבת הדו-שיח מידע"
 
 msgctxt "#31063"
 msgid "Addons"
@@ -297,7 +296,7 @@ msgstr "‎תמונת רקע מותאמת אישית"
 
 msgctxt "#31065"
 msgid "Hide 'Mouse' warning"
-msgstr "הסתר אזהרת 'עכבר'"
+msgstr "הסתר אזהרת עכבר"
 
 msgctxt "#31066"
 msgid "Cinema Exp."
@@ -521,7 +520,7 @@ msgstr "הצג הצגת שקופיות של אמן"
 
 msgctxt "#31121"
 msgid "Music OSD"
-msgstr "תצוגת מסך מוזיקה OSD"
+msgstr "תצוגת מסך תצוגת מוזיקה"
 
 msgctxt "#31122"
 msgid "Match header tile with highlight color"
@@ -713,11 +712,11 @@ msgstr "כעת / הבא"
 
 msgctxt "#31169"
 msgid "Reset skin settings to defaults  (WARNING - This will override all skin settings)"
-msgstr "איפוס הגדרות המעטפת לברירת מחדל ( אזהרה - אפשרות זו תבטל את כל השינויים שנעשו במעטפת)"
+msgstr "איפוס הגדרות המעטפת לברירת מחדל (אזהרה - אפשרות זו תבטל את כל השינויים שנעשו במעטפת)"
 
 msgctxt "#31170"
 msgid "Backup / Restore"
-msgstr "גיבוי / שחזור"
+msgstr "גיבוי ושחזור"
 
 msgctxt "#31171"
 msgid "Reload skin"
@@ -746,7 +745,7 @@ msgstr "סמלילי סגנון"
 #: /16x9/SkinSettings.xml
 msgctxt "#31177"
 msgid "Automatically start fullscreen visualisation when starting playback"
-msgstr "להתחיל הדמיה במסך מלא באופן אוטומטי בזמן התחלת הניגון"
+msgstr "התחל הדמיה במסך מלא באופן אוטומטי בזמן התחלת הניגון"
 
 #: /16x9/Includes_Defs.xml
 msgctxt "#31178"
@@ -864,7 +863,7 @@ msgstr "רמת הגדרות"
 
 msgctxt "#31206"
 msgid "Home Shortcuts and Widgets"
-msgstr "קיצורי דרך של תפריט הבית ושל היישומונים."
+msgstr "קיצורי דרך של תפריט הבית ושל היישומונים"
 
 msgctxt "#31207"
 msgid "Home Header"
@@ -880,7 +879,7 @@ msgstr "הדמית מוזיקה"
 
 msgctxt "#31210"
 msgid "On Screen Display (OSD)"
-msgstr "תצוגת על המסך (OSD)"
+msgstr "תצוגת מסך (OSD)"
 
 msgctxt "#31211"
 msgid "Video Information"
@@ -892,7 +891,7 @@ msgstr "אין תוכן זמין כרגע"
 
 msgctxt "#31213"
 msgid "Show user ratings for music albums / songs"
-msgstr "הצג את דירוגי המשתמש עבור אלבומי מוסיקה / שירים"
+msgstr "הצג את דירוגי המשתמש עבור אלבומי מוסיקה ושירים"
 
 msgctxt "#31214"
 msgid "Show additional info labels in lists (e.g. ratings and year)"
@@ -928,7 +927,7 @@ msgstr "רשימה מרובעת"
 
 msgctxt "#31222"
 msgid "Enable / disable views"
-msgstr "אפשר \\ נטרל תצוגות"
+msgstr "אפשר או נטרל תצוגות"
 
 msgctxt "#31223"
 msgid "Poster List"
@@ -940,7 +939,7 @@ msgstr "הצג צללים על תיבות דו שיח"
 
 msgctxt "#31225"
 msgid "Use original Eminence v1 style side labels and arrows"
-msgstr "תשתמש בסגנון 'Eminence v1' לתוויות וחצים"
+msgstr "תשתמש בסגנון Eminence v1 לתוויות וחצים"
 
 msgctxt "#31226"
 msgid "Lock view"
@@ -1035,14 +1034,14 @@ msgstr "מצב תצוגת יישומון"
 #: /16x9/Includes_Defs.xml
 msgctxt "#31246"
 msgid "Showcase widget"
-msgstr "יישומון חלון ראווה"
+msgstr "יישומון תצוגת עטיפות"
 
 #: /16x9/SkinSettings.xml
 msgctxt "#31247"
 msgid "Display showcase widget when pressing down on menu items without submenus"
-msgstr "הצגת יישומון חלון ראווה בעת לחיצת 'למטה' על פריטים ללא תת תפריטים."
+msgstr "הצגת יישומון תצוגת עטיפות בעת לחיצת למטה על פריטים ללא תת תפריטים"
 
 #: /16x9/Custom_Dialog_ShowcaseSettings_1130.xml
 msgctxt "#31248"
 msgid "Showcase Widgets"
-msgstr "יישומוני חלון ראווה"
+msgstr "יישומונים של תצוגת עטיפות"
