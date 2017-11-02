@@ -811,7 +811,7 @@ msgstr "רשימת מידע"
 
 msgctxt "#31193"
 msgid "Box Office"
-msgstr "קוּפָּה"
+msgstr "שוברי קופות"
 
 msgctxt "#31194"
 msgid "Show plot for hub widgets"
