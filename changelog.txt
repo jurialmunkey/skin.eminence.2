@@ -1,10 +1,11 @@
 [B]3.0.0[/B]
 LEIA WORK COMMENCES
-LEIA DialogAddonSettings.xml
-LEIA Scrollbar fix
-LEIA DialogPVRGuideOSD rename
+LEIA DialogAddonSettings.xml id changes
+LEIA Scrollbar visibility fix
+LEIA DialogPVRGuideOSD rename file
 LEIA Player.CanRecord name change
 LEIA ChannelNumber name change
+LEIA PlayerControl(record) name change
 
 [B]2.5.46[/B]
 Tweak settings layout
