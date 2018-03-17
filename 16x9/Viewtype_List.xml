@@ -167,7 +167,9 @@
                 <include condition="!Skin.HasSetting(SwitchSides)">Defs_LeftSide</include>
                 <include condition="Skin.HasSetting(SwitchSides)">Defs_RightSide</include>
                 <include>Object_Background</include>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible(577)" />
+                </include>
                 <include content="View_IconWide_List">
                     <param name="id" value="577" />
                     <param name="width" value="720" />
@@ -319,7 +321,9 @@
                 <bottom>0</bottom>
                 <height>360</height>
                 <include>Object_Background</include>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible($PARAM[id])" />
+                </include>
             </control>
             <control type="fixedlist" id="$PARAM[id]">
                 <bottom>0</bottom>
@@ -387,7 +391,9 @@
                         <param name="condition" value="[Container.Content(movies) + [String.IsEqual(Skin.String(Skin.ForcedView.movies),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.movies)) ]] | [Container.Content(sets) + [String.IsEqual(Skin.String(Skin.ForcedView.sets),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.sets)) ]] | [Container.Content(tvshows) + [String.IsEqual(Skin.String(Skin.ForcedView.tvshows),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.tvshows)) ]] | [Container.Content(episodes) + [String.IsEqual(Skin.String(Skin.ForcedView.episodes),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.episodes)) ]] | [Container.Content(videos) + [String.IsEqual(Skin.String(Skin.ForcedView.videos),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.videos)) ]] | [Container.Content(artists) + [String.IsEqual(Skin.String(Skin.ForcedView.artists),$LOCALIZE[31220]) | String.IsEmpty(Skin.String(Skin.ForcedView.artists)) ]]" />
                     </include>
                 </control>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible(553)" />
+                </include>
                 <include>Object_Arrows_Vertical</include>
             </control>
         </control>
@@ -968,7 +974,9 @@
                 <include condition="Skin.HasSetting(SwitchSides)">Defs_RightSide</include>
                 <width>$PARAM[width]</width>
                 <include>Object_Background</include>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible($PARAM[id])" />
+                </include>
                 <control type="panel" id="$PARAM[id]">
                     <top>0</top>
                     <left>0</left>
@@ -1091,7 +1099,9 @@
                 <include condition="Skin.HasSetting(SwitchSides)">Defs_RightSide</include>
                 <width>$PARAM[width]</width>
                 <include>Object_Background</include>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible($PARAM[id])" />
+                </include>
                 <control type="panel" id="$PARAM[id]">
                     <top>0</top>
                     <left>0</left>

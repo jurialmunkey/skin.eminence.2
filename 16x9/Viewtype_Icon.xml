@@ -11,7 +11,9 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible(500)" />
+                </include>
                 <include content="View_Icon">
                     <param name="id" value="500" />
                     <param name="name" value="536" />
@@ -35,7 +37,9 @@
                     <include condition="!Skin.HasSetting(SwitchSides)">Defs_LeftSide</include>
                     <include condition="Skin.HasSetting(SwitchSides)">Defs_RightSide</include>
                     <include>Object_Background</include>
-                    <include>Object_Scrollbar</include>
+                    <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible(59)" />
+                </include>
                     <width>listinfow</width>
                     <include content="View_Icon">
                         <param name="id" value="59" />
@@ -63,7 +67,9 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible(55)" />
+                </include>
                 <include content="View_IconWide">
                     <param name="id" value="55" />
                     <param name="name" value="539" />
@@ -84,7 +90,9 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible(56)" />
+                </include>
                 <include content="View_IconFanart">
                     <param name="id" value="56" />
                     <param name="name" value="20445" />

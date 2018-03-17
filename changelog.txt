@@ -1,6 +1,7 @@
 [B]3.0.0[/B]
 LEIA WORK COMMENCES
 LEIA DialogAddonSettings.xml
+LEIA Scrollbar fix
 
 [B]2.5.46[/B]
 Tweak settings layout

@@ -161,7 +161,9 @@
                             </control>
                         </focusedlayout>
                     </control>
-                    <include>Object_Scrollbar</include>
+                    <include content="Object_Scrollbar">
+                        <param name="visible" value="Control.IsVisible($PARAM[id])" />
+                    </include>
                     <include>Object_Arrows_Vertical</include>
                 </control>
                 <include>PVR_InfoBox</include>
@@ -323,7 +325,9 @@
                             </control>
                         </focusedlayout>
                     </control>
-                    <include>Object_Scrollbar</include>
+                    <include content="Object_Scrollbar">
+                        <param name="visible" value="Control.IsVisible($PARAM[id])" />
+                    </include>
                     <include>Object_Arrows_Vertical</include>
                 </control>
                 <include>PVR_InfoBox</include>
@@ -447,7 +451,9 @@
                         </control>
                     </focusedlayout>
                 </control>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible(50)" />
+                </include>
                 <include>Object_Arrows_Vertical</include>
             </control>
             <include>PVR_InfoBox</include>
