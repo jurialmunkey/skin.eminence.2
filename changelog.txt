@@ -1,5 +1,6 @@
 [B]3.0.0[/B]
 LEIA WORK COMMENCES
+LEIA DialogAddonSettings.xml
 
 [B]2.5.46[/B]
 Tweak settings layout
