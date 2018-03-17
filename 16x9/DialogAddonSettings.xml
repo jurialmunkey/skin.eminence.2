@@ -36,7 +36,7 @@
                         <ondown>8000</ondown>
                         <onup>noop</onup>
                         <onleft>8000</onleft>
-                        <onright>3</onright>
+                        <onright>5</onright>
                         <width>100%</width>
                         <height>576</height>
                         <orientation>vertical</orientation>
