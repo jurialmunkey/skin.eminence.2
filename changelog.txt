@@ -2,6 +2,7 @@
 LEIA WORK COMMENCES
 LEIA DialogAddonSettings.xml
 LEIA Scrollbar fix
+LEIA DialogPVRGuideOSD rename
 
 [B]2.5.46[/B]
 Tweak settings layout
