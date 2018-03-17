@@ -3,7 +3,8 @@ LEIA WORK COMMENCES
 LEIA DialogAddonSettings.xml
 LEIA Scrollbar fix
 LEIA DialogPVRGuideOSD rename
-LEIA Player.CanRecord change
+LEIA Player.CanRecord name change
+LEIA ChannelNumber name change
 
 [B]2.5.46[/B]
 Tweak settings layout

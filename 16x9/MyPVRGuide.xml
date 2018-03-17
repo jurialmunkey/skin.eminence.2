@@ -71,7 +71,7 @@
                                 <aligny>center</aligny>
                                 <height>67</height>
                                 <textcolor>ListLabel</textcolor>
-                                <label>$INFO[ListItem.ChannelNumber]</label>
+                                <label>$INFO[ListItem.ChannelNumberLabel]</label>
                             </control>
                             <control type="image">
                                 <top>10</top>
@@ -113,7 +113,7 @@
                                 <selectedcolor>Selected</selectedcolor>
                                 <height>67</height>
                                 <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.ChannelNumber]</label>
+                                <label>$INFO[ListItem.ChannelNumberLabel]</label>
                             </control>
                             <control type="image">
                                 <top>10</top>

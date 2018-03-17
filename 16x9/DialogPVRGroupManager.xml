@@ -147,7 +147,7 @@
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
+                                <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.Label]</label>
                             </control>
                         </itemlayout>
                         <focusedlayout width="570" height="72">
@@ -170,7 +170,7 @@
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.Label]</label>
+                                <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.Label]</label>
                             </control>
                         </focusedlayout>
                     </control>

@@ -75,7 +75,7 @@
                         <width>70</width>
                         <height>70</height>
                         <align>left</align>
-                        <label>$INFO[ListItem.ChannelNumber]</label>
+                        <label>$INFO[ListItem.ChannelNumberLabel]</label>
                         <selectedcolor>ListLabel</selectedcolor>
                     </control>
                     <control type="progress">
@@ -135,7 +135,7 @@
                         <width>70</width>
                         <height>70</height>
                         <align>left</align>
-                        <label>$INFO[ListItem.ChannelNumber]</label>
+                        <label>$INFO[ListItem.ChannelNumberLabel]</label>
                         <selectedcolor>Selected</selectedcolor>
                         <textcolor>Selected</textcolor>
                     </control>
