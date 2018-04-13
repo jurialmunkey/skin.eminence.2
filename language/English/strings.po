@@ -1046,3 +1046,7 @@ msgstr ""
 msgctxt "#31248"
 msgid "Showcase Widgets"
 msgstr ""
+
+msgctxt "#31249"
+msgid "Special Features"
+msgstr ""

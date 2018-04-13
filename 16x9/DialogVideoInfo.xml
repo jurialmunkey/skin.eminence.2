@@ -459,6 +459,17 @@
                             <onfocus>ClearProperty(list)</onfocus>
                         </control>
                         
+                        
+                        <!-- Special Features Button -->
+                        <control type="button" id="9146">
+                            <label>31249</label>
+                            <visible>System.HasAddon(plugin.video.specialfeatures)</visible>
+                            <visible>String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true)</visible>
+                            <include>Defs_OptionButton3</include>
+                            <onclick>Action(close)</onclick>
+                            <onclick>RunScript(plugin.video.specialfeatures,listitem)</onclick>
+                        </control>
+                        
 
                         <!-- Cast Button -->
                         <control type="button" id="5">
