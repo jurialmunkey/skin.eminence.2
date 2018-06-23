@@ -19,8 +19,11 @@
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary lang="en">Clean, clear, simple, modern.</summary>
+        <summary lang="it">Pulita, chiara, semplice, moderna.</summary>
         <disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
+        <disclaimer lang="it">Mouse e dispositivi touch non sono supportati</disclaimer>
         <description lang="en">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
+        <description lang="it">Eminence è una skin che mira ad essere pulita, chiara, semplice e moderna.</description>
         <license>CC-NC-SA 3.0</license>
         <website></website>
         <email></email>
