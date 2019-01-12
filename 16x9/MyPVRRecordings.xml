@@ -3,7 +3,7 @@
     <backgroundcolor>Background</backgroundcolor>
     <menucontrol>9000</menucontrol>
     <defaultcontrol>50</defaultcontrol>
-
+    <views>50</views>   
     <controls>
         <include>Furniture_Background</include>
         <include>Furniture_RSS</include>
