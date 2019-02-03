@@ -182,9 +182,9 @@
     </variable>
 
     <variable name="Label_ExtraInfo">
-        <value condition="!String.IsEmpty(ListItem.MPAA) + !String.IsEmpty(ListItem.Duration) + [Control.IsVisible(57) | Control.IsVisible(53) | Control.IsVisible(535)]">$INFO[ListItem.MPAA,,  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
+        <value condition="!String.IsEmpty(ListItem.MPAA) + !String.IsEmpty(ListItem.Duration) + [Control.IsVisible(57) | Control.IsVisible(53) | Control.IsVisible(535)]">$INFO[ListItem.MPAA,,  •  ]$INFO[ListItem.Duration(mins),, $LOCALIZE[31117]]</value>
         <value condition="!String.IsEmpty(ListItem.MPAA) + [Control.IsVisible(57) | Control.IsVisible(53) | Control.IsVisible(535)]">$INFO[ListItem.MPAA]</value>
-        <value condition="!String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
+        <value condition="!String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration(mins),, $LOCALIZE[31117]]</value>
     </variable>
 
     <variable name="Label_Title">
@@ -240,9 +240,9 @@
         <value condition="!Container.Content(movies) + !ListItem.IsCollection + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
         <value condition="!Container.Content(movies) + !ListItem.IsCollection + String.IsEqual(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Year]</value>
 
-        <value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
-        <value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEqual(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
-        <value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEqual(Container.SortMethod,$LOCALIZE[562])">$INFO[ListItem.Duration,, $LOCALIZE[31117]]</value>
+        <value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Duration(mins),, $LOCALIZE[31117]]</value>
+        <value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEqual(Container.SortMethod,$LOCALIZE[563])">$INFO[ListItem.Duration(mins),, $LOCALIZE[31117]]</value>
+        <value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEqual(Container.SortMethod,$LOCALIZE[562])">$INFO[ListItem.Duration(mins),, $LOCALIZE[31117]]</value>
 
         <!-- Fallback -->
         <value condition="!ListItem.IsCollection">$INFO[ListItem.Label2]</value>

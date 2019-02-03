@@ -484,7 +484,7 @@
                 <left>-24</left>
                 <height>64</height>
                 <width>88</width>
-                <label>$INFO[ListItem.Duration,, $LOCALIZE[31117]]</label>
+                <label>$INFO[ListItem.Duration(mins),, $LOCALIZE[31117]]</label>
                 <textcolor>LineLabel</textcolor>
                 <font>Font-LineLabel</font>
                 <aligny>center</aligny>
