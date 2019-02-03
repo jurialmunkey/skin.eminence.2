@@ -192,7 +192,7 @@
         </control>
 
         <!-- HIDDeN Heading -->
-        <control type="label" id="1"><visible>false</visible><font>-</font></control>
+        <control type="label" id="1"><visible>false</visible><font /></control>
 
         <!-- Button grouplist -->
 

@@ -126,7 +126,7 @@
         </control>
 
         <!-- Hidden Label -->
-        <control type="label" id="411"><visible>false</visible><font>-</font></control>
+        <control type="label" id="411"><visible>false</visible><font /></control>
     </controls>
 
 </window>

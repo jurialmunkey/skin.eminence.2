@@ -473,10 +473,10 @@
                         <visible>Player.Paused</visible>
                     </control>
                     <control type="progress" id="933">
-                        <texturebg>-</texturebg>
-                        <lefttexture>-</lefttexture>
-                        <midtexture>-</midtexture>
-                        <righttexture>-</righttexture>
+                        <texturebg />
+                        <lefttexture />
+                        <midtexture />
+                        <righttexture />
                         <info>Player.Progress</info>
                         <visible>false</visible>
                     </control>

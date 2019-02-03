@@ -7,10 +7,10 @@
 
 		<!-- Hidden labels passed to Info below -->
 		<control type="label" id="10">
-			<font>-</font>
+			<font />
 		</control>
 		<control type="label" id="12">
-			<font>-</font>
+			<font />
 		</control>
 
 		<control type="group">

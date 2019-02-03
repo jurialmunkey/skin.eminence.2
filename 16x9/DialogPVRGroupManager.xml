@@ -216,10 +216,10 @@
         </control>
         <!-- Hidden labels -->
         <control type="label" id="21">
-            <font>-</font>
+            <font />
         </control>
         <control type="label" id="22">
-            <font>-</font>
+            <font />
         </control>
     </controls>
 </window>

@@ -9,9 +9,9 @@
             <width>100%</width>
             <bottom>64</bottom>
             <height>16</height>
-            <texturesliderbar>-</texturesliderbar>
-            <textureslidernib>-</textureslidernib>
-            <textureslidernibfocus>-</textureslidernibfocus>
+            <texturesliderbar />
+            <textureslidernib />
+            <textureslidernibfocus />
             <info>Player.Progress</info>
             <action>seek</action>
         </control>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- visualisation -->
-	<defaultcontrol>-</defaultcontrol>
+	
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<controls>
 

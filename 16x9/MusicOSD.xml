@@ -308,9 +308,9 @@
                                 <width>100%</width>
                                 <bottom>0</bottom>
                                 <height>12</height>
-                                <texturesliderbar>-</texturesliderbar>
-                                <textureslidernib>-</textureslidernib>
-                                <textureslidernibfocus>-</textureslidernibfocus>
+                                <texturesliderbar />
+                                <textureslidernib />
+                                <textureslidernibfocus />
                                 <info>Player.Progress</info>
                                 <action>seek</action>
                             </control>
