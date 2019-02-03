@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <!-- addonsettings -->
-    <defaultcontrol always="true">9</defaultcontrol>
+    <defaultcontrol always="true">3</defaultcontrol>
     <controls>
         <include>GlobalOverlay</include>
         <control type="group">
@@ -32,11 +32,11 @@
                     <width>465</width>
                     <height>576</height>
                     <include>Object_FlatBackground</include>
-                    <control type="grouplist" id="9">
+                    <control type="grouplist" id="3">
                         <ondown>8000</ondown>
                         <onup>noop</onup>
                         <onleft>8000</onleft>
-                        <onright>2</onright>
+                        <onright>5</onright>
                         <width>100%</width>
                         <height>576</height>
                         <orientation>vertical</orientation>
@@ -49,12 +49,12 @@
                     <right>0</right>
                     <height>576</height>
                     <include>Object_FlatBackground</include>
-                    <control type="grouplist" id="2">
+                    <control type="grouplist" id="5">
                         <width>100%</width>
                         <height>576</height>
                         <ondown>8000</ondown>
                         <onup>noop</onup>
-                        <onleft>9</onleft>
+                        <onleft>3</onleft>
                         <onright>8000</onright>
                         <orientation>vertical</orientation>
                         <itemgap>0</itemgap>
@@ -64,39 +64,43 @@
             </control>
 
             <!-- Default Templates -->
-            <control type="button" id="3">
+            <control type="button" id="7">
                 <width>100%</width>
                 <include>Defs_OptionButton</include>
             </control>
-            <control type="radiobutton" id="4">
+            <control type="radiobutton" id="8">
                 <width>100%</width>
                 <radioposx>addonsettingsradioposx</radioposx>
                 <include>Defs_OptionButton</include>
             </control>
-            <control type="spincontrolex" id="5">
+            <control type="spincontrolex" id="9">
                 <width>100%</width>
                 <include>Defs_OptionButton</include>
             </control>
-            <control type="image" id="6">
+            <control type="image" id="11">
                 <width>100%</width>
                 <height>72</height>
                 <texture border="30">common/div.png</texture>
                 <include>Defs_OptionButton</include>
             </control>
-            <control type="label" id="7">
+            <control type="edit" id="12">
+                <width>100%</width>
+                <include>Defs_OptionButton</include>
+            </control>
+            <control type="label" id="14">
                 <width>100%</width>
                 <height>72</height>
                 <textoffsetx>bigpad</textoffsetx>
                 <font>Font-ListInfo-Small-Bold</font>
                 <textcolor>LineLabel</textcolor>
             </control>
-            <control type="sliderex" id="8">
+            <control type="sliderex" id="13">
                 <width>100%</width>
                 <include>Defs_OptionButton</include>
             </control>
 
             <!-- Default Templates Category -->
-            <control type="button" id="13">
+            <control type="button" id="10">
                 <width>100%</width>
                 <include>Defs_OptionButton</include>
             </control>
@@ -109,9 +113,9 @@
                 <height>72</height>
                 <align>center</align>
                 <itemgap>20</itemgap>
-                <onleft>9</onleft>
-                <onright>2</onright>
-                <onup>9</onup>
+                <onleft>3</onleft>
+                <onright>3</onright>
+                <onup>3</onup>
                 <ondown>noop</ondown>
                 <orientation>horizontal</orientation>
                 <control type="button" id="10">
@@ -137,7 +141,7 @@
                 </control>
             </control>
         </control>
-        <control type="label" id="20"><width>1</width><top>-2000</top><height>1</height><visible>false</visible></control>
+        <control type="label" id="2"><width>1</width><top>-2000</top><height>1</height><visible>false</visible></control>
 
     </controls>
 

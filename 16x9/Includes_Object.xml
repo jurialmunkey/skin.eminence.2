@@ -439,6 +439,7 @@
     </include>
     <include name="Object_Scrollbar">
         <param name="left" default="0" />
+        <param name="visible" default="true" />
         <definition>
             <control type="scrollbar" id="60">
                 <onleft condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
@@ -448,20 +449,25 @@
                 <width>8</width>
                 <orientation>vertical</orientation>
                 <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+                <visible>$PARAM[visible]</visible>
             </control>
         </definition>
     </include>
     <include name="Object_Scrollbar_Horizontal">
-        <control type="scrollbar" id="61">
-            <ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
-            <onup>50</onup>
-            <bottom>-20</bottom>
-            <orientation>horizontal</orientation>
-            <centerleft>50%</centerleft>
-            <width>headlinew</width>
-            <height>8</height>
-            <animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
-        </control>
+        <param name="visible" default="true" />
+        <definition>
+            <control type="scrollbar" id="61">
+                <ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
+                <onup>50</onup>
+                <bottom>-20</bottom>
+                <orientation>horizontal</orientation>
+                <centerleft>50%</centerleft>
+                <width>headlinew</width>
+                <height>8</height>
+                <animation effect="fade" condition="!Control.HasFocus(61) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+                <visible>$PARAM[visible]</visible>
+            </control>
+        </definition>
     </include>
     <include name="Object_Background_Shadows_BorderTexture">
         <bordertexture border="32">common/24-shadow.png</bordertexture>
@@ -789,7 +795,7 @@
             </control>
             <control type="image">
                 <bottom>21</bottom>
-                <width max="$PARAM[width]">auto</width>
+                <width max="$PARAM[width]">$PARAM[width]</width>
                 <height>2</height>
                 <texture colordiffuse="PosterBorder">common/white.png</texture>
             </control>

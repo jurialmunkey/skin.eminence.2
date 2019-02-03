@@ -68,7 +68,7 @@
                                     <top>15</top>
                                     <height>30</height>
                                     <selectedcolor>ListLabel</selectedcolor>
-                                    <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                                    <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
                                     <left>160</left>
@@ -135,7 +135,7 @@
                                     <height>30</height>
                                     <textcolor>Selected</textcolor>
                                     <selectedcolor>Selected</selectedcolor>
-                                    <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                                    <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
                                     <left>160</left>
@@ -161,7 +161,9 @@
                             </control>
                         </focusedlayout>
                     </control>
-                    <include>Object_Scrollbar</include>
+                    <include content="Object_Scrollbar">
+                        <param name="visible" value="Control.IsVisible($PARAM[id])" />
+                    </include>
                     <include>Object_Arrows_Vertical</include>
                 </control>
                 <include>PVR_InfoBox</include>
@@ -231,7 +233,7 @@
                                     <textcolor>ListLabel</textcolor>
                                     <selectedcolor>ListLabel</selectedcolor>
                                     <font>Font-Button</font>
-                                    <label>$INFO[ListItem.ChannelNumber]</label>
+                                    <label>$INFO[ListItem.ChannelNumberLabel]</label>
                                 </control>
                                 <control type="label">
                                     <left>200</left>
@@ -295,7 +297,7 @@
                                     <textcolor>Selected</textcolor>
                                     <selectedcolor>Selected</selectedcolor>
                                     <font>Font-Button</font>
-                                    <label>$INFO[ListItem.ChannelNumber]</label>
+                                    <label>$INFO[ListItem.ChannelNumberLabel]</label>
                                 </control>
                                 <control type="label">
                                     <left>200</left>
@@ -323,7 +325,9 @@
                             </control>
                         </focusedlayout>
                     </control>
-                    <include>Object_Scrollbar</include>
+                    <include content="Object_Scrollbar">
+                        <param name="visible" value="Control.IsVisible($PARAM[id])" />
+                    </include>
                     <include>Object_Arrows_Vertical</include>
                 </control>
                 <include>PVR_InfoBox</include>
@@ -447,7 +451,9 @@
                         </control>
                     </focusedlayout>
                 </control>
-                <include>Object_Scrollbar</include>
+                <include content="Object_Scrollbar">
+                    <param name="visible" value="Control.IsVisible(50)" />
+                </include>
                 <include>Object_Arrows_Vertical</include>
             </control>
             <include>PVR_InfoBox</include>

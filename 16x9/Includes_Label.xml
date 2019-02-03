@@ -87,7 +87,7 @@
 
     <variable name="Label_PlayerControl_SubHeader">
         <value condition="!String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
-        <value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</value>
+        <value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName]</value>
         <value condition="!String.IsEmpty(VideoPlayer.TvShowTitle)">$INFO[VideoPlayer.TvShowTitle]</value>
         <value>$INFO[VideoPlayer.Year]</value>
     </variable>
