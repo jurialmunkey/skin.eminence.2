@@ -810,7 +810,7 @@
                         <width>32</width>
                         <height>32</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
                         <texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
                         <onclick>PlayerControl(Previous)</onclick>
@@ -821,7 +821,7 @@
                         <width>32</width>
                         <height>32</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
                         <texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
                         <onclick>PlayerControl(Rewind)</onclick>
@@ -833,7 +833,7 @@
                         <height>32</height>
                         <label></label>
                         <altlabel></altlabel>
-                        <font>noop</font>
+                        <font />
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
                         <texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
                         <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -847,7 +847,7 @@
                         <width>32</width>
                         <height>32</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
                         <texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
                         <onclick>PlayerControl(Stop)</onclick>
@@ -858,7 +858,7 @@
                         <width>32</width>
                         <height>32</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
                         <texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
                         <onclick>PlayerControl(Forward)</onclick>
@@ -869,7 +869,7 @@
                         <width>32</width>
                         <height>32</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
                         <texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
                         <onclick>PlayerControl(Next)</onclick>

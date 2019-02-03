@@ -603,7 +603,7 @@
                 </item>
                 <item id="13">
                     <description>Filemanager</description>
-                    <label>File Manager</label>
+                    <label>$LOCALIZE[10003]</label>
                     <label2>$LOCALIZE[115] • $LOCALIZE[116] • $LOCALIZE[117][CR]$LOCALIZE[118] • $LOCALIZE[14226]</label2>
                     <onclick>activatewindow(filemanager)</onclick>
                     <icon>special://skin/extras/icons/database.png</icon>

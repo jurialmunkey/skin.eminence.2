@@ -31,7 +31,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus>noop</texturefocus>
                             <texturenofocus>noop</texturenofocus>
                         </control>
@@ -108,7 +108,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">noop</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">noop</texturenofocus>
                         </control>
@@ -156,7 +156,7 @@
                             <onclick>ActivateWindow(musicplaylist)</onclick>
                             <width>48</width>
                             <height>48</height>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/playlist.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/playlist.png</texturenofocus>
                         </control>
@@ -168,7 +168,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel" flipx="true">osd/next.png</texturenofocus>
                             <onclick>PlayerControl(Previous)</onclick>
@@ -179,7 +179,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel" flipx="true">osd/ff.png</texturenofocus>
                             <onclick>PlayerControl(Rewind)</onclick>
@@ -193,7 +193,7 @@
                             <height>48</height>
                             <label></label>
                             <altlabel></altlabel>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/pause.png</texturenofocus>
                             <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -209,7 +209,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/stop.png</texturenofocus>
                             <onclick>PlayerControl(Stop)</onclick>
@@ -220,7 +220,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/ff.png</texturenofocus>
                             <onclick>PlayerControl(Forward)</onclick>
@@ -233,7 +233,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/next.png</texturenofocus>
                             <onclick>PlayerControl(Next)</onclick>
@@ -250,7 +250,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/lyrics.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/lyrics.png</texturenofocus>
                         </control>
@@ -260,7 +260,7 @@
                             <width>48</width>
                             <height>48</height>
                             <label></label>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/visualisation.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/visualisation.png</texturenofocus>
                             <!-- <onclick>Addon.Default.Set(xbmc.player.musicviz)</onclick> -->
@@ -271,7 +271,7 @@
                             <onclick>XBMC.ActivateWindow(122)</onclick>
                             <width>48</width>
                             <height>48</height>
-                            <font>noop</font>
+                            <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/preset.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/preset.png</texturenofocus>
                         </control>

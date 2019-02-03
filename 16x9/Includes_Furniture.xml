@@ -921,7 +921,7 @@
                 <posx>245</posx>
                 <posy>115</posy>
                 <width>1050</width>
-                <font>Font-SubLabel</font>
+                <font>Font-Sublabel</font>
                 <aligny>top</aligny>
                 <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
                 <label>$VAR[Furniture_TopBar_Header_SubLabel]</label>

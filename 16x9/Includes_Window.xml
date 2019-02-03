@@ -1086,7 +1086,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <texturefocus>noop</texturefocus>
                         <texturenofocus>noop</texturenofocus>
@@ -1163,7 +1163,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <onclick>Close</onclick>
                         <onclick condition="Player.HasAudio">ActivateWindow(MusicPlaylist)</onclick>
@@ -1177,7 +1177,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
                         <texturenofocus colordiffuse="ListLabel" flipx="true">osd/next.png</texturenofocus>
@@ -1189,7 +1189,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
                         <texturenofocus colordiffuse="ListLabel" flipx="true">osd/ff.png</texturenofocus>
@@ -1204,7 +1204,7 @@
                         <height>48</height>
                         <label></label>
                         <altlabel></altlabel>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
                         <texturenofocus colordiffuse="ListLabel">osd/pause.png</texturenofocus>
@@ -1221,7 +1221,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
                         <texturenofocus colordiffuse="ListLabel">osd/stop.png</texturenofocus>
@@ -1234,7 +1234,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
                         <texturenofocus colordiffuse="ListLabel">osd/ff.png</texturenofocus>
@@ -1248,7 +1248,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
                         <texturenofocus colordiffuse="ListLabel">osd/next.png</texturenofocus>
@@ -1260,7 +1260,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <onclick>Close</onclick>
                         <onclick condition="Player.HasAudio">ActivateWindow(Visualisation)</onclick>
@@ -1275,7 +1275,7 @@
                         <width>48</width>
                         <height>48</height>
                         <label></label>
-                        <font>noop</font>
+                        <font />
                         <onup>9100</onup>
                         <texturefocus colordiffuse="$VAR[HighlightColor]">osd/shuffle.png</texturefocus>
                         <texturenofocus colordiffuse="ListLabel">osd/shuffle.png</texturenofocus>
@@ -1438,7 +1438,7 @@
             <width>48</width>
             <height>48</height>
             <label></label>
-            <font>noop</font>
+            <font />
             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/record.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel">osd/record.png</texturenofocus>
             <usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
@@ -1455,7 +1455,7 @@
             <width>48</width>
             <height>48</height>
             <label></label>
-            <font>noop</font>
+            <font />
             <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
             <onclick>PlayerControl(Previous)</onclick>
@@ -1466,7 +1466,7 @@
             <width>48</width>
             <height>48</height>
             <label></label>
-            <font>noop</font>
+            <font />
             <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
             <onclick>PlayerControl(Rewind)</onclick>
@@ -1478,7 +1478,7 @@
             <height>48</height>
             <label></label>
             <altlabel></altlabel>
-            <font>noop</font>
+            <font />
             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
             <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -1492,7 +1492,7 @@
             <width>48</width>
             <height>48</height>
             <label></label>
-            <font>noop</font>
+            <font />
             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
             <onclick>PlayerControl(Stop)</onclick>
@@ -1503,7 +1503,7 @@
             <width>48</width>
             <height>48</height>
             <label></label>
-            <font>noop</font>
+            <font />
             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
             <onclick>PlayerControl(Forward)</onclick>
@@ -1514,7 +1514,7 @@
             <width>48</width>
             <height>48</height>
             <label></label>
-            <font>noop</font>
+            <font />
             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
             <onclick>PlayerControl(Next)</onclick>

@@ -1427,7 +1427,6 @@
                                 <textcolor>Highlight2</textcolor>
                                 <selectedcolor>Highlight2</selectedcolor>
                                 <info>ListItem.Label</info>
-                                <font>font_lyrics_bold</font>
                             </control>
                         </focusedlayout>
                     </control>
