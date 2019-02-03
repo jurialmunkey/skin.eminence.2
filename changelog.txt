@@ -1,11 +1,15 @@
+[B]3.0.1[/B]
+Bump to new xbmcgui 5.14
+Fix PVR views
+
 [B]3.0.0[/B]
 LEIA WORK COMMENCES
-LEIA DialogAddonSettings.xml id changes
-LEIA Scrollbar visibility fix
-LEIA DialogPVRGuideOSD rename file
-LEIA Player.CanRecord name change
-LEIA ChannelNumber name change
-LEIA PlayerControl(record) name change
+DialogAddonSettings.xml id changes
+Scrollbar visibility fix
+DialogPVRGuideOSD rename file
+Player.CanRecord name change
+ChannelNumber name change
+PlayerControl(record) name change
 
 [B]2.5.46[/B]
 Tweak settings layout
