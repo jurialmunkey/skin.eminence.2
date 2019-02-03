@@ -1,5 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="Dialog_Select">
+        <control type="group">
+            
+            <animation effect="slide" start="0" end="298" time="0" condition="Control.IsVisible(3)">Conditional</animation>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>1792</width>
+            <bottom>100</bottom>
+            <height>676</height>
+            <control type="group">
+                <visible>Control.IsVisible(6)</visible>
+                <include>Dialog_Background</include>
+            </control>
+            <control type="group">
+                <left>0</left>
+                <right>596</right>
+                <visible>Control.IsVisible(3)</visible>
+                <include>Dialog_Background</include>
+            </control>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="$INFO[Control.GetLabel(1)]" />
+                <param name="icon" value="special://skin/extras/icons/filebox.png" />
+            </include>
+            <control type="group">
+                <left>bigpad</left>
+                <bottom>bigpad</bottom>
+                <width>576</width>
+                <height>576</height>
+                <include>Object_FlatBackground</include>
+                <visible>Control.IsVisible(6)</visible>
+
+                <control type="image">
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="DefaultAddon.png">$INFO[Container(6).ListItem.Icon]</texture>
+                </control>
+            </control>
+            <control type="group">
+                <left>616</left>
+                <bottom>bigpad</bottom>
+                <width>1156</width>
+                <height>576</height>
+                <include>Object_FlatBackground</include>
+                <visible>Control.IsVisible(6)</visible>
+            </control>
+            <include content="Dialog_FavouriteList">
+                <param name="id" value="3" />
+                <param name="onup" value="3" />
+                <param name="ondown" value="3" />
+                <param name="moveid" value="5" />
+                <param name="left" value="bigpad" />
+                <param name="top" value="80" />
+                <param name="width" value="1156" />
+                <param name="bottom" value="bigpad" />
+            </include>
+            <include content="Dialog_ImageList">
+                <param name="id" value="6" />
+                <param name="onup" value="6" />
+                <param name="ondown" value="6" />
+                <param name="moveid" value="5" />
+                <param name="left" value="616" />
+                <param name="width" value="1180" />
+            </include>
+            <!-- Button grouplist -->
+            <control type="grouplist" id="8000">
+                <animation effect="slide" start="0" end="-586" time="0" condition="Control.IsVisible(3)">Conditional</animation>
+                <right>bigpad</right>
+                <top>pad</top>
+                <align>right</align>
+                <height>60</height>
+                <onleft condition="Control.IsVisible(6)">6</onleft>
+                <onright condition="Control.IsVisible(6)">6</onright>
+                <onup condition="Control.IsVisible(6)">6</onup>
+                <ondown condition="Control.IsVisible(6)">6</ondown>
+                <onleft condition="Control.IsVisible(3)">3</onleft>
+                <onright condition="Control.IsVisible(3)">3</onright>
+                <onup condition="Control.IsVisible(3)">3</onup>
+                <ondown condition="Control.IsVisible(3)">3</ondown>
+                <orientation>horizontal</orientation>
+                <itemgap>pad</itemgap>
+                <control type="button" id="5">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <label>186</label>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="7">
+                    <width>auto</width>
+                    <height>100%</height>
+                    <align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+                </control>
+
+            </control>
+        </control>
+    </include>
+
+    <include name="Dialog_Select_Game">
+        <control type="group">
+            <visible>Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)</visible>
+            <bottom>0</bottom>
+            <height>520</height>
+            <include>Animation_SlideIn</include>
+            <control type="image">
+                <texture colordiffuse="c5000000">common/white.png</texture>
+                <height>620</height>
+            </control>
+            <control type="group">
+                <control type="textbox" id="12">
+                    <centerleft>50%</centerleft>
+                    <top>40</top>
+                    <width>1080</width>
+                    <height>70</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="fixedlist" id="11">
+                    <orientation>horizontal</orientation>
+                    <focusposition>1</focusposition>
+                    <movement>1</movement>
+                    <preloaditems>2</preloaditems>
+                    <bottom>40</bottom>
+                    <height>370</height>
+                    <ondown>9000</ondown>
+                    <onup>9000</onup>
+                    <itemlayout width="502" height="330">
+                        <control type="group">
+                            <top>20</top>
+                            <left>213</left>
+                            <right>-213</right>
+                            <bottom>-20</bottom>
+                            <control type="gamewindow">
+                                <height>260</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <top>20</top>  
+                                <videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+                                <stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+                                <rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
+                            </control>
+                            <control type="label">
+                                <textcolor>ffddddddd</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                                <top>300</top>
+                                <height>30</height>
+                                <left>20</left>
+                                <right>20</right>
+                            </control>
+                            <control type="label">
+                                <textcolor>ffddddddd</textcolor>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <top>300</top>
+                                <height>30</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <align>right</align>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="502" height="330">
+                        <control type="group">
+                            <top>20</top>
+                            <left>213</left>
+                            <right>-213</right>
+                            <bottom>-20</bottom>
+                            <control type="gamewindow">
+                                <height>260</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <top>20</top>  
+                                <videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+                                <stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+                                <rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
+                            </control>
+                            <control type="image">
+                                <left>10</left>
+                                <right>10</right>
+                                <top>10</top>
+                                <height>280</height>
+                                <visible>Control.HasFocus(11)</visible>
+                                <texture colordiffuse="$VAR[HighlightColor]" border="10">common/border.png</texture>
+                            </control>
+                            <control type="label">
+                                <textcolor>ffededed</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                                <top>300</top>
+                                <height>30</height>
+                                <left>20</left>
+                                <right>20</right>
+                            </control>
+                            <control type="label">
+                                <textcolor>ffededed</textcolor>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <top>300</top>
+                                <height>30</height>
+                                <left>20</left>
+                                <right>20</right>
+                                <align>right</align>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+        </control>
+    </include>
+
     <include name="Dialog_Center_Def">
         <include>Animation_SlideIn</include>
         <include>Animation_FadeOut</include>
