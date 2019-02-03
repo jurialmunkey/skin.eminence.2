@@ -4,6 +4,7 @@
     <menucontrol>9000</menucontrol>
     <onload>SetFocus(50)</onload>
     <onload>SetFocus(6)</onload>
+    <views>50</views>
     <controls>
 
         <!-- Background -->

@@ -5,6 +5,8 @@ Fix PVR view menu
 Remove hyphen null values
 Add dependencies button in AddonInfo
 Fix AddonSettings header
+Add views tag to MyMusicPlaylistEditor
+
 
 [B]3.0.0[/B]
 LEIA WORK COMMENCES
