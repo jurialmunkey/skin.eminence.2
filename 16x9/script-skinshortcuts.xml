@@ -147,7 +147,7 @@
 
                 <control type="button" id="312" description="Widget">
                     <width>100%</width>
-                    <label>Widget</label>
+                    <label>$LOCALIZE[31250]</label>
                     <label2>$VAR[Label_ShortcutsWidget]</label2>
                     <include>Defs_OptionButton</include>
                     <!-- <visible>!String.Contains(Window.Property(groupname),x11)</visible> -->

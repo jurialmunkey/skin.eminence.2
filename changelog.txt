@@ -1,3 +1,10 @@
+[B]3.0.2[/B]
+Fix noop textures
+Localize raw labels
+Convert language folders to new style
+Remove AudioDSP
+Fix DialogAddonSettings buttons
+
 [B]3.0.1[/B]
 Bump to new xbmcgui 5.14
 Fix PVR views

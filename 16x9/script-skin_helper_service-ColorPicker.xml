@@ -79,8 +79,8 @@
                     <height>100%</height>
                     <label>$ADDON[script.skin.helper.colorpicker 32012]$INFO[Window.Property(colorstring),  ,]</label>
                     <align>center</align>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>
@@ -90,8 +90,8 @@
                     <height>100%</height>
                     <label>190</label>
                     <align>right</align>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>

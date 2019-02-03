@@ -288,10 +288,10 @@
         <aligny>center</aligny>
         <align>center</align>
         <textoffsetx>bigpad</textoffsetx>
-        <texturenofocus>noop</texturenofocus>
-        <texturefocus>noop</texturefocus>
-        <alttexturenofocus>noop</alttexturenofocus>
-        <alttexturefocus>noop</alttexturefocus>
+        <texturenofocus />
+        <texturefocus />
+        <alttexturenofocus />
+        <alttexturefocus />
     </include>
     <include name="Defs_KeyboardButton">
         <width>110</width>
@@ -419,10 +419,10 @@
         </control>
     </include>
     <variable name="Defs_HomeWidget_Content">
-        <value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
+        <value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">-</value>
         <value condition="String.IsEqual(Container(9000).ListItem.Property(widget),Weather) + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</value>
         <value condition="!String.IsEmpty(Container(9000).ListItem.Property(widgetPath)) + !Skin.HasSetting(widgets.persistent)">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
-        <value condition="!String.IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
+        <value condition="!String.IsEmpty(Container(9000).ListItem.Property(Background))">-</value>
         <value condition="[String.IsEqual(Skin.String(home.fallbackwidget),Weather) | String.IsEqual(Skin.String(home.fallbackwidget.node),Weather)] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</value>
         <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>

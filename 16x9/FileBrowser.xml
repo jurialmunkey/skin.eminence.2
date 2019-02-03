@@ -78,8 +78,8 @@
                     <height>100%</height>
                     <label>186</label>
                     <align>right</align>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>
@@ -90,8 +90,8 @@
                     <height>100%</height>
                     <label>222</label>
                     <align>right</align>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>
@@ -103,8 +103,8 @@
                     <label>119</label>
                     <visible>Control.IsEnabled(415)</visible>
                     <align>right</align>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>
@@ -116,8 +116,8 @@
                     <label>749</label>
                     <visible>Control.IsEnabled(416)</visible>
                     <align>right</align>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>

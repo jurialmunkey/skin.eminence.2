@@ -1,32 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<addon
-    id="skin.eminence.2"
-    version="3.0.1"
-    name="Eminence"
-    provider-name="jurialmunkey">
+<addon id="skin.eminence.2" name="Eminence" provider-name="jurialmunkey" version="3.0.2">
     <requires>
-        <import addon="xbmc.gui" version="5.14.0"/>
-        <import addon="script.skinshortcuts" version="1.0.0"/>
-        <import addon="script.skin.helper.service" version="1.0.0"/>
-        <import addon="script.extendedinfo" version="5.0.0"/>
-        <import addon="script.image.resource.select" version="0.0.5"/>
-        <import addon="plugin.program.autocompletion" version="1.0.1"/>
-        <import addon="resource.images.weathericons.white" version="0.0.6"/>
+        <import addon="xbmc.gui" version="5.14.0" />
+        <import addon="script.skinshortcuts" version="1.0.0" />
+        <import addon="script.skin.helper.service" version="1.0.0" />
+        <import addon="script.extendedinfo" version="5.0.0" />
+        <import addon="script.image.resource.select" version="0.0.5" />
+        <import addon="plugin.program.autocompletion" version="1.0.1" />
+        <import addon="resource.images.weathericons.white" version="0.0.6" />
     </requires>
-    <extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
-        <res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+    <extension debugging="false" effectslowdown="1.00" point="xbmc.gui.skin">
+        <res aspect="16:9" default="true" folder="16x9" height="1080" width="1920" />
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">Clean, clear, simple, modern.</summary>
-        <summary lang="it">Pulita, chiara, semplice, moderna.</summary>
-        <disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
-        <disclaimer lang="it">Mouse e dispositivi touch non sono supportati</disclaimer>
-        <description lang="en">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
-        <description lang="it">Eminence è una skin che mira ad essere pulita, chiara, semplice e moderna.</description>
+        <summary lang="en_GB">Clean, clear, simple, modern.</summary>
+        <summary lang="it_IT">Pulita, chiara, semplice, moderna.</summary>
+        <disclaimer lang="en_GB">Mouse and Touch device not supported</disclaimer>
+        <disclaimer lang="it_IT">Mouse e dispositivi touch non sono supportati</disclaimer>
+        <description lang="en_GB">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
+        <description lang="it_IT">Eminence è una skin che mira ad essere pulita, chiara, semplice e moderna.</description>
         <license>CC-NC-SA 3.0</license>
-        <website></website>
-        <email></email>
+        <website />
+        <email />
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>

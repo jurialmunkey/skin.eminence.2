@@ -32,8 +32,8 @@
                             <height>48</height>
                             <label></label>
                             <font />
-                            <texturefocus>noop</texturefocus>
-                            <texturenofocus>noop</texturenofocus>
+                            <texturefocus />
+                            <texturenofocus />
                         </control>
 
                         <control type="group" id="501">
@@ -109,8 +109,8 @@
                             <height>48</height>
                             <label></label>
                             <font />
-                            <texturefocus colordiffuse="$VAR[HighlightColor]">noop</texturefocus>
-                            <texturenofocus colordiffuse="HomeSubLabel">noop</texturenofocus>
+                            <texturefocus />
+                            <texturenofocus />
                         </control>
 
 

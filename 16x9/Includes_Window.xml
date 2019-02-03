@@ -1088,8 +1088,8 @@
                         <label></label>
                         <font />
                         <onup>9100</onup>
-                        <texturefocus>noop</texturefocus>
-                        <texturenofocus>noop</texturenofocus>
+                        <texturefocus />
+                        <texturenofocus />
                     </control>
 
                     <control type="group" id="501">

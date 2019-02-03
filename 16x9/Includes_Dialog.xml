@@ -85,8 +85,8 @@
                     <height>100%</height>
                     <align>right</align>
                     <label>186</label>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>
@@ -94,8 +94,8 @@
                     <width>auto</width>
                     <height>100%</height>
                     <align>right</align>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                 </control>

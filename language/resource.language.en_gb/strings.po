@@ -1050,3 +1050,13 @@ msgstr ""
 msgctxt "#31249"
 msgid "Special Features"
 msgstr ""
+
+#: /16x9/script-skinshortcuts.xml
+msgctxt "#31250"
+msgid "Widget"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31251"
+msgid "Customise showcase widgets"
+msgstr ""

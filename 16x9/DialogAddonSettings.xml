@@ -118,26 +118,26 @@
                 <onup>3</onup>
                 <ondown>noop</ondown>
                 <orientation>horizontal</orientation>
-                <control type="button" id="10">
+                <control type="button" id="28">
                     <align>center</align>
                     <width>400</width>
                     <label>186</label>
                     <include>Defs_OptionButton2</include>
-                    <visible>Control.IsEnabled(10)</visible>
+                    <visible>Control.IsEnabled(28)</visible>
                 </control>
-                <control type="button" id="11">
+                <control type="button" id="29">
                     <align>center</align>
                     <width>400</width>
                     <label>222</label>
                     <include>Defs_OptionButton2</include>
-                    <visible>Control.IsEnabled(11)</visible>
+                    <visible>Control.IsEnabled(29)</visible>
                 </control>
-                <control type="button" id="12">
+                <control type="button" id="30">
                     <align>center</align>
                     <width>400</width>
                     <label>409</label>
                     <include>Defs_OptionButton2</include>
-                    <visible>Control.IsEnabled(12)</visible>
+                    <visible>Control.IsEnabled(30)</visible>
                 </control>
             </control>
         </control>

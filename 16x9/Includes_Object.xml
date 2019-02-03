@@ -298,9 +298,9 @@
             <textureradioonfocus colordiffuse="Selected">indicator/lock.png</textureradioonfocus>
             <textureradioonnofocus colordiffuse="ListLabel">indicator/lock.png</textureradioonnofocus>
             <textureradioondisabled colordiffuse="Disabled">indicator/lock.png</textureradioondisabled>
-            <textureradioofffocus>noop</textureradioofffocus>
-            <textureradiooffnofocus>noop</textureradiooffnofocus>
-            <textureradiooffdisabled>noop</textureradiooffdisabled>
+            <textureradioofffocus />
+            <textureradiooffnofocus />
+            <textureradiooffdisabled />
             
             <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
             <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>

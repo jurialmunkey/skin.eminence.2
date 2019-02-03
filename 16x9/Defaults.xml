@@ -113,7 +113,7 @@
         <lefttexture colordiffuse="$VAR[HighlightColor]">osd/progress-end.png</lefttexture>
         <midtexture colordiffuse="$VAR[HighlightColor]">osd/progress-end.png</midtexture>
         <righttexture colordiffuse="$VAR[HighlightColor]">osd/progress-end.png</righttexture>
-        <overlaytexture>noop</overlaytexture>
+        <overlaytexture />
         <textcolor>ListLabel</textcolor>
         <selectedcolor>$VAR[HighlightColor2]</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
@@ -138,8 +138,8 @@
         <texturesliderbackground colordiffuse="PosterBorder">common/white.png</texturesliderbackground>
         <texturesliderbar colordiffuse="Disabled">common/white.png</texturesliderbar>
         <texturesliderbarfocus colordiffuse="$VAR[HighlightColor]">common/white.png</texturesliderbarfocus>
-        <textureslidernib>noop</textureslidernib>
-        <textureslidernibfocus>noop</textureslidernibfocus>
+        <textureslidernib />
+        <textureslidernibfocus />
         <showonepage>true</showonepage>
     </default>
 

@@ -91,8 +91,8 @@
                 <font>Font-ListInfo-Small-Bold</font>
                 <textcolor>ListLabel</textcolor>
                 <focusedcolor>Selected</focusedcolor>
-                <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/white.png</texturefocus>
-                <texturenofocus colordiffuse="00ffffff" border="5">noop</texturenofocus>
+                <texturefocus />
+                <texturenofocus />
             </control>
             <control type="image">
                 <description>Play</description>
@@ -120,7 +120,7 @@
                 <textcolor>ListLabel</textcolor>
                 <focusedcolor>Selected</focusedcolor>
                 <texturefocus colordiffuse="$VAR[HighlightColor]" border="5">common/white.png</texturefocus>
-                <texturenofocus colordiffuse="00ffffff" border="5">noop</texturenofocus>
+                <texturenofocus />
             </control>
         </control>
     </controls>

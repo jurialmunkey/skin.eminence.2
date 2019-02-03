@@ -306,8 +306,8 @@
                     <height>100%</height>
                     <align>right</align>
                     <label>[CAPITALIZE]$LOCALIZE[31226] $INFO[Container.Content,(,)][/CAPITALIZE]</label>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                     <onclick>SetFocus(9000)</onclick>
@@ -344,8 +344,8 @@
                     <height>100%</height>
                     <align>right</align>
                     <label>[CAPITALIZE]$LOCALIZE[31222][/CAPITALIZE]</label>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                     <onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
@@ -356,8 +356,8 @@
                     <height>100%</height>
                     <align>right</align>
                     <label>222</label>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus />
+                    <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
                     <onclick>Close</onclick>

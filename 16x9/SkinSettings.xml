@@ -246,7 +246,7 @@
                         </control>
                         <control type="label" id="8122">
                             <width>100%</width>
-                            <label>Showcase Widget</label>
+                            <label>$LOCALIZE[31246]</label>
                             <height>72</height>
                             <font>Font-ListInfo-Small-Bold</font>
                             <include>Defs_OptionButton</include>
@@ -264,7 +264,7 @@
                         </control>
                         <control type="button" id="8124">
                             <width>100%</width>
-                            <label>Customise showcase widgets</label>
+                            <label>$LOCALIZE[31251]</label>
                             <onclick>ActivateWindow(1130)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
