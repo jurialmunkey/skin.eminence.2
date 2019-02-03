@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="2">
+    <defaultcontrol always="true">50</defaultcontrol>
+    <menucontrol>9000</menucontrol>
+    <onunload>SetProperty(NodeReturn,videos,home)</onunload>
+    <onunload>SetProperty(HubReturn,$INFO[Container.FolderPath],home)</onunload>
+    <views>50,550,510,51,57,577,53,553,54,58,525,52,535,500,59,55,56,552</views>
+    <controls>
+        <!-- Background -->
+        <include>Furniture_Background</include>
+        <include>Furniture_RSS</include>
+        <include>Furniture_TopBar</include>
+
+        <!-- Main group -->
+        <control type="group">
+            <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container.NumItems,0)">Conditional</animation>
+            <include>Defs_ViewBackground</include>
+            <include content="Object_Headline">
+                <param name="label" value="$VAR[Label_SortLine]$VAR[Label_IconLine]" />
+            </include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.550)">Viewtype_List</include>
+            <include>Viewtype_SquareList</include>
+            <include>Viewtype_PlainList</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.510)">Viewtype_BigList</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.51)">Viewtype_MediaInfo</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.57)">Viewtype_MediaInfo2</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.577)">Viewtype_MediaInfo3</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.53)">Viewtype_InfoList</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.553)">Viewtype_InfoList2</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.54)">Viewtype_FanartList</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.500)">Viewtype_Icon</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.59)">Viewtype_IconExtra</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.55)">Viewtype_IconWide</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.56)">Viewtype_IconFanart</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.52)">Viewtype_MediumIcon</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.525) + !Skin.HasSetting(global.widescreen)">Viewtype_BigIcon</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.58)">Viewtype_Lovefilm</include>
+            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.535)">Viewtype_ShowCase</include>
+        </control>
+
+        <!-- Menu -->
+        <control type="group">
+            <include condition="!Skin.HasSetting(HorizontalMenus)">GlobalOverlay</include>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center</include>
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+        </control>
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_Def</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Background</include>
+            <include content="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[31068]" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+            <include content="Dialog_Center_Arrows" condition="!Skin.HasSetting(HorizontalMenus)">
+                <param name="id" value="9000" />
+            </include>
+            <include content="Dialog_Top_Arrows" condition="Skin.HasSetting(HorizontalMenus)">
+                <param name="id" value="9000" />
+            </include>
+
+            <control type="grouplist" id="9000">
+                <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_GroupList</include>
+                <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top_GroupList</include>
+                <defaultcontrol always="true">3</defaultcontrol>
+                <include>Object_BasicViewList</include>
+            </control>
+        </control>
+
+        <include>Furniture_OverlayInfo</include>
+
+
+    </controls>
+
+</window>

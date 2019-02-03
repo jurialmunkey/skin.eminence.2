@@ -37,11 +37,21 @@
                     <itemgap>bigpad</itemgap>
                 </control>
                 <control type="gamecontroller" id="31">
-                    <left>500</left>
-                    <right>500</right>
-                    <top>50</top>
+                    <centerleft>50%</centerleft>
+                    <top>0</top>
+                    <width>450</width>
                     <height>450</height>
-                    <aspectratio>scale</aspectratio>
+                </control>
+                <control type="textbox" id="32">
+                    <bottom>170</bottom>
+                    <left>450</left>
+                    <right>450</right>
+                    <height>100</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>Font-RSS</font>
+                    <textcolor>LineLabel</textcolor>
+                    <description>Controller description</description>
                 </control>
                 <control type="grouplist" id="5">
                     <left>1352</left>
@@ -64,28 +74,40 @@
                     <onup>5</onup>
                     <onleft>3</onleft>
                     <onright>5</onright>
-                    <control type="button" id="17">
-                        <align>center</align>
-                        <width>380</width>
-                        <label>10043</label>
-                        <include>Defs_OptionButton2</include>
-                    </control>
                     <control type="button" id="18">
                         <align>center</align>
-                        <width>380</width>
+                        <width>250</width>
                         <label>186</label>
                         <include>Defs_OptionButton2</include>
                     </control>
                     <control type="button" id="19">
                         <align>center</align>
-                        <width>380</width>
-                        <label>10035</label>
+                        <width>250</width>
+                        <label>13007</label>
                         <include>Defs_OptionButton2</include>
                     </control>
                     <control type="button" id="20">
                         <align>center</align>
-                        <width>380</width>
+                        <width>250</width>
                         <label>21452</label>
+                        <include>Defs_OptionButton2</include>
+                    </control>
+                    <control type="button" id="22">
+                        <align>center</align>
+                        <width>250</width>
+                        <label>$LOCALIZE[35021]</label>
+                        <include>Defs_OptionButton2</include>
+                    </control>
+                    <control type="button" id="17">
+                        <align>center</align>
+                        <width>250</width>
+                        <label>$LOCALIZE[10043]</label>
+                        <include>Defs_OptionButton2</include>
+                    </control>
+                    <control type="button" id="21">
+                        <align>center</align>
+                        <width>250</width>
+                        <label>$LOCALIZE[35019]</label>
                         <include>Defs_OptionButton2</include>
                     </control>
                 </control>
@@ -101,11 +123,6 @@
             <width>380</width>
             <align>left</align>
             <font>Font-ListInfo-Small-Bold</font>
-            <include>Defs_OptionButton2</include>
-        </control>
-        <control type="image" id="11">
-            <width>380</width>
-            <texture border="30">common/div.png</texture>
             <include>Defs_OptionButton2</include>
         </control>
         <control type="button" id="10">
