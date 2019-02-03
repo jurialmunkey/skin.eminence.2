@@ -7,7 +7,7 @@ Add dependencies button in AddonInfo
 Fix AddonSettings header
 Add views tag to MyMusicPlaylistEditor
 PVR Recordings watched toggle
-
+Games updates
 
 [B]3.0.0[/B]
 LEIA WORK COMMENCES

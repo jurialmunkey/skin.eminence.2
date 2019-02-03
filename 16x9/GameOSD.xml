@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <controls>
+        <control type="group" id="1">
+            <control type="group">
+                <visible>!Window.IsActive(GameVideoFilter) + !Window.IsActive(GameStretchMode) + !Window.IsActive(GameControllers) + !Window.IsActive(GameVideoRotation)</visible>
+                <include>GlobalOverlay</include>
+            </control>
+            <control type="group" id="10">
+                <visible>System.GetBool(gamesgeneral.showosdhelp)</visible>
+                <visible>!Window.IsActive(GameVideoFilter) + !Window.IsActive(GameStretchMode) + !Window.IsActive(GameControllers) + !Window.IsActive(GameVideoRotation)</visible>
+                <top>sidepad</top>
+                <bottom>sidepad</bottom>
+                <left>610</left>
+                <right>610</right>
+                <include>Animation_SlideIn</include>
+                <include>Animation_FadeOut</include>
+                <animation effect="slide" tween="quadratic" easing="out" time="300" start="0,1920" end="0">WindowOpen</animation>
+                <animation effect="slide" tween="quadratic" easing="in" time="300" end="0,1920" start="0">WindowClose</animation>
+                <include>Dialog_Background</include>
+                <control type="group">
+                    <top>70</top>
+                    <left>bigpad</left>
+                    <right>bigpad</right>
+                    <include content="Object_Line">
+                        <param name="width" value="headlinew" />
+                        <param name="label" value="$INFO[Control.GetLabel(2)]" />
+                    </include>
+                </control>
+                <control type="label" id="2">
+                    <description>Header Label</description>
+                    <label>$LOCALIZE[19033]</label>
+                    <visible>false</visible>
+                </control>
+
+                <control type="group" id="1100">
+                    <description>Control Area</description>
+                    <left>bigpad</left>
+                    <right>bigpad</right>
+                    <top>70</top>
+                    <bottom>20</bottom>
+                    <include>Object_FlatBackground</include>
+                    <control type="grouplist" id="1100">
+                        <top>30</top>
+                        <itemgap>10</itemgap>
+                        <orientation>vertical</orientation>
+                        <usecontrolcoords>true</usecontrolcoords>
+                        <control type="textbox" id="1101">
+                            <description>Help text</description>
+                            <left>30</left>
+                            <right>30</right>
+                            <height>130</height>
+                            <align>center</align>
+                            <font>Font-RSS</font>
+                            <textcolor>LineLabel</textcolor>
+                        </control>
+                        <control type="gamecontroller" id="1102">
+                            <centerleft>50%</centerleft>
+                            <width>640</width>
+                            <height>640</height>
+                        </control>
+                        <control type="textbox">
+                            <description>Additional help text. This will be removed in future versions.</description>
+                            <top>-50</top>
+                            <left>30</left>
+                            <right>30</right>
+                            <height>80</height>
+                            <align>center</align>
+                            <aligny>top</aligny>
+                            <font>Font-RSS</font>
+                            <textcolor>LineLabel</textcolor>
+                            <label>$LOCALIZE[35236]</label>
+                        </control>
+                    </control>
+                </control>
+            </control>
+
+            <control type="group" id="20">
+                <visible>!System.GetBool(gamesgeneral.showosdhelp)</visible>
+                <visible>!Window.IsActive(GameVideoFilter) + !Window.IsActive(GameStretchMode) + !Window.IsActive(GameControllers) + !Window.IsActive(GameVideoRotation)</visible>
+                <control type="group">
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center</include>
+                    <include>Animation_FadeIn</include>
+                </control>
+                <control type="group">
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_Def</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Background</include>
+                    <include content="Dialog_Top_IconHeader">
+                        <param name="label" value="$LOCALIZE[33063]" />
+                        <param name="icon" value="special://skin/extras/icons/kodi.png" />
+                    </include>
+                    <include content="Dialog_Center_Arrows" condition="!Skin.HasSetting(HorizontalMenus)">
+                        <param name="id" value="9000" />
+                    </include>
+                    <include content="Dialog_Top_Arrows" condition="Skin.HasSetting(HorizontalMenus)">
+                        <param name="id" value="9000" />
+                    </include>
+
+                    <control type="list" id="9000">
+                        <include condition="Skin.HasSetting(HorizontalMenus)">Dialog_Top_PowerMenu</include>
+                        <include condition="!Skin.HasSetting(HorizontalMenus)">Dialog_Center_PowerMenu</include>
+                        <content>
+                            <item id="2101">
+                                <description>Pause / Resume button</description>
+                                <label>$LOCALIZE[35224]</label>
+                                <label2>Select + X</label2>
+                                <icon>osd/fullscreen/buttons/play.png</icon>
+                                <onclick>Play</onclick>
+                            </item>
+                            <item id="2102">
+                                <description>Reset button</description>
+                                <label>$LOCALIZE[13007]</label>
+                                <icon>osd/fullscreen/buttons/reset.png</icon>
+                                <onclick>PlayerControl(Reset)</onclick>
+                            </item>
+                            <item id="2103">
+                                <description>Stop button</description>
+                                <label>$LOCALIZE[35222]</label>
+                                <label2>Select + Start</label2>
+                                <icon>osd/fullscreen/buttons/stop.png</icon>
+                                <onclick>Stop</onclick>
+                            </item>
+
+                            <!-- Games -->
+                            <item id="14101">
+                                <description>Video filter button</description>
+                                <label>$LOCALIZE[35225]</label>
+                                <onclick>ActivateWindow(GameVideoFilter)</onclick>
+                            </item>
+                            <item id="14102">
+                                <description>Stretch mode button</description>
+                                <label>$LOCALIZE[35233]</label>
+                                <onclick>ActivateWindow(GameStretchMode)</onclick>
+                            </item>
+                            <item id="14106">
+                                <description>Video rotation button</description>
+                                <label>$LOCALIZE[35227]</label>
+                                <onclick>ActivateWindow(GameVideoRotation)</onclick>
+                            </item>
+                            <item id="14104">
+                                <description>Volume button</description>
+                                <label>$LOCALIZE[13376]</label>
+                                <label2>[COLOR grey]Select + Right Stick[/COLOR]</label2>
+                                <onclick>ActivateWindow(GameVolume)</onclick>
+                            </item>
+                            <item id="14103">
+                                <description>Controller settings button</description>
+                                <label>$LOCALIZE[35234]</label>
+                                <onclick>ActivateWindow(GameControllers)</onclick>
+                            </item>
+                            <item id="14105">
+                                <description>Advanced settings</description>
+                                <label>$LOCALIZE[35226]</label>
+                                <onclick>ActivateWindow(GameAdvancedSettings)</onclick>
+                            </item>
+                        </content>
+                    </control>
+
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

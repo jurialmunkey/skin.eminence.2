@@ -2,7 +2,7 @@
 <window>
     <!-- seekbar -->
     <defaultcontrol always="true">901</defaultcontrol>
-    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
+    <visible>!Player.HasGame + [VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
     <controls>
 
 
