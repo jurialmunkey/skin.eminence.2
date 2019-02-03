@@ -1,6 +1,7 @@
 [B]3.0.1[/B]
 Bump to new xbmcgui 5.14
 Fix PVR views
+Fix PVR view menu
 
 [B]3.0.0[/B]
 LEIA WORK COMMENCES
