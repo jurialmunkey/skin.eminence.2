@@ -3,6 +3,7 @@ Bump to new xbmcgui 5.14
 Fix PVR views
 Fix PVR view menu
 Remove hyphen null values
+Add dependencies button in AddonInfo
 
 [B]3.0.0[/B]
 LEIA WORK COMMENCES

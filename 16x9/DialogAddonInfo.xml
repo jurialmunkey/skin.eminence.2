@@ -251,6 +251,14 @@
                             <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(7)</visible>
                         </control>
+
+                        <!-- View Dependencies -->
+                        <control type="button" id="10">
+                            <label>$LOCALIZE[39024]</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton3</include>
+                            <visible>Control.IsEnabled(10)</visible>
+                        </control>
                     </control>
                 </control>
             </control>
