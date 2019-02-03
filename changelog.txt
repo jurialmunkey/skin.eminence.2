@@ -6,6 +6,7 @@ Remove hyphen null values
 Add dependencies button in AddonInfo
 Fix AddonSettings header
 Add views tag to MyMusicPlaylistEditor
+PVR Recordings watched toggle
 
 
 [B]3.0.0[/B]

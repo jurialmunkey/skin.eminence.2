@@ -584,6 +584,14 @@
                     <selected>Container.Filtered</selected>
                     <visible>Control.IsEnabled(31) + Window.IsVisible(MyPVRChannels.xml)</visible>
                 </control>
+                <!-- Watched Toggle -->
+                <control type="button" id="10">
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
+                    <label>20367</label>
+                    <visible>Control.IsEnabled(10)</visible>
+                    <visible>Window.IsVisible(MyPVRRecordings.xml)</visible>
+                </control>
             </control>
         </control>
     </include>
