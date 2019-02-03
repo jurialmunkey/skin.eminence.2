@@ -20,7 +20,7 @@
                 <right>bigpad</right>
                 <include content="Object_Line">
                     <param name="width" value="headlinew" />
-                    <param name="label" value="$INFO[Control.GetLabel(20)]" />
+                    <param name="label" value="$INFO[Control.GetLabel(2)]" />
                 </include>
             </control>
             <control type="group">
