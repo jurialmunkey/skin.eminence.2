@@ -12,9 +12,6 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include content="Object_Scrollbar_Horizontal">
-                    <param name="visible" value="Control.IsVisible(535)" />
-                </include>
                 <control type="group">
                     <centerleft>50%</centerleft>
                     <width>1752</width>

@@ -9,9 +9,6 @@
             <top>bigpad</top>
             <height>posterh</height>
             <include>Object_Background</include>
-            <include content="Object_Scrollbar_Horizontal">
-                <param name="visible" value="Control.IsVisible(52)" />
-            </include>
             <control type="wraplist" id="52">
                 <top>30</top>
                 <left>bigiconpanelpadw</left>
@@ -174,9 +171,6 @@
             <top>bigpad</top>
             <height>posterh</height>
             <include>Object_Background</include>
-            <include content="Object_Scrollbar_Horizontal">
-                <param name="visible" value="Control.IsVisible(525)" />
-            </include>
             <control type="fixedlist" id="525">
                 <top>10</top>
                 <centerleft>50%</centerleft>
@@ -316,9 +310,6 @@
                 <top>bigpad</top>
                 <height>posterh</height>
                 <include>Object_Background</include>
-                <include content="Object_Scrollbar_Horizontal">
-                    <param name="visible" value="Control.IsVisible(58)" />
-                </include>
                 <control type="group">
                     <right>0</right>
                     <width>1280</width>
