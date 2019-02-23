@@ -1376,7 +1376,7 @@
         <control type="button" id="3">
             <description>Playlist</description>
             <label>$LOCALIZE[287]</label>
-            <onclick>Action(ShowSubtitles)</onclick>
+            <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
             <onup>9302</onup>
             <include>Defs_OSDButton</include>
         </control>
