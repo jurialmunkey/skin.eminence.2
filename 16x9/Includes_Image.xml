@@ -18,7 +18,7 @@
         <value>special://skin/extras/icons/settings.png</value>
     </variable>
     <variable name="Image_MusicVisualisation">
-        <value condition="Skin.HasSetting(ArtistSlideShow.Enabled) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
+        <value condition="Skin.HasSetting(ArtistSlideShow.Enabled) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</value>
         <value condition="Skin.HasSetting(ArtistSlideShow.Enabled) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ExtraFanart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.ExtraFanart)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.Player.Art.Fanart)]</value>
         <value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
