@@ -1277,7 +1277,7 @@
                         <control type="button" id="8997">
                             <width>100%</width>
                             <label>31161</label>
-                            <onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
+                            <onclick>RunScript(script.skin.helper.skinbackup,action=backup)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8099)</visible>
@@ -1286,7 +1286,7 @@
                         <control type="button" id="8998">
                             <width>100%</width>
                             <label>31162</label>
-                            <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
+                            <onclick>RunScript(script.skin.helper.skinbackup,action=restore)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8099)</visible>
