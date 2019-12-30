@@ -1,3 +1,8 @@
+[B]3.0.5[/B]
+Fix ArtistSlideshow
+Fix SKin Backup
+Fix Missing Label for Incompatible Radiobutton
+
 [B]3.0.4[/B]
 Fix Subtitles button
 

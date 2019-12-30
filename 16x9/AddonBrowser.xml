@@ -90,6 +90,7 @@
                 </control>
                 <!-- Hide Broken -->
                 <control type="radiobutton" id="8">
+                    <label>24999</label>
                     <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
                     <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(8)</visible>
