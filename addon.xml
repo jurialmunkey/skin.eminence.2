@@ -1,4 +1,4 @@
-<addon id="skin.eminence.2" name="Eminence" provider-name="jurialmunkey" version="3.0.5">
+<addon id="skin.eminence.2.neneka" name="Eminence" provider-name="UtsushimiNeneka" version="3.0.4_neneka">
     <requires>
         <import addon="xbmc.gui" version="5.14.0" />
         <import addon="script.skinshortcuts" version="1.0.0" />
@@ -14,11 +14,13 @@
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary lang="en_GB">Clean, clear, simple, modern.</summary>
+		<summary lang="ko_KR">Modified by 네네카</summary>
         <summary lang="it_IT">Pulita, chiara, semplice, moderna.</summary>
         <disclaimer lang="en_GB">Mouse and Touch device not supported</disclaimer>
         <disclaimer lang="it_IT">Mouse e dispositivi touch non sono supportati</disclaimer>
         <description lang="en_GB">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
         <description lang="it_IT">Eminence è una skin che mira ad essere pulita, chiara, semplice e moderna.</description>
+		<description lang="ko_KR">Eminence는 간결한 디자인을 가진 스킨입니다.</description>
         <license>CC-NC-SA 3.0</license>
         <website />
         <email />
