@@ -1,0 +1,1062 @@
+# XBMC Media Center language file
+# Addon Name: Eminence 2
+# Addon id: skin.eminence.2
+# Addon Provider: jurialmunkey
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Main\n"
+"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: XBMC Translation Team\n"
+"Language-Team: Korean (kimmj-chloe)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#31000"
+msgid "Item"
+msgstr "항목"
+
+msgctxt "#31001"
+msgid "Items"
+msgstr "항목"
+
+msgctxt "#31002"
+msgid "Tag"
+msgstr "태그"
+
+msgctxt "#31003"
+msgid "Next"
+msgstr "다음"
+
+msgctxt "#31004"
+msgid "Show shadows on panels"
+msgstr "패널에 그림자 표시"
+
+msgctxt "#31005"
+msgid "Video OSD"
+msgstr "비디오 OSD"
+
+msgctxt "#31006"
+msgid "Show plot when pressing info"
+msgstr ""
+
+msgctxt "#31007"
+msgid "Show media flags"
+msgstr ""
+
+msgctxt "#31008"
+msgid "Show plot overlay in after delay"
+msgstr ""
+
+msgctxt "#31009"
+msgid "Open playlist"
+msgstr "플레이리스트 열기"
+
+msgctxt "#31010"
+msgid "Save playlist"
+msgstr "플레이리스트 저장"
+
+msgctxt "#31011"
+msgid "Close playlist"
+msgstr "플레이리스트 닫기"
+
+msgctxt "#31012"
+msgid "Current playlist"
+msgstr "현재 플레이리스트"
+
+msgctxt "#31013"
+msgid "Muted"
+msgstr "무음"
+
+msgctxt "#31014"
+msgid "Show header"
+msgstr ""
+
+msgctxt "#31015"
+msgid "Live TV"
+msgstr "실시간 TV"
+
+msgctxt "#31016"
+msgid "Show widget information"
+msgstr "위젯 정보 보기"
+
+msgctxt "#31017"
+msgid "Votes"
+msgstr ""
+
+msgctxt "#31018"
+msgid "Increase"
+msgstr ""
+
+msgctxt "#31019"
+msgid "Decrease"
+msgstr ""
+
+msgctxt "#31020"
+msgid "Background"
+msgstr "배경"
+
+msgctxt "#31021"
+msgid "Show fanart"
+msgstr "팬아트 보기"
+
+#: /16x9/Viewtype_List.xml
+msgctxt "#31022"
+msgid "Media Info 3"
+msgstr "미디어 정보 3"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31023"
+msgid "Enable animated video lyrics"
+msgstr "비디오 타입 가사 활성화 (영어 이외 문자는 출력이 안 될 수 있습니다)"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31024"
+msgid "Enable skin debug info"
+msgstr "스킨 디버그 정보 표시"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31025"
+msgid "Show colour diffuse overlay"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31026"
+msgid "Show scrolling background text"
+msgstr ""
+
+msgctxt "#31027"
+msgid "Show background video"
+msgstr "재생중인 영상을 배경으로 사용"
+
+msgctxt "#31028"
+msgid "Show background visualisation"
+msgstr ""
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31029"
+msgid "Hub fallback widget"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31030"
+msgid "Watched/UnWatched Indicators"
+msgstr "영화 시청 여부 표시"
+
+msgctxt "#31031"
+msgid "Recent movies"
+msgstr "최근 영화"
+
+msgctxt "#31032"
+msgid "Recommended movies"
+msgstr "추천 영화"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31033"
+msgid "Watched / Unwatched Indicators"
+msgstr "시청 여부 표시"
+
+msgctxt "#31034"
+msgid "Enable Artist Slideshow"
+msgstr "아티스트 슬라이드쇼 사용"
+
+msgctxt "#31035"
+msgid "Recent episodes"
+msgstr "최근 에피소드"
+
+msgctxt "#31036"
+msgid "Recommended episodes"
+msgstr "추천 에피소드"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31037"
+msgid "Watched (checkmark)"
+msgstr "시청함 (checkmark)"
+
+msgctxt "#31038"
+msgid "Recent albums"
+msgstr "최근 앨범"
+
+msgctxt "#31039"
+msgid "Recommended albums"
+msgstr "추천 앨범"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31040"
+msgid "Recently added (star)"
+msgstr "최근 추가 (star)"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31041"
+msgid "Resumable (progress circle)"
+msgstr "이어서 (progress circle)"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31042"
+msgid "Unwatched episodes (numeric counter)"
+msgstr "시청하지 않은 에피소드 (numeric counter)"
+
+msgctxt "#31043"
+msgid "Extra art"
+msgstr ""
+
+msgctxt "#31044"
+msgid "Local subtitle found!"
+msgstr "로컬 자막파일을 찾았습니다!"
+
+msgctxt "#31045"
+msgid "Supplied by"
+msgstr "공급"
+
+msgctxt "#31046"
+msgid "Currently"
+msgstr ""
+
+msgctxt "#31047"
+msgid "Visualisation Presets"
+msgstr "시각화 프리셋"
+
+msgctxt "#31048"
+msgid "Playlist Options"
+msgstr "플레이리스트 설정"
+
+msgctxt "#31049"
+msgid "Customise home menu"
+msgstr "홈 메뉴 개인화"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31050"
+msgid "Apply highlight colour filter to background overlay"
+msgstr "백그라운드 오버레이에 하이라이트 색상 필터 적용"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31051"
+msgid "Prefer vertical context/view menus"
+msgstr "세로로 된 메뉴 사용"
+
+msgctxt "#31052"
+msgid "Rated"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31053"
+msgid "Show blank screen with clock when controls and info are hidden"
+msgstr ""
+
+msgctxt "#31054"
+msgid "Random movies"
+msgstr "랜덤 영화"
+
+msgctxt "#31055"
+msgid "Random episodes"
+msgstr "랜덤 에피소드"
+
+msgctxt "#31056"
+msgid "Random albums"
+msgstr "랜덤 앨범"
+
+msgctxt "#31057"
+msgid "Kiosk mode"
+msgstr "키오스크 모드"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31058"
+msgid "Show player controls when pressing up if media playing"
+msgstr ""
+
+msgctxt "#31059"
+msgid "Memory Used:"
+msgstr "사용 중인 메모리:"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31060"
+msgid "Show top header tile and text when paused or seeking"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31061"
+msgid "Show clearart"
+msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31062"
+msgid "Show file name and path in info dialog"
+msgstr ""
+
+msgctxt "#31063"
+msgid "Addons"
+msgstr "애드온"
+
+msgctxt "#31064"
+msgid "Custom background image"
+msgstr "배경 이미지 변경"
+
+msgctxt "#31065"
+msgid "Hide 'Mouse' warning"
+msgstr ""
+
+msgctxt "#31066"
+msgid "Cinema Exp."
+msgstr "시네마 경험"
+
+msgctxt "#31067"
+msgid "Pages"
+msgstr "페이지"
+
+msgctxt "#31068"
+msgid "View Options"
+msgstr "보기 옵션"
+
+msgctxt "#31069"
+msgid "Context Menu"
+msgstr "컨텍스트 메뉴"
+
+msgctxt "#31070"
+msgid "Info"
+msgstr "정보"
+
+msgctxt "#31071"
+msgid "Finishes at"
+msgstr ""
+
+msgctxt "#31072"
+msgid "Playing"
+msgstr "재생 중"
+
+msgctxt "#31073"
+msgid "Categories"
+msgstr ""
+
+msgctxt "#31074"
+msgid "Submenu"
+msgstr "하위 메뉴"
+
+msgctxt "#31075"
+msgid "Icon"
+msgstr "아이콘"
+
+msgctxt "#31076"
+msgid "Weather Fanart"
+msgstr "날씨 팬아트"
+
+msgctxt "#31077"
+msgid "Trending Movies"
+msgstr "트렌드"
+
+msgctxt "#31078"
+msgid "In Cinemas"
+msgstr ""
+
+msgctxt "#31079"
+msgid "Upcoming Films"
+msgstr "상영 예정"
+
+msgctxt "#31080"
+msgid "Popular Movies"
+msgstr "인기 영화"
+
+msgctxt "#31081"
+msgid "Top Rated Movies"
+msgstr ""
+
+msgctxt "#31082"
+msgid "Popular Shows"
+msgstr "인기 TV 쇼"
+
+msgctxt "#31083"
+msgid "Top Rated Shows"
+msgstr ""
+
+msgctxt "#31084"
+msgid "On Air Shows"
+msgstr ""
+
+msgctxt "#31085"
+msgid "Airing Today"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Custom 1"
+msgstr ""
+
+msgctxt "#31087"
+msgid "Custom 2"
+msgstr ""
+
+msgctxt "#31088"
+msgid "Custom 3"
+msgstr ""
+
+msgctxt "#31089"
+msgid "Custom 4"
+msgstr ""
+
+msgctxt "#31090"
+msgid "Content Loading"
+msgstr "컨텐츠를 불러오는 중"
+
+msgctxt "#31091"
+msgid "Trending Shows"
+msgstr "유행하는 TV 쇼"
+
+msgctxt "#31092"
+msgid "No information available"
+msgstr "정보 없음"
+
+msgctxt "#31093"
+msgid "Movie Hub"
+msgstr ""
+
+msgctxt "#31094"
+msgid "TV Hub"
+msgstr ""
+
+msgctxt "#31095"
+msgid "Spotlight"
+msgstr ""
+
+msgctxt "#31096"
+msgid "Hub items"
+msgstr ""
+
+msgctxt "#31097"
+msgid "Hub widget"
+msgstr ""
+
+msgctxt "#31098"
+msgid "Artwork"
+msgstr "아트워크"
+
+msgctxt "#31099"
+msgid "Codec"
+msgstr "코덱"
+
+msgctxt "#31100"
+msgid "Recently Added"
+msgstr "최근 추가"
+
+msgctxt "#31101"
+msgid "Recently Played"
+msgstr "최근 재생"
+
+msgctxt "#31102"
+msgid "Watch Random"
+msgstr "무작위로 보기"
+
+msgctxt "#31103"
+msgid "Delete Settings Shortcut"
+msgstr "설정 바로가기 삭제"
+
+msgctxt "#31104"
+msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
+msgstr "설정 바로가기를 삭제하시겠습니까?[CR]바로가기를 삭제하기 전 설정 메뉴에 접근할 수 있는 또 다른 수단을 준비하십시오."
+
+msgctxt "#31105"
+msgid "Extra Info"
+msgstr "그 외 정보"
+
+msgctxt "#31106"
+msgid "3D Mode"
+msgstr "3D 모드"
+
+msgctxt "#31107"
+msgid "Similar"
+msgstr "비슷한 작품"
+
+msgctxt "#31108"
+msgid "Youtube"
+msgstr "YouTube"
+
+msgctxt "#31109"
+msgid "provided by themoviedb.org"
+msgstr "themoviedb.org로부터 제공됨"
+
+msgctxt "#31110"
+msgid "Extras"
+msgstr "엑스트라"
+
+msgctxt "#31111"
+msgid "Choose primary highlight color"
+msgstr "메인 색상 선택"
+
+msgctxt "#31112"
+msgid "Choose secondary highlight color"
+msgstr "2차 색상을 선택"
+
+msgctxt "#31113"
+msgid "Reset colors to defaults"
+msgstr "기본값으로 되돌리기"
+
+msgctxt "#31114"
+msgid "Install weather fanart"
+msgstr "날씨 팬아트 설치"
+
+msgctxt "#31115"
+msgid "Show weather with clock"
+msgstr "날씨 정보와 시계 표시"
+
+msgctxt "#31116"
+msgid "Animate fanart"
+msgstr ""
+
+msgctxt "#31117"
+msgid "mins"
+msgstr "분"
+
+msgctxt "#31118"
+msgid "Animate artist slideshow"
+msgstr ""
+
+msgctxt "#31119"
+msgid "Show visualisation behind artist slideshow"
+msgstr ""
+
+msgctxt "#31120"
+msgid "Show artist slideshow"
+msgstr ""
+
+msgctxt "#31121"
+msgid "Music OSD"
+msgstr "음악 OSD"
+
+msgctxt "#31122"
+msgid "Match header tile with highlight color"
+msgstr ""
+
+msgctxt "#31123"
+msgid "Hub"
+msgstr ""
+
+msgctxt "#31124"
+msgid "Similar movies"
+msgstr "비슷한 영화"
+
+msgctxt "#31125"
+msgid "Similar to"
+msgstr ""
+
+msgctxt "#31126"
+msgid "Colors"
+msgstr "색"
+
+msgctxt "#31127"
+msgid "Header"
+msgstr "제목"
+
+msgctxt "#31128"
+msgid "Color"
+msgstr "색상"
+
+msgctxt "#31129"
+msgid "Enable individual tile colors in home customisation"
+msgstr ""
+
+msgctxt "#31130"
+msgid "items found"
+msgstr "항목 찾음"
+
+msgctxt "#31131"
+msgid "Search Options"
+msgstr "검색 옵션"
+
+msgctxt "#31132"
+msgid "by Title"
+msgstr "제목 별"
+
+msgctxt "#31133"
+msgid "by Genre"
+msgstr "장르 별"
+
+msgctxt "#31134"
+msgid "by Actor"
+msgstr "배우 별"
+
+msgctxt "#31135"
+msgid "by Director"
+msgstr "감독 별"
+
+msgctxt "#31136"
+msgid "by Studio"
+msgstr "스튜디오 별"
+
+msgctxt "#31137"
+msgid "Panel list"
+msgstr ""
+
+msgctxt "#31138"
+msgid "Show clock"
+msgstr "시계 보기"
+
+msgctxt "#31139"
+msgid "Hubs"
+msgstr ""
+
+msgctxt "#31140"
+msgid "Show tile colour on unfocused tiles"
+msgstr ""
+
+msgctxt "#31141"
+msgid "Info icons"
+msgstr ""
+
+msgctxt "#31142"
+msgid "Big list info"
+msgstr ""
+
+msgctxt "#31143"
+msgid "Media Info 2"
+msgstr ""
+
+msgctxt "#31144"
+msgid "Player Controls"
+msgstr "플레이어 컨트롤"
+
+msgctxt "#31145"
+msgid "Extended Info"
+msgstr ""
+
+msgctxt "#31146"
+msgid "Fanart fallback image"
+msgstr ""
+
+msgctxt "#31147"
+msgid "Fallback widget"
+msgstr ""
+
+msgctxt "#31148"
+msgid "Media Info 3"
+msgstr "미디어 정보 3"
+
+msgctxt "#31149"
+msgid "Next Aired"
+msgstr ""
+
+msgctxt "#31150"
+msgid "Show widget posters"
+msgstr "위젯 포스터 보기"
+
+msgctxt "#31151"
+msgid "Home tile icon"
+msgstr "홈 타일 아이콘"
+
+msgctxt "#31152"
+msgid "Home tile text"
+msgstr "홈 타일 텍스트"
+
+msgctxt "#31153"
+msgid "Always"
+msgstr "항상"
+
+msgctxt "#31154"
+msgid "On Up"
+msgstr ""
+
+msgctxt "#31155"
+msgid "Never"
+msgstr "안 함"
+
+msgctxt "#31156"
+msgid "Show widget discart"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Home header text"
+msgstr "홈 제목 표시"
+
+msgctxt "#31158"
+msgid "Media Center"
+msgstr "메뉴"
+
+msgctxt "#31159"
+msgid "Background overlay image"
+msgstr "백그라운드 오버레이 이미지"
+
+msgctxt "#31160"
+msgid "Busy spinner"
+msgstr ""
+
+msgctxt "#31161"
+msgid "Backup skin settings"
+msgstr "스킨 설정 백업"
+
+msgctxt "#31162"
+msgid "Restore skin settings from file"
+msgstr "파일로부터 스킨 설정 복원"
+
+msgctxt "#31163"
+msgid "Gallery"
+msgstr "갤러리"
+
+msgctxt "#31164"
+msgid "Fanart list"
+msgstr "팬아트 목록"
+
+msgctxt "#31165"
+msgid "Show sorting and info line headers"
+msgstr ""
+
+msgctxt "#31166"
+msgid "Individually set in customisation dialog"
+msgstr ""
+
+msgctxt "#31167"
+msgid "Show unwatched count in header"
+msgstr ""
+
+msgctxt "#31168"
+msgid "Now / Next"
+msgstr "지금 / 다음"
+
+msgctxt "#31169"
+msgid "Reset skin settings to defaults  (WARNING - This will override all skin settings)"
+msgstr "기본값으로 되돌리기 (경고 - 모든 설정이 초기화됩니다!)"
+
+msgctxt "#31170"
+msgid "Backup / Restore"
+msgstr "백업 및 복원"
+
+msgctxt "#31171"
+msgid "Reload skin"
+msgstr "스킨 새로고침"
+
+msgctxt "#31172"
+msgid "Transparent home bar"
+msgstr "투명한 홈 바"
+
+msgctxt "#31173"
+msgid "Home bar style"
+msgstr "홈 바 스타일"
+
+msgctxt "#31174"
+msgid "Weather icons"
+msgstr "날씨 아이콘"
+
+msgctxt "#31175"
+msgid "Customise shutdown menu"
+msgstr "종료 메뉴 개인화"
+
+msgctxt "#31176"
+msgid "Genre icons"
+msgstr "장르 아이콘"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31177"
+msgid "Automatically start fullscreen visualisation when starting playback"
+msgstr "재생 시 자동으로 풀스크린 시각화 시작"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31178"
+msgid "User profiles"
+msgstr "유저 프로파일"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31179"
+msgid "Install from repository or zip file"
+msgstr "저장소 또는 압축 파일에서 설치"
+
+msgctxt "#31180"
+msgid "Default"
+msgstr "기본값"
+
+msgctxt "#31181"
+msgid "Text in tiles"
+msgstr "타일 안에 텍스트 표시"
+
+msgctxt "#31182"
+msgid "Text only"
+msgstr "텍스트만"
+
+msgctxt "#31183"
+msgid "Customise shutdown menu"
+msgstr "종료 메뉴 개인화"
+
+msgctxt "#31184"
+msgid "Startup video or playlist"
+msgstr "시작할 때 비디오나 플레이리스트 재생"
+
+msgctxt "#31185"
+msgid "Label"
+msgstr "이름"
+
+msgctxt "#31186"
+msgid "Action"
+msgstr "동작"
+
+msgctxt "#31187"
+msgid "Background"
+msgstr "배경화면"
+
+msgctxt "#31188"
+msgid "None (show user background)"
+msgstr "없음 (사용자 배경화면 보기)"
+
+msgctxt "#31189"
+msgid "None"
+msgstr "없음"
+
+msgctxt "#31190"
+msgid "Next Episode"
+msgstr "다음 에피소드"
+
+msgctxt "#31191"
+msgid "Last Episode"
+msgstr "지난 에피소드"
+
+msgctxt "#31192"
+msgid "Info List"
+msgstr ""
+
+msgctxt "#31193"
+msgid "Box Office"
+msgstr "박스오피스"
+
+msgctxt "#31194"
+msgid "Show plot for hub widgets"
+msgstr ""
+
+msgctxt "#31195"
+msgid "Allow widget reloading"
+msgstr "위젯 다시 불러오기 허용"
+
+msgctxt "#31196"
+msgid "Use padding around panel edges"
+msgstr ""
+
+msgctxt "#31197"
+msgid "Panels"
+msgstr ""
+
+msgctxt "#31198"
+msgid "Manage Dependencies"
+msgstr "의존성 관리"
+
+msgctxt "#31199"
+msgid "Showcase"
+msgstr ""
+
+msgctxt "#31200"
+msgid "by"
+msgstr "노래"
+
+msgctxt "#31201"
+msgid "on"
+msgstr "앨범"
+
+msgctxt "#31202"
+msgid "Sort by: Default"
+msgstr "정렬: 기본값"
+
+msgctxt "#31203"
+msgid "No Additional Details Available"
+msgstr "추가 정보가 없습니다"
+
+msgctxt "#31204"
+msgid "Header tile icon and label follows library content type"
+msgstr "라이브러리의 컨텐츠 유형별로 제목 타일 아이콘과 라벨 표시"
+
+msgctxt "#31205"
+msgid "Settings Level"
+msgstr "설정 단계"
+
+msgctxt "#31206"
+msgid "Home Shortcuts and Widgets"
+msgstr "홈 바로가기와 위젯"
+
+msgctxt "#31207"
+msgid "Home Header"
+msgstr "홈 제목"
+
+msgctxt "#31208"
+msgid "Home Bar Style"
+msgstr "홈 바 스타일"
+
+msgctxt "#31209"
+msgid "Music Visualisation"
+msgstr "음악 시각화"
+
+msgctxt "#31210"
+msgid "On Screen Display (OSD)"
+msgstr "OSD"
+
+msgctxt "#31211"
+msgid "Video Information"
+msgstr "비디오 정보"
+
+msgctxt "#31212"
+msgid "No Content Currently Available"
+msgstr "사용할 컨텐츠가 없음"
+
+msgctxt "#31213"
+msgid "Show user ratings for music albums / songs"
+msgstr "음악 앨범과 곡의 사용자 등급 보기"
+
+msgctxt "#31214"
+msgid "Show additional info labels in lists (e.g. ratings and year)"
+msgstr "목록에 추가 정보 표시 (등급과 연도 등)"
+
+msgctxt "#31215"
+msgid "Plain list"
+msgstr "리스트"
+
+msgctxt "#31216"
+msgid "Video decoder"
+msgstr "비디오 디코더"
+
+msgctxt "#31217"
+msgid "Pixel format"
+msgstr ""
+
+msgctxt "#31218"
+msgid "Show additional info labels with media flags (e.g. ratings and year)"
+msgstr ""
+
+msgctxt "#31219"
+msgid "Miscellaneous"
+msgstr "그 외"
+
+msgctxt "#31220"
+msgid "Info List 2"
+msgstr ""
+
+msgctxt "#31221"
+msgid "Square List"
+msgstr ""
+
+msgctxt "#31222"
+msgid "Enable / disable views"
+msgstr ""
+
+msgctxt "#31223"
+msgid "Poster List"
+msgstr "포스터 목록"
+
+msgctxt "#31224"
+msgid "Show additional dialog shadows"
+msgstr ""
+
+msgctxt "#31225"
+msgid "Use original Eminence v1 style side labels and arrows"
+msgstr "Eminence v1 스타일의 인터페이스 사용"
+
+msgctxt "#31226"
+msgid "Lock view"
+msgstr "보기 방식 고정"
+
+msgctxt "#31227"
+msgid "Enable viewtype locking to content type"
+msgstr "컨텐츠 유형별로 보기 방식 고정 사용"
+
+msgctxt "#31228"
+msgid "Select view mode"
+msgstr "보기 방식 선택"
+
+msgctxt "#31229"
+msgid "Lock this viewtype to content type"
+msgstr "이 컨텐츠 유형에 보기 방식 고정"
+
+msgctxt "#31230"
+msgid "Medium icons"
+msgstr "보통 크기 아이콘"
+
+msgctxt "#31231"
+msgid "Use extra fanart if available"
+msgstr "가능하면 그 외 팬아트 사용"
+
+msgctxt "#31232"
+msgid "Unlock View"
+msgstr "보기 방식 고정 해제"
+
+msgctxt "#31233"
+msgid "This view mode is currently locked to the content type"
+msgstr ""
+
+msgctxt "#31234"
+msgid "Do you wish to unlock it and set a new view mode?"
+msgstr ""
+
+msgctxt "#31235"
+msgid "Fanart fade opacity (default is 90%)"
+msgstr ""
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31236"
+msgid "PVR"
+msgstr "PVR"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31237"
+msgid "View system events"
+msgstr "시스템 이벤트 보기"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31238"
+msgid "Event logs"
+msgstr "이벤트 로그"
+
+#: /16x9/EventLog.xml
+msgctxt "#31239"
+msgid "Events Log"
+msgstr "이벤트 로그"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31240"
+msgid "Switch viewtype artwork and list positions"
+msgstr "아트워크와 목록 위치 바꾸기"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31241"
+msgid "Hide home menu when widgets are focused"
+msgstr ""
+
+#: /16x9/Custom_Store_1131.xml
+msgctxt "#31242"
+msgid "Recently viewed movies"
+msgstr "최근 본 영화"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31243"
+msgid "Landscape"
+msgstr ""
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31244"
+msgid "Posters"
+msgstr "포스터"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31245"
+msgid "Widget view mode"
+msgstr "위젯 보기 방식"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31246"
+msgid "Showcase widget"
+msgstr "Showcase 위젯"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31247"
+msgid "Display showcase widget when pressing down on menu items without submenus"
+msgstr ""
+
+#: /16x9/Custom_Dialog_ShowcaseSettings_1130.xml
+msgctxt "#31248"
+msgid "Showcase Widgets"
+msgstr "Showcase 위젯"
+
+msgctxt "#31249"
+msgid "Special Features"
+msgstr "특별한 기능"
+
+#: /16x9/script-skinshortcuts.xml
+msgctxt "#31250"
+msgid "Widget"
+msgstr "위젯"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31251"
+msgid "Customise showcase widgets"
+msgstr ""
