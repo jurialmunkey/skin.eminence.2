@@ -1025,7 +1025,7 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8006)</visible>
                         </control>
-                        <control type="radiobutton" id="8605">
+                        <!-- <control type="radiobutton" id="8605">
                             <width>100%</width>
                             <label>plugin.program.autocompletion</label>
                             <label2>$INFO[System.AddonVersion(plugin.program.autocompletion)]        </label2>
@@ -1036,7 +1036,7 @@
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                        </control>
+                        </control> -->
                         <control type="radiobutton" id="8606">
                             <width>100%</width>
                             <label>script.artistslideshow</label>

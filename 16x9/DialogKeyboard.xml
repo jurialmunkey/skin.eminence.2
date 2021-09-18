@@ -10,23 +10,23 @@
             <left>50</left>
             <right>50</right>
             <bottom>50</bottom>
-            <control type="group">
+            <!-- <control type="group">
                 <left>-10</left>
                 <right>-10</right>
                 <top>-99</top>
                 <bottom>-10</bottom>
                 <include>Dialog_Background</include>
                 <visible>Integer.IsGreater(Container(8000).NumItems,0)</visible>
-            </control>
+            </control> -->
             <control type="group">
                 <left>-10</left>
                 <right>-10</right>
                 <top>-10</top>
                 <bottom>-10</bottom>
                 <include>Dialog_Background</include>
-                <visible>!Integer.IsGreater(Container(8000).NumItems,0)</visible>
+                <!-- <visible>!Integer.IsGreater(Container(8000).NumItems,0)</visible> -->
             </control>
-            <control type="panel" id="8000">
+            <!-- <control type="panel" id="8000">
                 <height>69</height>
                 <top>-69</top>
                 <left>bigpad</left>
@@ -75,7 +75,7 @@
                     </control>
                 </focusedlayout>
                 <content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=9</content>
-            </control>
+            </control> -->
             <include>Animation_Bottom</include>
             <!-- Heading -->
             <control type="label" id="311">
