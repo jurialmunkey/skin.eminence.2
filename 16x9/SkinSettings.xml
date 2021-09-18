@@ -991,11 +991,11 @@
                         </control>
                         <control type="radiobutton" id="8602">
                             <width>100%</width>
-                            <label>script.extendedinfo</label>
-                            <label2>$INFO[System.AddonVersion(script.extendedinfo)]        </label2>
-                            <onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
-                            <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
-                            <selected>System.HasAddon(script.extendedinfo)</selected>
+                            <label>plugin.video.themoviedb.helper</label>
+                            <label2>$INFO[System.AddonVersion(plugin.video.themoviedb.helper)]        </label2>
+                            <onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">InstallAddon(plugin.video.themoviedb.helper)</onclick>
+                            <onclick condition="System.HasAddon(plugin.video.themoviedb.helper)">Addon.OpenSettings(plugin.video.themoviedb.helper)</onclick>
+                            <selected>System.HasAddon(plugin.video.themoviedb.helper)</selected>
                             <radioposx>settingsradioposx</radioposx>
                             <height>72</height>
                             <include>Defs_OptionButton</include>

@@ -185,7 +185,7 @@
                                 <width>32</width>
                                 <height>32</height>
                                 <texture>indicator/metacritic.png</texture>
-                                <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                                <visible>!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Metacritic_Rating))</visible>
                             </control>
                             <control type="label">
                                 <top>2</top>
@@ -193,22 +193,22 @@
                                 <height>28</height>
                                 <align>right</align>
                                 <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating), ,%   ]</label>
-                                <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                                <label>$INFO[Window(Home).Property(TMDBHelper.ListItem.Metacritic_Rating), ,%   ]</label>
+                                <visible>!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Metacritic_Rating))</visible>
                             </control>
                             <control type="image">
                                 <width>32</width>
                                 <height>32</height>
                                 <texture>indicator/rtrotten.png</texture>
-                                <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
-                                <visible>!Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
+                                <visible>!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.RottenTomatoes_Rating))</visible>
+                                <visible>!Integer.IsGreater(Window(home).Property(TMDBHelper.ListItem.RottenTomatoes_Rating),59)</visible>
                             </control>
                             <control type="image">
                                 <width>32</width>
                                 <height>32</height>
                                 <texture>indicator/rtfresh.png</texture>
-                                <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
-                                <visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
+                                <visible>!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.RottenTomatoes_Rating))</visible>
+                                <visible>Integer.IsGreater(Window(home).Property(TMDBHelper.ListItem.RottenTomatoes_Rating),59)</visible>
                             </control>
                             <control type="label">
                                 <top>2</top>
@@ -216,15 +216,15 @@
                                 <height>28</height>
                                 <align>right</align>
                                 <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter), ,%   ]</label>
-                                <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                                <label>$INFO[Window(Home).Property(TMDBHelper.ListItem.RottenTomatoes_Rating), ,%   ]</label>
+                                <visible>!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.RottenTomatoes_Rating))</visible>
                             </control>
                             <control type="image">
                                 <top>2</top>
                                 <width>40</width>
                                 <height>32</height>
                                 <texture>indicator/imdbicon.png</texture>
-                                <visible>!String.IsEmpty(ListItem.RatingAndVotes) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+                                <visible>!String.IsEmpty(ListItem.RatingAndVotes) | !String.IsEmpty(Window(home).Property(TMDBHelper.ListITem.IMDb_Rating))</visible>
                             </control>
                             <control type="label">
                                 <top>2</top>
@@ -232,8 +232,8 @@
                                 <height>28</height>
                                 <align>right</align>
                                 <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[Window(home).Property(SkinHelper.ListItem.Rating.IMDB), ,]$INFO[Window(home).Property(SkinHelper.ListItem.Votes.IMDB), (, $LOCALIZE[205])]</label>
-                                <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+                                <label>$INFO[Window(home).Property(TMDBHelper.ListITem.IMDb_Rating), ,]$INFO[Window(home).Property(TMDBHelper.ListItem.IMDb_Votes), (, $LOCALIZE[205])]</label>
+                                <visible>!String.IsEmpty(Window(home).Property(TMDBHelper.ListITem.IMDb_Rating))</visible>
                             </control>
                             <control type="label">
                                 <top>2</top>
@@ -242,7 +242,7 @@
                                 <align>right</align>
                                 <font>Font-ListInfo-Small-Bold</font>
                                 <label>$INFO[ListItem.RatingAndVotes, ,]</label>
-                                <visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
+                                <visible>String.IsEmpty(Window(home).Property(TMDBHelper.ListITem.IMDb_Rating)) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
                             </control>
                         </control>
                         
@@ -253,7 +253,7 @@
                             <height max="228">auto</height>
                             <font>Font-ListInfo</font>
                             <align>left</align>
-                            <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),, ]$VAR[Label_Plot]$INFO[Window(Home).Property(SkinHelper.ListItem.Awards), ,]</label>
+                            <label>$INFO[Window(Home).Property(TMDBHelper.ListItem.RottenTomatoes_Consensus),, ]$VAR[Label_Plot]$INFO[Window(Home).Property(TMDBHelper.ListItem.Awards), ,]</label>
                         </control>
                         <control type="group">
                             <left>pad</left>
@@ -407,7 +407,7 @@
                         <control type="group">
                             <width>330</width>
                             <height>100%</height>
-                            <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Revenue.formatted))</visible>
+                            <visible>!String.IsEmpty(Window(Home).Property(TMDBHelper.ListITem.Revenue))</visible>
                             <visible>!String.IsEmpty(ListItem.Art(poster)) | !String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
                             <control type="label">
                                 <top>0</top>
@@ -422,7 +422,7 @@
                                 <align>center</align>
                                 <textcolor>SubLabel</textcolor>
                                 <font>Font-InfoBox-Title</font>
-                                <label>$INFO[Window(Home).Property(SkinHelper.ListItem.Revenue.formatted),$,]</label>
+                                <label>$INFO[Window(Home).Property(TMDBHelper.ListITem.Revenue)]</label>
                             </control>
                         </control>
 
@@ -508,27 +508,6 @@
                         </control>
                         
 
-                        <!-- Artwork Downloader Button -->
-                        <!-- <control type="button" id="20">
-                            <label>31043</label>
-                            <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-                            <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-                            <visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-                            <include>Defs_OptionButton3</include>
-                            <onfocus>ClearProperty(list)</onfocus>
-                        </control>
-                        -->
-
-                        <!-- Cinema Experience Button -->
-                        <!-- <control type="button" id="21">
-                            <label>31066</label>
-                            <onclick>Dialog.Close(MovieInformation)</onclick>
-                            <onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
-                            <visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
-                            <include>Defs_OptionButton3</include>
-                            <onfocus>ClearProperty(list)</onfocus>
-                        </control>
-                        -->
                     </control>
 
                     <!-- CAST -->
@@ -598,7 +577,7 @@
                                 <param name="backpanel" value="false" />
                                 <param name="imagelist" value="true" />
                                 <param name="contentvisible" value="true" />
-                                <param name="content" value="plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director]" />
+                                <param name="content" value="plugin://plugin.video.themoviedb.helper/?info=crew_in_movies&amp;type=person&amp;filter_key=job&amp;filter_value=Director&amp;query=$INFO[ListItem.Director]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false" />
                             </include>
                         </control>
                     </control>
@@ -621,7 +600,7 @@
             <onright>9000</onright>
             <onright>SendClick(5)</onright>
             <onclick>SetProperty(extinfo,2,home)</onclick>
-            <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
+            <!-- TODO: ADD TMDBHELPER EXT INFO -->
         </control>
 
         <!-- INFO OVERLAY -->

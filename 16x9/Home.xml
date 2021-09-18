@@ -68,7 +68,7 @@
         </control>
 
         <control type="group">
-            <visible>Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+            <visible>Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut_Delay</include>
             <include>Furniture_Background</include>

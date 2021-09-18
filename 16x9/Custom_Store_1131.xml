@@ -24,8 +24,7 @@
 
             <animation effect="slide" tween="quadratic" easing="out" time="200" start="0,1080" end="0" delay="300">Visible</animation>
             <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,1080" start="0">Hidden</animation>
-            <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Conditional</animation>
-            <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]</visible>
+            <visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]</visible>
             <control type="grouplist" id="9500">
                 <top>-258</top>
                 <bottom>0</bottom>

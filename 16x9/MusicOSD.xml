@@ -27,7 +27,7 @@
                         <usecontrolcoords>true</usecontrolcoords>
                         <control type="button" id="1">
                             <description>Repeat</description>
-                            <onclick>XBMC.PlayerControl(Repeat)</onclick>
+                            <onclick>PlayerControl(Repeat)</onclick>
                             <width>48</width>
                             <height>48</height>
                             <label></label>
@@ -104,7 +104,7 @@
 
                         <control type="button" id="6">
                             <description>Random</description>
-                            <onclick>XBMC.PlayerControl(Random)</onclick>
+                            <onclick>PlayerControl(Random)</onclick>
                             <width>48</width>
                             <height>48</height>
                             <label></label>
@@ -263,12 +263,12 @@
                             <font />
                             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/visualisation.png</texturefocus>
                             <texturenofocus colordiffuse="HomeSubLabel">osd/visualisation.png</texturenofocus>
-                            <!-- <onclick>Addon.Default.Set(xbmc.player.musicviz)</onclick> -->
+                            <!-- <onclick>Addon.Default.Set(player.musicviz)</onclick> -->
                         </control>
 
                         <control type="button" id="502">
                             <description>Presets</description>
-                            <onclick>XBMC.ActivateWindow(122)</onclick>
+                            <onclick>ActivateWindow(122)</onclick>
                             <width>48</width>
                             <height>48</height>
                             <font />

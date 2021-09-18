@@ -14,7 +14,6 @@
                 <control type="group">
                     <animation effect="slide" tween="quadratic" easing="out" time="200" start="-1920" end="0" delay="300">Visible</animation>
                     <animation effect="slide" tween="quadratic" easing="in" time="200" end="-1920" start="0">Hidden</animation>
-                    <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
                     <top>70</top>
                     <left>bigpad</left>
                     <right>bigpad</right>

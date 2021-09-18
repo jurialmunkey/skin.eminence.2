@@ -9,4 +9,5 @@
     <!-- <onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload> -->
     <onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
     <onload condition="!String.IsEmpty(Skin.String(StartupPlaylist))">PlayMedia($ESCINFO[Skin.String(StartupPlaylist)])</onload>
+    <onload>Skin.SetBool(TMDbHelper.Service)</onload>
 </window>
