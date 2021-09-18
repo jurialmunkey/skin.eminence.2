@@ -69,7 +69,7 @@
 
     <variable name="Label_GenreLine">
         <value condition="!String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
-        <value condition="ListItem.IsCollection + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Genre))">$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</value>
+        <value condition="ListItem.IsCollection + !String.IsEmpty(Window(Home).Property(TMDBbHelper.ListItem.Genre))">$INFO[Window(Home).Property(TMDBbHelper.ListItem.Genre)]</value>
         <value>$LOCALIZE[19499]</value>
     </variable>
 
@@ -143,7 +143,7 @@
         <value condition="!String.IsEmpty(ListItem.AddonDescription)">$VAR[Label_Plot]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.Artist,[B],[/B][CR]]$INFO[ListItem.Album]$INFO[ListItem.Year,  (,)]</value>
         <value condition="Container.Content(episodes)">$INFO[ListItem.Title,[B],[/B][CR][CR],]$VAR[Label_Plot]</value>
-        <value>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Consensus),,[CR][CR]]$VAR[Label_Plot]$INFO[Window(Home).Property(SkinHelper.ListItem.Awards),[CR][CR],]</value>
+        <value>$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[Window(Home).Property(TMDBbHelper.ListItem.RottenTomatoes_Consensus),,[CR][CR]]$VAR[Label_Plot]$INFO[Window(Home).Property(TMDBbHelper.ListItem.Awards),[CR][CR],]</value>
     </variable>
 
     <variable name="Label_OverlayTitle">
@@ -153,14 +153,12 @@
     </variable>
 
     <variable name="Label_Plot">
-        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Plots)]</value>
+        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(TMDBbHelper.ListItem.Plots)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
         <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Albums.Formatted))">$INFO[Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)]</value>
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2))">$INFO[Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDBbHelper.ListItem.Plot))">$INFO[Window(Home).Property(TMDBbHelper.ListItem.Plot)]</value>
     </variable>
 
     <variable name="Label_ListPlot">
@@ -189,14 +187,11 @@
 
     <variable name="Label_ExtraInfo_Icons">
         <value condition="Container.Content(songs)">$INFO[ListItem.Album,,  •  ]$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Duration]</value>
-        <value condition="Container.Content(artists) + !String.IsEmpty(ListItem.Property(Artist_YearsActive)) + !Control.IsVisible(58)">$INFO[ListItem.Property(Artist_YearsActive)]$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),  •  , $LOCALIZE[132]]$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount),  •  , $LOCALIZE[134]]</value>
-        <value condition="Container.Content(albums) + [!String.IsEmpty(ListItem.Artist) | !String.IsEmpty(ListItem.Year)]">$INFO[ListItem.Artist]$INFO[ListItem.Year,  •  ,]$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount),  •  , $LOCALIZE[134]]</value>
-        <value condition="Container.Content(artists) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.AlbumCount))">$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),, $LOCALIZE[132]]$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount),  •  , $LOCALIZE[134]]</value>
-        <value condition="[Container.Content(artists) | Container.Content(albums)] + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.SongCount))">$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount),, $LOCALIZE[134]]</value>
+        <value condition="Container.Content(artists) + !String.IsEmpty(ListItem.Property(Artist_YearsActive)) + !Control.IsVisible(58)">$INFO[ListItem.Property(Artist_YearsActive)]</value>
+        <value condition="Container.Content(albums) + [!String.IsEmpty(ListItem.Artist) | !String.IsEmpty(ListItem.Year)]">$INFO[ListItem.Artist]$INFO[ListItem.Year,  •  ,]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Episode,, $LOCALIZE[20360]]</value>
         <value condition="!ListItem.IsCollection + Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Year,,  •  ]$VAR[Label_Rating]</value>
         <value condition="!ListItem.IsCollection + !Container.Content(movies)">$VAR[Label_ExtraInfo,,  •  ]$INFO[ListItem.Premiered,,  •  ]$VAR[Label_Rating]</value>
-        <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Count),, $LOCALIZE[20342]  •  ]$INFO[Window(Home).Property(SkinHelper.ListItem.Year)]</value>
     </variable>
 
     <variable name="Label_Label3">
@@ -304,7 +299,7 @@
     </variable>
     <variable name="Label_HomeWidget_Plot">
         <value condition="[String.IsEqual(Container(9000).ListItem.Property(widget),Weather) | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + [String.IsEqual(Skin.String(home.fallbackwidget),Weather) | String.IsEqual(Skin.String(home.fallbackwidget.node),Weather)]]] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ,]$INFO[System.TemperatureUnits]$INFO[Window(weather).Property(Current.WindSpeed),[CR], ]$INFO[Window(weather).Property(Current.WindDirection),, [LOWERCASE]$LOCALIZE[404][/LOWERCASE]]$INFO[Window(weather).Property(Current.Humidity),[CR], [LOWERCASE]$LOCALIZE[406][/LOWERCASE]]</value>
-        <value condition="!Container(9001).IsUpdating + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
+        <value condition="!Container(9001).IsUpdating + !String.IsEmpty(Window(Home).Property(TMDBbHelper.ListItem.Plot))">$INFO[Window(Home).Property(TMDBbHelper.ListItem.Plot)]</value>
         <value condition="!Container(9001).IsUpdating">$INFO[Container(9001).ListItem.Plot]$INFO[Container(9001).ListItem.Property(Album_Description)]$INFO[Container(9001).ListItem.AddonDescription]</value>
     </variable>
     <variable name="Label_HomeWidget_Info">

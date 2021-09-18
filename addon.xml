@@ -2,7 +2,6 @@
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="1.0.0" />
-        <import addon="script.skin.helper.service" version="1.0.0" />
         <import addon="plugin.video.themoviedb.helper" version="4.4.0" />
         <import addon="script.image.resource.select" version="0.0.5" />
         <import addon="resource.images.weathericons.white" version="0.0.6" />

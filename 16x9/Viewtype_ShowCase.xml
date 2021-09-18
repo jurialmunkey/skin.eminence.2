@@ -682,7 +682,6 @@
         <value>$INFO[ListItem(-1).Icon]</value>
     </variable>
     <variable name="ShowcaseItem0Var">
-        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster)) + !Skin.HasSetting(showanimate.poster)">$INFO[Window(Home).Property(SkinHelper.AnimatedPoster)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/moviegenres/,.jpg]</value>
         <value>$INFO[ListItem.Icon]</value>

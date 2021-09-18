@@ -129,7 +129,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(550)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.550)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.550)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(actors)</visible>
                     </item>
                     <!-- Big List -->
@@ -139,7 +139,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(510)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.510)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.510)</visible>
                         <visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(genres) | Container.Content(images) | Container.Content(videos) | Container.Content()</visible>
                     </item>
                     <!-- Media Info -->
@@ -149,7 +149,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(51)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.51)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.51)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(songs) | Container.Content(videos)</visible>
                     </item>
                     <!-- Media Info 2 -->
@@ -159,7 +159,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(57)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.57)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.57)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
                     </item>
                     <!-- Media Info 3 -->
@@ -170,7 +170,7 @@
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(577)</onclick>
                         <visible>!Skin.HasSetting(global.widescreen)</visible>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.577)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.577)</visible>
                         <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                     </item>
                     <!-- Info List -->
@@ -180,7 +180,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(53)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.53)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.53)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
                     </item>
                     <!-- Info List 2 -->
@@ -190,7 +190,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(553)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.553)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.553)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(artists)</visible>
                     </item>
                     <!-- Fanart List -->
@@ -200,7 +200,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(54)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.54)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.54)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(videos) | Container.Content(artists)</visible>
                     </item>
                     <!-- Lovefilm / Gallery -->
@@ -210,7 +210,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(58)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.58)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.58)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(videos) | Container.Content(artists) | Container.Content(episodes)</visible>
                     </item>
                     <!-- Big Icon -->
@@ -220,7 +220,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(52)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.52)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.52)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)</visible>
                         <visible>!Skin.HasSetting(global.widescreen)</visible>
                     </item>
@@ -231,7 +231,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(525)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.525)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.525)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)</visible>
                     </item>
                     
@@ -242,7 +242,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(535)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.535)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.535)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(musicvideos)</visible>
                     </item>
                     <!-- Icon -->
@@ -252,7 +252,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(500)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.500)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.500)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(images) | Container.Content(addons) | Container.Content(genres) | Container.Content(years) | Container.Content(tags) | Container.Content(studios) | Container.Content(files) | Container.Content(countries) | Container.Content(directors) | Container.Content(actors)</visible>
                     </item>
                     <!-- Icons + Info -->
@@ -262,7 +262,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(59)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.59)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.59)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(addons)</visible>
                     </item>
                     <!-- Banners -->
@@ -272,7 +272,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(55)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.55)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.55)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
                     </item>
                     <!-- Fanart -->
@@ -282,7 +282,7 @@
                         <onclick>Close</onclick>
                         <onclick>Container.SetViewMode(50)</onclick>
                         <onclick>Container.SetViewMode(56)</onclick>
-                        <visible>!Skin.HasSetting(SkinHelper.View.Disabled.56)</visible>
+                        <visible>!Skin.HasSetting(SkinViewTypes.View.Disabled.56)</visible>
                         <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(artists)</visible>
                     </item>
                 </content>
@@ -339,7 +339,8 @@
                     <onclick condition="[Container.Content(videos) + String.IsEmpty(Skin.String(Skin.ForcedView.videos))]">AlarmClock(setviewlock,Skin.SetString(Skin.ForcedView.$INFO[Container.Content],$INFO[Container.Viewmode]),00:01,silent)</onclick>
                 </control>
                 <!-- Disable / Enable Views -->
-                <control type="button" id="8002">
+                <!-- TODO: ADD SUPPORT FOR SKINVIEWTYPES ADDON -->
+                <!-- <control type="button" id="8002">
                     <width>auto</width>
                     <height>100%</height>
                     <align>right</align>
@@ -348,8 +349,7 @@
                     <texturefocus />
                     <focusedcolor>$VAR[HighlightColor]</focusedcolor>
                     <include>Defs_OptionButton</include>
-                    <onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
-                </control>
+                </control> -->
                 <!-- Cancel -->
                 <control type="button" id="8001">
                     <width>auto</width>

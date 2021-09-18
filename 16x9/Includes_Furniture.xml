@@ -21,7 +21,7 @@
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
             <visible>!Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml)</visible>
-            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]] | !String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.Property(Artist_Description)) | !String.IsEmpty(ListItem.Property(Album_Description)) | !String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2)) | Control.HasFocus(9601)</visible>
+            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]] | !String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.Property(Artist_Description)) | !String.IsEmpty(ListItem.Property(Album_Description)) | !String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(Window(Home).Property(TMDBbHelper.ListItem.Plot)) | Control.HasFocus(9601)</visible>
             <include>Animation_FadeIn</include>
             <control type="image" description="Background">
                 <width>100%</width>
@@ -40,7 +40,7 @@
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
             <visible>!Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml)</visible>
-            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]] | !String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.Property(Artist_Description)) | !String.IsEmpty(ListItem.Property(Album_Description)) | !String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted2)) | Control.HasFocus(9601)</visible>
+            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]] | !String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.Property(Artist_Description)) | !String.IsEmpty(ListItem.Property(Album_Description)) | !String.IsEmpty(ListItem.AddonDescription) | !String.IsEmpty(Window(Home).Property(TMDBbHelper.ListItem.Plot)) | Control.HasFocus(9601)</visible>
             <include>Animation_SlideIn</include>
 
             <control type="group">
@@ -327,13 +327,13 @@
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <visible>!String.IsEmpty(ListItem.Top250)</visible>
-                <visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
+                <visible>String.IsEmpty(Window(home).Property(TMDBbHelper.ListItem.Top250))</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
             </control>
             <control type="group">
                 <width>64</width>
                 <height>64</height>
-                <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250)) + Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.IMDB.Top250),0)</visible>
+                <visible>!String.IsEmpty(Window(home).Property(TMDBbHelper.ListItem.Top250)) + Integer.IsGreater(Window(home).Property(TMDBbHelper.ListItem.Top250),0)</visible>
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
@@ -348,7 +348,7 @@
                     <align>center</align>
                     <textcolor>LineLabel</textcolor>
                     <font>Font-LineLabel</font>
-                    <label>$INFO[Window(home).Property(SkinHelper.ListItem.IMDB.Top250)]</label>
+                    <label>$INFO[Window(home).Property(TMDBbHelper.ListItem.Top250)]</label>
                 </control>
             </control>
 

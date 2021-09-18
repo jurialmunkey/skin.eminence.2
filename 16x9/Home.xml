@@ -22,8 +22,8 @@
 
     <onload condition="!Integer.IsEqual(Window(Home).Property(WidgetRefresh),1)">SetProperty(WidgetRefresh,1,Home)</onload>
     <onload condition="Integer.IsEqual(Window(Home).Property(WidgetRefresh),1)">SetProperty(WidgetRefresh,2,Home)</onload>
-    <onload>SetProperty(SkinHelper.WidgetContainer,9001)</onload>
-    <onunload>ClearProperty(SkinHelper.WidgetContainer)</onunload>
+    <onload>SetProperty(TMDBHelper.WidgetContainer,9001)</onload>
+    <onunload>ClearProperty(TMDBHelper.WidgetContainer)</onunload>
 
     <controls>
 

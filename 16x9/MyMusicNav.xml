@@ -20,19 +20,19 @@
             <include content="Object_Headline">
                 <param name="label" value="$VAR[Label_SortLine]" />
             </include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.550)">Viewtype_List</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.550)">Viewtype_List</include>
             <include>Viewtype_SquareList</include>
             <include>Viewtype_PlainList</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.510)">Viewtype_BigList</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.51)">Viewtype_MediaInfo</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.53)">Viewtype_InfoList</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.553)">Viewtype_InfoList2</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.54)">Viewtype_FanartList</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.500)">Viewtype_Icon</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.59)">Viewtype_IconExtra</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.56)">Viewtype_IconFanart</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.58)">Viewtype_Lovefilm</include>
-            <include condition="!Skin.HasSetting(SkinHelper.View.Disabled.535)">Viewtype_ShowCase</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.510)">Viewtype_BigList</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.51)">Viewtype_MediaInfo</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.53)">Viewtype_InfoList</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.553)">Viewtype_InfoList2</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.54)">Viewtype_FanartList</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.500)">Viewtype_Icon</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.59)">Viewtype_IconExtra</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.56)">Viewtype_IconFanart</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.58)">Viewtype_Lovefilm</include>
+            <include condition="!Skin.HasSetting(SkinViewTypes.View.Disabled.535)">Viewtype_ShowCase</include>
 
             <control type="group">
                 <left>bigpad</left>
