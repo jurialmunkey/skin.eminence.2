@@ -694,6 +694,7 @@
     <variable name="Furniture_TopBar_Header_MainLabel">
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31149]</value>
+        <value condition="Window.IsVisible(1190)">$INFO[Window(Home).Property(1190_MainLabel)]</value>
         <value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
         <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(10)">$LOCALIZE[19032]</value>
@@ -738,6 +739,8 @@
     <variable name="Furniture_TopBar_Header_SubLabel">
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
+
+        <value condition="Window.IsVisible(1190)">$INFO[Window(Home).Property(1190_SubLabel)]</value>
 
         <value condition="!String.IsEmpty(Container.NumItems) + !String.IsEmpty(Control.GetLabel(28)) + [Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml)]">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]  •  $INFO[Control.GetLabel(28)]</value>
 

@@ -631,6 +631,7 @@
             <control type="$PARAM[type]" id="$PARAM[id]">
                 <top>0</top>
                 <left>0</left>
+                <nested />
                 <width>$PARAM[width]</width>
                 <height>$PARAM[height]</height>
                 <onleft>$PARAM[onleft]</onleft>

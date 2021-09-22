@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
-    <onload>ClearProperty(extinfo,home)</onload>
+    <onunload condition="!Window.IsVisible(1190) + Integer.IsEqual(Window(Home).Property(extinfo),1)">ClearProperty(extinfo,home)</onunload>
+    <onload condition="Integer.IsEqual(Window(Home).Property(extinfo),2)">SetProperty(extinfo,1,home)</onload>
+    <onload condition="!Window.IsVisible(1190)">SetProperty(1190_MainLabel,$VAR[Furniture_TopBar_Header_MainLabel],home)</onload>
+    <onload condition="!Window.IsVisible(1190)">SetProperty(1190_SubLabel,$VAR[Furniture_TopBar_Header_SubLabel],home)</onload>
     <controls>
 
 
@@ -428,7 +431,7 @@
 
                     </control>
                     <control type="grouplist" id="9000">
-                        <visible allowhiddenfocus="true">!Control.HasFocus(50) + !Control.HasFocus(51) + !Control.HasFocus(9500)</visible>
+                        <visible allowhiddenfocus="true">!Control.HasFocus(50) + !Control.HasFocus(51) + !Control.HasFocus(9500) + String.IsEmpty(Window.Property(list))</visible>
                         <left>bigpad</left>
                         <right>bigpad</right>
                         <bottom>30</bottom>
@@ -448,6 +451,7 @@
                             <usealttexture>Container.Content(TVShows)</usealttexture>
                             <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
+                            <visible>!String.IsEqual(ListItem.Property(item.type),person)</visible>
                         </control>
 
 
@@ -457,6 +461,7 @@
                             <visible>!String.IsEmpty(ListItem.Trailer)</visible>
                             <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
+                            <visible>!String.IsEqual(ListItem.Property(item.type),person)</visible>
                         </control>
                         
                         
@@ -468,6 +473,7 @@
                             <include>Defs_OptionButton3</include>
                             <onclick>Action(close)</onclick>
                             <onclick>RunScript(plugin.video.specialfeatures,listitem)</onclick>
+                            <visible>!String.IsEqual(ListItem.Property(item.type),person)</visible>
                         </control>
                         
 
@@ -478,6 +484,7 @@
                             <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                             <enable>Integer.IsGreater(Container(50).NumItems,0)</enable>
+                            <visible>!String.IsEqual(ListItem.Property(item.type),person)</visible>
                         </control>
                         
 
@@ -489,6 +496,7 @@
                             <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
                             <visible>!String.IsEmpty(ListItem.Director)</visible>
+                            <visible>!String.IsEqual(ListItem.Property(item.type),person)</visible>
                         </control>
                         
 
@@ -497,6 +505,7 @@
                             <label>13511</label>
                             <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
+                            <visible>!String.IsEqual(ListItem.Property(item.type),person)</visible>
                         </control>
                         
 
@@ -505,6 +514,46 @@
                             <label>184</label>
                             <include>Defs_OptionButton3</include>
                             <onfocus>ClearProperty(list)</onfocus>
+                            <visible>!String.IsEqual(ListItem.Property(item.type),person)</visible>
+                        </control>
+
+
+                        <!-- InMovies Button -->
+                        <control type="button" id="9002">
+                            <label>Movies (Cast)</label>
+                            <onclick>SetProperty(list,CastInMovies)</onclick>
+                            <onclick>SetFocus(9500)</onclick>
+                            <include>Defs_OptionButton3</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                            <visible>String.IsEqual(ListItem.Property(item.type),person)</visible>
+                        </control>
+                        <!-- InMovies Button -->
+                        <control type="button" id="9003">
+                            <label>Movies (Crew)</label>
+                            <onclick>SetProperty(list,CrewInMovies)</onclick>
+                            <onclick>SetFocus(9500)</onclick>
+                            <include>Defs_OptionButton3</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                            <visible>String.IsEqual(ListItem.Property(item.type),person)</visible>
+                        </control>
+
+                        <!-- InTvShows Button -->
+                        <control type="button" id="9004">
+                            <label>TvShows (Cast)</label>
+                            <onclick>SetProperty(list,CastInTvShows)</onclick>
+                            <onclick>SetFocus(9500)</onclick>
+                            <include>Defs_OptionButton3</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                            <visible>String.IsEqual(ListItem.Property(item.type),person)</visible>
+                        </control>
+                        <!-- InTvShows Button -->
+                        <control type="button" id="9005">
+                            <label>TvShows (Crew)</label>
+                            <onclick>SetProperty(list,CrewInTvShows)</onclick>
+                            <onclick>SetFocus(9500)</onclick>
+                            <include>Defs_OptionButton3</include>
+                            <onfocus>ClearProperty(list)</onfocus>
+                            <visible>String.IsEqual(ListItem.Property(item.type),person)</visible>
                         </control>
                         
 
@@ -555,12 +604,12 @@
                                 <centertop>52%</centertop>
                                 <height>64</height>
                                 <width>300</width>
-                                <label>$LOCALIZE[20186]</label>
+                                <label>$VAR[Defs_TMDBH_List_Label]</label>
                                 <align>center</align>
                                 <aligny>center</aligny>
                             </control>
                         </control>
-                        <visible>String.IsEqual(Window.Property(list),Director)</visible>
+                        <visible>!String.IsEqual(Window.Property(list),Cast) + !String.IsEmpty(Window.Property(list))</visible>
                         <control type="group">
                             <animation effect="fade" start="100" end="0" condition="Container(9500).IsUpdating">Conditional</animation>
                             <include content="Dialog_BasicList">
@@ -577,7 +626,9 @@
                                 <param name="backpanel" value="false" />
                                 <param name="imagelist" value="true" />
                                 <param name="contentvisible" value="true" />
-                                <param name="content" value="plugin://plugin.video.themoviedb.helper/?info=crew_in_movies&amp;type=person&amp;filter_key=job&amp;filter_value=Director&amp;query=$INFO[ListItem.Director]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false" />
+                                <param name="content" value="$VAR[Defs_TMDBH_List_Content]" />
+                                <onclick>SetProperty(extinfo,2,home)</onclick>
+                                <onclick>RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container(9500).ListItem.FolderPath],type=movie,call_auto=1190)</onclick>
                             </include>
                         </control>
                     </control>
@@ -600,6 +651,7 @@
             <onright>9000</onright>
             <onright>SendClick(5)</onright>
             <onclick>SetProperty(extinfo,2,home)</onclick>
+            <onclick>RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(50).ListItem.Label],type=person,call_auto=1190)</onclick>
             <!-- TODO: ADD TMDBHELPER EXT INFO -->
         </control>
 
