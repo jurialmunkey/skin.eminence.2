@@ -1882,13 +1882,14 @@
 
     <!-- Video OSD Seekbar -->
     <include name="Window_Seekbar_Video">
-        <control type="image">
+        <!-- Not sure why this is here -->
+        <!-- <control type="image">
             <width>1920</width>
             <height>1080</height>
             <texture colordiffuse="FanartFade">common/white.png</texture>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut_Delay</include>
-        </control>
+        </control> -->
 
         <include>Furniture_TopBar</include>
 
