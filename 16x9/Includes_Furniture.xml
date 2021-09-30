@@ -751,6 +751,7 @@
         <value>$VAR[Furniture_Counter_Movies]$VAR[Furniture_Counter_Episodes]$VAR[Furniture_Counter_Songs]$VAR[Furniture_Counter_Channels]</value>
     </variable>
     <variable name="Furniture_TopBar_Tile_Text">
+        <value condition="!String.IsEmpty(Player.SeekNumeric)">$INFO[Player.SeekNumeric(hh:mm:ss)]</value>
         <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[503]</value>
         <value condition="Player.Muted">$LOCALIZE[31013]</value>
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31070]</value>
