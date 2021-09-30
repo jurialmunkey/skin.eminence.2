@@ -70,6 +70,7 @@
     <variable name="Label_GenreLine">
         <value condition="!String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
         <value condition="ListItem.IsCollection + !String.IsEmpty(Window(Home).Property(TMDBbHelper.ListItem.Genre))">$INFO[Window(Home).Property(TMDBbHelper.ListItem.Genre)]</value>
+
         <value>$LOCALIZE[19499]</value>
     </variable>
 

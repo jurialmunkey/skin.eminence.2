@@ -167,13 +167,27 @@
                             <font>Font-InfoBox-Title</font>
                             <label>$VAR[Label_Title]</label>
                         </control>
-                        <control type="label">
-                            <left>pad</left>
-                            <right>550</right>
+                        <control type="group">
                             <height>32</height>
-                            <font>Font-ListInfo-Small-Bold</font>
-                            <textcolor>$VAR[HighlightColor2]</textcolor>
-                            <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
+                            <control type="label">
+                                <left>pad</left>
+                                <right>550</right>
+                                <height>32</height>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <textcolor>$VAR[HighlightColor2]</textcolor>
+                                <label>$VAR[Label_GenreLine,[UPPERCASE],[/UPPERCASE]]</label>
+                                <visible>!String.IsEqual(ListItem.Property(item.type),person) | String.IsEmpty(ListItem.Property(Aliases))</visible>
+                            </control>
+                            <control type="label">
+                                <top>1</top>
+                                <left>pad</left>
+                                <right>pad</right>
+                                <height>32</height>
+                                <font>FontArial-ListInfo-Small-Bold</font>
+                                <textcolor>$VAR[HighlightColor2]</textcolor>
+                                <label>$INFO[ListItem.Property(Aliases),[UPPERCASE],[/UPPERCASE]]</label>
+                                <visible>String.IsEqual(ListItem.Property(item.type),person) + !String.IsEmpty(ListItem.Property(Aliases))</visible>
+                            </control>
                         </control>
                         <control type="grouplist">
                             <orientation>horizontal</orientation>
@@ -264,6 +278,52 @@
                             <top>-10</top>
                             <control type="grouplist">
                                 <include>Info_DetailsGrouplist</include>
+                                <!-- Birthplace -->
+                                <control type="group">
+                                    <height>36</height>
+                                    <width>100%</width>
+                                    <visible>!String.IsEmpty(ListItem.Property(born))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>$LOCALIZE[31253]</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Property(born)]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
+                                </control>
+                                <!-- Department -->
+                                <control type="group">
+                                    <height>36</height>
+                                    <width>100%</width>
+                                    <visible>!String.IsEmpty(ListItem.Property(department))</visible>
+                                    <control type="label">
+                                        <width>200</width>
+                                        <height>36</height>
+                                        <align>left</align>
+                                        <font>Font-ListInfo-Small</font>
+                                        <textcolor>ListLabel</textcolor>
+                                        <label>$LOCALIZE[31252]</label>
+                                        <textcolor>ListLabel</textcolor>
+                                    </control>
+                                    <control type="label">
+                                        <left>220</left>
+                                        <align>left</align>
+                                        <height>36</height>
+                                        <font>Font-ListInfo-Bold</font>
+                                        <label>$INFO[ListItem.Property(department)]</label>
+                                        <textcolor>SubLabel</textcolor>
+                                    </control>
+                                </control>
                                 <!-- Director -->
                                 <control type="group">
                                     <height>36</height>
@@ -347,6 +407,86 @@
                         <itemgap>20</itemgap>
                         <align>center</align>
                         <orientation>horizontal</orientation>
+                        <control type="group">
+                            <visible>!String.IsEmpty(ListItem.Property(birthday))</visible>
+                            <width>270</width>
+                            <height>100%</height>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$LOCALIZE[31254]</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Property(birthday)]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>!String.IsEmpty(ListItem.Property(Deathday))</visible>
+                            <width>270</width>
+                            <height>100%</height>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$LOCALIZE[21897]</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Property(Deathday)]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>!String.IsEmpty(ListItem.Property(Age))</visible>
+                            <width>270</width>
+                            <height>100%</height>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$LOCALIZE[31255]</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Property(Age)]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>!String.IsEmpty(ListItem.Property(Gender))</visible>
+                            <width>270</width>
+                            <height>100%</height>
+                            <control type="label">
+                                <top>0</top>
+                                <height>32</height>
+                                <align>center</align>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$LOCALIZE[39025]</label>
+                            </control>
+                            <control type="label">
+                                <top>32</top>
+                                <height>48</height>
+                                <align>center</align>
+                                <textcolor>SubLabel</textcolor>
+                                <font>Font-InfoBox-Title</font>
+                                <label>$INFO[ListItem.Property(Gender)]</label>
+                            </control>
+                        </control>
                         <control type="group">
                             <visible>!String.IsEmpty(ListItem.Duration)</visible>
                             <width>270</width>

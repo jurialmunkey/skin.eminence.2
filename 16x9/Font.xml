@@ -74,6 +74,13 @@
             <size>27</size>
         </font>
         <font>
+            <name>FontArial-ListInfo-Small-Bold</name>
+            <filename>Arial.ttf</filename>
+            <style>bold</style>
+            <size>25</size>
+            <aspect>0.94</aspect>
+        </font>
+        <font>
             <name>Font-OSD</name>
             <filename>Roboto-Regular.ttf</filename>
             <size>25</size>

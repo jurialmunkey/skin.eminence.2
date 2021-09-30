@@ -1060,3 +1060,23 @@ msgstr ""
 msgctxt "#31251"
 msgid "Customise showcase widgets"
 msgstr ""
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31252"
+msgid "Department"
+msgstr ""
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31253"
+msgid "Birthplace"
+msgstr ""
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31254"
+msgid "Birthday"
+msgstr ""
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31255"
+msgid "Age"
+msgstr ""
