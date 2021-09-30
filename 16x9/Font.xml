@@ -377,9 +377,29 @@
 
         <!-- Required for system -->
         <font>
+            <name>font10</name>
+            <filename>arial.ttf</filename>
+            <size>18</size>
+        </font>
+        <font>
+            <name>font12</name>
+            <filename>arial.ttf</filename>
+            <size>20</size>
+        </font>
+        <font>
             <name>font13</name>
-            <filename>Arial.ttf</filename>
+            <filename>arial.ttf</filename>
             <size>21</size>
+        </font>
+        <font>
+            <name>font14</name>
+            <filename>arial.ttf</filename>
+            <size>22</size>
+        </font>
+        <font>
+            <name>font16</name>
+            <filename>arial.ttf</filename>
+            <size>24</size>
         </font>
 
     </fontset>
