@@ -12,6 +12,9 @@
     <!-- REMOVE SETTINGS WARNING -->
     <warn heading="31103" message="31104">ActivateWindow(Settings)</warn>
 
+    <!-- ONBACK OVERRIDE -->
+    <onback to="9701">9000</onback>
+
 
     <!-- ADDITIONAL SHORTCUTS -->
     <shortcut label="Showcase" grouping="common" thumbnail="special://skin/extras/icons/playlist.png" icon="special://skin/extras/icons/playlist.png">ActivateWindow(1131)</shortcut>

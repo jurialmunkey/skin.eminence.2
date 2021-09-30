@@ -751,7 +751,8 @@
                             <width>100%</width>
                             <label>31111</label>
                             <label2>$VAR[Label_SkinSetting_HighlightColor]</label2>
-                            <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor)</onclick>
+                            <onclick>SetProperty(colorpicker,HighlightColor,home)</onclick>
+                            <onclick>ActivateWindow(1141)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8008)</visible>
@@ -761,7 +762,8 @@
                             <width>100%</width>
                             <label>31112</label>
                             <label2>$VAR[Label_SkinSetting_HighlightColor2]</label2>
-                            <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor2)</onclick>
+                            <onclick>SetProperty(colorpicker,HighlightColor2,home)</onclick>
+                            <onclick>ActivateWindow(1141)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8008)</visible>
@@ -899,16 +901,14 @@
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
                         </control>
                         <!-- Extrafanart -->
-                        <control type="radiobutton" id="8509">
+                        <!-- <control type="radiobutton" id="8509">
                             <radioposx>settingsradioposx</radioposx>
                             <width>100%</width>
                             <label>31231</label>
-                            <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
-                            <selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
-                        </control>
+                        </control> -->
                         <!-- Div Indicators Label -->
                         <control type="image" id="8510">
                             <width>100%</width>
@@ -974,18 +974,6 @@
                             <label>31198</label>
                             <height>72</height>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <include>Defs_OptionButton</include>
-                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                        </control>
-                        <control type="radiobutton" id="8601">
-                            <width>100%</width>
-                            <label>script.skin.helper.service</label>
-                            <label2>$INFO[System.AddonVersion(script.skin.helper.service)]        </label2>
-                            <onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
-                            <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
-                            <selected>System.HasAddon(script.skin.helper.service)</selected>
-                            <radioposx>settingsradioposx</radioposx>
-                            <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8006)</visible>
                         </control>
@@ -1080,18 +1068,6 @@
                             <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
                             <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
                             <selected>System.HasAddon(script.globalsearch)</selected>
-                            <radioposx>settingsradioposx</radioposx>
-                            <height>72</height>
-                            <include>Defs_OptionButton</include>
-                            <visible>ControlGroup(8000).HasFocus(8006)</visible>
-                        </control>
-                        <control type="radiobutton" id="8610">
-                            <width>100%</width>
-                            <label>script.artwork.downloader</label>
-                            <label2>$INFO[System.AddonVersion(script.artwork.downloader)]        </label2>
-                            <onclick condition="!System.HasAddon(script.artwork.downloader)">InstallAddon(script.artwork.downloader)</onclick>
-                            <onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
-                            <selected>System.HasAddon(script.artwork.downloader)</selected>
                             <radioposx>settingsradioposx</radioposx>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
@@ -1274,23 +1250,21 @@
                             <visible>ControlGroup(8000).HasFocus(8099)</visible>
                         </control>
                         <!-- Backup -->
-                        <control type="button" id="8997">
+                        <!-- <control type="button" id="8997">
                             <width>100%</width>
                             <label>31161</label>
-                            <onclick>RunScript(script.skin.helper.skinbackup,action=backup)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8099)</visible>
-                        </control>
+                        </control> -->
                         <!-- Restore -->
-                        <control type="button" id="8998">
+                        <!-- <control type="button" id="8998">
                             <width>100%</width>
                             <label>31162</label>
-                            <onclick>RunScript(script.skin.helper.skinbackup,action=restore)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8099)</visible>
-                        </control>
+                        </control> -->
                         <!-- Reset Skin to Defaults -->
                         <control type="button" id="8999">
                             <width>100%</width>

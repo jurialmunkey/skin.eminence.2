@@ -8,6 +8,7 @@
     <include file="Includes_Dialog.xml" />
     <include file="Includes_Furniture.xml" />
     <include file="Includes_Home.xml" />
+    <include file="Includes_Colors.xml" />
     <include file="Includes_Info.xml" />
     <include file="Includes_Image.xml" />
     <include file="Includes_Label.xml" />

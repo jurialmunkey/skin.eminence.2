@@ -295,7 +295,7 @@
                     <width>100%</width>
                     <label>31128</label>
                     <label2>$INFO[Container(211).ListItem.Property(tilecolor)]</label2>
-                    <onclick>RunScript(script.skin.helper.service,action=colorpicker,shortcutproperty=tilecolor)</onclick>
+                    <onclick>SetFocus(9000)</onclick>
                     <include>Defs_OptionButton</include>
                     <visible>Skin.HasSetting(home.tilecolor)</visible>
                 </control>
@@ -373,5 +373,20 @@
         </control>
 
         <control type="button" id="404"><visible allowhiddenfocus="true">false</visible><width>1</width><height>1</height></control>
+
+
+        <control type="group">
+            <visible>Control.HasFocus(9000)</visible>
+            <include>GlobalOverlay</include>
+            <control type="group">
+                <include content="Colors_Dialog">
+                    <visible allowhiddenfocus="true">Control.HasFocus(9000)</visible>
+                    <onclick>SetProperty(customProperty,tilecolor)</onclick>
+                    <onclick>SetProperty(customValue,$INFO[Container(9000).ListItem.Label])</onclick>
+                    <onclick>SendClick(404)</onclick>
+                    <onclick>SetFocus(9701)</onclick>
+                </include>
+            </control>
+        </control>
     </controls>
 </window>

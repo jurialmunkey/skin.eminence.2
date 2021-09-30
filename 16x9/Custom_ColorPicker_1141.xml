@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1141">
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <onunload>ClearProperty(colorpicker,home)</onunload>
+    <controls>
+        <include>GlobalOverlay</include>
+
+        <control type="group">
+            <include content="Colors_Dialog">
+                <onclick>Skin.SetString($INFO[Window(Home).Property(colorpicker)],$INFO[Container(9000).ListItem.Label])</onclick>
+                <onclick>Action(Close)</onclick>
+            </include>
+        </control>
+    </controls>
+</window>
