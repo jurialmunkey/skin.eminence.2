@@ -1071,9 +1071,9 @@
             </control>
         </control>
     </include>
-    <include name="Furniture_TopBar">
+    <include name="Furniture_TopBar_HeaderText">
         <control type="group">
-            <visible>[Window.IsVisible(home) + ![[[Control.HasFocus(9001) | Control.HasFocus(9101)] + !Skin.HasSetting(widgets.donthidemenu)] | Control.HasFocus(9002)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | !Skin.HasSetting(OSDNoInfo)] + [Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+            <nested />
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -1092,8 +1092,10 @@
             </control>
             <include>Furniture_TopBar_Clock</include>
         </control>
+    </include>
+    <include name="Furniture_TopBar_HeaderTile">
         <control type="group">
-            <visible>[Window.IsVisible(home) + ![[[Control.HasFocus(9001) | Control.HasFocus(9101)] + !Skin.HasSetting(widgets.donthidemenu)] | Control.HasFocus(9002)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | !Skin.HasSetting(OSDNoInfo)] + [Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Player.Muted | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+            <nested />
             <animation type="Visible">
                 <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
                 <effect type="fade" start="0" end="100" time="200" />
@@ -1107,6 +1109,14 @@
                 <include>Furniture_TopBar_Tile_Content</include>
             </control>
         </control>
+    </include>
+    <include name="Furniture_TopBar">
+        <include content="Furniture_TopBar_HeaderText">
+            <visible>[Window.IsVisible(home) + ![[[Control.HasFocus(9001) | Control.HasFocus(9101)] + !Skin.HasSetting(widgets.donthidemenu)] | Control.HasFocus(9002)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+        </include>
+        <include content="Furniture_TopBar_HeaderTile">
+            <visible>[Window.IsVisible(home) + ![[[Control.HasFocus(9001) | Control.HasFocus(9101)] + !Skin.HasSetting(widgets.donthidemenu)] | Control.HasFocus(9002)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Player.Muted | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)</visible>
+        </include>
     </include>
 
 </includes>
