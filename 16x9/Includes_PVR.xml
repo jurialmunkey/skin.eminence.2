@@ -17,10 +17,10 @@
                 <height>posterh</height>
                 <control type="group">
                     <width>listinfow</width>
-
+                    <include>Object_Background</include>
                     <control type="panel" id="$PARAM[id]">
                         <width>listinfow</width>
-                        <height>740</height>
+                        <height>720</height>
                         <onup>$PARAM[id]</onup>
                         <ondown>$PARAM[id]</ondown>
                         <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
@@ -31,72 +31,70 @@
                         <viewtype label="$PARAM[label]">list</viewtype>
                         <scrolltime tween="quadratic">400</scrolltime>
                         <visible>$PARAM[visible]</visible>
-                        <itemlayout height="148" width="listinfow">
+                        <itemlayout height="144" width="listinfow">
                             <control type="group">
                                 <left>0</left>
                                 <right>0</right>
-                                <bottom>bigpad</bottom>
-                                <include>Object_Background</include>
                                 <control type="image">
-                                    <width>100%</width>
-                                    <height>100%</height>
                                     <texture colordiffuse="0fffffff">common/selected.png</texture>
                                     <aspectratio>scale</aspectratio>
                                     <visible>ListItem.IsPlaying</visible>
                                 </control>
                                 <control type="image">
                                     <left>bigpad</left>
-                                    <width>110</width>
-                                    <top>pad</top>
-                                    <bottom>pad</bottom>
+                                    <width>104</width>
+                                    <top>bigpad</top>
+                                    <bottom>bigpad</bottom>
                                     <aspectratio>keep</aspectratio>
                                     <texture background="true">$INFO[ListItem.Icon]</texture>
                                 </control>
-                                <control type="progress">
-                                    <left>160</left>
+                                <control type="group">
+                                    <left>164</left>
                                     <right>bigpad</right>
-                                    <bottom>16</bottom>
-                                    <height>8</height>
-                                    <reveal>true</reveal>
-                                    <info>ListItem.Progress</info>
-                                    <lefttexture colordiffuse="5fededed">osd/progress-end.png</lefttexture>
-                                    <midtexture colordiffuse="5fededed">osd/progress-end.png</midtexture>
-                                </control>
-                                <control type="label">
-                                    <left>160</left>
-                                    <right>bigpad</right>
-                                    <top>15</top>
-                                    <height>30</height>
-                                    <selectedcolor>ListLabel</selectedcolor>
-                                    <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName]</label>
-                                </control>
-                                <control type="label">
-                                    <left>160</left>
-                                    <right>bigpad</right>
-                                    <bottom>45</bottom>
-                                    <height>30</height>
-                                    <font>Font-ListInfo</font>
-                                    <selectedcolor>ListLabel</selectedcolor>
-                                    <label>$VAR[Label_IsRecording]$INFO[ListItem.Title]</label>
-                                </control>
-                                <control type="label">
-                                    <left>160</left>
-                                    <right>bigpad</right>
-                                    <bottom>45</bottom>
-                                    <height>30</height>
-                                    <align>right</align>
-                                    <font>Font-OSD</font>
-                                    <selectedcolor>ListLabel</selectedcolor>
-                                    <label>$INFO[ListItem.NextTitle,$LOCALIZE[31003]... ,]</label>
+                                    <top>bigpad</top>
+                                    <bottom>bigpad</bottom>
+                                    <control type="label">
+                                        <top>-8</top>
+                                        <aligny>top</aligny>
+                                        <height>30</height>
+                                        <selectedcolor>ListLabel</selectedcolor>
+                                        <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName]</label>
+                                    </control>
+
+                                    <control type="label">
+                                        <top>22</top>
+                                        <bottom>8</bottom>
+                                        <aligny>center</aligny>
+                                        <font>Font-ListInfo</font>
+                                        <selectedcolor>ListLabel</selectedcolor>
+                                        <label>$VAR[Label_IsRecording]$INFO[ListItem.Title]</label>
+                                    </control>
+                                    <control type="label">
+                                        <top>22</top>
+                                        <bottom>8</bottom>
+                                        <aligny>center</aligny>
+                                        <align>right</align>
+                                        <font>Font-OSD</font>
+                                        <selectedcolor>ListLabel</selectedcolor>
+                                        <label>$INFO[ListItem.NextTitle,$LOCALIZE[31003]... ,]</label>
+                                    </control>
+
+                                    <control type="progress">
+                                        <bottom>0</bottom>
+                                        <height>8</height>
+                                        <reveal>true</reveal>
+                                        <info>ListItem.Progress</info>
+                                        <lefttexture colordiffuse="5fededed">osd/progress-end.png</lefttexture>
+                                        <midtexture colordiffuse="5fededed">osd/progress-end.png</midtexture>
+                                    </control>
                                 </control>
                             </control>
                         </itemlayout>
 
-                        <focusedlayout height="148" width="listinfow">
+                        <focusedlayout height="144" width="listinfow">
                             <control type="group">
                                 <left>0</left>
                                 <right>0</right>
-                                <bottom>bigpad</bottom>
                                 <include>Object_Background</include>
                                 <control type="image">
                                     <width>100%</width>
@@ -104,59 +102,60 @@
                                     <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                                 </control>
                                 <control type="image">
-                                    <width>100%</width>
-                                    <height>100%</height>
-                                    <texture colordiffuse="1fffffff">common/selected.png</texture>
+                                    <texture colordiffuse="0fffffff">common/selected.png</texture>
                                     <aspectratio>scale</aspectratio>
                                     <visible>ListItem.IsPlaying</visible>
                                 </control>
                                 <control type="image">
                                     <left>bigpad</left>
-                                    <width>110</width>
-                                    <top>pad</top>
-                                    <bottom>pad</bottom>
+                                    <width>104</width>
+                                    <top>bigpad</top>
+                                    <bottom>bigpad</bottom>
                                     <aspectratio>keep</aspectratio>
                                     <texture background="true">$INFO[ListItem.Icon]</texture>
                                 </control>
-                                <control type="progress">
-                                    <left>160</left>
+                                <control type="group">
+                                    <left>164</left>
                                     <right>bigpad</right>
-                                    <bottom>16</bottom>
-                                    <height>8</height>
-                                    <reveal>true</reveal>
-                                    <info>ListItem.Progress</info>
-                                    <lefttexture colordiffuse="Selected">osd/progress-end.png</lefttexture>
-                                    <midtexture colordiffuse="Selected">osd/progress-end.png</midtexture>
-                                </control>
-                                <control type="label">
-                                    <left>160</left>
-                                    <right>bigpad</right>
-                                    <top>15</top>
-                                    <height>30</height>
-                                    <textcolor>Selected</textcolor>
-                                    <selectedcolor>Selected</selectedcolor>
-                                    <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName]</label>
-                                </control>
-                                <control type="label">
-                                    <left>160</left>
-                                    <right>bigpad</right>
-                                    <bottom>45</bottom>
-                                    <height>30</height>
-                                    <textcolor>Selected</textcolor>
-                                    <selectedcolor>Selected</selectedcolor>
-                                    <font>Font-ListInfo</font>
-                                    <label>$VAR[Label_IsRecording]$INFO[ListItem.Title]</label>
-                                </control>
-                                <control type="label">
-                                    <left>160</left>
-                                    <right>bigpad</right>
-                                    <bottom>45</bottom>
-                                    <height>30</height>
-                                    <align>right</align>
-                                    <font>Font-OSD</font>
-                                    <selectedcolor>Selected</selectedcolor>
-                                    <textcolor>Selected</textcolor>
-                                    <label>$INFO[ListItem.NextTitle,$LOCALIZE[31003]... ,]</label>
+                                    <top>bigpad</top>
+                                    <bottom>bigpad</bottom>
+                                    <control type="label">
+                                        <top>-8</top>
+                                        <aligny>top</aligny>
+                                        <height>30</height>
+                                        <selectedcolor>Selected</selectedcolor>
+                                        <textcolor>Selected</textcolor>
+                                        <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName]</label>
+                                    </control>
+
+                                    <control type="label">
+                                        <top>22</top>
+                                        <bottom>8</bottom>
+                                        <aligny>center</aligny>
+                                        <font>Font-ListInfo</font>
+                                        <selectedcolor>Selected</selectedcolor>
+                                        <textcolor>Selected</textcolor>
+                                        <label>$VAR[Label_IsRecording]$INFO[ListItem.Title]</label>
+                                    </control>
+                                    <control type="label">
+                                        <top>22</top>
+                                        <bottom>8</bottom>
+                                        <aligny>center</aligny>
+                                        <align>right</align>
+                                        <font>Font-OSD</font>
+                                        <selectedcolor>Selected</selectedcolor>
+                                        <textcolor>Selected</textcolor>
+                                        <label>$INFO[ListItem.NextTitle,$LOCALIZE[31003]... ,]</label>
+                                    </control>
+
+                                    <control type="progress">
+                                        <bottom>0</bottom>
+                                        <height>8</height>
+                                        <reveal>true</reveal>
+                                        <info>ListItem.Progress</info>
+                                        <lefttexture colordiffuse="Selected">osd/progress-end.png</lefttexture>
+                                        <midtexture colordiffuse="Selected">osd/progress-end.png</midtexture>
+                                    </control>
                                 </control>
                             </control>
                         </focusedlayout>
@@ -348,9 +347,10 @@
             <height>posterh</height>
             <control type="group">
                 <width>listinfow</width>
+                <include>Object_Background</include>
                 <control type="panel" id="50">
                     <width>listinfow</width>
-                    <height>740</height>
+                    <height>720</height>
                     <onup>50</onup>
                     <ondown>50</ondown>
                     <onright condition="!Skin.HasSetting(KioskMode)">SetFocus(9000)</onright>
@@ -360,93 +360,110 @@
                     <orientation>vertical</orientation>
                     <viewtype>list</viewtype>
                     <scrolltime tween="quadratic">400</scrolltime>
-                    <itemlayout height="148" width="listinfow">
+                    <itemlayout height="144" width="listinfow">
                         <control type="group">
                             <left>0</left>
                             <right>0</right>
-                            <bottom>bigpad</bottom>
-                            <include>Object_Background</include>
                             <control type="image">
                                 <left>bigpad</left>
-                                <width>110</width>
-                                <top>pad</top>
-                                <bottom>pad</bottom>
+                                <width>104</width>
+                                <top>bigpad</top>
+                                <bottom>bigpad</bottom>
                                 <aspectratio>keep</aspectratio>
                                 <texture background="true">$INFO[ListItem.Icon]</texture>
                             </control>
-                            <control type="label">
-                                <left>160</left>
+                            <control type="group">
+                                <left>164</left>
                                 <right>bigpad</right>
-                                <top>30</top>
-                                <height>30</height>
-                                <selectedcolor>ListLabel</selectedcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                            <control type="label">
-                                <left>160</left>
-                                <right>bigpad</right>
-                                <bottom>30</bottom>
-                                <height>30</height>
-                                <font>Font-ListInfo</font>
-                                <selectedcolor>ListLabel</selectedcolor>
-                                <label>$INFO[ListItem.Label2]</label>
-                            </control>
-                            <control type="image">
-                                <right>30</right>
-                                <centertop>65</centertop>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture>$VAR[Image_Indicator]</texture>
-                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                                <top>bigpad</top>
+                                <bottom>bigpad</bottom>
+                                <control type="label">
+                                    <centertop>25%</centertop>
+                                    <height>30</height>
+                                    <selectedcolor>ListLabel</selectedcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <visible>!String.IsEmpty(ListItem.Label2)</visible>
+                                </control>
+                                <control type="label">
+                                    <centertop>50%</centertop>
+                                    <height>30</height>
+                                    <selectedcolor>ListLabel</selectedcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <visible>String.IsEmpty(ListItem.Label2)</visible>
+                                </control>
+                                <control type="label">
+                                    <centerbottom>25%</centerbottom>
+                                    <height>30</height>
+                                    <aligny>center</aligny>
+                                    <font>Font-ListInfo</font>
+                                    <selectedcolor>ListLabel</selectedcolor>
+                                    <label>$INFO[ListItem.Label2]</label>
+                                </control>
+                                <control type="image">
+                                    <right>30</right>
+                                    <centertop>65</centertop>
+                                    <height>32</height>
+                                    <width>32</width>
+                                    <texture>$VAR[Image_Indicator]</texture>
+                                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                                </control>
                             </control>
                         </control>
                     </itemlayout>
 
-                    <focusedlayout height="148" width="listinfow">
+                    <focusedlayout height="144" width="listinfow">
                         <control type="group">
                             <left>0</left>
                             <right>0</right>
-                            <bottom>bigpad</bottom>
-                            <include>Object_Background</include>
                             <control type="image">
-                                <width>100%</width>
-                                <height>100%</height>
                                 <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                             </control>
                             <control type="image">
                                 <left>bigpad</left>
-                                <width>110</width>
-                                <top>pad</top>
-                                <bottom>pad</bottom>
+                                <width>104</width>
+                                <top>bigpad</top>
+                                <bottom>bigpad</bottom>
                                 <aspectratio>keep</aspectratio>
                                 <texture background="true">$INFO[ListItem.Icon]</texture>
                             </control>
-                            <control type="label">
-                                <left>160</left>
+                            <control type="group">
+                                <left>164</left>
                                 <right>bigpad</right>
-                                <top>30</top>
-                                <height>30</height>
-                                <selectedcolor>Selected</selectedcolor>
-                                <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
-                            </control>
-                            <control type="label">
-                                <left>160</left>
-                                <right>bigpad</right>
-                                <bottom>30</bottom>
-                                <height>30</height>
-                                <font>Font-ListInfo</font>
-                                <selectedcolor>Selected</selectedcolor>
-                                <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label2]</label>
-                            </control>
-                            <control type="image">
-                                <right>30</right>
-                                <centertop>65</centertop>
-                                <height>32</height>
-                                <width>32</width>
-                                <texture>$VAR[Image_Indicator]</texture>
-                                <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                                <top>bigpad</top>
+                                <bottom>bigpad</bottom>
+                                <control type="label">
+                                    <centertop>25%</centertop>
+                                    <height>30</height>
+                                    <selectedcolor>Selected</selectedcolor>
+                                    <textcolor>Selected</textcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <visible>!String.IsEmpty(ListItem.Label2)</visible>
+                                </control>
+                                <control type="label">
+                                    <centertop>50%</centertop>
+                                    <height>30</height>
+                                    <selectedcolor>Selected</selectedcolor>
+                                    <textcolor>Selected</textcolor>
+                                    <label>$INFO[ListItem.Label]</label>
+                                    <visible>String.IsEmpty(ListItem.Label2)</visible>
+                                </control>
+                                <control type="label">
+                                    <centerbottom>25%</centerbottom>
+                                    <height>30</height>
+                                    <aligny>center</aligny>
+                                    <font>Font-ListInfo</font>
+                                    <selectedcolor>Selected</selectedcolor>
+                                    <textcolor>Selected</textcolor>
+                                    <label>$INFO[ListItem.Label2]</label>
+                                </control>
+                                <control type="image">
+                                    <right>30</right>
+                                    <centertop>65</centertop>
+                                    <height>32</height>
+                                    <width>32</width>
+                                    <texture>$VAR[Image_Indicator]</texture>
+                                    <visible>!String.IsEmpty(ListItem.Overlay)</visible>
+                                </control>
                             </control>
                         </control>
                     </focusedlayout>
