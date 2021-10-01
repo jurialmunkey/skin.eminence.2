@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
     <submenuOther include="submenu-widget" container="9002">
+        <property name="content" tag="property" attribute="name|widget" value="Weather">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</property>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
+        <property name="isWeather" tag="property" attribute="name|widget" value="Weather">True</property>
+        <property name="isWeather">False</property>
         <controls>
             <control type="wraplist" id="9001">
                 <visible>Integer.IsEqual(Window(Home).Property(MenuFocus),9002) + !String.IsEmpty(Container(9002).ListItem.Property(widgetType))</visible>
@@ -20,6 +23,7 @@
                 <onback>9000</onback>
                 <ondown>9000</ondown>
                 <onup>SetFocus(9002)</onup>
+                <include condition="$SKINSHORTCUTS[isWeather]">Defs_WeatherOpen</include>
                 <autoscroll time="8000">![Control.HasFocus(9001) | Control.HasFocus(9101)]</autoscroll>
                 <scrolltime tween="sine" easing="out">240</scrolltime>
                 <itemlayout />
@@ -29,10 +33,13 @@
         </controls>
     </submenuOther>
     <other include="widget">
+        <property name="content" tag="property" attribute="name|widget" value="Weather">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,]/</property>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="content">$VAR[Defs_HomeWidget_Content]</property>
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <property name="target">$VAR[Defs_HomeWidget_Target]</property>
+        <property name="isWeather" tag="property" attribute="name|widget" value="Weather">True</property>
+        <property name="isWeather">False</property>
         <controls>
             <control type="wraplist" id="9001">
                 <visible>!Integer.IsEqual(Window(Home).Property(MenuFocus),9002) | String.IsEmpty(Container(9002).ListItem.Property(widgetType))</visible>
@@ -50,6 +57,7 @@
                 <onback>9000</onback>
                 <ondown>9000</ondown>
                 <onup>SetFocus(9002)</onup>
+                <include condition="$SKINSHORTCUTS[isWeather]">Defs_WeatherOpen</include>
                 <autoscroll time="8000">![Control.HasFocus(9001) | Control.HasFocus(9101)]</autoscroll>
                 <scrolltime tween="sine" easing="out">240</scrolltime>
                 <itemlayout />

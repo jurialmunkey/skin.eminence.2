@@ -507,7 +507,6 @@
 
     <!-- Home Widget -->
     <include name="Home_Widget_Control">
-        <!-- <include condition="!Skin.HasSetting(widgets.persistent)">Home_Widget_Control_NoPersist</include> -->
         <include>skinshortcuts-template-widget</include>
         <include>skinshortcuts-template-submenu-widget</include>
         <control type="button" id="9101">
@@ -620,7 +619,7 @@
             <animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
         </control>
         <control type="grouplist">
-            <visible>!Container(9001).IsUpdating</visible>
+            <visible>Integer.IsGreater(Container(9001).NumItems,0)</visible>
             <visible>![String.IsEqual(Container(9000).ListItem.Property(widget),Weather) | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + [String.IsEqual(Skin.String(home.fallbackwidget),Weather) | String.IsEqual(Skin.String(home.fallbackwidget.node),Weather)]]] | !System.HasAddon(resource.images.weatherfanart.multi)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
