@@ -251,8 +251,9 @@
     <include name="Defs_DialogInfo_PosterLeft"><left>500</left></include>
     <include name="Defs_DialogInfo_SquareLeft"><left>740</left></include>
     <variable name="Defs_SpinnerTexture">
-        <value condition="!String.IsEmpty(Skin.String(SkinHelper.SkinHelper.SpinnerTexture.Path)) + !String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture)) + !String.IsEqual(Skin.String(SkinHelper.SkinHelper.SpinnerTexture.Path),None)">$INFO[Skin.String(SkinHelper.SkinHelper.SpinnerTexture.Path)]</value>
-        <value>special://skin/extras/busy_spinners/Default</value>
+        <value condition="Skin.String(BusySpinner,Tube)">special://skin/extras/busy_spinners/Tube</value>
+        <value condition="Skin.String(BusySpinner,Kitty)">special://skin/extras/busy_spinners/Kitty</value>
+        <value>special://skin/extras/busy_spinners/Dots</value>
     </variable>
     <include name="Defs_OptionButton_Basic">
         <width>364</width>

@@ -1080,3 +1080,18 @@ msgstr ""
 msgctxt "#31255"
 msgid "Age"
 msgstr ""
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31256"
+msgid "Dots"
+msgstr ""
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31257"
+msgid "Tube"
+msgstr ""
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31258"
+msgid "Kitty"
+msgstr ""

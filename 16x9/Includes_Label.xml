@@ -357,8 +357,9 @@
         <value>$LOCALIZE[31180]</value>
     </variable>
     <variable name="Label_SkinSetting_BusyTexture">
-        <value condition="!String.IsEmpty(Skin.String(SkinHelper.SpinnerTexture))">$INFO[Skin.String(SkinHelper.SpinnerTexture)]</value>
-        <value>$LOCALIZE[31180]</value>
+        <value condition="Skin.String(BusySpinner,Kitty)">$LOCALIZE[31258]</value>
+        <value condition="Skin.String(BusySpinner,Tube)">$LOCALIZE[31257]</value>
+        <value>$LOCALIZE[31256] ($LOCALIZE[31180])</value>
     </variable>
     <variable name="Label_SkinSetting_GlobalOverlay">
         <value condition="!String.IsEmpty(Skin.String(global.background))">$INFO[Skin.String(global.background)]</value>
