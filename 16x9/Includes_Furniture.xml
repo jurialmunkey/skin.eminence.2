@@ -637,12 +637,6 @@
             <animation effect="fade" start="100" end="100" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),100)">Conditional</animation>
         </control>
 
-        <!-- <control type="image">
-            <texture background="true">special://skin/extras/backgrounds/rain.gif</texture>
-            <visible>true</visible>
-            <colordiffuse>2fFFFFFF</colordiffuse>
-        </control> -->
-
         <control type="image" description="Transition Fade">
             <width>100%</width>
             <height>100%</height>

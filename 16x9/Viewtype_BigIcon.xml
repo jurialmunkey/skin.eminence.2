@@ -84,7 +84,7 @@
                 <control type="image">
                     <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-                    <texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
+                    <texture background="true">$VAR[Image_Poster]</texture>
                     <visible>!Control.HasFocus(52)</visible>
                 </control>
                 <control type="group">
@@ -95,7 +95,7 @@
                 </control>
                 <control type="image">
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-                    <texture background="true">$INFO[Container(52).ListItem.Icon]</texture>
+                    <texture background="true">$VAR[Image_Poster]</texture>
                     <fadetime>300</fadetime>
                     <visible>Control.HasFocus(52)</visible>
                 </control>
