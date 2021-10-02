@@ -803,19 +803,13 @@
     </variable>
     <include name="Furniture_TopBar_Tile">
         <control type="image">
-            <posy>-6</posy>
-            <posx>-88</posx>
-            <width>324</width>
-            <height>212</height>
+            <include>Defs_HeaderDimensions</include>
             <visible>!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)</visible>
-            <texture border="75">common/header-shadow-24.png</texture>
+            <texture>common/header-shadow-24.png</texture>
         </control>
         <control type="image">
-            <posy>18</posy>
-            <posx>-88</posx>
-            <width>300</width>
-            <height>164</height>
-            <texture border="75" colordiffuse="Background">common/header.png</texture>
+            <include>Defs_HeaderDimensions</include>
+            <texture colordiffuse="Background">common/header.png</texture>
             <visible>!Window.IsVisible(home) + !Window.IsVisible(weather) + !VideoPlayer.IsFullscreen + !Window.IsVisible(visualisation)</visible>
             <animation effect="fade" start="100" end="80" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),10)">Conditional</animation>
             <animation effect="fade" start="100" end="70" condition="!Skin.HasSetting(background.hidefanart) + String.IsEqual(Skin.String(fanart.opacity),20)">Conditional</animation>
@@ -828,11 +822,8 @@
             <visible>!Skin.HasSetting(background.hidefanart) + Integer.IsLess(Skin.String(fanart.opacity),90) + !String.IsEmpty(Skin.String(fanart.opacity))</visible>
         </control>
         <control type="image">
-            <posy>18</posy>
-            <posx>-88</posx>
-            <width>300</width>
-            <height>164</height>
-            <texture border="75">common/header.png</texture>
+            <include>Defs_HeaderDimensions</include>
+            <texture>common/header.png</texture>
             <colordiffuse>$VAR[Furniture_TopBar_Tile_BGCOLOR]</colordiffuse>
             <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [Window.IsVisible(home) | Window.IsVisible(weather)]">Conditional</animation>
         </control>

@@ -739,14 +739,7 @@
                 <visible>!String.IsEqual(Skin.String(home.style),$LOCALIZE[31181])</visible>
                 <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
                 <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                <control type="image">
-                    <left>0</left>
-                    <posy>64r</posy>
-                    <width>1100</width>
-                    <height>64</height>
-                    <texture flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
-                    <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-                </control>
+                <include>Object_RSS_Tile</include>
                 <control type="image">
                     <left>16</left>
                     <posy>48r</posy>
@@ -784,14 +777,7 @@
                 <visible>Player.HasMedia</visible>
                 <animation effect="slide" end="0,-266" condition="true">Conditional</animation>
                 <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                <control type="image">
-                    <left>0</left>
-                    <posy>64r</posy>
-                    <width>1100</width>
-                    <height>64</height>
-                    <texture flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
-                    <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-                </control>
+                <include>Object_RSS_Tile</include>
 
                 <!-- Player Controls -->
                 <control type="grouplist" id="9005">
@@ -985,28 +971,14 @@
                 <bottom>266</bottom>
                 <visible>Window.IsActive(DialogNotification.xml)</visible>
                 <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                <control type="image">
-                    <left>0</left>
-                    <posy>64r</posy>
-                    <width>1100</width>
-                    <height>64</height>
-                    <texture flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
-                    <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-                </control>
+                <include>Object_RSS_Tile</include>
             </control>
             <control type="group">
                 <bottom>266</bottom>
                 <visible>!Window.IsActive(DialogNotification.xml)</visible>
                 <visible>Window.IsActive(DialogExtendedProgressBar.xml)</visible>
                 <animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
-                <control type="image">
-                    <left>0</left>
-                    <posy>64r</posy>
-                    <width>1100</width>
-                    <height>64</height>
-                    <texture flipy="true" flipx="false" border="32,0,32,64" colordiffuse="HomeBarBG">common/header.png</texture>
-                    <animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
-                </control>
+                <include>Object_RSS_Tile</include>
             </control>
         </control>
     </include>

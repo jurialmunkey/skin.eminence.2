@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <include name="Defs_HeaderDimensions">
+        <top>-28</top>
+        <left>-92</left>
+        <width>320</width>
+        <height>256</height>
+    </include>
+
     <variable name="Defs_TMDBH_List_Content">
         <value condition="String.IsEqual(Window.Property(list),Director)">plugin://plugin.video.themoviedb.helper/?info=crew_in_movies&amp;type=person&amp;filter_key=job&amp;filter_value=Director&amp;query=$INFO[ListItem.Director]&amp;exclude_key=title&amp;exclude_value=$INFO[ListItem.Title]&amp;nextpage=false</value>
         <value condition="String.IsEqual(Window.Property(list),CastInMovies)">plugin://plugin.video.themoviedb.helper/?info=stars_in_movies&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]&amp;nextpage=false</value>
