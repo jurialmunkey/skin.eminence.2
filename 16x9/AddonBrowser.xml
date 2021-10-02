@@ -102,6 +102,13 @@
                     <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
                     <visible>Control.IsEnabled(9)</visible>
                 </control>
+                <!-- Versions -->
+                <control type="button" id="14">
+                    <label>$LOCALIZE[24069]</label>
+                    <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+                    <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
+                    <visible>Control.IsEnabled(14)</visible>
+                </control>
             </control>
 
         </control>

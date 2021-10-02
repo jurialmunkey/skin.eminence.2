@@ -7,7 +7,7 @@
             <top>dialogtop</top>
             <bottom>133</bottom>
             <centerleft>50%</centerleft>
-            <width>1190</width>
+            <width>1460</width>
             <include>Animation_SlideIn</include>
             <include>Animation_FadeOut</include>
             <include>Dialog_Background</include>
@@ -88,7 +88,7 @@
             <!-- Ok Cancel Defaults -->
             <control type="grouplist" id="8000">
                 <centerleft>50%</centerleft>
-                <width>1150</width>
+                <width>1420</width>
                 <bottom>bigpad</bottom>
                 <height>69</height>
                 <align>center</align>
@@ -98,44 +98,50 @@
                 <orientation>horizontal</orientation>
                 <control type="button" id="4">
                     <align>center</align>
-                    <width>272.5</width>
+                    <width>220</width>
                     <label>19003</label>
                     <include>Defs_OptionButton2</include>
                     <visible>Window.IsActive(PVRGuideInfo)</visible>
                 </control>
                 <control type="button" id="5">
                     <align>center</align>
-                    <width>272.5</width>
+                    <width>220</width>
                     <label>19165</label>
                     <include>Defs_OptionButton2</include>
                     <visible>Window.IsActive(PVRGuideInfo)</visible>
                 </control>
                 <control type="button" id="8">
                     <align>center</align>
-                    <width>272.5</width>
+                    <width>220</width>
                     <label>19687</label>
                     <include>Defs_OptionButton2</include>
                     <visible>Window.IsActive(PVRGuideInfo)</visible>
                 </control>
                 <control type="button" id="6">
                     <align>center</align>
-                    <width>272.5</width>
+                    <width>220</width>
                     <include>Defs_OptionButton2</include>
                     <visible>Window.IsActive(PVRGuideInfo)</visible>
                 </control>
 
                 <control type="button" id="7">
                     <align>center</align>
-                    <width>272.5</width>
+                    <width>220</width>
                     <label>186</label>
                     <include>Defs_OptionButton2</include>
                 </control>
                 <control type="button" id="9">
                     <label>19061</label>
                     <align>center</align>
-                    <width>272.5</width>
+                    <width>220</width>
                     <include>Defs_OptionButton2</include>
                     <visible>Window.IsActive(PVRGuideInfo)</visible>
+                </control>
+                <control type="button" id="11">
+                    <label>$LOCALIZE[826]</label>
+                    <align>center</align>
+                    <width>220</width>
+                    <include>Defs_OptionButton2</include>
                 </control>
             </control>
         </control>
