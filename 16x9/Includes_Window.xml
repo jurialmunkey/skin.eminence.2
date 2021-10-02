@@ -1686,7 +1686,7 @@
                     </control>
                 </control>
 			</control>
-            <control type="group">
+            <!-- <control type="group">
                 <visible allowhiddenfocus="true">ControlGroup(9320).HasFocus() | Control.HasFocus(2)</visible>
                 <visible>Window.IsVisible(videoosd)</visible>
                 <bottom>64</bottom>
@@ -1726,7 +1726,7 @@
 						<onclick>aspectratio</onclick>
                     </control>
                 </control>
-			</control>
+			</control> -->
         </control>
     </include>
 
@@ -1943,8 +1943,17 @@
                     <width>147</width>
                     <bottom>70</bottom>
                     <aspectratio>keep</aspectratio>
+                    <texture>$INFO[Player.Art(poster)]</texture>
+                    <visible>String.IsEmpty(Player.Art(tvshow.poster)) + !String.IsEmpty(Player.Art(poster))</visible>
+                </control>
+                <control type="image">
+                    <top>pad</top>
+                    <left>0</left>
+                    <width>147</width>
+                    <bottom>70</bottom>
+                    <aspectratio>keep</aspectratio>
                     <texture fallback="DefaultAddonVideo.png">$INFO[Player.Art(thumb)]</texture>
-                    <visible>String.IsEmpty(Player.Art(tvshow.poster))</visible>
+                    <visible>String.IsEmpty(Player.Art(tvshow.poster)) + String.IsEmpty(Player.Art(poster))</visible>
                 </control>
                 <control type="group">
                     <left>157</left>
