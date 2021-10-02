@@ -1347,7 +1347,7 @@
         <control type="button" id="5">
             <description>Presets</description>
             <label>13388</label>
-            <onclick>ActivateWindow(122)</onclick>
+            <onclick>ActivateWindow(visualisationpreset)</onclick>
             <include>Defs_OSDButton</include>
         </control>
         <control type="button" id="6">
@@ -1363,13 +1363,13 @@
         <control type="button" id="1">
             <description>Audio Settings</description>
             <label>292</label>
-            <onclick>ActivateWindow(124)</onclick>
+            <onclick>ActivateWindow(osdaudiosettings)</onclick>
 			<onup>9312</onup>
             <include>Defs_OSDButton</include>
         </control>
         <control type="button" id="2">
             <label>291</label>
-            <onclick>ActivateWindow(123)</onclick>
+            <onclick>ActivateWindow(osdvideosettings)</onclick>
 			<onup>9321</onup>
             <include>Defs_OSDButton</include>
         </control>
@@ -1409,7 +1409,7 @@
         <control type="button" id="6">
             <description>Bookmarks</description>
             <label>298</label>
-            <onclick>ActivateWindow(125)</onclick>
+            <onclick>ActivateWindow(videobookmarks)</onclick>
             <include>Defs_OSDButton</include>
         </control>
     </include>

@@ -35,8 +35,6 @@
                         <align>center</align>
                         <textoffsetx>30</textoffsetx>
                         <width>100%</width>
-                        <onup>15</onup>
-                        <ondown>20</ondown>
                         <font>Font-Button</font>
                         <height>70</height>
                         <include>Defs_OptionButton</include>
@@ -177,7 +175,6 @@
                         <label>20181</label>
                         <onup>20</onup>
                         <width>250</width>
-                        <width>120</width>
                         <include>Defs_KeyboardButton</include>
                     </control>
 

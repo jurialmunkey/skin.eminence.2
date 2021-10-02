@@ -27,7 +27,7 @@
                 <centerleft>50%</centerleft>
                 <bottom>15</bottom>
                 <width>1440</width>
-                <focusedposition>1</focusedposition>
+                <focusposition>1</focusposition>
                 <movement>1</movement>
                 <height>480</height>
                 <orientation>horizontal</orientation>

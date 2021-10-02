@@ -290,7 +290,6 @@
                                         <font>Font-ListInfo-Small</font>
                                         <textcolor>ListLabel</textcolor>
                                         <label>$LOCALIZE[31253]</label>
-                                        <textcolor>ListLabel</textcolor>
                                     </control>
                                     <control type="label">
                                         <left>220</left>
@@ -313,7 +312,6 @@
                                         <font>Font-ListInfo-Small</font>
                                         <textcolor>ListLabel</textcolor>
                                         <label>$LOCALIZE[31252]</label>
-                                        <textcolor>ListLabel</textcolor>
                                     </control>
                                     <control type="label">
                                         <left>220</left>
@@ -336,7 +334,6 @@
                                         <font>Font-ListInfo-Small</font>
                                         <textcolor>ListLabel</textcolor>
                                         <label>20339</label>
-                                        <textcolor>ListLabel</textcolor>
                                     </control>
                                     <control type="label">
                                         <left>220</left>
@@ -360,7 +357,6 @@
                                         <font>Font-ListInfo-Small</font>
                                         <textcolor>ListLabel</textcolor>
                                         <label>20417</label>
-                                        <textcolor>ListLabel</textcolor>
                                     </control>
                                     <control type="label">
                                         <left>220</left>
@@ -384,7 +380,6 @@
                                         <font>Font-ListInfo-Small</font>
                                         <textcolor>ListLabel</textcolor>
                                         <label>572</label>
-                                        <textcolor>ListLabel</textcolor>
                                     </control>
                                     <control type="label">
                                         <left>220</left>
@@ -660,7 +655,7 @@
 
                         <!-- InMovies Button -->
                         <control type="button" id="9002">
-                            <label>Movies (Cast)</label>
+                            <label>$LOCALIZE[342] ($LOCALIZE[206])</label>
                             <onclick>SetProperty(list,CastInMovies)</onclick>
                             <onclick>SetFocus(9500)</onclick>
                             <include>Defs_OptionButton3</include>
@@ -669,7 +664,7 @@
                         </control>
                         <!-- InMovies Button -->
                         <control type="button" id="9003">
-                            <label>Movies (Crew)</label>
+                            <label>$LOCALIZE[342] ($LOCALIZE[31259])</label>
                             <onclick>SetProperty(list,CrewInMovies)</onclick>
                             <onclick>SetFocus(9500)</onclick>
                             <include>Defs_OptionButton3</include>
@@ -679,7 +674,7 @@
 
                         <!-- InTvShows Button -->
                         <control type="button" id="9004">
-                            <label>TvShows (Cast)</label>
+                            <label>$LOCALIZE[20343] ($LOCALIZE[206])</label>
                             <onclick>SetProperty(list,CastInTvShows)</onclick>
                             <onclick>SetFocus(9500)</onclick>
                             <include>Defs_OptionButton3</include>
@@ -688,7 +683,7 @@
                         </control>
                         <!-- InTvShows Button -->
                         <control type="button" id="9005">
-                            <label>TvShows (Crew)</label>
+                            <label>$LOCALIZE[20343] ($LOCALIZE[31259])</label>
                             <onclick>SetProperty(list,CrewInTvShows)</onclick>
                             <onclick>SetFocus(9500)</onclick>
                             <include>Defs_OptionButton3</include>

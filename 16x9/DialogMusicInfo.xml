@@ -82,7 +82,6 @@
                                         <height>36</height>
                                         <align>left</align>
                                         <font>Font-ListInfo-Small</font>
-                                        <textcolor>ListLabel</textcolor>
                                         <label>515</label>
                                         <textcolor>ListLabel</textcolor>
                                     </control>
@@ -115,7 +114,6 @@
                                         <textcolor>SubLabel</textcolor>
                                         <align>left</align>
                                         <height>36</height>
-                                        <font>Font-ListInfo</font>
                                         <label>$INFO[ListItem.Property(Album_Type)]</label>
                                     </control>
                                 </control>
@@ -139,7 +137,6 @@
                                         <textcolor>SubLabel</textcolor>
                                         <align>left</align>
                                         <height>36</height>
-                                        <font>Font-ListInfo</font>
                                         <label>$INFO[ListItem.Property(Album_Label)]</label>
                                     </control>
                                 </control>
@@ -163,7 +160,6 @@
                                         <textcolor>SubLabel</textcolor>
                                         <align>left</align>
                                         <height>36</height>
-                                        <font>Font-ListInfo</font>
                                         <label>$INFO[ListItem.Property(Album_Mood)]</label>
                                     </control>
                                 </control>
@@ -187,7 +183,6 @@
                                         <textcolor>SubLabel</textcolor>
                                         <align>left</align>
                                         <height>36</height>
-                                        <font>Font-ListInfo</font>
                                         <label>$INFO[ListItem.Property(Album_Style)]</label>
                                     </control>
                                 </control>

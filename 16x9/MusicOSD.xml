@@ -268,7 +268,7 @@
 
                         <control type="button" id="502">
                             <description>Presets</description>
-                            <onclick>ActivateWindow(122)</onclick>
+                            <onclick>ActivateWindow(visualisationpresetlist)</onclick>
                             <width>48</width>
                             <height>48</height>
                             <font />

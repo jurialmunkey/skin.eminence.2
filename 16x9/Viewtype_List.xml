@@ -332,7 +332,7 @@
                 <focusposition>2</focusposition>
                 <movement>2</movement>
                 <preloaditems>2</preloaditems>
-                <orientation>vetical</orientation>
+                <orientation>vertical</orientation>
                 <viewtype label="$PARAM[name]">list</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>

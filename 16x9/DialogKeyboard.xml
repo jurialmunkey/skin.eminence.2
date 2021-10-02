@@ -175,7 +175,6 @@
                     <ondown>1000</ondown>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <scroll>true</scroll>
                     <include>Defs_KeyboardButton</include>
                 </control>
             </control>

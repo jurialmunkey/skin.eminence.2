@@ -1095,3 +1095,8 @@ msgstr ""
 msgctxt "#31258"
 msgid "Kitty"
 msgstr ""
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31259"
+msgid "Crew"
+msgstr ""

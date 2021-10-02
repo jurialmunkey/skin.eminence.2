@@ -47,7 +47,7 @@
                 <posx>-100</posx>
                 <width>900</width>
                 <height>340</height>
-                <texture align="left" border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
+                <texture border="150" colordiffuse="HomeWidgetBG">common/half-tile.png</texture>
             </control>
 
             <control type="grouplist">

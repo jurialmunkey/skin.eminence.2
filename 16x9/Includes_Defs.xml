@@ -103,7 +103,6 @@
                 <width>300</width>
                 <height>72</height>
                 <right>64</right>
-                <width>100%</width>
                 <font>Font-ListInfo-Small</font>
                 <include>Defs_OptionButton</include>
                 <visible>![Control.HasFocus(813$PARAM[id]) | Control.HasFocus(814$PARAM[id]) | Control.HasFocus(815$PARAM[id])]</visible>
@@ -115,7 +114,6 @@
                 <height>72</height>
                 <right>64</right>
                 <textcolor>Selected</textcolor>
-                <width>100%</width>
                 <font>Font-ListInfo-Small</font>
                 <include>Defs_OptionButton</include>
                 <visible>[Control.HasFocus(813$PARAM[id]) | Control.HasFocus(814$PARAM[id]) | Control.HasFocus(815$PARAM[id])]</visible>
@@ -607,7 +605,7 @@
                     <description>System Info</description>
                     <label>130</label>
                     <label2>$LOCALIZE[154] • $LOCALIZE[705] • $LOCALIZE[157][CR]$LOCALIZE[13281] • $LOCALIZE[31236] • $LOCALIZE[12389]</label2>
-                    <onclick>activatewindow(7)</onclick>
+                    <onclick>activatewindow(systeminfo)</onclick>
                     <icon>special://skin/extras/icons/sysinfo.png</icon>
                 </item>
                 
