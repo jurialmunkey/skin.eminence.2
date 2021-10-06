@@ -113,7 +113,7 @@
                 <height>266</height>
                 <onfocus>SetProperty(MenuFocus,9000,Home)</onfocus>
                 <onup condition="[Skin.HasSetting(home.disableplayercontrols) | !Player.HasMedia] + !Window.IsVisible(PlayerControls.xml)">SetProperty(FO9001,1,home)</onup>
-                <onup condition="[Skin.HasSetting(home.disableplayercontrols) | !Player.HasMedia] + !Window.IsVisible(PlayerControls.xml) + [[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]]">9001</onup>
+                <onup condition="[Skin.HasSetting(home.disableplayercontrols) | !Player.HasMedia] + !Window.IsVisible(PlayerControls.xml) + [[!String.IsEmpty(Container(9000).ListItem.Property(widget))] | [String.IsEmpty(Container(9000).ListItem.Property(widget))]]">9001</onup>
                 <onup condition="Player.HasMedia + !Window.IsVisible(PlayerControls.xml) + !Skin.HasSetting(home.disableplayercontrols)">9005</onup>
                 <ondown condition="Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml)">9002</ondown>
                 <ondown condition="!Integer.IsGreater(Container(9002).NumItems,0) + !Window.IsVisible(PlayerControls.xml) + !Skin.HasSetting(DisableShowcase)">ActivateWindow(1131)</ondown>
@@ -566,7 +566,7 @@
             <posy>20</posy>
             <width>650</width>
             <orientation>vertical</orientation>
-            <visible>[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]</visible>
+            <visible>[!String.IsEmpty(Container(9000).ListItem.Property(widget))] | [String.IsEmpty(Container(9000).ListItem.Property(widget))]</visible>
             <control type="label">
                 <label>$VAR[Label_HomeWidget]</label>
                 <aligny>top</aligny>
@@ -781,7 +781,7 @@
 
                 <!-- Player Controls -->
                 <control type="grouplist" id="9005">
-                    <onup condition="Integer.IsGreater(Container(9001).NumItems,0) + [[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]]">9001</onup>
+                    <onup condition="Integer.IsGreater(Container(9001).NumItems,0) + [[!String.IsEmpty(Container(9000).ListItem.Property(widget))] | [String.IsEmpty(Container(9000).ListItem.Property(widget))]]">9001</onup>
                     <ondown>9000</ondown>
                     <visible allowhiddenfocus="true">ControlGroup(9005).HasFocus()</visible>
                     <orientation>horizontal</orientation>
