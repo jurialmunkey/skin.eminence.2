@@ -1100,3 +1100,58 @@ msgstr ""
 msgctxt "#31259"
 msgid "Crew"
 msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31260"
+msgid "Default Widgets"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31261"
+msgid "Skin Helper Widgets"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31262"
+msgid "Nodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31263"
+msgid "Top Rated"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31264"
+msgid "Random Artists"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31265"
+msgid "Active Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31266"
+msgid "Grouped Active Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31267"
+msgid "Grouped Deleted Recordings"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31268"
+msgid "Picture sources"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31269"
+msgid "Video sources"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31270"
+msgid "Music sources"
+msgstr ""

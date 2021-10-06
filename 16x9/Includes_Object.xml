@@ -188,7 +188,7 @@
         <control type="group">
             <width>220</width>
             <height>320</height>
-            <visible>!String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
+            <visible>!String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) | !String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
             <control type="image">
                 <centerleft>50%</centerleft>
                 <width>220</width>
@@ -196,8 +196,8 @@
                 <top>0</top>
                 <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
                 <bordersize>10</bordersize>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
+                <aspectratio>scale</aspectratio>
+                <texture fallback="DefaultWidgetVideo.png">$VAR[Image_Widget_Poster_C9001_$PARAM[id]]</texture>
                 <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
             </control>
@@ -207,17 +207,22 @@
                 <bottom>pad</bottom>
                 <width>200</width>
                 <control type="image">
-                    <aspectratio>keep</aspectratio>
+                    <aspectratio>scale</aspectratio>
                     <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
-                    <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
+                    <texture fallback="DefaultWidgetVideo.png">$VAR[Image_Widget_Poster_C9001_$PARAM[id]]</texture>
                     <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 </control>
             </control>
+            <include content="Defs_WatchedOverlay">
+                <param name="pos" value="$PARAM[id]" />
+                <param name="affix" value="_C9001" />
+                <param name="container" value="Container(9001)." />
+            </include>
         </control>
         <control type="group">
             <width>220</width>
             <height>320</height>
-            <visible>!String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) + String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
+            <visible>String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) + String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
             <control type="image">
                 <centerleft>50%</centerleft>
                 <width>220</width>
@@ -226,8 +231,7 @@
                 <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
                 <bordersize>10</bordersize>
                 <aspectratio>keep</aspectratio>
-
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
+                <texture fallback="DefaultWidgetVideo.png">$VAR[Image_Widget_Poster_C9001_$PARAM[id]]</texture>
                 <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 <visible>$PARAM[focuseditem]</visible>
             </control>
@@ -239,42 +243,11 @@
                 <control type="image">
                     <aspectratio>keep</aspectratio>
                     <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
-                    <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
+                    <texture fallback="DefaultWidgetVideo.png">$VAR[Image_Widget_Poster_C9001_$PARAM[id]]</texture>
                     <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
                 </control>
             </control>
         </control>
-        <control type="group">
-            <width>220</width>
-            <height>320</height>
-            <visible>String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)) + String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster))</visible>
-            <visible>[!String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Container(9000).ListItem.Property(widgetTarget),pictures)] | [String.IsEmpty(Container(9000).ListItem.Property(widget)) + !String.IsEqual(Skin.String(home.fallbackwidget.target),pictures)]</visible>
-            <control type="image">
-                <centerleft>50%</centerleft>
-                <width>220</width>
-                <bottom>0</bottom>
-                <top>0</top>
-                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
-                <bordersize>10</bordersize>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
-                <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
-                <visible>$PARAM[focuseditem]</visible>
-            </control>
-            <control type="group">
-                <centerleft>50%</centerleft>
-                <top>pad</top>
-                <bottom>pad</bottom>
-                <width>200</width>
-                <control type="image">
-                    <aspectratio>keep</aspectratio>
-                    <include condition="!Skin.HasSetting(global.hideobjectshadows) + !String.IsEqual(Skin.CurrentColourTheme,Light)">Object_Background_Shadows</include>
-                    <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
-                    <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
-                </control>
-            </control>
-        </control>
-
     </include>
     <include name="Object_Arrows_Vertical">
         <description>Nothing For Now</description>

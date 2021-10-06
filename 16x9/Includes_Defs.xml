@@ -183,21 +183,23 @@
 
     <include name="Defs_WatchedOverlay">
         <param name="pos" default="0" />
+        <param name="affix" default="" />
+        <param name="container" default="" />
         <definition>
             <control type="image">
                 <top>10</top>
                 <right>10</right>
                 <width>56</width>
                 <height>56</height>
-                <texture colordiffuse="ff000000">$VAR[Image_Overlay_Corner_$PARAM[pos]]</texture>
+                <texture colordiffuse="ff000000">$VAR[Image_Overlay_Corner$PARAM[affix]_$PARAM[pos]]</texture>
             </control>
             <control type="image">
                 <top>12</top>
                 <right>12</right>
                 <width>28</width>
                 <height>28</height>
-                <texture>$VAR[Image_Overlay_$PARAM[pos]]</texture>
-                <visible>![Skin.HasSetting(Indicator.UnwatchedEpisodes) + Integer.IsGreater(ListItem($PARAM[pos]).Property(UnWatchedEpisodes),0) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+                <texture>$VAR[Image_Overlay$PARAM[affix]_$PARAM[pos]]</texture>
+                <visible>![Skin.HasSetting(Indicator.UnwatchedEpisodes) + Integer.IsGreater($PARAM[container]ListItem($PARAM[pos]).Property(UnWatchedEpisodes),0)]</visible>
             </control>
             <control type="label">
                 <top>12</top>
@@ -207,8 +209,8 @@
                 <font>Font-NumEpisodes</font>
                 <align>center</align>
                 <textcolor>ffcccccc</textcolor>
-                <label>$INFO[ListItem($PARAM[pos]).Property(UnWatchedEpisodes)]</label>
-                <visible>Skin.HasSetting(Indicator.UnwatchedEpisodes) + Integer.IsGreater(ListItem($PARAM[pos]).Property(UnWatchedEpisodes),0) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
+                <label>$INFO[$PARAM[container]ListItem($PARAM[pos]).Property(UnWatchedEpisodes)]</label>
+                <visible>Skin.HasSetting(Indicator.UnwatchedEpisodes) + Integer.IsGreater($PARAM[container]ListItem($PARAM[pos]).Property(UnWatchedEpisodes),0)</visible>
             </control>
         </definition>
     </include>
