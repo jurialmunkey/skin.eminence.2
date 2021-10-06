@@ -17,6 +17,7 @@
     <include file="Includes_Window.xml" />
     <include file="Includes_VideoLyrics.xml" />
     <include file="script-skinshortcuts-includes.xml"/>
+    <include file="script-skinvariables-includes.xml"/>
     <include file="Viewtype_List.xml" />
     <include file="Viewtype_Icon.xml" />
     <include file="Viewtype_BigIcon.xml" />
