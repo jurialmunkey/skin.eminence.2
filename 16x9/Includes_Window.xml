@@ -1454,6 +1454,7 @@
             <enable>PVR.CanRecordPlayingChannel</enable>
             <visible>VideoPlayer.Content(LiveTV)</visible>
             <animation effect="fade" start="100" end="33" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
+            <include>Defs_OSD_Focus</include>
         </control>
 
         <control type="button" id="12">
@@ -1465,6 +1466,7 @@
             <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
             <onclick>PlayerControl(Previous)</onclick>
+            <include>Defs_OSD_Focus</include>
         </control>
 
         <control type="button" id="13">
@@ -1476,6 +1478,7 @@
             <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
             <onclick>PlayerControl(Rewind)</onclick>
+            <include>Defs_OSD_Focus</include>
         </control>
 
         <control type="togglebutton" id="14">
@@ -1491,6 +1494,7 @@
             <alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
             <alttexturenofocus colordiffuse="LineLabel">osd/play.png</alttexturenofocus>
             <onclick>PlayerControl(Play)</onclick>
+            <include>Defs_OSD_Focus</include>
         </control>
 
         <control type="button" id="15">
@@ -1502,6 +1506,7 @@
             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
             <onclick>PlayerControl(Stop)</onclick>
+            <include>Defs_OSD_Focus</include>
         </control>
 
         <control type="button" id="16">
@@ -1513,6 +1518,7 @@
             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
             <onclick>PlayerControl(Forward)</onclick>
+            <include>Defs_OSD_Focus</include>
         </control>
 
         <control type="button" id="17">
@@ -1524,6 +1530,7 @@
             <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
             <texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
             <onclick>PlayerControl(Next)</onclick>
+            <include>Defs_OSD_Focus</include>
         </control>
     </include>
     <include name="Window_OSD">

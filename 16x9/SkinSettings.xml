@@ -544,6 +544,37 @@
                             <selected>Skin.HasSetting(osd.showclearart)</selected>
                             <onclick>Skin.ToggleSetting(osd.showclearart)</onclick>
                         </control>
+
+                        <!-- Auto close osd -->
+                        <control type="radiobutton" id="8349" description="Auto closes OSD">
+                            <visible>ControlGroup(8000).HasFocus(8003)</visible>
+                            <width>100%</width>
+                            <radioposx>settingsradioposx</radioposx>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <label>$LOCALIZE[31278]</label>
+                            <label2>$INFO[Skin.String(OSD_Timeout),,       ]</label2>
+                            <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+                            <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[13170])</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(OSD_Timeout))</onclick>
+                            <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
+                            <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31271]))</onclick>
+                            <onclick>SetProperty(Dialog.3.Label,$LOCALIZE[31272])</onclick>
+                            <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31272]))</onclick>
+                            <onclick>SetProperty(Dialog.4.Label,$LOCALIZE[31273])</onclick>
+                            <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31273]))</onclick>
+                            <onclick>SetProperty(Dialog.5.Label,$LOCALIZE[31274])</onclick>
+                            <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31274]))</onclick>
+                            <onclick>SetProperty(Dialog.6.Label,$LOCALIZE[31275])</onclick>
+                            <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31275]))</onclick>
+                            <onclick>SetProperty(Dialog.7.Label,$LOCALIZE[31276])</onclick>
+                            <onclick>SetProperty(Dialog.7.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31276]))</onclick>
+                            <onclick>SetProperty(Dialog.8.Label,$LOCALIZE[31277])</onclick>
+                            <onclick>SetProperty(Dialog.8.BuiltIn,Skin.SetString(OSD_Timeout,$LOCALIZE[31277]))</onclick>
+                            <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31278])</onclick>>
+                            <selected>!String.IsEmpty(Skin.String(OSD_Timeout))</selected>
+                        </control>
+
                         <!-- Div -->
                         <control type="image" id="8306">
                             <width>100%</width>

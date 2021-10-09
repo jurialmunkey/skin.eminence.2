@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <include name="Defs_Offscreen">
+        <top>-1000</top>
+        <left>-1000</left>
+        <width>1</width>
+        <height>1</height>
+    </include>
+    <include name="Defs_Offscreen_Button">
+        <include>Defs_Offscreen</include>
+        <texturefocus />
+        <texturenofocus />
+        <font />
+    </include>
+    <include name="Defs_Hidden_Button">
+        <include>Defs_Offscreen_Button</include>
+        <visible allowhiddenfocus="true">False</visible>
+    </include>
+
+    <include name="Defs_OSD_Focus">
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31271])">AlarmClock(osd_timeout,SetFocus(99220),00:03,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31272])">AlarmClock(osd_timeout,SetFocus(99220),00:05,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31273])">AlarmClock(osd_timeout,SetFocus(99220),00:10,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31274])">AlarmClock(osd_timeout,SetFocus(99220),00:15,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31275])">AlarmClock(osd_timeout,SetFocus(99220),00:20,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31276])">AlarmClock(osd_timeout,SetFocus(99220),00:30,silent)</onfocus>
+        <onfocus condition="Skin.String(OSD_Timeout,$LOCALIZE[31277])">AlarmClock(osd_timeout,SetFocus(99220),01:00,silent)</onfocus>
+        <onunfocus>CancelAlarm(osd_timeout,true)</onunfocus>
+    </include>
+
     <include name="Defs_HeaderDimensions">
         <top>-28</top>
         <left>-92</left>
@@ -312,6 +340,7 @@
         <texturefocus />
         <alttexturenofocus />
         <alttexturefocus />
+        <include>Defs_OSD_Focus</include>
     </include>
     <include name="Defs_KeyboardButton">
         <width>110</width>
