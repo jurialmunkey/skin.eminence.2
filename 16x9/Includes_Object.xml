@@ -188,7 +188,7 @@
         <control type="group">
             <width>220</width>
             <height>320</height>
-            <visible>!String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) | !String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
+            <visible>[!String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) | !String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))] + [String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,episode) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,tvshow) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,season) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,set) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,movie)]</visible>
             <control type="image">
                 <centerleft>50%</centerleft>
                 <width>220</width>
@@ -222,7 +222,7 @@
         <control type="group">
             <width>220</width>
             <height>320</height>
-            <visible>String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) + String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
+            <visible>![[!String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) | !String.IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))] + [String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,episode) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,tvshow) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,season) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,set) | String.IsEqual(Container(9001).ListItem($PARAM[id]).DBType,movie)]]</visible>
             <control type="image">
                 <centerleft>50%</centerleft>
                 <width>220</width>
