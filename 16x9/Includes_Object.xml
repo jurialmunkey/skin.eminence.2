@@ -475,12 +475,392 @@
             </control>
         </definition>
     </include>
+
+    <include name="Object_Alphabet_Horz_ItemGap_Wide">
+        <itemgap>6</itemgap>
+    </include>
+
+    <include name="Object_Alphabet_Horz">
+        <param name="id" default="63" />
+        <param name="visible" default="true" />
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <centertop>50%</centertop>
+                <visible>$PARAM[visible]</visible>
+                <font />
+                <texturefocus />
+                <texturenofocus />
+                <height>44</height>
+                <ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
+                <onup>61</onup>
+                <onback>50</onback>
+                <onright>SetFocus(50)</onright>
+                <onright>Action(nextletter)</onright>
+                <!-- <onright condition="!Container.HasNext | String.IsEqual(ListItem.SortLetter,Z)">Action(jumpsms2)</onright>
+                <onright condition="!Container.HasNext | String.IsEqual(ListItem.SortLetter,Z)">Action(prevletter)</onright>
+                <onright condition="!Container.HasNext | String.IsEqual(ListItem.SortLetter,Z)">Action(prevletter)</onright>
+                <onright condition="!Container.HasNext | String.IsEqual(ListItem.SortLetter,Z)">Action(prevletter)</onright> -->
+                <onright>SetFocus($PARAM[id])</onright>
+                <onleft>SetFocus(50)</onleft>
+                <onleft>Action(prevletter)</onleft>
+                <!-- <onleft condition="!Container.HasPrevious | !$EXP[Exp_SortLetterIsAlphabet]">Action(jumpsms9)</onleft>
+                <onleft condition="!Container.HasPrevious | !$EXP[Exp_SortLetterIsAlphabet]">Action(nextletter)</onleft>
+                <onleft condition="!Container.HasPrevious | !$EXP[Exp_SortLetterIsAlphabet]">Action(nextletter)</onleft>
+                <onleft condition="!Container.HasPrevious | !$EXP[Exp_SortLetterIsAlphabet]">Action(nextletter)</onleft> -->
+                <onleft>SetFocus($PARAM[id])</onleft>
+            </control>
+
+            <control type="grouplist">
+                <centertop>50%</centertop>
+                <height>44</height>
+                <visible>$PARAM[visible]</visible>
+                <include condition="Skin.HasSetting(global.widescreen)">Object_Alphabet_Horz_ItemGap_Wide</include>
+                <itemgap>1</itemgap>
+                <orientation>horizontal</orientation>
+                <include content="Object_AlphabetNumber">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="A" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="B" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="C" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="D" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="E" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="F" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="G" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="H" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="I" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="J" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="K" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="L" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="M" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="N" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="O" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="P" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="Q" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="R" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="S" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="T" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="U" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="V" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="W" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="X" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="Y" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="Z" />
+                </include>
+                <animation effect="fade" condition="!Control.HasFocus(61) + !Control.HasFocus($PARAM[id]) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_Alphabet_Vert">
+        <param name="id" default="62" />
+        <param name="visible" default="true" />
+        <definition>
+            <control type="button" id="$PARAM[id]">
+                <centerleft>50%</centerleft>
+                <visible>$PARAM[visible]</visible>
+                <font />
+                <texturefocus />
+                <texturenofocus />
+                <width>64</width>
+                <onleft condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <onright>60</onright>
+                <onback>50</onback>
+                <ondown>SetFocus(50)</ondown>
+                <ondown condition="Container.HasNext">Action(nextletter)</ondown>
+                <!-- <ondown condition="!Container.HasNext | String.IsEqual(ListItem.SortLetter,Z)">Action(jumpsms2)</ondown>
+                <ondown condition="!Container.HasNext | String.IsEqual(ListItem.SortLetter,Z)">Action(prevletter)</ondown>
+                <ondown condition="!Container.HasNext | String.IsEqual(ListItem.SortLetter,Z)">Action(prevletter)</ondown>
+                <ondown condition="!Container.HasNext | String.IsEqual(ListItem.SortLetter,Z)">Action(prevletter)</ondown> -->
+                <ondown>SetFocus($PARAM[id])</ondown>
+                <onup>SetFocus(50)</onup>
+                <onup>Action(prevletter)</onup>
+                <!-- <onup condition="!Container.HasPrevious | !$EXP[Exp_SortLetterIsAlphabet]">Action(jumpsms9)</onup>
+                <onup condition="!Container.HasPrevious | !$EXP[Exp_SortLetterIsAlphabet]">Action(nextletter)</onup>
+                <onup condition="!Container.HasPrevious | !$EXP[Exp_SortLetterIsAlphabet]">Action(nextletter)</onup>
+                <onup condition="!Container.HasPrevious | !$EXP[Exp_SortLetterIsAlphabet]">Action(nextletter)</onup> -->
+                <onup>SetFocus($PARAM[id])</onup>
+            </control>
+
+            <control type="grouplist">
+                <centerleft>50%</centerleft>
+                <width>64</width>
+                <visible>$PARAM[visible]</visible>
+                <itemgap>8</itemgap>
+                <orientation>vertical</orientation>
+                <include content="Object_AlphabetNumber">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="A" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="B" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="C" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="D" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="E" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="F" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="G" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="H" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="I" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="J" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="K" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="L" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="M" />
+                </include>
+                <visible>![String.IsEqual(ListItem.SortLetter,N) | String.IsEqual(ListItem.SortLetter,O) | String.IsEqual(ListItem.SortLetter,P) | String.IsEqual(ListItem.SortLetter,Q) | String.IsEqual(ListItem.SortLetter,R) | String.IsEqual(ListItem.SortLetter,S) | String.IsEqual(ListItem.SortLetter,T) | String.IsEqual(ListItem.SortLetter,U) | String.IsEqual(ListItem.SortLetter,V) | String.IsEqual(ListItem.SortLetter,W) | String.IsEqual(ListItem.SortLetter,X) | String.IsEqual(ListItem.SortLetter,Y) | String.IsEqual(ListItem.SortLetter,Z)]</visible>
+                <animation effect="fade" condition="!Control.HasFocus(60) + !Control.HasFocus($PARAM[id]) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+            </control>
+            <control type="grouplist">
+                <centerleft>50%</centerleft>
+                <width>64</width>
+                <visible>$PARAM[visible]</visible>
+                <itemgap>8</itemgap>
+                <orientation>vertical</orientation>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="M" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="N" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="O" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="P" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="Q" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="R" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="S" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="T" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="U" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="V" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="W" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="X" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="Y" />
+                </include>
+                <include content="Object_AlphabetLetter">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="label" value="Z" />
+                </include>
+                <visible>String.IsEqual(ListItem.SortLetter,N) | String.IsEqual(ListItem.SortLetter,O) | String.IsEqual(ListItem.SortLetter,P) | String.IsEqual(ListItem.SortLetter,Q) | String.IsEqual(ListItem.SortLetter,R) | String.IsEqual(ListItem.SortLetter,S) | String.IsEqual(ListItem.SortLetter,T) | String.IsEqual(ListItem.SortLetter,U) | String.IsEqual(ListItem.SortLetter,V) | String.IsEqual(ListItem.SortLetter,W) | String.IsEqual(ListItem.SortLetter,X) | String.IsEqual(ListItem.SortLetter,Y) | String.IsEqual(ListItem.SortLetter,Z)</visible>
+                <animation effect="fade" condition="!Control.HasFocus(60) + !Control.HasFocus($PARAM[id]) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_AlphabetLetter_NF">
+        <control type="label">
+            <width>64</width>
+            <height>44</height>
+            <label>$PARAM[label]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>Disabled</textcolor>
+            <font>Font-ListInfo-Small</font>
+            <visible>$PARAM[visible]</visible>
+        </control>
+    </include>
+    <include name="Object_AlphabetLetter_FO">
+        <control type="label">
+            <width>64</width>
+            <height>44</height>
+            <label>[B]$PARAM[label][/B]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>SideArrow</textcolor>
+            <font>Font-Button</font>
+            <visible>$PARAM[visible]</visible>
+            <visible>!Control.HasFocus($PARAM[id])</visible>
+        </control>
+        <control type="label">
+            <width>64</width>
+            <height>44</height>
+            <label>[B]$PARAM[label][/B]</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[HighlightColor]</textcolor>
+            <font>Font-Button</font>
+            <visible>$PARAM[visible]</visible>
+            <visible>Control.HasFocus($PARAM[id])</visible>
+        </control>
+    </include>
+
+    <include name="Object_AlphabetLetter">
+        <include content="Object_AlphabetLetter_NF">
+            <param name="label" value="$PARAM[label]" />
+            <param name="visible" value="!String.IsEqual(ListItem.SortLetter,$PARAM[label])" />
+        </include>
+        <include content="Object_AlphabetLetter_FO">
+            <param name="label" value="$PARAM[label]" />
+            <param name="id" value="$PARAM[id]" />
+            <param name="visible" value="String.IsEqual(ListItem.SortLetter,$PARAM[label])" />
+        </include>
+    </include>
+
+    <include name="Object_AlphabetNumber">
+        <include content="Object_AlphabetLetter_NF">
+            <param name="label" value="#" />
+            <param name="visible" value="$EXP[Exp_SortLetterIsAlphabet]" />
+        </include>
+        <include content="Object_AlphabetLetter_FO">
+            <param name="label" value="#" />
+            <param name="visible" value="!$EXP[Exp_SortLetterIsAlphabet]" />
+        </include>
+    </include>
+
+
     <include name="Object_Scrollbar">
         <param name="left" default="0" />
         <param name="visible" default="true" />
         <definition>
             <control type="scrollbar" id="60">
-                <onleft condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <onleft condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(global.widescreen)">62</onleft>
+                <onleft condition="Skin.HasSetting(furniture.alphabet) + Skin.HasSetting(global.widescreen)">63</onleft>
+                <onleft condition="!String.IsEqual(Window(home).Property(HubReturn),Home) + !Skin.HasSetting(furniture.alphabet)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+
                 <left>$PARAM[left]</left>
                 <height>100%</height>
                 <onright>50</onright>
@@ -495,9 +875,11 @@
         <param name="visible" default="true" />
         <definition>
             <control type="scrollbar" id="61">
-                <ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
+                <ondown condition="Skin.HasSetting(furniture.alphabet) + Skin.HasSetting(furniture.showflags)">62</ondown>
+                <ondown condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(furniture.showflags)">63</ondown>
+                <ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home) + !Skin.HasSetting(furniture.alphabet)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
                 <onup>50</onup>
-                <bottom>-20</bottom>
+                <bottom>0</bottom>
                 <orientation>horizontal</orientation>
                 <centerleft>50%</centerleft>
                 <width>headlinew</width>

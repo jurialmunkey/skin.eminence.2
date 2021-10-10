@@ -864,6 +864,18 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
                         </control>
+                        <!-- Alphabet Strip -->
+                        <control type="radiobutton" id="8542">
+                            <radioposx>settingsradioposx</radioposx>
+                            <width>100%</width>
+                            <label>$LOCALIZE[31279]</label>
+                            <selected>Skin.HasSetting(furniture.alphabet)</selected>
+                            <onclick>Skin.ToggleSetting(furniture.alphabet)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                            <enable>!Skin.HasSetting(global.widescreen) | !Skin.HasSetting(furniture.showflags)</enable>
+                        </control>
                         <!-- Show Path in Info Dialog -->
                         <control type="radiobutton" id="8519">
                             <radioposx>settingsradioposx</radioposx>

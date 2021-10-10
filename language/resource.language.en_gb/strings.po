@@ -1195,3 +1195,8 @@ msgstr ""
 msgctxt "#31278"
 msgid "Auto-close OSD"
 msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31279"
+msgid "Show alphabet strip with scrollbar"
+msgstr ""
