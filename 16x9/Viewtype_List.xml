@@ -749,7 +749,7 @@
                     <width>32</width>
                     <textcolor>ListLabel</textcolor>
                     <texture colordiffuse="ListLabel">$VAR[Image_Indicator_List]</texture>
-                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + $PARAM[label2]</visible>
                 </control>
 
                 <!-- Main Label -->
@@ -760,7 +760,7 @@
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + $PARAM[label2]</visible>
                 </control>
                 <control type="label">
                     <left>30</left>
@@ -769,7 +769,7 @@
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>String.IsEmpty(ListItem.Overlay) | Container.Content(seasons) | Container.Content(sets) | !$PARAM[label2]</visible>
+                    <visible>String.IsEmpty(ListItem.Overlay) | !$PARAM[label2]</visible>
                 </control>
 
                 <!-- Label 2 -->
@@ -783,7 +783,7 @@
                     <textcolor>ListLabel</textcolor>
                     <label>$INFO[ListItem.Label2]</label>
                     <visible>!$PARAM[label3] + !Skin.HasSetting(lists.dontshowextralabels)</visible>
-                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>$PARAM[label2]</visible>
                 </control>
             </control>
         </definition>
@@ -917,7 +917,7 @@
                     <width>32</width>
                     <textcolor>Selected</textcolor>
                     <texture colordiffuse="Selected">$VAR[Image_Indicator_List]</texture>
-                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + $PARAM[label2]</visible>
                 </control>
 
                 <!-- Main Label -->
@@ -928,7 +928,7 @@
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>!String.IsEmpty(ListItem.Overlay) + $PARAM[label2]</visible>
                 </control>
                 <control type="label">
                     <left>30</left>
@@ -937,7 +937,7 @@
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
                     <label>$INFO[ListItem.Label]</label>
-                    <visible>String.IsEmpty(ListItem.Overlay) | Container.Content(seasons) | Container.Content(sets) | !$PARAM[label2]</visible>
+                    <visible>String.IsEmpty(ListItem.Overlay) | !$PARAM[label2]</visible>
                 </control>
 
                 <!-- Label 2 -->
@@ -951,7 +951,7 @@
                     <textcolor>Selected</textcolor>
                     <label>$INFO[ListItem.Label2]</label>
                     <visible>!$PARAM[label3] + !Skin.HasSetting(lists.dontshowextralabels)</visible>
-                    <visible>!String.IsEmpty(ListItem.Overlay) + !Container.Content(seasons) + !Container.Content(sets) + $PARAM[label2]</visible>
+                    <visible>$PARAM[label2]</visible>
                 </control>
             </control>
         </definition>
