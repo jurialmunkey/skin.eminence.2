@@ -214,10 +214,18 @@
 
                         <!-- Update Addon Button -->
                         <control type="button" id="8">
-                            <label>24069</label>
+                            <label>24138</label>
                             <font>Font-ListInfo-Small-Bold</font>
                             <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(8)</visible>
+                        </control>
+
+                        <!-- Versions -->
+                        <control type="button" id="14">
+                            <label>24069</label>
+                            <font>Font-ListInfo-Small-Bold</font>
+                            <include>Defs_OptionButton3</include>
+                            <visible>Control.IsEnabled(14)</visible>
                         </control>
 
                         <!-- Auto Updates -->
