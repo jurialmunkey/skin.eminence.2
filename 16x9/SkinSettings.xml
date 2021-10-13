@@ -943,15 +943,17 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
                         </control>
-                        <!-- Extrafanart -->
-                        <!-- <control type="radiobutton" id="8509">
+                        <!-- Landscape Artwork -->
+                        <control type="radiobutton" id="8509">
                             <radioposx>settingsradioposx</radioposx>
                             <width>100%</width>
-                            <label>31231</label>
+                            <label>$LOCALIZE[31280]</label>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
-                        </control> -->
+                            <onclick>Skin.ToggleSetting(artwork.landscape)</onclick>
+                            <selected>Skin.HasSetting(artwork.landscape)</selected>
+                        </control>
                         <!-- Div Indicators Label -->
                         <control type="image" id="8510">
                             <width>100%</width>
