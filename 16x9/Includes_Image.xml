@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Image_AudioCodec">
+        <value condition="!String.IsEmpty(ListItem.AudioCodec)">$INFO[ListItem.AudioCodec,indicator/audio/,.png]</value>
+        <value>$INFO[ListItem.FileExtension,indicator/audio/,.png]</value>
+    </variable>
+    <variable name="Image_AudioChannels">
+        <value condition="!String.IsEmpty(ListItem.AudioChannels)">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</value>
+        <value condition="!String.IsEmpty(ListItem.MusicChannels)">$INFO[ListItem.MusicChannels,indicator/channels/,.png]</value>
+    </variable>
+
     <variable name="Image_ClearArtOSD">
         <value condition="!String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
         <value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>

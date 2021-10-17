@@ -375,8 +375,62 @@
                 <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
-                <visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
+                <visible>!String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(ListItem.MusicChannels)</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$VAR[Image_AudioChannels]</texture>
+            </control>
+
+            <!-- Bitrate -->
+            <control type="group">
+                <width>64</width>
+                <height>64</height>
+                <visible>!String.IsEmpty(ListItem.Bitrate)</visible>
+                <control type="label">
+                    <width>auto</width>
+                    <height>32</height>
+                    <top>6</top>
+                    <textcolor>LineLabel</textcolor>
+                    <font>Font-LineLabel-Bitrate</font>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <label>$INFO[ListItem.Bitrate]</label>
+                </control>
+                <control type="label">
+                    <width>auto</width>
+                    <height>32</height>
+                    <bottom>6</bottom>
+                    <textcolor>LineLabel</textcolor>
+                    <font>Font-LineLabel-Kbps</font>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <label>kbps</label>
+                </control>
+            </control>
+
+            <!-- MPAA -->
+            <control type="group">
+                <width>64</width>
+                <height>64</height>
+                <visible>!String.IsEmpty(ListItem.SampleRate)</visible>
+                <control type="label">
+                    <width>auto</width>
+                    <height>32</height>
+                    <top>6</top>
+                    <textcolor>LineLabel</textcolor>
+                    <font>Font-LineLabel-Kbps</font>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <label>$INFO[ListItem.SampleRate]</label>
+                </control>
+                <control type="label">
+                    <width>auto</width>
+                    <height>32</height>
+                    <bottom>6</bottom>
+                    <textcolor>LineLabel</textcolor>
+                    <font>Font-LineLabel-Bitrate</font>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <label>kHz</label>
+                </control>
             </control>
 
             <!-- Audio Codec -->
@@ -384,8 +438,8 @@
                 <width>64</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
-                <visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioCodec,indicator/audio/,.png]</texture>
+                <visible>!String.IsEmpty(ListItem.AudioCodec) | [String.IsEqual(ListItem.DBType,song) + !String.IsEmpty(ListITem.FileExtension)]</visible>
+                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$VAR[Image_AudioCodec]</texture>
             </control>
 
             
