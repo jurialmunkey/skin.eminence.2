@@ -11,6 +11,7 @@
         <include>Furniture_TopBar</include>
         <control type="group">
             <include>Defs_ViewBackground</include>
+
             <control type="group" id="50">
                 <control type="group">
                     <visible>Control.IsVisible(10)</visible>
@@ -20,7 +21,48 @@
                     <height>posterh</height>
                     <include>Animation_Common</include>
                     <include>Object_Background</include>
+                    <control type="list" id="11">
+                        <left>0</left>
+                        <top>-70</top>
+                        <height>70</height>
+                        <ondown>10</ondown>
+                        <onup>10</onup>
+                        <orientation>horizontal</orientation>
+                        <itemlayout width="210" height="70">
+                            <control type="label">
+                                <width>200</width>
+                                <align>left</align>
+                                <aligny>top</aligny>
+                                <font>Font-OSD</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textcolor>SideArrow</textcolor>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout width="210" height="70">
+                            <control type="label">
+                                <width>200</width>
+                                <align>left</align>
+                                <aligny>top</aligny>
+                                <font>Font-OSD</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textcolor>LineLabel</textcolor>
+                                <visible>!Control.HasFocus(11)</visible>
+                            </control>
+                            <control type="label">
+                                <top>-2</top>
+                                <width>200</width>
+                                <align>left</align>
+                                <aligny>top</aligny>
+                                <font>Font-ListInfo-Small-Bold</font>
+                                <label>$INFO[ListItem.Label]</label>
+                                <textcolor>$VAR[HighlightColor2]</textcolor>
+                                <visible>Control.HasFocus(11)</visible>
+                            </control>
+                        </focusedlayout>
+                    </control>
                     <control type="epggrid" id="10" description="EPG">
+                        <onup>11</onup>
+                        <ondown>11</ondown>
                         <left>0</left>
                         <top>-70</top>
                         <width>headlinew</width>
@@ -83,11 +125,18 @@
                             </control>
                         </channellayout>
                         <focusedchannellayout height="70" width="460">
-
+                            <control type="image" id="2">
+                                <width>100%</width>
+                                <height>67</height>
+                                <texture>common/white.png</texture>
+                                <colordiffuse>PosterBorder</colordiffuse>
+                                <visible>Control.HasFocus(11)</visible>
+                            </control>
                             <control type="image">
                                 <width>100%</width>
                                 <height>67</height>
                                 <texture border="12" colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+                                <visible>!Control.HasFocus(11)</visible>
                             </control>
                             <control type="image">
                                 <width>100%</width>
@@ -177,12 +226,28 @@
                             </control>
                         </itemlayout>
                         <focusedlayout height="70" width="284">
+                            <control type="image" id="2">
+                                <width>280</width>
+                                <height>67</height>
+                                <texture border="5">common/white.png</texture>
+                                <colordiffuse>PosterBorder</colordiffuse>
+                                <visible>Control.HasFocus(11)</visible>
+                            </control>
+                            <control type="image" id="2">
+                                <width>280</width>
+                                <height>67</height>
+                                <texture>pvrgenre/$INFO[ListItem.Property(GenreType)].png</texture>
+                                <aspectratio>scale</aspectratio>
+                                <colordiffuse>5fffffff</colordiffuse>
+                                <visible>Control.HasFocus(11)</visible>
+                            </control>
 
                             <control type="image" id="2">
                                 <width>280</width>
                                 <height>67</height>
                                 <texture border="5">common/white.png</texture>
                                 <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+                                <visible>!Control.HasFocus(11)</visible>
                             </control>
 
                             <control type="image">
