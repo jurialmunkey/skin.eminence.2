@@ -899,6 +899,36 @@
             </control>
         </definition>
     </include>
+
+    <include name="Object_View_Scrollbars">
+        <control type="group">
+            <left>bigpad</left>
+            <right>bigpad</right>
+            <top>bigpad</top>
+            <height>posterh</height>
+            <control type="group">
+                <left>-84</left>
+                <width>80</width>
+                <include content="Object_Alphabet_Vert" condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(global.widescreen)">
+                    <param name="visible" value="[Skin.HasSetting(furniture.showflags) + [Control.IsVisible(52) | Control.IsVisible(525) | Control.IsVisible(58) | Control.IsVisible(535)]] | [Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(552) | Control.IsVisible(510) | Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(577) | Control.IsVisible(53) | Control.IsVisible(553) | Control.IsVisible(54) | Control.IsVisible(500) | Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(56)]" />
+                </include>
+            </control>
+            <control type="group">
+                <bottom>-80</bottom>
+                <height>80</height>
+                <include content="Object_Alphabet_Horz" condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(furniture.showflags)">
+                    <param name="visible" value="[Control.IsVisible(52) | Control.IsVisible(525) | Control.IsVisible(58) | Control.IsVisible(535)] | [Skin.HasSetting(global.widescreen) + [Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(552) | Control.IsVisible(510) | Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(577) | Control.IsVisible(53) | Control.IsVisible(553) | Control.IsVisible(54) | Control.IsVisible(500) | Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(56)]]" />
+                </include>
+            </control>
+            <include content="Object_Scrollbar">
+                <param name="visible" value="Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(552) | Control.IsVisible(510) | Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(577) | Control.IsVisible(53) | Control.IsVisible(553) | Control.IsVisible(54) | Control.IsVisible(500) | Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(56)" />
+            </include>
+            <include content="Object_Scrollbar_Horizontal">
+                <param name="visible" value="Control.IsVisible(52) | Control.IsVisible(525) | Control.IsVisible(58) | Control.IsVisible(535)" />
+            </include>
+        </control>
+    </include>
+
     <include name="Object_Background_Shadows_BorderTexture">
         <bordertexture border="32">common/24-shadow.png</bordertexture>
     </include>
