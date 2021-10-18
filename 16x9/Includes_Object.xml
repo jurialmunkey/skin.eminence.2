@@ -387,6 +387,16 @@
             <onclick>Fullscreen</onclick>
             <visible>Control.IsEnabled(9099)</visible>
         </control>
+
+        <!-- Update -->
+        <control type="button" id="9092">
+            <label>$LOCALIZE[10140]</label>
+            <include condition="!Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2_Horz</include>
+            <include condition="Skin.HasSetting(HorizontalMenus)">Defs_OptionButton2</include>
+            <onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
+            <visible>!String.IsEmpty(Container.PluginName)</visible>
+            <visible>!Skin.HasSetting(KioskMode)</visible>
+        </control>
     </include>
 
     <include name="Object_BasicViewList_PVR">
