@@ -831,7 +831,7 @@
             <label>[B]$PARAM[label][/B]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>$VAR[HighlightColor]</textcolor>
+            <textcolor>$VAR[HighlightColor2]</textcolor>
             <font>Font-Button</font>
             <visible>$PARAM[visible]</visible>
             <visible>Control.HasFocus($PARAM[id])</visible>
@@ -867,9 +867,9 @@
         <param name="visible" default="true" />
         <definition>
             <control type="scrollbar" id="60">
-                <onleft condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(global.widescreen)">62</onleft>
-                <onleft condition="Skin.HasSetting(furniture.alphabet) + Skin.HasSetting(global.widescreen)">63</onleft>
-                <onleft condition="!String.IsEqual(Window(home).Property(HubReturn),Home) + !Skin.HasSetting(furniture.alphabet)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <onleft condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(global.widescreen) + $EXP[Object_Alphabet_Enabled]">62</onleft>
+                <onleft condition="Skin.HasSetting(furniture.alphabet) + Skin.HasSetting(global.widescreen) + $EXP[Object_Alphabet_Enabled]">63</onleft>
+                <onleft condition="!String.IsEqual(Window(home).Property(HubReturn),Home) + [!Skin.HasSetting(furniture.alphabet) | !$EXP[Object_Alphabet_Enabled]]">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
 
                 <left>$PARAM[left]</left>
                 <height>100%</height>
@@ -885,9 +885,9 @@
         <param name="visible" default="true" />
         <definition>
             <control type="scrollbar" id="61">
-                <ondown condition="Skin.HasSetting(furniture.alphabet) + Skin.HasSetting(furniture.showflags)">62</ondown>
-                <ondown condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(furniture.showflags)">63</ondown>
-                <ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home) + !Skin.HasSetting(furniture.alphabet)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
+                <ondown condition="Skin.HasSetting(furniture.alphabet) + Skin.HasSetting(furniture.showflags) + $EXP[Object_Alphabet_Enabled]">62</ondown>
+                <ondown condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(furniture.showflags) + $EXP[Object_Alphabet_Enabled]">63</ondown>
+                <ondown condition="!String.IsEqual(Window(home).Property(HubReturn),Home) + [!Skin.HasSetting(furniture.alphabet) | !$EXP[Object_Alphabet_Enabled]]">ActivateWindow($INFO[Window(home).Property(HubReturn)])</ondown>
                 <onup>50</onup>
                 <bottom>0</bottom>
                 <orientation>horizontal</orientation>
@@ -900,6 +900,8 @@
         </definition>
     </include>
 
+    <expression name="Object_Alphabet_Enabled">[[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])] + Integer.IsGreater(Container.NumPages,1)]</expression>
+
     <include name="Object_View_Scrollbars">
         <control type="group">
             <left>bigpad</left>
@@ -910,14 +912,14 @@
                 <left>-84</left>
                 <width>80</width>
                 <include content="Object_Alphabet_Vert" condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(global.widescreen)">
-                    <param name="visible" value="[Skin.HasSetting(furniture.showflags) + [Control.IsVisible(52) | Control.IsVisible(525) | Control.IsVisible(58) | Control.IsVisible(535)]] | [Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(552) | Control.IsVisible(510) | Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(577) | Control.IsVisible(53) | Control.IsVisible(553) | Control.IsVisible(54) | Control.IsVisible(500) | Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(56)]" />
+                    <param name="visible" value="[[Skin.HasSetting(furniture.showflags) + [Control.IsVisible(52) | Control.IsVisible(525) | Control.IsVisible(58) | Control.IsVisible(535)]] | [Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(552) | Control.IsVisible(510) | Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(577) | Control.IsVisible(53) | Control.IsVisible(553) | Control.IsVisible(54) | Control.IsVisible(500) | Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(56)]] + $EXP[Object_Alphabet_Enabled]" />
                 </include>
             </control>
             <control type="group">
                 <bottom>-80</bottom>
                 <height>80</height>
                 <include content="Object_Alphabet_Horz" condition="Skin.HasSetting(furniture.alphabet) + !Skin.HasSetting(furniture.showflags)">
-                    <param name="visible" value="[Control.IsVisible(52) | Control.IsVisible(525) | Control.IsVisible(58) | Control.IsVisible(535)] | [Skin.HasSetting(global.widescreen) + [Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(552) | Control.IsVisible(510) | Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(577) | Control.IsVisible(53) | Control.IsVisible(553) | Control.IsVisible(54) | Control.IsVisible(500) | Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(56)]]" />
+                    <param name="visible" value="[[Control.IsVisible(52) | Control.IsVisible(525) | Control.IsVisible(58) | Control.IsVisible(535)] | [Skin.HasSetting(global.widescreen) + [Control.IsVisible(50) | Control.IsVisible(550) | Control.IsVisible(552) | Control.IsVisible(510) | Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(577) | Control.IsVisible(53) | Control.IsVisible(553) | Control.IsVisible(54) | Control.IsVisible(500) | Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(56)]]] + $EXP[Object_Alphabet_Enabled]" />
                 </include>
             </control>
             <include content="Object_Scrollbar">
