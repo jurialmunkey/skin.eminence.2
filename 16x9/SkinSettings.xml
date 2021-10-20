@@ -179,6 +179,7 @@
                             <width>100%</width>
                             <label>31147</label>
                             <label2>$VAR[Label_SkinSetting_FallbackWidget]</label2>
+                            <onclick>SetProperty(home.fallbackwidget.name,$INFO[Skin.String(home.fallbackwidget.name)],home)</onclick>
                             <onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=widget&amp;skinWidgetPath=home.fallbackwidget&amp;skinWidget=home.fallbackwidget.node&amp;skinWidgetName=home.fallbackwidget.name&amp;skinWidgetType=home.fallbackwidget.type&amp;skinWidgetTarget=home.fallbackwidget.target)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
