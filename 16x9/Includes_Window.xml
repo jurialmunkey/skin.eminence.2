@@ -1815,25 +1815,113 @@
                                     <label>$INFO[MusicPlayer.Artist]</label>
                                 </control>
                             </control>
-                            <control type="grouplist">
-                                <itemgap>0</itemgap>
-                                <orientation>horizontal</orientation>
+                            <control type="group">
                                 <height>80</height>
                                 <width>100%</width>
-                                <control type="label">
-                                    <aligny>top</aligny>
-                                    <width>80</width>
-                                    <textcolor>HomeSubLabel</textcolor>
-                                    <font>Font-MusicVis-Info</font>
-                                    <label>31201</label>
-                                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                <control type="grouplist">
+                                    <itemgap>0</itemgap>
+                                    <orientation>horizontal</orientation>
+                                    <height>80</height>
+                                    <control type="label">
+                                        <aligny>top</aligny>
+                                        <width>80</width>
+                                        <textcolor>HomeSubLabel</textcolor>
+                                        <font>Font-MusicVis-Info</font>
+                                        <label>31201</label>
+                                        <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    </control>
+                                    <control type="label">
+                                        <aligny>top</aligny>
+                                        <include condition="Skin.HasSetting(furniture.showmusicvisflags)">Defs_OSDAlbumWidth_WithCodec</include>
+                                        <textcolor>HomeSubLabel</textcolor>
+                                        <font>Font-MusicVis-Info</font>
+                                        <label>$INFO[MusicPlayer.Album]</label>
+                                    </control>
                                 </control>
-                                <control type="label">
-                                    <aligny>top</aligny>
-                                    <width>auto</width>
-                                    <textcolor>HomeSubLabel</textcolor>
-                                    <font>Font-MusicVis-Info</font>
-                                    <label>$INFO[MusicPlayer.Album]</label>
+
+
+                                <control type="grouplist">
+                                    <visible>Skin.HasSetting(furniture.showmusicvisflags)</visible>
+                                    <include>Animation_FadeIn</include>
+                                    <include>Animation_FadeOut</include>
+                                    <bottom>20</bottom>
+                                    <align>right</align>
+                                    <height>64</height>
+                                    <orientation>horizontal</orientation>
+                                    <itemgap>bigpad</itemgap>
+                                    <usecontrolcoords>true</usecontrolcoords>
+
+                                    <!-- Audio Channels -->
+                                    <control type="image">
+                                        <width>64</width>
+                                        <height>64</height>
+                                        <aspectratio>keep</aspectratio>
+                                        <visible>!String.IsEmpty(MusicPlayer.Channels)</visible>
+                                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[MusicPlayer.Channels,indicator/channels/,.png]</texture>
+                                    </control>
+
+                                    <!-- Bitrate -->
+                                    <control type="group">
+                                        <width>64</width>
+                                        <height>64</height>
+                                        <visible>!String.IsEmpty(MusicPlayer.Bitrate)</visible>
+                                        <control type="label">
+                                            <width>auto</width>
+                                            <height>32</height>
+                                            <top>6</top>
+                                            <textcolor>LineLabel</textcolor>
+                                            <font>Font-LineLabel-Bitrate</font>
+                                            <aligny>center</aligny>
+                                            <align>center</align>
+                                            <label>$INFO[MusicPlayer.Bitrate]</label>
+                                        </control>
+                                        <control type="label">
+                                            <width>auto</width>
+                                            <height>32</height>
+                                            <bottom>6</bottom>
+                                            <textcolor>LineLabel</textcolor>
+                                            <font>Font-LineLabel-Kbps</font>
+                                            <aligny>center</aligny>
+                                            <align>center</align>
+                                            <label>kbps</label>
+                                        </control>
+                                    </control>
+
+                                    <!-- Sample Rate -->
+                                    <control type="group">
+                                        <width>64</width>
+                                        <height>64</height>
+                                        <visible>!String.IsEmpty(MusicPlayer.SampleRate)</visible>
+                                        <control type="label">
+                                            <width>auto</width>
+                                            <height>32</height>
+                                            <top>6</top>
+                                            <textcolor>LineLabel</textcolor>
+                                            <font>Font-LineLabel-Kbps</font>
+                                            <aligny>center</aligny>
+                                            <align>center</align>
+                                            <label>$INFO[MusicPlayer.SampleRate]</label>
+                                        </control>
+                                        <control type="label">
+                                            <width>auto</width>
+                                            <height>32</height>
+                                            <bottom>6</bottom>
+                                            <textcolor>LineLabel</textcolor>
+                                            <font>Font-LineLabel-Bitrate</font>
+                                            <aligny>center</aligny>
+                                            <align>center</align>
+                                            <label>kHz</label>
+                                        </control>
+                                    </control>
+
+                                    <!-- Audio Codec -->
+                                    <control type="image">
+                                        <width>64</width>
+                                        <height>64</height>
+                                        <aspectratio>keep</aspectratio>
+                                        <visible>!String.IsEmpty(MusicPlayer.Codec)</visible>
+                                        <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[MusicPlayer.Codec,indicator/audio/,.png]</texture>
+                                    </control>
                                 </control>
                             </control>
                         </control>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <include name="Defs_OSDAlbumWidth_WithCodec">
+        <width>580</width>
+    </include>
+
     <include name="Defs_Offscreen">
         <top>-1000</top>
         <left>-1000</left>

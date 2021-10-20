@@ -406,7 +406,7 @@
                 </control>
             </control>
 
-            <!-- MPAA -->
+            <!-- SampleRate -->
             <control type="group">
                 <width>64</width>
                 <height>64</height>

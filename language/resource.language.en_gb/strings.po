@@ -1205,3 +1205,8 @@ msgstr ""
 msgctxt "#31280"
 msgid "Prefer landscape artwork over fanart"
 msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31281"
+msgid "Show media flags with controls"
+msgstr ""
