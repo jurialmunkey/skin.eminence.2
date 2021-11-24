@@ -341,6 +341,7 @@
 
     <!-- Skin Settings VARS -->
     <variable name="Label_SkinSetting_FallbackWidget">
+        <value condition="!String.IsEmpty(Skin.String(widget.background.fallback))">$LOCALIZE[31283]</value>
         <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget.name))">$INFO[Skin.String(home.fallbackwidget.name)]</value>
         <value>$LOCALIZE[31180]</value>
     </variable>

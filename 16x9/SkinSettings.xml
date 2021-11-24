@@ -179,8 +179,21 @@
                             <width>100%</width>
                             <label>31147</label>
                             <label2>$VAR[Label_SkinSetting_FallbackWidget]</label2>
+                            <onclick condition="!String.IsEmpty(Skin.String(widget.background.fallback))">Skin.Reset(widget.background.fallback)</onclick>
                             <onclick>SetProperty(home.fallbackwidget.name,$INFO[Skin.String(home.fallbackwidget.name)],home)</onclick>
                             <onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=widget&amp;skinWidgetPath=home.fallbackwidget&amp;skinWidget=home.fallbackwidget.node&amp;skinWidgetName=home.fallbackwidget.name&amp;skinWidgetType=home.fallbackwidget.type&amp;skinWidgetTarget=home.fallbackwidget.target)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8001)</visible>
+                        </control>
+
+                        <!-- Replace Fallback with Image -->
+                        <control type="button" id="8143">
+                            <width>100%</width>
+                            <label>$LOCALIZE[31282]</label>
+                            <label2>$INFO[Skin.String(widget.background.fallback)]</label2>
+                            <onclick condition="String.IsEmpty(Skin.String(widget.background.fallback))">Skin.SetImage(widget.background.fallback)</onclick>
+                            <onclick condition="!String.IsEmpty(Skin.String(widget.background.fallback))">Skin.Reset(widget.background.fallback)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8001)</visible>

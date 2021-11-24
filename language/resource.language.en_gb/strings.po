@@ -1210,3 +1210,13 @@ msgstr ""
 msgctxt "#31281"
 msgid "Show media flags with controls"
 msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31282"
+msgid "Replace fallback widget with image"
+msgstr ""
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31283"
+msgid "Fallback image"
+msgstr ""

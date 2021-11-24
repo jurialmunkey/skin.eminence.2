@@ -131,8 +131,9 @@
         <value condition="Window.IsVisible(home) + String.IsEqual(Container(9000).ListItem.Property(background),playlistBackground)">$INFO[Container(9988).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Container(9000).ListItem.Property(Background))">$INFO[Container(9000).ListItem.Property(Background)]</value>
         <value condition="Window.IsVisible(home) + Integer.IsGreater(Container(9000).NumItems,0) + String.IsEqual(Skin.String(home.fallbackwidget.target),pictures) + !String.IsEmpty(Container(9001).ListItem.Icon) + String.IsEmpty(Container(9000).ListItem.Property(widget))">$INFO[Container(9001).ListItem.PicturePath]</value>
-        <value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(background.fallback))">special://skin/extras/backgrounds/home.jpg</value>
+        <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(widget.background.fallback))">$INFO[Skin.String(widget.background.fallback)]</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
+        <value condition="Window.IsVisible(home) + String.IsEmpty(Skin.String(background.fallback))">special://skin/extras/backgrounds/home.jpg</value>
 
         <value condition="Skin.HasSetting(background.hidefanart) + String.IsEmpty(Skin.String(background.fallback))">common/black.png</value>
         <value condition="Skin.HasSetting(background.hidefanart) + !String.IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
