@@ -1,0 +1,1101 @@
+# XBMC Media Center language file
+# Addon Name: Eminence 2
+# Addon id: skin.eminence.2
+# Addon Provider: jurialmunkey
+msgid ""
+msgstr ""
+"Project-Id-Version: skin.eminence.2\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-11-20 22:30+0800\n"
+"Last-Translator: taxigps\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#31000"
+msgid "Item"
+msgstr "项目"
+
+msgctxt "#31001"
+msgid "Items"
+msgstr "项目"
+
+msgctxt "#31002"
+msgid "Tag"
+msgstr "标签"
+
+msgctxt "#31003"
+msgid "Next"
+msgstr "下一个"
+
+msgctxt "#31004"
+msgid "Show shadows on panels"
+msgstr "在面板上显示阴影"
+
+msgctxt "#31005"
+msgid "Video OSD"
+msgstr "视频 OSD"
+
+msgctxt "#31006"
+msgid "Show plot when pressing info"
+msgstr "按信息时显示剧情"
+
+msgctxt "#31007"
+msgid "Show media flags"
+msgstr "显示媒体标志"
+
+msgctxt "#31008"
+msgid "Show plot overlay in after delay"
+msgstr "弹出剧情延迟"
+
+msgctxt "#31009"
+msgid "Open playlist"
+msgstr "打开播放列表"
+
+msgctxt "#31010"
+msgid "Save playlist"
+msgstr "保存播放列表"
+
+msgctxt "#31011"
+msgid "Close playlist"
+msgstr "关闭播放列表"
+
+msgctxt "#31012"
+msgid "Current playlist"
+msgstr "当前播放列表"
+
+msgctxt "#31013"
+msgid "Muted"
+msgstr "静音"
+
+msgctxt "#31014"
+msgid "Show header"
+msgstr "显示标题栏"
+
+msgctxt "#31015"
+msgid "Live TV"
+msgstr "直播电视"
+
+msgctxt "#31016"
+msgid "Show widget information"
+msgstr "显示小部件信息"
+
+msgctxt "#31017"
+msgid "Votes"
+msgstr "投票"
+
+msgctxt "#31018"
+msgid "Increase"
+msgstr "增加"
+
+msgctxt "#31019"
+msgid "Decrease"
+msgstr "减少"
+
+msgctxt "#31020"
+msgid "Background"
+msgstr "背景"
+
+msgctxt "#31021"
+msgid "Show fanart"
+msgstr "显示同人画"
+
+#: /16x9/Viewtype_List.xml
+msgctxt "#31022"
+msgid "Media Info 3"
+msgstr "媒体信息3"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31023"
+msgid "Enable animated video lyrics"
+msgstr "启用动画视频歌词"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31024"
+msgid "Enable skin debug info"
+msgstr "启用皮肤调试信息"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31025"
+msgid "Show colour diffuse overlay"
+msgstr "显示彩色漫反射叠加"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31026"
+msgid "Show scrolling background text"
+msgstr "显示滚动背景文本"
+
+msgctxt "#31027"
+msgid "Show background video"
+msgstr "显示背景视频"
+
+msgctxt "#31028"
+msgid "Show background visualisation"
+msgstr "显示背景可视化效果"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31029"
+msgid "Hub fallback widget"
+msgstr "中心回退小部件"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31030"
+msgid "Watched/UnWatched Indicators"
+msgstr "已观看/未观看指示"
+
+msgctxt "#31031"
+msgid "Recent movies"
+msgstr "最近电影"
+
+msgctxt "#31032"
+msgid "Recommended movies"
+msgstr "推荐电影"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31033"
+msgid "Watched / Unwatched Indicators"
+msgstr "已观看/未观看指示"
+
+msgctxt "#31034"
+msgid "Enable Artist Slideshow"
+msgstr "启用歌手幻灯片"
+
+msgctxt "#31035"
+msgid "Recent episodes"
+msgstr "最近剧集"
+
+msgctxt "#31036"
+msgid "Recommended episodes"
+msgstr "推荐剧集"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31037"
+msgid "Watched (checkmark)"
+msgstr "已观看（选择标记）"
+
+msgctxt "#31038"
+msgid "Recent albums"
+msgstr "最近专辑"
+
+msgctxt "#31039"
+msgid "Recommended albums"
+msgstr "推荐专辑"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31040"
+msgid "Recently added (star)"
+msgstr "最近添加（星）"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31041"
+msgid "Resumable (progress circle)"
+msgstr "可恢复（进度循环）"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31042"
+msgid "Unwatched episodes (numeric counter)"
+msgstr "未观看剧集（计数）"
+
+msgctxt "#31043"
+msgid "Extra art"
+msgstr "附加艺术图"
+
+msgctxt "#31044"
+msgid "Local subtitle found!"
+msgstr "发现本地字幕！"
+
+msgctxt "#31045"
+msgid "Supplied by"
+msgstr "提供者"
+
+msgctxt "#31046"
+msgid "Currently"
+msgstr "当前"
+
+msgctxt "#31047"
+msgid "Visualisation Presets"
+msgstr "可视化效果预设"
+
+msgctxt "#31048"
+msgid "Playlist Options"
+msgstr "播放列表选项"
+
+msgctxt "#31049"
+msgid "Customise home menu"
+msgstr "自定义主菜单"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31050"
+msgid "Apply highlight colour filter to background overlay"
+msgstr "将高亮色过滤器应用于背景叠加"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31051"
+msgid "Prefer vertical context/view menus"
+msgstr "首选垂直上下文/视图菜单"
+
+msgctxt "#31052"
+msgid "Rated"
+msgstr "评价"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31053"
+msgid "Show blank screen with clock when controls and info are hidden"
+msgstr "隐藏控制和信息时显示带时钟的空白屏幕"
+
+msgctxt "#31054"
+msgid "Random movies"
+msgstr "随机电影"
+
+msgctxt "#31055"
+msgid "Random episodes"
+msgstr "随机剧集"
+
+msgctxt "#31056"
+msgid "Random albums"
+msgstr "随机专辑"
+
+msgctxt "#31057"
+msgid "Kiosk mode"
+msgstr "自助终端模式"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31058"
+msgid "Show player controls when pressing up if media playing"
+msgstr "媒体播放时按上键显示播放控制"
+
+msgctxt "#31059"
+msgid "Memory Used:"
+msgstr "已使用内存："
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31060"
+msgid "Show top header tile and text when paused or seeking"
+msgstr "暂停或搜索时显示顶部标题栏瓷片和文本"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31061"
+msgid "Show clearart"
+msgstr "显示剪贴画"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31062"
+msgid "Show file name and path in info dialog"
+msgstr "在信息对话框显示文件名和路径"
+
+msgctxt "#31063"
+msgid "Addons"
+msgstr "插件"
+
+msgctxt "#31064"
+msgid "Custom background image"
+msgstr "自定义背景图片"
+
+msgctxt "#31065"
+msgid "Hide 'Mouse' warning"
+msgstr "隐藏“鼠标”警告"
+
+msgctxt "#31066"
+msgid "Cinema Exp."
+msgstr "影院体验"
+
+msgctxt "#31067"
+msgid "Pages"
+msgstr "页"
+
+msgctxt "#31068"
+msgid "View Options"
+msgstr "浏览选项"
+
+msgctxt "#31069"
+msgid "Context Menu"
+msgstr "上下文菜单"
+
+msgctxt "#31070"
+msgid "Info"
+msgstr "信息"
+
+msgctxt "#31071"
+msgid "Finishes at"
+msgstr "结束于"
+
+msgctxt "#31072"
+msgid "Playing"
+msgstr "播放"
+
+msgctxt "#31073"
+msgid "Categories"
+msgstr "类别"
+
+msgctxt "#31074"
+msgid "Submenu"
+msgstr "子菜单"
+
+msgctxt "#31075"
+msgid "Icon"
+msgstr "图标"
+
+msgctxt "#31076"
+msgid "Weather Fanart"
+msgstr "天气同人画"
+
+msgctxt "#31077"
+msgid "Trending Movies"
+msgstr "流行电影"
+
+msgctxt "#31078"
+msgid "In Cinemas"
+msgstr "在影院上映"
+
+msgctxt "#31079"
+msgid "Upcoming Films"
+msgstr "即将上映电影"
+
+msgctxt "#31080"
+msgid "Popular Movies"
+msgstr "热门电影"
+
+msgctxt "#31081"
+msgid "Top Rated Movies"
+msgstr "高分电影"
+
+msgctxt "#31082"
+msgid "Popular Shows"
+msgstr "热门剧集"
+
+msgctxt "#31083"
+msgid "Top Rated Shows"
+msgstr "高分剧集"
+
+msgctxt "#31084"
+msgid "On Air Shows"
+msgstr "正播出剧集"
+
+msgctxt "#31085"
+msgid "Airing Today"
+msgstr "今日播出"
+
+msgctxt "#31086"
+msgid "Custom 1"
+msgstr "自定义1"
+
+msgctxt "#31087"
+msgid "Custom 2"
+msgstr "自定义2"
+
+msgctxt "#31088"
+msgid "Custom 3"
+msgstr "自定义3"
+
+msgctxt "#31089"
+msgid "Custom 4"
+msgstr "自定义4"
+
+msgctxt "#31090"
+msgid "Content Loading"
+msgstr "内容载入中"
+
+msgctxt "#31091"
+msgid "Trending Shows"
+msgstr "流行剧集"
+
+msgctxt "#31092"
+msgid "No information available"
+msgstr "无可用信息"
+
+msgctxt "#31093"
+msgid "Movie Hub"
+msgstr "电影中心"
+
+msgctxt "#31094"
+msgid "TV Hub"
+msgstr "电视中心"
+
+msgctxt "#31095"
+msgid "Spotlight"
+msgstr "焦点"
+
+msgctxt "#31096"
+msgid "Hub items"
+msgstr "中心项目"
+
+msgctxt "#31097"
+msgid "Hub widget"
+msgstr "中心小部件"
+
+msgctxt "#31098"
+msgid "Artwork"
+msgstr "艺术图片"
+
+msgctxt "#31099"
+msgid "Codec"
+msgstr "编码"
+
+msgctxt "#31100"
+msgid "Recently Added"
+msgstr "最近添加"
+
+msgctxt "#31101"
+msgid "Recently Played"
+msgstr "最近播放"
+
+msgctxt "#31102"
+msgid "Watch Random"
+msgstr "随机观看"
+
+msgctxt "#31103"
+msgid "Delete Settings Shortcut"
+msgstr "删除设置快捷方式"
+
+msgctxt "#31104"
+msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
+msgstr "确定删除设置快捷方式吗？[CR]删除此快捷方式之前，请确保您有其他访问设置的方法。"
+
+msgctxt "#31105"
+msgid "Extra Info"
+msgstr "附加信息"
+
+msgctxt "#31106"
+msgid "3D Mode"
+msgstr "立体模式"
+
+msgctxt "#31107"
+msgid "Similar"
+msgstr "类似"
+
+msgctxt "#31108"
+msgid "Youtube"
+msgstr "Youtube"
+
+msgctxt "#31109"
+msgid "provided by themoviedb.org"
+msgstr "由 moviedb.org 提供"
+
+msgctxt "#31110"
+msgid "Extras"
+msgstr "附加"
+
+msgctxt "#31111"
+msgid "Choose primary highlight color"
+msgstr "选择主高亮色"
+
+msgctxt "#31112"
+msgid "Choose secondary highlight color"
+msgstr "选择次高亮色"
+
+msgctxt "#31113"
+msgid "Reset colors to defaults"
+msgstr "将颜色重置为默认值"
+
+msgctxt "#31114"
+msgid "Install weather fanart"
+msgstr "安装天气同人画"
+
+msgctxt "#31115"
+msgid "Show weather with clock"
+msgstr "显示天气和时钟"
+
+msgctxt "#31116"
+msgid "Animate fanart"
+msgstr "动态同人画"
+
+msgctxt "#31117"
+msgid "mins"
+msgstr "分"
+
+msgctxt "#31118"
+msgid "Animate artist slideshow"
+msgstr "动态歌手幻灯片"
+
+msgctxt "#31119"
+msgid "Show visualisation behind artist slideshow"
+msgstr "在歌手幻灯片后显示可视化效果"
+
+msgctxt "#31120"
+msgid "Show artist slideshow"
+msgstr "显示歌手幻灯片"
+
+msgctxt "#31121"
+msgid "Music OSD"
+msgstr "音乐 OSD"
+
+msgctxt "#31122"
+msgid "Match header tile with highlight color"
+msgstr "将标题栏瓷片匹配高亮色"
+
+msgctxt "#31123"
+msgid "Hub"
+msgstr "中心"
+
+msgctxt "#31124"
+msgid "Similar movies"
+msgstr "类似电影"
+
+msgctxt "#31125"
+msgid "Similar to"
+msgstr "类似于"
+
+msgctxt "#31126"
+msgid "Colors"
+msgstr "颜色"
+
+msgctxt "#31127"
+msgid "Header"
+msgstr "标题栏"
+
+msgctxt "#31128"
+msgid "Color"
+msgstr "颜色"
+
+msgctxt "#31129"
+msgid "Enable individual tile colors in home customisation"
+msgstr "主界面定制启用单独的瓷片颜色"
+
+msgctxt "#31130"
+msgid "items found"
+msgstr "项目找到"
+
+msgctxt "#31131"
+msgid "Search Options"
+msgstr "搜索选项"
+
+msgctxt "#31132"
+msgid "by Title"
+msgstr "按标题"
+
+msgctxt "#31133"
+msgid "by Genre"
+msgstr "按类型"
+
+msgctxt "#31134"
+msgid "by Actor"
+msgstr "按演员"
+
+msgctxt "#31135"
+msgid "by Director"
+msgstr "按导演"
+
+msgctxt "#31136"
+msgid "by Studio"
+msgstr "按出品人"
+
+msgctxt "#31137"
+msgid "Panel list"
+msgstr "面板列表"
+
+msgctxt "#31138"
+msgid "Show clock"
+msgstr "显示时钟"
+
+msgctxt "#31139"
+msgid "Hubs"
+msgstr "中心"
+
+msgctxt "#31140"
+msgid "Show tile colour on unfocused tiles"
+msgstr "在失焦瓷片显示瓷片颜色"
+
+msgctxt "#31141"
+msgid "Info icons"
+msgstr "信息图标"
+
+msgctxt "#31142"
+msgid "Big list info"
+msgstr "大列表信息"
+
+msgctxt "#31143"
+msgid "Media Info 2"
+msgstr "媒体信息2"
+
+msgctxt "#31144"
+msgid "Player Controls"
+msgstr "播放器控制"
+
+msgctxt "#31145"
+msgid "Extended Info"
+msgstr "扩展信息"
+
+msgctxt "#31146"
+msgid "Fanart fallback image"
+msgstr "同人画回退图片"
+
+msgctxt "#31147"
+msgid "Fallback widget"
+msgstr "回退小部件"
+
+msgctxt "#31148"
+msgid "Media Info 3"
+msgstr "媒体信息3"
+
+msgctxt "#31149"
+msgid "Next Aired"
+msgstr "下一播出"
+
+msgctxt "#31150"
+msgid "Show widget posters"
+msgstr "显示小部件海报"
+
+msgctxt "#31151"
+msgid "Home tile icon"
+msgstr "主界面瓷片图标"
+
+msgctxt "#31152"
+msgid "Home tile text"
+msgstr "主界面瓷片文本"
+
+msgctxt "#31153"
+msgid "Always"
+msgstr "总是"
+
+msgctxt "#31154"
+msgid "On Up"
+msgstr "向上"
+
+msgctxt "#31155"
+msgid "Never"
+msgstr "从不"
+
+msgctxt "#31156"
+msgid "Show widget discart"
+msgstr "显示小部件光盘贴画"
+
+msgctxt "#31157"
+msgid "Home header text"
+msgstr "主界面标题栏文本"
+
+msgctxt "#31158"
+msgid "Media Center"
+msgstr "媒体中心"
+
+msgctxt "#31159"
+msgid "Background overlay image"
+msgstr "背景叠加图像"
+
+msgctxt "#31160"
+msgid "Busy spinner"
+msgstr "繁忙转轮"
+
+msgctxt "#31161"
+msgid "Backup skin settings"
+msgstr "备份皮肤设置"
+
+msgctxt "#31162"
+msgid "Restore skin settings from file"
+msgstr "从文件恢复皮肤设置"
+
+msgctxt "#31163"
+msgid "Gallery"
+msgstr "画廊"
+
+msgctxt "#31164"
+msgid "Fanart list"
+msgstr "同人画列表"
+
+msgctxt "#31165"
+msgid "Show sorting and info line headers"
+msgstr "显示排序和信息行标题"
+
+msgctxt "#31166"
+msgid "Individually set in customisation dialog"
+msgstr "在自定义对话框中单独设置"
+
+msgctxt "#31167"
+msgid "Show unwatched count in header"
+msgstr "在标题栏显示未观看数"
+
+msgctxt "#31168"
+msgid "Now / Next"
+msgstr "当前/下一个"
+
+msgctxt "#31169"
+msgid "Reset skin settings to defaults  (WARNING - This will override all skin settings)"
+msgstr "将皮肤设置重置为默认值（警告 - 这将覆盖所有皮肤设置）"
+
+msgctxt "#31170"
+msgid "Backup / Restore"
+msgstr "备份/恢复"
+
+msgctxt "#31171"
+msgid "Reload skin"
+msgstr "重载皮肤"
+
+msgctxt "#31172"
+msgid "Transparent home bar"
+msgstr "透明主菜单条"
+
+msgctxt "#31173"
+msgid "Home bar style"
+msgstr "主菜单条风格"
+
+msgctxt "#31174"
+msgid "Weather icons"
+msgstr "天气图标"
+
+msgctxt "#31175"
+msgid "Customise shutdown menu"
+msgstr "自定义关机菜单"
+
+msgctxt "#31176"
+msgid "Genre icons"
+msgstr "类型图标"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31177"
+msgid "Automatically start fullscreen visualisation when starting playback"
+msgstr "开始播放时自动启动全屏可视化效果"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31178"
+msgid "User profiles"
+msgstr "用户配置文件"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31179"
+msgid "Install from repository or zip file"
+msgstr "从库或 zip 文件安装"
+
+msgctxt "#31180"
+msgid "Default"
+msgstr "默认"
+
+msgctxt "#31181"
+msgid "Text in tiles"
+msgstr "瓷片文本"
+
+msgctxt "#31182"
+msgid "Text only"
+msgstr "仅文本"
+
+msgctxt "#31183"
+msgid "Customise shutdown menu"
+msgstr "自定义关机菜单"
+
+msgctxt "#31184"
+msgid "Startup video or playlist"
+msgstr "启动视频或播放列表"
+
+msgctxt "#31185"
+msgid "Label"
+msgstr "标签"
+
+msgctxt "#31186"
+msgid "Action"
+msgstr "动作"
+
+msgctxt "#31187"
+msgid "Background"
+msgstr "背景"
+
+msgctxt "#31188"
+msgid "None (show user background)"
+msgstr "无（显示用户背景）"
+
+msgctxt "#31189"
+msgid "None"
+msgstr "无"
+
+msgctxt "#31190"
+msgid "Next Episode"
+msgstr "下一集"
+
+msgctxt "#31191"
+msgid "Last Episode"
+msgstr "最后一集"
+
+msgctxt "#31192"
+msgid "Info List"
+msgstr "信息列表"
+
+msgctxt "#31193"
+msgid "Box Office"
+msgstr "票房"
+
+msgctxt "#31194"
+msgid "Show plot for hub widgets"
+msgstr "在中心小部件显示剧情"
+
+msgctxt "#31195"
+msgid "Allow widget reloading"
+msgstr "允许小部件重载"
+
+msgctxt "#31196"
+msgid "Use padding around panel edges"
+msgstr "在面板边缘留空"
+
+msgctxt "#31197"
+msgid "Panels"
+msgstr "面板"
+
+msgctxt "#31198"
+msgid "Manage Dependencies"
+msgstr "管理依赖"
+
+msgctxt "#31199"
+msgid "Showcase"
+msgstr "展示柜"
+
+msgctxt "#31200"
+msgid "by"
+msgstr "由"
+
+msgctxt "#31201"
+msgid "on"
+msgstr "在"
+
+msgctxt "#31202"
+msgid "Sort by: Default"
+msgstr "排序方式：默认"
+
+msgctxt "#31203"
+msgid "No Additional Details Available"
+msgstr "无可用附加详细信息"
+
+msgctxt "#31204"
+msgid "Header tile icon and label follows library content type"
+msgstr "标题栏瓷片图标和标签遵循库内容类型"
+
+msgctxt "#31205"
+msgid "Settings Level"
+msgstr "设置级别"
+
+msgctxt "#31206"
+msgid "Home Shortcuts and Widgets"
+msgstr "主界面快捷方式和小部件"
+
+msgctxt "#31207"
+msgid "Home Header"
+msgstr "主界面标题栏"
+
+msgctxt "#31208"
+msgid "Home Bar Style"
+msgstr "主菜单风格"
+
+msgctxt "#31209"
+msgid "Music Visualisation"
+msgstr "音乐可视化效果"
+
+msgctxt "#31210"
+msgid "On Screen Display (OSD)"
+msgstr "屏幕显示（OSD）"
+
+msgctxt "#31211"
+msgid "Video Information"
+msgstr "视频信息"
+
+msgctxt "#31212"
+msgid "No Content Currently Available"
+msgstr "当前无可用内容"
+
+msgctxt "#31213"
+msgid "Show user ratings for music albums / songs"
+msgstr "显示音乐专辑/歌曲的用户评分"
+
+msgctxt "#31214"
+msgid "Show additional info labels in lists (e.g. ratings and year)"
+msgstr "在列表中显示附加信息标签（如评分和年份）"
+
+msgctxt "#31215"
+msgid "Plain list"
+msgstr "简单列表"
+
+msgctxt "#31216"
+msgid "Video decoder"
+msgstr "视频解码器"
+
+msgctxt "#31217"
+msgid "Pixel format"
+msgstr "像素格式"
+
+msgctxt "#31218"
+msgid "Show additional info labels with media flags (e.g. ratings and year)"
+msgstr "和媒体标志同时显示附加信息标签（如评分和年份）"
+
+msgctxt "#31219"
+msgid "Miscellaneous"
+msgstr "杂项"
+
+msgctxt "#31220"
+msgid "Info List 2"
+msgstr "信息列表2"
+
+msgctxt "#31221"
+msgid "Square List"
+msgstr "方格表"
+
+msgctxt "#31222"
+msgid "Enable / disable views"
+msgstr "启用/禁用视图"
+
+msgctxt "#31223"
+msgid "Poster List"
+msgstr "海报列表"
+
+msgctxt "#31224"
+msgid "Show additional dialog shadows"
+msgstr "显示附加对话框阴影"
+
+msgctxt "#31225"
+msgid "Use original Eminence v1 style side labels and arrows"
+msgstr "使用原始 Eminence v1 样式的侧标签和箭头"
+
+msgctxt "#31226"
+msgid "Lock view"
+msgstr "锁定视图"
+
+msgctxt "#31227"
+msgid "Enable viewtype locking to content type"
+msgstr "对内容类型启用视图类型锁定"
+
+msgctxt "#31228"
+msgid "Select view mode"
+msgstr "选择视图模式"
+
+msgctxt "#31229"
+msgid "Lock this viewtype to content type"
+msgstr "为内容类型锁定此视图类型"
+
+msgctxt "#31230"
+msgid "Medium icons"
+msgstr "中图标"
+
+msgctxt "#31231"
+msgid "Use extra fanart if available"
+msgstr "可能的话使用扩展同人画"
+
+msgctxt "#31232"
+msgid "Unlock View"
+msgstr "解锁视图"
+
+msgctxt "#31233"
+msgid "This view mode is currently locked to the content type"
+msgstr "此视图模式当前锁定于内容类型"
+
+msgctxt "#31234"
+msgid "Do you wish to unlock it and set a new view mode?"
+msgstr "要解锁并设置新的视图模式吗？"
+
+msgctxt "#31235"
+msgid "Fanart fade opacity (default is 90%)"
+msgstr "同人画淡入不透明度（默认值为90%）"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31236"
+msgid "PVR"
+msgstr "PVR"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31237"
+msgid "View system events"
+msgstr "查看系统事件"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31238"
+msgid "Event logs"
+msgstr "事件记录"
+
+#: /16x9/EventLog.xml
+msgctxt "#31239"
+msgid "Events Log"
+msgstr "事件记录"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31240"
+msgid "Switch viewtype artwork and list positions"
+msgstr "切换视图类型艺术图片和列表位置"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31241"
+msgid "Hide home menu when widgets are focused"
+msgstr "当小部件处于焦点时隐藏主菜单"
+
+#: /16x9/Custom_Store_1131.xml
+msgctxt "#31242"
+msgid "Recently viewed movies"
+msgstr "最近浏览电影"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31243"
+msgid "Landscape"
+msgstr "场景"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31244"
+msgid "Posters"
+msgstr "海报"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31245"
+msgid "Widget view mode"
+msgstr "小部件浏览模式"
+
+#: /16x9/Includes_Defs.xml
+msgctxt "#31246"
+msgid "Showcase widget"
+msgstr "展示小部件"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31247"
+msgid "Display showcase widget when pressing down on menu items without submenus"
+msgstr "在不带子菜单的菜单项按下键时显示展示小部件"
+
+#: /16x9/Custom_Dialog_ShowcaseSettings_1130.xml
+msgctxt "#31248"
+msgid "Showcase Widgets"
+msgstr "展示小部件"
+
+msgctxt "#31249"
+msgid "Special Features"
+msgstr "特性"
+
+#: /16x9/script-skinshortcuts.xml
+msgctxt "#31250"
+msgid "Widget"
+msgstr "小部件"
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31251"
+msgid "Customise showcase widgets"
+msgstr "自定义展示小部件"
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31252"
+msgid "Department"
+msgstr "部门"
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31253"
+msgid "Birthplace"
+msgstr "出生地"
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31254"
+msgid "Birthday"
+msgstr "生日"
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31255"
+msgid "Age"
+msgstr "年龄"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31256"
+msgid "Dots"
+msgstr "点"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31257"
+msgid "Tube"
+msgstr "管"
+
+#: /16x9/Includes_Label.xml
+msgctxt "#31258"
+msgid "Kitty"
+msgstr "小猫"
+
+#: /16x9/DialogVideoInfo.xml
+msgctxt "#31259"
+msgid "Crew"
+msgstr "团队"
