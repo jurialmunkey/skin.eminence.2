@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1110" type="dialog">
+	<defaultcontrol>11</defaultcontrol>
+	<controls>
+		<control type="group">
+			<top>0</top>
+			<centerleft>50%</centerleft>
+			<width>840</width>
+			<height>60</height>
+			<include>Animation_SlideIn</include>
+			<include>Animation_FadeOut</include>
+			<include>Dialog_Background</include>
+			<control type="label">
+				<description>Dialog header</description>
+				<left>40</left>
+				<top>15</top>
+				<width>550</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<font>font14</font>
+				<label>Playback Speed</label>
+			</control>
+			<control type="label">
+				<left>120</left>
+				<top>15</top>
+				<width>550</width>
+				<height>30</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font14</font>
+				<label>$INFO[Player.playspeed]</label>
+			</control>
+			<control type="button" id="11">
+				<left>740</left>
+				<top>22</top>
+				<width>16</width>
+				<height>16</height>
+				<onleft>12</onleft>
+				<onright>12</onright>
+				<texturefocus colordiffuse="Highlight">common/16-arrow-down.png</texturefocus>
+				<texturenofocus>common/16-arrow-down.png</texturenofocus>
+				<onclick>PlayerControl(TempoDown)</onclick>
+			</control>
+			<control type="button" id="12">
+				<left>780</left>
+				<top>22</top>
+				<width>16</width>
+				<height>16</height>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<texturefocus flipy="true" colordiffuse="Highlight">common/16-arrow-down.png</texturefocus>
+				<texturenofocus flipy="true">common/16-arrow-down.png</texturenofocus>
+				<onclick>PlayerControl(TempoUp)</onclick>
+			</control>
+		</control>
+	</controls>
+</window>

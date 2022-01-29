@@ -19,7 +19,7 @@
                 <height>posterh</height>
                 <include>Object_Background</include>
                 <include>Window_Hub_Widget</include>
-                
+
                 <control type="group">
                     <left>0</left>
                     <right>0</right>
@@ -1693,6 +1693,47 @@
                     </control>
                 </control>
 			</control>
+            <control type="group">
+                <visible allowhiddenfocus="true">ControlGroup(9313).HasFocus() | Control.HasFocus(2)</visible>
+                <visible>Window.IsVisible(videoosd)</visible>
+                <visible>Player.TempoEnabled</visible>
+                <bottom>64</bottom>
+                <centerleft>346</centerleft>
+                <width>320</width>
+                <height>69</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>-24</left>
+                    <right>-24</right>
+                    <top>-24</top>
+                    <bottom>-24</bottom>
+                    <bordersize>24</bordersize>
+                    <bordertexture border="24">common/24-shadow.png</bordertexture>
+                    <texture colordiffuse="DialogBG">common/white.png</texture>
+                </control>
+                <control type="grouplist" id="9313">
+                    <left>0</left>
+                    <right>0</right>
+                    <top>0</top>
+                    <bottom>0</bottom>
+                    <onup>noop</onup>
+                    <ondown>2</ondown>
+                    <onleft>2</onleft>
+                    <onright>2</onright>
+                    <itemgap>0</itemgap>
+                    <orientation>vertical</orientation>
+                    <scrolltime>200</scrolltime>
+                    <control type="button" id="9314" description="Playback Speed">
+						<width>100%</width>
+                        <height>69</height>
+						<include>Defs_OSDButton</include>
+						<label>Playback Speed</label>
+						<onclick condition="String.IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
+						<onclick condition="!String.IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
+						<onclick>ActivateWindow(1110)</onclick>
+					</control>
+                </control>
+			</control>
             <!-- <control type="group">
                 <visible allowhiddenfocus="true">ControlGroup(9320).HasFocus() | Control.HasFocus(2)</visible>
                 <visible>Window.IsVisible(videoosd)</visible>
@@ -2203,7 +2244,7 @@
                 <height>16</height>
                 <visible>Player.Seeking</visible>
             </control>
-                
+
             <control type="button">
                 <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | [Skin.HasSetting(OSDNoInfo) + Player.Caching] | !String.IsEmpty(Player.SeekNumeric)</visible>
                 <include>Animation_FadeIn</include>
@@ -2313,7 +2354,7 @@
                 <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),91)">Conditional</animation>
                 <animation effect="slide" end="19" condition="Integer.IsGreater(Control.GetLabel(401),92)">Conditional</animation>
             </control>
-                
+
         </control>
     </include>
 </includes>
