@@ -1731,7 +1731,7 @@
 						<label>Playback Speed</label>
 						<onclick condition="String.IsEmpty(Window(home).Property(osdinfo))">Close</onclick>
 						<onclick condition="!String.IsEmpty(Window(home).Property(osdinfo))">ClearProperty(osdinfo,home)</onclick>
-						<onclick>ActivateWindow(1110)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
 					</control>
                 </control>
 			</control>
