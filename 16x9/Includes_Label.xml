@@ -42,7 +42,7 @@
     </variable>
 
     <variable name="Item_Label">
-        <value condition="!Skin.HasSetting(furniture.showunwatchedepisodenames) + Container.Content(episodes) + !String.IsEmpty(ListItem.Episode) + Integer.IsLess(ListItem.PlayCount,1)">$VAR[Episode_Key_Full]</value>
+        <value condition="Skin.HasSetting(furniture.showunwatchedepisodenames) + Container.Content(episodes) + !String.IsEmpty(ListItem.Episode) + Integer.IsLess(ListItem.PlayCount,1)">$VAR[Episode_Key_Full]</value>
         <value>$INFO[ListItem.Label]</value>
     </variable>
 

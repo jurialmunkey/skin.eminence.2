@@ -957,11 +957,11 @@
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
                         </control>
                         <!-- Show Unwatched Episode Names -->
-                        <control type="radiobutton" id="9000">
+                        <control type="radiobutton" id="8960">
                             <radioposx>settingsradioposx</radioposx>
                             <width>100%</width>
                             <label>31284</label>
-                            <selected>Skin.HasSetting(furniture.showunwatchedepisodenames)</selected>
+                            <selected>!Skin.HasSetting(furniture.showunwatchedepisodenames)</selected>
                             <onclick>Skin.ToggleSetting(furniture.showunwatchedepisodenames)</onclick>
                             <height>72</height>
                             <include>Defs_OptionButton</include>

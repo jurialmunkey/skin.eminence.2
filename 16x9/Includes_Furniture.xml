@@ -981,7 +981,7 @@
                 <label>$INFO[Player.Title]</label>
                 <aligny>top</aligny>
                 <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
-                <visible>Skin.HasSetting(furniture.showunwatchedepisodenames) | String.IsEmpty(VideoPlayer.Episode) | !Integer.IsLess(VideoPlayer.PlayCount,1)</visible>
+                <visible>!Skin.HasSetting(furniture.showunwatchedepisodenames) | String.IsEmpty(VideoPlayer.Episode) | !Integer.IsLess(VideoPlayer.PlayCount,1)</visible>
             </control>
             <control type="grouplist">
                 <posx>245</posx>
