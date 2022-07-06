@@ -37,7 +37,7 @@
                             <right>pad</right>
                             <height>36</height>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                         <control type="label">
                             <left>pad</left>
@@ -201,7 +201,7 @@
                             <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(12)</visible>
                         </control>
-                    
+
 
                         <!-- Configure Addon Button -->
                         <control type="button" id="9">
@@ -210,7 +210,7 @@
                             <include>Defs_OptionButton3</include>
                             <visible>Control.IsEnabled(9)</visible>
                         </control>
-                    
+
 
                         <!-- Update Addon Button -->
                         <control type="button" id="8">

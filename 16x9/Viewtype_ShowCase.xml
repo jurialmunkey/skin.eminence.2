@@ -390,7 +390,7 @@
                             <height>44</height>
                             <align>center</align>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                         <control type="label">
                             <left>pad</left>

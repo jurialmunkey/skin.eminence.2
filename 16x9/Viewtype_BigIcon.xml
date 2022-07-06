@@ -126,7 +126,7 @@
                         <height>auto</height>
                         <align>left</align>
                         <font>Font-InfoBox-Title</font>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                     </control>
 
                     <control type="label">
@@ -264,7 +264,7 @@
                         <height>44</height>
                         <align>center</align>
                         <font>Font-InfoBox-Title</font>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                     </control>
                     <control type="label">
                         <height>32</height>
@@ -365,7 +365,7 @@
                             <height>auto</height>
                             <align>left</align>
                             <font>Font-InfoBox-Title</font>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
 
                         <control type="textbox">

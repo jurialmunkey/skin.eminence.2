@@ -41,6 +41,11 @@
         <value>$LOCALIZE[31244]</value>
     </variable>
 
+    <variable name="Item_Label">
+        <value condition="!Skin.HasSetting(furniture.showunwatchedepisodenames) + Container.Content(episodes) + Integer.IsLess(ListItem.PlayCount,1) + !String.IsEmpty(ListItem.Episode)">$VAR[Episode_Key_Full]</value>
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
+
     <variable name="Label_Duration">
         <value>$INFO[ListItem.Duration(mins),, mins]</value>
     </variable>
@@ -150,7 +155,7 @@
 
     <variable name="Label_OverlayTitle">
         <value condition="[Container.Content(episodes) | Container.Content(seasons)] + !String.IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]</value>
-        <value condition="!String.IsEmpty(ListItem.Label)">$INFO[ListItem.Label]</value>
+        <value condition="!String.IsEmpty(ListItem.Label)">$VAR[Item_Label]</value>
         <value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
     </variable>
 
@@ -184,7 +189,7 @@
     <variable name="Label_Title">
         <value condition="Container.Content(songs)">$INFO[ListItem.Artist]</value>
         <value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
-        <value>$INFO[ListItem.Label]</value>
+        <value>$VAR[Item_Label]</value>
     </variable>
 
     <variable name="Label_ExtraInfo_Icons">
@@ -226,7 +231,7 @@
         <!-- Fallback -->
         <value condition="!ListItem.IsCollection">$INFO[ListItem.Label2]</value>
     </variable>
-    
+
     <variable name="Label_Rating">
         <value condition="Skin.HasSetting(music.showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)] + !String.IsEmpty(ListItem.UserRating) + String.IsEqual(ListItem.UserRating,10)">9.9</value>
         <value condition="Skin.HasSetting(music.showuserratings) + String.IsEmpty(ListItem.Overlay) + [Container.Content(albums) | Container.Content(songs)] + !String.IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating,,.0]</value>
@@ -374,7 +379,7 @@
         <value condition="!String.IsEmpty(Skin.String(StartupPlaylist))">$INFO[Skin.String(StartupPlaylist)]</value>
         <value>$LOCALIZE[31189]</value>
     </variable>
-    
+
     <variable name="Label_VideoHWDecoder">
         <value condition="Player.Process(videohwdecoder)">HW</value>
         <value>SW</value>
@@ -416,4 +421,114 @@
         <value condition="String.Contains(ListItem.MPAA,tv-y)">TV-Y</value>
         <value>NR</value>
     </variable>
+
+    <variable name="Episode_Key_Full">
+        <value condition="String.StartsWith(ListItem.Label,0x)">0x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,1x)">1x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,2x)">2x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,3x)">3x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,4x)">4x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,5x)">5x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,6x)">6x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,7x)">7x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,8x)">8x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,9x)">9x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,10x)">10x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,11x)">11x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,12x)">12x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,13x)">13x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,14x)">14x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,15x)">15x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,16x)">16x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,17x)">17x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,18x)">18x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,19x)">19x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,20x)">20x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,21x)">21x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,22x)">22x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,23x)">23x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,24x)">24x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,25x)">25x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,26x)">26x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,27x)">27x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,28x)">28x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,29x)">29x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,30x)">30x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,31x)">31x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,32x)">32x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,33x)">33x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,34x)">34x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,35x)">35x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,36x)">36x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,37x)">37x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,38x)">38x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,39x)">39x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,40x)">40x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,41x)">41x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,42x)">42x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,43x)">43x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,44x)">44x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,45x)">45x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,46x)">46x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,47x)">47x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,48x)">48x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,49x)">49x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,50x)">50x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,51x)">51x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,52x)">52x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,53x)">53x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,54x)">54x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,55x)">55x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,56x)">56x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,57x)">57x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,58x)">58x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,59x)">59x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,60x)">60x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,61x)">61x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,62x)">62x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,63x)">63x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,64x)">64x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,65x)">65x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,66x)">66x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,67x)">67x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,68x)">68x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,69x)">69x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,70x)">70x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,71x)">71x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,72x)">72x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,73x)">73x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,74x)">74x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,75x)">75x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,76x)">76x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,77x)">77x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,78x)">78x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,79x)">79x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,80x)">80x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,81x)">81x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,82x)">82x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,83x)">83x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,84x)">84x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,85x)">85x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,86x)">86x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,87x)">87x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,88x)">88x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,89x)">89x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,90x)">90x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,91x)">91x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,92x)">92x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,93x)">93x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,94x)">94x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,95x)">95x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,96x)">96x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,97x)">97x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,98x)">98x$VAR[Episode_Key_Short]</value>
+        <value condition="String.StartsWith(ListItem.Label,99x)">99x$VAR[Episode_Key_Short]</value>
+        <value>$VAR[Episode_Key_Short]</value>
+    </variable>
+
+    <variable name="Episode_Key_Short">
+        <value condition="Integer.IsLess(ListItem.Episode,10)">0$INFO[ListItem.Episode,,.]</value>
+        <value>$INFO[ListItem.Episode,,.]</value>
+    </variable>
+
 </includes>

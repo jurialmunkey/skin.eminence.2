@@ -9,7 +9,7 @@
     <onload condition="Skin.HasSetting(EnableColorFilter) + String.IsEmpty(Skin.String(global.background))">Skin.SetString(global.background,special://skin/extras/backgrounds/overlays/pattern0.jpg)</onload>
     <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|x1111|x1112|x1113|x1114|x1115|x1116|x1117|x1118|x1119|powermenu)</onunload>
     <include condition="!Skin.HasSetting(store_init)">Defs_Store_Init</include>
-    
+
     <controls>
         <include>Furniture_Background</include>
         <include>Furniture_TopBar</include>
@@ -198,7 +198,7 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8001)</visible>
                         </control>
-                        
+
                         <!-- Widget Info Box -->
                         <control type="radiobutton" id="8105">
                             <width>100%</width>
@@ -284,8 +284,8 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8001)</visible>
                         </control>
-                        
-                        
+
+
 
 
                         <!-- Div HEADER -->
@@ -956,6 +956,17 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
                         </control>
+                        <!-- Show Unwatched Episode Names -->
+                        <control type="radiobutton" id="9000">
+                            <radioposx>settingsradioposx</radioposx>
+                            <width>100%</width>
+                            <label>31284</label>
+                            <selected>Skin.HasSetting(furniture.showunwatchedepisodenames)</selected>
+                            <onclick>Skin.ToggleSetting(furniture.showunwatchedepisodenames)</onclick>
+                            <height>72</height>
+                            <include>Defs_OptionButton</include>
+                            <visible>ControlGroup(8000).HasFocus(8005)</visible>
+                        </control>
                         <!-- Switch Positions -->
                         <control type="radiobutton" id="8516">
                             <radioposx>settingsradioposx</radioposx>
@@ -1034,9 +1045,6 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8005)</visible>
                         </control>
-                        
-                        
-
                         <!-- INSTALL -->
                         <control type="label" id="8699">
                             <width>100%</width>
@@ -1275,7 +1283,7 @@
                             <include>Defs_OptionButton</include>
                             <visible>ControlGroup(8000).HasFocus(8009)</visible>
                         </control>
-                        
+
                         <control type="radiobutton" id="8918">
                             <radioposx>settingsradioposx</radioposx>
                             <width>100%</width>

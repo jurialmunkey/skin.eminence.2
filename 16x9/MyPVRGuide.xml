@@ -34,7 +34,7 @@
                                 <align>left</align>
                                 <aligny>top</aligny>
                                 <font>Font-OSD</font>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <textcolor>SideArrow</textcolor>
                             </control>
                         </itemlayout>
@@ -44,7 +44,7 @@
                                 <align>left</align>
                                 <aligny>top</aligny>
                                 <font>Font-OSD</font>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <textcolor>LineLabel</textcolor>
                                 <visible>!Control.HasFocus(11)</visible>
                             </control>
@@ -54,7 +54,7 @@
                                 <align>left</align>
                                 <aligny>top</aligny>
                                 <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <textcolor>$VAR[HighlightColor2]</textcolor>
                                 <visible>Control.HasFocus(11)</visible>
                             </control>
@@ -80,7 +80,7 @@
                                 <align>left</align>
                                 <aligny>top</aligny>
                                 <font>Font-OSD</font>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <textcolor>ListLabel</textcolor>
                             </control>
                         </rulerlayout>
@@ -212,7 +212,7 @@
                                 <width>285</width>
                                 <textoffsetx>50</textoffsetx>
                                 <textcolor>ListLabel</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                             </control>
                             <control type="label" id="1">
@@ -221,7 +221,7 @@
                                 <height>67</height>
                                 <textcolor>ListLabel</textcolor>
                                 <textoffsetx>0</textoffsetx>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
                             </control>
                         </itemlayout>
@@ -274,7 +274,7 @@
                                 <width>285</width>
                                 <textoffsetx>50</textoffsetx>
                                 <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
                             </control>
                             <control type="label" id="1">
@@ -283,7 +283,7 @@
                                 <height>67</height>
                                 <textcolor>Selected</textcolor>
                                 <textoffsetx>0</textoffsetx>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
                             </control>
                         </focusedlayout>

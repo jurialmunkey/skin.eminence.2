@@ -415,7 +415,7 @@
                     <height>36</height>
                     <textcolor>ListLabel</textcolor>
                     <font>Font-InfoBox-Title</font>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                 </control>
                 <control type="label">
                     <top>70</top>
@@ -527,7 +527,7 @@
                                     <height>36</height>
                                     <textcolor>Selected</textcolor>
                                     <font>Font-InfoBox-Title</font>
-                                    <label>$INFO[ListItem.Label]</label>
+                                    <label>$VAR[Item_Label]</label>
                                 </control>
                                 <control type="label">
                                     <top>70</top>
@@ -642,7 +642,7 @@
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                     <visible>Container.Content(movies)</visible>
                 </control>
                 <control type="label">
@@ -651,7 +651,7 @@
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                     <visible>!Container.Content(movies)</visible>
                 </control>
 
@@ -759,7 +759,7 @@
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                     <visible>!String.IsEmpty(ListItem.Overlay) + $PARAM[label2]</visible>
                 </control>
                 <control type="label">
@@ -768,7 +768,7 @@
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>ListLabel</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                     <visible>String.IsEmpty(ListItem.Overlay) | !$PARAM[label2]</visible>
                 </control>
 
@@ -821,7 +821,7 @@
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                     <visible>Container.Content(movies)</visible>
                 </control>
                 <control type="label">
@@ -830,7 +830,7 @@
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                     <visible>!Container.Content(movies)</visible>
                 </control>
 
@@ -927,7 +927,7 @@
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                     <visible>!String.IsEmpty(ListItem.Overlay) + $PARAM[label2]</visible>
                 </control>
                 <control type="label">
@@ -936,7 +936,7 @@
                     <top>0</top>
                     <height>100%</height>
                     <textcolor>Selected</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                     <visible>String.IsEmpty(ListItem.Overlay) | !$PARAM[label2]</visible>
                 </control>
 
@@ -1023,7 +1023,7 @@
             <top>0</top>
             <height>70%</height>
             <textcolor>ListLabel</textcolor>
-            <label>$INFO[ListItem.Label]</label>
+            <label>$VAR[Item_Label]</label>
             <visible>!String.IsEmpty(ListItem.Label2)</visible>
         </control>
         <control type="label">
@@ -1032,7 +1032,7 @@
             <top>0</top>
             <height>100%</height>
             <textcolor>ListLabel</textcolor>
-            <label>$INFO[ListItem.Label]</label>
+            <label>$VAR[Item_Label]</label>
             <visible>String.IsEmpty(ListItem.Label2)</visible>
         </control>
     </include>
@@ -1066,7 +1066,7 @@
             <top>0</top>
             <height>70%</height>
             <textcolor>Selected</textcolor>
-            <label>$INFO[ListItem.Label]</label>
+            <label>$VAR[Item_Label]</label>
             <visible>!String.IsEmpty(ListItem.Label2)</visible>
         </control>
         <control type="label">
@@ -1075,7 +1075,7 @@
             <top>0</top>
             <height>100%</height>
             <textcolor>Selected</textcolor>
-            <label>$INFO[ListItem.Label]</label>
+            <label>$VAR[Item_Label]</label>
             <visible>String.IsEmpty(ListItem.Label2)</visible>
         </control>
     </include>

@@ -133,7 +133,7 @@
                             <top>pad</top>
                             <bottom>100</bottom>
                             <control type="textbox">
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <font>Font-OSD</font>
                                 <align>center</align>
                                 <height>64</height>
@@ -200,7 +200,7 @@
                                 <texture background="true" colordiffuse="PosterBorder">common/white.png</texture>
                             </control>
                             <control type="label">
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <align>center</align>
                                 <left>pad</left>
                                 <right>pad</right>
@@ -220,7 +220,7 @@
                             <top>pad</top>
                             <bottom>100</bottom>
                             <control type="textbox">
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <font>Font-OSD</font>
                                 <align>center</align>
                                 <height>64</height>
@@ -288,7 +288,7 @@
                                 <texture background="true" colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
                             </control>
                             <control type="label">
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <align>center</align>
                                 <left>pad</left>
                                 <right>pad</right>
@@ -502,7 +502,7 @@
                                 <bottom>pad</bottom>
                                 <height>48</height>
                                 <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                             </control>
                             <control type="label">
                                 <left>25</left>
@@ -560,7 +560,7 @@
                                 <height>48</height>
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                             </control>
                             <control type="label">
                                 <left>25</left>

@@ -167,7 +167,7 @@
                         <aligny>center</aligny>
                         <font>Font-HomeMenu</font>
                         <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
                     </control>
                 </itemlayout>
@@ -194,7 +194,7 @@
                         <aligny>center</aligny>
                         <font>Font-HomeMenu</font>
                         <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <animation effect="slide" start="0" end="0,-12" time="100" reversible="false">Focus</animation>
                     </control>
                     <control type="image">
@@ -271,7 +271,7 @@
                         <aligny>center</aligny>
                         <font>Font-HomeMenu</font>
                         <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
                     </control>
                 </itemlayout>
@@ -308,7 +308,7 @@
                         <aligny>center</aligny>
                         <font>Font-HomeMenu</font>
                         <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                     </control>
                     <control type="image">
                         <centerleft>85</centerleft>
@@ -332,7 +332,7 @@
                         <aligny>center</aligny>
                         <font>Font-HomeMenu</font>
                         <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
                     </control>
                 </itemlayout>
@@ -345,7 +345,7 @@
                         <aligny>center</aligny>
                         <font>Font-HomeMenu</font>
                         <textcolor>HomeBarFG</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <animation effect="slide" start="0" end="0,-12" time="100" reversible="false">Focus</animation>
                     </control>
                     <control type="image">
@@ -479,7 +479,7 @@
                         <textcolor>ListLabel</textcolor>
                         <font>Font-ListInfo-Small</font>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                     </control>
                 </itemlayout>
                 <focusedlayout width="374" height="69">
@@ -495,7 +495,7 @@
                         <textcolor>Selected</textcolor>
                         <font>Font-ListInfo-Small</font>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                     </control>
                 </focusedlayout>
                 <content>

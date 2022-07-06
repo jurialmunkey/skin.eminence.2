@@ -530,7 +530,7 @@
                     <textcolor>ListLabel</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                 </control>
                 <control type="textbox">
                     <left>60</left>
@@ -571,7 +571,7 @@
                     <textcolor>Selected</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Item_Label]</label>
                 </control>
                 <control type="textbox">
                     <left>60</left>

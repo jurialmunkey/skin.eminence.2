@@ -149,7 +149,7 @@
                             </control>
                             <control type="label">
                                 <textcolor>ffddddddd</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <top>300</top>
                                 <height>30</height>
                                 <left>20</left>
@@ -191,7 +191,7 @@
                             </control>
                             <control type="label">
                                 <textcolor>ffededed</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <top>300</top>
                                 <height>30</height>
                                 <left>20</left>
@@ -382,7 +382,7 @@
                 <font>Font-ListInfo-Small</font>
                 <aligny>center</aligny>
                 <textcolor>ListLabel</textcolor>
-                <label>$INFO[ListItem.Label]</label>
+                <label>$VAR[Item_Label]</label>
             </control>
         </itemlayout>
         <focusedlayout width="460" height="82">
@@ -399,7 +399,7 @@
                 <font>Font-ListInfo-Small</font>
                 <aligny>center</aligny>
                 <textcolor>Selected</textcolor>
-                <label>$INFO[ListItem.Label]</label>
+                <label>$VAR[Item_Label]</label>
             </control>
         </focusedlayout>
     </include>
@@ -486,7 +486,7 @@
                 <font>Font-ListInfo-Small</font>
                 <aligny>center</aligny>
                 <textcolor>ListLabel</textcolor>
-                <label>$INFO[ListItem.Label]</label>
+                <label>$VAR[Item_Label]</label>
             </control>
         </itemlayout>
         <focusedlayout width="374" height="72">
@@ -503,7 +503,7 @@
                 <font>Font-ListInfo-Small</font>
                 <aligny>center</aligny>
                 <textcolor>Selected</textcolor>
-                <label>$INFO[ListItem.Label]</label>
+                <label>$VAR[Item_Label]</label>
             </control>
         </focusedlayout>
     </include>
@@ -649,7 +649,7 @@
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -673,7 +673,7 @@
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <textcolor>Selected</textcolor>
                     </control>
                     <control type="label">
@@ -705,7 +705,7 @@
                             <right>30</right>
                             <top>0</top>
                             <height>66%</height>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                         <control type="label">
                             <left>148</left>
@@ -722,7 +722,7 @@
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <visible>String.IsEmpty(ListItem.Label2)</visible>
                     </control>
                 </itemlayout>
@@ -748,7 +748,7 @@
                             <right>30</right>
                             <top>0</top>
                             <height>66%</height>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                             <textcolor>Selected</textcolor>
                         </control>
                         <control type="label">
@@ -767,7 +767,7 @@
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <visible>String.IsEmpty(ListItem.Label2)</visible>
                         <textcolor>Selected</textcolor>
                     </control>
@@ -811,7 +811,7 @@
                         <textcolor>ListLabel</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                     </control>
                     <control type="label">
                         <left>bigpad</left>
@@ -838,7 +838,7 @@
                         <textcolor>Selected</textcolor>
                         <font>Font-ListInfo-Small-Bold</font>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                     </control>
                     <control type="label">
                         <left>bigpad</left>
@@ -893,7 +893,7 @@
                             <textcolor>ListLabel</textcolor>
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                     </control>
                 </itemlayout>
@@ -915,7 +915,7 @@
                             <textcolor>ListLabel</textcolor>
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                             <visible>String.IsEmpty(ListItem.Label2)</visible>
                             <visible>String.IsEmpty(ListItem.Property(character))</visible>
                             <visible>String.IsEmpty(ListItem.Property(job))</visible>
@@ -931,7 +931,7 @@
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Bold</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                             </control>
                             <control type="label">
                                 <width>100%</width>
@@ -974,7 +974,7 @@
                             <textcolor>Selected</textcolor>
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                     </control>
                 </focusedlayout>
@@ -1001,7 +1001,7 @@
                             <textcolor>Selected</textcolor>
                             <font>Font-ListInfo-Bold</font>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                             <visible>String.IsEmpty(ListItem.Label2)</visible>
                             <visible>String.IsEmpty(ListItem.Property(character))</visible>
                             <visible>String.IsEmpty(ListItem.Property(job))</visible>
@@ -1017,7 +1017,7 @@
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Bold</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                             </control>
                             <control type="label">
                                 <width>100%</width>
@@ -1100,7 +1100,7 @@
                             <right>30</right>
                             <top>0</top>
                             <height>100%</height>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                         <control type="label">
                             <left>30</left>
@@ -1125,7 +1125,7 @@
                             <right>30</right>
                             <top>0</top>
                             <height>100%</height>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                             <textcolor>Selected</textcolor>
                         </control>
                         <control type="label">

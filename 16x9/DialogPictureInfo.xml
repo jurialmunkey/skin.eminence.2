@@ -15,7 +15,7 @@
                 <bottom>bigpad</bottom>
                 <include>Dialog_Background</include>
                 <include content="Dialog_Top_IconHeader">
-                    <param name="label" value="$INFO[ListItem.Label]" />
+                    <param name="label" value="$VAR[Item_Label]" />
                     <param name="icon" value="special://skin/extras/icons/pictures.png" />
                 </include>
                 <control type="group">

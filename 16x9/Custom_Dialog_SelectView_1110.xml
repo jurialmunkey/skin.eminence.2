@@ -63,7 +63,7 @@
                             <align>left</align>
                             <aligny>center</aligny>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                     </control>
                 </itemlayout>
@@ -100,7 +100,7 @@
                             <aligny>center</aligny>
                             <textcolor>Selected</textcolor>
                             <font>Font-ListInfo-Small-Bold</font>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                     </control>
                 </focusedlayout>

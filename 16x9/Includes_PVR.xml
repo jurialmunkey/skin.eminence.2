@@ -381,14 +381,14 @@
                                     <centertop>25%</centertop>
                                     <height>30</height>
                                     <selectedcolor>ListLabel</selectedcolor>
-                                    <label>$INFO[ListItem.Label]</label>
+                                    <label>$VAR[Item_Label]</label>
                                     <visible>!String.IsEmpty(ListItem.Label2)</visible>
                                 </control>
                                 <control type="label">
                                     <centertop>50%</centertop>
                                     <height>30</height>
                                     <selectedcolor>ListLabel</selectedcolor>
-                                    <label>$INFO[ListItem.Label]</label>
+                                    <label>$VAR[Item_Label]</label>
                                     <visible>String.IsEmpty(ListItem.Label2)</visible>
                                 </control>
                                 <control type="label">
@@ -436,7 +436,7 @@
                                     <height>30</height>
                                     <selectedcolor>Selected</selectedcolor>
                                     <textcolor>Selected</textcolor>
-                                    <label>$INFO[ListItem.Label]</label>
+                                    <label>$VAR[Item_Label]</label>
                                     <visible>!String.IsEmpty(ListItem.Label2)</visible>
                                 </control>
                                 <control type="label">
@@ -444,7 +444,7 @@
                                     <height>30</height>
                                     <selectedcolor>Selected</selectedcolor>
                                     <textcolor>Selected</textcolor>
-                                    <label>$INFO[ListItem.Label]</label>
+                                    <label>$VAR[Item_Label]</label>
                                     <visible>String.IsEmpty(ListItem.Label2)</visible>
                                 </control>
                                 <control type="label">
