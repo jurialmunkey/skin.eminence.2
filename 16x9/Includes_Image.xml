@@ -48,13 +48,19 @@
     </variable>
 
     <variable name="Image_Thumb">
-        <value condition="[Container.Content(episodes) | Window.IsVisible(MyPics.xml) | Container.Content(videos) | Window.IsVisible(1131)] + !String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+        <value condition="String.IsEqual(ListItem.DBType,episode) + [String.IsEqual(ListItem.Icon,ListItem.Art(fanart)) | String.IsEqual(ListItem.Icon,OverlaySpoiler.png)]">$VAR[Image_Thumb_Spoiler]</value>
+        <value condition="[Container.Content(episodes) | Window.IsVisible(MyPics.xml) | Container.Content(videos) | Window.IsVisible(1131)] + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
         <value condition="Skin.HasSetting(artwork.landscape) + !String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
         <value condition="Skin.HasSetting(artwork.landscape) + !String.IsEmpty(ListItem.Art(tvshow.landscape))">$INFO[ListItem.Art(tvshow.landscape)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
         <value condition="!String.IsEmpty(Window(home).Property(TMDBbHelper.ListItem.Fanart)) + !Control.IsVisible(58) + !Control.IsVisible(553) + !Control.IsVisible(56)">$INFO[Window(home).Property(TMDBbHelper.ListItem.Fanart)]</value>
         <value>$INFO[ListItem.Icon]</value>
+    </variable>
+
+    <variable name="Image_Thumb_Spoiler">
+        <value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
+        <value>common/black.png</value>
     </variable>
 
     <variable name="Image_PVRThumb">
@@ -100,7 +106,7 @@
 
     <variable name="Image_HubFanart">
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
     </variable>
 
     <variable name="Image_Banner">
