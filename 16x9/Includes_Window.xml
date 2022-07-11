@@ -188,7 +188,7 @@
                             <right>80</right>
                             <top>0</top>
                             <bottom>0</bottom>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                     </itemlayout>
                     <focusedlayout width="hubitemw" height="90">
@@ -212,7 +212,7 @@
                             <top>0</top>
                             <bottom>0</bottom>
                             <textcolor>Selected</textcolor>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                         </control>
                     </focusedlayout>
                     <content><include>$PARAM[categories]</include></content>
@@ -684,7 +684,7 @@
                             <align>left</align>
                             <font>Font-ListInfo-Small</font>
                             <textcolor>ListLabel</textcolor>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                             <selectedcolor>ListLabel</selectedcolor>
                         </control>
                         <control type="label">
@@ -718,7 +718,7 @@
                                 <align>left</align>
                                 <font>Font-ListInfo-Small</font>
                                 <textcolor>ListLabel</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <selectedcolor>ListLabel</selectedcolor>
                             </control>
                             <control type="label">
@@ -756,7 +756,7 @@
                                 <align>left</align>
                                 <font>Font-ListInfo-Small</font>
                                 <textcolor>Selected</textcolor>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                                 <selectedcolor>Selected</selectedcolor>
                             </control>
                             <control type="label">

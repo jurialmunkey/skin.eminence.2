@@ -57,7 +57,7 @@
                             <aligny>center</aligny>
                         </control>
                         <control type="label">
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                             <font>Font-Button</font>
                             <left>bigpad</left>
                             <right>bigpad</right>
@@ -98,7 +98,7 @@
                             <textcolor>Selected</textcolor>
                         </control>
                         <control type="label">
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$VAR[Item_Label]</label>
                             <font>Font-Button</font>
                             <left>bigpad</left>
                             <right>bigpad</right>

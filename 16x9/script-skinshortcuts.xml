@@ -39,7 +39,7 @@
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <visible>String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
                     <control type="label">
@@ -47,7 +47,7 @@
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
                     <control type="image">
@@ -73,7 +73,7 @@
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <textcolor>Selected</textcolor>
                         <visible>String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>
@@ -82,7 +82,7 @@
                         <right>30</right>
                         <top>0</top>
                         <height>100%</height>
-                        <label>$INFO[ListItem.Label]</label>
+                        <label>$VAR[Item_Label]</label>
                         <textcolor>Selected</textcolor>
                         <visible>!String.IsEqual(Window.Property(groupname),powermenu)</visible>
                     </control>

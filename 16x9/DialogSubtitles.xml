@@ -51,7 +51,7 @@
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                             </control>
                         </itemlayout>
                         <focusedlayout width="460" height="72">
@@ -67,7 +67,7 @@
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.Label]</label>
+                                <label>$VAR[Item_Label]</label>
                             </control>
                         </focusedlayout>
                     </control>
@@ -147,7 +147,7 @@
                                 <textcolor>ListLabel</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ,]</label>
+                                <label>$VAR[Item_Label]$INFO[ListItem.Label2, - ,]</label>
                             </control>
                         </itemlayout>
                         <focusedlayout width="listlinew" height="72">
@@ -212,7 +212,7 @@
                                 <textcolor>Selected</textcolor>
                                 <font>Font-ListInfo-Small-Bold</font>
                                 <aligny>center</aligny>
-                                <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ,]</label>
+                                <label>$VAR[Item_Label]$INFO[ListItem.Label2, - ,]</label>
                             </control>
                         </focusedlayout>
                     </control>

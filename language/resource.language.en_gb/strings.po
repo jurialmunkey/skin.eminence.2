@@ -1220,3 +1220,8 @@ msgstr ""
 msgctxt "#31283"
 msgid "Fallback image"
 msgstr ""
+
+#: /16x9/SkinSettings.xml
+msgctxt "#31284"
+msgid "Show name of unwatched episodes"
+msgstr ""
